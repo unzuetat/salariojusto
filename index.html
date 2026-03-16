@@ -1800,58 +1800,11 @@
 </footer>
 
 <script>
-  // ─── SALARY DATA ───────────────────────────────────────────────
-  // [min, mediana, max] por ciudad. Ciudades: 10 principales + fallback genérico
-  const salaryData = {
-    software:    { madrid:[28000,48000,85000], barcelona:[26000,44000,78000], valencia:[22000,36000,62000], sevilla:[20000,32000,55000], bilbao:[24000,40000,70000], malaga:[19000,30000,52000], zaragoza:[21000,34000,58000], murcia:[18000,28000,50000], palma:[20000,33000,58000], laspalmas:[17000,27000,48000] },
-    nurse:       { madrid:[22000,30000,42000], barcelona:[21000,28000,40000], valencia:[19000,26000,37000], sevilla:[18000,25000,36000], bilbao:[21000,29000,41000], malaga:[18000,24000,35000], zaragoza:[19000,26000,37000], murcia:[17000,23000,34000], palma:[19000,26000,38000], laspalmas:[17000,23000,34000] },
-    teacher:     { madrid:[26000,38000,52000], barcelona:[24000,36000,50000], valencia:[23000,34000,47000], sevilla:[22000,32000,45000], bilbao:[24000,37000,50000], malaga:[21000,31000,44000], zaragoza:[22000,33000,46000], murcia:[20000,30000,43000], palma:[21000,32000,45000], laspalmas:[20000,30000,43000] },
-    architect:   { madrid:[22000,42000,75000], barcelona:[20000,38000,70000], valencia:[18000,32000,58000], sevilla:[16000,28000,50000], bilbao:[20000,36000,65000], malaga:[15000,26000,48000], zaragoza:[17000,30000,54000], murcia:[14000,24000,44000], palma:[16000,28000,52000], laspalmas:[14000,24000,44000] },
-    sales:       { madrid:[18000,35000,65000], barcelona:[17000,33000,60000], valencia:[15000,28000,52000], sevilla:[14000,26000,48000], bilbao:[16000,30000,56000], malaga:[13000,24000,45000], zaragoza:[14000,27000,50000], murcia:[12000,22000,42000], palma:[14000,26000,48000], laspalmas:[12000,22000,42000] },
-    doctor:      { madrid:[32000,58000,100000], barcelona:[30000,55000,95000], valencia:[28000,50000,85000], sevilla:[26000,46000,78000], bilbao:[30000,54000,92000], malaga:[25000,44000,75000], zaragoza:[27000,48000,82000], murcia:[24000,42000,72000], palma:[26000,46000,80000], laspalmas:[24000,42000,72000] },
-    lawyer:      { madrid:[22000,45000,90000], barcelona:[20000,42000,85000], valencia:[18000,36000,70000], sevilla:[16000,32000,62000], bilbao:[20000,40000,78000], malaga:[15000,30000,58000], zaragoza:[17000,34000,65000], murcia:[14000,28000,55000], palma:[16000,32000,62000], laspalmas:[14000,28000,55000] },
-    accountant:  { madrid:[22000,38000,65000], barcelona:[21000,36000,62000], valencia:[19000,32000,55000], sevilla:[17000,29000,50000], bilbao:[20000,35000,60000], malaga:[17000,28000,48000], zaragoza:[18000,31000,54000], murcia:[16000,26000,46000], palma:[18000,30000,52000], laspalmas:[16000,26000,46000] },
-    hr:          { madrid:[20000,35000,58000], barcelona:[19000,33000,55000], valencia:[17000,29000,48000], sevilla:[16000,27000,44000], bilbao:[18000,32000,52000], malaga:[15000,25000,42000], zaragoza:[16000,28000,46000], murcia:[14000,23000,40000], palma:[16000,27000,46000], laspalmas:[14000,23000,40000] },
-    marketing:   { madrid:[20000,36000,62000], barcelona:[19000,34000,60000], valencia:[17000,29000,50000], sevilla:[15000,26000,46000], bilbao:[18000,31000,54000], malaga:[15000,24000,44000], zaragoza:[16000,27000,48000], murcia:[13000,22000,40000], palma:[15000,26000,46000], laspalmas:[13000,22000,40000] },
-    // Perfil genérico para profesiones no reconocidas (media del mercado español)
-    generic:     { madrid:[20000,36000,65000], barcelona:[19000,34000,62000], valencia:[17000,29000,52000], sevilla:[16000,27000,48000], bilbao:[18000,32000,56000], malaga:[15000,26000,46000], zaragoza:[17000,28000,50000], murcia:[15000,24000,44000], palma:[16000,27000,50000], laspalmas:[14000,24000,44000] }
-  };
-
   const cityNames = {
     madrid:'Madrid', barcelona:'Barcelona', valencia:'Valencia', sevilla:'Sevilla',
     bilbao:'Bilbao', malaga:'Málaga', zaragoza:'Zaragoza',
     murcia:'Murcia', palma:'Palma de Mallorca', laspalmas:'Las Palmas de G.C.'
   };
-
-  // ─── PROFESSION MATCHING ──────────────────────────────────────
-  // Mapea texto libre a clave de salaryData
-  const professionMap = [
-    { keys:['software','developer','desarrollador','programador','frontend','backend','fullstack','devops','sre','informatica','informático','data scientist','data analyst','ux','ui','diseñador','ciberseguridad','cloud','ia ','inteligencia artificial'], prof:'software' },
-    { keys:['product manager','product owner','scrum master','gestor de proyectos','gestora de proyectos','project manager','jefe de proyecto','jefa de proyecto','pmo','program manager','agile','kanban'], prof:'hr' },
-    { keys:['enfermero','enfermera','nurse','ats','diplomado sanitario','técnico de laboratorio','auxiliar enfermería','auxiliar de enfermería'], prof:'nurse' },
-    { keys:['médico','medico','doctor','medicina','cirujano','cirujana','pediatra','internista','odontólogo','dentista','veterinario','farmacéutico','farmaceutico','fisioterapeuta','psicólogo','psicologo','trabajador social','terapeuta'], prof:'doctor' },
-    { keys:['profesor','profesora','docente','teacher','maestro','maestra','educador','orientador','pedagogo','catedrático'], prof:'teacher' },
-    { keys:['arquitecto','arquitecta','architect','ingeniero civil','ingeniería civil','urbanista'], prof:'architect' },
-    { keys:['abogado','abogada','lawyer','juridico','jurídico','fiscal','notario','juez','magistrado','procurador','asesor legal'], prof:'lawyer' },
-    { keys:['comercial','ventas','sales','vendedor','vendedora','account manager','key account','agente inmobiliario','agente comercial','director comercial'], prof:'sales' },
-    { keys:['contable','contabilidad','accountant','financiero','financiera','controller','tesorero','finanzas','auditor','analista financiero','economista'], prof:'accountant' },
-    { keys:['recursos humanos','rrhh','hr','talento','selección','seleccion','people','director de rrhh','técnico de selección'], prof:'hr' },
-    { keys:['marketing','comunicacion','comunicación','publicidad','community','seo','sem','growth','digital','periodista','publicista','copywriter','relaciones públicas','prensa'], prof:'marketing' },
-    { keys:['administrativo','administrativa','recepcionista','secretario','secretaria','auxiliar administrativo','gestión administrativa'], prof:'accountant' },
-    { keys:['logística','logistica','supply chain','compras','almacén','almacen','transporte','operaciones'], prof:'sales' },
-    { keys:['electricista','fontanero','mecánico','mecanico','soldador','albañil','carpintero','cerrajero','técnico','operario'], prof:'sales' },
-    { keys:['cocinero','chef','camarero','hostelería','hotelería','turismo','recepción hotel'], prof:'sales' },
-    { keys:['conductor','piloto','auxiliar de vuelo','logística transporte'], prof:'sales' },
-    { keys:['policía','guardia civil','bombero','militar','funcionario','administración pública'], prof:'teacher' },
-  ];
-
-  function matchProfession(input) {
-    const normalized = input.toLowerCase().trim();
-    for (const entry of professionMap) {
-      if (entry.keys.some(k => normalized.includes(k))) return entry.prof;
-    }
-    return 'generic';
-  }
 
   // ─── NET SALARY CALCULATION ──────────────────────────────────
   function calcNet(gross, situation, hijos3, hijos25, asc65, asc75, discapacidad, movilidad, pagas) {
@@ -1863,50 +1816,30 @@
     else if (gross <= 60000)  irpf = 12450*0.19 + 7750*0.24 + 15000*0.30 + (gross-35200)*0.37;
     else                      irpf = 12450*0.19 + 7750*0.24 + 15000*0.30 + 24800*0.37 + (gross-60000)*0.45;
 
-    // Situación familiar
     const sitDeduct = { single:0, single_kids:2150, married_noincome:3400, married:0 };
     irpf = Math.max(0, irpf - (sitDeduct[situation] || 0));
 
-    // Hijos menores 3 años: 2800€/hijo deducción mínimo personal
-    irpf = Math.max(0, irpf - (parseInt(hijos3) * 2800 * 0.19));
-    // Hijos 3-25 años: 1200€ primero, 1350€ segundo, 2150€ tercero, 2400€ cuarto+
     const hijosDeduct = [0, 1200, 1350, 2150, 2400];
+    irpf = Math.max(0, irpf - (parseInt(hijos3) * 2800 * 0.19));
     for (let i = 0; i < parseInt(hijos25); i++) {
       irpf = Math.max(0, irpf - ((hijosDeduct[Math.min(i+1, 4)] || 2400) * 0.19));
     }
-    // Ascendientes
     irpf = Math.max(0, irpf - (parseInt(asc65) * 1150 * 0.19));
     irpf = Math.max(0, irpf - (parseInt(asc75) * 1400 * 0.19));
 
-    // Discapacidad contribuyente
     const discDeduct = { '0':0, '33':3000, '65':9000, '65m':12000 };
     irpf = Math.max(0, irpf - (discDeduct[discapacidad] || 0) * 0.19);
 
-    // Movilidad geográfica: reducción 2000€
     if (movilidad === 'si') irpf = Math.max(0, irpf - 2000 * 0.19);
 
-    // SS cotización 6.48% (2025 incluyendo MEI)
     const ss = gross * 0.0648;
-    const net = gross - irpf - ss;
-    return Math.round(net);
-  }
-
-  // ─── PERCENTILE ──────────────────────────────────────────────
-  function getPercentile(gross, profKey, city) {
-    const d = salaryData[profKey] && salaryData[profKey][city];
-    if (!d) return 50;
-    const [min, med, max] = d;
-    if (gross <= min) return 10;
-    if (gross <= med) return Math.round(10 + ((gross-min)/(med-min))*40);
-    if (gross <= max) return Math.round(50 + ((gross-med)/(max-med))*40);
-    return 95;
+    return Math.round(gross - irpf - ss);
   }
 
   // ─── FORMAT ──────────────────────────────────────────────────
   const fmt = n => new Intl.NumberFormat('es-ES').format(n) + ' €';
 
   // ─── GLOBALS ─────────────────────────────────────────────────
-  let currentProf = 'generic';
   let currentProfInput = '';
   let currentCity = 'madrid';
   let currentGross = 35000;
@@ -1920,85 +1853,68 @@
     const profInput = document.getElementById('profession').value.trim();
     if (!profInput) { alert('Indica tu profesión.'); return; }
 
-    currentGross = gross;
-    currentProfInput = profInput;
-    currentProf  = matchProfession(profInput);
-    currentCity  = document.getElementById('city').value;
-    currentSituation = document.getElementById('situation').value;
+    currentGross      = gross;
+    currentProfInput  = profInput;
+    currentCity       = document.getElementById('city').value;
+    currentSituation  = document.getElementById('situation').value;
 
-    const pagas      = document.getElementById('pagas').value;
-    const hijos3     = document.getElementById('hijos3').value;
-    const hijos25    = document.getElementById('hijos25').value;
-    const asc65      = document.getElementById('asc65').value;
-    const asc75      = document.getElementById('asc75').value;
-    const discap     = document.getElementById('discapacidad').value;
-    const movilidad  = document.getElementById('movilidad').value;
+    const pagas     = document.getElementById('pagas').value;
+    const hijos3    = document.getElementById('hijos3').value;
+    const hijos25   = document.getElementById('hijos25').value;
+    const asc65     = document.getElementById('asc65').value;
+    const asc75     = document.getElementById('asc75').value;
+    const discap    = document.getElementById('discapacidad').value;
+    const movilidad = document.getElementById('movilidad').value;
 
     const net = calcNet(gross, currentSituation, hijos3, hijos25, asc65, asc75, discap, movilidad, pagas);
-    const pct = getPercentile(gross, currentProf, currentCity);
+    const netMonthlyStr = fmt(Math.round(net/parseInt(pagas))) + '/mes';
+    const netAnnualStr  = fmt(net) + ' netos anuales (' + pagas + ' pagas)';
 
-    // Generic profession notice
-    const notice = document.getElementById('genericNotice');
-    if (currentProf === 'generic') {
-      document.getElementById('genericProfLabel').textContent = profInput;
-      notice.style.display = 'block';
-    } else {
-      notice.style.display = 'none';
-    }
+    // Mostrar neto fiscal inmediatamente (es exacto)
+    document.getElementById('netMonthly').textContent = netMonthlyStr;
+    document.getElementById('netAnnual').textContent  = netAnnualStr;
+    document.getElementById('percentileVal').textContent = '…';
+    document.getElementById('genericNotice').style.display = 'none';
 
-    // Hero
-    document.getElementById('netMonthly').textContent = fmt(Math.round(net/parseInt(pagas))) + '/mes';
-    document.getElementById('netAnnual').textContent  = fmt(net) + ' netos anuales (' + pagas + ' pagas)';
-    document.getElementById('percentileVal').textContent = 'P' + pct;
+    // Mostrar skeleton en ranking y status mientras carga la API
+    document.getElementById('cityRankingList').innerHTML = `
+      <div style="padding:20px 0;text-align:center;color:var(--ink-lighter);font-size:13px;display:flex;align-items:center;justify-content:center;gap:10px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="animation:spin 1s linear infinite;"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+        Consultando datos de mercado para <strong style="color:var(--ink);">${profInput}</strong>…
+      </div>`;
+    document.getElementById('rankingProfTitle').textContent = profInput;
+    document.getElementById('statusCard').style.display = 'none';
+    document.getElementById('recText').textContent = '';
+    document.getElementById('aiLoading').style.display = 'none';
 
-    // Status
-    updateStatus(pct, gross, currentProf, currentCity);
+    // Ocultar acordeones hasta que lleguen datos
+    document.getElementById('accordion1').style.display = 'none';
+    document.getElementById('accordion2').style.display = 'none';
 
-    // Range bar
-    buildCitySelector();
-    updateRangeBar(currentCity);
-
-    // City ranking
-    buildCityRanking();
-
-    // Accordions
-    buildCityTable();
-    buildUrbanCompare();
-
-    // Recommendation — static fallback shown immediately, AI replaces it
-    buildRecommendation(pct, gross, currentProf, currentCity);
-
-    // Show results first
+    // Mostrar resultados
     document.getElementById('results').style.display = 'block';
     document.getElementById('results').scrollIntoView({ behavior:'smooth', block:'start' });
 
-    // Then call AI analysis async
-    const cityMedian = salaryData[currentProf][currentCity][1];
+    // Llamar API para rangos + análisis
     callClaudeAPI({
       salary: gross,
       profession: profInput,
       city: currentCity,
       situation: currentSituation,
-      pagas,
-      hijos3, hijos25, asc65, asc75,
+      pagas, hijos3, hijos25, asc65, asc75,
       discapacidad: discap,
       movilidad,
       categoria: document.getElementById('categoria').value,
-      netMonthly: fmt(Math.round(net/parseInt(pagas))),
-      netAnnual: fmt(net),
-      percentile: pct,
-      cityMedian: fmt(cityMedian),
-      profKey: currentProf
+      netMonthly: netMonthlyStr,
+      netAnnual: netAnnualStr
     });
   }
 
   // ─── CLAUDE API CALL ─────────────────────────────────────────
   async function callClaudeAPI(data) {
-    const loading = document.getElementById('aiLoading');
-    const recText = document.getElementById('recText');
-
-    loading.style.display = 'block';
-    recText.style.opacity = '0.3';
+    const recText   = document.getElementById('recText');
+    const aiLoading = document.getElementById('aiLoading');
+    aiLoading.style.display = 'block';
 
     try {
       const res = await fetch('/api/calculate', {
@@ -2006,256 +1922,156 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
-
-      if (!res.ok) throw new Error('API error');
-
+      if (!res.ok) throw new Error('API ' + res.status);
       const json = await res.json();
-      if (json.analysis) {
-        // Format paragraphs
-        const paragraphs = json.analysis.split('\n\n').filter(p => p.trim());
-        recText.innerHTML = paragraphs.map(p =>
-          `<p style="margin-bottom:12px;line-height:1.7;">${p.trim()}</p>`
-        ).join('');
+
+      // Percentil
+      const pct = json.percentile || 50;
+      document.getElementById('percentileVal').textContent = 'P' + pct;
+
+      // Status card
+      const cityLabel = { madrid:'Madrid', barcelona:'Barcelona', valencia:'Valencia', sevilla:'Sevilla', bilbao:'Bilbao', malaga:'Málaga', zaragoza:'Zaragoza', murcia:'Murcia', palma:'Palma de Mallorca', laspalmas:'Las Palmas de G.C.' }[data.city] || data.city;
+      const diff = json.cityMedian ? Math.round(parseFloat(data.salary) - json.cityMedian) : 0;
+      const diffFmt = (diff >= 0 ? '+' : '-') + fmt(Math.abs(diff));
+      const card = document.getElementById('statusCard');
+      card.style.display = '';
+      card.className = 'status-card';
+      let sIcon='', sTitle='', sDesc='';
+      if (pct >= 85) {
+        card.classList.add('excellent');
+        sIcon  = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E7D52" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
+        sTitle = 'Top ' + (100-pct) + '% en tu profesión en ' + cityLabel;
+        sDesc  = 'Tu retribución supera ampliamente la mediana del mercado. Estás ' + diffFmt + ' por encima de la mediana.';
+      } else if (pct >= 60) {
+        card.classList.add('good');
+        sIcon  = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
+        sTitle = 'Por encima de la media del mercado';
+        sDesc  = 'Tu salario es competitivo. Estás ' + diffFmt + ' sobre la mediana en tu sector.';
+      } else if (pct >= 40) {
+        card.classList.add('average');
+        sIcon  = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+        sTitle = 'En torno a la mediana del mercado';
+        sDesc  = 'Tu retribución se sitúa en la media. Margen de negociación: estás ' + diffFmt + ' de la mediana.';
+      } else {
+        card.classList.add('below');
+        sIcon  = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>';
+        sTitle = 'Por debajo de la mediana — tienes argumentos para negociar';
+        sDesc  = 'Tu salario está ' + diffFmt + ' respecto a la mediana en ' + cityLabel + '. La Ley de Transparencia Retributiva refuerza tu posición.';
       }
+      document.getElementById('statusIcon').innerHTML  = sIcon;
+      document.getElementById('statusTitle').textContent = sTitle;
+      document.getElementById('statusDesc').textContent  = sDesc;
+
+      // Ranking + barra + acordeones desde rangos reales
+      if (json.ranges) {
+        buildCityRankingFromAPI(json.ranges, json.spainMean, data.city, data.profession);
+        buildRangeBarFromAPI(json.ranges, data.city, parseFloat(data.salary));
+        buildAccordionsFromAPI(json.ranges, data.city, parseFloat(data.salary));
+        document.getElementById('accordion1').style.display = '';
+        document.getElementById('accordion2').style.display = '';
+      }
+
+      // Análisis IA
+      if (json.analysis) {
+        recText.innerHTML = json.analysis.split('\n\n').filter(p=>p.trim())
+          .map(p=>`<p style="margin-bottom:12px;line-height:1.7;">${p.trim()}</p>`).join('');
+      }
+
     } catch (err) {
-      console.error('AI error:', err);
-      // Keep static fallback, just restore opacity
+      console.error('API error:', err);
+      document.getElementById('cityRankingList').innerHTML =
+        '<div style="padding:16px;color:var(--red);font-size:13px;">Error al cargar datos. Inténtalo de nuevo.</div>';
+      document.getElementById('statusCard').style.display = '';
     } finally {
-      loading.style.display = 'none';
-      recText.style.opacity = '1';
+      aiLoading.style.display = 'none';
     }
   }
 
-  // ─── STATUS ──────────────────────────────────────────────────
-  function updateStatus(pct, gross, prof, city) {
-    const card  = document.getElementById('statusCard');
-    const icon  = document.getElementById('statusIcon');
-    const title = document.getElementById('statusTitle');
-    const desc  = document.getElementById('statusDesc');
-    const d     = salaryData[prof][city];
-    const diff  = Math.round(gross - d[1]);
-    const diffFmt = (diff >= 0 ? '+' : '-') + fmt(Math.abs(diff));
-
-    card.className = 'status-card';
-
-    if (pct >= 85) {
-      card.classList.add('excellent');
-      icon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2E7D52" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
-      title.textContent = 'Estás en el top ' + (100-pct) + '% de tu profesión en ' + cityNames[city];
-      desc.textContent  = 'Tu retribución supera ampliamente la mediana del mercado. Estás ' + diffFmt + ' por encima de la mediana de tu sector en esta zona.';
-    } else if (pct >= 60) {
-      card.classList.add('good');
-      icon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>';
-      title.textContent = 'Por encima de la media del mercado';
-      desc.textContent  = 'Tu salario es competitivo. Estás ' + diffFmt + ' sobre la mediana en tu sector y ciudad.';
-    } else if (pct >= 40) {
-      card.classList.add('average');
-      icon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/></svg>';
-      title.textContent = 'En la mediana del mercado';
-      desc.textContent  = 'Tu retribución se sitúa en torno a la mediana. Hay margen para negociar: estás ' + diffFmt + ' respecto a la mediana de tu sector.';
-    } else {
-      card.classList.add('below');
-      icon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>';
-      title.textContent = 'Por debajo de la mediana — tienes argumentos para negociar';
-      desc.textContent  = 'Tu salario está -' + fmt(Math.abs(diff)) + ' por debajo de la mediana de tu sector en ' + cityNames[city] + '. La nueva Ley de Transparencia Retributiva refuerza tu posición para solicitar una revisión.';
-    }
-  }
-
-  // ─── CITY SELECTOR ───────────────────────────────────────────
-  function buildCitySelector() {
-    const wrap = document.getElementById('citySelectorBtns');
-    wrap.innerHTML = '';
-    Object.keys(cityNames).forEach(c => {
-      const btn = document.createElement('button');
-      btn.className = 'city-btn' + (c === currentCity ? ' active' : '');
-      btn.textContent = cityNames[c];
-      btn.onclick = () => {
-        document.querySelectorAll('.city-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        updateRangeBar(c);
-      };
-      wrap.appendChild(btn);
-    });
-  }
-
-  // ─── RANGE BAR ───────────────────────────────────────────────
-  function updateRangeBar(city) {
-    const d = salaryData[currentProf][city];
-    if (!d) return;
-    const [min, med, max] = d;
-    const pct = getPercentile(currentGross, currentProf, city);
-    const pos = Math.min(95, Math.max(5, pct));
-
-    document.getElementById('rangeTitle').textContent = cityNames[city];
-    document.getElementById('rangeMin').textContent = fmt(min);
-    document.getElementById('rangeMed').textContent = fmt(med);
-    document.getElementById('rangeMax').textContent = fmt(max);
-    document.getElementById('rangeBarFill').style.width = pos + '%';
-    document.getElementById('rangeBarMarker').style.left = pos + '%';
-  }
-
-  // ─── CITY SALARY RANKING ─────────────────────────────────────
-  function buildCityRanking() {
-    const d = salaryData[currentProf];
-    const profLabel = currentProfInput || 'tu profesión';
-
-    // Calcular media y mediana españolas
-    const allMedians = Object.values(d).map(v => v[1]);
-    const spainMean = Math.round(allMedians.reduce((a,b) => a+b, 0) / allMedians.length);
-    const sorted = [...allMedians].sort((a,b) => a-b);
-    const spainMedian = sorted[Math.floor(sorted.length/2)];
-
-    // Ordenar ciudades por mediana descendente
-    const cities = Object.keys(cityNames).map(c => ({
-      key: c,
-      name: cityNames[c],
-      median: d[c][1],
-      min: d[c][0],
-      max: d[c][2]
-    })).sort((a,b) => b.median - a.median);
-
-    const maxMedian = cities[0].median;
-
-    // Actualizar título
+  // ─── RANKING DESDE API ───────────────────────────────────────
+  function buildCityRankingFromAPI(ranges, spainMean, cityKey, profLabel) {
+    const cNames = { madrid:'Madrid', barcelona:'Barcelona', valencia:'Valencia', sevilla:'Sevilla', bilbao:'Bilbao', malaga:'Málaga', zaragoza:'Zaragoza', murcia:'Murcia', palma:'Palma de Mallorca', laspalmas:'Las Palmas de G.C.' };
+    const cities = Object.keys(cNames).filter(c=>ranges[c])
+      .map(c=>({ key:c, name:cNames[c], min:ranges[c][0], median:ranges[c][1], max:ranges[c][2] }))
+      .sort((a,b)=>b.median-a.median);
+    if (!cities.length) return;
+    const allMed = cities.map(c=>c.median);
+    const mean = spainMean || Math.round(allMed.reduce((a,b)=>a+b,0)/allMed.length);
+    const medianVal = [...allMed].sort((a,b)=>a-b)[Math.floor(allMed.length/2)];
+    const maxMed = cities[0].median;
     document.getElementById('rankingProfTitle').textContent = profLabel;
-
     let html = '';
-    cities.forEach((city, i) => {
-      const isCurrentCity = city.key === currentCity;
-      const isClosestToMean = Math.abs(city.median - spainMean) === Math.min(...cities.map(c => Math.abs(c.median - spainMean)));
-      const isClosestToMedian = Math.abs(city.median - spainMedian) === Math.min(...cities.map(c => Math.abs(c.median - spainMedian)));
-      const barWidth = Math.round((city.median / maxMedian) * 100);
-
-      // Color de la barra
-      let barColor = 'var(--cream-300)';
-      if (isCurrentCity) barColor = 'var(--ink)';
-      else if (city.median >= spainMean * 1.05) barColor = 'var(--green)';
-      else if (city.median <= spainMean * 0.95) barColor = 'var(--red)';
-      else barColor = 'var(--gold)';
-
-      // Tags
-      let tags = '';
-      if (isCurrentCity) tags += '<span class="ranking-tag ranking-tag-tu">Tu ciudad</span>';
-      if (isClosestToMean) tags += '<span class="ranking-tag ranking-tag-media">Media ES</span>';
-      if (isClosestToMedian && !isClosestToMean) tags += '<span class="ranking-tag ranking-tag-mediana">Mediana ES</span>';
-
-      html += `
-        <div class="ranking-row" style="${isCurrentCity ? 'background:var(--cream-50);padding:10px 8px;margin:0 -8px;' : ''}">
-          <div class="ranking-pos">${i+1}</div>
-          <div>
-            <div class="ranking-city-name">${city.name}${tags}</div>
-            <div class="ranking-bar-wrap" style="width:100%;max-width:220px;">
-              <div class="ranking-bar-fill" style="width:${barWidth}%;background:${barColor};"></div>
-            </div>
-          </div>
-          <div></div>
-          <div class="ranking-salary">${fmt(city.median)}<br><span style="font-size:10px;font-weight:400;color:var(--ink-lighter);">${fmt(city.min)} – ${fmt(city.max)}</span></div>
-        </div>`;
-    });
-
-    // Líneas de referencia al pie
-    html += `
-      <div class="ranking-legend">
-        <div class="ranking-legend-item">
-          <div class="ranking-legend-dot" style="background:var(--green);"></div>
-          Por encima de la media española (${fmt(spainMean)})
-        </div>
-        <div class="ranking-legend-item">
-          <div class="ranking-legend-dot" style="background:var(--gold);"></div>
-          En torno a la media española
-        </div>
-        <div class="ranking-legend-item">
-          <div class="ranking-legend-dot" style="background:var(--red);"></div>
-          Por debajo de la media española
-        </div>
-        <div class="ranking-legend-item">
-          <div class="ranking-legend-dot" style="background:var(--ink);"></div>
-          Tu ciudad
-        </div>
-      </div>
-      <div style="margin-top:10px;font-size:11px;color:var(--ink-lighter);">
-        Media salarial española para este perfil: <strong style="color:var(--ink);">${fmt(spainMean)}/año</strong> · 
-        Mediana española: <strong style="color:var(--gold);">${fmt(spainMedian)}/año</strong>
+    cities.forEach((city,i) => {
+      const isMe = city.key === cityKey;
+      const isMean   = Math.abs(city.median-mean)    === Math.min(...cities.map(c=>Math.abs(c.median-mean)));
+      const isMedian = Math.abs(city.median-medianVal)=== Math.min(...cities.map(c=>Math.abs(c.median-medianVal))) && !isMean;
+      const barW = Math.round((city.median/maxMed)*100);
+      let barColor = city.median>=mean*1.05?'var(--green)':city.median<=mean*0.95?'var(--red)':'var(--gold)';
+      if (isMe) barColor='var(--ink)';
+      let tags='';
+      if (isMe)     tags+='<span class="ranking-tag ranking-tag-tu">Tu ciudad</span>';
+      if (isMean)   tags+='<span class="ranking-tag ranking-tag-media">Media ES</span>';
+      if (isMedian) tags+='<span class="ranking-tag ranking-tag-mediana">Mediana ES</span>';
+      html+=`<div class="ranking-row" style="${isMe?'background:var(--cream-50);padding:10px 8px;margin:0 -8px;':''}">
+        <div class="ranking-pos">${i+1}</div>
+        <div><div class="ranking-city-name">${city.name}${tags}</div>
+          <div class="ranking-bar-wrap" style="max-width:220px;"><div class="ranking-bar-fill" style="width:${barW}%;background:${barColor};"></div></div>
+        </div><div></div>
+        <div class="ranking-salary">${fmt(city.median)}<br><span style="font-size:10px;font-weight:400;color:var(--ink-lighter);">${fmt(city.min)} – ${fmt(city.max)}</span></div>
       </div>`;
-
+    });
+    html+=`<div class="ranking-legend">
+      <div class="ranking-legend-item"><div class="ranking-legend-dot" style="background:var(--green);"></div>Por encima de la media</div>
+      <div class="ranking-legend-item"><div class="ranking-legend-dot" style="background:var(--gold);"></div>En torno a la media</div>
+      <div class="ranking-legend-item"><div class="ranking-legend-dot" style="background:var(--red);"></div>Por debajo de la media</div>
+      <div class="ranking-legend-item"><div class="ranking-legend-dot" style="background:var(--ink);"></div>Tu ciudad</div>
+    </div>
+    <div style="margin-top:10px;font-size:11px;color:var(--ink-lighter);">
+      Media española: <strong style="color:var(--ink);">${fmt(mean)}/año</strong> · Mediana española: <strong style="color:var(--gold);">${fmt(medianVal)}/año</strong>
+    </div>
+    <div style="margin-top:14px;background:var(--amber-bg);border:1px solid #FDE68A;border-left:3px solid var(--amber);padding:12px 16px;font-size:11.5px;color:var(--ink-light);line-height:1.65;">
+      <strong style="color:var(--amber);">⚠ Estimaciones orientativas.</strong> Los rangos mostrados son estimaciones basadas en datos de mercado 2024-2025 y pueden diferir de estadísticas oficiales. Para datos verificados consulta las <a href="#sources" style="color:var(--gold);font-weight:600;">fuentes institucionales</a> al final de esta página.
+    </div>`;
     document.getElementById('cityRankingList').innerHTML = html;
   }
 
-  // ─── CITY TABLE ──────────────────────────────────────────────
-  function buildCityTable() {
-    const d = salaryData[currentProf];
-    let html = `<thead><tr>
-      <th>Ciudad</th><th>Mínimo</th><th>Mediana</th><th>Máximo</th><th>Tu posición</th>
-    </tr></thead><tbody>`;
-    Object.keys(cityNames).forEach(c => {
-      const [min, med, max] = d[c];
-      const pct  = getPercentile(currentGross, currentProf, c);
-      const diff = Math.round(currentGross - med);
-      const diffFmt = (diff >= 0 ? '+' : '') + fmt(Math.abs(diff));
-      const isYou = c === currentCity;
-      html += `<tr style="${isYou ? 'background:var(--cream-50)' : ''}">
-        <td>${cityNames[c]}${isYou ? '<span class="tag-you">Tú</span>' : ''}</td>
-        <td>${fmt(min)}</td>
-        <td>${fmt(med)}</td>
-        <td>${fmt(max)}</td>
-        <td style="color:${diff>=0?'var(--green)':'var(--red)'};font-weight:700">${diffFmt}</td>
+  // ─── BARRA DE RANGO DESDE API ────────────────────────────────
+  function buildRangeBarFromAPI(ranges, cityKey, gross) {
+    if (!ranges[cityKey]) return;
+    const [min,med,max] = ranges[cityKey];
+    let pos = gross<=min?5 : gross<=med?Math.round(5+((gross-min)/(med-min))*45) : gross<=max?Math.round(50+((gross-med)/(max-med))*45) : 97;
+    const cNames={madrid:'Madrid',barcelona:'Barcelona',valencia:'Valencia',sevilla:'Sevilla',bilbao:'Bilbao',malaga:'Málaga',zaragoza:'Zaragoza',murcia:'Murcia',palma:'Palma de Mallorca',laspalmas:'Las Palmas de G.C.'};
+    document.getElementById('rangeTitle').textContent = cNames[cityKey]||cityKey;
+    document.getElementById('rangeMin').textContent = fmt(min);
+    document.getElementById('rangeMed').textContent = fmt(med);
+    document.getElementById('rangeMax').textContent = fmt(max);
+    document.getElementById('rangeBarFill').style.width  = pos+'%';
+    document.getElementById('rangeBarMarker').style.left = pos+'%';
+  }
+
+  // ─── ACORDEONES DESDE API ────────────────────────────────────
+  function buildAccordionsFromAPI(ranges, cityKey, gross) {
+    const cNames={madrid:'Madrid',barcelona:'Barcelona',valencia:'Valencia',sevilla:'Sevilla',bilbao:'Bilbao',malaga:'Málaga',zaragoza:'Zaragoza',murcia:'Murcia',palma:'Palma de Mallorca',laspalmas:'Las Palmas de G.C.'};
+    let html=`<thead><tr><th>Ciudad</th><th>Mínimo</th><th>Mediana</th><th>Máximo</th><th>Tu posición</th></tr></thead><tbody>`;
+    Object.keys(cNames).forEach(c=>{
+      if(!ranges[c])return;
+      const[min,med,max]=ranges[c];
+      const diff=Math.round(gross-med);
+      html+=`<tr style="${c===cityKey?'background:var(--cream-50)':''}">
+        <td>${cNames[c]}${c===cityKey?'<span class="tag-you">Tú</span>':''}</td>
+        <td>${fmt(min)}</td><td>${fmt(med)}</td><td>${fmt(max)}</td>
+        <td style="color:${diff>=0?'var(--green)':'var(--red)'};font-weight:700;">${diff>=0?'+':'-'}${fmt(Math.abs(diff))}</td>
       </tr>`;
     });
-    html += '</tbody>';
-    document.getElementById('cityStatsTable').innerHTML = html;
-  }
-
-  // ─── URBAN COMPARE ───────────────────────────────────────────
-  function buildUrbanCompare() {
-    const d = salaryData[currentProf];
-    const urbanCities  = ['madrid','barcelona','bilbao'];
-    const smallCities  = ['murcia','laspalmas','malaga'];
-    const urbanAvg = Math.round(urbanCities.reduce((s,c) => s+d[c][1], 0) / urbanCities.length);
-    const smallAvg = Math.round(smallCities.reduce((s,c)  => s+d[c][1],  0) / smallCities.length);
-    const diff = urbanAvg - smallAvg;
-    const diffPct = Math.round((diff/smallAvg)*100);
-    const yourDiffUrban = Math.round(currentGross - urbanAvg);
-    const yourDiffSmall = Math.round(currentGross - smallAvg);
-
-    document.getElementById('urbanCompare').innerHTML = `
-      <div class="urban-box">
-        <div class="urban-box-label">Grandes ciudades</div>
-        <div class="urban-box-value">${fmt(urbanAvg)}</div>
-        <div class="urban-box-sub">Media Madrid · Bcn · Bilbao</div>
-        <div style="margin-top:10px;font-size:12px;color:${yourDiffUrban>=0?'var(--green)':'var(--red)'};font-weight:700">
-          Tú: ${yourDiffUrban>=0?'+':''}${fmt(Math.abs(yourDiffUrban))}
-        </div>
-      </div>
-      <div class="urban-box">
-        <div class="urban-box-label">Ciudades medianas</div>
-        <div class="urban-box-value">${fmt(smallAvg)}</div>
-        <div class="urban-box-sub">Media Murcia · Las Palmas · Málaga</div>
-        <div style="margin-top:10px;font-size:12px;color:${yourDiffSmall>=0?'var(--green)':'var(--red)'};font-weight:700">
-          Tú: ${yourDiffSmall>=0?'+':''}${fmt(Math.abs(yourDiffSmall))}
-        </div>
-      </div>
-      <div class="urban-diff">
-        La diferencia entre grandes ciudades y ciudades medianas en tu sector es de
-        <strong>${fmt(diff)} anuales (${diffPct}% más)</strong>
-      </div>
-    `;
-  }
-
-  // ─── RECOMMENDATION ──────────────────────────────────────────
-  function buildRecommendation(pct, gross, prof, city) {
-    const d    = salaryData[prof][city];
-    const diff = Math.round(gross - d[1]);
-    let text;
-    if (pct >= 85) {
-      text = `Tu retribución actual se sitúa en la parte alta del rango de mercado para tu perfil en ${cityNames[city]}. Con la entrada en vigor de la Ley de Transparencia Retributiva en junio de 2026, las empresas con más de 100 empleados deberán publicar rangos salariales por categoría. Tu posición te otorga poder de negociación para consolidar o mejorar beneficios adicionales: formación, teletrabajo, planes de pensiones o bonus variable.`;
-    } else if (pct >= 60) {
-      text = `Tu salario es competitivo respecto al mercado. La nueva normativa de transparencia salarial te permitirá acceder a información sobre los rangos publicados por tu empresa. Si detectas diferencias injustificadas superiores al 5%, la ley reconoce tu derecho a solicitar explicaciones formales a la dirección de RRHH.`;
-    } else if (pct >= 40) {
-      text = `Te encuentras en la mediana del mercado, ${fmt(Math.abs(diff))} por debajo de la media de tu sector en ${cityNames[city]}. La Ley de Transparencia Retributiva, vigente desde junio de 2026, obliga a tu empresa a justificar las diferencias salariales. Este es un momento favorable para revisar tu retribución con datos objetivos de mercado.`;
-    } else {
-      text = `Tu salario actual está ${fmt(Math.abs(diff))} por debajo de la mediana de mercado en ${cityNames[city]} para tu categoría profesional. La Directiva Europea 2023/970 y su transposición española en junio de 2026 te otorgan el derecho expreso a solicitar información sobre los rangos salariales de tu empresa y a reclamar una equiparación justificada. Se recomienda documentar la brecha con datos de las fuentes institucionales indicadas más abajo antes de iniciar cualquier proceso de negociación.`;
-    }
-    document.getElementById('recText').textContent = text;
+    document.getElementById('cityStatsTable').innerHTML=html+'</tbody>';
+    const urban=['madrid','barcelona','bilbao'].filter(c=>ranges[c]);
+    const small=['murcia','laspalmas','malaga'].filter(c=>ranges[c]);
+    const uAvg=urban.length?Math.round(urban.reduce((s,c)=>s+ranges[c][1],0)/urban.length):0;
+    const sAvg=small.length?Math.round(small.reduce((s,c)=>s+ranges[c][1],0)/small.length):0;
+    const d2=uAvg-sAvg, dp=sAvg?Math.round((d2/sAvg)*100):0;
+    document.getElementById('urbanCompare').innerHTML=`
+      <div class="urban-box"><div class="urban-box-label">Grandes ciudades</div><div class="urban-box-value">${fmt(uAvg)}</div><div class="urban-box-sub">Madrid · Bcn · Bilbao</div><div style="margin-top:10px;font-size:12px;color:${gross>=uAvg?'var(--green)':'var(--red)'};font-weight:700;">Tú: ${gross>=uAvg?'+':'-'}${fmt(Math.abs(gross-uAvg))}</div></div>
+      <div class="urban-box"><div class="urban-box-label">Ciudades medianas</div><div class="urban-box-value">${fmt(sAvg)}</div><div class="urban-box-sub">Murcia · L.Palmas · Málaga</div><div style="margin-top:10px;font-size:12px;color:${gross>=sAvg?'var(--green)':'var(--red)'};font-weight:700;">Tú: ${gross>=sAvg?'+':'-'}${fmt(Math.abs(gross-sAvg))}</div></div>
+      <div class="urban-diff">Diferencia grandes vs medianas: <strong>${fmt(d2)} (${dp}% más)</strong></div>`;
   }
 
   // ─── NEWS MODAL ──────────────────────────────────────────────
