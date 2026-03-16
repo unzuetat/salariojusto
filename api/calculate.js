@@ -1,5 +1,4 @@
 export default async function handler(req, res) {
-  // CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -9,8 +8,8 @@ export default async function handler(req, res) {
 
   const {
     salary, profession, city, situation, pagas,
-    hijos3, hijos25, asc65, asc75, discapacidad, movilidad, categoria,
-    netMonthly, netAnnual, percentile, cityMedian, profKey
+    hijos3, hijos25, asc65, asc75, discapacidad, movilidad,
+    netMonthly, netAnnual
   } = req.body;
 
   if (!salary || !profession) {
@@ -30,41 +29,110 @@ export default async function handler(req, res) {
     married: 'casado/a con cónyuge con ingresos propios'
   };
 
-  const prompt = `Eres un experto en retribución salarial en España y en la Directiva Europea de Transparencia Retributiva (2023/970), que entra en vigor el 7 de junio de 2026.
+  const allCities = Object.keys(cityNames);
+  const cityLabel = cityNames[city] || city;
 
-Un trabajador ha introducido los siguientes datos en la calculadora:
+  // ── LLAMADA 1: Rangos salariales reales ──────────────────────
+  const rangesPrompt = `Eres un experto en el mercado laboral español con datos actualizados de 2024-2025.
 
-DATOS PERSONALES Y LABORALES:
-- Profesión: ${profession}
-- Salario bruto anual: ${parseInt(salary).toLocaleString('es-ES')} €
-- Ciudad: ${cityNames[city] || city}
-- Situación familiar: ${situationNames[situation] || situation}
-- Número de pagas: ${pagas}
-- Hijos menores de 3 años: ${hijos3}
-- Hijos entre 3 y 25 años: ${hijos25}
-- Ascendientes mayores de 65 años a cargo: ${asc65}
-- Ascendientes mayores de 75 años a cargo: ${asc75}
-- Discapacidad del contribuyente: ${discapacidad === '0' ? 'ninguna' : discapacidad + '%'}
-- Movilidad geográfica: ${movilidad === 'si' ? 'sí' : 'no'}
+Necesito los rangos salariales BRUTOS ANUALES en euros para la profesión: "${profession}" en España.
 
-RESULTADO DEL CÁLCULO:
-- Salario neto mensual estimado: ${netMonthly}
-- Salario neto anual estimado: ${netAnnual}
-- Percentil en su profesión y ciudad: ${percentile}
-- Mediana de mercado para su perfil: ${cityMedian}
+Devuelve ÚNICAMENTE un objeto JSON válido, sin texto adicional, sin markdown, sin explicaciones:
 
-Redacta un análisis personalizado y directo en 3 párrafos cortos (máximo 4-5 líneas cada uno):
+{
+  "madrid": [min, mediana, max],
+  "barcelona": [min, mediana, max],
+  "valencia": [min, mediana, max],
+  "sevilla": [min, mediana, max],
+  "bilbao": [min, mediana, max],
+  "malaga": [min, mediana, max],
+  "zaragoza": [min, mediana, max],
+  "murcia": [min, mediana, max],
+  "palma": [min, mediana, max],
+  "laspalmas": [min, mediana, max]
+}
 
-1. SITUACIÓN ACTUAL: Explica cómo está su salario respecto al mercado de forma clara y directa. Usa los datos de percentil y mediana. Si está bien pagado, díselo; si está por debajo, díselo sin rodeos.
+Reglas estrictas:
+- Todos los valores en euros enteros
+- El mínimo nunca puede ser inferior al SMI español (15.876€ brutos anuales en 2025)
+- Los valores deben reflejar el mercado laboral real español de 2024-2025
+- Madrid y Barcelona suelen ser un 20-35% más altos que ciudades medianas
+- Bilbao es similar o ligeramente inferior a Barcelona
+- Murcia, Las Palmas y ciudades medianas suelen ser un 15-25% menos que Madrid
+- Solo JSON, nada más`;
 
-2. LO QUE DICE LA LEY: Explica qué derechos concretos le da la nueva Ley de Transparencia Retributiva en su situación específica. Menciona el derecho a solicitar información salarial, la prohibición de opacidad, y qué puede exigir a su empresa.
-
-3. RECOMENDACIÓN ACCIONABLE: Da 2-3 argumentos o pasos concretos que puede usar para negociar o defender su salario. Sé específico con su profesión y ciudad.
-
-Tono: directo, informado, útil. Sin tecnicismos innecesarios. Sin bullet points, solo párrafos fluidos. Sin mencionar que eres una IA.`;
+  let ranges = null;
+  let percentile = 50;
+  let cityMedianVal = 0;
+  let spainMean = 0;
 
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    const rangesResp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 500,
+        messages: [{ role: 'user', content: rangesPrompt }]
+      })
+    });
+
+    if (rangesResp.ok) {
+      const rangesData = await rangesResp.json();
+      const rawText = rangesData.content?.[0]?.text || '';
+      const clean = rawText.replace(/```json|```/g, '').trim();
+      ranges = JSON.parse(clean);
+
+      // Calcular percentil
+      if (ranges[city]) {
+        const [min, med, max] = ranges[city];
+        cityMedianVal = med;
+        const gross = parseFloat(salary);
+        if (gross <= min) percentile = 10;
+        else if (gross <= med) percentile = Math.round(10 + ((gross-min)/(med-min))*40);
+        else if (gross <= max) percentile = Math.round(50 + ((gross-med)/(max-med))*40);
+        else percentile = 95;
+
+        const allMedians = allCities.map(c => ranges[c] ? ranges[c][1] : med);
+        spainMean = Math.round(allMedians.reduce((a,b) => a+b, 0) / allMedians.length);
+      }
+    }
+  } catch (e) {
+    console.error('Ranges error:', e);
+  }
+
+  // ── LLAMADA 2: Análisis personalizado ────────────────────────
+  const analysisPrompt = `Eres un experto en retribución salarial en España y en la Directiva Europea de Transparencia Retributiva (2023/970), que entra en vigor el 7 de junio de 2026.
+
+PERFIL DEL TRABAJADOR:
+- Profesión: ${profession}
+- Salario bruto anual: ${parseInt(salary).toLocaleString('es-ES')} €
+- Ciudad: ${cityLabel}
+- Situación familiar: ${situationNames[situation] || situation}
+- Hijos menores de 3 años: ${hijos3} | Hijos 3-25 años: ${hijos25}
+- Movilidad geográfica: ${movilidad === 'si' ? 'sí' : 'no'}
+
+DATOS DE MERCADO:
+- Salario neto mensual estimado: ${netMonthly}
+- Salario neto anual estimado: ${netAnnual}
+- Percentil en ${cityLabel}: ${percentile}
+- Mediana del mercado en ${cityLabel}: ${cityMedianVal ? cityMedianVal.toLocaleString('es-ES') + ' €' : 'no disponible'}
+- Media salarial española para este perfil: ${spainMean ? spainMean.toLocaleString('es-ES') + ' €' : 'no disponible'}
+
+Redacta un análisis en 3 párrafos cortos (4-5 líneas cada uno):
+
+1. SITUACIÓN ACTUAL: Cómo está su salario respecto al mercado. Usa el percentil y la mediana. Directo y sin rodeos.
+2. LO QUE DICE LA LEY: Qué derechos concretos le da la nueva Ley de Transparencia Retributiva. Específico para su situación.
+3. RECOMENDACIÓN: 2-3 pasos concretos para negociar o defender su salario. Específico para su profesión y ciudad.
+
+Tono: directo, útil, sin tecnicismos. Sin bullet points. Sin mencionar que eres IA.`;
+
+  try {
+    const analysisResp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -74,23 +142,19 @@ Tono: directo, informado, útil. Sin tecnicismos innecesarios. Sin bullet points
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 600,
-        messages: [{ role: 'user', content: prompt }]
+        messages: [{ role: 'user', content: analysisPrompt }]
       })
     });
 
-    if (!response.ok) {
-      const err = await response.text();
-      console.error('Anthropic error:', err);
-      return res.status(500).json({ error: 'Error al contactar con la IA' });
-    }
+    if (!analysisResp.ok) throw new Error('Analysis API error');
 
-    const data = await response.json();
-    const analysis = data.content?.[0]?.text || '';
+    const analysisData = await analysisResp.json();
+    const analysis = analysisData.content?.[0]?.text || '';
 
-    return res.status(200).json({ analysis });
+    return res.status(200).json({ analysis, ranges, percentile, cityMedian: cityMedianVal, spainMean });
 
   } catch (error) {
-    console.error('Function error:', error);
-    return res.status(500).json({ error: 'Error interno del servidor' });
+    console.error('Analysis error:', error);
+    return res.status(200).json({ analysis: '', ranges, percentile, cityMedian: cityMedianVal, spainMean });
   }
 }
