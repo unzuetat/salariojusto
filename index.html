@@ -301,6 +301,8 @@
 
     .btn-calc:hover { background: var(--gold-dark); }
 
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
     .calc-section-title {
       font-size: 10px;
       font-weight: 700;
@@ -1603,9 +1605,20 @@
       </div>
     </div>
 
-    <!-- RECOMMENDATION -->
+    <!-- RECOMMENDATION (AI) -->
     <div class="rec-card" id="recCard">
-      <div class="rec-title">Recomendación según la ley de transparencia</div>
+      <div class="rec-title" style="display:flex;align-items:center;gap:10px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Análisis personalizado con IA
+      </div>
+      <div id="aiLoading" style="display:none; padding:16px 0;">
+        <div style="display:flex;align-items:center;gap:10px;color:var(--ink-light);font-size:13px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" style="animation:spin 1s linear infinite;">
+            <path d="M21 12a9 9 0 11-6.219-8.56"/>
+          </svg>
+          Analizando tu perfil salarial…
+        </div>
+      </div>
       <div class="rec-text" id="recText"></div>
     </div>
 
@@ -1897,13 +1910,65 @@
     buildCityTable();
     buildUrbanCompare();
 
-    // Recommendation
+    // Recommendation — static fallback shown immediately, AI replaces it
     buildRecommendation(pct, gross, currentProf, currentCity);
 
-    // Show
+    // Show results first
     document.getElementById('results').style.display = 'block';
     document.getElementById('results').scrollIntoView({ behavior:'smooth', block:'start' });
+
+    // Then call AI analysis async
+    const cityMedian = salaryData[currentProf][currentCity][1];
+    callClaudeAPI({
+      salary: gross,
+      profession: profInput,
+      city: currentCity,
+      situation: currentSituation,
+      pagas,
+      hijos3, hijos25, asc65, asc75,
+      discapacidad: discap,
+      movilidad,
+      categoria: document.getElementById('categoria').value,
+      netMonthly: fmt(Math.round(net/parseInt(pagas))),
+      netAnnual: fmt(net),
+      percentile: pct,
+      cityMedian: fmt(cityMedian),
+      profKey: currentProf
+    });
   }
+
+  // ─── CLAUDE API CALL ─────────────────────────────────────────
+  async function callClaudeAPI(data) {
+    const loading = document.getElementById('aiLoading');
+    const recText = document.getElementById('recText');
+
+    loading.style.display = 'block';
+    recText.style.opacity = '0.3';
+
+    try {
+      const res = await fetch('/api/calculate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (!res.ok) throw new Error('API error');
+
+      const json = await res.json();
+      if (json.analysis) {
+        // Format paragraphs
+        const paragraphs = json.analysis.split('\n\n').filter(p => p.trim());
+        recText.innerHTML = paragraphs.map(p =>
+          `<p style="margin-bottom:12px;line-height:1.7;">${p.trim()}</p>`
+        ).join('');
+      }
+    } catch (err) {
+      console.error('AI error:', err);
+      // Keep static fallback, just restore opacity
+    } finally {
+      loading.style.display = 'none';
+      recText.style.opacity = '1';
+    }
 
   // ─── STATUS ──────────────────────────────────────────────────
   function updateStatus(pct, gross, prof, city) {
