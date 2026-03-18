@@ -2178,6 +2178,77 @@
   function toggleAccordion(id) {
     document.getElementById(id).classList.toggle('open');
   }
+// ─── TABS ES ──────────────────────────────────────────────────
+  function switchTab(tab) {
+    document.getElementById('section-calc').style.display = tab === 'calc' ? 'block' : 'none';
+    document.getElementById('section-comp').style.display = tab === 'comp' ? 'block' : 'none';
+    document.getElementById('tab-calc-btn').style.cssText = tab === 'calc'
+      ? 'padding:14px 20px;font-size:13px;font-weight:600;color:var(--gold);background:none;border:none;cursor:pointer;border-bottom:2px solid var(--gold);margin-bottom:-1px;'
+      : 'padding:14px 20px;font-size:13px;font-weight:600;color:var(--ink-light);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;';
+    document.getElementById('tab-comp-btn').style.cssText = tab === 'comp'
+      ? 'padding:14px 20px;font-size:13px;font-weight:600;color:var(--gold);background:none;border:none;cursor:pointer;border-bottom:2px solid var(--gold);margin-bottom:-1px;'
+      : 'padding:14px 20px;font-size:13px;font-weight:600;color:var(--ink-light);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;';
+  }
+
+  // ─── TIPOS DE CAMBIO (aproximados) ───────────────────────────
+  const FX = { EUR: 1, USD: 1.08, CAD: 1.47, GBP: 0.86 };
+  const FX_SYMBOL = { EUR: '€', USD: '$', CAD: 'CA$', GBP: '£' };
+
+  function fmtCurrency(eur) {
+    const currency = document.getElementById('currency')?.value || 'EUR';
+    const rate = FX[currency];
+    const symbol = FX_SYMBOL[currency];
+    const val = Math.round(eur * rate);
+    return symbol + new Intl.NumberFormat('es-ES').format(val);
+  }
+
+  // ─── SISTEMAS FISCALES ────────────────────────────────────────
+  const TAX_SYSTEMS = {
+    spain:       { name: 'España 🇪🇸',        note: 'IRPF progresivo + 6,48% SS',
+      calcTax: g => { let t=0; if(g<=12450)t=g*0.19; else if(g<=20200)t=12450*0.19+(g-12450)*0.24; else if(g<=35200)t=12450*0.19+7750*0.24+(g-20200)*0.30; else if(g<=60000)t=12450*0.19+7750*0.24+15000*0.30+(g-35200)*0.37; else t=12450*0.19+7750*0.24+15000*0.30+24800*0.37+(g-60000)*0.45; return Math.round(t); },
+      calcSS: g => Math.round(g*0.0648) },
+    uk:          { name: 'Reino Unido 🇬🇧',   note: 'Income Tax + National Insurance (£→€ a 1.17)',
+      calcTax: g => { const gGBP=g/1.17; let t=0; const pa=12570; if(gGBP>pa){ const tx=gGBP-pa; if(tx<=37700)t=tx*0.20; else if(tx<=125140)t=37700*0.20+(tx-37700)*0.40; else t=37700*0.20+87440*0.40+(tx-125140)*0.45; } return Math.round(t*1.17); },
+      calcSS: g => { const gGBP=g/1.17; let ni=0; if(gGBP>12570)ni=(Math.min(gGBP,50270)-12570)*0.08+Math.max(0,gGBP-50270)*0.02; return Math.round(ni*1.17); } },
+    germany:     { name: 'Alemania 🇩🇪',      note: 'Einkommensteuer + ~20,5% cotizaciones',
+      calcTax: g => { let t=0; if(g<=11784)t=0; else if(g<=66761)t=(g-11784)*0.24; else if(g<=277826)t=(g-11784)*0.42-9972; else t=g*0.45-17374; return Math.round(Math.max(0,t)); },
+      calcSS: g => Math.round(g*0.205) },
+    netherlands: { name: 'Países Bajos 🇳🇱',  note: 'Box 1 (incluye cotizaciones AOW/WLZ)',
+      calcTax: g => { let t=0; if(g<=75518)t=g*0.3697; else t=75518*0.3697+(g-75518)*0.495; return Math.round(t); },
+      calcSS: g => 0 },
+    france:      { name: 'Francia 🇫🇷',       note: 'Impôt sur le revenu + ~22% cotizaciones',
+      calcTax: g => { let t=0; if(g<=11294)t=0; else if(g<=28797)t=(g-11294)*0.11; else if(g<=82341)t=(28797-11294)*0.11+(g-28797)*0.30; else if(g<=177106)t=(28797-11294)*0.11+(82341-28797)*0.30+(g-82341)*0.41; else t=(28797-11294)*0.11+(82341-28797)*0.30+(177106-82341)*0.41+(g-177106)*0.45; return Math.round(Math.max(0,t)); },
+      calcSS: g => Math.round(g*0.22) },
+  };
+
+  function updateComparison() {
+    const gross = parseFloat(document.getElementById('compareSalary')?.value);
+    if (!gross || gross < 5000) {
+      document.getElementById('compareBody').innerHTML = '<tr><td colspan="7" style="text-align:center;padding:24px;color:var(--ink-lighter);">Introduce un salario bruto para ver la comparativa</td></tr>';
+      return;
+    }
+    const rows = Object.entries(TAX_SYSTEMS).map(([key, sys]) => {
+      const tax = sys.calcTax(gross);
+      const ss  = sys.calcSS(gross);
+      const net = gross - tax - ss;
+      return { key, sys, tax, ss, net, total: tax+ss };
+    }).sort((a,b) => b.net - a.net);
+
+    let html = '';
+    rows.forEach(r => {
+      const isSpain = r.key === 'spain';
+      html += `<tr style="${isSpain?'background:#FEF9F3;':''}">
+        <td style="padding:12px;border-bottom:1px solid var(--cream-100);font-weight:600;">${r.sys.name}<br><span style="font-size:10px;color:var(--ink-lighter);font-weight:400;">${r.sys.note}</span></td>
+        <td style="padding:12px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">${fmtCurrency(gross)}</td>
+        <td style="padding:12px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">${fmtCurrency(r.tax)} (${Math.round(r.tax/gross*100)}%)</td>
+        <td style="padding:12px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">${r.ss>0?fmtCurrency(r.ss)+' ('+Math.round(r.ss/gross*100)+'%)':'Incluido'}</td>
+        <td style="padding:12px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">${fmtCurrency(r.total)} (${Math.round(r.total/gross*100)}%)</td>
+        <td style="padding:12px;border-bottom:1px solid var(--cream-100);font-weight:700;color:var(--green);font-size:14px;">${fmtCurrency(r.net)}</td>
+        <td style="padding:12px;border-bottom:1px solid var(--cream-100);font-weight:700;color:var(--green);font-size:14px;">${fmtCurrency(Math.round(r.net/12))}</td>
+      </tr>`;
+    });
+    document.getElementById('compareBody').innerHTML = html;
+  }
 </script>
 
 </body>
