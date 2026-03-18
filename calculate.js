@@ -14,9 +14,11 @@ module.exports = async function handler(req, res) {
   }
 
   const cityNames = {
-    madrid:'Madrid', barcelona:'Barcelona', valencia:'Valencia', sevilla: isEN ? 'Seville' : 'Sevilla',
+    madrid:'Madrid', barcelona:'Barcelona', valencia:'Valencia',
+    sevilla: isEN ? 'Seville' : 'Sevilla',
     bilbao:'Bilbao', malaga:'Málaga', zaragoza:'Zaragoza',
-    murcia:'Murcia', palma:'Palma de Mallorca', laspalmas: isEN ? 'Las Palmas de G.C.' : 'Las Palmas de G.C.'
+    murcia:'Murcia', palma:'Palma de Mallorca',
+    laspalmas:'Las Palmas de G.C.'
   };
 
   const situationNames = isEN ? {
@@ -34,13 +36,28 @@ module.exports = async function handler(req, res) {
   const cityLabel = cityNames[city] || city;
   const gross = parseInt(salary);
 
-  const prompt = isEN
-    ? `You are an expert in the Spanish labour market with data from 2024-2025.
+  // ─── PROMPT DE RANGOS: el salario del usuario NO aparece aquí ───────────────
+  // Esto es crítico: los rangos deben reflejar la realidad del mercado,
+  // no estar anclados al input del usuario. El percentil se calcula después,
+  // comparando el salario real contra rangos independientes.
 
-Profile: profession "${profession}", city ${cityLabel}, gross annual salary ${gross.toLocaleString('en-GB')}€, family situation: ${situationNames[situation] || situation}, estimated net: ${netMonthly}.
+  const rangesPrompt = isEN
+    ? `You are a Spanish labour market expert with verified data from INE, AEAT, InfoJobs and Randstad 2024-2025.
 
-Return ONLY this JSON with no extra text or markdown:
+Generate realistic market salary ranges for the profession "${profession}" in Spain.
 
+CRITICAL RULES:
+- Ranges must reflect ACTUAL market reality, completely independent of any individual's salary
+- Base ranges on real data: INE Encuesta Estructura Salarial, InfoJobs Annual Report, Randstad Salary Guide
+- If the profession is very well-paid (e.g. surgeon, senior lawyer, tech director), reflect that honestly
+- If the profession is modestly paid (e.g. cashier, cleaner), reflect that honestly — do NOT inflate ranges
+- The median must be the REAL market median, not skewed toward any particular value
+- Madrid/Barcelona typically 20-30% above national median for most professions
+- Minimum must never be below 15,876€ (Spain SMI 2025)
+- For niche or very senior roles, the maximum can be very high — be honest about it
+- For entry-level or low-skill roles, the maximum should be modest — be honest about it
+
+Return ONLY this JSON, no markdown, no extra text:
 {
   "ranges": {
     "madrid": [min, median, max],
@@ -53,18 +70,26 @@ Return ONLY this JSON with no extra text or markdown:
     "murcia": [min, median, max],
     "palma": [min, median, max],
     "laspalmas": [min, median, max]
-  },
-  "analysis": "Paragraph about salary vs market position.\\n\\nParagraph about rights under Spain's Pay Transparency Law (June 2026).\\n\\nParagraph with concrete negotiation advice."
-}
+  }
+}`
 
-Rules: integer values in euros, minimum >= 15876 (Spain minimum wage 2025), Madrid/Barcelona 20-35% higher than mid-sized cities, realistic Spanish market data 2024-2025. Analysis in fluent English, 3 paragraphs, no bullet points.`
+    : `Eres un experto en mercado laboral español con datos verificados del INE, AEAT, InfoJobs y Randstad 2024-2025.
 
-    : `Eres un experto en el mercado laboral español con datos de 2024-2025.
+Genera los rangos salariales REALES de mercado para la profesión "${profession}" en España.
 
-Perfil: profesión "${profession}", ciudad ${cityLabel}, salario bruto ${gross.toLocaleString('es-ES')}€, situación ${situationNames[situation] || situation}, neto estimado ${netMonthly}.
+REGLAS CRÍTICAS — LEE CON ATENCIÓN:
+- Los rangos deben reflejar la REALIDAD del mercado, completamente independientes del salario de cualquier persona concreta
+- Basa los rangos en datos reales: INE Encuesta Estructura Salarial, Informe Anual InfoJobs, Guía Salarial Randstad
+- Si la profesión está bien remunerada (ej: cirujano, socio de consultoría, director tecnológico), refléjalo con honestidad
+- Si la profesión está modestamente remunerada (ej: cajero, limpiador, auxiliar administrativo), refléjalo con honestidad — NO infles los rangos artificialmente
+- La mediana debe ser la MEDIANA REAL del mercado, no sesgada hacia ningún valor concreto
+- Madrid/Barcelona típicamente un 20-30% por encima de la mediana nacional para la mayoría de profesiones
+- El mínimo nunca puede ser inferior a 15.876€ (SMI 2025)
+- Para roles senior o de nicho, el máximo puede ser muy alto — sé honesto
+- Para roles de entrada o baja cualificación, el máximo debe ser modesto — sé honesto
+- NO ancles los rangos a ningún salario introducido por el usuario. Genera rangos objetivos de mercado.
 
-Devuelve ÚNICAMENTE este JSON sin texto extra ni markdown:
-
+Devuelve ÚNICAMENTE este JSON, sin markdown, sin texto extra:
 {
   "ranges": {
     "madrid": [min, mediana, max],
@@ -77,14 +102,46 @@ Devuelve ÚNICAMENTE este JSON sin texto extra ni markdown:
     "murcia": [min, mediana, max],
     "palma": [min, mediana, max],
     "laspalmas": [min, mediana, max]
-  },
-  "analysis": "Párrafo situación vs mercado.\\n\\nPárrafo derechos Ley Transparencia 2026.\\n\\nPárrafo recomendación concreta."
-}
+  }
+}`;
 
-Reglas: valores enteros en euros, mínimo >= 15876 (SMI 2025), Madrid/Barcelona 20-35% más que ciudades medianas, datos realistas mercado español 2024-2025. Análisis directo en 3 párrafos, sin bullets.`;
+  // ─── PROMPT DE ANÁLISIS: aquí sí usamos el salario para el análisis personalizado ─
+  const analysisPrompt = isEN
+    ? `You are a Spanish labour market expert. Write a personalised salary analysis.
+
+Profile:
+- Profession: ${profession}
+- City: ${cityLabel}
+- Gross salary: ${gross.toLocaleString('en-GB')}€/year
+- Estimated net: ${netMonthly}
+- Family situation: ${situationNames[situation] || situation}
+
+Write 3 paragraphs in fluent English:
+1. How their salary compares to market reality — be direct and honest, even if they earn significantly above or below market
+2. Their specific rights under Spain's Pay Transparency Law (June 2026)
+3. A concrete, actionable recommendation for their situation
+
+No bullet points. No mentioning you are an AI. Direct, useful tone.`
+
+    : `Eres un experto en mercado laboral español. Escribe un análisis salarial personalizado.
+
+Perfil:
+- Profesión: ${profession}
+- Ciudad: ${cityLabel}
+- Salario bruto: ${gross.toLocaleString('es-ES')}€/año
+- Neto estimado: ${netMonthly}
+- Situación: ${situationNames[situation] || situation}
+
+Escribe 3 párrafos directos y útiles:
+1. Cómo se compara su salario con la realidad del mercado — sé directo y honesto, especialmente si está muy por encima o muy por debajo de la media
+2. Sus derechos concretos según la Ley de Transparencia Retributiva (junio 2026)
+3. Una recomendación concreta y accionable para su situación
+
+Sin bullets. Sin mencionar que eres IA. Tono directo y útil.`;
 
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    // Llamada 1: rangos de mercado (SIN el salario del usuario)
+    const rangesRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -93,34 +150,64 @@ Reglas: valores enteros en euros, mínimo >= 15876 (SMI 2025), Madrid/Barcelona 
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 1200,
-        messages: [{ role: 'user', content: prompt }]
+        max_tokens: 800,
+        messages: [{ role: 'user', content: rangesPrompt }]
       })
     });
 
-    if (!response.ok) {
-      console.error('Anthropic error:', response.status, await response.text());
+    if (!rangesRes.ok) {
+      console.error('Ranges API error:', rangesRes.status);
       return res.status(200).json({ ranges: null, analysis: '', percentile: 50, cityMedian: 0, spainMean: 0 });
     }
 
-    const data = await response.json();
-    const rawText = data.content?.[0]?.text || '';
-    const clean = rawText.replace(/```json|```/g, '').trim();
-    const parsed = JSON.parse(clean);
+    const rangesData = await rangesRes.json();
+    const rangesRaw = rangesData.content?.[0]?.text || '';
+    const rangesParsed = JSON.parse(rangesRaw.replace(/```json|```/g, '').trim());
+    const ranges = rangesParsed.ranges;
 
-    const ranges = parsed.ranges;
-    const analysis = parsed.analysis || '';
-
+    // ─── CALCULAR PERCENTIL comparando el salario real contra rangos objetivos ─
     let percentile = 50, cityMedian = 0, spainMean = 0;
+
     if (ranges && ranges[city]) {
       const [min, med, max] = ranges[city];
       cityMedian = med;
-      if (gross <= min) percentile = 10;
-      else if (gross <= med) percentile = Math.round(10 + ((gross-min)/(med-min))*40);
-      else if (gross <= max) percentile = Math.round(50 + ((gross-med)/(max-med))*40);
-      else percentile = 95;
+
+      // Percentil honesto: si el salario está fuera del rango, lo refleja
+      if (gross < min) {
+        percentile = Math.max(1, Math.round((gross / min) * 10));
+      } else if (gross <= med) {
+        percentile = Math.round(10 + ((gross - min) / (med - min)) * 40);
+      } else if (gross <= max) {
+        percentile = Math.round(50 + ((gross - med) / (max - med)) * 40);
+      } else {
+        // Por encima del máximo del rango → percentil muy alto, refleja realidad
+        const excess = (gross - max) / max;
+        percentile = Math.min(99, Math.round(90 + excess * 30));
+      }
+
       const allMedians = Object.values(ranges).map(r => r[1]);
-      spainMean = Math.round(allMedians.reduce((a,b) => a+b, 0) / allMedians.length);
+      spainMean = Math.round(allMedians.reduce((a, b) => a + b, 0) / allMedians.length);
+    }
+
+    // Llamada 2: análisis personalizado (aquí sí usamos el salario + percentil calculado)
+    const analysisRes = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 600,
+        messages: [{ role: 'user', content: analysisPrompt + `\n\nMarket context: their salary is at approximately percentile ${percentile} for their profession in ${cityLabel}. City median: ${cityMedian.toLocaleString()}€. Spain mean: ${spainMean.toLocaleString()}€.` }]
+      })
+    });
+
+    let analysis = '';
+    if (analysisRes.ok) {
+      const analysisData = await analysisRes.json();
+      analysis = analysisData.content?.[0]?.text || '';
     }
 
     return res.status(200).json({ ranges, analysis, percentile, cityMedian, spainMean });
