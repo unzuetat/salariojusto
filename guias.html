@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guías para trabajadores — Derechos, salarios y convenios | SalarioJusto</title>
+  <meta name="description" content="Guías gratuitas para trabajadores: convenios colectivos, cómo reclamar tu salario, Ley de Transparencia Retributiva 2026 y calculadoras de neto. Datos reales, sin empresas detrás.">
+  <link rel="canonical" href="https://salariojusto.es/guias.html">
+  <meta property="og:title" content="Guías para trabajadores — SalarioJusto">
+  <meta property="og:description" content="Convenios colectivos, derechos salariales, Ley Transparencia 2026 y mucho más. Gratis, del lado del trabajador.">
+  <meta property="og:url" content="https://salariojusto.es/guias.html">
+  <meta property="og:image" content="https://salariojusto.es/preview.jpg">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXJ8V2FBW9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MXJ8V2FBW9');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1841567088579486" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream-50:#FDFBF7; --cream-100:#F7F0E6; --cream-200:#EDE0CE;
+      --gold:#C17B3E; --gold-dark:#A0622A; --gold-light:#D9A06A;
+      --ink:#2D2520; --ink-light:#6B5E52; --ink-lighter:#9B8E88;
+      --green:#2E7D52; --green-bg:#EAF5EE;
+      --blue-bg:#EFF6FF; --blue:#3B82F6;
+      --amber-bg:#FEF3C7; --amber:#B45309;
+      --red-bg:#FEE2E2; --red:#B91C1C;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'DM Sans',sans-serif; background:var(--cream-50); color:var(--ink); line-height:1.7; }
+
+    /* HEADER */
+    header { background:var(--ink); padding:0 32px; display:flex; align-items:center; justify-content:space-between; height:56px; }
+    .logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .logo-icon { width:30px; height:30px; background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:#fff; font-family:'DM Serif Display',serif; }
+    .logo-text { font-size:15px; font-weight:700; color:#fff; letter-spacing:-0.02em; }
+    .logo-text span { color:var(--gold-light); }
+    .header-cta { background:var(--gold); color:#fff; padding:8px 16px; font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; }
+    .header-cta:hover { background:var(--gold-dark); }
+
+    /* HERO */
+    .hero { background:var(--ink); padding:52px 32px 48px; text-align:center; }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-light); margin-bottom:20px; }
+    .hero-eyebrow::before,.hero-eyebrow::after { content:''; width:24px; height:1px; background:var(--gold); opacity:0.5; }
+    .hero h1 { font-family:'DM Serif Display',serif; font-size:clamp(26px,4vw,38px); color:#fff; font-weight:400; line-height:1.2; max-width:640px; margin:0 auto 16px; }
+    .hero p { font-size:15px; color:rgba(255,255,255,0.55); max-width:520px; margin:0 auto; }
+
+    /* MAIN */
+    main { max-width:1000px; margin:0 auto; padding:48px 24px 80px; }
+
+    /* CATEGORÍAS */
+    .section-label { font-size:10px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; display:flex; align-items:center; gap:12px; }
+    .section-label::after { content:''; flex:1; height:1px; background:var(--cream-200); }
+
+    /* GRID DE ARTÍCULOS */
+    .articles-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:16px; margin-bottom:48px; }
+
+    /* TARJETA DE ARTÍCULO */
+    .article-card { background:#fff; border:1px solid var(--cream-200); padding:22px 24px; text-decoration:none; display:block; transition:box-shadow 0.2s, border-color 0.2s; position:relative; }
+    .article-card:hover { box-shadow:0 4px 16px rgba(45,37,32,0.08); border-color:var(--cream-300,#d4c4b0); }
+    .article-card:hover .card-title { color:var(--gold); }
+    .card-badge { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:3px 8px; margin-bottom:12px; }
+    .badge-ley { background:var(--ink); color:#fff; }
+    .badge-convenio { background:var(--green-bg); color:var(--green); }
+    .badge-derechos { background:var(--blue-bg); color:var(--blue); }
+    .badge-sector { background:var(--amber-bg); color:var(--amber); }
+    .badge-herramienta { background:var(--cream-100); color:var(--ink-light); }
+    .card-title { font-size:15px; font-weight:700; color:var(--ink); line-height:1.35; margin-bottom:8px; transition:color 0.15s; }
+    .card-desc { font-size:13px; color:var(--ink-lighter); line-height:1.55; margin-bottom:14px; }
+    .card-meta { display:flex; align-items:center; justify-content:space-between; }
+    .card-date { font-size:11px; color:var(--ink-lighter); }
+    .card-arrow { font-size:13px; color:var(--gold); font-weight:700; }
+
+    /* TARJETA PLACEHOLDER — para artículos pendientes */
+    .article-card.placeholder { background:var(--cream-50); border-style:dashed; opacity:0.6; cursor:default; }
+    .article-card.placeholder:hover { box-shadow:none; border-color:var(--cream-200); }
+    .article-card.placeholder .card-title { color:var(--ink-lighter); }
+    .placeholder-tag { font-size:10px; color:var(--ink-lighter); font-style:italic; }
+
+    /* BLOQUE DESTACADO */
+    .featured-card { background:var(--ink); padding:28px 32px; margin-bottom:48px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; text-decoration:none; }
+    .featured-card:hover .featured-title { color:var(--gold-light); }
+    .featured-eyebrow { font-size:10px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-light); margin-bottom:10px; }
+    .featured-title { font-family:'DM Serif Display',serif; font-size:22px; font-weight:400; color:#fff; line-height:1.25; margin-bottom:8px; transition:color 0.15s; }
+    .featured-desc { font-size:13px; color:rgba(255,255,255,0.55); line-height:1.6; }
+    .featured-btn { background:var(--gold); color:#fff; padding:10px 20px; font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; white-space:nowrap; }
+
+    /* CÓMO AÑADIR — instrucciones visibles solo para admin */
+    .admin-note { background:#FEF3C7; border:1px solid #FDE68A; border-left:4px solid var(--amber); padding:16px 20px; margin-bottom:32px; }
+    .admin-note p { font-size:13px; color:var(--ink-light); line-height:1.65; margin-bottom:6px; }
+    .admin-note code { background:rgba(0,0,0,0.06); padding:2px 6px; font-size:12px; border-radius:3px; font-family:monospace; }
+    .admin-note p:last-child { margin:0; }
+
+    /* CTA CALCULADORA */
+    .cta-strip { background:var(--green-bg); border:1px solid #C6E6D0; border-left:4px solid var(--green); padding:20px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:48px; flex-wrap:wrap; }
+    .cta-strip p { font-size:14px; color:#1a3a2a; margin:0; }
+    .cta-strip a { background:var(--green); color:#fff; padding:9px 20px; font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; white-space:nowrap; }
+    .cta-strip a:hover { background:#245f3f; }
+
+    /* FOOTER */
+    footer { background:var(--ink); padding:32px; text-align:center; }
+    .footer-text { font-size:11px; color:rgba(255,255,255,0.35); line-height:1.7; max-width:600px; margin:0 auto; }
+    .footer-text a { color:var(--gold-light); text-decoration:none; }
+
+    @media (max-width:600px) {
+      header { padding:0 16px; }
+      .hero { padding:36px 16px; }
+      main { padding:32px 16px 60px; }
+      .featured-card { grid-template-columns:1fr; }
+      .articles-grid { grid-template-columns:1fr; }
+      .cta-strip { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="https://salariojusto.es" class="logo">
+    <div class="logo-icon">€</div>
+    <div class="logo-text">Salario<span>Justo</span></div>
+  </a>
+  <a href="https://salariojusto.es" class="header-cta">Calcular mi salario →</a>
+</header>
+
+<div class="hero">
+  <div class="hero-eyebrow">Herramientas para trabajadores</div>
+  <h1>Guías gratuitas para cobrar lo que te corresponde</h1>
+  <p>Convenios colectivos, derechos salariales, Ley de Transparencia Retributiva 2026 y mucho más. Sin empresas detrás.</p>
+</div>
+
+<main>
+
+  <!-- =========================================================
+       NOTA DE ADMINISTRACIÓN — puedes eliminar este bloque
+       cuando ya no la necesites
+  ========================================================== -->
+  <div class="admin-note">
+    <p><strong>📌 Cómo añadir nuevos artículos a esta página:</strong></p>
+    <p>1. Copia uno de los bloques <code>&lt;a class="article-card"&gt;</code> de abajo.</p>
+    <p>2. Cambia el <code>href</code> a la URL del nuevo artículo (ej: <code>/convenio-camarero-hosteleria.html</code>).</p>
+    <p>3. Cambia el <code>card-badge</code>, <code>card-title</code>, <code>card-desc</code> y <code>card-date</code>.</p>
+    <p>4. Guarda, sube a GitHub → Vercel publica automáticamente.</p>
+    <p>5. Añade también la URL al <code>sitemap.xml</code> copiando el bloque de plantilla que hay dentro del archivo.</p>
+  </div>
+
+  <!-- ARTÍCULO DESTACADO -->
+  <a href="https://salariojusto.es/ley-transparencia-salarial-2026.html" class="featured-card">
+    <div>
+      <div class="featured-eyebrow">⭐ Guía esencial · Ley Transparencia 2026</div>
+      <div class="featured-title">Ley de transparencia salarial España: guía completa 2026</div>
+      <div class="featured-desc">Qué cambia a partir de junio de 2026, qué puedes exigirle a tu empresa según su tamaño, y cómo usar tus nuevos derechos desde ya. Con datos reales del INE, BOE y Directiva (UE) 2023/970.</div>
+    </div>
+    <div class="featured-btn">Leer guía →</div>
+  </a>
+
+  <!-- ─── CATEGORÍA: LEY TRANSPARENCIA ─────────────────────── -->
+  <div class="section-label">Ley de Transparencia Retributiva</div>
+  <div class="articles-grid">
+
+    <a href="https://salariojusto.es/ley-transparencia-salarial-2026.html" class="article-card">
+      <span class="card-badge badge-ley">Ley · Guía completa</span>
+      <div class="card-title">Ley de transparencia salarial España: guía completa 2026</div>
+      <div class="card-desc">Directiva UE 2023/970, diferencias con el RD 902/2020, derechos según tamaño de empresa y cómo usarlos.</div>
+      <div class="card-meta"><span class="card-date">Mar 2026</span><span class="card-arrow">→</span></div>
+    </a>
+
+    <!-- AÑADE AQUÍ MÁS ARTÍCULOS DE LEY — ejemplo:
+    <a href="https://salariojusto.es/ley-transparencia-NOMBRE.html" class="article-card">
+      <span class="card-badge badge-ley">Ley</span>
+      <div class="card-title">TÍTULO DEL ARTÍCULO</div>
+      <div class="card-desc">Descripción breve de 1-2 frases sobre el contenido.</div>
+      <div class="card-meta"><span class="card-date">Mar 2026</span><span class="card-arrow">→</span></div>
+    </a>
+    -->
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-ley">Ley</span>
+      <div class="card-title">Cómo solicitar los rangos salariales de tu empresa</div>
+      <div class="card-desc">Guía paso a paso para ejercer tu derecho de información desde junio 2026.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-ley">Ley</span>
+      <div class="card-title">Ofertas de empleo sin salario: ilegales desde junio 2026</div>
+      <div class="card-desc">Qué dice la ley, cómo denunciarlo y qué puedes exigir antes de la entrevista.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+  </div>
+
+  <!-- ─── CATEGORÍA: CONVENIOS COLECTIVOS ──────────────────── -->
+  <div class="section-label">Salarios por convenio colectivo</div>
+  <div class="articles-grid">
+
+    <!-- AÑADE AQUÍ LOS ARTÍCULOS DE CONVENIO — ejemplo:
+    <a href="https://salariojusto.es/convenio-camarero-hosteleria.html" class="article-card">
+      <span class="card-badge badge-convenio">Convenio</span>
+      <div class="card-title">Cuánto cobra un camarero según el convenio de hostelería 2026</div>
+      <div class="card-desc">Salario mínimo garantizado por categoría, complementos y cómo reclamar si cobras menos.</div>
+      <div class="card-meta"><span class="card-date">Mar 2026</span><span class="card-arrow">→</span></div>
+    </a>
+    -->
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-convenio">Convenio</span>
+      <div class="card-title">Camarero/a — Convenio hostelería 2026</div>
+      <div class="card-desc">Salario mínimo por categoría, nocturnidad, festivos y cómo reclamar.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-convenio">Convenio</span>
+      <div class="card-title">Dependiente/a — Convenio comercio 2026</div>
+      <div class="card-desc">Grupos profesionales, salarios por categoría y derechos específicos del sector.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-convenio">Convenio</span>
+      <div class="card-title">Auxiliar de enfermería — Convenio sanidad 2026</div>
+      <div class="card-desc">Tabla salarial por grupo, complementos nocturnos y festivos del sector sanitario.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+  </div>
+
+  <!-- ─── CATEGORÍA: CÓMO RECLAMAR ─────────────────────────── -->
+  <div class="section-label">Cómo reclamar tus derechos</div>
+  <div class="articles-grid">
+
+    <!-- AÑADE AQUÍ LOS ARTÍCULOS DE DERECHOS — ejemplo:
+    <a href="https://salariojusto.es/derechos-reclamar-diferencias-salariales-convenio.html" class="article-card">
+      <span class="card-badge badge-derechos">Derechos</span>
+      <div class="card-title">Cómo reclamar diferencias salariales con el convenio</div>
+      <div class="card-desc">Pasos, documentación necesaria, plazos y dónde pedir ayuda gratuita.</div>
+      <div class="card-meta"><span class="card-date">Mar 2026</span><span class="card-arrow">→</span></div>
+    </a>
+    -->
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-derechos">Derechos</span>
+      <div class="card-title">Cómo reclamar diferencias salariales con el convenio</div>
+      <div class="card-desc">Pasos concretos, plazos y documentación necesaria para reclamar lo que te corresponde.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-derechos">Derechos</span>
+      <div class="card-title">Denunciar brecha salarial por sexo: guía práctica</div>
+      <div class="card-desc">Cómo documentarlo, qué organismos actúan y qué compensación puedes obtener.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-derechos">Derechos</span>
+      <div class="card-title">Horas extra no pagadas: cómo reclamarlas</div>
+      <div class="card-desc">Registro de jornada, cálculo del importe y vías de reclamación paso a paso.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+  </div>
+
+  <!-- ─── CATEGORÍA: GUÍAS POR SECTOR ──────────────────────── -->
+  <div class="section-label">Salarios por sector</div>
+  <div class="articles-grid">
+
+    <!-- AÑADE AQUÍ LOS ARTÍCULOS DE SECTOR — ejemplo:
+    <a href="https://salariojusto.es/sector-hosteleria.html" class="article-card">
+      <span class="card-badge badge-sector">Sector</span>
+      <div class="card-title">Salarios en hostelería en España 2026</div>
+      <div class="card-desc">Lo que ganan realmente camareros, cocineros y recepcionistas. Con datos del INE y convenio estatal.</div>
+      <div class="card-meta"><span class="card-date">Mar 2026</span><span class="card-arrow">→</span></div>
+    </a>
+    -->
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-sector">Sector</span>
+      <div class="card-title">Salarios en hostelería en España 2026</div>
+      <div class="card-desc">Lo que ganan realmente camareros, cocineros y recepcionistas. Con datos del INE y convenio.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-sector">Sector</span>
+      <div class="card-title">Salarios en construcción en España 2026</div>
+      <div class="card-desc">Rangos reales por categoría, horas extra y derechos específicos del sector.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-sector">Sector</span>
+      <div class="card-title">Salarios en tecnología e informática 2026</div>
+      <div class="card-desc">Rangos reales por experiencia y especialidad. Datos de InfoJobs y mercado real.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+  </div>
+
+  <!-- ─── CATEGORÍA: HERRAMIENTAS ──────────────────────────── -->
+  <div class="section-label">Calculadoras y herramientas</div>
+  <div class="articles-grid">
+
+    <!-- AÑADE AQUÍ LOS ARTÍCULOS DE HERRAMIENTA — ejemplo:
+    <a href="https://salariojusto.es/herramienta-calculadora-sueldo-neto-14-pagas.html" class="article-card">
+      <span class="card-badge badge-herramienta">Herramienta</span>
+      <div class="card-title">Calculadora sueldo neto con 14 pagas</div>
+      <div class="card-desc">Cómo funciona el cálculo con pagas extraordinarias y por qué difiere según el convenio.</div>
+      <div class="card-meta"><span class="card-date">Mar 2026</span><span class="card-arrow">→</span></div>
+    </a>
+    -->
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-herramienta">Herramienta</span>
+      <div class="card-title">Calculadora sueldo neto con 14 pagas</div>
+      <div class="card-desc">Cómo calcular exactamente lo que cobras con pagas extras. IRPF 2026 oficial.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+    <div class="article-card placeholder">
+      <span class="card-badge badge-herramienta">Herramienta</span>
+      <div class="card-title">Cómo saber si tu retención IRPF es correcta</div>
+      <div class="card-desc">Errores frecuentes en la retención y cómo verificar que tu empresa aplica el tipo correcto.</div>
+      <div class="card-meta"><span class="placeholder-tag">Próximamente</span></div>
+    </div>
+
+  </div>
+
+  <div class="cta-strip">
+    <p><strong>¿Cuánto te corresponde cobrar?</strong> Calcula tu salario neto exacto y compara con la mediana de tu profesión y ciudad — gratis, con el algoritmo IRPF 2026 oficial.</p>
+    <a href="https://salariojusto.es">Ir a la calculadora →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p class="footer-text">
+    SalarioJusto · Herramienta gratuita para trabajadores · Sin empresas detrás<br>
+    <a href="https://salariojusto.es">Calculadora de salario neto</a> · <a href="https://salariojusto.es/en">English version</a>
+  </p>
+</footer>
+
+</body>
+</html>
