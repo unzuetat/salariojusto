@@ -1122,6 +1122,150 @@
       transition: border-color 0.2s;
     }
     .trust-value-link:hover { border-color: var(--gold-light); }
+
+    /* ============================================================
+   MÓDULO CONVENIO — CSS
+   Insertar justo ANTES del cierre </style> (aprox línea 1085)
+   ============================================================ */
+
+/* Selector de convenio */
+.convenio-selector-wrap {
+  margin-bottom: 20px;
+  padding: 18px 20px;
+  background: var(--cream-100);
+  border: 1px solid var(--cream-200);
+  border-left: 4px solid var(--gold);
+}
+.convenio-selector-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+}
+.convenio-selector-row {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end;
+}
+.convenio-selector-row .field { flex: 1; min-width: 200px; }
+.convenio-selector-row .field label {
+  display: block; font-size: 11px; font-weight: 600;
+  color: var(--ink-light); margin-bottom: 6px; letter-spacing: 0.03em;
+}
+.convenio-hint {
+  font-size: 11px; color: var(--ink-lighter); margin-top: 8px; line-height: 1.5;
+}
+.convenio-hint a { color: var(--gold); text-decoration: none; }
+.convenio-hint a:hover { text-decoration: underline; }
+
+/* Panel de resultados del convenio */
+.convenio-panel {
+  display: none;
+  background: #fff;
+  border: 1px solid var(--cream-200);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.convenio-panel.visible { display: block; }
+
+.convenio-panel-header {
+  background: var(--ink);
+  padding: 14px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.convenio-panel-title {
+  font-size: 12px; font-weight: 700; color: #fff;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.convenio-panel-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 3px 10px;
+  background: var(--gold); color: #fff;
+}
+
+.convenio-panel-body { padding: 20px; }
+
+/* Alerta salario bajo convenio */
+.convenio-alert {
+  padding: 14px 18px; margin-bottom: 16px;
+  border-left: 4px solid; font-size: 13px; line-height: 1.6;
+  display: none;
+}
+.convenio-alert.below { background: var(--red-bg); border-color: var(--red); color: #7f1d1d; display: block; }
+.convenio-alert.ok    { background: var(--green-bg); border-color: var(--green); color: #1a3a2a; display: block; }
+.convenio-alert.warn  { background: var(--amber-bg); border-color: var(--amber); color: #78350f; display: block; }
+.convenio-alert strong { font-weight: 700; }
+
+/* Grid de datos del convenio */
+.convenio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px; margin-bottom: 16px;
+}
+.convenio-stat {
+  background: var(--cream-50); border: 1px solid var(--cream-200);
+  padding: 12px 14px;
+}
+.convenio-stat-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-lighter); margin-bottom: 5px;
+}
+.convenio-stat-val {
+  font-size: 18px; font-weight: 700; color: var(--ink);
+  font-family: 'DM Serif Display', serif;
+}
+.convenio-stat-sub { font-size: 11px; color: var(--ink-lighter); margin-top: 2px; }
+
+/* Tabla de complementos */
+.convenio-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px; }
+.convenio-table th {
+  text-align: left; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7); background: var(--ink);
+  padding: 9px 12px;
+}
+.convenio-table td { padding: 9px 12px; border-bottom: 1px solid var(--cream-200); color: var(--ink-light); }
+.convenio-table tr:last-child td { border-bottom: none; }
+.convenio-table tr:nth-child(even) td { background: var(--cream-50); }
+.convenio-table td:first-child { color: var(--ink); font-weight: 500; }
+.convenio-table td:last-child { text-align: right; font-weight: 600; color: var(--ink); }
+
+/* Barra de comparación convenio vs salario */
+.convenio-compare {
+  background: var(--cream-50); border: 1px solid var(--cream-200);
+  padding: 14px 16px; margin-bottom: 12px;
+}
+.convenio-compare-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--ink-lighter); margin-bottom: 10px;
+}
+.convenio-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+.convenio-bar-name { font-size: 11px; color: var(--ink-light); width: 120px; flex-shrink: 0; }
+.convenio-bar-track { flex: 1; height: 8px; background: var(--cream-200); position: relative; }
+.convenio-bar-fill  { position: absolute; top: 0; left: 0; height: 100%; transition: width 0.6s ease; }
+.convenio-bar-fill.gold   { background: var(--gold); }
+.convenio-bar-fill.green  { background: var(--green); }
+.convenio-bar-fill.red    { background: var(--red); }
+.convenio-bar-amount { font-size: 12px; font-weight: 700; color: var(--ink); width: 90px; text-align: right; }
+
+/* Acordeón de convenios relacionados */
+.convenio-related { border-top: 1px solid var(--cream-200); padding-top: 14px; margin-top: 4px; }
+.convenio-related-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-lighter); margin-bottom: 10px;
+}
+.convenio-related-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.convenio-related-link {
+  font-size: 11px; font-weight: 600; color: var(--gold);
+  border: 1px solid var(--cream-300); padding: 5px 10px;
+  text-decoration: none; background: var(--cream-50);
+  transition: all 0.15s;
+}
+.convenio-related-link:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+@media (max-width: 600px) {
+  .convenio-grid { grid-template-columns: repeat(2, 1fr); }
+  .convenio-selector-row .field { min-width: 100%; }
+  .convenio-bar-name { width: 80px; font-size: 10px; }
+  .convenio-bar-amount { width: 70px; font-size: 11px; }
+}
+  
   </style>
       <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
