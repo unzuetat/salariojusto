@@ -1788,7 +1788,97 @@
         </div>
       </div>
     </div>
+<!-- ============================================================
+  MÓDULO CONVENIO — HTML
+  Insertar JUSTO ANTES de <button class="btn-calc" (aprox línea 1571)
+  ============================================================ -->
 
+<!-- SELECTOR DE CONVENIO -->
+<div class="convenio-selector-wrap">
+  <div class="convenio-selector-label">Verificación de convenio colectivo</div>
+  <div class="convenio-selector-row">
+    <div class="field">
+      <label>Convenio aplicable</label>
+      <div class="select-wrapper">
+        <select id="convenioSelect" onchange="updateConvenioPanel()">
+          <option value="">— Sin convenio específico —</option>
+          <option value="ofydes_vlc">Oficinas y Despachos — Valencia (2024-2026)</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Grupo profesional en el convenio</label>
+      <div class="select-wrapper">
+        <select id="convenioGrupo" onchange="updateConvenioPanel()" disabled>
+          <option value="">Selecciona convenio primero</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label>Año a verificar</label>
+      <div class="select-wrapper">
+        <select id="convenioAnyo" onchange="updateConvenioPanel()" disabled>
+          <option value="2026">2026 (vigente)</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="convenio-hint">
+    ⓘ Si tu empresa está en Valencia y se dedica a servicios administrativos, consultoría, gestión o despachos profesionales, probablemente te aplica este convenio.
+    <a href="https://salariojusto.es/reclamar-diferencias-salariales-convenio.html" target="_blank">¿Cómo reclamar si cobras menos?</a>
+  </div>
+</div>
+
+<!-- PANEL CONVENIO (se rellena con JS) -->
+<div class="convenio-panel" id="convenioPanel">
+  <div class="convenio-panel-header">
+    <span class="convenio-panel-title" id="convenioPanelTitle">Convenio</span>
+    <span class="convenio-panel-badge" id="convenioPanelBadge">Grupo —</span>
+  </div>
+  <div class="convenio-panel-body">
+
+    <!-- Alerta estado vs convenio -->
+    <div class="convenio-alert" id="convenioAlert"></div>
+
+    <!-- Stats principales -->
+    <div class="convenio-grid" id="convenioGrid"></div>
+
+    <!-- Barra comparación -->
+    <div class="convenio-compare" id="convenioCompare" style="display:none">
+      <div class="convenio-compare-label">Comparación salarial</div>
+      <div id="convenioBarRows"></div>
+    </div>
+
+    <!-- Tabla complementos -->
+    <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-lighter);margin-bottom:8px;">
+      Complementos y pluses del convenio
+    </div>
+    <table class="convenio-table">
+      <thead>
+        <tr><th>Concepto</th><th>Naturaleza</th><th>Importe</th></tr>
+      </thead>
+      <tbody id="convenioComplementos"></tbody>
+    </table>
+
+    <!-- Nota sobre atrasos si hay diferencia -->
+    <div id="convenioAtrasosNote" style="display:none; font-size:12px; color:var(--ink-light); background:var(--amber-bg); border-left:3px solid var(--amber); padding:10px 14px; line-height:1.6; margin-bottom:14px;">
+      <strong style="color:var(--amber);">⚠ Posibles atrasos reclamables.</strong>
+      El plazo de prescripción es de <strong>1 año por mensualidad</strong> desde que debió abonarse (art. 59.2 ET).
+      Presentar papeleta de conciliación interrumpe ese plazo.
+      <a href="https://salariojusto.es/reclamar-diferencias-salariales-convenio.html" target="_blank" style="color:var(--gold);">Guía completa →</a>
+    </div>
+
+    <!-- Convenios relacionados -->
+    <div class="convenio-related">
+      <div class="convenio-related-label">Convenios relacionados que pueden aplicarte</div>
+      <div class="convenio-related-list" id="convenioRelated"></div>
+    </div>
+
+  </div>
+</div>
+    
     <button class="btn-calc" onclick="calculate()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
         <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
