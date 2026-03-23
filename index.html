@@ -2765,7 +2765,16 @@ function updateConvenioGroups() {
   const grupoSel = document.getElementById('convenioGrupo');
   const anyoSel = document.getElementById('convenioAnyo');
   const val = sel.value;
-
+// Si elige "buscar en BOE", abrir y resetear
+  if (val === 'buscar_bop') {
+    window.open('https://www.boe.es/buscar/convenios_colectivos.php', '_blank');
+    sel.value = '';
+    document.getElementById('convenioGrupo').innerHTML = '<option value="">Selecciona convenio primero</option>';
+    document.getElementById('convenioGrupo').disabled = true;
+    document.getElementById('convenioAnyo').disabled = true;
+    document.getElementById('convenioPanel').classList.remove('visible');
+    return;
+  }
   grupoSel.innerHTML = '';
   if (!val) {
     grupoSel.innerHTML = '<option value="">Selecciona convenio primero</option>';
