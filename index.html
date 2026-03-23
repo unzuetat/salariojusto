@@ -1791,9 +1791,25 @@
     <div class="field">
       <label>Convenio aplicable</label>
       <div class="select-wrapper">
-        <select id="convenioSelect" onchange="updateConvenioPanel()">
+      <select id="convenioSelect" onchange="updateConvenioGroups()">
           <option value="">— Sin convenio específico —</option>
-          <option value="ofydes_vlc">Oficinas y Despachos — Valencia (2024-2026)</option>
+
+          <optgroup label="── Comunitat Valenciana ──">
+            <option value="ofydes_vlc">Oficinas y Despachos — Valencia (2024-2026)</option>
+            <option value="" disabled>Hostelería — Valencia (próximamente)</option>
+            <option value="" disabled>Comercio — Valencia (próximamente)</option>
+            <option value="" disabled>Construcción — Valencia (próximamente)</option>
+          </optgroup>
+
+          <optgroup label="── Estatales ──">
+            <option value="" disabled>Hostelería estatal (próximamente)</option>
+            <option value="" disabled>Comercio minorista estatal (próximamente)</option>
+            <option value="" disabled>Consultoría / TIC estatal (próximamente)</option>
+          </optgroup>
+
+          <optgroup label="── No encuentro el mío ──">
+            <option value="buscar_bop">🔍 Buscar mi convenio en el BOE/BOP</option>
+          </optgroup>
         </select>
       </div>
     </div>
