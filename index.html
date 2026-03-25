@@ -2442,6 +2442,46 @@ const seniorityLabels = { junior:'Junior', mid:'Mid', senior:'Senior', lead:'Lea
     document.getElementById('results').style.display = 'block';
     document.getElementById('results').scrollIntoView({ behavior:'smooth', block:'start' });
 
+      // ─── ANÁLISIS DETERMINISTA ──────────────────────────────────────
+  function buildAnalysisTemplate(salary, percentile, cityMedian, spainMean, profession, city, seniority) {
+    const fmt = n => n.toLocaleString('es-ES');
+    const diff = salary - cityMedian;
+    const diffAbs = Math.abs(diff);
+    const diffPct = cityMedian > 0 ? Math.round((diff / cityMedian) * 100) : 0;
+    const senLabels = { junior:'junior', mid:'nivel medio', senior:'senior', lead:'lead/manager' };
+    const senLabel = senLabels[seniority] || 'nivel medio';
+
+    // ── Párrafo 1: Posición en el mercado ──
+    let p1 = '';
+    if (percentile >= 85) {
+      p1 = `Tu salario bruto anual de ${fmt(salary)} € te sitúa en el <strong>percentil ${percentile}</strong> para ${profession} (${senLabel}) en ${city}. Estás <strong>${fmt(diffAbs)} € por encima</strong> de la mediana de mercado (${fmt(cityMedian)} €), lo que representa un +${diffPct}%. Tu retribución es claramente competitiva para tu perfil.`;
+    } else if (percentile >= 60) {
+      p1 = `Tu salario bruto anual de ${fmt(salary)} € te sitúa en el <strong>percentil ${percentile}</strong> para ${profession} (${senLabel}) en ${city}. Estás <strong>${fmt(diffAbs)} € por encima</strong> de la mediana de mercado (${fmt(cityMedian)} €). Tu salario es competitivo, aunque hay margen de mejora si quieres acercarte al percentil 75.`;
+    } else if (percentile >= 40) {
+      p1 = `Tu salario bruto anual de ${fmt(salary)} € te sitúa en el <strong>percentil ${percentile}</strong> para ${profession} (${senLabel}) en ${city}, muy cerca de la mediana de mercado (${fmt(cityMedian)} €). Estás ${diff >= 0 ? fmt(diffAbs) + ' € por encima' : fmt(diffAbs) + ' € por debajo'} del punto medio. Tienes argumentos para negociar al alza.`;
+    } else {
+      p1 = `Tu salario bruto anual de ${fmt(salary)} € te sitúa en el <strong>percentil ${percentile}</strong> para ${profession} (${senLabel}) en ${city}. Estás <strong>${fmt(diffAbs)} € por debajo</strong> de la mediana de mercado (${fmt(cityMedian)} €), lo que representa un ${Math.abs(diffPct)}% menos. Esto indica que tu retribución está por debajo de lo habitual para tu perfil.`;
+    }
+
+    // ── Párrafo 2: Derechos (siempre el mismo, 100% correcto) ──
+    const p2 = `Desde junio de 2026, la <strong>Directiva (UE) 2023/970 de Transparencia Retributiva</strong> refuerza tus derechos: podrás solicitar a tu empresa los salarios medios desglosados por sexo para tu categoría, las ofertas de empleo deberán incluir rangos salariales, y las cláusulas de confidencialidad salarial serán nulas. Si la brecha de género en tu categoría supera el 5%, la empresa estará obligada a actuar.`;
+
+    // ── Párrafo 3: Recomendación según percentil ──
+    let p3 = '';
+    if (percentile >= 75) {
+      p3 = `<strong>Recomendación:</strong> Tu salario está bien posicionado. Para mantener tu ventaja competitiva, documenta tus logros cuantificables y revisa tu posición anualmente con datos del <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177025&menu=ultiDatos&idp=1254735976596" target="_blank" style="color:var(--gold);">INE</a> y tu convenio colectivo. La media nacional para tu grupo profesional es de ${fmt(spainMean)} €.`;
+    } else if (percentile >= 40) {
+      p3 = `<strong>Recomendación:</strong> Tu salario está en zona media. Tienes margen para negociar. Prepara un caso basado en datos: la mediana de mercado para tu perfil en ${city} es ${fmt(cityMedian)} € y la media nacional ${fmt(spainMean)} €. Verifica también que tu salario cumple el mínimo de tu <a href="#convenio-section" style="color:var(--gold);">convenio colectivo</a> — muchos trabajadores cobran por debajo sin saberlo.`;
+    } else {
+      p3 = `<strong>Recomendación:</strong> Tu salario está significativamente por debajo de la mediana (${fmt(cityMedian)} € en ${city}). Antes de negociar, comprueba que tu empresa cumple el mínimo de tu <a href="#convenio-section" style="color:var(--gold);">convenio colectivo</a>. Si no lo cumple, tienes derecho a reclamar la diferencia con efecto retroactivo (1 año por mensualidad, art. 59 ET). Si sí lo cumple pero tu salario es bajo respecto al mercado, la Ley de Transparencia Retributiva te da derecho a pedir los datos salariales de tu categoría.`;
+    }
+
+    return `
+      <p style="margin-bottom:14px;line-height:1.7;font-size:14px;">${p1}</p>
+      <p style="margin-bottom:14px;line-height:1.7;font-size:14px;">${p2}</p>
+      <p style="margin-bottom:0;line-height:1.7;font-size:14px;">${p3}</p>
+    `;
+  }
     // Llamar API para rangos + análisis
    callClaudeAPI({
       salary: gross,
