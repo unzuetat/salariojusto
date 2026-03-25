@@ -2955,42 +2955,36 @@ async function updateConvenioGroups() {
 }
 
 // ── RENDERIZAR PANEL ──────────────────────────────────────────────────────────
-function updateConvenioPanel() {
+async function updateConvenioPanel() {
   const convKey = document.getElementById('convenioSelect').value;
   const grupoId = document.getElementById('convenioGrupo').value;
-  const anyo    = parseInt(document.getElementById('convenioAnyo').value) || 2025;
+  const anyo    = document.getElementById('convenioAnyo').value;
   const panel   = document.getElementById('convenioPanel');
 
-  if (!convKey || !grupoId) {
-    panel.classList.remove('visible');
-    return;
-  }
+  if (!convKey || !grupoId) { panel.classList.remove('visible'); return; }
 
-  const conv  = CONVENIOS[convKey];
+  const conv = await loadConvenio(convKey);
+  if (!conv) { panel.classList.remove('visible'); return; }
+
   const grupo = conv.grupos.find(g => g.id === grupoId);
   if (!grupo) { panel.classList.remove('visible'); return; }
 
-  // ¿Tiene datos para este año?
   const sal = grupo.salario[anyo];
   if (!sal) { panel.classList.remove('visible'); return; }
 
-  const compl  = conv.complementos[anyo];
+  const compl = conv.complementos[anyo];
   panel.classList.add('visible');
 
-  // Header
   document.getElementById('convenioPanelTitle').textContent = conv.nombre;
   document.getElementById('convenioPanelBadge').textContent = grupo.id;
 
   const brutal = parseFloat(document.getElementById('salary').value) || 0;
   const minSBA = sal.sba;
-  // sbapc existe en Oficinas y Despachos (SBA + plus convenio).
-  // En hostelería no existe → usamos solo SBA.
   const minSBAPC = sal.sbapc || sal.sba;
   const tieneSBAPC = !!sal.sbapc;
   const numPagas = conv.pagas || 14;
   const jornada = conv.jornadaAnual || 1750;
 
-  // ── Alerta ──────────────────────────────────────────────────────
   const alertEl = document.getElementById('convenioAlert');
   const atrasosEl = document.getElementById('convenioAtrasosNote');
   alertEl.className = 'convenio-alert';
@@ -3019,40 +3013,16 @@ function updateConvenioPanel() {
     atrasosEl.style.display = 'none';
   }
 
-  // ── Stats grid ──────────────────────────────────────────────────
   const fmt = n => n.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
   let gridHTML = `
-    <div class="convenio-stat">
-      <div class="convenio-stat-label">Salario base / mes</div>
-      <div class="convenio-stat-val">${fmt(sal.mes)} €</div>
-      <div class="convenio-stat-sub">${grupo.id} · ${anyo}</div>
-    </div>
-    <div class="convenio-stat">
-      <div class="convenio-stat-label">Salario base anual</div>
-      <div class="convenio-stat-val">${fmt(sal.sba)} €</div>
-      <div class="convenio-stat-sub">${numPagas} pagas · sin complementos</div>
-    </div>`;
-
+    <div class="convenio-stat"><div class="convenio-stat-label">Salario base / mes</div><div class="convenio-stat-val">${fmt(sal.mes)} €</div><div class="convenio-stat-sub">${grupo.id} · ${anyo}</div></div>
+    <div class="convenio-stat"><div class="convenio-stat-label">Salario base anual</div><div class="convenio-stat-val">${fmt(sal.sba)} €</div><div class="convenio-stat-sub">${numPagas} pagas · sin complementos</div></div>`;
   if (tieneSBAPC) {
-    gridHTML += `
-    <div class="convenio-stat">
-      <div class="convenio-stat-label">Con Plus Convenio</div>
-      <div class="convenio-stat-val">${fmt(sal.sbapc)} €</div>
-      <div class="convenio-stat-sub">SBA + ${compl.plusConvenio.anual} €/año</div>
-    </div>`;
+    gridHTML += `<div class="convenio-stat"><div class="convenio-stat-label">Con Plus Convenio</div><div class="convenio-stat-val">${fmt(sal.sbapc)} €</div><div class="convenio-stat-sub">SBA + ${compl.plusConvenio.anual} €/año</div></div>`;
   }
-
-  gridHTML += `
-    <div class="convenio-stat">
-      <div class="convenio-stat-label">Jornada anual</div>
-      <div class="convenio-stat-val">${jornada.toLocaleString('es-ES')} h</div>
-      <div class="convenio-stat-sub">Según convenio vigente</div>
-    </div>`;
-
+  gridHTML += `<div class="convenio-stat"><div class="convenio-stat-label">Jornada anual</div><div class="convenio-stat-val">${jornada.toLocaleString('es-ES')} h</div><div class="convenio-stat-sub">Según convenio vigente</div></div>`;
   document.getElementById('convenioGrid').innerHTML = gridHTML;
 
-  // ── Barra comparación ───────────────────────────────────────────
   const compareEl = document.getElementById('convenioCompare');
   const barRowsEl = document.getElementById('convenioBarRows');
   if (brutal > 0) {
@@ -3060,45 +3030,22 @@ function updateConvenioPanel() {
     const refMax = tieneSBAPC ? sal.sbapc : sal.sba;
     const maxVal = Math.max(brutal, refMax) * 1.1;
     const pctBruto = Math.min((brutal / maxVal) * 100, 100);
-    const pctSBA   = Math.min((sal.sba / maxVal) * 100, 100);
+    const pctSBA = Math.min((sal.sba / maxVal) * 100, 100);
     const colorBruto = brutal < sal.sba ? 'red' : 'green';
-
     let barsHTML = `
-      <div class="convenio-bar-row">
-        <div class="convenio-bar-name">Tu salario</div>
-        <div class="convenio-bar-track"><div class="convenio-bar-fill ${colorBruto}" style="width:${pctBruto}%"></div></div>
-        <div class="convenio-bar-amount">${brutal.toLocaleString('es-ES')} €</div>
-      </div>
-      <div class="convenio-bar-row">
-        <div class="convenio-bar-name">Mín. convenio</div>
-        <div class="convenio-bar-track"><div class="convenio-bar-fill gold" style="width:${pctSBA}%"></div></div>
-        <div class="convenio-bar-amount">${fmt(sal.sba)} €</div>
-      </div>`;
-
+      <div class="convenio-bar-row"><div class="convenio-bar-name">Tu salario</div><div class="convenio-bar-track"><div class="convenio-bar-fill ${colorBruto}" style="width:${pctBruto}%"></div></div><div class="convenio-bar-amount">${brutal.toLocaleString('es-ES')} €</div></div>
+      <div class="convenio-bar-row"><div class="convenio-bar-name">Mín. convenio</div><div class="convenio-bar-track"><div class="convenio-bar-fill gold" style="width:${pctSBA}%"></div></div><div class="convenio-bar-amount">${fmt(sal.sba)} €</div></div>`;
     if (tieneSBAPC) {
       const pctSBAPC = Math.min((sal.sbapc / maxVal) * 100, 100);
-      barsHTML += `
-      <div class="convenio-bar-row">
-        <div class="convenio-bar-name">Mín. + Plus Conv.</div>
-        <div class="convenio-bar-track"><div class="convenio-bar-fill gold" style="width:${pctSBAPC}%"></div></div>
-        <div class="convenio-bar-amount">${fmt(sal.sbapc)} €</div>
-      </div>`;
+      barsHTML += `<div class="convenio-bar-row"><div class="convenio-bar-name">Mín. + Plus Conv.</div><div class="convenio-bar-track"><div class="convenio-bar-fill gold" style="width:${pctSBAPC}%"></div></div><div class="convenio-bar-amount">${fmt(sal.sbapc)} €</div></div>`;
     }
-
     barRowsEl.innerHTML = barsHTML;
-  } else {
-    compareEl.style.display = 'none';
-  }
+  } else { compareEl.style.display = 'none'; }
 
-  // ── Tabla complementos (dinámica, lee del objeto) ───────────────
   let complHTML = '';
   if (compl) {
     for (const [key, c] of Object.entries(compl)) {
-      const nombre = key
-        .replace(/([A-Z])/g, ' $1')
-        .replace(/^./, s => s.toUpperCase())
-        .replace(/plus /i, 'Plus ')
-        .replace(/horas /i, 'Horas ');
+      const nombre = key.replace(/([A-Z])/g, ' $1').replace(/^./, s => s.toUpperCase()).replace(/plus /i, 'Plus ');
       const valor = c.mes ? `${c.mes} €/mes` : c.anual ? `${c.anual} €/año` : '';
       complHTML += `<tr><td>${nombre}</td><td>${c.nota || ''}</td><td>${valor}</td></tr>`;
     }
@@ -3106,11 +3053,8 @@ function updateConvenioPanel() {
   complHTML += `<tr><td colspan="2" style="font-size:11px;color:var(--ink-lighter);font-style:italic;">Fuente: ${conv.bop} · Código ${conv.codigo || ''}</td><td><a href="${conv.urlBop}" target="_blank" style="font-size:11px;color:var(--gold);">Ver convenio oficial →</a></td></tr>`;
   document.getElementById('convenioComplementos').innerHTML = complHTML;
 
-  // ── Convenios relacionados ──────────────────────────────────────
   document.getElementById('convenioRelated').innerHTML =
-    conv.relacionados.map(r =>
-      `<a class="convenio-related-link" href="${r.url}" target="_blank" rel="noopener" title="${r.nota}">${r.nombre}</a>`
-    ).join('');
+    conv.relacionados.map(r => `<a class="convenio-related-link" href="${r.url}" target="_blank" rel="noopener" title="${r.nota}">${r.nombre}</a>`).join('');
 }
 // Enlazar el selector principal con la función de grupos
 document.getElementById('convenioSelect').addEventListener('change', updateConvenioGroups);
