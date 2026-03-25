@@ -2499,10 +2499,7 @@ document.getElementById('recText').textContent = '';
 
   // ─── CLAUDE API CALL ─────────────────────────────────────────
   async function callClaudeAPI(data) {
-    const recText   = document.getElementById('recText');
-    const aiLoading = document.getElementById('aiLoading');
-    aiLoading.style.display = 'block';
-
+  const recText = document.getElementById('recText');
     try {
       const res = await fetch('/api/calculate', {
         method: 'POST',
