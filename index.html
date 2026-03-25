@@ -2527,11 +2527,16 @@ const seniorityLabels = { junior:'Junior', mid:'Mid', senior:'Senior', lead:'Lea
         document.getElementById('accordion2').style.display = '';
       }
 
-      // Análisis IA
-      if (json.analysis) {
-        recText.innerHTML = json.analysis.split('\n\n').filter(p=>p.trim())
-          .map(p=>`<p style="margin-bottom:12px;line-height:1.7;">${p.trim()}</p>`).join('');
-      }
+      // Análisis determinista (plantilla con datos reales)
+      recText.innerHTML = buildAnalysisTemplate(
+        parseFloat(data.salary),
+        pct,
+        json.cityMedian,
+        json.spainMean,
+        data.profession,
+        cityLabel,
+        data.seniority || 'mid'
+      );
 
     } catch (err) {
       console.error('API error:', err);
