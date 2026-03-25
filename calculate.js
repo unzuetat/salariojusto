@@ -228,34 +228,11 @@ Sin bullets. Sin mencionar que eres IA. Tono directo y útil.`;
       spainMean = Math.round(allMedians.reduce((a, b) => a + b, 0) / allMedians.length);
     }
 
-    // ─── LLAMADA 2: ANÁLISIS PERSONALIZADO (siempre, no se cachea) ───────────
-    const analysisRes = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 600,
-        messages: [{ role: 'user', content: analysisPrompt + `\n\nMarket context: their salary is at approximately percentile ${percentile} for their profession in ${cityLabel}. City median: ${cityMedian.toLocaleString()}€. Spain mean: ${spainMean.toLocaleString()}€.` }]
-      })
-    });
+  return res.status(200).json({
+      ranges, percentile, cityMedian, spainMean,
 
-    let analysis = '';
-    if (analysisRes.ok) {
-      const analysisData = await analysisRes.json();
-      analysis = analysisData.content?.[0]?.text || '';
-    }
 
-    // ─── RESPUESTA FINAL ─────────────────────────────────────────────────────
-    return res.status(200).json({
-      ranges,
-      analysis,
-      percentile,
-      cityMedian,
-      spainMean,
+    
       methodology: isEN
         ? 'Ranges estimated from INE EAES 2023, InfoJobs 2024 and Randstad 2024-2025 data. Percentile calculated by comparing your salary against market ranges for your profession and city.'
         : 'Rangos estimados a partir de datos INE EAES 2023, InfoJobs 2024 y Randstad 2024-2025. El percentil se calcula comparando tu salario contra el rango de mercado de tu profesión en tu ciudad.'
