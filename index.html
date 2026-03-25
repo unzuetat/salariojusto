@@ -2431,8 +2431,7 @@ const seniorityLabels = { junior:'Junior', mid:'Mid', senior:'Senior', lead:'Lea
     const senVal = document.getElementById('seniority').value;
     document.getElementById('rankingProfTitle').textContent = profInput + ' · ' + (seniorityLabels[senVal] || 'Mid');
     document.getElementById('statusCard').style.display = 'none';
-    document.getElementById('recText').textContent = '';
-    document.getElementById('aiLoading').style.display = 'none';
+document.getElementById('recText').textContent = '';
 
     // Ocultar acordeones hasta que lleguen datos
     document.getElementById('accordion1').style.display = 'none';
