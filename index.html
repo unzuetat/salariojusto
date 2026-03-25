@@ -1685,144 +1685,162 @@
       </div>
     </div>
 
-    <div class="calc-section-title">Situación laboral y familiar</div>
+  <!-- BLOQUES COLAPSABLES: situación, familia, discapacidad -->
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:24px;">
 
-    <!-- Fila 3: Situación familiar + Categoría profesional -->
-    <div class="input-group">
-      <div class="field">
-        <label>Situación familiar</label>
-        <div class="select-wrapper">
-          <select id="situation">
-            <option value="single">Soltero/a, viudo/a o divorciado/a sin hijos</option>
-            <option value="single_kids">Soltero/a, viudo/a o divorciado/a con hijos a cargo</option>
-            <option value="married_noincome">Casado/a, cónyuge sin rentas superiores a 1.500 €</option>
-            <option value="married">Casado/a, cónyuge con rentas superiores a 1.500 €</option>
-          </select>
+      <!-- BLOQUE 1: Situación laboral y familiar -->
+      <div class="calc-collapse" id="collapseLaboral">
+        <button class="calc-collapse-btn" onclick="this.parentElement.classList.toggle('open')">
+          <span>Situación laboral y familiar</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="calc-collapse-body">
+          <div class="input-group">
+            <div class="field">
+              <label>Situación familiar</label>
+              <div class="select-wrapper">
+                <select id="situation">
+                  <option value="single">Soltero/a, viudo/a o divorciado/a sin hijos</option>
+                  <option value="single_kids">Soltero/a, viudo/a o divorciado/a con hijos a cargo</option>
+                  <option value="married_noincome">Casado/a, cónyuge sin rentas superiores a 1.500 €</option>
+                  <option value="married">Casado/a, cónyuge con rentas superiores a 1.500 €</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Categoría profesional</label>
+              <div class="select-wrapper">
+                <select id="categoria">
+                  <option value="1">Ingenieros y licenciados</option>
+                  <option value="2">Ingenieros técnicos y ayudantes titulados</option>
+                  <option value="3">Jefes administrativos y de taller</option>
+                  <option value="4">Ayudantes no titulados</option>
+                  <option value="5">Oficiales administrativos</option>
+                  <option value="6">Subalternos</option>
+                  <option value="7">Auxiliares administrativos</option>
+                  <option value="8">Oficiales de 1ª y 2ª</option>
+                  <option value="9">Oficiales de 3ª y especialistas</option>
+                  <option value="10">Peones</option>
+                  <option value="11">Trabajadores menores de 18 años</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="field">
+              <label>Situación laboral</label>
+              <div class="select-wrapper">
+                <select id="activo">
+                  <option value="activo">Trabajador en activo</option>
+                  <option value="pensionista">Pensionista</option>
+                  <option value="desempleo">Prestación por desempleo</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Movilidad geográfica</label>
+              <div class="select-wrapper">
+                <select id="movilidad">
+                  <option value="no">No</option>
+                  <option value="si">Sí (deducción por traslado)</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="field">
-        <label>Categoría profesional</label>
-        <div class="select-wrapper">
-          <select id="categoria">
-            <option value="1">Ingenieros y licenciados</option>
-            <option value="2">Ingenieros técnicos y ayudantes titulados</option>
-            <option value="3">Jefes administrativos y de taller</option>
-            <option value="4">Ayudantes no titulados</option>
-            <option value="5">Oficiales administrativos</option>
-            <option value="6">Subalternos</option>
-            <option value="7">Auxiliares administrativos</option>
-            <option value="8">Oficiales de 1ª y 2ª</option>
-            <option value="9">Oficiales de 3ª y especialistas</option>
-            <option value="10">Peones</option>
-            <option value="11">Trabajadores menores de 18 años</option>
-          </select>
+
+      <!-- BLOQUE 2: Datos familiares -->
+      <div class="calc-collapse" id="collapseFamilia">
+        <button class="calc-collapse-btn" onclick="this.parentElement.classList.toggle('open')">
+          <span>Datos familiares</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="calc-collapse-body">
+          <div class="input-group">
+            <div class="field">
+              <label>Hijos menores de 3 años</label>
+              <div class="select-wrapper">
+                <select id="hijos3">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3 o más</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Hijos entre 3 y 25 años</label>
+              <div class="select-wrapper">
+                <select id="hijos25">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4 o más</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <div class="field">
+              <label>Ascendientes mayores de 65 años a cargo</label>
+              <div class="select-wrapper">
+                <select id="asc65">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2 o más</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Ascendientes mayores de 75 años a cargo</label>
+              <div class="select-wrapper">
+                <select id="asc75">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2 o más</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- BLOQUE 3: Discapacidad -->
+      <div class="calc-collapse" id="collapseDiscap">
+        <button class="calc-collapse-btn" onclick="this.parentElement.classList.toggle('open')">
+          <span>Discapacidad</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="calc-collapse-body">
+          <div class="input-group">
+            <div class="field">
+              <label>Discapacidad del contribuyente</label>
+              <div class="select-wrapper">
+                <select id="discapacidad">
+                  <option value="0">Sin discapacidad</option>
+                  <option value="33">Entre 33% y 65%</option>
+                  <option value="65">Superior al 65%</option>
+                  <option value="65m">Superior al 65% con movilidad reducida</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Discapacidad de hijos a cargo</label>
+              <div class="select-wrapper">
+                <select id="discapacidadHijos">
+                  <option value="0">Sin discapacidad</option>
+                  <option value="33">Entre 33% y 65%</option>
+                  <option value="65">Superior al 65%</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Fila 4: Trabajador en activo + Movilidad geográfica -->
-    <div class="input-group">
-      <div class="field">
-        <label>Situación laboral</label>
-        <div class="select-wrapper">
-          <select id="activo">
-            <option value="activo">Trabajador en activo</option>
-            <option value="pensionista">Pensionista</option>
-            <option value="desempleo">Prestación por desempleo</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label>Movilidad geográfica</label>
-        <div class="select-wrapper">
-          <select id="movilidad">
-            <option value="no">No</option>
-            <option value="si">Sí (deducción por traslado)</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="calc-section-title">Datos familiares</div>
-
-    <!-- Fila 5: Hijos -->
-    <div class="input-group">
-      <div class="field">
-        <label>Hijos menores de 3 años</label>
-        <div class="select-wrapper">
-          <select id="hijos3">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3 o más</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label>Hijos entre 3 y 25 años</label>
-        <div class="select-wrapper">
-          <select id="hijos25">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4 o más</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fila 6: Ascendientes -->
-    <div class="input-group">
-      <div class="field">
-        <label>Ascendientes mayores de 65 años a cargo</label>
-        <div class="select-wrapper">
-          <select id="asc65">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2 o más</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label>Ascendientes mayores de 75 años a cargo</label>
-        <div class="select-wrapper">
-          <select id="asc75">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2 o más</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="calc-section-title">Discapacidad</div>
-
-    <!-- Fila 7: Discapacidad contribuyente -->
-    <div class="input-group">
-      <div class="field">
-        <label>Discapacidad del contribuyente</label>
-        <div class="select-wrapper">
-          <select id="discapacidad">
-            <option value="0">Sin discapacidad</option>
-            <option value="33">Entre 33% y 65%</option>
-            <option value="65">Superior al 65%</option>
-            <option value="65m">Superior al 65% con movilidad reducida</option>
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label>Discapacidad de hijos a cargo</label>
-        <div class="select-wrapper">
-          <select id="discapacidadHijos">
-            <option value="0">Sin discapacidad</option>
-            <option value="33">Entre 33% y 65%</option>
-            <option value="65">Superior al 65%</option>
-          </select>
-        </div>
-      </div>
-    </div>
-
 <!-- SELECTOR DE CONVENIO -->
 <div class="convenio-selector-wrap">
   <div class="convenio-selector-label">Verificación de convenio colectivo</div>
