@@ -1283,7 +1283,43 @@
   .convenio-bar-name { width: 80px; font-size: 10px; }
   .convenio-bar-amount { width: 70px; font-size: 11px; }
 }
-  
+  /* Bloques colapsables del formulario */
+    .calc-collapse {
+      border: 1px solid var(--cream-200);
+      background: #fff;
+    }
+    .calc-collapse-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+    .calc-collapse-btn:hover { color: var(--ink); }
+    .calc-collapse-btn svg {
+      transition: transform 0.2s;
+      color: var(--gold);
+    }
+    .calc-collapse.open .calc-collapse-btn svg {
+      transform: rotate(180deg);
+    }
+    .calc-collapse-body {
+      display: none;
+      padding: 0 20px 20px;
+    }
+    .calc-collapse.open .calc-collapse-body {
+      display: block;
+    }
+  </style>
   </style>
       <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
