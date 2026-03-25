@@ -53,7 +53,7 @@ CRITICAL RULES:
 - If the profession is modestly paid (e.g. cashier, cleaner), reflect that honestly — do NOT inflate ranges
 - The median must be the REAL market median, not skewed toward any particular value
 - Madrid/Barcelona typically 20-30% above national median for most professions
-- Minimum must never be below 15,876€ (Spain SMI 2025)
+- Minimum must never be below 17.094€ (Spain SMI 2026)
 - For niche or very senior roles, the maximum can be very high — be honest about it
 - For entry-level or low-skill roles, the maximum should be modest — be honest about it
 
@@ -84,7 +84,7 @@ REGLAS CRÍTICAS — LEE CON ATENCIÓN:
 - Si la profesión está modestamente remunerada (ej: cajero, limpiador, auxiliar administrativo), refléjalo con honestidad — NO infles los rangos artificialmente
 - La mediana debe ser la MEDIANA REAL del mercado, no sesgada hacia ningún valor concreto
 - Madrid/Barcelona típicamente un 20-30% por encima de la mediana nacional para la mayoría de profesiones
-- El mínimo nunca puede ser inferior a 15.876€ (SMI 2025)
+- El mínimo nunca puede ser inferior a 17.094€ (SMI 2026)
 - Para roles senior o de nicho, el máximo puede ser muy alto — sé honesto
 - Para roles de entrada o baja cualificación, el máximo debe ser modesto — sé honesto
 - NO ancles los rangos a ningún salario introducido por el usuario. Genera rangos objetivos de mercado.
