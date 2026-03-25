@@ -1,4 +1,7 @@
-// Caché en memoria para rangos (TTL 24h)
+// ─── CACHÉ EN MEMORIA PARA RANGOS (TTL 24h) ─────────────────────────────────
+// Evita llamadas repetidas a Claude para la misma profesión.
+// En serverless (Vercel), la caché se pierde entre invocaciones frías,
+// pero funciona perfecto durante picos de tráfico (invocaciones calientes).
 const rangesCache = new Map();
 const CACHE_TTL = 24 * 60 * 60 * 1000;
 
@@ -12,6 +15,7 @@ function getCachedRanges(profession) {
 function setCachedRanges(profession, data) {
   rangesCache.set(profession.toLowerCase().trim(), { data, ts: Date.now() });
 }
+
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -67,7 +71,7 @@ CRITICAL RULES:
 - If the profession is modestly paid (e.g. cashier, cleaner), reflect that honestly — do NOT inflate ranges
 - The median must be the REAL market median, not skewed toward any particular value
 - Madrid/Barcelona typically 20-30% above national median for most professions
-- Minimum must never be below 17.094€ (Spain SMI 2026)
+- Minimum must never be below 17,094€ (Spain SMI 2026)
 - For niche or very senior roles, the maximum can be very high — be honest about it
 - For entry-level or low-skill roles, the maximum should be modest — be honest about it
 
@@ -108,7 +112,7 @@ REGLAS CRÍTICAS — LEE CON ATENCIÓN:
   * Médico especialista Madrid: [50.000, 75.000, 120.000]
   * Consultor senior Madrid: [45.000, 70.000, 110.000]
   * Director general gran empresa Madrid: [120.000, 200.000, 400.000]
-  * Cajero supermercado Madrid: [16.000, 19.000, 24.000]
+  * Cajero supermercado Madrid: [17.100, 19.000, 24.000]
   * Ingeniero software senior Madrid: [50.000, 72.000, 100.000]
 
 Devuelve ÚNICAMENTE este JSON, sin markdown, sin texto extra:
@@ -160,49 +164,45 @@ Escribe 3 párrafos directos y útiles:
 3. Una recomendación concreta y accionable para su situación
 
 Sin bullets. Sin mencionar que eres IA. Tono directo y útil.`;
-// ¿Tenemos rangos cacheados para esta profesión?
-let ranges = getCachedRanges(profession);
 
-if (!ranges) {
-  // Llamada 1: rangos de mercado (solo si no hay caché)
-  const rangesRes = await fetch('https://api.anthropic.com/v1/messages', { ... });
-  // ... parseo actual ...
-  ranges = rangesParsed.ranges;
-  setCachedRanges(profession, ranges);
-}
-
-// El cálculo de percentil y la llamada 2 (análisis) siguen igual
-  
   try {
-    // Llamada 1: rangos de mercado (SIN el salario del usuario)
-    // Usamos Sonnet + prefill para forzar JSON directo y evitar sesgo de anclaje
-    const rangesRes = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 800,
-        messages: [
-          { role: 'user', content: rangesPrompt },
-          { role: 'assistant', content: '{"ranges":{' }
-        ]
-      })
-    });
+    // ─── LLAMADA 1: RANGOS DE MERCADO (con caché) ────────────────────────────
+    // Primero miramos si ya tenemos rangos para esta profesión en caché.
+    // Si sí → nos ahorramos la llamada a Claude (coste 0, latencia ~0ms).
+    // Si no → llamamos a Claude y guardamos el resultado para las próximas 24h.
+    let ranges = getCachedRanges(profession);
 
-    if (!rangesRes.ok) {
-      console.error('Ranges API error:', rangesRes.status);
-      return res.status(200).json({ ranges: null, analysis: '', percentile: 50, cityMedian: 0, spainMean: 0 });
+    if (!ranges) {
+      const rangesRes = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': process.env.ANTHROPIC_API_KEY,
+          'anthropic-version': '2023-06-01'
+        },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-6',
+          max_tokens: 800,
+          messages: [
+            { role: 'user', content: rangesPrompt },
+            { role: 'assistant', content: '{"ranges":{' }
+          ]
+        })
+      });
+
+      if (!rangesRes.ok) {
+        console.error('Ranges API error:', rangesRes.status);
+        return res.status(200).json({ ranges: null, analysis: '', percentile: 50, cityMedian: 0, spainMean: 0 });
+      }
+
+      const rangesData = await rangesRes.json();
+      const rangesRaw = '{"ranges":{' + (rangesData.content?.[0]?.text || '');
+      const rangesParsed = JSON.parse(rangesRaw.replace(/```json|```/g, '').trim());
+      ranges = rangesParsed.ranges;
+
+      // Guardar en caché para las próximas 24h
+      setCachedRanges(profession, ranges);
     }
-
-    const rangesData = await rangesRes.json();
-    // El prefill hace que la respuesta empiece desde donde lo dejamos
-    const rangesRaw = '{"ranges":{' + (rangesData.content?.[0]?.text || '');
-    const rangesParsed = JSON.parse(rangesRaw.replace(/```json|```/g, '').trim());
-    const ranges = rangesParsed.ranges;
 
     // ─── CALCULAR PERCENTIL comparando el salario real contra rangos objetivos ─
     let percentile = 50, cityMedian = 0, spainMean = 0;
@@ -228,7 +228,7 @@ if (!ranges) {
       spainMean = Math.round(allMedians.reduce((a, b) => a + b, 0) / allMedians.length);
     }
 
-    // Llamada 2: análisis personalizado (aquí sí usamos el salario + percentil calculado)
+    // ─── LLAMADA 2: ANÁLISIS PERSONALIZADO (siempre, no se cachea) ───────────
     const analysisRes = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -249,7 +249,17 @@ if (!ranges) {
       analysis = analysisData.content?.[0]?.text || '';
     }
 
-    return res.status(200).json({ ranges, analysis, percentile, cityMedian, spainMean });
+    // ─── RESPUESTA FINAL ─────────────────────────────────────────────────────
+    return res.status(200).json({
+      ranges,
+      analysis,
+      percentile,
+      cityMedian,
+      spainMean,
+      methodology: isEN
+        ? 'Ranges estimated from INE EAES 2023, InfoJobs 2024 and Randstad 2024-2025 data. Percentile calculated by comparing your salary against market ranges for your profession and city.'
+        : 'Rangos estimados a partir de datos INE EAES 2023, InfoJobs 2024 y Randstad 2024-2025. El percentil se calcula comparando tu salario contra el rango de mercado de tu profesión en tu ciudad.'
+    });
 
   } catch (err) {
     console.error('Error:', err.message);
