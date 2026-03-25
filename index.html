@@ -2471,9 +2471,17 @@
       if (!res.ok) throw new Error('API ' + res.status);
       const json = await res.json();
 
-      // Percentil
+// Percentil
       const pct = json.percentile || 50;
       document.getElementById('percentileVal').textContent = 'P' + pct;
+
+      // Aviso si los datos son genéricos (profesión no reconocida por la API)
+      if (json.isGeneric) {
+        document.getElementById('genericProfLabel').textContent = data.profession;
+        document.getElementById('genericNotice').style.display = 'block';
+      } else {
+        document.getElementById('genericNotice').style.display = 'none';
+      }
 
       // Status card
       const cityLabel = { madrid:'Madrid', barcelona:'Barcelona', valencia:'Valencia', sevilla:'Sevilla', bilbao:'Bilbao', malaga:'Málaga', zaragoza:'Zaragoza', murcia:'Murcia', palma:'Palma de Mallorca', laspalmas:'Las Palmas de G.C.' }[data.city] || data.city;
