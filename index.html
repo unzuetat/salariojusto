@@ -2875,15 +2875,14 @@ function buildConvenioSelector() {
 
 buildConvenioSelector();
 // ── INICIALIZAR SELECTORES DE GRUPOS ─────────────────────────────────────────
-function updateConvenioGroups() {
+async function updateConvenioGroups() {
   const sel = document.getElementById('convenioSelect');
   const grupoSel = document.getElementById('convenioGrupo');
   const anyoSel = document.getElementById('convenioAnyo');
   const val = sel.value;
 
-  // Si elige "buscar en BOE", abrir y resetear
   if (val === 'buscar_bop') {
-    window.open('https://www.boe.es/buscar', '_blank');
+    window.open('https://www.boe.es/buscar/convenios_colectivos.php', '_blank');
     sel.value = '';
     grupoSel.innerHTML = '<option value="">Selecciona convenio primero</option>';
     grupoSel.disabled = true;
@@ -2901,13 +2900,20 @@ function updateConvenioGroups() {
     return;
   }
 
-  const conv = CONVENIOS[val];
+  grupoSel.innerHTML = '<option value="">Cargando convenio…</option>';
+  grupoSel.disabled = true;
+
+  const conv = await loadConvenio(val);
+  if (!conv) {
+    grupoSel.innerHTML = '<option value="">Error al cargar convenio</option>';
+    return;
+  }
+
   grupoSel.disabled = false;
   anyoSel.disabled = false;
+  grupoSel.innerHTML = '';
 
-  // ¿Este convenio tiene subtablas? (hostelería sí, oficinas no)
   if (conv.subtablas) {
-    // Mostrar con agrupación: "Restaurantes..." / "Hoteles 4-5★..." / etc.
     grupoSel.innerHTML = '<option value="">— Selecciona tipo y nivel —</option>';
     for (const [stKey, stLabel] of Object.entries(conv.subtablas)) {
       const optgroup = document.createElement('optgroup');
@@ -2921,7 +2927,6 @@ function updateConvenioGroups() {
       grupoSel.appendChild(optgroup);
     }
   } else {
-    // Sin subtablas — funciona exactamente como antes
     grupoSel.innerHTML = '<option value="">— Selecciona tu grupo —</option>';
     conv.grupos.forEach(g => {
       const opt = document.createElement('option');
@@ -2931,7 +2936,6 @@ function updateConvenioGroups() {
     });
   }
 
-  // Intentar autodetectar grupo por profesión introducida
   const prof = (document.getElementById('profession').value || '').toLowerCase();
   if (prof) {
     const match = conv.grupos.find(g =>
@@ -2941,22 +2945,11 @@ function updateConvenioGroups() {
     if (match) grupoSel.value = match.id;
   }
 
-  // Ajustar los años disponibles según el convenio
-  const anyoSelect = document.getElementById('convenioAnyo');
-  if (conv.vigencia && conv.vigencia.includes('2022')) {
-    // Hostelería: solo 2024 y 2025 tienen tablas con incrementos publicados
-    anyoSelect.innerHTML = `
-      <option value="2025">2025 (vigente)</option>
-      <option value="2024">2024</option>
-    `;
-  } else {
-    // Oficinas y Despachos: 2024-2026
-    anyoSelect.innerHTML = `
-      <option value="2026">2026 (vigente)</option>
-      <option value="2025">2025</option>
-      <option value="2024">2024</option>
-    `;
-  }
+  const primerGrupo = conv.grupos[0];
+  const anyosDisponibles = Object.keys(primerGrupo.salario).sort().reverse();
+  anyoSel.innerHTML = anyosDisponibles.map((a, i) =>
+    `<option value="${a}">${a}${i === 0 ? ' (vigente)' : ''}</option>`
+  ).join('');
 
   updateConvenioPanel();
 }
