@@ -19,6 +19,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
 
   <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "SalarioJusto", "item": "https://salariojusto.es/"},
+    {"@type": "ListItem", "position": 2, "name": "Convenios", "item": "https://salariojusto.es/#verifica-convenio"},
+    {"@type": "ListItem", "position": 3, "name": "Construcción — Convenio Estatal"}
+  ]
+}
+</script>
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -634,6 +645,25 @@ selNivel.addEventListener('change', () => { showHint(); verify(); });
 selYear.addEventListener('change', verify);
 inpSalary.addEventListener('input', verify);
 </script>
+
+  <div class="related-articles" style="margin-top:48px;padding:32px;background:#f8f5f0;border:1px solid #ede0ce;">
+    <h2 style="font-family:'DM Serif Display',serif;font-size:20px;margin-bottom:16px;">Sigue leyendo</h2>
+    <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;">
+      <li><a href="/reclamar-diferencias-salariales-convenio.html" style="color:#A0622A;text-decoration:none;font-weight:500;">Cómo reclamar diferencias salariales con tu convenio →</a></li>
+      <li><a href="/ley-transparencia-salarial-2026.html" style="color:#A0622A;text-decoration:none;font-weight:500;">Ley de transparencia salarial 2026: guía completa →</a></li>
+      <li><a href="/denunciar-brecha-salarial-guia-practica-2026.html" style="color:#A0622A;text-decoration:none;font-weight:500;">Guía práctica para denunciar la brecha salarial →</a></li>
+      <li><a href="/" style="color:#A0622A;text-decoration:none;font-weight:500;">Calcula tu salario neto y compara con tu convenio →</a></li>
+    </ul>
+  </div>
+
+</main>
+
+<footer style="background:var(--ink);padding:24px 32px;text-align:center;">
+  <p style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6;">
+    SalarioJusto · Herramienta gratuita para trabajadores · Sin empresas detrás<br>
+    <a href="/" style="color:var(--gold-light);text-decoration:none;">Calculadora de salario neto</a> · <a href="/guias.html" style="color:var(--gold-light);text-decoration:none;">Guías para trabajadores</a> · <a href="/en/" style="color:var(--gold-light);text-decoration:none;">English version</a>
+  </p>
+</footer>
 
 </body>
 </html>
