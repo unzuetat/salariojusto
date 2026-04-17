@@ -1,0 +1,587 @@
+{
+  "nombre": "Hostelería y Turismo de Cataluña",
+  "tipo": "autonomico_plurprovincial",
+  "ambito": "autonomico",
+  "ambitoTerritorial": ["Barcelona", "Maresme", "Tarragona", "Girona"],
+  "bop": "DOGC 9630 · 23/03/2026",
+  "resolucion": "Resolución EMT/774/2026 de 6 de marzo",
+  "codigo": "79000275011992",
+  "codigoAlternativo": "19930201C3",
+  "vigencia": "1 enero 2025 – 31 diciembre 2028",
+  "pagas": 14,
+  "jornadaAnual": { "2025": 1791, "2026": 1783, "2027": 1783, "2028": 1783 },
+  "vacaciones": { "2025": 30, "2026": 31, "2027": 31, "2028": 31 },
+  "urlBop": "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040087&type=01&language=ca_ES",
+  "urlCido": "https://cido.diba.cat/convenis_collectius/9257/industria-dhostaleria-i-turisme-de-catalunya",
+  "fechaConsulta": "2026-04-17",
+  "incrementos": {
+    "2025": { "porcentaje": 4.00, "nota": "+4% sobre tablas 2024 del convenio anterior prorrogado, efectos 1/1/2025" },
+    "2026": { "porcentaje": 4.00, "nota": "+4% sobre tablas 2025, efectos 1/1/2026" },
+    "2027": { "porcentaje": 4.00, "nota": "+4% sobre tablas 2026, efectos 1/1/2027" },
+    "2028": { "porcentaje": 3.00, "nota": "+3% sobre tablas 2027, efectos 1/1/2028" }
+  },
+  "nota": "Convenio autonómico catalán. Las tablas salariales varían por provincia (Barcelona, Maresme, Tarragona, Girona). Aunque es un único convenio, los importes y estructuras son distintos — el usuario debe seleccionar la provincia correcta según su centro de trabajo.",
+  "nocturnidad": {
+    "porcentaje": 25,
+    "franja": "22:00 a 06:00",
+    "excepcion": "No aplica si el trabajo es nocturno por su propia naturaleza",
+    "articulo": "art. 42"
+  },
+  "horasExtra": {
+    "maxAnual": 80,
+    "valor": "hora ordinaria, sin recargo",
+    "compensable": "por tiempo de descanso equivalente",
+    "articulo": "art. 34"
+  },
+  "antiguedad": {
+    "tipo": "consolidada",
+    "regla": "Se mantienen las cuantías existentes a 31/12/2007, no absorbibles ni compensables. Se revalorizan con los incrementos anuales del convenio. No se generan trienios nuevos.",
+    "articulo": "art. 36"
+  },
+  "pagasExtras": {
+    "numero": 2,
+    "nombres": ["Estiu", "Nadal"],
+    "fechasAbono": ["10 de julio", "22 de diciembre"],
+    "cuantia": "1 mensualidad cada una + antigüedad consolidada",
+    "articulo": "art. 43"
+  },
+  "notasEspeciales": {
+    "nivelesVIIBis_y_VIII_TarragonaGirona": "En Tarragona y Girona los niveles VII Bis (primer empleo) y VIII (menores de 18 años / aspirantes) tienen las tablas 2025 y 2026 igualadas al SMI legal vigente (1.184,00 € en 2025, 1.221,00 € en 2026), por lo que NO aplican el incremento del 4% del convenio en esos dos años. Las tablas 2027 y 2028 sí aplican el +4%/+3% sobre el valor base del convenio. En cualquier caso, por imperativo legal, el salario efectivo pagado debe ser siempre ≥ SMI vigente al año correspondiente."
+  },
+
+  "provincias": {
+
+    "barcelona": {
+      "nombre": "Barcelona",
+      "anexo": "Annex A del convenio — A.1 a A.6",
+      "subtablas": {
+        "A": "Categoría primera — Hoteles GL, 5★, 4★ superior y 4★; restaurantes 4-5 tenedores; cafés-bares especiales A/B; bares americanos; salas de fiesta y discotecas lujo/1ª; motels 4★; salones de té; casinos 1ª",
+        "B": "Categoría segunda — Hoteles 3★; apartamentos extra-hoteleros 1ª-2ª; restaurantes 2-3 tenedores; bares 1ª-2ª; salas de fiesta 2ª; casinos 2ª-3ª; pizzerías; tablaos; restauración moderna",
+        "C": "Categoría tercera — Hostales residencia 3★; pensiones 3★; hoteles 1-2★; apartamentos extra-hoteleros 3ª",
+        "D": "Categoría cuarta — Hostales y pensiones 1-2★; fondas; ciudades de vacaciones 1★; restaurantes 1 tenedor; bares 3ª-4ª; tabernas; cervecerías; heladerías; salones de baile; casinos 3ª-4ª; casas rurales; albergues",
+        "E": "Categoría especial — Catering"
+      },
+      "niveles": [
+        {
+          "id": "I",
+          "nombre": "Nivel I — Jefe/a (cocina, sala, recepción, administración)",
+          "puestos": ["Jefe/a de recepción", "Jefe/a de cocina", "Jefe/a de sala", "1º Jefe/a de comedor", "1º Encargado/a de mostrador", "1º Encargado/a de barman", "Jefe/a de operaciones (catering)", "Contable general", "Encargado/a general / Gobernante/a", "Jefe/a de contratación y reservas", "Gerente de centro restauración moderna"],
+          "salario": {
+            "2025": { "A": 2039.70, "B": 1852.19, "C": 1792.79, "D": 1669.11, "E": 1852.19 },
+            "2026": { "A": 2121.29, "B": 1926.28, "C": 1864.51, "D": 1735.87, "E": 1926.28 },
+            "2027": { "A": 2206.14, "B": 2003.33, "C": 1939.09, "D": 1805.31, "E": 2003.33 },
+            "2028": { "A": 2272.32, "B": 2063.43, "C": 1997.26, "D": 1859.46, "E": 2063.43 }
+          }
+        },
+        {
+          "id": "II",
+          "nombre": "Nivel II — 2º Jefe/a, Jefe/a de partida, Mayordomo/a",
+          "puestos": ["Interventor/a", "Oficial de contabilidad", "2º Encargado/a de mostrador / barman", "2º Jefe/a de sala / comedor / cocina", "2º Jefe/a de recepción", "Mayordomo/a de pisos", "Supervisor/a (catering)", "Cajero/a administrativo", "Repostero/a", "Jefe/a de compras", "Técnico/a de mantenimiento", "Jefe/a de partida", "Chófer 1ª", "Secretario/a de dirección", "Fisioterapeuta", "Supervisor/a restauración moderna"],
+          "salario": {
+            "2025": { "A": 1792.79, "B": 1733.48, "C": 1669.11, "D": 1605.07, "E": 1733.48 },
+            "2026": { "A": 1864.51, "B": 1802.82, "C": 1735.87, "D": 1669.28, "E": 1802.82 },
+            "2027": { "A": 1939.09, "B": 1874.93, "C": 1805.31, "D": 1736.05, "E": 1874.93 },
+            "2028": { "A": 1997.26, "B": 1931.18, "C": 1859.46, "D": 1788.13, "E": 1931.18 }
+          }
+        },
+        {
+          "id": "III",
+          "nombre": "Nivel III — Camarero/a, Cocinero/a, Recepcionista, Barman",
+          "puestos": ["Camarero/a", "Cocinero/a", "Recepcionista", "Barman/barwoman", "Sommelier", "Repostero/a (oficial)", "Dependiente/a", "Cajero/a de comedor / mostrador", "Conserje de noche", "2º Gobernante/a", "Oficial/a de mantenimiento", "Mecánico/a", "Chófer 2ª", "Masajista", "Esteticista", "Socorrista", "Animador/a turístico/a", "Dietista titulado/a (≥1 año experiencia)", "Responsable turno restauración moderna"],
+          "salario": {
+            "2025": { "A": 1733.70, "B": 1669.11, "C": 1639.55, "D": 1545.43, "E": 1669.61 },
+            "2026": { "A": 1803.05, "B": 1735.87, "C": 1705.13, "D": 1607.25, "E": 1736.39 },
+            "2027": { "A": 1875.17, "B": 1805.31, "C": 1773.34, "D": 1671.54, "E": 1805.85 },
+            "2028": { "A": 1931.43, "B": 1859.46, "C": 1826.54, "D": 1721.68, "E": 1860.02 }
+          }
+        },
+        {
+          "id": "IV",
+          "nombre": "Nivel IV — Ayudante/a, Camarero/a de pisos, Cafetero/a",
+          "puestos": ["Ayudante/a de conserje (grupos B, C, D)", "Ayudante/a dependiente/a", "Ayudante/a de barman", "Ayudante/a de cocinero/a", "Camarero/a de pisos", "Cafetero/a", "Ayudante/a de camarero/a", "Ayudante/a de recepción", "Portero/a (acceso, servicios, coches)", "Mozo/a de equipajes / habitaciones", "Pisciner/a", "Vigilante de piscina", "Dietista titulado/a sin experiencia", "Dependiente/a 2ª", "Controlador/a de accesos discotecas", "Preparador/a restauración moderna"],
+          "salario": {
+            "2025": { "A": 1545.43, "B": 1545.43, "C": 1516.39, "D": 1516.39, "E": 1545.43 },
+            "2026": { "A": 1607.25, "B": 1607.25, "C": 1577.05, "D": 1577.05, "E": 1607.25 },
+            "2027": { "A": 1671.54, "B": 1671.54, "C": 1640.13, "D": 1640.13, "E": 1671.54 },
+            "2028": { "A": 1721.68, "B": 1721.68, "C": 1689.33, "D": 1689.33, "E": 1721.68 }
+          }
+        },
+        {
+          "id": "V",
+          "nombre": "Nivel V — Auxiliar, Fregador/a, Limpieza, Vigilante de noche",
+          "puestos": ["Camarero/a de pisos (zona Maresme)", "Marmitones", "Costurero/a, bugader/a, planxador/a", "Mozo/a de limpieza", "Fregador/a y limpiador/a", "Ascensorista", "Mozo/a de almacén", "Vigilante de noche", "Persona de lavabos", "Personal de argentería", "Ayudante/a de calefactor", "Ayudante/a de economato", "Ayudante/a de cafetero", "Preparador/a (catering)", "Mozo/a de billar", "Marmitón mayor de 18 años", "Botones mayor de 18 años", "Personal de limpieza", "Repartidor/a restauración moderna"],
+          "salario": {
+            "2025": { "A": 1516.39, "B": 1516.39, "C": 1481.86, "D": 1481.86, "E": 1516.39 },
+            "2026": { "A": 1577.05, "B": 1577.05, "C": 1541.14, "D": 1541.14, "E": 1577.05 },
+            "2027": { "A": 1640.13, "B": 1640.13, "C": 1602.78, "D": 1602.78, "E": 1640.13 },
+            "2028": { "A": 1689.33, "B": 1689.33, "C": 1650.87, "D": 1650.87, "E": 1689.33 }
+          }
+        },
+        {
+          "id": "V Bis",
+          "nombre": "Nivel V Bis — Primer empleo en el sector / sin experiencia profesional",
+          "puestos": ["Trabajadores/as que acceden a su primera ocupación en el sector o carecen de experiencia profesional", "Asistente/a de restauración moderna"],
+          "salario": {
+            "2025": { "A": 1350.86, "B": 1350.86, "C": 1333.53, "D": 1333.53, "E": 1350.86 },
+            "2026": { "A": 1404.89, "B": 1404.89, "C": 1386.87, "D": 1386.87, "E": 1404.89 },
+            "2027": { "A": 1461.09, "B": 1461.09, "C": 1442.35, "D": 1442.35, "E": 1461.09 },
+            "2028": { "A": 1504.92, "B": 1504.92, "C": 1485.62, "D": 1485.62, "E": 1504.92 }
+          }
+        },
+        {
+          "id": "VI",
+          "nombre": "Nivel VI — Botones 16-17 años, Aspirante administrativo/a",
+          "puestos": ["Botones de 16 y 17 años", "Marmitón de 16 y 17 años", "Aspirante administrativo/a"],
+          "salario": {
+            "2025": { "A": 1185.31, "B": 1185.31, "C": 1185.31, "D": 1185.31, "E": 1185.31 },
+            "2026": { "A": 1232.72, "B": 1232.72, "C": 1232.72, "D": 1232.72, "E": 1232.72 },
+            "2027": { "A": 1282.03, "B": 1282.03, "C": 1282.03, "D": 1282.03, "E": 1282.03 },
+            "2028": { "A": 1320.49, "B": 1320.49, "C": 1320.49, "D": 1320.49, "E": 1320.49 }
+          }
+        }
+      ],
+      "complementos": {
+        "2025": {
+          "manutencion": { "mes": 56.93, "nota": "Solo en centros que elaboren comidas (restaurantes, catering). Opción en especie o metálico a elección del trabajador." },
+          "alojamiento": { "mes": 53.39, "nota": "Solo para trabajadores que ya tenían derecho antes de la entrada en vigor del convenio." },
+          "plusTransporte": { "mes": 13.86, "nota": "Solo para trabajadores que ya lo percibían antes." },
+          "ropaTrabajo": { "mes": 14.80, "anual": 177.59, "nota": "Compensación si la empresa no se hace cargo de la limpieza del uniforme." },
+          "cambrerasPisos": { "hotel5y4estrellas": 44.88, "hotel3estrellas": 29.29, "hotel2estrellas": 27.00, "nota": "Término municipal de Barcelona. Camarera/o de pisos y mozo/a de habitaciones." },
+          "serviciosExtraordinarios": {
+            "cambrerCuinerDiario": 114.73, "cambrerCuinerFestivo": 146.92,
+            "rentaplatsDiario": 80.09, "rentaplatsFestivo": 93.24,
+            "nota": "Máximo 6h30 por servicio. Montaje y fin de fiesta +50%. Plus kilometraje 0,20 €/km dentro del área metropolitana de Barcelona."
+          }
+        },
+        "2026": {
+          "manutencion": { "mes": 59.21 },
+          "alojamiento": { "mes": 55.53 },
+          "plusTransporte": { "mes": 14.42 },
+          "ropaTrabajo": { "mes": 15.39, "anual": 184.69 },
+          "cambrerasPisos": { "hotel5y4estrellas": 46.67, "hotel3estrellas": 30.46, "hotel2estrellas": 28.08 },
+          "serviciosExtraordinarios": {
+            "cambrerCuinerDiario": 119.32, "cambrerCuinerFestivo": 152.80,
+            "rentaplatsDiario": 83.29, "rentaplatsFestivo": 96.97,
+            "plusKilometraje": 0.21
+          }
+        },
+        "2027": {
+          "manutencion": { "mes": 61.58 },
+          "alojamiento": { "mes": 57.75 },
+          "plusTransporte": { "mes": 14.99 },
+          "ropaTrabajo": { "mes": 16.01, "anual": 192.08 },
+          "cambrerasPisos": { "hotel5y4estrellas": 48.54, "hotel3estrellas": 31.68, "hotel2estrellas": 29.20 },
+          "serviciosExtraordinarios": {
+            "cambrerCuinerDiario": 124.09, "cambrerCuinerFestivo": 158.91,
+            "rentaplatsDiario": 86.63, "rentaplatsFestivo": 100.84,
+            "plusKilometraje": 0.21
+          }
+        },
+        "2028": {
+          "manutencion": { "mes": 63.42 },
+          "alojamiento": { "mes": 59.48 },
+          "plusTransporte": { "mes": 15.44 },
+          "ropaTrabajo": { "mes": 16.49, "anual": 197.84 },
+          "cambrerasPisos": { "hotel5y4estrellas": 49.99, "hotel3estrellas": 32.63, "hotel2estrellas": 30.08 },
+          "serviciosExtraordinarios": {
+            "cambrerCuinerDiario": 127.82, "cambrerCuinerFestivo": 163.68,
+            "rentaplatsDiario": 89.22, "rentaplatsFestivo": 103.87,
+            "plusKilometraje": 0.22
+          }
+        }
+      }
+    },
+
+    "maresme": {
+      "nombre": "Maresme (Barcelona)",
+      "anexo": "Annex A del convenio — A.7 a A.10 (mismo Anexo que Barcelona, con tablas propias)",
+      "nota": "Los puestos y clasificación de niveles son los mismos que Barcelona (Annex A conjunto). Las tablas salariales son distintas: niveles III a VI tienen importes planos (mismo salario en todas las categorías A-D). Solo 4 subtablas (no hay E).",
+      "subtablas": {
+        "A": "Categoría primera — igual que Barcelona grupo A",
+        "B": "Categoría segunda — igual que Barcelona grupo B",
+        "C": "Categoría tercera — igual que Barcelona grupo C",
+        "D": "Categoría cuarta — igual que Barcelona grupo D"
+      },
+      "niveles": [
+        {
+          "id": "I", "nombre": "Nivel I — Jefe/a (cocina, sala, recepción)",
+          "puestos": ["Mismas categorías que Nivel I de Barcelona (ver anexo A)"],
+          "salario": {
+            "2025": { "A": 2050.90, "B": 1862.48, "C": 1802.72, "D": 1678.32 },
+            "2026": { "A": 2132.94, "B": 1936.98, "C": 1874.82, "D": 1745.45 },
+            "2027": { "A": 2218.25, "B": 2014.46, "C": 1949.82, "D": 1815.27 },
+            "2028": { "A": 2284.80, "B": 2074.90, "C": 2008.31, "D": 1869.73 }
+          }
+        },
+        {
+          "id": "II", "nombre": "Nivel II — 2º Jefe/a, Jefe/a de partida",
+          "puestos": ["Mismas categorías que Nivel II de Barcelona"],
+          "salario": {
+            "2025": { "A": 1802.72, "B": 1743.06, "C": 1678.32, "D": 1613.89 },
+            "2026": { "A": 1874.82, "B": 1812.78, "C": 1745.45, "D": 1678.45 },
+            "2027": { "A": 1949.82, "B": 1885.29, "C": 1815.27, "D": 1745.59 },
+            "2028": { "A": 2008.31, "B": 1941.85, "C": 1869.73, "D": 1797.95 }
+          }
+        },
+        {
+          "id": "III", "nombre": "Nivel III — Camarero/a, Cocinero/a, Recepcionista",
+          "puestos": ["Mismas categorías que Nivel III de Barcelona"],
+          "salario": {
+            "2025": { "A": 1457.05, "B": 1457.05, "C": 1457.05, "D": 1457.05 },
+            "2026": { "A": 1515.33, "B": 1515.33, "C": 1515.33, "D": 1515.33 },
+            "2027": { "A": 1575.95, "B": 1575.95, "C": 1575.95, "D": 1575.95 },
+            "2028": { "A": 1623.22, "B": 1623.22, "C": 1623.22, "D": 1623.22 }
+          }
+        },
+        {
+          "id": "IV", "nombre": "Nivel IV — Ayudante/a, Camarero/a de pisos",
+          "puestos": ["Mismas categorías que Nivel IV de Barcelona"],
+          "salario": {
+            "2025": { "A": 1361.99, "B": 1361.99, "C": 1361.99, "D": 1361.99 },
+            "2026": { "A": 1416.47, "B": 1416.47, "C": 1416.47, "D": 1416.47 },
+            "2027": { "A": 1473.13, "B": 1473.13, "C": 1473.13, "D": 1473.13 },
+            "2028": { "A": 1517.33, "B": 1517.33, "C": 1517.33, "D": 1517.33 }
+          }
+        },
+        {
+          "id": "V", "nombre": "Nivel V — Auxiliar, Fregador/a, Limpieza",
+          "puestos": ["Mismas categorías que Nivel V de Barcelona"],
+          "salario": {
+            "2025": { "A": 1324.84, "B": 1324.84, "C": 1324.84, "D": 1324.84 },
+            "2026": { "A": 1377.83, "B": 1377.83, "C": 1377.83, "D": 1377.83 },
+            "2027": { "A": 1432.94, "B": 1432.94, "C": 1432.94, "D": 1432.94 },
+            "2028": { "A": 1475.93, "B": 1475.93, "C": 1475.93, "D": 1475.93 }
+          }
+        },
+        {
+          "id": "V Bis", "nombre": "Nivel V Bis — Primer empleo sin experiencia",
+          "puestos": ["Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional"],
+          "salario": {
+            "2025": { "A": 1184.31, "B": 1184.31, "C": 1184.31, "D": 1184.31 },
+            "2026": { "A": 1231.68, "B": 1231.68, "C": 1231.68, "D": 1231.68 },
+            "2027": { "A": 1280.95, "B": 1280.95, "C": 1280.95, "D": 1280.95 },
+            "2028": { "A": 1319.38, "B": 1319.38, "C": 1319.38, "D": 1319.38 }
+          }
+        },
+        {
+          "id": "VI", "nombre": "Nivel VI — Botones 16-17 años, Aspirante administrativo/a",
+          "puestos": ["Botones y marmitones 16-17 años", "Aspirante administrativo/a"],
+          "salario": {
+            "2025": { "A": 1191.83, "B": 1191.83, "C": 1191.83, "D": 1191.83 },
+            "2026": { "A": 1239.50, "B": 1239.50, "C": 1239.50, "D": 1239.50 },
+            "2027": { "A": 1289.08, "B": 1289.08, "C": 1289.08, "D": 1289.08 },
+            "2028": { "A": 1327.76, "B": 1327.76, "C": 1327.76, "D": 1327.76 }
+          }
+        }
+      ],
+      "complementos": {
+        "2025": {
+          "manutencion": { "mes": 56.90 }, "alojamiento": { "mes": 53.23 }, "plusTransporte": { "mes": 13.81 },
+          "ropaTrabajo": { "mes": 14.80, "anual": 177.59 },
+          "cambrerasPisos": { "hotel5y4estrellas": 45.13, "hotel3estrellas": 29.52, "hotel2estrellas": 27.16 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 114.70, "cambrerCuinerFestivo": 146.89, "rentaplatsDiario": 80.00, "rentaplatsFestivo": 93.23 }
+        },
+        "2026": {
+          "manutencion": { "mes": 59.17 }, "alojamiento": { "mes": 55.36 }, "plusTransporte": { "mes": 14.36 },
+          "ropaTrabajo": { "mes": 15.39, "anual": 184.69 },
+          "cambrerasPisos": { "hotel5y4estrellas": 46.93, "hotel3estrellas": 30.70, "hotel2estrellas": 28.25 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 119.29, "cambrerCuinerFestivo": 152.77, "rentaplatsDiario": 83.20, "rentaplatsFestivo": 96.95 }
+        },
+        "2027": {
+          "manutencion": { "mes": 61.54 }, "alojamiento": { "mes": 57.57 }, "plusTransporte": { "mes": 14.94 },
+          "ropaTrabajo": { "mes": 16.01, "anual": 192.08 },
+          "cambrerasPisos": { "hotel5y4estrellas": 48.81, "hotel3estrellas": 31.92, "hotel2estrellas": 29.38 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 124.06, "cambrerCuinerFestivo": 158.88, "rentaplatsDiario": 86.52, "rentaplatsFestivo": 100.83 }
+        },
+        "2028": {
+          "manutencion": { "mes": 63.39 }, "alojamiento": { "mes": 59.30 }, "plusTransporte": { "mes": 15.39 },
+          "ropaTrabajo": { "mes": 16.49, "anual": 197.84 },
+          "cambrerasPisos": { "hotel5y4estrellas": 50.27, "hotel3estrellas": 32.88, "hotel2estrellas": 30.26 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 127.78, "cambrerCuinerFestivo": 163.64, "rentaplatsDiario": 89.12, "rentaplatsFestivo": 103.86 }
+        }
+      }
+    },
+
+    "tarragona": {
+      "nombre": "Tarragona",
+      "anexo": "Annex B del convenio — B.1 a B.6",
+      "nota": "Tarragona tiene 6 categorías de establecimiento (A-F) y 9 niveles profesionales. Los niveles VII Bis (primer empleo) y VIII (menores/aspirantes) en 2025 y 2026 están fijados al SMI, no al +4% del convenio — ver notasEspeciales. Tarragona añade un Plus diferencia manutención propio.",
+      "subtablas": {
+        "A": "Categoría primera — Hoteles GL y 5★, restaurantes 5 tenedores, bares lujo C, cafeterías lujo C, salas de fiesta de lujo, cámpings de lujo, casinos 1ª, billares 1ª, salones de esparcimiento 1ª",
+        "B": "Categoría segunda — Hoteles 4★ superior y 4★, restaurantes 4 tenedores, bares 1ª, cafeterías 3 tazas, salas de fiesta 1ª, cámpings 1ª, casinos 2ª, billares 2ª, salones 2ª",
+        "C": "Categoría tercera — Hoteles 3★, restaurantes 3 tenedores, bares 2ª, cafeterías 2 tazas, salas de fiesta 2ª, cámpings 2ª, casinos 3ª, establecimientos menjars ràpids / restauración moderna",
+        "D": "Categoría cuarta — Hoteles 2★, restaurantes 2 tenedores, bares 3ª, cafeterías 1 taza, salas de fiesta 3ª, cámpings 3ª, casinos 4ª",
+        "E": "Categoría especial — Hoteles 1★, restaurantes 1 tenedor, bares 4ª, casas rurales, albergues",
+        "F": "Categoría especial — Catering"
+      },
+      "niveles": [
+        {
+          "id": "I", "nombre": "Nivel I — Jefe/a (cocina, sala, comedor, recepción, administración)",
+          "puestos": ["Jefe/a de comedor", "Jefe/a de cocina", "Jefe/a de sala", "Jefe/a de recepción", "Jefe/a de servicios técnicos", "Jefe/a administrativo/a", "Jefe/a de contratación y reservas", "Gobernante/a en jefe", "Jefe/a de compras", "Gerente de centro restauración moderna"],
+          "salario": {
+            "2025": { "A": 2264.63, "B": 2101.03, "C": 2018.80, "D": 1937.14, "E": 1855.34, "F": 2018.80 },
+            "2026": { "A": 2355.22, "B": 2185.07, "C": 2099.55, "D": 2014.62, "E": 1929.55, "F": 2099.55 },
+            "2027": { "A": 2449.43, "B": 2272.47, "C": 2183.53, "D": 2095.21, "E": 2006.73, "F": 2183.53 },
+            "2028": { "A": 2522.91, "B": 2340.65, "C": 2249.04, "D": 2158.06, "E": 2066.94, "F": 2249.04 }
+          }
+        },
+        {
+          "id": "II", "nombre": "Nivel II — 2º Jefe/a, Jefe/a de animación",
+          "puestos": ["2º Jefe/a de comedor", "2º Jefe/a de cocina", "2º Encargado/a de comedor", "2º Jefe/a de recepción", "1º Conserje de día", "Jefe/a de animación"],
+          "salario": {
+            "2025": { "A": 2181.36, "B": 2018.80, "C": 1937.14, "D": 1855.35, "E": 1773.25, "F": 1937.14 },
+            "2026": { "A": 2268.61, "B": 2099.55, "C": 2014.62, "D": 1929.56, "E": 1844.18, "F": 2014.62 },
+            "2027": { "A": 2359.36, "B": 2183.53, "C": 2095.21, "D": 2006.75, "E": 1917.95, "F": 2095.21 },
+            "2028": { "A": 2430.14, "B": 2249.04, "C": 2158.06, "D": 2066.95, "E": 1975.49, "F": 2158.06 }
+          }
+        },
+        {
+          "id": "III", "nombre": "Nivel III — Jefe/a de sector, Contable general, Repostero/a",
+          "puestos": ["Jefe/a de sector", "Contable general", "Interventor/a", "Repostero/a", "2º Jefe/a de día", "Mayordomo/a de pisos", "Jefe/a de partida", "Fisioterapeuta", "Supervisor/a restauración moderna"],
+          "salario": {
+            "2025": { "A": 2101.03, "B": 1937.31, "C": 1855.35, "D": 1773.25, "E": 1691.47, "F": 1855.35 },
+            "2026": { "A": 2185.07, "B": 2014.80, "C": 1929.56, "D": 1844.18, "E": 1759.13, "F": 1929.56 },
+            "2027": { "A": 2272.47, "B": 2095.40, "C": 2006.75, "D": 1917.95, "E": 1829.49, "F": 2006.75 },
+            "2028": { "A": 2340.65, "B": 2158.26, "C": 2066.95, "D": 1975.49, "E": 1884.37, "F": 2066.95 }
+          }
+        },
+        {
+          "id": "IV", "nombre": "Nivel IV — Camarero/a, Camarero/a de pisos, Cocinero/a, Recepcionista",
+          "puestos": ["Camarero/a", "Camarero/a de pisos (área bar/comedor ALEH)", "Subgobernante/a", "Sommelier", "Oficial administrativo/a", "1º Encargado/a de office", "1º Encargado/a de lencería y lavabo", "Dependiente/a de mostrador", "Recepcionista", "Contable", "Cajero/a", "Cocinero/a", "Dietista titulado (≥1 año)", "Comercial", "Esteticista", "Masajista", "Responsable turno restauración moderna"],
+          "salario": {
+            "2025": { "A": 1937.03, "B": 1773.25, "C": 1691.47, "D": 1609.48, "E": 1527.61, "F": 1691.47 },
+            "2026": { "A": 2014.51, "B": 1844.18, "C": 1759.13, "D": 1673.86, "E": 1588.72, "F": 1759.13 },
+            "2027": { "A": 2095.09, "B": 1917.95, "C": 1829.49, "D": 1740.82, "E": 1652.27, "F": 1829.49 },
+            "2028": { "A": 2157.95, "B": 1975.49, "C": 1884.37, "D": 1793.04, "E": 1701.84, "F": 1884.37 }
+          }
+        },
+        {
+          "id": "V", "nombre": "Nivel V — Intérprete, Encargado/a de economato/bodega, Mecánico/a",
+          "puestos": ["Intérprete", "Encargado/a de economato", "Encargado/a de bodega", "Tenedor/a de cuentas clientes", "Mecánico/a", "Chófer 2ª", "Albañil, carpintero, electricista, lampista", "Socorrista", "Animador/a turístico/a"],
+          "salario": {
+            "2025": { "A": 1847.56, "B": 1676.84, "C": 1591.62, "D": 1506.11, "E": 1428.85, "F": 1600.79 },
+            "2026": { "A": 1921.46, "B": 1743.92, "C": 1655.28, "D": 1566.35, "E": 1486.00, "F": 1664.82 },
+            "2027": { "A": 1998.32, "B": 1813.67, "C": 1721.49, "D": 1629.01, "E": 1545.44, "F": 1731.41 },
+            "2028": { "A": 2058.27, "B": 1868.08, "C": 1773.14, "D": 1677.88, "E": 1591.80, "F": 1783.36 }
+          }
+        },
+        {
+          "id": "VI", "nombre": "Nivel VI — Cellerer/a, Telefonista, Conserje de noche",
+          "puestos": ["Cellerer/a", "Telefonista", "Conserje de noche", "Auxiliar administrativo/a mayor de 21 años", "Vigilante de piscina", "Ayudante/a de animador/a", "Encargado/a de pisos", "Preparador/a restauración moderna"],
+          "salario": {
+            "2025": { "A": 1519.54, "B": 1484.51, "C": 1450.34, "D": 1397.90, "E": 1383.48, "F": 1450.34 },
+            "2026": { "A": 1580.33, "B": 1543.89, "C": 1508.36, "D": 1453.81, "E": 1438.82, "F": 1508.36 },
+            "2027": { "A": 1643.54, "B": 1605.64, "C": 1568.69, "D": 1511.96, "E": 1496.37, "F": 1568.69 },
+            "2028": { "A": 1692.84, "B": 1653.81, "C": 1615.75, "D": 1557.32, "E": 1541.26, "F": 1615.75 }
+          }
+        },
+        {
+          "id": "VII", "nombre": "Nivel VII — Ayudante/a de recepción / cocina / economato, Auxiliares, Peones",
+          "puestos": ["Ayudante/a de recepción", "Auxiliar administrativo/a menor de 21 años", "Ayudante/a de bodega / economato", "Cafetero", "Auxiliar de servicio y limpieza", "Monitor/a-cuidador/a", "Mozo/a de habitaciones", "Vigilante de noche", "Cajero/a de comedor", "Mozo/a de limpieza", "Ordenanza de salón", "Portero/a (acceso, coches, servicio)", "Mozo/a de equipajes", "Marmitón mayor de 18 años", "Costurero/a, sargidor/a, planxador/a, bugader/a", "Limpiador/a, calefactor, pisciner, jardiner, peones", "Ayudante/a de cocina / repostería / cafetero", "Marmitones", "Camarero/a de pisos", "Ascensorista", "Repartidor/a restauración moderna"],
+          "salario": {
+            "2025": { "A": 1429.24, "B": 1418.06, "C": 1399.39, "D": 1380.60, "E": 1362.16, "F": 1399.39 },
+            "2026": { "A": 1486.41, "B": 1474.78, "C": 1455.37, "D": 1435.82, "E": 1416.65, "F": 1455.37 },
+            "2027": { "A": 1545.87, "B": 1533.77, "C": 1513.58, "D": 1493.26, "E": 1473.31, "F": 1513.58 },
+            "2028": { "A": 1592.24, "B": 1579.79, "C": 1558.99, "D": 1538.05, "E": 1517.51, "F": 1558.99 }
+          }
+        },
+        {
+          "id": "VII Bis", "nombre": "Nivel VII Bis — Primer trabajo en el sector / sin experiencia",
+          "puestos": ["Trabajadores/as que acceden a su primer trabajo en el sector o no tienen experiencia profesional"],
+          "excepcionSMI": "2025 y 2026 igualados al SMI legal vigente (no aplica +4% del convenio)",
+          "salario": {
+            "2025": { "A": 1184.00, "B": 1184.00, "C": 1184.00, "D": 1184.00, "E": 1184.00, "F": 1184.00 },
+            "2026": { "A": 1221.00, "B": 1221.00, "C": 1221.00, "D": 1221.00, "E": 1221.00, "F": 1221.00 },
+            "2027": { "A": 1229.99, "B": 1229.99, "C": 1207.58, "D": 1186.03, "E": 1186.03, "F": 1207.58 },
+            "2028": { "A": 1266.89, "B": 1266.89, "C": 1243.80, "D": 1221.62, "E": 1221.62, "F": 1243.80 }
+          }
+        },
+        {
+          "id": "VIII", "nombre": "Nivel VIII — Aspirante administrativo/a, Grooms 16-18 años",
+          "puestos": ["Aspirante administrativo/a", "Grooms de 16 a 18 años"],
+          "excepcionSMI": "2025 y 2026 igualados al SMI legal vigente",
+          "salario": {
+            "2025": { "A": 1184.00, "B": 1184.00, "C": 1184.00, "D": 1184.00, "E": 1184.00, "F": 1184.00 },
+            "2026": { "A": 1221.00, "B": 1221.00, "C": 1221.00, "D": 1221.00, "E": 1221.00, "F": 1221.00 },
+            "2027": { "A": 1186.03, "B": 1186.03, "C": 1186.03, "D": 1186.03, "E": 1186.03, "F": 1186.03 },
+            "2028": { "A": 1221.62, "B": 1221.62, "C": 1221.62, "D": 1221.62, "E": 1221.62, "F": 1221.62 }
+          }
+        }
+      ],
+      "complementos": {
+        "2025": {
+          "manutencion": { "mes": 56.93 },
+          "plusDiferenciaManutencion": { "mes": 28.02, "nota": "Propio de Tarragona. Para trabajadores que antes de la publicación del convenio ya percibían en metálico el plus de manutención en su cuantía anterior." },
+          "alojamiento": { "mes": 13.36 },
+          "plusTransporte": { "mes": 13.78 },
+          "ropaTrabajo": { "mes": 14.80, "anual": 177.59 },
+          "serviciosExtraordinarios": { "cuiner": 123.43, "ajudantCuiner": 74.62, "cambrer": 91.82, "ajudantCambrer": 68.09, "cobrador": 48.91 }
+        },
+        "2026": {
+          "manutencion": { "mes": 59.21 },
+          "plusDiferenciaManutencion": { "mes": 29.14 },
+          "alojamiento": { "mes": 13.90 },
+          "plusTransporte": { "mes": 14.33 },
+          "ropaTrabajo": { "mes": 15.39, "anual": 184.69 },
+          "serviciosExtraordinarios": { "cuiner": 128.36, "ajudantCuiner": 77.60, "cambrer": 95.49, "ajudantCambrer": 70.81, "cobrador": 50.87 }
+        },
+        "2027": {
+          "manutencion": { "mes": 61.58 },
+          "plusDiferenciaManutencion": { "mes": 30.31 },
+          "alojamiento": { "mes": 14.45 },
+          "plusTransporte": { "mes": 14.90 },
+          "ropaTrabajo": { "mes": 16.01, "anual": 192.08 },
+          "serviciosExtraordinarios": { "cuiner": 133.50, "ajudantCuiner": 80.71, "cambrer": 99.31, "ajudantCambrer": 73.64, "cobrador": 52.90 }
+        },
+        "2028": {
+          "manutencion": { "mes": 63.42 },
+          "plusDiferenciaManutencion": { "mes": 31.22 },
+          "alojamiento": { "mes": 14.89 },
+          "plusTransporte": { "mes": 15.35 },
+          "ropaTrabajo": { "mes": 16.49, "anual": 197.84 },
+          "serviciosExtraordinarios": { "cuiner": 137.50, "ajudantCuiner": 83.13, "cambrer": 102.29, "ajudantCambrer": 75.85, "cobrador": 54.49 }
+        }
+      }
+    },
+
+    "girona": {
+      "nombre": "Girona",
+      "anexo": "Annex C del convenio — C.1 a C.5",
+      "nota": "Girona tiene 6 categorías de establecimiento (Ai, A, B, C, D, E) con Ai = GL y 5★ lujo (subcategoría superior). Los niveles VII Bis y VIII en 2025 y 2026 están fijados al SMI — ver notasEspeciales.",
+      "subtablas": {
+        "Ai": "Hoteles GL y 5★, hoteles de lujo, restaurantes 5 tenedores, cafés-bares especiales A, salas de fiesta y discotecas de lujo",
+        "A": "Hoteles 4★ superior y 4★, hoteles residencia/apartamentos 4★, restaurantes 4 tenedores, cafés-bares especiales B, bares americanos, salas fiesta/discotecas 1ª, motels 4★, salones de té, casinos 1ª, cámpings de lujo y 1ª",
+        "B": "Cámpings 2ª",
+        "C": "Cámpings 3ª",
+        "D": "Resto categorías menores (hostales, pensiones, restaurantes 1 tenedor, etc. — aplicación por analogía al anexo A Barcelona)",
+        "E": "Resto (ver anexo A Barcelona para detalle)"
+      },
+      "niveles": [
+        {
+          "id": "I", "nombre": "Nivel I — Jefe/a (recepción, cocina, sala, comedor)",
+          "puestos": ["Jefe/a de recepción", "Jefe/a de cocina", "Jefe/a de casinos", "Jefe/a de administración"],
+          "salario": {
+            "2025": { "Ai": 2083.84, "A": 1844.19, "B": 1798.31, "C": 1748.21, "D": 1748.21, "E": 1798.31 },
+            "2026": { "Ai": 2167.19, "A": 1917.96, "B": 1870.24, "C": 1818.14, "D": 1818.14, "E": 1870.24 },
+            "2027": { "Ai": 2253.88, "A": 1994.68, "B": 1945.05, "C": 1890.86, "D": 1890.86, "E": 1945.05 },
+            "2028": { "Ai": 2321.50, "A": 2054.52, "B": 2003.40, "C": 1947.59, "D": 1947.59, "E": 2003.40 }
+          }
+        },
+        {
+          "id": "II", "nombre": "Nivel II — 2º Jefe/a",
+          "puestos": ["2º Jefes/as de departamento"],
+          "salario": {
+            "2025": { "Ai": 1895.32, "A": 1722.18, "B": 1705.30, "C": 1595.01, "D": 1578.89, "E": 1705.30 },
+            "2026": { "Ai": 1971.13, "A": 1791.06, "B": 1773.51, "C": 1658.81, "D": 1642.04, "E": 1773.51 },
+            "2027": { "Ai": 2049.97, "A": 1862.71, "B": 1844.45, "C": 1725.16, "D": 1707.72, "E": 1844.45 },
+            "2028": { "Ai": 2111.47, "A": 1918.59, "B": 1899.78, "C": 1776.91, "D": 1758.96, "E": 1899.78 }
+          }
+        },
+        {
+          "id": "III", "nombre": "Nivel III — Recepcionista, Administrativo, Contable, Camarero/a, Cocinero/a, Telefonista",
+          "puestos": ["Recepcionista", "Administrativo/a", "Contable general restaurant", "Contable sales", "Cajero/a comedor restaurant", "Telefonista", "Cocinero/a"],
+          "salario": {
+            "2025": { "Ai": 1710.76, "A": 1636.96, "B": 1612.25, "C": 1537.22, "D": 1537.22, "E": 1605.73 },
+            "2026": { "Ai": 1779.19, "A": 1702.44, "B": 1676.74, "C": 1598.71, "D": 1598.71, "E": 1669.96 },
+            "2027": { "Ai": 1850.36, "A": 1770.54, "B": 1743.81, "C": 1662.66, "D": 1662.66, "E": 1736.76 },
+            "2028": { "Ai": 1905.87, "A": 1823.65, "B": 1796.12, "C": 1712.54, "D": 1712.54, "E": 1788.86 }
+          }
+        },
+        {
+          "id": "IV", "nombre": "Nivel IV — Socorrista, Esteticista, Especialista mantenimiento",
+          "puestos": ["Socorrista", "Esteticista-masajista", "Especialista de mantenimiento y servicios auxiliares", "Albañiles, carpinteros, electricistas"],
+          "salario": {
+            "2025": { "Ai": 1599.98, "A": 1536.94, "B": 1500.77, "C": 1427.20, "D": 1416.78, "E": 1495.28 },
+            "2026": { "Ai": 1663.98, "A": 1598.42, "B": 1560.80, "C": 1484.29, "D": 1473.45, "E": 1555.09 },
+            "2027": { "Ai": 1730.54, "A": 1662.36, "B": 1623.23, "C": 1543.66, "D": 1532.39, "E": 1617.30 },
+            "2028": { "Ai": 1782.45, "A": 1712.23, "B": 1671.93, "C": 1589.97, "D": 1578.36, "E": 1665.81 }
+          }
+        },
+        {
+          "id": "V", "nombre": "Nivel V — Jardinero/a, Mantenimiento, Auxiliar servicios",
+          "puestos": ["Jardinero/a o mantenimiento de piscinas", "Auxiliar de mantenimiento y servicios auxiliares", "Ayudante albañil", "Ayudante lampista"],
+          "salario": {
+            "2025": { "Ai": 1468.97, "A": 1442.58, "B": 1380.19, "C": 1380.19, "D": 1380.19, "E": 1380.19 },
+            "2026": { "Ai": 1527.73, "A": 1500.29, "B": 1435.40, "C": 1435.40, "D": 1435.40, "E": 1435.40 },
+            "2027": { "Ai": 1588.84, "A": 1560.30, "B": 1492.82, "C": 1492.82, "D": 1492.82, "E": 1492.82 },
+            "2028": { "Ai": 1636.50, "A": 1607.11, "B": 1537.60, "C": 1537.60, "D": 1537.60, "E": 1537.60 }
+          }
+        },
+        {
+          "id": "VI", "nombre": "Nivel VI — Auxiliar de cocina, Fregaplats, Camarero/a de pisos",
+          "puestos": ["Auxiliar de cocina", "Rentaplats / Fregador/a", "Marmitones 'pinches' mayores de 18 años", "Camarero/a de pisos", "Costureros/as, sargidores/as, planxadores/es, bugader/a", "Auxiliar de pisos y limpieza"],
+          "salario": {
+            "2025": { "Ai": 1363.90, "A": 1363.90, "B": 1363.90, "C": 1337.80, "D": 1337.80, "E": 1363.90 },
+            "2026": { "Ai": 1418.45, "A": 1418.45, "B": 1418.45, "C": 1391.32, "D": 1391.32, "E": 1418.45 },
+            "2027": { "Ai": 1475.19, "A": 1475.19, "B": 1475.19, "C": 1446.97, "D": 1446.97, "E": 1475.19 },
+            "2028": { "Ai": 1519.45, "A": 1519.45, "B": 1519.45, "C": 1490.38, "D": 1490.38, "E": 1519.45 }
+          }
+        },
+        {
+          "id": "VII", "nombre": "Nivel VII — Netejador/a-Fregador/a, Repartidor/a restauración moderna",
+          "puestos": ["Netejador/a - Fregador/a", "Repartidor/a restauración moderna"],
+          "salario": {
+            "2025": { "Ai": 1313.09, "A": 1313.09, "B": 1313.09, "C": 1313.09, "D": 1313.09, "E": 1313.09 },
+            "2026": { "Ai": 1365.62, "A": 1365.62, "B": 1365.62, "C": 1365.62, "D": 1365.62, "E": 1365.62 },
+            "2027": { "Ai": 1420.24, "A": 1420.24, "B": 1420.24, "C": 1420.24, "D": 1420.24, "E": 1420.24 },
+            "2028": { "Ai": 1462.85, "A": 1462.85, "B": 1462.85, "C": 1462.85, "D": 1462.85, "E": 1462.85 }
+          }
+        },
+        {
+          "id": "VII Bis", "nombre": "Nivel VII Bis (anterior IV B) — Primer empleo sin experiencia",
+          "puestos": ["Trabajadores/as que acceden a su primer trabajo sin experiencia profesional"],
+          "excepcionSMI": "2025 y 2026 igualados al SMI legal vigente",
+          "salario": {
+            "2025": { "Ai": 1184.00, "A": 1184.00, "B": 1184.00, "C": 1184.00, "D": 1184.00, "E": 1184.00 },
+            "2026": { "Ai": 1221.00, "A": 1221.00, "B": 1221.00, "C": 1221.00, "D": 1221.00, "E": 1221.00 },
+            "2027": { "Ai": 1186.03, "A": 1186.03, "B": 1186.03, "C": 1186.03, "D": 1186.03, "E": 1186.03 },
+            "2028": { "Ai": 1221.62, "A": 1221.62, "B": 1221.62, "C": 1221.62, "D": 1221.62, "E": 1221.62 }
+          }
+        },
+        {
+          "id": "VIII", "nombre": "Nivel VIII — Menores de 18 años (grooms, marmitones)",
+          "puestos": ["Grooms hasta 18 años", "Marmitones 'pinches' hasta 18 años"],
+          "excepcionSMI": "2025 y 2026 igualados al SMI legal vigente",
+          "salario": {
+            "2025": { "Ai": 1184.00, "A": 1184.00, "B": 1184.00, "C": 1184.00, "D": 1184.00, "E": 1184.00 },
+            "2026": { "Ai": 1221.00, "A": 1221.00, "B": 1221.00, "C": 1221.00, "D": 1221.00, "E": 1221.00 },
+            "2027": { "Ai": 1186.03, "A": 1186.03, "B": 1186.03, "C": 1186.03, "D": 1186.03, "E": 1186.03 },
+            "2028": { "Ai": 1221.62, "A": 1221.62, "B": 1221.62, "C": 1221.62, "D": 1221.62, "E": 1221.62 }
+          }
+        }
+      ],
+      "complementos": {
+        "2025": {
+          "manutencion": { "mes": 47.92 },
+          "alojamiento": { "mes": 22.54 },
+          "plusTransporte": { "mes": 13.82 },
+          "ropaTrabajo": { "mes": 14.80, "anual": 177.59 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 96.23, "cambrerCuinerFestivo": 109.64, "rentaplatsDiario": 80.16, "rentaplatsFestivo": 93.39 }
+        },
+        "2026": {
+          "manutencion": { "mes": 49.84 },
+          "alojamiento": { "mes": 23.44 },
+          "plusTransporte": { "mes": 14.37 },
+          "ropaTrabajo": { "mes": 15.39, "anual": 184.69 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 100.08, "cambrerCuinerFestivo": 114.02, "rentaplatsDiario": 83.37, "rentaplatsFestivo": 97.13 }
+        },
+        "2027": {
+          "manutencion": { "mes": 51.83 },
+          "alojamiento": { "mes": 24.38 },
+          "plusTransporte": { "mes": 14.95 },
+          "ropaTrabajo": { "mes": 16.01, "anual": 192.08 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 104.08, "cambrerCuinerFestivo": 118.58, "rentaplatsDiario": 86.70, "rentaplatsFestivo": 101.01 }
+        },
+        "2028": {
+          "manutencion": { "mes": 53.39 },
+          "alojamiento": { "mes": 25.11 },
+          "plusTransporte": { "mes": 15.40 },
+          "ropaTrabajo": { "mes": 16.49, "anual": 197.84 },
+          "serviciosExtraordinarios": { "cambrerCuinerDiario": 107.21, "cambrerCuinerFestivo": 122.14, "rentaplatsDiario": 89.31, "rentaplatsFestivo": 104.04 }
+        }
+      },
+      "regimenTransitorio": "Los trabajadores incorporados a la empresa hasta la fecha de la firma del convenio en categorías de contable general de restaurante, 1º encargado/a de mostrador (jefe de barra), cajero/a de comedor restaurante, repostero/a y barman/barwoman en establecimientos Ai y A mantienen el salario de convenio vigente a 31/12/2007 + incrementos salariales pactados por los diferentes años del convenio."
+    }
+
+  }
+}

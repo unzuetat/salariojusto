@@ -89,6 +89,37 @@ Confirma que la tabla corresponde al año actual o al año que queremos mostrar.
 Los convenios tienen revisiones anuales: una tabla "2023" puede estar obsoleta
 si estamos en 2026.
 
+### Paso 5 — Autoverificación automática (Claude)
+Antes de pedir validación humana, Claude ejecuta dos chequeos automáticos
+sobre las tablas extraídas y reporta el resultado:
+
+**A. Coherencia matemática.** Si el convenio declara incrementos salariales
+entre años (p. ej. +4% de 2025 a 2026), cada fila de la tabla del año
+siguiente debe coincidir con la anterior × (1 + incremento), con tolerancia
+de 0,02 € por redondeo oficial. Detecta errores de transcripción pero no
+errores de la propia fuente.
+
+**B. Re-extracción con método alternativo.** Volver a leer las mismas páginas
+del PDF con `page.get_text("blocks")` (extracción por bloques con
+coordenadas) en vez del texto lineal. Los importes de la extracción original
+deben aparecer también en la reextracción. Detecta errores de parseo
+derivados del ordenamiento de texto.
+
+Si alguno de los dos chequeos falla en cualquier fila → parar y revisar
+manualmente la página afectada. Con ambos en verde + validación humana
+de 2-3 tablas de referencia, la confianza sobre el resto de tablas del
+mismo convenio es alta.
+
+**Excepciones SMI conocidas.** En algunos convenios los niveles inferiores
+(primer empleo, menores, aspirantes) están **igualados al SMI vigente**
+en vez de aplicar el incremento pactado del convenio. Detectado en
+Hostelería Cataluña 2025-2028 para niveles VII Bis y VIII de Tarragona y
+Girona: 1.184€/mes en 2025 (= SMI 2025) y 1.221€/mes en 2026 (= SMI 2026).
+En esos casos la verificación A dará falsos positivos — son excepciones
+reales, no errores. Hay que documentarlas en el JSON como
+`notasEspeciales` y advertir al usuario en la web de que el salario real
+pagado debe ser siempre ≥ SMI legal vigente.
+
 ---
 
 ## 4. Reglas de calidad de datos

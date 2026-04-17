@@ -1502,6 +1502,81 @@
 .convenio-hint a { color: var(--gold); text-decoration: none; }
 .convenio-hint a:hover { text-decoration: underline; }
 
+/* Convenio picker — dropdown custom con provincia (hover) → convenio (click) */
+.convenio-picker-field { flex: 2 !important; min-width: 280px !important; }
+.convenio-picker { position: relative; width: 100%; }
+.convenio-picker-trigger {
+  width: 100%; background: #fff; border: 1px solid var(--cream-300);
+  padding: 10px 14px; font-size: 13px; font-weight: 500; color: var(--ink);
+  font-family: inherit; cursor: pointer; display: flex; align-items: center;
+  justify-content: space-between; gap: 10px; text-align: left;
+  transition: border-color 0.15s;
+}
+.convenio-picker-trigger:hover,
+.convenio-picker.open .convenio-picker-trigger { border-color: var(--gold); }
+.convenio-picker-trigger .placeholder { color: var(--ink-lighter); font-weight: 400; }
+.convenio-picker-arrow { font-size: 10px; color: var(--ink-lighter); transition: transform 0.2s; }
+.convenio-picker.open .convenio-picker-arrow { transform: rotate(180deg); }
+
+.convenio-picker-panel {
+  display: none; position: absolute; top: calc(100% + 4px); left: 0;
+  z-index: 200; background: #fff; border: 1px solid var(--cream-200);
+  box-shadow: 0 12px 32px rgba(45,37,32,0.12); min-width: 520px; max-width: 680px;
+  grid-template-columns: 200px 1fr;
+}
+.convenio-picker.open .convenio-picker-panel { display: grid; }
+
+.convenio-picker-provinces {
+  background: var(--cream-50); border-right: 1px solid var(--cream-200);
+  max-height: 420px; overflow-y: auto;
+}
+.convenio-picker-ccaa {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-lighter); padding: 12px 16px 6px; background: var(--cream-100);
+  border-bottom: 1px solid var(--cream-200); border-top: 1px solid var(--cream-200);
+}
+.convenio-picker-ccaa:first-child { border-top: none; }
+.convenio-picker-province {
+  padding: 10px 16px 10px 24px; font-size: 13px; font-weight: 500; color: var(--ink);
+  cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  border-bottom: 1px solid var(--cream-100); transition: background 0.1s;
+}
+.convenio-picker-province.no-ccaa { padding-left: 16px; }
+.convenio-picker-province:last-child { border-bottom: none; }
+.convenio-picker-province:hover,
+.convenio-picker-province.active { background: #fff; color: var(--gold); }
+.convenio-picker-province-count {
+  font-size: 10px; font-weight: 700; background: var(--cream-200); color: var(--ink-lighter);
+  padding: 2px 7px; border-radius: 10px;
+}
+.convenio-picker-province.active .convenio-picker-province-count { background: var(--gold); color: #fff; }
+.convenio-picker-province-arrow { color: var(--ink-lighter); font-size: 11px; }
+.convenio-picker-province.active .convenio-picker-province-arrow { color: var(--gold); }
+
+.convenio-picker-convenios { padding: 8px 0; max-height: 360px; overflow-y: auto; }
+.convenio-picker-placeholder {
+  padding: 16px 20px; font-size: 12px; color: var(--ink-lighter); font-style: italic; line-height: 1.5;
+}
+.convenio-picker-sector {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); padding: 10px 16px 4px;
+}
+.convenio-picker-convenio {
+  padding: 10px 16px; cursor: pointer; border-left: 3px solid transparent;
+  transition: background 0.1s, border-color 0.1s;
+}
+.convenio-picker-convenio:hover { background: var(--cream-50); border-left-color: var(--gold); }
+.convenio-picker-convenio.disabled { cursor: not-allowed; opacity: 0.55; }
+.convenio-picker-convenio.disabled:hover { background: transparent; border-left-color: transparent; }
+.convenio-picker-convenio-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.convenio-picker-convenio-sub { font-size: 11px; color: var(--ink-lighter); }
+.convenio-picker-convenio.disabled .convenio-picker-convenio-title { color: var(--ink-lighter); }
+
+@media (max-width: 700px) {
+  .convenio-picker-panel { min-width: 100%; grid-template-columns: 1fr; }
+  .convenio-picker-provinces { border-right: none; border-bottom: 1px solid var(--cream-200); max-height: 180px; }
+}
+
 /* Panel de resultados del convenio */
 .convenio-panel {
   display: none;
@@ -2288,14 +2363,25 @@
 <div class="convenio-selector-wrap" id="convenio-section" style="scroll-margin-top:120px;">
   <div class="convenio-selector-label">Verificación de convenio colectivo</div>
   <div class="convenio-selector-row">
-    <div class="field">
-      <label>Convenio aplicable</label>
-      <div class="select-wrapper">
- <select id="convenioSelect" onchange="updateConvenioGroups()">
-          <option value="">— Selecciona tu convenio —</option>
-          <!-- Se rellena dinámicamente por buildConvenioSelector() -->
-        </select>
+    <div class="field convenio-picker-field">
+      <label>Provincia y convenio aplicable</label>
+      <div class="convenio-picker" id="convenioPicker">
+        <button type="button" class="convenio-picker-trigger" id="convenioPickerTrigger" aria-haspopup="true" aria-expanded="false">
+          <span class="convenio-picker-text placeholder">Elige tu provincia y convenio</span>
+          <span class="convenio-picker-arrow">▾</span>
+        </button>
+        <div class="convenio-picker-panel" id="convenioPickerPanel" role="menu">
+          <div class="convenio-picker-provinces" id="convenioPickerProvinces"></div>
+          <div class="convenio-picker-convenios" id="convenioPickerConvenios">
+            <div class="convenio-picker-placeholder">Pasa el cursor sobre una provincia para ver los convenios disponibles.</div>
+          </div>
+        </div>
       </div>
+      <!-- Selects ocultos: mantienen la integración con el JS existente -->
+      <select id="provinciaSelect" style="display:none" onchange="filterConveniosByProvincia()"></select>
+      <select id="convenioSelect" style="display:none" onchange="updateConvenioGroups()">
+        <option value="">— Selecciona tu convenio —</option>
+      </select>
     </div>
     <div class="field">
       <label>Grupo profesional en el convenio</label>
@@ -3319,6 +3405,24 @@ const CONVENIO_INDEX = [
     provincia: 'Madrid', ccaa: 'Comunidad de Madrid',
     archivo: '/data/convenios/hosteleria_mad.json' },
 
+  // ─── Hostelería y Turismo de Cataluña (convenio autonómico plurprovincial) ─
+  { id: 'hosteleria_cat_bcn', sector: 'Hostelería',
+    nombre: 'Hostelería y Turismo — Barcelona (Cataluña 2025-2028)',
+    provincia: 'Barcelona', ccaa: 'Cataluña',
+    archivo: '/data/convenios/hosteleria_cat.json', provinciaKey: 'barcelona' },
+  { id: 'hosteleria_cat_maresme', sector: 'Hostelería',
+    nombre: 'Hostelería y Turismo — Maresme (Cataluña 2025-2028)',
+    provincia: 'Maresme', ccaa: 'Cataluña',
+    archivo: '/data/convenios/hosteleria_cat.json', provinciaKey: 'maresme' },
+  { id: 'hosteleria_cat_tgn', sector: 'Hostelería',
+    nombre: 'Hostelería y Turismo — Tarragona (Cataluña 2025-2028)',
+    provincia: 'Tarragona', ccaa: 'Cataluña',
+    archivo: '/data/convenios/hosteleria_cat.json', provinciaKey: 'tarragona' },
+  { id: 'hosteleria_cat_gir', sector: 'Hostelería',
+    nombre: 'Hostelería y Turismo — Girona (Cataluña 2025-2028)',
+    provincia: 'Girona', ccaa: 'Cataluña',
+    archivo: '/data/convenios/hosteleria_cat.json', provinciaKey: 'girona' },
+
   // ─── Oficinas y Despachos ──────────────────────────────────────────────────
   { id: 'ofydes_vlc', sector: 'Oficinas y Despachos',
     nombre: 'Oficinas y Despachos — Valencia (2024-2026)',
@@ -3326,7 +3430,6 @@ const CONVENIO_INDEX = [
     archivo: '/data/convenios/ofydes_vlc.json' },
 
   // ─── Próximamente (sin archivo, se muestran como disabled) ─────────────────
-  { id: null, sector: 'Hostelería',     nombre: 'Hostelería — Barcelona (próximamente)', provincia: 'Barcelona' },
   { id: null, sector: 'Comercio',       nombre: 'Comercio — Valencia (próximamente)',    provincia: 'Valencia' },
   { id: null, sector: 'Construcción',   nombre: 'Construcción — Valencia (próximamente)',provincia: 'Valencia' },
   { id: null, sector: 'Consultoría/TIC',nombre: 'Consultoría / TIC estatal (próximamente)', provincia: 'Estatal' }
@@ -3334,15 +3437,120 @@ const CONVENIO_INDEX = [
 
 // Caché de convenios cargados (evita re-descargar)
 const convenioCache = {};
+const rawFileCache = {}; // cache por URL de archivo (compartida entre provincias del mismo convenio)
+
+// Adaptador para convenios autonómicos plurprovinciales (Cataluña, etc.):
+// convierte la estructura anidada (niveles × subtablas) a la estructura plana
+// (grupos por combinación nivel×subtabla) que espera el resto del código.
+function adaptPlurProvincialConvenio(rawData, provinciaKey, provinciaNombre) {
+  const prov = rawData.provincias && rawData.provincias[provinciaKey];
+  if (!prov) {
+    console.error('Provincia no encontrada en convenio plurprovincial:', provinciaKey);
+    return null;
+  }
+
+  const numPagas = rawData.pagas || 14;
+  const grupos = [];
+
+  prov.niveles.forEach(nivel => {
+    Object.keys(prov.subtablas).forEach(stKey => {
+      const salario = {};
+      for (const [anyo, matriz] of Object.entries(nivel.salario)) {
+        const mes = matriz[stKey];
+        if (mes != null) {
+          salario[anyo] = { mes: mes, sba: +(mes * numPagas).toFixed(2) };
+        }
+      }
+      if (Object.keys(salario).length > 0) {
+        grupos.push({
+          id: nivel.id + '-' + stKey,
+          subtabla: stKey,
+          nombre: nivel.nombre + (nivel.excepcionSMI ? ' (excepción SMI)' : ''),
+          puestos: nivel.puestos || [],
+          salario: salario
+        });
+      }
+    });
+  });
+
+  // Normalizar complementos a la estructura {mes?, anual?, nota?} que la UI renderiza
+  const complementos = {};
+  for (const [anyo, rawCompl] of Object.entries(prov.complementos || {})) {
+    const norm = {};
+    for (const [key, val] of Object.entries(rawCompl)) {
+      if (typeof val !== 'object' || val === null) continue;
+      if ('mes' in val || 'anual' in val) {
+        // complemento simple (manutención, alojamiento, etc.)
+        norm[key] = { mes: val.mes || null, anual: val.anual || null, nota: val.nota || '' };
+      } else {
+        // complemento compuesto (cambrerasPisos, serviciosExtraordinarios, plusDiferenciaManutencion)
+        // lo convertimos a nota descriptiva
+        const subvals = Object.entries(val)
+          .filter(([k, v]) => k !== 'nota' && typeof v === 'number')
+          .map(([k, v]) => k.replace(/([A-Z])/g, ' $1').toLowerCase().trim() + ': ' + v.toFixed(2) + ' €')
+          .join(' · ');
+        if (subvals) {
+          norm[key] = { mes: null, anual: null, nota: subvals + (val.nota ? ' — ' + val.nota : '') };
+        }
+      }
+    }
+    complementos[anyo] = norm;
+  }
+
+  // jornadaAnual puede ser un número o un objeto por año (como en Cataluña)
+  let jornadaAnual = rawData.jornadaAnual;
+  if (typeof jornadaAnual === 'object' && jornadaAnual !== null) {
+    // usar el valor más reciente disponible (vigente)
+    const anyos = Object.keys(jornadaAnual).sort().reverse();
+    jornadaAnual = jornadaAnual[anyos[0]];
+  }
+
+  // enlaces a las otras provincias del mismo convenio, útil al usuario
+  const relacionados = Object.entries(rawData.provincias || {})
+    .filter(([k]) => k !== provinciaKey)
+    .map(([k, p]) => ({
+      nombre: rawData.nombre.split('—')[0].trim() + ' — ' + p.nombre,
+      url: '#',
+      nota: 'Otra provincia del mismo convenio autonómico'
+    }));
+
+  return {
+    nombre: rawData.nombre + ' — ' + provinciaNombre,
+    bop: rawData.bop,
+    codigo: rawData.codigo,
+    vigencia: rawData.vigencia,
+    pagas: numPagas,
+    jornadaAnual: jornadaAnual,
+    urlBop: rawData.urlBop,
+    subtablas: prov.subtablas,
+    grupos: grupos,
+    complementos: complementos,
+    relacionados: relacionados,
+    disclaimer: rawData.nota || null,
+    notasEspeciales: rawData.notasEspeciales || null
+  };
+}
 
 async function loadConvenio(id) {
   if (convenioCache[id]) return convenioCache[id];
   const entry = CONVENIO_INDEX.find(c => c.id === id);
   if (!entry || !entry.archivo) return null;
   try {
-    const res = await fetch(entry.archivo);
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
+    // Reutiliza el archivo ya descargado si varias provincias apuntan a la misma URL
+    let rawData = rawFileCache[entry.archivo];
+    if (!rawData) {
+      const res = await fetch(entry.archivo);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      rawData = await res.json();
+      rawFileCache[entry.archivo] = rawData;
+    }
+
+    // Si es un convenio plurprovincial (tiene `provincias`), adaptar a estructura plana
+    const data = entry.provinciaKey
+      ? adaptPlurProvincialConvenio(rawData, entry.provinciaKey, entry.provincia)
+      : rawData;
+
+    if (!data) return null;
     convenioCache[id] = data;
     return data;
   } catch (err) {
@@ -3351,14 +3559,50 @@ async function loadConvenio(id) {
   }
 }
 
-    // Construir el <select> agrupado por sector
-function buildConvenioSelector() {
+// Construir el <select> de Provincia/Ámbito a partir del índice de convenios
+function buildProvinciaSelector() {
+  const sel = document.getElementById('provinciaSelect');
+  if (!sel) return;
+
+  // Provincias únicas presentes en el índice
+  const provincias = [...new Set(CONVENIO_INDEX.map(c => c.provincia))].sort((a, b) => {
+    if (a === 'Estatal') return -1;
+    if (b === 'Estatal') return 1;
+    return a.localeCompare(b, 'es');
+  });
+
+  provincias.forEach(p => {
+    const opt = document.createElement('option');
+    opt.value = p;
+    opt.textContent = p === 'Estatal' ? 'Convenio estatal' : p;
+    sel.appendChild(opt);
+  });
+}
+
+// Construir el <select> de convenios filtrado por provincia
+function buildConvenioSelector(provinciaFilter) {
   const sel = document.getElementById('convenioSelect');
+  sel.innerHTML = '';
+
+  if (!provinciaFilter) {
+    sel.innerHTML = '<option value="">Elige provincia primero</option>';
+    sel.disabled = true;
+    return;
+  }
+
+  const filtered = CONVENIO_INDEX.filter(c => c.provincia === provinciaFilter);
+
+  // Agrupar por sector
   const sectors = {};
-  CONVENIO_INDEX.forEach(c => {
+  filtered.forEach(c => {
     if (!sectors[c.sector]) sectors[c.sector] = [];
     sectors[c.sector].push(c);
   });
+
+  const hasAny = filtered.some(c => c.id);
+  sel.innerHTML = hasAny
+    ? '<option value="">— Selecciona tu convenio —</option>'
+    : '<option value="">No tenemos convenios de ' + provinciaFilter + ' todavía</option>';
 
   for (const [sector, items] of Object.entries(sectors)) {
     const optgroup = document.createElement('optgroup');
@@ -3367,17 +3611,19 @@ function buildConvenioSelector() {
       const opt = document.createElement('option');
       if (c.id) {
         opt.value = c.id;
-        opt.textContent = c.nombre;
+        // en el nombre, eliminar la provincia si ya se ha elegido (evita redundancia)
+        opt.textContent = c.nombre.replace(' — ' + c.provincia, '').replace(' (próximamente)', '');
       } else {
         opt.value = '';
         opt.disabled = true;
-        opt.textContent = c.nombre;
+        opt.textContent = c.nombre.replace(' — ' + c.provincia, '') + ' (próximamente)';
       }
       optgroup.appendChild(opt);
     });
     sel.appendChild(optgroup);
   }
 
+  // opción "no encuentro el mío" → BOE
   const optBOE = document.createElement('optgroup');
   optBOE.label = '── No encuentro el mío ──';
   const optBuscar = document.createElement('option');
@@ -3385,9 +3631,189 @@ function buildConvenioSelector() {
   optBuscar.textContent = '🔍 Buscar mi convenio en el BOE/BOP';
   optBOE.appendChild(optBuscar);
   sel.appendChild(optBOE);
+
+  sel.disabled = false;
 }
 
-buildConvenioSelector();
+// Cambio de provincia: refresca convenio y resetea selects dependientes
+function filterConveniosByProvincia() {
+  const provincia = document.getElementById('provinciaSelect').value;
+  buildConvenioSelector(provincia);
+
+  // resetear selects dependientes
+  const grupoSel = document.getElementById('convenioGrupo');
+  const anyoSel  = document.getElementById('convenioAnyo');
+  grupoSel.innerHTML = '<option value="">Selecciona convenio primero</option>';
+  grupoSel.disabled = true;
+  anyoSel.disabled = true;
+  document.getElementById('convenioPanel').classList.remove('visible');
+}
+
+buildProvinciaSelector();
+
+// ── CONVENIO PICKER — dropdown custom con hover en provincia ────────────────
+function buildConvenioPicker() {
+  const provList = document.getElementById('convenioPickerProvinces');
+  if (!provList) return;
+
+  // Agrupar provincias por CCAA
+  const byCcaa = {};
+  CONVENIO_INDEX.forEach(c => {
+    const key = c.provincia === 'Estatal' ? '_estatal' : (c.ccaa || '_sin_ccaa');
+    if (!byCcaa[key]) byCcaa[key] = new Set();
+    byCcaa[key].add(c.provincia);
+  });
+
+  // Orden: Estatal primero, luego CCAA alfabéticamente, "sin ccaa" al final
+  const ccaaOrder = Object.keys(byCcaa).sort((a, b) => {
+    if (a === '_estatal') return -1;
+    if (b === '_estatal') return 1;
+    if (a === '_sin_ccaa') return 1;
+    if (b === '_sin_ccaa') return -1;
+    return a.localeCompare(b, 'es');
+  });
+
+  const ccaaLabels = {
+    '_estatal': 'Ámbito estatal',
+    '_sin_ccaa': 'Otras'
+  };
+
+  const renderProvinceRow = (p, withoutCcaa) => {
+    const count = CONVENIO_INDEX.filter(c => c.provincia === p && c.id).length;
+    const total = CONVENIO_INDEX.filter(c => c.provincia === p).length;
+    const row = document.createElement('div');
+    row.className = 'convenio-picker-province' + (withoutCcaa ? ' no-ccaa' : '');
+    row.dataset.provincia = p;
+    row.innerHTML =
+      '<span>' + (p === 'Estatal' ? 'Convenio estatal' : p) + '</span>' +
+      '<span class="convenio-picker-province-meta">' +
+        (count > 0
+          ? '<span class="convenio-picker-province-count">' + count + '</span>'
+          : '<span class="convenio-picker-province-count" style="background:transparent;color:var(--ink-lighter);">' + total + '</span>') +
+      ' <span class="convenio-picker-province-arrow">›</span></span>';
+    row.addEventListener('mouseenter', () => showConveniosForProvincia(p));
+    row.addEventListener('focus',      () => showConveniosForProvincia(p));
+    row.tabIndex = 0;
+    return row;
+  };
+
+  provList.innerHTML = '';
+  ccaaOrder.forEach(ccaaKey => {
+    // header de CCAA (solo si tiene etiqueta significativa y no es el bloque estatal con 1 entrada)
+    const isEstatal = ccaaKey === '_estatal';
+    const label = ccaaLabels[ccaaKey] || ccaaKey;
+    const header = document.createElement('div');
+    header.className = 'convenio-picker-ccaa';
+    header.textContent = label;
+    provList.appendChild(header);
+
+    // provincias dentro de esta CCAA, alfabético
+    const provincias = [...byCcaa[ccaaKey]].sort((a, b) => a.localeCompare(b, 'es'));
+    provincias.forEach(p => provList.appendChild(renderProvinceRow(p, isEstatal)));
+  });
+}
+
+function showConveniosForProvincia(provincia) {
+  // highlight activo
+  document.querySelectorAll('.convenio-picker-province').forEach(r => {
+    r.classList.toggle('active', r.dataset.provincia === provincia);
+  });
+
+  const panel = document.getElementById('convenioPickerConvenios');
+  const items = CONVENIO_INDEX.filter(c => c.provincia === provincia);
+
+  // agrupar por sector
+  const sectors = {};
+  items.forEach(c => {
+    if (!sectors[c.sector]) sectors[c.sector] = [];
+    sectors[c.sector].push(c);
+  });
+
+  let html = '';
+  for (const [sector, list] of Object.entries(sectors)) {
+    html += '<div class="convenio-picker-sector">' + sector + '</div>';
+    list.forEach(c => {
+      const title = c.nombre.replace(' — ' + c.provincia, '').replace(' (próximamente)', '');
+      if (c.id) {
+        html += '<div class="convenio-picker-convenio" data-id="' + c.id + '" data-provincia="' + c.provincia + '">' +
+                '<div class="convenio-picker-convenio-title">' + title + '</div>' +
+                (c.ccaa ? '<div class="convenio-picker-convenio-sub">' + c.ccaa + '</div>' : '') +
+                '</div>';
+      } else {
+        html += '<div class="convenio-picker-convenio disabled">' +
+                '<div class="convenio-picker-convenio-title">' + title + '</div>' +
+                '<div class="convenio-picker-convenio-sub">Próximamente</div>' +
+                '</div>';
+      }
+    });
+  }
+  panel.innerHTML = html;
+
+  // bind click
+  panel.querySelectorAll('.convenio-picker-convenio:not(.disabled)').forEach(el => {
+    el.addEventListener('click', () => selectConvenio(el.dataset.provincia, el.dataset.id, el.querySelector('.convenio-picker-convenio-title').textContent));
+  });
+}
+
+function selectConvenio(provincia, convenioId, titleShort) {
+  // actualizar selects ocultos + disparar flujo existente
+  const provSel = document.getElementById('provinciaSelect');
+  const convSel = document.getElementById('convenioSelect');
+
+  // asegurarse de que provinciaSelect tiene la opción (el hidden select se construye dinámicamente)
+  if (![...provSel.options].some(o => o.value === provincia)) {
+    const opt = document.createElement('option');
+    opt.value = provincia; opt.textContent = provincia;
+    provSel.appendChild(opt);
+  }
+  provSel.value = provincia;
+  filterConveniosByProvincia(); // esto rebuildea convSel con los de la provincia
+
+  convSel.value = convenioId;
+  updateConvenioGroups();
+
+  // actualizar trigger UI
+  const trigger = document.querySelector('.convenio-picker-text');
+  trigger.textContent = titleShort + (provincia !== 'Estatal' ? ' · ' + provincia : '');
+  trigger.classList.remove('placeholder');
+
+  // cerrar panel
+  document.getElementById('convenioPicker').classList.remove('open');
+  document.getElementById('convenioPickerTrigger').setAttribute('aria-expanded', 'false');
+}
+
+// abrir/cerrar panel del picker
+document.getElementById('convenioPickerTrigger').addEventListener('click', function(e) {
+  e.stopPropagation();
+  const picker = document.getElementById('convenioPicker');
+  const isOpen = picker.classList.toggle('open');
+  this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  if (isOpen) {
+    // resetear hover al abrir
+    document.querySelectorAll('.convenio-picker-province').forEach(r => r.classList.remove('active'));
+    document.getElementById('convenioPickerConvenios').innerHTML =
+      '<div class="convenio-picker-placeholder">Pasa el cursor sobre una provincia para ver los convenios disponibles.</div>';
+  }
+});
+
+// click fuera cierra panel
+document.addEventListener('click', function(e) {
+  const picker = document.getElementById('convenioPicker');
+  if (picker && !picker.contains(e.target)) {
+    picker.classList.remove('open');
+    document.getElementById('convenioPickerTrigger').setAttribute('aria-expanded', 'false');
+  }
+});
+
+// tecla Escape cierra
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('convenioPicker').classList.remove('open');
+    document.getElementById('convenioPickerTrigger').setAttribute('aria-expanded', 'false');
+  }
+});
+
+buildConvenioPicker();
 // ── INICIALIZAR SELECTORES DE GRUPOS ─────────────────────────────────────────
 async function updateConvenioGroups() {
   const sel = document.getElementById('convenioSelect');
