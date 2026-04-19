@@ -584,6 +584,145 @@ ${footerHTML()}
   return { fileName: 'tramos-irpf-2026.html', html };
 }
 
+// ── Generar página hub /salarios.html ──────────────────────────────
+function generateHubPage() {
+  const title = 'Calculadora de salario neto por ciudad y tramo (IRPF 2026) | SalarioJusto';
+  const desc = `Todas las combinaciones de salario neto calculadas: ${SALARIES.length} tramos brutos × ${CITIES.length} ciudades. IRPF 2026 oficial, datos AEAT.`;
+  const url = 'https://salariojusto.es/salarios.html';
+
+  const collectionSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Salario neto calculado por ciudad y tramo IRPF 2026",
+    "url": url,
+    "description": desc,
+    "numberOfItems": SALARIES.length * CITIES.length
+  }, null, 2);
+
+  const breadcrumbSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "SalarioJusto", "item": "https://salariojusto.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Cálculos de salario neto", "item": url }
+    ]
+  }, null, 2);
+
+  // Tabla: filas = tramos, columnas = ciudades
+  const rows = SALARIES.map(gross => {
+    const cells = CITIES.map(c => `<td><a href="/salario-neto-${gross}-euros-brutos-${c.id}.html">${fmtEur(gross)}<br><span style="font-size:11px;color:var(--ink-lighter);">en ${c.name}</span></a></td>`).join('');
+    return `        <tr><th>${fmtEur(gross)}</th>${cells}</tr>`;
+  }).join('\n');
+
+  const html = `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <meta name="description" content="${desc}">
+  <link rel="canonical" href="${url}">
+  <meta property="og:title" content="Calculadora de salario neto por ciudad y tramo (IRPF 2026)">
+  <meta property="og:description" content="${desc}">
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="https://salariojusto.es/preview.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
+  <script type="application/ld+json">${breadcrumbSchema}</script>
+  <script type="application/ld+json">${collectionSchema}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXJ8V2FBW9"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MXJ8V2FBW9');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1841567088579486" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  ${headCSS()}
+  <style>
+    .hub-table{width:100%;border-collapse:collapse;margin:8px 0 32px;}
+    .hub-table th{font-size:12px;font-weight:700;color:var(--ink);background:var(--cream-100);padding:12px;text-align:center;border:1px solid var(--cream-200);}
+    .hub-table td{padding:0;border:1px solid var(--cream-200);text-align:center;}
+    .hub-table td a{display:block;padding:14px 8px;color:var(--gold);text-decoration:none;font-size:13px;font-weight:600;line-height:1.35;}
+    .hub-table td a:hover{background:var(--cream-100);text-decoration:none;}
+    .hub-table thead th:first-child{background:var(--ink);color:#fff;}
+    .hub-table tbody th{background:var(--cream-50);font-size:13px;}
+    @media(max-width:700px){.hub-table th,.hub-table td a{padding:8px 4px;font-size:11px;}.hub-table td a span{display:none;}}
+  </style>
+</head>
+<body>
+
+${navHTML()}
+
+<div style="background:var(--cream-100);border-bottom:1px solid var(--cream-200);padding:10px 32px;font-size:12px;color:var(--ink-lighter);"><a href="/" style="color:var(--gold);">SalarioJusto</a> › Cálculos de salario neto</div>
+
+<section class="hero">
+  <div class="hero-badge">${SALARIES.length * CITIES.length} cálculos precomputados</div>
+  <h1>Salario neto por <em>ciudad y tramo</em> — IRPF 2026</h1>
+  <p class="hero-sub">Todas las combinaciones de salario bruto y ciudad con el cálculo oficial de la Agencia Tributaria. Elige el tuyo:</p>
+</section>
+
+<main>
+
+  <div class="card">
+    <div class="card-title">Matriz completa</div>
+    <div style="overflow-x:auto;">
+      <table class="hub-table">
+        <thead>
+          <tr>
+            <th>Bruto anual</th>
+${CITIES.map(c => `            <th>${c.name}</th>`).join('\n')}
+          </tr>
+        </thead>
+        <tbody>
+${rows}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <p>¿Tu caso es distinto? Hijos, discapacidad, Ley Beckham, movilidad geográfica…</p>
+    <a href="/" class="cta-btn">Calculadora completa personalizada →</a>
+  </div>
+
+  <h2>Guías fiscales 2026</h2>
+  <div class="cities-grid">
+    <a href="/tramos-irpf-2026.html" class="city-link">Tramos IRPF 2026 →</a>
+    <a href="/salario-minimo-interprofesional-2026.html" class="city-link">Salario Mínimo Interprofesional 2026 →</a>
+    <a href="/ley-transparencia-salarial-2026.html" class="city-link">Ley de Transparencia Salarial →</a>
+    <a href="/reclamar-diferencias-salariales-convenio.html" class="city-link">Reclamar diferencias de convenio →</a>
+    <a href="/denunciar-brecha-salarial-guia-practica-2026.html" class="city-link">Denunciar brecha salarial →</a>
+    <a href="/construccion-estatal-suelo-salarial.html" class="city-link">Convenio Construcción Estatal →</a>
+    <a href="/rangos-salariales-empresa-transparencia-2026.html" class="city-link">Rangos salariales en empresa →</a>
+    <a href="/guias.html" class="city-link">Ver todas las guías →</a>
+  </div>
+
+  <h2>¿Cómo se calcula?</h2>
+  <p>Cada celda de la matriz usa el algoritmo oficial de retención IRPF 2026 publicado por la Agencia Tributaria. Se aplican las escalas estatal y autonómica, el mínimo personal y familiar, y las cotizaciones a la Seguridad Social del trabajador (7,56% del salario bruto).</p>
+  <p>Los resultados asumen una persona soltera sin hijos y 14 pagas. Si tu situación familiar es distinta o quieres ajustes específicos, usa la <a href="/">calculadora completa</a> donde puedes introducir hijos menores, ascendientes, discapacidad o régimen Beckham.</p>
+
+  <div class="related">
+    <h2 style="font-size:18px;">Navegación rápida</h2>
+    <ul>
+      <li><a href="/">← Volver a la calculadora</a></li>
+      <li><a href="/guias.html">Guías para trabajadores</a></li>
+      <li><a href="/en/">English version</a></li>
+    </ul>
+  </div>
+
+</main>
+
+${footerHTML()}
+
+</body>
+</html>`;
+
+  return { fileName: 'salarios.html', html };
+}
+
 // ── Generar sitemap ────────────────────────────────────────────────
 function generateSitemap(pages) {
   const existingPages = [
@@ -597,6 +736,7 @@ function generateSitemap(pages) {
     { url: 'https://salariojusto.es/construccion-estatal-suelo-salarial.html', priority: '0.80', freq: 'monthly' },
     { url: 'https://salariojusto.es/tramos-irpf-2026.html', priority: '0.85', freq: 'monthly' },
     { url: 'https://salariojusto.es/salario-minimo-interprofesional-2026.html', priority: '0.85', freq: 'monthly' },
+    { url: 'https://salariojusto.es/salarios.html', priority: '0.90', freq: 'weekly' },
   ];
 
   // Add generated salary pages
@@ -655,13 +795,19 @@ function main() {
   fs.writeFileSync(path.join(ROOT, tramosPage.fileName), tramosPage.html, 'utf8');
   console.log(`  ✓ ${tramosPage.fileName}`);
 
+  // Generate hub page /salarios.html
+  console.log('\nGenerating hub page...');
+  const hubPage = generateHubPage();
+  fs.writeFileSync(path.join(ROOT, hubPage.fileName), hubPage.html, 'utf8');
+  console.log(`  ✓ ${hubPage.fileName}`);
+
   // Generate sitemap
   console.log('\nGenerating sitemap.xml...');
   const sitemap = generateSitemap(salaryPages);
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
-  console.log(`  ✓ sitemap.xml (${salaryPages.length + 10} URLs)`);
+  console.log(`  ✓ sitemap.xml (${salaryPages.length + 11} URLs)`);
 
-  console.log(`\nDone! Generated ${salaryPages.length + 2} pages + sitemap.`);
+  console.log(`\nDone! Generated ${salaryPages.length + 3} pages + sitemap.`);
 }
 
 main();

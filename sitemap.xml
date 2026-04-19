@@ -66,6 +66,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://salariojusto.es/salarios.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://salariojusto.es/salario-neto-18000-euros-brutos-madrid.html</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
