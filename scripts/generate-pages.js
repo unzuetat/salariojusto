@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const { calcNet, calcDetailed } = require('../lib/irpf2026');
+const generateConvenios = require('./generate-convenios');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -688,14 +689,14 @@ ${rows}
     <a href="/" class="cta-btn">Calculadora completa personalizada →</a>
   </div>
 
-  <h2>Guías fiscales 2026</h2>
+  <h2>Guías fiscales y convenios 2026</h2>
   <div class="cities-grid">
     <a href="/tramos-irpf-2026.html" class="city-link">Tramos IRPF 2026 →</a>
     <a href="/salario-minimo-interprofesional-2026.html" class="city-link">Salario Mínimo Interprofesional 2026 →</a>
+    <a href="/convenios.html" class="city-link">Convenios colectivos →</a>
     <a href="/ley-transparencia-salarial-2026.html" class="city-link">Ley de Transparencia Salarial →</a>
     <a href="/reclamar-diferencias-salariales-convenio.html" class="city-link">Reclamar diferencias de convenio →</a>
     <a href="/denunciar-brecha-salarial-guia-practica-2026.html" class="city-link">Denunciar brecha salarial →</a>
-    <a href="/construccion-estatal-suelo-salarial.html" class="city-link">Convenio Construcción Estatal →</a>
     <a href="/rangos-salariales-empresa-transparencia-2026.html" class="city-link">Rangos salariales en empresa →</a>
     <a href="/guias.html" class="city-link">Ver todas las guías →</a>
   </div>
@@ -724,7 +725,7 @@ ${footerHTML()}
 }
 
 // ── Generar sitemap ────────────────────────────────────────────────
-function generateSitemap(pages) {
+function generateSitemap(pages, convenios = []) {
   const existingPages = [
     { url: 'https://salariojusto.es/', priority: '1.00', freq: 'weekly', hreflang: [{ lang: 'es', href: 'https://salariojusto.es/' }, { lang: 'en', href: 'https://salariojusto.es/en/' }] },
     { url: 'https://salariojusto.es/en/', priority: '0.90', freq: 'weekly', hreflang: [{ lang: 'es', href: 'https://salariojusto.es/' }, { lang: 'en', href: 'https://salariojusto.es/en/' }] },
@@ -737,11 +738,19 @@ function generateSitemap(pages) {
     { url: 'https://salariojusto.es/tramos-irpf-2026.html', priority: '0.85', freq: 'monthly' },
     { url: 'https://salariojusto.es/salario-minimo-interprofesional-2026.html', priority: '0.85', freq: 'monthly' },
     { url: 'https://salariojusto.es/salarios.html', priority: '0.90', freq: 'weekly' },
+    { url: 'https://salariojusto.es/convenios.html', priority: '0.90', freq: 'weekly' },
   ];
 
   // Add generated salary pages
   pages.forEach(p => {
     existingPages.push({ url: `https://salariojusto.es/${p.fileName}`, priority: '0.70', freq: 'monthly' });
+  });
+
+  // Add generated convenio pages
+  convenios.forEach(c => {
+    // Skip construccion-estatal-* which is already above
+    if (c.href === '/construccion-estatal-suelo-salarial.html') return;
+    existingPages.push({ url: `https://salariojusto.es${c.href}`, priority: '0.80', freq: 'monthly' });
   });
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -801,13 +810,18 @@ function main() {
   fs.writeFileSync(path.join(ROOT, hubPage.fileName), hubPage.html, 'utf8');
   console.log(`  ✓ ${hubPage.fileName}`);
 
+  // Generate convenio landings + /convenios.html hub
+  console.log('\nGenerating convenio landings...');
+  const convenios = generateConvenios.main();
+
   // Generate sitemap
   console.log('\nGenerating sitemap.xml...');
-  const sitemap = generateSitemap(salaryPages);
+  const sitemap = generateSitemap(salaryPages, convenios);
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
-  console.log(`  ✓ sitemap.xml (${salaryPages.length + 11} URLs)`);
+  const totalUrls = salaryPages.length + 12 + convenios.filter(c => c.href !== '/construccion-estatal-suelo-salarial.html').length;
+  console.log(`  ✓ sitemap.xml (${totalUrls} URLs)`);
 
-  console.log(`\nDone! Generated ${salaryPages.length + 3} pages + sitemap.`);
+  console.log(`\nDone!`);
 }
 
 main();
