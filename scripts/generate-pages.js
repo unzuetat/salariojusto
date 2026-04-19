@@ -14,13 +14,20 @@ const generateConvenios = require('./generate-convenios');
 const ROOT = path.join(__dirname, '..');
 
 // ── Configuración ──────────────────────────────────────────────────
-const SALARIES = [18000, 20000, 25000, 30000, 35000, 40000, 50000, 60000];
+const SALARIES = [15000, 18000, 20000, 22000, 25000, 28000, 30000, 35000, 40000, 45000, 50000, 60000, 70000, 100000];
 const CITIES = [
-  { id: 'madrid', name: 'Madrid' },
+  { id: 'madrid',    name: 'Madrid' },
   { id: 'barcelona', name: 'Barcelona' },
-  { id: 'valencia', name: 'Valencia' },
-  { id: 'sevilla', name: 'Sevilla' },
-  { id: 'bilbao', name: 'Bilbao' },
+  { id: 'valencia',  name: 'Valencia' },
+  { id: 'sevilla',   name: 'Sevilla' },
+  { id: 'bilbao',    name: 'Bilbao' },
+  { id: 'malaga',    name: 'Málaga' },
+  { id: 'zaragoza',  name: 'Zaragoza' },
+  { id: 'alicante',  name: 'Alicante' },
+  { id: 'murcia',    name: 'Murcia' },
+  { id: 'palma',     name: 'Palma de Mallorca' },
+  { id: 'laspalmas', name: 'Las Palmas de Gran Canaria' },
+  { id: 'acoruna',   name: 'A Coruña' },
 ];
 
 const SITUATIONS = [
