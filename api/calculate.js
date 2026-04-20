@@ -1,4 +1,4 @@
-const ALLOWED_HOSTS = new Set(['salariojusto.com', 'www.salariojusto.com', 'localhost', '127.0.0.1']);
+const ALLOWED_HOSTS = new Set(['salariojusto.es', 'www.salariojusto.es', 'localhost', '127.0.0.1']);
 function isAllowedOrigin(req) {
   const raw = req.headers.origin || req.headers.referer;
   if (!raw) return false;
