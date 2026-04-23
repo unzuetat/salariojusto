@@ -4,10 +4,14 @@ RESUMEN-SESION-30MAR.md
 .DS_Store
 Thumbs.db
 
-# Editor / harness state
-.claude/
+# Editor / harness state — ignorar todo salvo slash commands del proyecto
+.claude/*
+!.claude/commands/
 .vscode/
 .idea/
+
+# Skills / tooling local
+.gstack/
 
 # Secretos locales — NUNCA commitear
 .env
