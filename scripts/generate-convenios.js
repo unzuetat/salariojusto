@@ -469,7 +469,7 @@ ${footerHTML()}
 function generateHub(convenios) {
   const url = 'https://salariojusto.es/convenios.html';
   const title = 'Convenios colectivos: tablas salariales por sector y provincia | SalarioJusto';
-  const desc = `${convenios.length} convenios colectivos con tablas salariales, jornada anual y complementos. Hostelería, Oficinas y Despachos, Construcción por provincia y estatal.`;
+  const desc = `${convenios.length} convenios colectivos con tablas salariales, jornada anual y complementos. Hostelería, Limpieza de Edificios y Locales, Oficinas y Despachos, Construcción por provincia y estatal.`;
 
   const breadcrumbSchema = JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",
@@ -624,15 +624,23 @@ function main() {
     }
   }
 
-  // Añadir la landing de construcción estatal (ya existente, no se regenera)
-  generated.push({
-    sector: 'Construcción',
-    ambito: 'Estatal',
-    provincia: null,
-    href: '/construccion-estatal-suelo-salarial.html',
-    nombreCorto: 'Construcción — Suelo salarial estatal',
-    vigencia: '1 enero 2022 – 31 diciembre 2026',
-  });
+  // Añadir landings manuales (no regenerables desde JSON):
+  //  · Pilar de Limpieza (estatal) y sus provinciales (Sprint 1)
+  //  · Construcción estatal (suelo salarial)
+  // Se incluyen en /convenios.html y en el sitemap, pero los HTML son fuente de verdad.
+  const MANUAL_CONVENIOS = [
+    { sector: 'Limpieza de Edificios y Locales', ambito: 'Estatal · Pilar', provincia: null, href: '/convenio-limpieza-edificios-locales.html', nombreCorto: 'Limpieza — Estatal (pilar)', vigencia: '52 provincias · 800.000 trabajadores' },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Madrid', href: '/convenio-limpieza-madrid.html', nombreCorto: 'Limpieza — Madrid', vigencia: 'Tabla 2025 · jornada 1.792 h', enUltraactividad: true },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Barcelona', href: '/convenio-limpieza-barcelona.html', nombreCorto: 'Limpieza — Barcelona', vigencia: '1 enero 2026 – 31 diciembre 2030' },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Valencia', href: '/convenio-limpieza-valencia.html', nombreCorto: 'Limpieza — Valencia', vigencia: 'Tabla 2025 · jornada 1.780 h', enUltraactividad: true },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Sevilla', href: '/convenio-limpieza-sevilla.html', nombreCorto: 'Limpieza — Sevilla', vigencia: '1 enero 2024 – 31 diciembre 2027' },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Málaga', href: '/convenio-limpieza-malaga.html', nombreCorto: 'Limpieza — Málaga', vigencia: 'Tabla 2025 · jornada 1.826 h', enUltraactividad: true },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Las Palmas', href: '/convenio-limpieza-laspalmas.html', nombreCorto: 'Limpieza — Las Palmas', vigencia: 'Tabla 2026 vigente · +3% sobre 2025' },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Bizkaia', href: '/convenio-limpieza-bizkaia.html', nombreCorto: 'Limpieza — Bizkaia', vigencia: 'Jornada 35 h/sem · 0 cats bajo SMI' },
+    { sector: 'Limpieza de Edificios y Locales', provincia: 'Zaragoza', href: '/convenio-limpieza-zaragoza.html', nombreCorto: 'Limpieza — Zaragoza', vigencia: 'Tabla 2025 · prorrogado 2026 (Art. 5) · jornada 1.766 h' },
+    { sector: 'Construcción', ambito: 'Estatal', provincia: null, href: '/construccion-estatal-suelo-salarial.html', nombreCorto: 'Construcción — Suelo salarial estatal', vigencia: '1 enero 2022 – 31 diciembre 2026' },
+  ];
+  for (const m of MANUAL_CONVENIOS) generated.push(m);
 
   console.log('\nGenerando hub /convenios.html...');
   const hub = generateHub(generated);
