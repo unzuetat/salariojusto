@@ -17,3 +17,6 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+
+# Outreach interno — datos de terceros + estrategia, NO subir a GitHub
+outreach/

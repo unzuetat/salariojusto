@@ -1,0 +1,64 @@
+# SalarioJusto
+
+> Kit del trabajador para ejercer los derechos de la Directiva UE 2023/970 (transparencia retributiva, en vigor 7 de junio de 2026). Calculadora IRPF 2026 con escalas autonómicas reales, verificador de convenios colectivos con datos oficiales (BOE, REGCON, BOPs), guías de derechos laborales y plantillas prácticas para que el trabajador ejerza sus derechos de información salarial. Contenido en español, gratuito, sin registro. Proyecto independiente, sin empresas detrás. Metodología pública y datos verificables.
+
+## Hub Directiva 2023/970 (transparencia salarial)
+
+- [Ley de Transparencia Salarial 2026](https://salariojusto.es/ley-transparencia-salarial-2026.html): qué cambia el 7 de junio de 2026, derechos del trabajador, cómo ejercerlos paso a paso
+- [Cómo denunciar la brecha salarial](https://salariojusto.es/denunciar-brecha-salarial-guia-practica-2026.html): guía práctica paso a paso para denuncia administrativa o judicial
+- [Cómo reclamar diferencias salariales](https://salariojusto.es/reclamar-diferencias-salariales-convenio.html): si tu empresa paga menos de lo que dice tu convenio colectivo
+- [Rangos salariales y transparencia](https://salariojusto.es/rangos-salariales-empresa-transparencia-2026.html): qué bandas debe publicar tu empresa según la Directiva
+
+## Herramientas
+
+- [Calculadora de salario neto IRPF 2026](https://salariojusto.es/): bruto-a-neto con escalas estatal y autonómica reales (9 CCAA + tarifa foral Bizkaia)
+- [Cálculos por ciudad y tramo](https://salariojusto.es/salarios.html): 168 combinaciones precalculadas (12 ciudades × 14 tramos brutos de 15.000 a 100.000 €)
+- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 19 convenios indexables con tablas salariales oficiales
+
+## Convenios provinciales de Limpieza auditados (Sprint 1)
+
+Datos extraídos de boletines oficiales con metodología A+B (verificación cruzada con sindicato firmante o REGCON):
+
+- [Convenio Limpieza Madrid](https://salariojusto.es/convenio-limpieza-madrid.html)
+- [Convenio Limpieza Barcelona](https://salariojusto.es/convenio-limpieza-barcelona.html)
+- [Convenio Limpieza Valencia](https://salariojusto.es/convenio-limpieza-valencia.html)
+- [Convenio Limpieza Sevilla](https://salariojusto.es/convenio-limpieza-sevilla.html)
+- [Convenio Limpieza Málaga](https://salariojusto.es/convenio-limpieza-malaga.html)
+- [Convenio Limpieza Las Palmas](https://salariojusto.es/convenio-limpieza-laspalmas.html)
+- [Convenio Limpieza Bizkaia](https://salariojusto.es/convenio-limpieza-bizkaia.html)
+- [Convenio Limpieza Zaragoza](https://salariojusto.es/convenio-limpieza-zaragoza.html)
+- [Convenio Limpieza Asturias](https://salariojusto.es/convenio-limpieza-asturias.html)
+- [Convenio Limpieza Murcia](https://salariojusto.es/convenio-limpieza-murcia.html)
+- [Pilar Limpieza de Edificios y Locales](https://salariojusto.es/convenio-limpieza-edificios-locales.html): directorio de las 52 provincias
+
+## Convenios provinciales de Hostelería
+
+- [Convenio Hostelería Madrid](https://salariojusto.es/convenio-hosteleria-madrid.html) (en ultraactividad)
+- [Convenio Hostelería Valencia](https://salariojusto.es/convenio-hosteleria-valencia.html) (en ultraactividad)
+- [Convenio Hostelería Barcelona](https://salariojusto.es/convenio-hosteleria-barcelona.html)
+- [Convenio Hostelería Tarragona](https://salariojusto.es/convenio-hosteleria-tarragona.html)
+- [Convenio Hostelería Maresme](https://salariojusto.es/convenio-hosteleria-maresme.html)
+- [Convenio Hostelería Girona](https://salariojusto.es/convenio-hosteleria-girona.html)
+
+## Convenios estatales
+
+- [Construcción estatal — suelo salarial](https://salariojusto.es/construccion-estatal-suelo-salarial.html)
+- [Convenio Oficinas y Despachos Valencia](https://salariojusto.es/convenio-oficinas-valencia.html)
+
+## Datos de referencia 2026
+
+- [Tramos IRPF 2026](https://salariojusto.es/tramos-irpf-2026.html): escala estatal completa
+- [Salario Mínimo Interprofesional 2026](https://salariojusto.es/salario-minimo-interprofesional-2026.html)
+
+## Sobre el proyecto
+
+- [Sobre SalarioJusto](https://salariojusto.es/sobre.html): metodología de cálculo IRPF, fuentes oficiales (BOE, REGCON, BOPs), proceso de verificación, principios del proyecto
+- [Política de privacidad](https://salariojusto.es/privacidad.html)
+- [Aviso legal](https://salariojusto.es/aviso-legal.html)
+- [Contacto](https://salariojusto.es/contacto.html)
+
+## Optional
+
+- [English version](https://salariojusto.es/en/): Spain net salary calculator with Beckham Law option for expats
+- [Mapa del sitio](https://salariojusto.es/mapa-del-sitio.html)
+- [Sitemap XML](https://salariojusto.es/sitemap.xml)
