@@ -112,6 +112,10 @@ function navHTML(activePage) {
 </header>`;
 }
 
+// REGLA · El footer global DEBE incluir siempre los enlaces legales
+// (Privacidad, Aviso legal, Contacto). Se renderizan en una segunda línea
+// discreta para no competir con la navegación principal pero accesibles
+// para cumplir requisitos LSSI/RGPD/AdSense en cualquier landing del sitio.
 function footerHTML() {
   return `
 <footer style="background:#2D2520;padding:24px 32px;text-align:center;">
@@ -124,6 +128,11 @@ function footerHTML() {
     <a href="/sobre.html" style="color:#D9A06A;text-decoration:none;">Sobre</a> ·
     <a href="/mapa-del-sitio.html" style="color:#D9A06A;text-decoration:none;">Mapa del sitio</a> ·
     <a href="/en/" style="color:#D9A06A;text-decoration:none;">English</a>
+  </p>
+  <p style="font-size:11px;color:rgba(255,255,255,0.35);line-height:1.5;margin-top:14px;">
+    <a href="/privacidad.html" style="color:rgba(255,255,255,0.55);text-decoration:none;">Privacidad</a> ·
+    <a href="/aviso-legal.html" style="color:rgba(255,255,255,0.55);text-decoration:none;">Aviso legal</a> ·
+    <a href="/contacto.html" style="color:rgba(255,255,255,0.55);text-decoration:none;">Contacto</a>
   </p>
 </footer>`;
 }
