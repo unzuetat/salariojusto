@@ -1408,6 +1408,286 @@ const BODY_DOCUMENTAR_EVIDENCIAS = `
   </script>
 `;
 
+// ── Hoja de cálculo de brecha retributiva (plantilla #8) ─────────────
+const TABLA_BRECHA_TSV = `Categoría profesional\tNº mujeres\tSalario medio mujeres (€/año bruto)\tNº hombres\tSalario medio hombres (€/año bruto)\tDiferencia H-M (€)\tBrecha (%)\t¿Supera 5%?
+Categoría A (ejemplo)\t5\t28000\t5\t32000\t=E2-C2\t=((E2-C2)/E2)*100\t=IF(G2>=5,"Sí","No")
+Categoría B (ejemplo)\t3\t24000\t7\t26000\t=E3-C3\t=((E3-C3)/E3)*100\t=IF(G3>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E4-C4\t=((E4-C4)/E4)*100\t=IF(G4>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E5-C5\t=((E5-C5)/E5)*100\t=IF(G5>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E6-C6\t=((E6-C6)/E6)*100\t=IF(G6>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E7-C7\t=((E7-C7)/E7)*100\t=IF(G7>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E8-C8\t=((E8-C8)/E8)*100\t=IF(G8>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E9-C9\t=((E9-C9)/E9)*100\t=IF(G9>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E10-C10\t=((E10-C10)/E10)*100\t=IF(G10>=5,"Sí","No")
+[TU CATEGORÍA]\t[N]\t[€]\t[N]\t[€]\t=E11-C11\t=((E11-C11)/E11)*100\t=IF(G11>=5,"Sí","No")
+`;
+
+// ── Modelo de carta para solicitar la evaluación retributiva conjunta (#8) ──
+const CARTA_EVALUACION_CONJUNTA = `[CIUDAD], [FECHA]
+
+A la atención de la Dirección de [RAZÓN SOCIAL] / Departamento de Recursos Humanos
+[DOMICILIO]
+
+Asunto: Solicitud de inicio de la evaluación retributiva conjunta (art. 10 Directiva (UE) 2023/970)
+
+Estimados/as:
+
+Mediante el presente escrito, [yo / la representación legal de las personas trabajadoras de] [RAZÓN SOCIAL], [solicito / solicitamos] formalmente el INICIO DE LA EVALUACIÓN RETRIBUTIVA CONJUNTA prevista en el artículo 10 de la Directiva (UE) 2023/970 del Parlamento Europeo y del Consejo, de 10 de mayo de 2023, sobre transparencia retributiva.
+
+ANTECEDENTES
+
+PRIMERO. Con base en el registro retributivo de la empresa correspondiente al ejercicio [AÑO] (RD 902/2020, art. 5), [hemos / he] calculado la brecha retributiva entre mujeres y hombres por categoría profesional aplicando la fórmula estándar reconocida por Eurostat, el INE y el art. 3.1.b) de la Directiva 2023/970:
+
+  Brecha (%) = ((salario medio H − salario medio M) / salario medio H) × 100
+
+SEGUNDO. El cálculo arroja una brecha igual o superior al 5 % en las siguientes categorías profesionales:
+
+  · [CATEGORÍA / GRUPO PROFESIONAL]  ·  Brecha: [X] %  ·  Plantilla: [N] mujeres + [N] hombres
+  · [CATEGORÍA / GRUPO PROFESIONAL]  ·  Brecha: [X] %  ·  Plantilla: [N] mujeres + [N] hombres
+  · [CATEGORÍA / GRUPO PROFESIONAL]  ·  Brecha: [X] %  ·  Plantilla: [N] mujeres + [N] hombres
+
+Se adjunta hoja de cálculo con el detalle por categoría y la fuente de los datos.
+
+FUNDAMENTACIÓN
+
+Conforme al artículo 10.1 de la Directiva 2023/970, "cuando la información retributiva facilitada con arreglo al artículo 9 muestre una diferencia del nivel retributivo medio entre trabajadoras y trabajadores que realicen el mismo trabajo o un trabajo de igual valor de al menos un 5 %, en una categoría determinada, que el empleador no pueda justificar sobre la base de criterios objetivos, neutros desde el punto de vista del género, y la diferencia no se haya corregido en un plazo de seis meses […], se realizará una evaluación retributiva conjunta con la representación legal de las personas trabajadoras."
+
+[SOLICITO / SOLICITAMOS]
+
+1. La justificación por escrito, para cada una de las categorías profesionales arriba relacionadas con brecha ≥ 5 %, de los criterios objetivos, neutros desde el punto de vista del género y verificables en los que se basa la diferencia retributiva.
+
+2. Si la justificación aportada no resulta válida con arreglo a esos criterios, o si la diferencia no se corrige en el plazo de seis meses previsto en el art. 10.1 de la Directiva, el INICIO FORMAL DE LA EVALUACIÓN RETRIBUTIVA CONJUNTA, con la participación de la representación legal de las personas trabajadoras y los contenidos previstos en el art. 10.2 de la Directiva: análisis por categoría, identificación de causas, medidas correctoras, plazos de aplicación y mecanismos de seguimiento.
+
+3. Acceso al detalle del registro retributivo (RD 902/2020, art. 5) y, en su caso, a la auditoría retributiva (RD 902/2020, art. 7) y al plan de igualdad inscrito en el REGCON.
+
+4. Respuesta por escrito a la dirección de correo electrónico [TU EMAIL] o a la dirección postal [TU DIRECCIÓN POSTAL] en plazo razonable.
+
+Quedo / quedamos a disposición para cualquier aclaración que consideren necesaria.
+
+Atentamente,
+
+
+
+[FIRMA]
+
+[NOMBRE Y APELLIDOS / RLPT / SECCIÓN SINDICAL]
+[NIF / IDENTIFICACIÓN]
+`;
+
+// ── Body redactado de la plantilla #8 ────────────────────────────────
+const BODY_CALCULAR_BRECHA = `
+  <h2>Para qué sirve esta plantilla</h2>
+  <p>El <strong>artículo 10 de la Directiva (UE) 2023/970</strong> establece un umbral de control: cuando, dentro de una categoría profesional, la diferencia retributiva media entre mujeres y hombres es igual o superior al <strong>5 %</strong> y la empresa no puede justificarla con criterios objetivos y neutros, la empresa está obligada a iniciar una <em>evaluación retributiva conjunta</em> con la representación legal de las personas trabajadoras. El umbral del 5 % no es decorativo: es la línea que separa una desigualdad estadística de una sospecha de discriminación retributiva indirecta que la empresa tiene que explicar o corregir.</p>
+  <p>Esta plantilla convierte ese umbral en un cálculo concreto. Te da la fórmula, la hoja modelo descargable y la guía paso a paso para medir si tu categoría profesional dentro de la empresa está o no por encima del 5 %. Si lo está, tienes un argumento cuantitativo — no una intuición — para activar la <a href="/plantilla-solicitar-informacion-salarial-rrhh.html">Plantilla 2: solicitar información salarial al departamento de RRHH</a> (RD 902/2020), la <a href="/pedir-banda-salarial-empresa-2026.html">Plantilla 1: pedir la banda salarial a tu empresa</a> (art. 7 Directiva), la <a href="/plantilla-denunciar-discriminacion-salarial.html">Plantilla 5: denunciar discriminación salarial por género</a> ante la Inspección de Trabajo, o solicitar formalmente que se active la evaluación retributiva conjunta — abajo encontrarás un modelo de carta listo para personalizar.</p>
+
+  <h2>Cuándo usar esta plantilla</h2>
+  <div class="when-box">
+    <p><strong>Cuando dispones de los datos retributivos por categoría desglosados por sexo.</strong> Esos datos te los puede facilitar (a) el registro retributivo de tu empresa si tiene 50 o más personas trabajadoras y plan de igualdad obligatorio (RD 902/2020, art. 5), (b) la representación legal de las personas trabajadoras a la que tienes acceso, o (c) la información agregada que la empresa esté obligada a publicar a partir del 7-jun-2026 conforme al art. 9 de la Directiva. Si todavía no los tienes, la <a href="/plantilla-solicitar-informacion-salarial-rrhh.html">Plantilla 2: solicitar información salarial al departamento de RRHH</a> (vía RD 902/2020) es el paso previo natural para obtenerlos.</p>
+  </div>
+
+  <h2>Antes de empezar, ten claro…</h2>
+  <ul>
+    <li><strong>El nombre de <a href="/convenios.html">tu convenio colectivo</a></strong> y los grupos profesionales o niveles que define para tu empresa. La Directiva exige comparar dentro de "categorías de personas trabajadoras que realizan el mismo trabajo o un trabajo de igual valor": las categorías del convenio son el primer marco natural. Si no lo tienes localizado, en nuestro <a href="/convenios.html">verificador de convenios</a> tienes acceso indexable a 19 convenios oficiales (limpieza, hostelería, oficinas, construcción) con sus tablas salariales por grupo y nivel.</li>
+    <li><strong>El tamaño de la empresa</strong>. Las obligaciones de información cambian: ≥ 250 personas (informe público anual desde 2027), 150-249 (cada tres años desde 2027), 100-149 (cada tres años desde 2031), 50-99 (sin obligación de informe público pero sí de registro retributivo y plan de igualdad).</li>
+    <li><strong>Si la empresa tiene plan de igualdad obligatorio</strong> (≥ 50 personas, RD 901/2020). Si lo tiene, está depositado en el <a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener">REGCON</a> y puede ser consultable.</li>
+    <li><strong>Tus datos retributivos personales</strong> (nóminas + variables anuales) por si necesitas comprobar tu posición individual frente a la media calculada.</li>
+    <li><strong>Una hoja de cálculo abierta</strong> (Excel, Google Sheets, Numbers, LibreOffice). El modelo que ofrecemos abajo está pensado para pegarse y empezar a calcular.</li>
+  </ul>
+
+  <h2>Qué es exactamente la "brecha" y por qué el umbral es 5 %</h2>
+  <p>La brecha salarial es la diferencia porcentual entre la <strong>retribución total media de los hombres y la de las mujeres</strong> dentro de una misma unidad de comparación. La fórmula estándar — la que utiliza Eurostat, el INE y la propia Directiva — es:</p>
+  <p style="text-align:center;font-family:'Courier New',Courier,monospace;font-size:14px;background:var(--cream-100);border:1px solid var(--cream-200);padding:14px 18px;margin:6px 0 24px;color:var(--ink);">
+    Brecha (%) = ((Salario medio H − Salario medio M) / Salario medio H) × 100
+  </p>
+  <p>El denominador es el salario medio de los hombres porque es la referencia respecto a la que se mide cuánto cobran <em>menos</em> las mujeres en términos relativos. Si te sale negativa, significa que en esa categoría las mujeres cobran más que los hombres (situación posible pero estadísticamente minoritaria).</p>
+  <p>El umbral del 5 % proviene del <a href="${LEY.directiva2023_970}" target="_blank" rel="noopener">art. 10.1 de la Directiva 2023/970</a>: cuando la información retributiva muestra una diferencia de al menos un 5 % en una categoría de personas trabajadoras y la empresa no la justifica con criterios objetivos, neutros y verificables en un plazo de seis meses, debe iniciarse <em>de oficio</em> la evaluación retributiva conjunta. La evaluación implica abrir el detalle por categoría, identificar las causas, fijar medidas correctoras, plazos y mecanismos de seguimiento — todo ello con la representación legal de las personas trabajadoras.</p>
+
+  <h2>Cómo calcular la brecha paso a paso</h2>
+  <ol>
+    <li><strong>Define la unidad de comparación.</strong> Lo más limpio es categoría profesional del convenio (Grupo II – Nivel 3, por ejemplo). Si trabajas en una empresa que ha hecho su propia valoración de puestos (RD 902/2020, art. 4), usa ese marco; en su defecto, usa los grupos del convenio.</li>
+    <li><strong>Reúne los datos por categoría</strong>: para cada una, número de mujeres y de hombres y la <em>retribución total media anual</em> de cada grupo. La retribución total incluye salario base + complementos + variables + retribuciones en especie (la propia Directiva especifica que se cuenta toda la retribución, no sólo el salario base).</li>
+    <li><strong>Aplica la fórmula</strong> a cada categoría: <code>brecha = ((H − M) / H) × 100</code>. Una hoja de cálculo lo hace por ti — la plantilla TSV de abajo trae las fórmulas listas en las columnas F, G y H.</li>
+    <li><strong>Marca las categorías que superan el 5 %.</strong> Para esas, anota qué proporción de la plantilla de la categoría representan: si una categoría con brecha del 12 % tiene 4 personas (2 H + 2 M), la muestra es muy pequeña; si tiene 40 personas, la cifra es robusta.</li>
+    <li><strong>Pide a la empresa la justificación</strong> de la diferencia para cada categoría con brecha ≥ 5 %. Esa solicitud — y la respuesta o falta de respuesta — es ya la base de una reclamación posterior si las explicaciones no cumplen el criterio de "objetivas, neutras y verificables".</li>
+  </ol>
+
+  <h2>Hoja de cálculo modelo</h2>
+  <p>Abajo tienes dos cosas: una <strong>tabla visual</strong> con tres categorías de ejemplo ya calculadas, y un bloque <strong>TSV listo para copiar</strong> a Excel, Google Sheets, Numbers o LibreOffice. El TSV ya incluye las fórmulas de las columnas F (diferencia), G (brecha %) y H (¿supera 5 %?), de modo que al pegarlo se autocompletan según escribes los datos.</p>
+
+  <div class="evidence-table-wrap">
+    <table class="evidence-table">
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Nº M</th>
+          <th>Salario medio M</th>
+          <th>Nº H</th>
+          <th>Salario medio H</th>
+          <th>Diferencia</th>
+          <th>Brecha %</th>
+          <th>¿Supera 5%?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Categoría A</td>
+          <td>5</td>
+          <td>28.000 €</td>
+          <td>5</td>
+          <td>32.000 €</td>
+          <td>4.000 €</td>
+          <td>12,5 %</td>
+          <td><strong>Sí</strong></td>
+        </tr>
+        <tr>
+          <td>Categoría B</td>
+          <td>3</td>
+          <td>24.000 €</td>
+          <td>7</td>
+          <td>26.000 €</td>
+          <td>2.000 €</td>
+          <td>7,7 %</td>
+          <td><strong>Sí</strong></td>
+        </tr>
+        <tr>
+          <td>Categoría C</td>
+          <td>4</td>
+          <td>35.000 €</td>
+          <td>4</td>
+          <td>36.000 €</td>
+          <td>1.000 €</td>
+          <td>2,8 %</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Bloque TSV con cabecera + 2 filas de ejemplo + 8 filas en blanco con fórmulas pre-cargadas:</p>
+
+  <div class="template-text-wrap">
+    <div class="template-actions">
+      <button type="button" class="btn-copy" data-target="template-text">Copiar para Excel/Sheets</button>
+      <button type="button" class="btn-download" data-target="template-text" data-filename="hoja-calculo-brecha-salarial.tsv">Descargar como .tsv</button>
+    </div>
+    <div id="template-text" class="template-text">${formatCarta(TABLA_BRECHA_TSV)}</div>
+  </div>
+
+  <div class="warning-box">
+    <h3>⚠ Ojo con el idioma de las fórmulas</h3>
+    <p>Las fórmulas usan <code>IF</code> en inglés. Funcionan tal cual en <strong>Google Sheets</strong>, <strong>Numbers</strong> y <strong>Excel en inglés</strong>. Si tu Excel está en español, sustituye <code>IF</code> por <code>SI</code> manualmente o copia las celdas a Google Sheets, que acepta ambas formas.</p>
+  </div>
+
+  <h2>Cómo interpretar el resultado</h2>
+  <p>Tres escenarios posibles:</p>
+  <ul>
+    <li><strong>Brecha &lt; 5 % en todas las categorías relevantes.</strong> No hay obligación de evaluación retributiva conjunta. Eso no significa que no exista discriminación retributiva en casos individuales — significa que el agregado no la dispara. Conviene cruzar la cifra con tu posición personal: si tú estás dentro de una categoría con brecha baja pero tu salario es claramente inferior al de tu comparador, el camino sigue siendo la <a href="/pedir-banda-salarial-empresa-2026.html">Plantilla 1</a> o la <a href="/plantilla-reclamar-trabajo-igual-valor.html">Plantilla 9</a>.</li>
+    <li><strong>Brecha ≥ 5 % en una o varias categorías, sin justificación objetiva conocida.</strong> Activa el supuesto del art. 10 Directiva: la empresa debería iniciar la evaluación retributiva conjunta. Si la empresa no la inicia tras seis meses desde que la información sale a la luz, esa inacción puede ser denunciada ante la Inspección de Trabajo. Aporta tu hoja calculada y la fuente de los datos.</li>
+    <li><strong>Brecha ≥ 5 % con justificación que tu análisis considera insuficiente.</strong> Pide por escrito el detalle de los criterios objetivos, neutros y verificables en los que se apoya la diferencia. La carga de probar que esos criterios existen y son neutros recae sobre la empresa (art. 18 Directiva 2023/970). La <a href="/plantilla-solicitar-informacion-salarial-rrhh.html">Plantilla 2: solicitar información salarial al departamento de RRHH</a> (RD 902/2020) es la herramienta para esa solicitud.</li>
+  </ul>
+
+  <h2>Qué hacer con el resultado</h2>
+  <ol>
+    <li><strong>Si la brecha es ≥ 5 % y procede la evaluación retributiva conjunta</strong>, solicita por escrito a la empresa que la inicie en los términos del art. 10 Directiva 2023/970. Si hay representación legal de las personas trabajadoras, plantea la solicitud a través de ella.</li>
+    <li><strong>Si la empresa rechaza la solicitud o no responde</strong> en plazo razonable, la vía es la denuncia ante la Inspección Provincial de Trabajo y Seguridad Social — usa la <a href="/plantilla-denunciar-discriminacion-salarial.html">Plantilla 5: denunciar discriminación salarial por género</a> aportando tu hoja de cálculo como anexo cuantitativo.</li>
+    <li><strong>Si tu situación individual es además injusta</strong>, combina este cálculo con la <a href="/pedir-banda-salarial-empresa-2026.html">Plantilla 1</a> (banda salarial individual, art. 7 Directiva) y, si procede, con la <a href="/plantilla-reclamar-trabajo-igual-valor.html">Plantilla 9</a> (trabajo de igual valor).</li>
+    <li><strong>Si quieres preparar terreno antes de mover ficha</strong>, archiva las cifras y las fuentes en la <a href="/plantilla-documentar-evidencias-desigualdad-salarial.html">Plantilla 7: documentar evidencias de desigualdad salarial</a> (tabla maestra de evidencias).</li>
+  </ol>
+
+  <h2>Modelo de carta — solicitar la evaluación retributiva conjunta</h2>
+  <p>Si tu cálculo arroja una brecha igual o superior al 5 % en una o varias categorías, este es el escrito a remitir a la dirección de la empresa para activar formalmente el supuesto del art. 10.1 Directiva 2023/970. Personalízalo con los datos extraídos de tu hoja de cálculo (categorías, brechas, plantilla por sexo) y envíalo con prueba de recepción — la fecha de entrega es la que activa el cómputo del plazo de seis meses.</p>
+
+  <div class="template-text-wrap">
+    <div class="template-actions">
+      <button type="button" class="btn-copy" data-target="template-carta-evaluacion">Copiar al portapapeles</button>
+      <button type="button" class="btn-download" data-target="template-carta-evaluacion" data-filename="solicitud-evaluacion-retributiva-conjunta.txt">Descargar como .txt</button>
+    </div>
+    <div id="template-carta-evaluacion" class="template-text">${formatCarta(CARTA_EVALUACION_CONJUNTA)}</div>
+  </div>
+
+  <p>Vías de envío con prueba de recepción (cualquiera de ellas vale para activar el plazo del art. 10.1):</p>
+  <ul>
+    <li><strong>Burofax con acuse de recibo y certificación de contenido</strong> (Correos). 25-40 €. Es la opción más sólida ante un eventual juicio.</li>
+    <li><strong>Correo electrónico</strong> a la cuenta corporativa de Dirección/RRHH solicitando confirmación de lectura. Adjunta carta firmada en PDF + hoja de cálculo de la brecha.</li>
+    <li><strong>Registro de entrada presencial</strong> en las oficinas de la empresa, con dos copias y sello de fecha y firma en la tuya.</li>
+    <li><strong>A través de la representación legal de las personas trabajadoras</strong> (delegados, comité, sección sindical) si existe — es la vía más eficaz porque la solicitud colectiva tiene mayor peso jurídico que la individual.</li>
+  </ul>
+
+  <h2>Marco legal aplicable</h2>
+
+  <div class="legal-box">
+    <p class="legal-title">Citas literales y enlaces verificables</p>
+    <ul>
+      <li><a href="${LEY.directiva2023_970}" target="_blank" rel="noopener"><strong>Art. 9 Directiva 2023/970</strong></a> — Información sobre la brecha retributiva entre trabajadores y trabajadoras: los empleadores facilitarán información sobre la brecha retributiva entre trabajadoras y trabajadores en su organización, calculada conforme a las definiciones del art. 3, y desglosada por categorías de personas trabajadoras que realicen el mismo trabajo o un trabajo de igual valor.</li>
+      <li><a href="${LEY.directiva2023_970}" target="_blank" rel="noopener"><strong>Art. 10.1 Directiva 2023/970</strong></a> — Cuando la información retributiva facilitada con arreglo al art. 9 muestre una diferencia del nivel retributivo medio entre trabajadoras y trabajadores que realicen el mismo trabajo o un trabajo de igual valor de al menos un 5 %, en una categoría determinada, que el empleador no pueda justificar sobre la base de criterios objetivos, neutros desde el punto de vista del género, y la diferencia no se haya corregido en un plazo de seis meses, se realizará una evaluación retributiva conjunta con la representación legal de las personas trabajadoras.</li>
+      <li><a href="${LEY.directiva2023_970}" target="_blank" rel="noopener"><strong>Art. 18.1 Directiva 2023/970</strong></a> — Cuando los trabajadores que se consideren perjudicados por el incumplimiento del principio de igualdad de retribución demuestren ante un juzgado u otra autoridad competente hechos a partir de los cuales pueda presumirse que ha existido discriminación, los Estados miembros velarán por que recaiga sobre el empleador la carga de probar que no se ha producido discriminación directa o indirecta en la retribución.</li>
+      <li><a href="${LEY.rd902_2020}" target="_blank" rel="noopener"><strong>Art. 5 RD 902/2020</strong></a> — Registro retributivo: incluirá los valores medios de los salarios, los complementos salariales y las percepciones extrasalariales de la plantilla, desagregados por sexo y distribuidos por grupos profesionales, categorías profesionales o puestos de trabajo iguales o de igual valor.</li>
+      <li><a href="${LEY.rd902_2020}" target="_blank" rel="noopener"><strong>Art. 7 RD 902/2020</strong></a> — Auditoría retributiva: las empresas con plan de igualdad obligatorio realizarán una auditoría retributiva con diagnóstico, plan de actuación y vigencia equivalente al plan.</li>
+      <li><a href="${LEY.et}" target="_blank" rel="noopener"><strong>Art. 28 ET</strong></a> — Igualdad de remuneración por razón de sexo y obligación de llevar registro retributivo.</li>
+    </ul>
+  </div>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="faq-mini">
+    <p class="faq-q">¿La brecha del 5 % se mide sobre el salario base o sobre la retribución total?</p>
+    <p class="faq-a">Sobre la <strong>retribución total</strong>. El art. 3.1.b de la Directiva 2023/970 define "retribución" en sentido amplio: incluye el sueldo o salario base, así como cualquier otra contraprestación, en dinero o en especie, que el trabajador reciba directa o indirectamente del empleador en razón de su empleo. Eso significa que para el cálculo del umbral del 5 % entran salario base, complementos, variables (bonus, comisiones), retribución en especie (coche, móvil, seguro), aportaciones a planes de pensiones y cualquier otro extra. Si calculas sólo sobre salario base, puedes estar minusvalorando una brecha real.</p>
+  </div>
+
+  <div class="faq-mini">
+    <p class="faq-q">¿Qué pasa si en mi empresa hay categorías con muy pocas personas? ¿La cifra es fiable?</p>
+    <p class="faq-a">La Directiva no fija un mínimo de muestra, pero la propia <a href="${LEY.rd902_2020}" target="_blank" rel="noopener">guía técnica del Ministerio de Trabajo para el registro retributivo (RD 902/2020)</a> recomienda que cuando una categoría tenga menos de cuatro personas de cada sexo, la cifra se trate con cautela y se cruce con la categoría adyacente. Eso no significa que se ignore — significa que conviene presentar la brecha junto con el tamaño muestral cuando se reclama, para evitar que la empresa argumente que un porcentaje sobre 2 + 2 personas no es representativo.</p>
+  </div>
+
+  <div class="faq-mini">
+    <p class="faq-q">¿Y si la empresa alega que la diferencia se debe a la antigüedad o al desempeño?</p>
+    <p class="faq-a">Pueden ser justificaciones válidas, pero deben cumplir el test del art. 10.1 Directiva: <em>criterios objetivos, neutros desde el punto de vista del género</em>. Si la empresa premia la antigüedad y resulta que los hombres llevan más tiempo porque la empresa nunca contrató mujeres en esa categoría hasta hace cinco años, la antigüedad es una variable correlacionada con sexo y no neutra. Lo mismo aplica al desempeño: si los criterios de evaluación favorecen disponibilidad horaria sin considerar carreras profesionales atravesadas por permisos por maternidad, no son neutros. Pide por escrito los criterios y cómo se aplican y guarda la respuesta.</p>
+  </div>
+
+  <div class="faq-mini">
+    <p class="faq-q">Mi empresa no tiene 50 personas. ¿Sigue siendo aplicable el umbral del 5 %?</p>
+    <p class="faq-a">El umbral del 5 % del art. 10 Directiva está pensado para las empresas obligadas a publicar información retributiva (las del art. 9, que son ≥ 100 personas con calendario escalonado). Para empresas más pequeñas, el cálculo sigue siendo útil como diagnóstico interno y como argumentación para una reclamación individual de igualdad retributiva (art. 28 ET, art. 17 ET o art. 4 Directiva 2023/970, según el caso), pero no activa automáticamente la obligación de evaluación retributiva conjunta. Si tu empresa tiene 50-99 personas, sí debe tener registro retributivo y plan de igualdad obligatorios — usa la <a href="/plantilla-solicitar-informacion-salarial-rrhh.html">Plantilla 2: solicitar información salarial al departamento de RRHH</a> (RD 902/2020) para acceder a esos datos.</p>
+  </div>
+
+  <div class="faq-mini">
+    <p class="faq-q">¿Quién entra en cada categoría profesional? ¿Lo decide la empresa?</p>
+    <p class="faq-a">El <a href="/convenios.html">convenio colectivo</a> define los grupos profesionales y la empresa los aplica al asignar a cada persona su grupo o nivel. Esa asignación tiene que estar basada en las funciones reales (art. 22 ET), no en una clasificación arbitraria. Si sospechas que una categoría está construida para "ocultar" a las mujeres en grupos infrarretribuidos pese a que hacen funciones de un grupo superior, ese es ya un indicio de discriminación retributiva indirecta — y la <a href="/plantilla-reclamar-grupo-profesional-superior.html">Plantilla 3: reclamar el grupo profesional superior</a> es la respuesta individual; el cálculo agregado del 5 %, la respuesta colectiva.</p>
+  </div>
+
+  <div class="faq-mini">
+    <p class="faq-q">¿Cuándo entra en vigor la obligación del 5 %?</p>
+    <p class="faq-a">La Directiva 2023/970 debía ser transpuesta antes del 7-jun-2026 — esa es la fecha clave para que sus disposiciones sean exigibles en España. La obligación de informar la brecha (art. 9) entra en vigor escalonadamente: empresas ≥ 250 personas deben publicar el primer informe en 2027 (con datos del año natural anterior); 150-249 personas, también en 2027; 100-149, en 2031; 50-99, sin obligación de informe público pero con registro retributivo y plan de igualdad. La obligación de evaluación retributiva conjunta cuando la brecha supera el 5 % (art. 10) se aplica desde el momento en que la información del art. 9 esté disponible en la empresa correspondiente.</p>
+  </div>
+
+  <script>
+    document.querySelectorAll('.btn-copy').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        const text = target.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.textContent;
+          btn.textContent = 'Copiado';
+          btn.classList.add('btn-success');
+          setTimeout(() => { btn.textContent = orig; btn.classList.remove('btn-success'); }, 1800);
+        }).catch(() => alert('No se pudo copiar. Selecciona el texto manualmente.'));
+      });
+    });
+    document.querySelectorAll('.btn-download').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        const text = target.innerText;
+        const filename = btn.dataset.filename || 'plantilla.txt';
+        const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = filename;
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    });
+  </script>
+`;
+
 // ── Plantillas del Kit (SSOT) ────────────────────────────────────────
 const PLANTILLAS = [
   {
@@ -1526,14 +1806,19 @@ const PLANTILLAS = [
     slug: 'plantilla-calcular-brecha-salarial-empresa',
     title: 'Plantilla para calcular la brecha salarial en tu empresa (umbral del 5%)',
     h1: 'Plantilla para calcular la brecha salarial en tu empresa',
-    metaDescription: 'Hoja de cálculo + guía paso a paso para medir si la brecha entre mujeres y hombres en tu empresa supera el 5% — el umbral que activa la evaluación retributiva conjunta.',
+    metaDescription: 'Hoja de cálculo TSV con fórmulas pre-cargadas + guía paso a paso para medir si la brecha entre mujeres y hombres en tu empresa supera el 5 % — el umbral que activa la evaluación retributiva conjunta (art. 10 Directiva UE 2023/970).',
     breadcrumb: 'Calcular la brecha salarial',
     hook: 'Quieres medir si la brecha entre mujeres y hombres de tu misma categoría supera el 5% sin justificación objetiva — el umbral que activa la evaluación retributiva conjunta obligatoria. Hoja de cálculo + guía paso a paso para hacerlo con los datos que tu empresa está obligada a darte.',
     legal: [
+      { text: 'Directiva (UE) 2023/970 — artículo 3 (Definiciones: retribución total)', href: LEY.directiva2023_970 },
       { text: 'Directiva (UE) 2023/970 — artículo 9 (Información sobre la brecha retributiva entre trabajadores y trabajadoras)', href: LEY.directiva2023_970 },
       { text: 'Directiva (UE) 2023/970 — artículo 10 (Evaluación retributiva conjunta · umbral del 5 %)', href: LEY.directiva2023_970 },
-      { text: 'Real Decreto 902/2020 — auditoría retributiva (artículo 7)', href: LEY.rd902_2020 },
+      { text: 'Directiva (UE) 2023/970 — artículo 18 (Inversión de la carga de la prueba)', href: LEY.directiva2023_970 },
+      { text: 'Real Decreto 902/2020 — artículo 5 (Registro retributivo)', href: LEY.rd902_2020 },
+      { text: 'Real Decreto 902/2020 — artículo 7 (Auditoría retributiva)', href: LEY.rd902_2020 },
+      { text: 'Estatuto de los Trabajadores — artículo 28 (igualdad de remuneración por razón de sexo)', href: LEY.et },
     ],
+    body: BODY_CALCULAR_BRECHA,
   },
   {
     num: 9,
