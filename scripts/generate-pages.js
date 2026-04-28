@@ -11,6 +11,7 @@ const path = require('path');
 const { calcNet, calcDetailed } = require('../lib/irpf2026');
 const { escalaParaCiudad, datosCcaa, ccaaDeCiudad } = require('../lib/irpf-autonomico');
 const generateConvenios = require('./generate-convenios');
+const generatePlantillas = require('./generate-plantillas');
 
 const ROOT = path.join(__dirname, '..');
 
@@ -981,7 +982,7 @@ ${footerHTML()}
 }
 
 // ── Generar sitemap ────────────────────────────────────────────────
-function generateSitemap(pages, convenios = []) {
+function generateSitemap(pages, convenios = [], plantillas = [], plantillasHubUrl = null) {
   const existingPages = [
     { url: 'https://salariojusto.es/', priority: '1.00', freq: 'weekly', hreflang: [{ lang: 'es', href: 'https://salariojusto.es/' }, { lang: 'en', href: 'https://salariojusto.es/en/' }] },
     { url: 'https://salariojusto.es/en/', priority: '0.90', freq: 'weekly', hreflang: [{ lang: 'es', href: 'https://salariojusto.es/' }, { lang: 'en', href: 'https://salariojusto.es/en/' }] },
@@ -1010,6 +1011,14 @@ function generateSitemap(pages, convenios = []) {
     // Skip construccion-estatal-* which is already above
     if (c.href === '/construccion-estatal-suelo-salarial.html') return;
     existingPages.push({ url: `https://salariojusto.es${c.href}`, priority: '0.80', freq: 'monthly' });
+  });
+
+  // Add Kit hub + plantillas
+  if (plantillasHubUrl) {
+    existingPages.push({ url: `https://salariojusto.es${plantillasHubUrl}`, priority: '0.85', freq: 'weekly' });
+  }
+  plantillas.forEach(p => {
+    existingPages.push({ url: `https://salariojusto.es/${p.slug}.html`, priority: '0.75', freq: 'monthly' });
   });
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -1073,6 +1082,10 @@ function main() {
   console.log('\nGenerating convenio landings...');
   const convenios = generateConvenios.main();
 
+  // Generate Kit del trabajador plantillas
+  console.log('\nGenerating Kit plantillas...');
+  const plantillas = generatePlantillas.main();
+
   // Generate /mapa-del-sitio.html (human-readable sitemap)
   console.log('\nGenerating /mapa-del-sitio.html...');
   const siteMapPage = generateSiteMapHTML(salaryPages, convenios);
@@ -1081,9 +1094,9 @@ function main() {
 
   // Generate sitemap
   console.log('\nGenerating sitemap.xml...');
-  const sitemap = generateSitemap(salaryPages, convenios);
+  const sitemap = generateSitemap(salaryPages, convenios, plantillas, generatePlantillas.HUB_URL);
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
-  const totalUrls = salaryPages.length + 13 + convenios.filter(c => c.href !== '/construccion-estatal-suelo-salarial.html').length;
+  const totalUrls = salaryPages.length + 13 + convenios.filter(c => c.href !== '/construccion-estatal-suelo-salarial.html').length + 1 + plantillas.length;
   console.log(`  ✓ sitemap.xml (${totalUrls} URLs)`);
 
   console.log(`\nDone!`);

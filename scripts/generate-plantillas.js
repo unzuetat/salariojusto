@@ -2395,8 +2395,9 @@ function main() {
     written++;
   }
   console.log(`\n${written} plantilla${written === 1 ? '' : 's'} generada${written === 1 ? '' : 's'}.`);
+  return PLANTILLAS;
 }
 
 if (require.main === module) main();
 
-module.exports = { PLANTILLAS, render };
+module.exports = { PLANTILLAS, render, main, HUB_URL };
