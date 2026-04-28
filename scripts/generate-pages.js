@@ -998,6 +998,7 @@ function generateSitemap(pages, convenios = [], plantillas = [], plantillasHubUr
     { url: 'https://salariojusto.es/salarios.html', priority: '0.90', freq: 'weekly' },
     { url: 'https://salariojusto.es/convenios.html', priority: '0.90', freq: 'weekly' },
     { url: 'https://salariojusto.es/sobre.html', priority: '0.70', freq: 'monthly' },
+    { url: 'https://salariojusto.es/sala-de-prensa.html', priority: '0.70', freq: 'monthly' },
     { url: 'https://salariojusto.es/mapa-del-sitio.html', priority: '0.60', freq: 'weekly' },
   ];
 
@@ -1096,7 +1097,7 @@ function main() {
   console.log('\nGenerating sitemap.xml...');
   const sitemap = generateSitemap(salaryPages, convenios, plantillas, generatePlantillas.HUB_URL);
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap, 'utf8');
-  const totalUrls = salaryPages.length + 13 + convenios.filter(c => c.href !== '/construccion-estatal-suelo-salarial.html').length + 1 + plantillas.length;
+  const totalUrls = salaryPages.length + 14 + convenios.filter(c => c.href !== '/construccion-estatal-suelo-salarial.html').length + 1 + plantillas.length;
   console.log(`  ✓ sitemap.xml (${totalUrls} URLs)`);
 
   console.log(`\nDone!`);
