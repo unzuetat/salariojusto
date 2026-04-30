@@ -2445,14 +2445,18 @@
     .btn-calc-v2:hover{background:var(--gold-dark);transform:translateY(-1px);box-shadow:0 4px 14px rgba(193,123,62,0.35);}
     .resultado-v2{margin-top:26px;padding-top:24px;border-top:1px solid var(--cream-200);display:none;}
     .resultado-v2.visible{display:block;}
-    .neto-hero{padding:36px 24px 30px;background:var(--ink);color:#fff;text-align:center;margin-bottom:18px;border:1px solid var(--ink);}
-    .neto-hero-lbl{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:18px;}
-    .neto-hero-val{font-family:'DM Serif Display',serif;font-size:clamp(46px,9vw,76px);line-height:1;color:#fff;font-weight:400;letter-spacing:-0.01em;}
-    .neto-hero-val .euro{font-size:0.42em;color:var(--gold-light);vertical-align:0.55em;margin-left:0.08em;font-weight:400;}
-    .neto-hero-sub{font-size:14px;color:rgba(255,255,255,0.7);margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.12);}
-    .neto-hero-sub strong{font-family:'DM Serif Display',serif;font-size:22px;font-weight:400;color:var(--gold-light);margin:0 4px;}
-    .meta-row-v2,.meta-row{display:flex;gap:18px;font-size:12px;color:var(--ink-lighter);padding:6px 0 14px;justify-content:center;flex-wrap:wrap;}
-    .meta-row-v2 span strong,.meta-row span strong{color:var(--ink);font-family:'IBM Plex Mono',monospace;font-weight:500;}
+    .neto-box{display:grid;grid-template-columns:1fr 1.5fr;gap:14px;margin-bottom:18px;align-items:stretch;}
+    @media(max-width:560px){.neto-box{grid-template-columns:1fr;}}
+    .neto-cell{padding:18px 20px;background:var(--cream-50);border:1px solid var(--cream-200);display:flex;flex-direction:column;justify-content:center;}
+    .neto-cell.primary{background:var(--cream-100);border-left:3px solid var(--gold);padding:24px 26px;}
+    .neto-cell.primary .neto-val{font-size:46px;color:var(--ink);}
+    .neto-cell.primary .neto-val .currency{font-size:24px;}
+    .neto-lbl{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-light);margin-bottom:6px;}
+    .neto-val{font-family:'DM Serif Display',serif;font-size:24px;line-height:1;color:var(--ink-light);font-weight:400;}
+    .neto-val .currency{font-size:14px;color:var(--gold);margin-left:4px;}
+    @media(max-width:560px){.neto-cell.primary .neto-val{font-size:40px;}}
+    .meta-row-v2{display:flex;gap:20px;font-size:12px;color:var(--ink-light);padding:10px 0 14px;border-bottom:1px solid var(--cream-100);margin-bottom:12px;flex-wrap:wrap;}
+    .meta-row-v2 span strong{color:var(--ink);font-family:'IBM Plex Mono',monospace;font-weight:500;}
     .meta-row-v2{display:flex;gap:20px;font-size:12px;color:var(--ink-light);padding:10px 0 14px;border-bottom:1px solid var(--cream-100);margin-bottom:12px;flex-wrap:wrap;}
     .meta-row-v2 span strong{color:var(--ink);font-family:'IBM Plex Mono',monospace;font-weight:500;}
     .disclaimer-v2{font-size:12px;color:var(--ink-lighter);line-height:1.6;padding:12px 0 18px;font-style:italic;}
@@ -2547,11 +2551,14 @@
       <button class="btn-calc-v2" id="btnCalcular" type="button">Calcular mi neto →</button>
 
       <div class="resultado-v2" id="resultadoV2">
-        <div class="neto-hero">
-          <div class="neto-hero-lbl">Tu salario neto anual</div>
-          <div class="neto-hero-val" id="netoAnual">— <span class="euro">€</span></div>
-          <div class="neto-hero-sub">
-            <strong id="netoMensual">—</strong> € al mes <span style="opacity:0.55;">·</span> <span id="pagasLbl">14</span> pagas
+        <div class="neto-box">
+          <div class="neto-cell">
+            <div class="neto-lbl">Neto anual</div>
+            <div class="neto-val" id="netoAnual">— <span class="currency">€</span></div>
+          </div>
+          <div class="neto-cell primary">
+            <div class="neto-lbl">Neto mensual (<span id="pagasLbl">14</span> pagas)</div>
+            <div class="neto-val" id="netoMensual">— <span class="currency">€</span></div>
           </div>
         </div>
 
@@ -2714,8 +2721,8 @@
     if(!bruto || bruto < 0){ document.getElementById('bruto').focus(); return; }
     const r = calcNetV2(bruto, 'single', '0', '0', '0', '0', '0', 'no', String(pagasV2), 1985, 'ACTIVO', 'NINGUNA', false, null);
     netoSimpleVal = r.net;
-    document.getElementById('netoAnual').innerHTML = fmtV2(r.net) + ' <span class="euro">€</span>';
-    document.getElementById('netoMensual').textContent = fmtV2(Math.round(r.net / pagasV2));
+    document.getElementById('netoAnual').innerHTML = fmtV2(r.net) + ' <span class="currency">€</span>';
+    document.getElementById('netoMensual').innerHTML = fmtV2(Math.round(r.net / pagasV2)) + ' <span class="currency">€</span>';
     document.getElementById('pagasLbl').textContent = pagasV2;
     document.getElementById('metaIrpf').textContent = fmtV2(r.irpf);
     document.getElementById('metaSs').textContent = fmtV2(r.ss);
@@ -2896,284 +2903,6 @@
 
   </div>
 </div>
-    
-    <button class="btn-calc" onclick="calculate()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-      </svg>
-      Calcular salario neto
-    </button>
-  </div>
-
-  <!-- RESULTS -->
-  <div id="results">
-
-    <!-- HERO RESULT -->
-    <div class="result-hero">
-      <div>
-        <div class="result-main-label">Tu salario neto mensual estimado</div>
-        <div class="result-main-value" id="netMonthly">—</div>
-        <div class="result-main-sub" id="netAnnual">— netos anuales</div>
-      </div>
-      <div class="result-badge">
-        <div class="result-badge-pct" id="percentileVal">—</div>
-        <div class="result-badge-label">Percentil en tu profesión</div>
-      </div>
-    </div>
-
-    <!-- DISCLAIMER ESCALA ESTATAL VS AUTONÓMICA -->
-    <div style="background:var(--cream-50); border:1px solid var(--cream-200); border-radius:6px; padding:12px 16px; margin-bottom:20px; font-size:12px; color:var(--ink-lighter); line-height:1.55;">
-      Cálculo con la <strong style="color:var(--ink-light);">escala estatal agregada del IRPF 2026</strong>. Cada Comunidad Autónoma aplica su propia escala, por lo que tu neto real puede variar unos cientos de euros al año. Para la fiscalidad exacta de tu comunidad, consulta la <a href="/salarios.html" style="color:var(--ink-light); text-decoration:underline;">landing de tu ciudad</a>.
-    </div>
-
-    <!-- CTA POST-RESULTADO: tu bruto + convenio + Kit del trabajador -->
-    <div class="result-hook" id="resultHook">
-      <div class="result-hook-text">
-        <div class="result-hook-label">Tu siguiente paso</div>
-        <p class="result-hook-headline">
-          Tu salario bruto es <strong id="resultHookGross">—</strong> al año.
-          ¿Te están pagando al menos lo que marca tu convenio colectivo?
-        </p>
-      </div>
-      <div class="result-hook-actions">
-        <a href="/convenios.html" class="result-hook-btn">Buscar mi convenio →</a>
-        <a href="/plantillas-transparencia-retributiva-2026.html" class="result-hook-btn secondary">Ver el Kit del trabajador</a>
-      </div>
-    </div>
-
-    <!-- AVISO PROFESIÓN GENÉRICA -->
-    <div id="genericNotice" style="display:none; background:var(--amber-bg); border:1px solid #FDE68A; border-left:4px solid var(--amber); padding:14px 20px; margin-bottom:20px; font-size:13px; color:var(--ink-light); line-height:1.6;">
-      <strong style="color:var(--amber);">Nota sobre los rangos mostrados.</strong>
-      No hemos encontrado datos específicos para "<span id="genericProfLabel"></span>" en nuestra base de referencia. Los percentiles y rangos se calculan sobre la <strong>media general del mercado laboral español</strong>. Para datos precisos de tu sector, consulta las fuentes institucionales al final de esta página.
-    </div>
-
-    <!-- STATUS -->
-    <div class="status-card" id="statusCard">
-      <div class="status-icon" id="statusIcon"></div>
-      <div>
-        <div class="status-title" id="statusTitle"></div>
-        <div class="status-desc" id="statusDesc"></div>
-      </div>
-    </div>
-
-    <!-- RANGE BAR -->
-    <div class="range-card">
-      <div class="range-title">Rango salarial por ciudad — <span id="rangeTitle">Tu zona</span></div>
-      <div class="city-selector" id="citySelectorBtns"></div>
-      <div class="range-bar-wrap">
-        <div class="range-bar-track">
-          <div class="range-bar-fill" id="rangeBarFill"></div>
-          <div class="range-bar-marker" id="rangeBarMarker"></div>
-        </div>
-      </div>
-      <div class="range-labels">
-        <div><span id="rangeMin">—</span><br>Mínimo</div>
-        <div style="text-align:center"><span id="rangeMed">—</span><br>Mediana</div>
-        <div style="text-align:right"><span id="rangeMax">—</span><br>Máximo</div>
-      </div>
-    </div>
-
-    <!-- CITY SALARY RANKING -->
-    <div class="range-card" id="cityRankingCard">
-      <div class="range-title">Ranking salarial por ciudad — <span id="rankingProfTitle">tu profesión</span></div>
-      <div id="cityRankingList" style="margin-top:16px;"></div>
-    </div>
-
-    <!-- ACCORDION 1: Stats by region -->
-    <div class="accordion" id="accordion1">
-      <button class="accordion-header" onclick="toggleAccordion('accordion1')">
-        Estadísticas detalladas por ciudad
-        <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="6 9 12 15 18 9"/>
-        </svg>
-      </button>
-      <div class="accordion-body">
-        <table class="stats-table" id="cityStatsTable"></table>
-      </div>
-    </div>
-
-    <!-- ACCORDION 2: Urban vs Rural -->
-    <div class="accordion" id="accordion2">
-      <button class="accordion-header" onclick="toggleAccordion('accordion2')">
-        Comparativa zona urbana vs. no urbana
-        <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <polyline points="6 9 12 15 18 9"/>
-        </svg>
-      </button>
-      <div class="accordion-body">
-        <div class="urban-compare" id="urbanCompare"></div>
-      </div>
-    </div>
-
-    <!-- ANÁLISIS DETERMINISTA (sin IA) -->
-    <div class="rec-card" id="recCard">
-      <div class="rec-title" style="display:flex;align-items:center;gap:10px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-        Tu situación salarial
-      </div>
-      <div class="rec-text" id="recText"></div>
-    </div>
-
-    <!-- ===================== -->
-    <!-- NEXT STEPS CTA        -->
-    <!-- ===================== -->
-    <div class="next-steps" id="nextSteps">
-      <div class="next-steps-label">Siguiente paso</div>
-      <div class="next-steps-title" id="nextStepsTitle">Ahora que conoces tu salario neto…</div>
-      <div class="next-steps-sub" id="nextStepsSub">La nueva Ley de Transparencia Retributiva entra en vigor en junio de 2026. Conoce tus derechos y actúa con información.</div>
-
-      <div class="next-steps-grid">
-
-        <a href="/reclamar-diferencias-salariales-convenio.html" class="next-step-card" id="ctaReclamar">
-          <div class="next-step-tag">Convenio colectivo</div>
-          <div class="next-step-name">¿Cobras menos que tu convenio?</div>
-          <div class="next-step-desc">Comprueba si tu empresa cumple el mínimo legal y cómo reclamar la diferencia.</div>
-          <div class="next-step-link">Leer guía →</div>
-        </a>
-
-        <a href="/rangos-salariales-empresa-transparencia-2026.html" class="next-step-card" id="ctaRangos">
-          <div class="next-step-tag">Transparencia salarial</div>
-          <div class="next-step-name">Pide los rangos salariales a tu empresa</div>
-          <div class="next-step-desc">Con la nueva ley, puedes solicitar el rango salarial de tu puesto. Te explicamos cómo.</div>
-          <div class="next-step-link">Leer guía →</div>
-        </a>
-
-        <a href="/ley-transparencia-salarial-2026.html" class="next-step-card" id="ctaLey">
-          <div class="next-step-tag">Nueva ley 2026</div>
-          <div class="next-step-name">Qué cambia con la Ley de Transparencia</div>
-          <div class="next-step-desc">Todo lo que necesitas saber sobre la Directiva UE 2023/970 y cómo te afecta.</div>
-          <div class="next-step-link">Leer guía →</div>
-        </a>
-
-        <a href="/denunciar-brecha-salarial-guia-practica-2026.html" class="next-step-card" id="ctaBrecha">
-          <div class="next-step-tag">Brecha salarial</div>
-          <div class="next-step-name">Denuncia una brecha salarial</div>
-          <div class="next-step-desc">Guía práctica paso a paso para denunciar discriminación retributiva.</div>
-          <div class="next-step-link">Leer guía →</div>
-        </a>
-
-      </div>
-    </div>
-
-    <!-- ===================== -->
-    <!-- SOURCES SECTION       -->
-    <!-- ===================== -->
-    <section class="sources-section" aria-label="Fuentes de referencia salarial">
-
-      <div class="sources-header">
-        <span class="sources-header-label">Fuentes de referencia</span>
-        <div class="sources-header-line"></div>
-      </div>
-
-      <p class="sources-intro">
-        Los rangos mostrados son <strong>estimaciones orientativas</strong> basadas en datos de mercado agregados.
-        Para consultar estadísticas salariales verificadas y de carácter oficial, le recomendamos
-        acudir directamente a las siguientes fuentes primarias de naturaleza pública e institucional.
-      </p>
-
-      <div class="sources-grid">
-
-        <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177025&menu=ultiDatos&idp=1254735976596"
-           target="_blank" rel="noopener noreferrer" class="source-card">
-          <span class="source-tag oficial">Oficial · Gratuito</span>
-          <div class="source-name">Encuesta de Estructura Salarial</div>
-          <div class="source-org">Instituto Nacional de Estadística (INE)</div>
-          <p class="source-desc">Estadística oficial de referencia. Salarios por ocupación, sector, comunidad autónoma y tipo de contrato. Actualización bienal.</p>
-          <span class="source-link">
-            ine.es
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-            </svg>
-          </span>
-        </a>
-
-        <a href="https://www.agenciatributaria.es/AEAT.internet/datospdf/sede/biblioteca/mercadolab.shtml"
-           target="_blank" rel="noopener noreferrer" class="source-card">
-          <span class="source-tag oficial">Oficial · Gratuito</span>
-          <div class="source-name">Estadísticas del Mercado Laboral (IRPF)</div>
-          <div class="source-org">Agencia Tributaria (AEAT)</div>
-          <p class="source-desc">Distribución de rendimientos del trabajo declarados en IRPF. Percentiles de renta por provincia y sector económico.</p>
-          <span class="source-link">
-            agenciatributaria.es
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-            </svg>
-          </span>
-        </a>
-
-        <a href="https://www.sepe.es/HomeSepe/que-es-el-sepe/estadisticas/mercado-trabajo/contratos.html"
-           target="_blank" rel="noopener noreferrer" class="source-card">
-          <span class="source-tag oficial">Oficial · Gratuito</span>
-          <div class="source-name">Estadísticas de Contratos y Salarios</div>
-          <div class="source-org">SEPE — Servicio Público de Empleo Estatal</div>
-          <p class="source-desc">Datos de contratación por sector y territorio. Condiciones laborales por ocupación y comunidad autónoma.</p>
-          <span class="source-link">
-            sepe.es
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-            </svg>
-          </span>
-        </a>
-
-        <a href="https://ec.europa.eu/eurostat/web/labour-market/earnings"
-           target="_blank" rel="noopener noreferrer" class="source-card">
-          <span class="source-tag europeo">Oficial · Europeo</span>
-          <div class="source-name">Earnings Statistics</div>
-          <div class="source-org">Eurostat — Oficina Estadística de la UE</div>
-          <p class="source-desc">Estadísticas salariales comparadas entre países de la UE. Referencia directa de la Directiva de Transparencia Retributiva 2023/970.</p>
-          <span class="source-link">
-            eurostat.ec.europa.eu
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-            </svg>
-          </span>
-        </a>
-
-        <a href="https://nosotros.infojobs.net/prensa/informe-anual-infojobs"
-           target="_blank" rel="noopener noreferrer" class="source-card">
-          <span class="source-tag privado">Privado · Gratuito</span>
-          <div class="source-name">Informe Anual del Mercado Laboral</div>
-          <div class="source-org">InfoJobs</div>
-          <p class="source-desc">Análisis basado en millones de ofertas reales publicadas en España. Salarios ofertados por sector, profesión y comunidad autónoma.</p>
-          <span class="source-link">
-            infojobs.net
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-            </svg>
-          </span>
-        </a>
-
-        <a href="https://www.boe.es/biblioteca_juridica/codigos/codigo.php?id=038"
-           target="_blank" rel="noopener noreferrer" class="source-card">
-          <span class="source-tag normativo">Oficial · Normativo</span>
-          <div class="source-name">Convenios Colectivos Vigentes</div>
-          <div class="source-org">Boletín Oficial del Estado (BOE)</div>
-          <p class="source-desc">Texto íntegro de todos los convenios colectivos publicados en España. Define salarios mínimos garantizados por sector y categoría profesional.</p>
-          <span class="source-link">
-            boe.es
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
-            </svg>
-          </span>
-        </a>
-
-      </div>
-
-      <div class="sources-legal">
-        <svg class="sources-legal-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <p class="sources-legal-text">
-          <strong>Aviso legal.</strong> Esta herramienta proporciona estimaciones orientativas con fines exclusivamente informativos.
-          Los resultados no constituyen asesoría laboral, fiscal ni jurídica. Los rangos salariales son aproximaciones basadas
-          en datos de mercado y pueden diferir de las estadísticas oficiales. Para decisiones laborales relevantes, consulte
-          las fuentes primarias indicadas o un profesional habilitado.
-        </p>
-      </div>
-
-    </section>
-
-</div><!-- /results -->
 
 </div><!-- /section-calc -->
 
