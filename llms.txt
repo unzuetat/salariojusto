@@ -26,8 +26,8 @@
 ## Herramientas
 
 - [Calculadora de salario neto IRPF 2026](https://salariojusto.es/): bruto-a-neto con escalas estatal y autonómica reales (9 CCAA + tarifa foral Bizkaia)
-- [Cálculos por ciudad y tramo](https://salariojusto.es/salarios.html): 168 combinaciones precalculadas (12 ciudades × 14 tramos brutos de 15.000 a 100.000 €)
-- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 19 convenios indexables con tablas salariales oficiales
+- [Hub salarial provincial](https://salariojusto.es/salarios.html): índice de convenios y datos salariales agrupados por CCAA y provincia
+- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 22 convenios indexables con tablas salariales oficiales (10 hostelería + 11 limpieza + 1 oficinas)
 
 ## Convenios provinciales de Limpieza auditados (Sprint 1)
 
@@ -47,13 +47,18 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 
 ## Convenios provinciales de Hostelería
 
-- [Pilar Hostelería de España](https://salariojusto.es/convenio-hosteleria.html): hub sectorial con framing del sector (sin convenio estatal con tablas, ALEH como marco común), 6 provincias auditadas y directorio completo de las 50 provincias + Ceuta/Melilla.
-- [Convenio Hostelería Madrid](https://salariojusto.es/convenio-hosteleria-madrid.html) (en ultraactividad)
+- [Pilar Hostelería de España](https://salariojusto.es/convenio-hosteleria.html): hub sectorial con framing del sector (sin convenio estatal con tablas, ALEH como marco común), 11 provincias auditadas y directorio completo de las 50 provincias + Ceuta/Melilla.
+- [Convenio Hostelería Madrid](https://salariojusto.es/convenio-hosteleria-madrid.html) (en ultraactividad ET 86.3 desde 1-ene-2026)
 - [Convenio Hostelería Valencia](https://salariojusto.es/convenio-hosteleria-valencia.html) (en ultraactividad)
-- [Convenio Hostelería Barcelona](https://salariojusto.es/convenio-hosteleria-barcelona.html)
-- [Convenio Hostelería Tarragona](https://salariojusto.es/convenio-hosteleria-tarragona.html)
-- [Convenio Hostelería Maresme](https://salariojusto.es/convenio-hosteleria-maresme.html)
-- [Convenio Hostelería Girona](https://salariojusto.es/convenio-hosteleria-girona.html)
+- [Convenio Hostelería Barcelona](https://salariojusto.es/convenio-hosteleria-barcelona.html) (cuatrienio 2025-2028 con +15,7% acumulado, DOGC 23/03/2026)
+- [Convenio Hostelería Tarragona](https://salariojusto.es/convenio-hosteleria-tarragona.html) (cuatrienio 2025-2028)
+- [Convenio Hostelería Maresme](https://salariojusto.es/convenio-hosteleria-maresme.html) (cuatrienio 2025-2028)
+- [Convenio Hostelería Girona](https://salariojusto.es/convenio-hosteleria-girona.html) (cuatrienio 2025-2028)
+- [Convenio Hostelería Bizkaia](https://salariojusto.es/convenio-hosteleria-bizkaia.html) (Tabla 2026 BOB-2026a038, IRPF foral, vigente hasta dic-2027)
+- [Convenio Hostelería Málaga](https://salariojusto.es/convenio-hosteleria-malaga.html) (Tablas 2026 BOP 14-abr-2026, 9 secciones, vigente hasta dic-2027)
+- [Convenio Hostelería Cantabria](https://salariojusto.es/convenio-hosteleria-cantabria.html) (Tabla 2025 vigente en 2026 por tácita reconducción)
+- [Convenio Hostelería Cádiz](https://salariojusto.es/convenio-hosteleria-cadiz.html) (Tablas 2026 oficiales BOP 153, vigente 2025-2028)
+- [Convenio Hostelería Sevilla](https://salariojusto.es/convenio-hosteleria-sevilla.html) (BOP 102 del 30/05/2025, vigencia 2025-2028, 17 sub-categorías × 5 niveles, +17% acumulado cuatrienio, 15 pagas)
 
 ## Convenios estatales
 
