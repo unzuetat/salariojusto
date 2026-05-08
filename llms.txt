@@ -34,7 +34,8 @@
 Datos extraídos de boletines oficiales con metodología A+B (verificación cruzada con sindicato firmante o REGCON):
 
 - [Convenio Limpieza Madrid](https://salariojusto.es/convenio-limpieza-madrid.html)
-- [Convenio Limpieza Barcelona](https://salariojusto.es/convenio-limpieza-barcelona.html)
+- [Convenio Limpieza Barcelona](https://salariojusto.es/convenio-limpieza-barcelona.html) (cubierto por convenio autonómico Catalunya 2026-2030)
+- [Convenio Limpieza Catalunya](https://salariojusto.es/convenio-limpieza-catalunya.html) (autonómico, DOGC 9613 del 26-feb-2026, REGCON 79002415012005, vigente 2026-2030 con +3,25% sobre 2025, cubre Barcelona, Girona, Lleida y Tarragona)
 - [Convenio Limpieza Valencia](https://salariojusto.es/convenio-limpieza-valencia.html)
 - [Convenio Limpieza Sevilla](https://salariojusto.es/convenio-limpieza-sevilla.html)
 - [Convenio Limpieza Málaga](https://salariojusto.es/convenio-limpieza-malaga.html)
