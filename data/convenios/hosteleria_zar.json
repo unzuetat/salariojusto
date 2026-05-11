@@ -1,0 +1,414 @@
+{
+  "nombre": "Hostelería — Provincia de Zaragoza",
+  "bop": "BOPZ núm. 84, 13/04/2024",
+  "codigo": "50000655011982",
+  "vigencia": "1 enero 2023 – 31 diciembre 2025 (en ultraactividad desde 2026)",
+  "pagas": 14,
+  "jornadaAnual": 1776,
+  "urlBop": "https://boletin.dpz.es/BOPZ/UploadServlet?ruta=Boletines%5C2024%5C84%5Cbop.pdf",
+  "notaEditorial": "El convenio finalizó vigencia el 31 de diciembre de 2025 y desde el 1 de enero de 2026 está en <strong>ultraactividad</strong>: las tablas de 2025 siguen aplicándose hasta que la comisión paritaria publique las nuevas. La cláusula de revisión 2026 (Art. 6) prevé un incremento de hasta <strong>+1%</strong> condicionado a dos indicadores INE de la provincia: <strong>+0,5%</strong> si en 2025 se superan las pernoctaciones/viajeros de 2023 y <strong>+0,5%</strong> adicional si en 2024 se superaron los establecimientos de restauración (CNAE 56) de 2023. Los datos de referencia INE estaban pendientes de publicación al firmarse el convenio. Cinco grupos de actividad (hoteles 4-5★, hoteles 3★, cafeterías/discotecas, hoteles 1-2★/hostales, restaurantes 5-3 tenedores) con cinco niveles cada uno: 25 cuadros salariales en total. Convenio firmado por Asoc. Empresariales de Cafés, Bares, Hoteles y Restaurantes de Zaragoza con CCOO, UGT, OSTA y MIT. La estructura de pagas combina <strong>14 mensualidades</strong> (12 SB + 2 extras de julio y diciembre) más una <strong>paga de octubre</strong> de cuantía fija (1.359,07 € en 2025, con tope del SB del trabajador) y los pluses extrasalariales de Transporte, Mantenimiento de Ropa y Manutención.",
+  "subtablas": {
+    "G1": "Hoteles/Balnearios 4-5★ (Recepción, Administración, Limpieza)",
+    "G2": "Hoteles/Balnearios 4-5★ (Cocina y Comedor) + Restaurantes 3-5 tenedores",
+    "G3": "Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos, Billares",
+    "G4": "Hoteles/Balnearios 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas, Cafés y Bares",
+    "G5": "Hoteles/Balnearios 1-2★, Hostales, Pensiones y demás alojamientos"
+  },
+  "grupos": [
+    {
+      "id": "G1-IA",
+      "subtabla": "G1",
+      "nombre": "Nivel IA — Jefatura Recepción/Administración/Cocina (Hotel 4-5★)",
+      "puestos": [
+        "Jefe/a de recepción",
+        "Jefe/a de administración",
+        "Jefe/a comercial",
+        "Jefe/a de cocina",
+        "Jefe/a de catering",
+        "Jefe/a de restaurante o sala",
+        "Gerente centro (restauración moderna)",
+        "Jefe/a de operaciones de catering",
+        "Responsable de servicio (servicio complementario)"
+      ],
+      "salario": {
+        "2024": { "mes": 1422.05, "sba": 22576.59 },
+        "2025": { "mes": 1478.93, "sba": 23479.65 }
+      }
+    },
+    {
+      "id": "G1-IB",
+      "subtabla": "G1",
+      "nombre": "Nivel IB — Segundo/a Jefatura, Conserje, Encargado/a General (Hotel 4-5★)",
+      "puestos": [
+        "Segundo/a jefe/a de recepción",
+        "Segundo/a jefe/a de cocina",
+        "Segundo/a jefe/a de restaurante o sala",
+        "Primer conserje",
+        "Encargado/a general / Gobernante/a"
+      ],
+      "salario": {
+        "2024": { "mes": 1367.14, "sba": 21807.90 },
+        "2025": { "mes": 1421.83, "sba": 22680.21 }
+      }
+    },
+    {
+      "id": "G1-II",
+      "subtabla": "G1",
+      "nombre": "Nivel II — Recepcionista, Cocinero/a, Camarero/a, Barman/Barwoman (Hotel 4-5★)",
+      "puestos": [
+        "Recepcionista",
+        "Conserje",
+        "Administrativo/a",
+        "Relaciones públicas",
+        "Comercial",
+        "Jefe/a de partida",
+        "Cocinero/a",
+        "Repostero/a",
+        "Encargado/a de economato",
+        "Camarero/a",
+        "Barman/barwoman",
+        "Sumiller/a",
+        "Subgobernante/a o encargado/a de pisos",
+        "Encargado/a de mantenimiento",
+        "Técnico/a PRL"
+      ],
+      "salario": {
+        "2024": { "mes": 1299.83, "sba": 20858.51 },
+        "2025": { "mes": 1351.82, "sba": 21692.85 }
+      }
+    },
+    {
+      "id": "G1-III",
+      "subtabla": "G1",
+      "nombre": "Nivel III — Ayudante/a de Recepción/Cocina/Camarero, Camarero/a de Pisos (Hotel 4-5★)",
+      "puestos": [
+        "Ayudante/a de recepción y conserjería",
+        "Ayudante/a administrativo",
+        "Telefonista",
+        "Ayudante/a de economato",
+        "Ayudante/a de cocina",
+        "Ayudante/a de camarero/a",
+        "Camarero/a de pisos",
+        "Especialista de mantenimiento",
+        "Especialista de servicios"
+      ],
+      "salario": {
+        "2024": { "mes": 1241.98, "sba": 19990.85 },
+        "2025": { "mes": 1291.65, "sba": 20790.48 }
+      }
+    },
+    {
+      "id": "G1-IV",
+      "subtabla": "G1",
+      "nombre": "Nivel IV — Auxiliar de Recepción/Cocina/Pisos, Asistente Colectividades (Hotel 4-5★)",
+      "puestos": [
+        "Auxiliar de recepción y conserjería",
+        "Auxiliar de cocina",
+        "Asistente de colectividades",
+        "Asistente de preparación/montaje de catering",
+        "Asistente de restauración moderna",
+        "Auxiliar de pisos y limpieza",
+        "Auxiliar de mantenimiento y servicios auxiliares",
+        "Monitor/a cuidador/a de colectividades",
+        "Auxiliar de servicios"
+      ],
+      "salario": {
+        "2024": { "mes": 1175.11, "sba": 18987.78 },
+        "2025": { "mes": 1222.12, "sba": 19747.29 }
+      }
+    },
+    {
+      "id": "G2-IA",
+      "subtabla": "G2",
+      "nombre": "Nivel IA — Jefatura Cocina/Sala (Hotel 4-5★ y Restaurantes 3-5 tenedores)",
+      "puestos": [
+        "Jefe/a de cocina",
+        "Jefe/a de restaurante o sala",
+        "Encargado/a general",
+        "Jefe/a comercial",
+        "Jefe/a de administración"
+      ],
+      "salario": {
+        "2024": { "mes": 1502.46, "sba": 23702.24 },
+        "2025": { "mes": 1562.56, "sba": 24650.33 }
+      }
+    },
+    {
+      "id": "G2-IB",
+      "subtabla": "G2",
+      "nombre": "Nivel IB — Segundo/a Jefatura, Encargado/a General (Hotel 4-5★ y Restaurantes 3-5 tenedores)",
+      "puestos": [
+        "Segundo/a jefe/a de cocina",
+        "Segundo/a jefe/a de restaurante",
+        "Encargado/a general"
+      ],
+      "salario": {
+        "2024": { "mes": 1424.52, "sba": 22611.24 },
+        "2025": { "mes": 1481.51, "sba": 23515.69 }
+      }
+    },
+    {
+      "id": "G2-II",
+      "subtabla": "G2",
+      "nombre": "Nivel II — Cocinero/a, Camarero/a, Repostero/a (Hotel 4-5★ y Restaurantes 3-5 tenedores)",
+      "puestos": [
+        "Cocinero/a",
+        "Repostero/a",
+        "Camarero/a",
+        "Barman/barwoman",
+        "Sumiller/a",
+        "Jefe/a de partida"
+      ],
+      "salario": {
+        "2024": { "mes": 1322.55, "sba": 21183.65 },
+        "2025": { "mes": 1375.46, "sba": 22031.00 }
+      }
+    },
+    {
+      "id": "G2-III",
+      "subtabla": "G2",
+      "nombre": "Nivel III — Ayudante/a Cocina/Camarero, Especialista (Hotel 4-5★ y Restaurantes 3-5 tenedores)",
+      "puestos": [
+        "Ayudante/a de cocina",
+        "Ayudante/a de camarero/a",
+        "Especialista de mantenimiento"
+      ],
+      "salario": {
+        "2024": { "mes": 1210.24, "sba": 19514.84 },
+        "2025": { "mes": 1258.65, "sba": 20295.43 }
+      }
+    },
+    {
+      "id": "G2-IV",
+      "subtabla": "G2",
+      "nombre": "Nivel IV — Auxiliar de Cocina, Asistente, Auxiliar Servicios (Hotel 4-5★ y Restaurantes 3-5 tenedores)",
+      "puestos": [
+        "Auxiliar de cocina",
+        "Asistente de colectividades",
+        "Asistente de restauración moderna",
+        "Auxiliar de servicios"
+      ],
+      "salario": {
+        "2024": { "mes": 1207.89, "sba": 19479.40 },
+        "2025": { "mes": 1256.21, "sba": 20258.58 }
+      }
+    },
+    {
+      "id": "G3-IA",
+      "subtabla": "G3",
+      "nombre": "Nivel IA — Encargado/a, Jefe/a (Cafeterías, Discotecas, Casinos, Billares)",
+      "puestos": [
+        "Encargado/a de cafetería",
+        "Jefe/a de sala",
+        "Director/a de discoteca o sala de baile",
+        "Jefe/a de casino"
+      ],
+      "salario": {
+        "2024": { "mes": 1502.46, "sba": 23702.24 },
+        "2025": { "mes": 1562.56, "sba": 24650.33 }
+      }
+    },
+    {
+      "id": "G3-IB",
+      "subtabla": "G3",
+      "nombre": "Nivel IB — Encargado/a (Cafeterías, Discotecas, Casinos, Billares)",
+      "puestos": [
+        "Segundo/a encargado/a",
+        "Encargado/a de turno"
+      ],
+      "salario": {
+        "2024": { "mes": 1424.52, "sba": 22611.24 },
+        "2025": { "mes": 1481.51, "sba": 23515.69 }
+      }
+    },
+    {
+      "id": "G3-II",
+      "subtabla": "G3",
+      "nombre": "Nivel II — Camarero/a, Barman/Barwoman, Croupier (Cafeterías, Discotecas, Casinos, Billares)",
+      "puestos": [
+        "Camarero/a",
+        "Barman/barwoman",
+        "Croupier",
+        "DJ/Disc-jockey",
+        "Cobrador/a"
+      ],
+      "salario": {
+        "2024": { "mes": 1322.55, "sba": 21183.65 },
+        "2025": { "mes": 1375.46, "sba": 22031.00 }
+      }
+    },
+    {
+      "id": "G3-III",
+      "subtabla": "G3",
+      "nombre": "Nivel III — Ayudante/a, Especialista (Cafeterías, Discotecas, Casinos, Billares)",
+      "puestos": [
+        "Ayudante/a de camarero/a",
+        "Pinchadiscos / Disc-jockey",
+        "Recepcionista de discoteca",
+        "Especialista de servicios"
+      ],
+      "salario": {
+        "2024": { "mes": 1261.21, "sba": 20279.20 },
+        "2025": { "mes": 1311.65, "sba": 21090.37 }
+      }
+    },
+    {
+      "id": "G3-IV",
+      "subtabla": "G3",
+      "nombre": "Nivel IV — Auxiliar, Marcador/a de Billar (Cafeterías, Discotecas, Casinos, Billares)",
+      "puestos": [
+        "Auxiliar de servicios",
+        "Marcador/a de billar",
+        "Auxiliar de mantenimiento"
+      ],
+      "salario": {
+        "2024": { "mes": 1220.72, "sba": 19671.99 },
+        "2025": { "mes": 1269.55, "sba": 20458.87 }
+      }
+    },
+    {
+      "id": "G4-IA",
+      "subtabla": "G4",
+      "nombre": "Nivel IA — Encargado/a, Jefe/a (Hoteles 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas)",
+      "puestos": [
+        "Jefe/a de cocina",
+        "Jefe/a de sala",
+        "Encargado/a general",
+        "Gerente"
+      ],
+      "salario": {
+        "2024": { "mes": 1391.72, "sba": 22151.98 },
+        "2025": { "mes": 1447.39, "sba": 23038.06 }
+      }
+    },
+    {
+      "id": "G4-IB",
+      "subtabla": "G4",
+      "nombre": "Nivel IB — Segundo/a Encargado/a, Recepcionista (Hoteles 3★, Restaurantes 1-2 tenedores)",
+      "puestos": [
+        "Segundo/a encargado/a",
+        "Recepcionista",
+        "Subgobernante/a"
+      ],
+      "salario": {
+        "2024": { "mes": 1348.01, "sba": 21540.02 },
+        "2025": { "mes": 1401.93, "sba": 22401.62 }
+      }
+    },
+    {
+      "id": "G4-II",
+      "subtabla": "G4",
+      "nombre": "Nivel II — Cocinero/a, Camarero/a (Hoteles 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas)",
+      "puestos": [
+        "Cocinero/a",
+        "Camarero/a",
+        "Barman/barwoman",
+        "Encargado/a de economato"
+      ],
+      "salario": {
+        "2024": { "mes": 1280.93, "sba": 20574.92 },
+        "2025": { "mes": 1332.16, "sba": 21397.91 }
+      }
+    },
+    {
+      "id": "G4-III",
+      "subtabla": "G4",
+      "nombre": "Nivel III — Ayudante/a, Camarero/a de Pisos (Hoteles 3★, Restaurantes 1-2 tenedores)",
+      "puestos": [
+        "Ayudante/a de cocina",
+        "Ayudante/a de camarero/a",
+        "Camarero/a de pisos",
+        "Especialista de mantenimiento"
+      ],
+      "salario": {
+        "2024": { "mes": 1172.60, "sba": 19950.00 },
+        "2025": { "mes": 1219.50, "sba": 19708.00 }
+      }
+    },
+    {
+      "id": "G4-IV",
+      "subtabla": "G4",
+      "nombre": "Nivel IV — Auxiliar de Pisos/Cocina (Hoteles 3★, Restaurantes 1-2 tenedores)",
+      "puestos": [
+        "Auxiliar de pisos y limpieza",
+        "Auxiliar de cocina",
+        "Asistente de colectividades",
+        "Auxiliar de servicios"
+      ],
+      "salario": {
+        "2024": { "mes": 1171.43, "sba": 18932.63 },
+        "2025": { "mes": 1218.29, "sba": 19689.93 }
+      }
+    },
+    {
+      "id": "G5-IA",
+      "subtabla": "G5",
+      "nombre": "Nivel IA — Encargado/a (Hoteles 1-2★, Hostales, Pensiones)",
+      "puestos": [
+        "Encargado/a general",
+        "Recepcionista jefe",
+        "Jefe/a de cocina"
+      ],
+      "salario": {
+        "2024": { "mes": 1345.82, "sba": 21181.75 },
+        "2025": { "mes": 1399.66, "sba": 22029.02 }
+      }
+    },
+    {
+      "id": "G5-IB",
+      "subtabla": "G5",
+      "nombre": "Nivel IB — Segundo/a Encargado/a (Hoteles 1-2★, Hostales, Pensiones)",
+      "puestos": [
+        "Segundo/a encargado/a",
+        "Subgobernante/a"
+      ],
+      "salario": {
+        "2024": { "mes": 1290.70, "sba": 20721.54 },
+        "2025": { "mes": 1342.33, "sba": 21550.40 }
+      }
+    },
+    {
+      "id": "G5-II",
+      "subtabla": "G5",
+      "nombre": "Nivel II — Recepcionista, Cocinero/a, Camarero/a (Hoteles 1-2★, Hostales, Pensiones)",
+      "puestos": [
+        "Recepcionista",
+        "Cocinero/a",
+        "Camarero/a"
+      ],
+      "salario": {
+        "2024": { "mes": 1223.98, "sba": 19720.76 },
+        "2025": { "mes": 1272.94, "sba": 20509.59 }
+      }
+    },
+    {
+      "id": "G5-III",
+      "subtabla": "G5",
+      "nombre": "Nivel III — Ayudante/a, Camarero/a de Pisos (Hoteles 1-2★, Hostales, Pensiones)",
+      "puestos": [
+        "Ayudante/a de cocina",
+        "Ayudante/a de camarero/a",
+        "Camarero/a de pisos",
+        "Especialista"
+      ],
+      "salario": {
+        "2024": { "mes": 1135.27, "sba": 18390.04 },
+        "2025": { "mes": 1180.68, "sba": 19125.65 }
+      }
+    },
+    {
+      "id": "G5-IV",
+      "subtabla": "G5",
+      "nombre": "Nivel IV — Auxiliar de Pisos, Auxiliar de Servicios (Hoteles 1-2★, Hostales, Pensiones)",
+      "puestos": [
+        "Auxiliar de pisos y limpieza",
+        "Auxiliar de cocina",
+        "Auxiliar de servicios"
+      ],
+      "salario": {
+        "2024": { "mes": 1134.16, "sba": 18373.38 },
+        "2025": { "mes": 1179.53, "sba": 19108.32 }
+      }
+    }
+  ]
+}

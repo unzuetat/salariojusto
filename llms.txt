@@ -27,7 +27,7 @@
 
 - [Calculadora de salario neto IRPF 2026](https://salariojusto.es/): bruto-a-neto con escalas estatal y autonómica reales (9 CCAA + tarifa foral Bizkaia)
 - [Hub salarial provincial](https://salariojusto.es/salarios.html): índice de convenios y datos salariales agrupados por CCAA y provincia
-- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 22 convenios indexables con tablas salariales oficiales (10 hostelería + 11 limpieza + 1 oficinas)
+- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 23 convenios indexables con tablas salariales oficiales (11 hostelería + 11 limpieza + 1 oficinas)
 
 ## Convenios provinciales de Limpieza auditados (Sprint 1)
 
@@ -48,7 +48,7 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 
 ## Convenios provinciales de Hostelería
 
-- [Pilar Hostelería de España](https://salariojusto.es/convenio-hosteleria.html): hub sectorial con framing del sector (sin convenio estatal con tablas, ALEH como marco común), 11 provincias auditadas y directorio completo de las 50 provincias + Ceuta/Melilla.
+- [Pilar Hostelería de España](https://salariojusto.es/convenio-hosteleria.html): hub sectorial con framing del sector (sin convenio estatal con tablas, ALEH como marco común), 12 provincias auditadas y directorio completo de las 50 provincias + Ceuta/Melilla.
 - [Convenio Hostelería Madrid](https://salariojusto.es/convenio-hosteleria-madrid.html) (en ultraactividad ET 86.3 desde 1-ene-2026)
 - [Convenio Hostelería Valencia](https://salariojusto.es/convenio-hosteleria-valencia.html) (en ultraactividad)
 - [Convenio Hostelería Barcelona](https://salariojusto.es/convenio-hosteleria-barcelona.html) (cuatrienio 2025-2028 con +15,7% acumulado, DOGC 23/03/2026)
@@ -60,6 +60,7 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 - [Convenio Hostelería Cantabria](https://salariojusto.es/convenio-hosteleria-cantabria.html) (Tabla 2025 vigente en 2026 por tácita reconducción)
 - [Convenio Hostelería Cádiz](https://salariojusto.es/convenio-hosteleria-cadiz.html) (Tablas 2026 oficiales BOP 153, vigente 2025-2028)
 - [Convenio Hostelería Sevilla](https://salariojusto.es/convenio-hosteleria-sevilla.html) (BOP 102 del 30/05/2025, vigencia 2025-2028, 17 sub-categorías × 5 niveles, +17% acumulado cuatrienio, 15 pagas)
+- [Convenio Hostelería Zaragoza](https://salariojusto.es/convenio-hosteleria-zaragoza.html) (BOPZ 84/2024, vigencia 2023-2025 + ultraactividad desde 2026, 5 grupos × 5 niveles, 14 pagas + paga octubre fija, revisión 2026 hasta +1% según INE)
 
 ## Convenios estatales
 
