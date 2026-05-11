@@ -119,6 +119,12 @@ const CONVENIO_CONFIG = {
     plurprovincial: false,
     relacionadas: ['hosteleria-barcelona', 'hosteleria-valencia', 'hosteleria-malaga']
   },
+  'hosteleria_val.json': {
+    sector: 'Hostelería', sectorSlug: 'hosteleria',
+    provincia: 'Valladolid', provinciaSlug: 'valladolid',
+    plurprovincial: false,
+    relacionadas: ['hosteleria-madrid', 'hosteleria-zaragoza', 'hosteleria-barcelona']
+  },
   'ofydes_vlc.json': {
     sector: 'Oficinas y Despachos', sectorSlug: 'oficinas',
     provincia: 'Valencia', provinciaSlug: 'valencia',
