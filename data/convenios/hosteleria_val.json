@@ -1,0 +1,121 @@
+{
+  "nombre": "Hostelería y Alojamientos Turísticos — Provincia de Valladolid",
+  "bop": "BOP Valladolid núm. 247, 28/12/2021",
+  "codigo": "47000235011982",
+  "vigencia": "1 enero 2018 – 31 diciembre 2026",
+  "pagas": 14,
+  "jornadaAnual": 1782,
+  "urlBop": "https://www.ccoo-servicios.es/archivos/BOPVA-hosteleria-Valladolid-2018-2026.pdf",
+  "notaEditorial": "Convenio de <strong>vigencia excepcional de 9 años</strong> (2018-2026) firmado entre APEHVA (Asociación Provincial de Empresarios de Hostelería) y la Asociación de Hoteles con CCOO y UGT. Tras un periodo congelado de 4 años (2018-2021) sin actualizar tablas, desde 2022 se aplicó un <strong>incremento del +1,6% anual al Grupo I</strong> y subidas mayores a Grupos II, III y IV para alcanzar la <strong>equiparación salarial total en 2026</strong>: las tablas de 2026 son una <strong>tabla única para todo el sector</strong>, sin diferencias entre categorías de establecimiento (Grupo I, II o III). Es la consolidación de un sector tradicionalmente fragmentado por tipo de hotel. La estructura de áreas funcionales (6 áreas: Recepción/Administración, Cocina, Restaurante/Bar, Pisos y Limpieza, Mantenimiento, Servicios Complementarios) sigue vigente, pero solo diferencia los puestos profesionales — no el salario. Cifras en <strong>14 pagas</strong> (12 mensualidades + 2 gratificaciones extraordinarias en julio y diciembre) sobre una jornada anual de <strong>1.782 horas máximas</strong>. Pluses fuera de tabla: Manutención obligatoria (50 €/día en 2026, 700 €/año), Transporte (0,71 €/día trabajado), Idiomas (20,28 €/mes), Nocturnidad (+25% SB). Afecta a unas 10.500 personas trabajadoras en la provincia. Al concluir la vigencia el 31-dic-2026, las tablas se mantendrán aplicables por ultraactividad hasta nuevo convenio.",
+  "subtablas": {
+    "VAL": "Tabla única 2026 — Equiparación total entre categorías de establecimiento"
+  },
+  "grupos": [
+    {
+      "id": "NS-I",
+      "subtabla": "VAL",
+      "nombre": "Nivel Salarial I — Jefatura de Recepción / Cocina / Restaurante / Encargado General",
+      "puestos": [
+        "Jefe/a de Recepción de Administración o Comercial",
+        "Primer/a Conserje",
+        "Jefe/a de Cocina",
+        "Jefe/a de Restaurante o Sala / Gerente de Centro",
+        "Encargado/a General (Pisos y Limpieza)",
+        "Responsable de Servicio (Servicios Complementarios)"
+      ],
+      "salario": {
+        "2026": { "mes": 1416.06, "sba": 19824.84 }
+      }
+    },
+    {
+      "id": "NS-II",
+      "subtabla": "VAL",
+      "nombre": "Nivel Salarial II — Segunda Jefatura / Encargado de Mantenimiento / Técnico de Servicio",
+      "puestos": [
+        "Segundo/a Jefe/a de Recepción",
+        "Segundo/a Jefe/a de Cocina",
+        "Jefe/a de Partida (Cocina)",
+        "Segundo/a Jefe/a de Restaurante o Sala",
+        "Encargado/a de Mantenimiento y Servicios Técnicos y/o Auxiliares",
+        "Encargado/a de Sección",
+        "Técnico/a de Servicio (Dietista, Fisioterapeuta y otros titulados de la Salud)"
+      ],
+      "salario": {
+        "2026": { "mes": 1322.96, "sba": 18521.44 }
+      }
+    },
+    {
+      "id": "NS-III",
+      "subtabla": "VAL",
+      "nombre": "Nivel Salarial III — Comercial / Jefe de Sector / Encargado de Sección",
+      "puestos": [
+        "Comercial",
+        "Relaciones Públicas",
+        "Técnico/a de Prevención de Riesgos",
+        "Jefe/a de Partida (Cocina)",
+        "Jefe/a de Sector (Restaurante)",
+        "Encargado/a de Sección (Pisos y Limpieza)",
+        "Especialista de Servicios (Socorrista, primeros auxilios, DJ, masajista, quiromasajista, atención al cliente)"
+      ],
+      "salario": {
+        "2026": { "mes": 1276.03, "sba": 17864.42 }
+      }
+    },
+    {
+      "id": "NS-IV",
+      "subtabla": "VAL",
+      "nombre": "Nivel Salarial IV — Administrativo / Cocinero / Camarero / Camarera de Pisos",
+      "puestos": [
+        "Administrativo/a",
+        "Conserje",
+        "Telefonista",
+        "Recepcionista",
+        "Cocinero/a",
+        "Repostero/a",
+        "Encargado/a de Economato",
+        "Camarero/a",
+        "Barman / Barwoman",
+        "Sumiller",
+        "Camarero/a de Pisos",
+        "Especialista de Mantenimiento y Servicios Auxiliares",
+        "Auxiliar de Servicio (atención al cliente, balneario, piscina)"
+      ],
+      "salario": {
+        "2026": { "mes": 1206.26, "sba": 16887.64 }
+      }
+    },
+    {
+      "id": "NS-V",
+      "subtabla": "VAL",
+      "nombre": "Nivel Salarial V — Ayudantes y Auxiliares",
+      "puestos": [
+        "Ayudante/a de Recepción / Conserjería",
+        "Ayudante/a Administrativo",
+        "Auxiliar de Recepción o Conserjería",
+        "Ayudante/a de Economato",
+        "Ayudante/a de Cocina",
+        "Auxiliar de Cocina",
+        "Ayudante/a de Camarero/a",
+        "Asistente/a de Restauración Moderna",
+        "Riders (repartidores)",
+        "Auxiliar de Pisos y Limpieza",
+        "Auxiliar de Mantenimiento y Servicios Auxiliares",
+        "Monitor/a"
+      ],
+      "salario": {
+        "2026": { "mes": 1112.96, "sba": 15581.44 }
+      }
+    },
+    {
+      "id": "NS-VA",
+      "subtabla": "VAL",
+      "nombre": "Nivel Salarial V-A — Personal de ingreso sin experiencia",
+      "puestos": [
+        "Personal de ingreso sin experiencia (todas las áreas funcionales)"
+      ],
+      "salario": {
+        "2026": { "mes": 1079.58, "sba": 15114.12 }
+      }
+    }
+  ]
+}
