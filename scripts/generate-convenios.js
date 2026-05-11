@@ -113,6 +113,12 @@ const CONVENIO_CONFIG = {
     plurprovincial: false,
     relacionadas: ['hosteleria-madrid', 'hosteleria-barcelona', 'hosteleria-valencia']
   },
+  'hosteleria_balears.json': {
+    sector: 'Hostelería', sectorSlug: 'hosteleria',
+    provincia: 'Illes Balears', provinciaSlug: 'baleares',
+    plurprovincial: false,
+    relacionadas: ['hosteleria-barcelona', 'hosteleria-valencia', 'hosteleria-malaga']
+  },
   'ofydes_vlc.json': {
     sector: 'Oficinas y Despachos', sectorSlug: 'oficinas',
     provincia: 'Valencia', provinciaSlug: 'valencia',
@@ -304,23 +310,40 @@ function footerHTML() {
 
 // ── Renderiza una landing de convenio ────────────────────────────────
 function generateConvenioPage(data, meta) {
-  const anyo = data.anyoMasReciente;
   const fileName = `convenio-${meta.sectorSlug}-${meta.provinciaSlug}.html`;
   const url = `https://salariojusto.es/${fileName}`;
 
-  // Ultraactividad: si las tablas son de un año anterior pero siguen vigentes
+  // Año vigente: el año con tablas más cercano a CURRENT_YEAR (no proyectar al futuro)
+  const yearsInData = Object.keys(data.grupos[0].salario).map(Number).sort((a,b)=>a-b);
+  const maxYear = Math.max(...yearsInData);
   const enUltraactividad = detectaUltraactividad(data.vigencia);
+  const anyo = yearsInData.includes(CURRENT_YEAR) ? CURRENT_YEAR : (enUltraactividad ? maxYear : Math.min(maxYear, yearsInData.find(y => y >= CURRENT_YEAR) || maxYear));
   const anyoMostrado = enUltraactividad ? CURRENT_YEAR : anyo;
   // Rango salarial mensual del convenio — usado en title/desc (V1 cifra-directa) y en la primera FAQ
   const salariosMes = data.grupos.map(g => g.salario[anyo]?.mes).filter(Boolean);
   const salarioMinimo = Math.min(...salariosMes);
   const salarioMaximo = Math.max(...salariosMes);
   const fmtMil = n => new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0, useGrouping: true }).format(n);
-  const sectorCorto = meta.sector === 'Oficinas y Despachos' ? 'Oficinas' : meta.sector;
+  const sectorCorto = meta.sector === 'Oficinas y Despachos' ? 'Oficinas y Despachos' : meta.sector;
 
-  const title = `Convenio ${sectorCorto} ${meta.provincia} ${CURRENT_YEAR}: tablas ${fmtMil(salarioMinimo)}–${fmtMil(salarioMaximo)} €/mes`;
-  const desc = `Tablas salariales del convenio de ${meta.sector.toLowerCase()} de ${meta.provincia} ${CURRENT_YEAR}: salario base de ${fmtEur(salarioMinimo)} a ${fmtEur(salarioMaximo)} en ${data.pagas} pagas, jornada ${fmtMil(data.jornadaAnual)} h/año. BOP oficial.`;
-  const ogTitle = `Convenio ${meta.sector} ${meta.provincia} ${CURRENT_YEAR}`;
+  // Sufijo automático del title — refleja estado del convenio
+  let suffixAuto = '';
+  if (enUltraactividad) {
+    suffixAuto = ' (en ultraactividad)';
+  } else if (yearsInData.length > 1) {
+    const yMin = Math.min(...yearsInData);
+    const yMax = Math.max(...yearsInData);
+    if (yMax > CURRENT_YEAR) {
+      suffixAuto = data.pagas !== 14 ? ` (vigente ${yMin}-${yMax}, ${data.pagas} pagas)` : ` (vigente ${yMin}-${yMax})`;
+    }
+  }
+  // Permitir override editorial via meta.tituloSuffix (ej. "(cuatrienio +15,7%)" en Barcelona)
+  const suffix = meta.tituloSuffix !== undefined ? meta.tituloSuffix : suffixAuto;
+
+  // Override completo de title/desc/ogDescription via meta (uso excepcional)
+  const title = meta.title || `${fmtMil(salarioMinimo)}–${fmtMil(salarioMaximo)} €/mes — Tablas salariales ${sectorCorto} ${meta.provincia} ${CURRENT_YEAR}${suffix} | SalarioJusto`;
+  const desc = meta.metaDescription || `${fmtEur(salarioMinimo)} a ${fmtEur(salarioMaximo)}/mes según categoría. Tablas salariales del convenio de ${meta.sector.toLowerCase()} de ${meta.provincia} ${CURRENT_YEAR}${enUltraactividad ? ' en ultraactividad (art. 86.3 ET): cifras ' + anyo + ' aplicables mientras se negocia' : ''}. ${data.pagas} pagas, jornada ${fmtMil(data.jornadaAnual)} h/año. ${data.bop}.`;
+  const ogTitle = meta.ogTitle || `${fmtMil(salarioMinimo)}–${fmtMil(salarioMaximo)} €/mes — Tablas salariales ${sectorCorto} ${meta.provincia} ${CURRENT_YEAR}${suffix}`;
 
   // Construir tabla de grupos (máximo 15 filas, mostramos todos pero responsive)
   const subtablasKeys = Object.keys(data.subtablas);
