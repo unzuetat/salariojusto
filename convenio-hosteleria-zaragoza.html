@@ -71,10 +71,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Cuál es el salario mínimo del convenio de Hostelería en Zaragoza para 2025?",
+      "name": "¿Cuál es el salario mínimo del convenio de Hostelería en Zaragoza para 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Según las tablas salariales 2025 publicadas en BOPZ núm. 84, 13/04/2024, el salario base mensual mínimo es de 1.179,53 € (categoría más baja) y puede llegar hasta 1.562,56 € en las categorías superiores. Son cuantías brutas en 14 pagas."
+        "text": "Las tablas 2025 siguen aplicándose en 2026 por ultraactividad (art. 86.3 ET). Según el texto publicado en BOPZ núm. 84, 13/04/2024, el salario base mensual mínimo es de 1.179,53 € (categoría más baja) y puede llegar hasta 1.562,56 € en las categorías superiores. Son cuantías brutas en 14 pagas."
       }
     },
     {
@@ -143,6 +143,16 @@
     td{padding:12px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);vertical-align:top;}
     td:first-child{font-weight:700;color:var(--ink);white-space:nowrap;}
     td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;}
+    @media (max-width:720px){
+      .tabla-salarios{display:block;}
+      .tabla-salarios thead{display:none;}
+      .tabla-salarios tbody{display:block;}
+      .tabla-salarios tr{display:block;background:var(--cream-50);border:1px solid var(--cream-200);padding:14px 16px;margin-bottom:10px;}
+      .tabla-salarios td{display:block;padding:4px 0;border:none;white-space:normal !important;}
+      .tabla-salarios td:first-child{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);padding-bottom:6px;border-bottom:1px solid var(--cream-200);margin-bottom:6px;white-space:normal;}
+      .tabla-salarios td:nth-child(2){font-size:14px;color:var(--ink);}
+      .tabla-salarios td.sal{text-align:left;font-size:18px;padding-top:6px;}
+    }
     .cta-box{background:var(--ink);padding:28px;text-align:center;margin:32px 0;}
     .cta-box p{color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:14px;}
     .cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:14px 28px;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;}
@@ -176,10 +186,11 @@
 <div class="breadcrumb"><a href="/">SalarioJusto</a> › <a href="/convenios.html">Convenios</a> › Hostelería Zaragoza</div>
 
 <section class="hero">
-  <div class="hero-badge">Tablas salariales 2025</div>
-  <h1>Convenio de <em>Hostelería</em> en Zaragoza</h1>
-  <p class="hero-sub">Tablas oficiales, jornada anual, pagas extras y complementos. BOPZ núm. 84, 13/04/2024. Vigencia 1 enero 2023 – 31 diciembre 2025 (en ultraactividad desde 2026).</p>
-  
+  <div class="hero-badge">Tablas salariales 2025 · vigentes en 2026</div>
+  <h1>Convenio de <em>Hostelería</em> en Zaragoza 2026</h1>
+  <p class="hero-sub">Tablas oficiales, jornada anual, pagas extras y complementos. BOPZ núm. 84, 13/04/2024. Vigencia 1 enero 2023 – 31 diciembre 2025.</p>
+  <div style="display:inline-block;margin-top:18px;padding:8px 16px;background:rgba(193,123,62,0.15);border:1px solid rgba(193,123,62,0.5);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-light);">⚠ Convenio en ultraactividad desde 2026</div>
+  <p style="font-size:13px;color:rgba(255,255,255,0.55);max-width:620px;margin:12px auto 0;line-height:1.6;">El convenio expiró el 31/12/2025 pero las tablas siguen aplicándose por ultraactividad (art. 86.3 ET) mientras se negocia un nuevo texto. No hay incremento automático.</p>
 </section>
 
 <main>
@@ -189,7 +200,7 @@
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-label">Jornada anual</div><div class="stat-value">1776 horas</div></div>
       <div class="stat-item"><div class="stat-label">Pagas al año</div><div class="stat-value">14 pagas</div></div>
-      <div class="stat-item"><div class="stat-label">Vigencia</div><div class="stat-value">1 enero 2023 – 31 diciembre 2025 (en ultraactividad desde 2026)</div></div>
+      <div class="stat-item"><div class="stat-label">Vigencia</div><div class="stat-value">1 enero 2023 – 31 diciembre 2025</div></div>
       <div class="stat-item"><div class="stat-label">Código convenio</div><div class="stat-value" style="font-size:13px;font-family:monospace;">50000655011982</div></div>
     </div>
   </div>
@@ -202,7 +213,7 @@
     <div class="card-title">Tablas salariales 2025 — Zaragoza</div>
     <p style="font-size:13px;color:var(--ink-lighter);margin-bottom:12px;">Salario base mensual bruto en 14 pagas. Cuantías oficiales publicadas en BOPZ núm. 84, 13/04/2024.</p>
     <div style="overflow-x:auto;">
-      <table>
+      <table class="tabla-salarios">
         <thead>
           <tr>
             <th>Nivel</th>
@@ -348,8 +359,8 @@
   </div>
 
   <h2>Preguntas frecuentes</h2>
-  <h3>¿Cuál es el salario mínimo del convenio de Hostelería en Zaragoza para 2025?</h3>
-  <p>Según las tablas salariales 2025 publicadas en BOPZ núm. 84, 13/04/2024, el salario base mensual mínimo es de 1.179,53 € (categoría más baja) y puede llegar hasta 1.562,56 € en las categorías superiores. Son cuantías brutas en 14 pagas.</p>
+  <h3>¿Cuál es el salario mínimo del convenio de Hostelería en Zaragoza para 2026?</h3>
+  <p>Las tablas 2025 siguen aplicándose en 2026 por ultraactividad (art. 86.3 ET). Según el texto publicado en BOPZ núm. 84, 13/04/2024, el salario base mensual mínimo es de 1.179,53 € (categoría más baja) y puede llegar hasta 1.562,56 € en las categorías superiores. Son cuantías brutas en 14 pagas.</p>
 
   <h3>¿Cuántas horas de jornada anual fija el convenio?</h3>
   <p>La jornada anual máxima pactada es de 1776 horas efectivas al año, distribuidas según el calendario laboral del centro de trabajo. Superar esta jornada genera horas extraordinarias con su correspondiente compensación.</p>

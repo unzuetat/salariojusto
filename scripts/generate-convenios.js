@@ -237,6 +237,16 @@ function headCSS() {
     td{padding:12px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);vertical-align:top;}
     td:first-child{font-weight:700;color:var(--ink);white-space:nowrap;}
     td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;}
+    @media (max-width:720px){
+      .tabla-salarios{display:block;}
+      .tabla-salarios thead{display:none;}
+      .tabla-salarios tbody{display:block;}
+      .tabla-salarios tr{display:block;background:var(--cream-50);border:1px solid var(--cream-200);padding:14px 16px;margin-bottom:10px;}
+      .tabla-salarios td{display:block;padding:4px 0;border:none;white-space:normal !important;}
+      .tabla-salarios td:first-child{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);padding-bottom:6px;border-bottom:1px solid var(--cream-200);margin-bottom:6px;white-space:normal;}
+      .tabla-salarios td:nth-child(2){font-size:14px;color:var(--ink);}
+      .tabla-salarios td.sal{text-align:left;font-size:18px;padding-top:6px;}
+    }
     .cta-box{background:var(--ink);padding:28px;text-align:center;margin:32px 0;}
     .cta-box p{color:rgba(255,255,255,0.7);font-size:14px;margin-bottom:14px;}
     .cta-btn{display:inline-block;background:var(--gold);color:#fff;padding:14px 28px;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;}
@@ -333,8 +343,8 @@ function generateConvenioPage(data, meta) {
   // FAQs (salarioMinimo/Maximo ya calculados arriba para title/desc)
   const faqs = [
     {
-      q: `¿Cuál es el salario mínimo del convenio de ${meta.sector} en ${meta.provincia} para ${anyo}?`,
-      a: `Según las tablas salariales ${anyo} publicadas en ${data.bop}, el salario base mensual mínimo es de ${fmtEur(salarioMinimo)} (categoría más baja) y puede llegar hasta ${fmtEur(salarioMaximo)} en las categorías superiores. Son cuantías brutas en ${data.pagas} pagas.`
+      q: `¿Cuál es el salario mínimo del convenio de ${meta.sector} en ${meta.provincia} para ${anyoMostrado}?`,
+      a: `${enUltraactividad ? `Las tablas ${anyo} siguen aplicándose en ${anyoMostrado} por ultraactividad (art. 86.3 ET). Según el texto publicado en ${data.bop}` : `Según las tablas salariales ${anyo} publicadas en ${data.bop}`}, el salario base mensual mínimo es de ${fmtEur(salarioMinimo)} (categoría más baja) y puede llegar hasta ${fmtEur(salarioMaximo)} en las categorías superiores. Son cuantías brutas en ${data.pagas} pagas.`
     },
     {
       q: `¿Cuántas horas de jornada anual fija el convenio?`,
@@ -429,7 +439,7 @@ ${data.notaEditorial ? `
     <div class="card-title">Tablas salariales ${anyo} — ${meta.provincia}</div>
     <p style="font-size:13px;color:var(--ink-lighter);margin-bottom:12px;">Salario base mensual bruto en ${data.pagas} pagas. Cuantías oficiales publicadas en ${data.bop}.</p>
     <div style="overflow-x:auto;">
-      <table>
+      <table class="tabla-salarios">
         <thead>
           <tr>
             <th>Nivel</th>
