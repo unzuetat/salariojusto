@@ -27,7 +27,7 @@
 
 - [Calculadora de salario neto IRPF 2026](https://salariojusto.es/): bruto-a-neto con escalas estatal y autonómica reales (9 CCAA + tarifa foral Bizkaia)
 - [Hub salarial provincial](https://salariojusto.es/salarios.html): índice de convenios y datos salariales agrupados por CCAA y provincia
-- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 28 convenios indexables con tablas salariales oficiales (15 hostelería + 12 limpieza + 1 oficinas)
+- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 29 convenios indexables con tablas salariales oficiales (15 hostelería + 12 limpieza + 1 oficinas + 1 construcción estatal)
 
 ## Convenios provinciales de Limpieza auditados (Sprint 1)
 
