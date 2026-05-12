@@ -27,7 +27,7 @@
 
 - [Calculadora de salario neto IRPF 2026](https://salariojusto.es/): bruto-a-neto con escalas estatal y autonómica reales (9 CCAA + tarifa foral Bizkaia)
 - [Hub salarial provincial](https://salariojusto.es/salarios.html): índice de convenios y datos salariales agrupados por CCAA y provincia
-- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 29 convenios indexables con tablas salariales oficiales (15 hostelería + 12 limpieza + 1 oficinas + 1 construcción estatal)
+- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 30 convenios indexables con tablas salariales oficiales (15 hostelería + 12 limpieza + 1 oficinas + 1 construcción estatal + 1 construcción provincial Bizkaia)
 
 ## Convenios provinciales de Limpieza auditados (Sprint 1)
 
@@ -65,9 +65,13 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 - [Convenio Hostelería Illes Balears](https://salariojusto.es/convenio-hosteleria-baleares.html) (XVII Convenio autonómico, BOIB 154/2025, vigente 1-abr-2025 al 31-mar-2028 con año fiscal abril-marzo, +13,5% cuatrienal acumulado, 6 niveles × 3 categorías establecimiento, 14 pagas + plus desplazamiento, firmado solo FeSMC-UGT sin CCOO)
 - [Convenio Hostelería Valladolid](https://salariojusto.es/convenio-hosteleria-valladolid.html) (BOPVA 247/2021, vigencia excepcional 9 años 2018-2026 con tabla 2026 unificada por equiparación total entre grupos I/II/III de establecimiento, 14 pagas, jornada 1.782 h/año, primer convenio CyL auditado en el sitio, afecta ~10.500 personas)
 
-## Convenios estatales
+## Convenios de Construcción
 
-- [Construcción estatal — suelo salarial](https://salariojusto.es/construccion-estatal-suelo-salarial.html)
+- [Construcción estatal — suelo salarial](https://salariojusto.es/construccion-estatal-suelo-salarial.html): marco general del VII Convenio General Sector Construcción (BOE 23-sept-2023) que sirve de suelo a los convenios provinciales
+- [Convenio Construcción Bizkaia](https://salariojusto.es/convenio-construccion-bizkaia.html) (REGCON 48000715011981, BOB Núm. 242 del 18-dic-2025 + BOB Núm. 21 del 2-feb-2026, vigente 2025-2027 con +3,4% en 2026, jornada 1.700 h/año reducida a 1.696 h/año en 2027, 14 pagas, antigüedad escalada en 9 tramos 5→59%, Etorkizuna EPSV obligatoria 282-440 €/año por persona, indemnización 90.000 € por muerte/IPA/Gran Invalidez por accidente, IRPF foral Bizkaia)
+
+## Otros convenios sectoriales
+
 - [Convenio Oficinas y Despachos Valencia](https://salariojusto.es/convenio-oficinas-valencia.html)
 
 ## Datos de referencia 2026
