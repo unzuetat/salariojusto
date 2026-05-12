@@ -44,7 +44,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110009006533891" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{--cream-50:#FDFBF7;--cream-100:#F7F0E6;--cream-200:#EDE0CE;--gold:#C17B3E;--gold-dark:#A0622A;--gold-light:#D9A06A;--ink:#2D2520;--ink-light:#6B5E52;--ink-lighter:#9B8E88;--green:#2E7D52;--green-bg:#EAF5EE;--red:#B91C1C;--red-bg:#FEE2E2;--amber:#B45309;--amber-bg:#FEF3C7;--blue:#1D4ED8;--blue-bg:#EFF6FF;}
@@ -84,13 +84,16 @@
     h2.section{font-family:'DM Serif Display',serif;font-size:24px;font-weight:400;color:var(--ink);margin:40px 0 6px;padding-top:30px;border-top:2px solid var(--gold);scroll-margin-top:80px;}
     .section-meta{font-size:12px;color:var(--ink-lighter);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:12px;}
     h3.subsection{font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);margin:24px 0 6px;}
-    .table-wrap{overflow-x:auto;margin:12px 0 16px;border:1px solid var(--cream-200);}
+    .table-wrap{overflow-x:auto;margin:12px 0 16px;border:1px solid var(--cream-200);position:relative;-webkit-overflow-scrolling:touch;}
+    .table-wrap::after{content:'';position:sticky;right:0;top:0;display:block;width:24px;height:100%;background:linear-gradient(to right,rgba(0,0,0,0),rgba(45,37,32,0.08));pointer-events:none;margin-left:-24px;}
     table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;}
     thead tr.cat-row th{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);background:var(--cream-100);text-align:center;padding:8px 6px;border-bottom:1px solid var(--cream-200);}
     thead tr.sub-row th{font-size:10px;font-weight:700;color:var(--ink);background:var(--cream-50);text-align:center;padding:6px;border-bottom:2px solid var(--cream-200);}
+    thead tr.cat-row th:first-child,thead tr.sub-row th:first-child{position:sticky;left:0;background:var(--cream-100);z-index:2;text-align:left;}
+    thead tr.sub-row th:first-child{background:var(--cream-50);}
     tbody td{padding:7px 8px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);font-size:12.5px;}
-    tbody td:first-child{font-weight:600;color:var(--ink);text-align:left;min-width:160px;position:sticky;left:0;background:#fff;border-right:1px solid var(--cream-200);}
-    tbody td.num{font-family:'IBM Plex Mono',monospace;font-feature-settings:"tnum";text-align:right;color:var(--ink);font-size:12px;white-space:nowrap;}
+    tbody td:first-child{font-weight:600;color:var(--ink);text-align:left;min-width:140px;max-width:200px;position:sticky;left:0;background:#fff;border-right:1px solid var(--cream-200);z-index:1;}
+    tbody td.num{font-weight:600;color:var(--green);text-align:right;font-variant-numeric:tabular-nums;font-size:12.5px;white-space:nowrap;padding:7px 6px;}
     tbody tr:nth-child(even) td{background:var(--cream-50);}
     tbody tr:nth-child(even) td:first-child{background:var(--cream-50);}
     details{background:var(--cream-50);border:1px solid var(--cream-200);padding:12px 16px;margin:8px 0 18px;font-size:13px;}
@@ -112,7 +115,7 @@
     .related ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;}
     .related a{color:var(--gold-dark);font-weight:500;font-size:14px;}
     .source-footer{font-size:12px;color:var(--ink-lighter);margin-top:8px;}
-    @media(max-width:600px){main{padding:22px 14px 48px;}.card{padding:16px;}thead tr.cat-row th{font-size:9px;padding:6px 4px;}tbody td{padding:6px 5px;font-size:11.5px;}tbody td:first-child{min-width:130px;}}
+    @media(max-width:600px){main{padding:22px 14px 48px;}.card{padding:16px;}thead tr.cat-row th{font-size:9px;padding:6px 4px;}thead tr.sub-row th{padding:4px 3px;font-size:9px;}tbody td{padding:6px 4px;font-size:11px;}tbody td:first-child{min-width:120px;max-width:150px;}tbody td.num{padding:6px 4px;font-size:11px;}}
   </style>
 </head>
 <body>
@@ -257,24 +260,24 @@
         <tr class="sub-row"><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th></tr>
       </thead>
       <tbody>
-        <tr><td>Jefe de Cocina</td><td class="num">493,30</td><td class="num">1.655,53</td><td class="num">461,99</td><td class="num">1.639,56</td><td class="num">456,60</td><td class="num">1.607,69</td><td class="num">456,60</td><td class="num">1.502,31</td><td class="num">456,60</td><td class="num">1.502,31</td></tr>
-        <tr><td>Segundo Jefe de Cocina</td><td class="num">476,07</td><td class="num">1.607,69</td><td class="num">455,03</td><td class="num">1.582,07</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.443,99</td><td class="num">456,60</td><td class="num">1.443,99</td></tr>
-        <tr><td>Jefe de Partida</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,80</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">456,60</td><td class="num">1.438,41</td><td class="num">456,60</td><td class="num">1.438,41</td></tr>
-        <tr><td>Cocinero</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td></tr>
-        <tr><td>Pizzero</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td></tr>
-        <tr><td>Ayudante Cocinero</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
-        <tr><td>Repartidor</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
-        <tr><td>Repostero</td><td class="num">456,60</td><td class="num">1.607,69</td><td class="num">456,60</td><td class="num">1.582,07</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Oficial Repostero</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,80</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Ayudante Repostero</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Cafetero</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Ayudante Cafetero</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Encargado Economato y Bodega</td><td class="num">456,60</td><td class="num">1.607,69</td><td class="num">456,60</td><td class="num">1.582,07</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.438,41</td><td class="num">456,60</td><td class="num">1.438,41</td></tr>
-        <tr><td>Bodeguero</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Ayudante Economato y Bodega</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Marmitón</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Jefe/a de Cocina</td><td class="num">493,30</td><td class="num">1.655,53</td><td class="num">461,99</td><td class="num">1.639,56</td><td class="num">456,60</td><td class="num">1.607,69</td><td class="num">456,60</td><td class="num">1.502,31</td><td class="num">456,60</td><td class="num">1.502,31</td></tr>
+        <tr><td>Segundo/a Jefe/a de Cocina</td><td class="num">476,07</td><td class="num">1.607,69</td><td class="num">455,03</td><td class="num">1.582,07</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.443,99</td><td class="num">456,60</td><td class="num">1.443,99</td></tr>
+        <tr><td>Jefe/a de Partida</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,80</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">456,60</td><td class="num">1.438,41</td><td class="num">456,60</td><td class="num">1.438,41</td></tr>
+        <tr><td>Cocinero/a</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td></tr>
+        <tr><td>Pizzero/a</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td></tr>
+        <tr><td>Ayudante de Cocina</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
+        <tr><td>Repartidor/a</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
+        <tr><td>Repostero/a</td><td class="num">456,60</td><td class="num">1.607,69</td><td class="num">456,60</td><td class="num">1.582,07</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Oficial Repostero/a</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,80</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Ayudante de Repostería</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Cafetero/a</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Ayudante de Cafetería</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Encargado/a de Economato y Bodega</td><td class="num">456,60</td><td class="num">1.607,69</td><td class="num">456,60</td><td class="num">1.582,07</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.438,41</td><td class="num">456,60</td><td class="num">1.438,41</td></tr>
+        <tr><td>Bodeguero/a</td><td class="num">456,60</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Ayudante de Economato y Bodega</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Marmitón/Marmitona</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Pinche</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
-        <tr><td>Fregadores</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
+        <tr><td>Fregadores/as</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.422,42</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
         <tr><td>Personal Platería</td><td class="num">456,60</td><td class="num">1.495,85</td><td class="num">456,60</td><td class="num">1.479,99</td><td class="num">456,60</td><td class="num">1.447,97</td><td class="num">456,60</td><td class="num">1.384,46</td><td class="num">456,60</td><td class="num">1.384,46</td></tr>
         <tr><td>Panadería</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,80</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Aprendiz mayor de 18 años</td><td class="num">219,69</td><td class="num">1.041,83</td><td class="num">219,69</td><td class="num">1.041,83</td><td class="num">219,69</td><td class="num">1.041,83</td><td class="num">219,69</td><td class="num">1.041,83</td><td class="num">219,69</td><td class="num">1.041,83</td></tr>
@@ -291,12 +294,12 @@
         <tr class="sub-row"><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th></tr>
       </thead>
       <tbody>
-        <tr><td>Jefe de Comedor o Maestro</td><td class="num">33,46</td><td class="num">1.655,54</td><td class="num">32,39</td><td class="num">1.644,46</td><td class="num">28,94</td><td class="num">1.607,62</td><td class="num">28,67</td><td class="num">1.502,74</td><td class="num">25,47</td><td class="num">1.502,74</td></tr>
-        <tr><td>Segundo Jefe Comedor</td><td class="num">32,54</td><td class="num">1.607,62</td><td class="num">28,34</td><td class="num">1.582,08</td><td class="num">25,47</td><td class="num">1.559,65</td><td class="num">21,31</td><td class="num">1.438,42</td><td class="num">15,77</td><td class="num">1.438,42</td></tr>
-        <tr><td>Jefe de Sector</td><td class="num">25,49</td><td class="num">1.559,65</td><td class="num">25,47</td><td class="num">1.543,80</td><td class="num">25,47</td><td class="num">1.527,86</td><td class="num">21,31</td><td class="num">1.438,42</td><td class="num">15,77</td><td class="num">1.438,42</td></tr>
-        <tr><td>Camarero</td><td class="num">20,77</td><td class="num">1.511,88</td><td class="num">20,77</td><td class="num">1.496,07</td><td class="num">20,77</td><td class="num">1.463,90</td><td class="num">17,96</td><td class="num">1.406,44</td><td class="num">15,35</td><td class="num">1.406,44</td></tr>
+        <tr><td>Jefe/a de Comedor o Maestro/a</td><td class="num">33,46</td><td class="num">1.655,54</td><td class="num">32,39</td><td class="num">1.644,46</td><td class="num">28,94</td><td class="num">1.607,62</td><td class="num">28,67</td><td class="num">1.502,74</td><td class="num">25,47</td><td class="num">1.502,74</td></tr>
+        <tr><td>Segundo/a Jefe/a de Comedor</td><td class="num">32,54</td><td class="num">1.607,62</td><td class="num">28,34</td><td class="num">1.582,08</td><td class="num">25,47</td><td class="num">1.559,65</td><td class="num">21,31</td><td class="num">1.438,42</td><td class="num">15,77</td><td class="num">1.438,42</td></tr>
+        <tr><td>Jefe/a de Sector</td><td class="num">25,49</td><td class="num">1.559,65</td><td class="num">25,47</td><td class="num">1.543,80</td><td class="num">25,47</td><td class="num">1.527,86</td><td class="num">21,31</td><td class="num">1.438,42</td><td class="num">15,77</td><td class="num">1.438,42</td></tr>
+        <tr><td>Camarero/a</td><td class="num">20,77</td><td class="num">1.511,88</td><td class="num">20,77</td><td class="num">1.496,07</td><td class="num">20,77</td><td class="num">1.463,90</td><td class="num">17,96</td><td class="num">1.406,44</td><td class="num">15,35</td><td class="num">1.406,44</td></tr>
         <tr><td>Sumiller</td><td class="num">20,77</td><td class="num">1.559,65</td><td class="num">20,77</td><td class="num">1.543,80</td><td class="num">20,77</td><td class="num">1.527,86</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Ayudante Camarero</td><td class="num">18,40</td><td class="num">1.479,91</td><td class="num">18,40</td><td class="num">1.463,90</td><td class="num">17,02</td><td class="num">1.447,96</td><td class="num">15,53</td><td class="num">1.384,46</td><td class="num">14,23</td><td class="num">1.384,46</td></tr>
+        <tr><td>Ayudante de Camarero/a</td><td class="num">18,40</td><td class="num">1.479,91</td><td class="num">18,40</td><td class="num">1.463,90</td><td class="num">17,02</td><td class="num">1.447,96</td><td class="num">15,53</td><td class="num">1.384,46</td><td class="num">14,23</td><td class="num">1.384,46</td></tr>
         <tr><td>Aprendiz mayor de 18</td><td class="num">16,43</td><td class="num">1.041,83</td><td class="num">16,43</td><td class="num">1.041,83</td><td class="num">15,24</td><td class="num">1.041,83</td><td class="num">13,80</td><td class="num">1.041,83</td><td class="num">12,64</td><td class="num">1.041,83</td></tr>
         <tr><td>Aprendiz menor de 18</td><td class="num">16,43</td><td class="num">842,55</td><td class="num">16,43</td><td class="num">842,55</td><td class="num">15,24</td><td class="num">842,55</td><td class="num">13,80</td><td class="num">842,55</td><td class="num">12,64</td><td class="num">—</td></tr>
       </tbody>
@@ -313,22 +316,22 @@
       <tbody>
         <tr><td>Contable General</td><td class="num">493,33</td><td class="num">1.655,53</td><td class="num">461,99</td><td class="num">1.639,91</td><td class="num">456,60</td><td class="num">1.607,70</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Oficial Contabilidad</td><td class="num">461,99</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,83</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Cajero Comedor</td><td class="num">461,99</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,83</td><td class="num">456,60</td><td class="num">1.480,00</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Interventor</td><td class="num">461,99</td><td class="num">1.607,70</td><td class="num">456,60</td><td class="num">1.581,99</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Cajero/a de Comedor</td><td class="num">461,99</td><td class="num">1.511,88</td><td class="num">456,60</td><td class="num">1.495,83</td><td class="num">456,60</td><td class="num">1.480,00</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Interventor/a</td><td class="num">461,99</td><td class="num">1.607,70</td><td class="num">456,60</td><td class="num">1.581,99</td><td class="num">456,60</td><td class="num">1.559,76</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Telefonista 1.º</td><td class="num">461,99</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,83</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Telefonista 2.º</td><td class="num">461,99</td><td class="num">1.480,00</td><td class="num">456,60</td><td class="num">1.463,98</td><td class="num">456,60</td><td class="num">1.448,00</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Auxiliar Oficinas</td><td class="num">461,99</td><td class="num">1.480,00</td><td class="num">456,60</td><td class="num">1.463,98</td><td class="num">456,60</td><td class="num">1.448,00</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Portero Servicios</td><td class="num">461,99</td><td class="num">1.480,00</td><td class="num">456,60</td><td class="num">1.463,98</td><td class="num">456,60</td><td class="num">1.448,00</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Encargada Lencería</td><td class="num">461,99</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,83</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Portero de Acceso</td><td class="num">18,83</td><td class="num">1.422,45</td><td class="num">18,83</td><td class="num">1.422,45</td><td class="num">18,83</td><td class="num">1.422,45</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Portero/a de Servicios</td><td class="num">461,99</td><td class="num">1.480,00</td><td class="num">456,60</td><td class="num">1.463,98</td><td class="num">456,60</td><td class="num">1.448,00</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Encargado/a de Lencería</td><td class="num">461,99</td><td class="num">1.559,76</td><td class="num">456,60</td><td class="num">1.543,83</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">456,60</td><td class="num">1.527,82</td><td class="num">—</td><td class="num">—</td></tr>
+        <tr><td>Portero/a de Acceso</td><td class="num">18,83</td><td class="num">1.422,45</td><td class="num">18,83</td><td class="num">1.422,45</td><td class="num">18,83</td><td class="num">1.422,45</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Vigilante de Noche</td><td class="num">20,94</td><td class="num">1.422,45</td><td class="num">20,94</td><td class="num">1.422,45</td><td class="num">20,94</td><td class="num">1.422,45</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Botones mayor de 18</td><td class="num">16,29</td><td class="num">1.422,45</td><td class="num">16,29</td><td class="num">1.422,45</td><td class="num">16,29</td><td class="num">1.422,45</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Botones menor de 18</td><td class="num">—</td><td class="num">1.041,83</td><td class="num">—</td><td class="num">1.041,83</td><td class="num">—</td><td class="num">1.041,83</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
-        <tr><td>Planchadora Diario</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
-        <tr><td>Costurera Zurcidora</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
-        <tr><td>Lavandera-Lencera</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
-        <tr><td>Limpiadora (jornada entera)</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
-        <tr><td>Limpiadora (media jornada)</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td></tr>
+        <tr><td>Planchador/a Diario</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
+        <tr><td>Costurero/a y Zurcidor/a</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
+        <tr><td>Lavandero/a y Lencero/a</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
+        <tr><td>Limpiador/a (jornada entera)</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td><td class="num">20,44</td><td class="num">1.422,45</td></tr>
+        <tr><td>Limpiador/a (media jornada)</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td><td class="num">—</td><td class="num">711,32</td></tr>
         <tr><td>Aprendiz mayor de 18</td><td class="num">208,91</td><td class="num">1.041,83</td><td class="num">208,91</td><td class="num">1.041,83</td><td class="num">208,91</td><td class="num">1.041,83</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
         <tr><td>Aprendiz menor de 18</td><td class="num">208,91</td><td class="num">842,54</td><td class="num">208,91</td><td class="num">842,54</td><td class="num">208,91</td><td class="num">842,54</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
       </tbody>
@@ -343,10 +346,10 @@
       <table>
         <thead><tr class="cat-row"><th rowspan="2">Categoría</th><th colspan="2">Lujo</th><th colspan="2">Primera</th><th colspan="2">Segunda</th><th colspan="2">Tercera</th><th colspan="2">Cuarta</th></tr><tr class="sub-row"><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th></tr></thead>
         <tbody>
-          <tr><td>Jefe de Cocina</td><td class="num">483,63</td><td class="num">1.623,07</td><td class="num">452,93</td><td class="num">1.607,41</td><td class="num">447,65</td><td class="num">1.576,17</td><td class="num">447,65</td><td class="num">1.472,85</td><td class="num">447,65</td><td class="num">1.472,85</td></tr>
-          <tr><td>Segundo Jefe de Cocina</td><td class="num">466,74</td><td class="num">1.576,17</td><td class="num">446,11</td><td class="num">1.551,05</td><td class="num">447,65</td><td class="num">1.529,18</td><td class="num">447,65</td><td class="num">1.415,68</td><td class="num">447,65</td><td class="num">1.415,68</td></tr>
-          <tr><td>Cocinero</td><td class="num">447,65</td><td class="num">1.482,24</td><td class="num">447,65</td><td class="num">1.466,52</td><td class="num">447,65</td><td class="num">1.450,97</td><td class="num">447,65</td><td class="num">1.394,53</td><td class="num">447,65</td><td class="num">1.394,53</td></tr>
-          <tr><td>Ayudante Cocinero</td><td class="num">447,65</td><td class="num">1.466,52</td><td class="num">447,65</td><td class="num">1.450,97</td><td class="num">447,65</td><td class="num">1.419,58</td><td class="num">447,65</td><td class="num">1.357,32</td><td class="num">447,65</td><td class="num">1.357,32</td></tr>
+          <tr><td>Jefe/a de Cocina</td><td class="num">483,63</td><td class="num">1.623,07</td><td class="num">452,93</td><td class="num">1.607,41</td><td class="num">447,65</td><td class="num">1.576,17</td><td class="num">447,65</td><td class="num">1.472,85</td><td class="num">447,65</td><td class="num">1.472,85</td></tr>
+          <tr><td>Segundo/a Jefe/a de Cocina</td><td class="num">466,74</td><td class="num">1.576,17</td><td class="num">446,11</td><td class="num">1.551,05</td><td class="num">447,65</td><td class="num">1.529,18</td><td class="num">447,65</td><td class="num">1.415,68</td><td class="num">447,65</td><td class="num">1.415,68</td></tr>
+          <tr><td>Cocinero/a</td><td class="num">447,65</td><td class="num">1.482,24</td><td class="num">447,65</td><td class="num">1.466,52</td><td class="num">447,65</td><td class="num">1.450,97</td><td class="num">447,65</td><td class="num">1.394,53</td><td class="num">447,65</td><td class="num">1.394,53</td></tr>
+          <tr><td>Ayudante de Cocina</td><td class="num">447,65</td><td class="num">1.466,52</td><td class="num">447,65</td><td class="num">1.450,97</td><td class="num">447,65</td><td class="num">1.419,58</td><td class="num">447,65</td><td class="num">1.357,32</td><td class="num">447,65</td><td class="num">1.357,32</td></tr>
           <tr><td>Pinche</td><td class="num">447,65</td><td class="num">1.394,53</td><td class="num">447,65</td><td class="num">1.394,53</td><td class="num">447,65</td><td class="num">1.394,53</td><td class="num">447,65</td><td class="num">1.357,32</td><td class="num">447,65</td><td class="num">1.357,32</td></tr>
           <tr><td>Aprendiz mayor de 18</td><td class="num">215,38</td><td class="num">1.021,40</td><td class="num">215,38</td><td class="num">1.021,40</td><td class="num">215,38</td><td class="num">1.021,40</td><td class="num">215,38</td><td class="num">1.021,40</td><td class="num">215,38</td><td class="num">1.021,40</td></tr>
         </tbody>
@@ -370,9 +373,9 @@
         <tr class="sub-row"><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th></tr>
       </thead>
       <tbody>
-        <tr><td>Primer Encargado</td><td class="num">502,55</td><td class="num">1.655,53</td><td class="num">486,07</td><td class="num">1.639,54</td><td class="num">486,07</td><td class="num">1.607,70</td></tr>
-        <tr><td>Segundo Encargado</td><td class="num">486,07</td><td class="num">1.607,70</td><td class="num">458,49</td><td class="num">1.561,55</td><td class="num">421,74</td><td class="num">1.559,80</td></tr>
-        <tr><td>Dependiente</td><td class="num">158,41</td><td class="num">1.559,80</td><td class="num">421,74</td><td class="num">1.543,82</td><td class="num">403,42</td><td class="num">1.527,80</td></tr>
+        <tr><td>Primer/a Encargado/a</td><td class="num">502,55</td><td class="num">1.655,53</td><td class="num">486,07</td><td class="num">1.639,54</td><td class="num">486,07</td><td class="num">1.607,70</td></tr>
+        <tr><td>Segundo/a Encargado/a</td><td class="num">486,07</td><td class="num">1.607,70</td><td class="num">458,49</td><td class="num">1.561,55</td><td class="num">421,74</td><td class="num">1.559,80</td></tr>
+        <tr><td>Dependiente/a</td><td class="num">158,41</td><td class="num">1.559,80</td><td class="num">421,74</td><td class="num">1.543,82</td><td class="num">403,42</td><td class="num">1.527,80</td></tr>
         <tr><td>Ayudante</td><td class="num">358,69</td><td class="num">1.480,00</td><td class="num">348,79</td><td class="num">1.463,99</td><td class="num">337,06</td><td class="num">1.448,00</td></tr>
         <tr><td>Auxiliar de Caja</td><td class="num">358,69</td><td class="num">1.511,89</td><td class="num">348,79</td><td class="num">1.495,83</td><td class="num">337,06</td><td class="num">1.464,01</td></tr>
       </tbody>
@@ -387,22 +390,22 @@
         <tr class="sub-row"><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th></tr>
       </thead>
       <tbody>
-        <tr><td>Cocinero</td><td class="num">458,41</td><td class="num">1.511,89</td><td class="num">421,74</td><td class="num">1.495,83</td><td class="num">403,42</td><td class="num">1.480,01</td></tr>
-        <tr><td>Ayudante Cocinero</td><td class="num">358,69</td><td class="num">1.480,00</td><td class="num">348,79</td><td class="num">1.463,99</td><td class="num">337,06</td><td class="num">1.448,00</td></tr>
-        <tr><td>Repostero</td><td class="num">455,02</td><td class="num">1.607,70</td><td class="num">418,41</td><td class="num">1.561,55</td><td class="num">390,06</td><td class="num">1.559,80</td></tr>
-        <tr><td>Ayudante Repostero</td><td class="num">348,79</td><td class="num">1.480,00</td><td class="num">337,06</td><td class="num">1.463,99</td><td class="num">328,71</td><td class="num">1.448,00</td></tr>
-        <tr><td>Cafetero</td><td class="num">455,02</td><td class="num">1.511,89</td><td class="num">418,41</td><td class="num">1.495,83</td><td class="num">391,51</td><td class="num">1.480,01</td></tr>
-        <tr><td>Ayudante Cafetero</td><td class="num">348,79</td><td class="num">1.480,00</td><td class="num">337,06</td><td class="num">1.463,99</td><td class="num">328,71</td><td class="num">1.448,00</td></tr>
-        <tr><td>Encargado Almacén</td><td class="num">372,03</td><td class="num">1.607,70</td><td class="num">372,03</td><td class="num">1.561,55</td><td class="num">348,79</td><td class="num">1.559,80</td></tr>
-        <tr><td>Mozo Almacén</td><td class="num">308,79</td><td class="num">1.480,00</td><td class="num">308,79</td><td class="num">1.463,99</td><td class="num">308,79</td><td class="num">1.448,00</td></tr>
+        <tr><td>Cocinero/a</td><td class="num">458,41</td><td class="num">1.511,89</td><td class="num">421,74</td><td class="num">1.495,83</td><td class="num">403,42</td><td class="num">1.480,01</td></tr>
+        <tr><td>Ayudante de Cocina</td><td class="num">358,69</td><td class="num">1.480,00</td><td class="num">348,79</td><td class="num">1.463,99</td><td class="num">337,06</td><td class="num">1.448,00</td></tr>
+        <tr><td>Repostero/a</td><td class="num">455,02</td><td class="num">1.607,70</td><td class="num">418,41</td><td class="num">1.561,55</td><td class="num">390,06</td><td class="num">1.559,80</td></tr>
+        <tr><td>Ayudante de Repostería</td><td class="num">348,79</td><td class="num">1.480,00</td><td class="num">337,06</td><td class="num">1.463,99</td><td class="num">328,71</td><td class="num">1.448,00</td></tr>
+        <tr><td>Cafetero/a</td><td class="num">455,02</td><td class="num">1.511,89</td><td class="num">418,41</td><td class="num">1.495,83</td><td class="num">391,51</td><td class="num">1.480,01</td></tr>
+        <tr><td>Ayudante de Cafetería</td><td class="num">348,79</td><td class="num">1.480,00</td><td class="num">337,06</td><td class="num">1.463,99</td><td class="num">328,71</td><td class="num">1.448,00</td></tr>
+        <tr><td>Encargado/a de Almacén</td><td class="num">372,03</td><td class="num">1.607,70</td><td class="num">372,03</td><td class="num">1.561,55</td><td class="num">348,79</td><td class="num">1.559,80</td></tr>
+        <tr><td>Mozo/a de Almacén</td><td class="num">308,79</td><td class="num">1.480,00</td><td class="num">308,79</td><td class="num">1.463,99</td><td class="num">308,79</td><td class="num">1.448,00</td></tr>
         <tr><td>Planchista</td><td class="num">458,41</td><td class="num">1.511,89</td><td class="num">421,74</td><td class="num">1.495,83</td><td class="num">403,42</td><td class="num">1.480,01</td></tr>
         <tr><td>Ayudante Planchista</td><td class="num">358,69</td><td class="num">1.480,00</td><td class="num">348,79</td><td class="num">1.463,99</td><td class="num">337,06</td><td class="num">1.448,00</td></tr>
         <tr><td>Telefonista</td><td class="num">278,97</td><td class="num">1.480,00</td><td class="num">259,04</td><td class="num">1.463,99</td><td class="num">242,45</td><td class="num">1.448,00</td></tr>
-        <tr><td>Mecánico Calefactor</td><td class="num">337,04</td><td class="num">1.511,89</td><td class="num">323,72</td><td class="num">1.495,83</td><td class="num">308,76</td><td class="num">1.480,01</td></tr>
-        <tr><td>Portero</td><td class="num">348,79</td><td class="num">1.480,00</td><td class="num">337,06</td><td class="num">1.463,99</td><td class="num">328,71</td><td class="num">1.448,00</td></tr>
-        <tr><td>Fregadora-Limpiadora</td><td class="num">220,50</td><td class="num">1.454,46</td><td class="num">220,50</td><td class="num">1.454,46</td><td class="num">220,51</td><td class="num">1.454,46</td></tr>
+        <tr><td>Mecánico/a Calefactor/a</td><td class="num">337,04</td><td class="num">1.511,89</td><td class="num">323,72</td><td class="num">1.495,83</td><td class="num">308,76</td><td class="num">1.480,01</td></tr>
+        <tr><td>Portero/a</td><td class="num">348,79</td><td class="num">1.480,00</td><td class="num">337,06</td><td class="num">1.463,99</td><td class="num">328,71</td><td class="num">1.448,00</td></tr>
+        <tr><td>Fregador/a y Limpiador/a</td><td class="num">220,50</td><td class="num">1.454,46</td><td class="num">220,50</td><td class="num">1.454,46</td><td class="num">220,51</td><td class="num">1.454,46</td></tr>
         <tr><td>Contable</td><td class="num">418,55</td><td class="num">1.655,53</td><td class="num">406,62</td><td class="num">1.639,54</td><td class="num">378,62</td><td class="num">1.607,70</td></tr>
-        <tr><td>Cajero</td><td class="num">348,79</td><td class="num">1.607,70</td><td class="num">337,06</td><td class="num">1.561,55</td><td class="num">328,71</td><td class="num">1.559,80</td></tr>
+        <tr><td>Cajero/a</td><td class="num">348,79</td><td class="num">1.607,70</td><td class="num">337,06</td><td class="num">1.561,55</td><td class="num">328,71</td><td class="num">1.559,80</td></tr>
         <tr><td>Oficial Contabilidad</td><td class="num">348,79</td><td class="num">1.559,80</td><td class="num">337,06</td><td class="num">1.543,82</td><td class="num">328,71</td><td class="num">1.527,81</td></tr>
         <tr><td>Auxiliar</td><td class="num">328,71</td><td class="num">1.480,00</td><td class="num">308,76</td><td class="num">1.463,99</td><td class="num">271,53</td><td class="num">1.448,00</td></tr>
         <tr><td>Aprendiz mayor de 18</td><td class="num">195,15</td><td class="num">1.041,83</td><td class="num">179,34</td><td class="num">1.041,83</td><td class="num">172,65</td><td class="num">1.041,83</td></tr>
@@ -428,8 +431,8 @@
       <thead><tr class="cat-row"><th>Categoría profesional</th><th>Inicial</th><th>Garantizado</th></tr></thead>
       <tbody>
         <tr><td>Barman</td><td class="num">34,85</td><td class="num">1.655,53</td></tr>
-        <tr><td>Segundo Barman</td><td class="num">29,08</td><td class="num">1.607,70</td></tr>
-        <tr><td>Ayudante Barman</td><td class="num">23,80</td><td class="num">1.559,76</td></tr>
+        <tr><td>Segundo/a Barman</td><td class="num">29,08</td><td class="num">1.607,70</td></tr>
+        <tr><td>Ayudante de Barman</td><td class="num">23,80</td><td class="num">1.559,76</td></tr>
         <tr><td>Aprendiz mayor de 18</td><td class="num">16,44</td><td class="num">1.041,83</td></tr>
         <tr><td>Aprendiz menor de 18</td><td class="num">16,44</td><td class="num">842,55</td></tr>
       </tbody>
@@ -444,9 +447,9 @@
         <tr class="sub-row"><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th><th>I</th><th>G</th></tr>
       </thead>
       <tbody>
-        <tr><td>Jefe de Sala</td><td class="num">34,98</td><td class="num">1.655,53</td><td class="num">31,78</td><td class="num">1.639,54</td><td class="num">31,78</td><td class="num">1.607,70</td><td class="num">31,78</td><td class="num">1.607,70</td><td class="num">31,78</td><td class="num">1.607,70</td></tr>
-        <tr><td>Camarero</td><td class="num">22,69</td><td class="num">1.511,88</td><td class="num">20,94</td><td class="num">1.495,83</td><td class="num">18,90</td><td class="num">1.480,00</td><td class="num">17,58</td><td class="num">1.480,00</td><td class="num">16,19</td><td class="num">1.480,00</td></tr>
-        <tr><td>Ayudante Camarero</td><td class="num">17,58</td><td class="num">1.480,00</td><td class="num">16,92</td><td class="num">1.463,98</td><td class="num">15,64</td><td class="num">1.448,00</td><td class="num">14,38</td><td class="num">1.448,00</td><td class="num">12,71</td><td class="num">1.448,00</td></tr>
+        <tr><td>Jefe/a de Sala</td><td class="num">34,98</td><td class="num">1.655,53</td><td class="num">31,78</td><td class="num">1.639,54</td><td class="num">31,78</td><td class="num">1.607,70</td><td class="num">31,78</td><td class="num">1.607,70</td><td class="num">31,78</td><td class="num">1.607,70</td></tr>
+        <tr><td>Camarero/a</td><td class="num">22,69</td><td class="num">1.511,88</td><td class="num">20,94</td><td class="num">1.495,83</td><td class="num">18,90</td><td class="num">1.480,00</td><td class="num">17,58</td><td class="num">1.480,00</td><td class="num">16,19</td><td class="num">1.480,00</td></tr>
+        <tr><td>Ayudante de Camarero/a</td><td class="num">17,58</td><td class="num">1.480,00</td><td class="num">16,92</td><td class="num">1.463,98</td><td class="num">15,64</td><td class="num">1.448,00</td><td class="num">14,38</td><td class="num">1.448,00</td><td class="num">12,71</td><td class="num">1.448,00</td></tr>
       </tbody>
     </table>
   </div>
@@ -456,10 +459,10 @@
     <table>
       <thead><tr class="cat-row"><th>Categoría</th><th>Especial</th><th>Primera</th><th>Segunda</th><th>Tercera</th><th>Cuarta</th></tr></thead>
       <tbody>
-        <tr><td>Primer Encargado Mostrador</td><td class="num">1.655,53</td><td class="num">1.639,54</td><td class="num">1.607,70</td><td class="num">1.607,70</td><td class="num">1.607,70</td></tr>
-        <tr><td>Segundo Encargado Mostrador</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
-        <tr><td>Dependiente de Primera</td><td class="num">1.559,76</td><td class="num">1.543,83</td><td class="num">1.527,82</td><td class="num">1.527,82</td><td class="num">1.527,82</td></tr>
-        <tr><td>Dependiente de Segunda</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
+        <tr><td>Primer/a Encargado/a de Mostrador</td><td class="num">1.655,53</td><td class="num">1.639,54</td><td class="num">1.607,70</td><td class="num">1.607,70</td><td class="num">1.607,70</td></tr>
+        <tr><td>Segundo/a Encargado/a de Mostrador</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
+        <tr><td>Dependiente/a de Primera</td><td class="num">1.559,76</td><td class="num">1.543,83</td><td class="num">1.527,82</td><td class="num">1.527,82</td><td class="num">1.527,82</td></tr>
+        <tr><td>Dependiente/a de Segunda</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
       </tbody>
     </table>
   </div>
@@ -470,24 +473,24 @@
       <thead><tr class="cat-row"><th>Categoría</th><th>Especial</th><th>Primera</th><th>Segunda</th><th>Tercera</th><th>Cuarta</th></tr></thead>
       <tbody>
         <tr><td>Contable</td><td class="num">1.655,53</td><td class="num">1.639,54</td><td class="num">1.607,70</td><td class="num">1.607,70</td><td class="num">1.607,70</td></tr>
-        <tr><td>Cajero</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
+        <tr><td>Cajero/a</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
         <tr><td>Auxiliar Caja</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
         <tr><td>Oficial Contabilidad</td><td class="num">1.559,76</td><td class="num">1.543,83</td><td class="num">1.527,82</td><td class="num">1.527,82</td><td class="num">1.527,82</td></tr>
         <tr><td>Auxiliar de Oficinas</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
-        <tr><td>Jefe de Cocina</td><td class="num">1.655,53</td><td class="num">1.639,54</td><td class="num">1.607,70</td><td class="num">1.607,70</td><td class="num">1.607,70</td></tr>
-        <tr><td>Cocinero</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
-        <tr><td>Ayudante de Cocinero</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
-        <tr><td>Repostero</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
-        <tr><td>Oficial Repostero</td><td class="num">1.559,76</td><td class="num">1.543,83</td><td class="num">1.527,82</td><td class="num">1.527,82</td><td class="num">1.527,82</td></tr>
-        <tr><td>Ayudante Repostero</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
-        <tr><td>Cafetero</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
-        <tr><td>Bodeguero</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
-        <tr><td>Encargado Almacén</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
-        <tr><td>Mozo de Almacén</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
-        <tr><td>Mecánico Calefactor</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
-        <tr><td>Portero</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.480,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
+        <tr><td>Jefe/a de Cocina</td><td class="num">1.655,53</td><td class="num">1.639,54</td><td class="num">1.607,70</td><td class="num">1.607,70</td><td class="num">1.607,70</td></tr>
+        <tr><td>Cocinero/a</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
+        <tr><td>Ayudante de Cocina</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
+        <tr><td>Repostero/a</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
+        <tr><td>Oficial Repostero/a</td><td class="num">1.559,76</td><td class="num">1.543,83</td><td class="num">1.527,82</td><td class="num">1.527,82</td><td class="num">1.527,82</td></tr>
+        <tr><td>Ayudante de Repostería</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
+        <tr><td>Cafetero/a</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
+        <tr><td>Bodeguero/a</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
+        <tr><td>Encargado/a de Almacén</td><td class="num">1.607,70</td><td class="num">1.582,16</td><td class="num">1.559,76</td><td class="num">1.559,76</td><td class="num">1.559,76</td></tr>
+        <tr><td>Mozo/a de Almacén</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.448,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
+        <tr><td>Mecánico/a Calefactor/a</td><td class="num">1.511,88</td><td class="num">1.495,83</td><td class="num">1.480,00</td><td class="num">1.480,00</td><td class="num">1.480,00</td></tr>
+        <tr><td>Portero/a</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.480,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
         <tr><td>Telefonista</td><td class="num">1.480,00</td><td class="num">1.463,98</td><td class="num">1.480,00</td><td class="num">1.448,00</td><td class="num">1.448,00</td></tr>
-        <tr><td>Vigilante Noche y Fregadores</td><td class="num">1.454,46</td><td class="num">1.454,46</td><td class="num">1.454,46</td><td class="num">1.454,46</td><td class="num">1.454,46</td></tr>
+        <tr><td>Vigilante de Noche y Fregadores/as</td><td class="num">1.454,46</td><td class="num">1.454,46</td><td class="num">1.454,46</td><td class="num">1.454,46</td><td class="num">1.454,46</td></tr>
       </tbody>
     </table>
   </div>
@@ -520,19 +523,19 @@
     <table>
       <thead><tr class="cat-row"><th>Categoría profesional</th><th>Salario Base 2026</th><th>Salario Base 2025</th></tr></thead>
       <tbody>
-        <tr><td>Jefe de Sala</td><td class="num">1.751,52</td><td class="num">1.717,17</td></tr>
-        <tr><td>Segundo Jefe de Sala</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
-        <tr><td>Jefe de Rango</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
+        <tr><td>Jefe/a de Sala</td><td class="num">1.751,52</td><td class="num">1.717,17</td></tr>
+        <tr><td>Segundo/a Jefe/a de Sala</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
+        <tr><td>Jefe/a de Rango</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
         <tr><td>Ayudante</td><td class="num">1.591,65</td><td class="num">1.560,44</td></tr>
         <tr><td>Ayudante Casado</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
-        <tr><td>Primer Barman</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
-        <tr><td>Segundo Barman</td><td class="num">1.509,64</td><td class="num">1.480,04</td></tr>
-        <tr><td>Limpiadora</td><td class="num">1.591,65</td><td class="num">1.560,44</td></tr>
-        <tr><td>Portero</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
-        <tr><td>Cajero</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
+        <tr><td>Primer/a Barman</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
+        <tr><td>Segundo/a Barman</td><td class="num">1.509,64</td><td class="num">1.480,04</td></tr>
+        <tr><td>Limpiador/a</td><td class="num">1.591,65</td><td class="num">1.560,44</td></tr>
+        <tr><td>Portero/a</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
+        <tr><td>Cajero/a</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
         <tr><td>Contable</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
-        <tr><td>Bodeguero</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
-        <tr><td>Repostero</td><td class="num">1.591,65</td><td class="num">1.560,44</td></tr>
+        <tr><td>Bodeguero/a</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
+        <tr><td>Repostero/a</td><td class="num">1.591,65</td><td class="num">1.560,44</td></tr>
         <tr><td>Electricista</td><td class="num">1.683,39</td><td class="num">1.650,38</td></tr>
         <tr><td>Taquillero</td><td class="num">1.621,35</td><td class="num">1.589,56</td></tr>
         <tr><td>Vigilante de Noche</td><td class="num">1.598,56</td><td class="num">1.598,56</td></tr>
@@ -551,8 +554,8 @@
     <table>
       <thead><tr class="cat-row"><th>Categoría profesional</th><th>Salario Base 2026</th><th>Salario Base 2025</th></tr></thead>
       <tbody>
-        <tr><td>Dependiente de Primera</td><td class="num">1.225,68</td><td class="num">1.201,65</td></tr>
-        <tr><td>Dependiente de Segunda</td><td class="num">1.225,68</td><td class="num">1.201,65</td></tr>
+        <tr><td>Dependiente/a de Primera</td><td class="num">1.225,68</td><td class="num">1.201,65</td></tr>
+        <tr><td>Dependiente/a de Segunda</td><td class="num">1.225,68</td><td class="num">1.201,65</td></tr>
         <tr><td>Aprendiz mayor de 18 años</td><td class="num">1.041,83</td><td class="num">1.021,40</td></tr>
         <tr><td>Aprendiz menor de 18 años</td><td class="num">852,19</td><td class="num">835,48</td></tr>
       </tbody>
@@ -571,8 +574,8 @@
     <table>
       <thead><tr class="cat-row"><th>Categoría profesional</th><th>1.ª y 2.ª</th><th>3.ª y 4.ª</th></tr></thead>
       <tbody>
-        <tr><td>Jefe de Primera</td><td class="num">1.582,40</td><td class="num">1.532,58</td></tr>
-        <tr><td>Jefe de Segunda</td><td class="num">1.532,58</td><td class="num">1.500,67</td></tr>
+        <tr><td>Jefe/a de Primera</td><td class="num">1.582,40</td><td class="num">1.532,58</td></tr>
+        <tr><td>Jefe/a de Segunda</td><td class="num">1.532,58</td><td class="num">1.500,67</td></tr>
         <tr><td>Oficial Primera</td><td class="num">1.513,23</td><td class="num">1.487,48</td></tr>
         <tr><td>Oficial Segunda</td><td class="num">1.487,48</td><td class="num">1.468,74</td></tr>
         <tr><td>Auxiliar</td><td class="num">1.455,81</td><td class="num">1.437,31</td></tr>
@@ -586,16 +589,16 @@
     <table>
       <thead><tr class="cat-row"><th>Categoría profesional</th><th>1.ª y 2.ª</th><th>3.ª y 4.ª</th></tr></thead>
       <tbody>
-        <tr><td>Cobrador</td><td class="num">1.487,48</td><td class="num">1.468,73</td></tr>
+        <tr><td>Cobrador/a</td><td class="num">1.487,48</td><td class="num">1.468,73</td></tr>
         <tr><td>Conserje</td><td class="num">1.543,80</td><td class="num">1.511,88</td></tr>
         <tr><td>Telefonista</td><td class="num">1.450,09</td><td class="num">1.437,31</td></tr>
-        <tr><td>Portero</td><td class="num">1.532,61</td><td class="num">1.468,73</td></tr>
+        <tr><td>Portero/a</td><td class="num">1.532,61</td><td class="num">1.468,73</td></tr>
         <tr><td>Ordenanza Salón</td><td class="num">1.532,61</td><td class="num">1.468,73</td></tr>
         <tr><td>Jardinero</td><td class="num">1.532,61</td><td class="num">1.468,73</td></tr>
         <tr><td>Vigilante de Noche</td><td class="num">1.532,61</td><td class="num">1.468,73</td></tr>
         <tr><td>Botones 18 años</td><td class="num">1.532,61</td><td class="num">1.468,73</td></tr>
-        <tr><td>Limpiadora Jornada Completa</td><td class="num">1.422,43</td><td class="num">1.422,43</td></tr>
-        <tr><td>Limpiadora Media Jornada</td><td class="num">1.040,03</td><td class="num">1.040,03</td></tr>
+        <tr><td>Limpiador/a Jornada Completa</td><td class="num">1.422,43</td><td class="num">1.422,43</td></tr>
+        <tr><td>Limpiador/a Media Jornada</td><td class="num">1.040,03</td><td class="num">1.040,03</td></tr>
       </tbody>
     </table>
   </div>
@@ -615,8 +618,8 @@
     <table>
       <thead><tr class="cat-row"><th>Categoría profesional</th><th>Inicial 2026</th><th>Garantizado 2026</th><th>Fijo 2026</th><th>Garantizado 2025</th></tr></thead>
       <tbody>
-        <tr><td>Encargado de Sala</td><td class="num">27,63</td><td class="num">1.546,19</td><td class="num">1.546,19</td><td class="num">1.515,87</td></tr>
-        <tr><td>Mozo de Billar o Salón</td><td class="num">18,09</td><td class="num">1.455,96</td><td class="num">1.455,96</td><td class="num">1.427,41</td></tr>
+        <tr><td>Encargado/a de Sala</td><td class="num">27,63</td><td class="num">1.546,19</td><td class="num">1.546,19</td><td class="num">1.515,87</td></tr>
+        <tr><td>Mozo/a de Billar o Salón</td><td class="num">18,09</td><td class="num">1.455,96</td><td class="num">1.455,96</td><td class="num">1.427,41</td></tr>
         <tr><td>Ayudante</td><td class="num">17,55</td><td class="num">1.402,51</td><td class="num">1.402,51</td><td class="num">1.375,01</td></tr>
         <tr><td>Botones / Aprendiz mayor de 18</td><td class="num">—</td><td class="num">1.415,86</td><td class="num">—</td><td class="num">1.388,10</td></tr>
       </tbody>
