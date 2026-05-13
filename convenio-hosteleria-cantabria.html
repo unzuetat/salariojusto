@@ -162,6 +162,20 @@
     .source-footer{font-size:12px;color:var(--ink-lighter);margin-top:8px;}
     .quote{background:var(--cream-50);border-left:3px solid var(--gold-light);padding:12px 16px;margin:14px 0;font-style:italic;font-size:14px;color:var(--ink-light);}
     @media(max-width:600px){main{padding:24px 16px 48px;}.card{padding:18px;}th,td{padding:8px 5px;font-size:12px;}}
+    .callout-comp-tabla{margin:14px 0;}
+    .callout-comp-tabla table{width:100%;border-collapse:collapse;font-size:14px;margin:0;}
+    .callout-comp-tabla th{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);text-align:left;padding:10px 8px;border-bottom:2px solid var(--cream-200);background:var(--cream-50);}
+    .callout-comp-tabla td{padding:12px 8px;border-bottom:1px solid var(--cream-100);color:var(--ink);vertical-align:top;font-size:14px;}
+    .callout-comp-tabla td:first-child{font-weight:600;}
+    .callout-comp-tabla__own{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__media{color:var(--ink-light);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__pos{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .callout-comp-tabla__pos--pos{color:var(--green);}
+    .callout-comp-tabla__pos--neg{color:var(--amber);}
+    .callout-comp-tabla__pos--neutral{color:var(--ink-lighter);}
+    .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
+    .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
+    .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
   </style>
 </head>
 <body>
@@ -348,6 +362,52 @@
 
   <h2>Subrogación: cambio de empresa sin perder derechos</h2>
   <p>El convenio incorpora la garantía de estabilidad: el cambio en la titularidad de la empresa, centro de trabajo o unidad productiva autónoma <strong>no extingue por sí mismo la relación laboral</strong>; el nuevo empresario queda subrogado en todos los derechos y obligaciones del anterior. Cedente y cesionario responden solidariamente durante 3 años de las obligaciones laborales nacidas con anterioridad a la transmisión que no hubieran sido satisfechas. Este principio aplica también a subastas y concesiones administrativas, incluso cuando intervienen sociedades mercantiles participadas en más de un 50% por el sector público.</p>
+
+  <!-- CALLOUTS:START -->
+<h2>Cantabria frente a otras provincias del sector</h2>
+<p>Comparamos las cifras clave de Cantabria con las 8 provincias auditadas en el pilar de Hostelería. Estas referencias son útiles si negocias subida, contrato nuevo o cambias de provincia.</p>
+<div class="callout-comp-tabla">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Dimensión</th>
+          <th>Cantabria</th>
+          <th>Media del corpus</th>
+          <th>Posición</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jornada anual</td>
+          <td class="callout-comp-tabla__own">1.766 h</td>
+          <td class="callout-comp-tabla__media">1.787,67 h</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--pos">2ª de 9 &nbsp; <span class="callout-comp-pos__arrow">↓</span> 22 h menos</td>
+        </tr>
+        <tr>
+          <td>Pagas anuales</td>
+          <td class="callout-comp-tabla__own">15</td>
+          <td class="callout-comp-tabla__media">—</td>
+          <td class="callout-comp-tabla__pos">—</td>
+        </tr>
+        <tr>
+          <td>Camarero/a base mínimo</td>
+          <td class="callout-comp-tabla__own">1.209,55 €/mes</td>
+          <td class="callout-comp-tabla__media">1.320,59 €/mes</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--neg">6ª de 8 &nbsp; <span class="callout-comp-pos__arrow">↓</span> -8,4%</td>
+        </tr>
+        <tr>
+          <td>Bruto anual Camarero/a</td>
+          <td class="callout-comp-tabla__own">18.143 €</td>
+          <td class="callout-comp-tabla__media">19.278 €</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--neg">6ª de 8 &nbsp; <span class="callout-comp-pos__arrow">↓</span> -5,9%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="callout-comp-tabla__source">Comparado con: Barcelona, Bizkaia, Cádiz, Granada, Madrid, Málaga, Sevilla, Valencia. Bizkaia queda fuera del cálculo salarial: estructura 'total garantizado' por 6 niveles abstractos — no segrega categoría camarero/a. Cuantía Camarero/a en Cantabria: Escalón 4 (Camarero/a · Barman · Aux. Recepción/Conserjería). Dataset auditado el 13 de mayo de 2026. Ver <a href="/convenio-hosteleria.html">pilar sectorial Hostelería</a> para más detalle.</p>
+</div>
+  <!-- CALLOUTS:END -->
 
   <h2>¿Cómo verificar si tu nómina cumple el convenio?</h2>
   <p>Coge tu nómina mensual y compara la suma de salario base más los complementos no salariales (antigüedad, plus de transporte si tu empresa lo paga, plus de nocturnidad si aplica, manutención si trabajas en horario de comidas/cenas) con la cifra del escalón retributivo de tu categoría profesional. El "Salario Convenio" del Art. 30 es la cantidad mínima que debe constar en tu nómina como salario base — todo lo que cobras adicional son complementos personales o por tipo de jornada.</p>

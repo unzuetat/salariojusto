@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "sector": "Hostelería",
+    "version": "1.0",
+    "updatedAt": "2026-05-13",
+    "auditedBy": "Lectura humana directa de cada landing publicada en producción",
+    "dimensions": [
+      "jornada_anual_h",
+      "pagas",
+      "camarero_base_eurmes",
+      "bruto_anual_camarero_eur"
+    ],
+    "notes": "Provincias con comparable_salary=false se excluyen del cálculo de medias salariales (caso Bizkaia: estructura 'Total Garantizado' por categoría abstracta, no segrega Camarero/a). Sí entran en el cálculo de jornada (todas las provincias)."
+  },
+  "provincias": [
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "landing": "convenio-hosteleria-barcelona.html",
+      "jornada_anual_h": 1783,
+      "pagas": 14,
+      "camarero_base_eurmes": 1607.25,
+      "bruto_anual_camarero_eur": 22501.50,
+      "camarero_origen": "III-D (Categoría 4ª: hostales 1-2★, bares 3ª-4ª, restaurantes 1 tenedor, tabernas)",
+      "comparable_salary": true
+    },
+    {
+      "id": "bizkaia",
+      "name": "Bizkaia",
+      "landing": "convenio-hosteleria-bizkaia.html",
+      "jornada_anual_h": 1746,
+      "pagas": 15,
+      "camarero_base_eurmes": null,
+      "bruto_anual_camarero_eur": null,
+      "camarero_origen": "Estructura 'Total Garantizado' por 6 niveles abstractos — no segrega categoría Camarero/a",
+      "comparable_salary": false
+    },
+    {
+      "id": "cadiz",
+      "name": "Cádiz",
+      "landing": "convenio-hosteleria-cadiz.html",
+      "jornada_anual_h": 1800,
+      "pagas": 15,
+      "camarero_base_eurmes": 1253.89,
+      "bruto_anual_camarero_eur": 18808.35,
+      "camarero_origen": "SMC del convenio (Grupo 4-5 / Establecimiento C) — referencia mínima del sector en Cádiz para cualquier categoría operativa",
+      "comparable_salary": true
+    },
+    {
+      "id": "cantabria",
+      "name": "Cantabria",
+      "landing": "convenio-hosteleria-cantabria.html",
+      "jornada_anual_h": 1766,
+      "pagas": 15,
+      "camarero_base_eurmes": 1209.55,
+      "bruto_anual_camarero_eur": 18143.25,
+      "camarero_origen": "Escalón 4 (Camarero/a · Barman · Aux. Recepción/Conserjería)",
+      "comparable_salary": true
+    },
+    {
+      "id": "granada",
+      "name": "Granada",
+      "landing": "convenio-hosteleria-granada.html",
+      "jornada_anual_h": 1800,
+      "pagas": 14,
+      "camarero_base_eurmes": 1435.89,
+      "bruto_anual_camarero_eur": 20102.46,
+      "camarero_origen": "Nivel IV (Camarero/a, Cocinero/a, Recepcionista…) / Grupo D (establecimiento más básico)",
+      "comparable_salary": true
+    },
+    {
+      "id": "madrid",
+      "name": "Madrid",
+      "landing": "convenio-hosteleria-madrid.html",
+      "jornada_anual_h": 1800,
+      "pagas": 14,
+      "camarero_base_eurmes": 1206.40,
+      "bruto_anual_camarero_eur": 16889.60,
+      "camarero_origen": "C-III (Restaurantes, cafeterías, bares y colectividades)",
+      "comparable_salary": true
+    },
+    {
+      "id": "malaga",
+      "name": "Málaga",
+      "landing": "convenio-hosteleria-malaga.html",
+      "jornada_anual_h": 1800,
+      "pagas": 15,
+      "camarero_base_eurmes": 1406.44,
+      "bruto_anual_camarero_eur": 21096.60,
+      "camarero_origen": "Personal de comedor — categoría Tercera/Cuarta de establecimiento",
+      "comparable_salary": true
+    },
+    {
+      "id": "sevilla",
+      "name": "Sevilla",
+      "landing": "convenio-hosteleria-sevilla.html",
+      "jornada_anual_h": 1800,
+      "pagas": 15,
+      "camarero_base_eurmes": 1254.97,
+      "bruto_anual_camarero_eur": 18824.55,
+      "camarero_origen": "H1-3 / MOT-3 (Camarero/a en Hotel 1★ o Pensiones/Camping/Geriátricos)",
+      "comparable_salary": true
+    },
+    {
+      "id": "valencia",
+      "name": "Valencia",
+      "landing": "convenio-hosteleria-valencia.html",
+      "jornada_anual_h": 1794,
+      "pagas": 15,
+      "camarero_base_eurmes": 1190.34,
+      "bruto_anual_camarero_eur": 17855.10,
+      "camarero_origen": "III-3 (Hotel 3★ y viviendas turísticas)",
+      "comparable_salary": true
+    }
+  ]
+}
