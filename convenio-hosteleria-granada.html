@@ -166,7 +166,21 @@
     details{background:var(--cream-50);border:1px solid var(--cream-200);padding:14px 18px;margin:10px 0;}
     details summary{font-weight:600;color:var(--ink);cursor:pointer;font-size:14px;}
     details[open] summary{margin-bottom:10px;border-bottom:1px solid var(--cream-200);padding-bottom:10px;}
-    @media(max-width:600px){main{padding:24px 16px 48px;}.card{padding:18px;}th,td{padding:8px 5px;font-size:12px;}}
+    .callout-comp-tabla{margin:14px 0;}
+    .callout-comp-tabla table{width:100%;border-collapse:collapse;font-size:14px;margin:0;}
+    .callout-comp-tabla th{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);text-align:left;padding:10px 8px;border-bottom:2px solid var(--cream-200);background:var(--cream-50);}
+    .callout-comp-tabla td{padding:12px 8px;border-bottom:1px solid var(--cream-100);color:var(--ink);vertical-align:top;font-size:14px;}
+    .callout-comp-tabla td:first-child{font-weight:600;}
+    .callout-comp-tabla__own{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__media{color:var(--ink-light);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__pos{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--pos{color:var(--green);}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neg{color:#B91C1C;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neutral{color:var(--ink-lighter);}
+    .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
+    .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
+    .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
+    @media(max-width:600px){main{padding:24px 16px 48px;}.card{padding:18px;}th,td{padding:8px 5px;font-size:12px;}.callout-comp-tabla th,.callout-comp-tabla td{font-size:12px;padding:8px 5px;}}
   </style>
 </head>
 <body>
@@ -249,6 +263,52 @@
     <p><strong style="color:inherit;">Fase 2 (2026) — Nivel IV completo</strong>: el Art. 28.2.e literalmente establece <em>"Llegado el 1 de enero de 2026 los salarios de las Camareras/os de Pisos se verán incrementados en el resto del 50% del diferencial antes indicado. En consecuencia, sus salarios serán los establecidos para el NIVEL IV (Anexo IV), desapareciendo el Nivel Salarial IV BIS creado anteriormente"</em>. En 2026, una Camarera/o de Pisos cobra entre <strong>1.435,89 €/mes (Grupo D) y 1.675,51 €/mes (Grupo A)</strong> — la misma cuantía que Camarero/a, Cocinero/a, Recepcionista o Sommelier.</p>
     <p style="margin-bottom:0;"><strong style="color:inherit;">Si trabajas como Camarera/o de Pisos en Granada y tu nómina de 2026 sigue figurando con la cuantía del antiguo Nivel V o del Nivel IV BIS, hay diferencias salariales que reclamar.</strong></p>
   </div>
+
+  <!-- CALLOUTS:START -->
+<h2>Granada frente a otras provincias del sector</h2>
+<p>Comparamos las cifras clave de Granada con las 8 provincias auditadas en el pilar de Hostelería. Estas referencias son útiles si negocias subida, contrato nuevo o cambias de provincia.</p>
+<div class="callout-comp-tabla">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Dimensión</th>
+          <th>Granada</th>
+          <th>Media del corpus</th>
+          <th>Posición</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jornada anual</td>
+          <td class="callout-comp-tabla__own">1.800 h</td>
+          <td class="callout-comp-tabla__media">1.787,67 h</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--neutral">5ª-9ª de 9 · en la media</td>
+        </tr>
+        <tr>
+          <td>Pagas anuales</td>
+          <td class="callout-comp-tabla__own">14</td>
+          <td class="callout-comp-tabla__media">—</td>
+          <td class="callout-comp-tabla__pos">—</td>
+        </tr>
+        <tr>
+          <td>Camarero/a base mínimo</td>
+          <td class="callout-comp-tabla__own">1.435,89 €/mes</td>
+          <td class="callout-comp-tabla__media">1.320,59 €/mes</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--pos">2ª de 8 &nbsp; <span class="callout-comp-pos__arrow">↑</span> +8,7%</td>
+        </tr>
+        <tr>
+          <td>Bruto anual Camarero/a</td>
+          <td class="callout-comp-tabla__own">20.102 €</td>
+          <td class="callout-comp-tabla__media">19.278 €</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--pos">3ª de 8 &nbsp; <span class="callout-comp-pos__arrow">↑</span> +4,3%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="callout-comp-tabla__source">Comparado con: Barcelona, Bizkaia, Cantabria, Cádiz, Madrid, Málaga, Sevilla, Valencia. Bizkaia queda fuera del cálculo salarial: estructura 'total garantizado' por 6 niveles abstractos — no segrega categoría camarero/a. Cuantía Camarero/a en Granada: Nivel IV (Camarero/a, Cocinero/a, Recepcionista…) / Grupo D (establecimiento más básico). Dataset auditado el 13 de mayo de 2026. Ver <a href="/convenio-hosteleria.html">pilar sectorial Hostelería</a> para más detalle.</p>
+</div>
+  <!-- CALLOUTS:END -->
 
   <details>
     <summary>Tabla salarial 2025 con Nivel IV BIS (referencia histórica)</summary>

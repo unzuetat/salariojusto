@@ -116,6 +116,20 @@
     .related a{color:var(--gold-dark);font-weight:500;font-size:14px;}
     .source-footer{font-size:12px;color:var(--ink-lighter);margin-top:8px;}
     @media(max-width:600px){main{padding:22px 14px 48px;}.card{padding:16px;}thead tr.cat-row th{font-size:9px;padding:6px 4px;}thead tr.sub-row th{padding:4px 3px;font-size:9px;}tbody td{padding:6px 4px;font-size:11px;}tbody td:first-child{min-width:120px;max-width:150px;}tbody td.num{padding:6px 4px;font-size:11px;}}
+    .callout-comp-tabla{margin:14px 0;}
+    .callout-comp-tabla table{width:100%;border-collapse:collapse;font-size:14px;margin:0;}
+    .callout-comp-tabla th{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);text-align:left;padding:10px 8px;border-bottom:2px solid var(--cream-200);background:var(--cream-50);}
+    .callout-comp-tabla td{padding:12px 8px;border-bottom:1px solid var(--cream-100);color:var(--ink);vertical-align:top;font-size:14px;}
+    .callout-comp-tabla td:first-child{font-weight:600;}
+    .callout-comp-tabla__own{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__media{color:var(--ink-light);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__pos{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--pos{color:var(--green);}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neg{color:#B91C1C;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neutral{color:var(--ink-lighter);}
+    .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
+    .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
+    .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
   </style>
 </head>
 <body>
@@ -701,6 +715,52 @@
     <p>Calcula tu salario neto exacto con tu situación familiar.</p>
     <a href="/" class="cta-btn">Calculadora de salario neto →</a>
   </div>
+
+  <!-- CALLOUTS:START -->
+<h2>Málaga frente a otras provincias del sector</h2>
+<p>Comparamos las cifras clave de Málaga con las 8 provincias auditadas en el pilar de Hostelería. Estas referencias son útiles si negocias subida, contrato nuevo o cambias de provincia.</p>
+<div class="callout-comp-tabla">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Dimensión</th>
+          <th>Málaga</th>
+          <th>Media del corpus</th>
+          <th>Posición</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jornada anual</td>
+          <td class="callout-comp-tabla__own">1.800 h</td>
+          <td class="callout-comp-tabla__media">1.787,67 h</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--neutral">5ª-9ª de 9 · en la media</td>
+        </tr>
+        <tr>
+          <td>Pagas anuales</td>
+          <td class="callout-comp-tabla__own">15</td>
+          <td class="callout-comp-tabla__media">—</td>
+          <td class="callout-comp-tabla__pos">—</td>
+        </tr>
+        <tr>
+          <td>Camarero/a base mínimo</td>
+          <td class="callout-comp-tabla__own">1.406,44 €/mes</td>
+          <td class="callout-comp-tabla__media">1.320,59 €/mes</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--pos">3ª de 8 &nbsp; <span class="callout-comp-pos__arrow">↑</span> +6,5%</td>
+        </tr>
+        <tr>
+          <td>Bruto anual Camarero/a</td>
+          <td class="callout-comp-tabla__own">21.097 €</td>
+          <td class="callout-comp-tabla__media">19.278 €</td>
+          <td class="callout-comp-tabla__pos callout-comp-tabla__pos--pos">2ª de 8 &nbsp; <span class="callout-comp-pos__arrow">↑</span> +9,4%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="callout-comp-tabla__source">Comparado con: Barcelona, Bizkaia, Cantabria, Cádiz, Granada, Madrid, Sevilla, Valencia. Bizkaia queda fuera del cálculo salarial: estructura 'total garantizado' por 6 niveles abstractos — no segrega categoría camarero/a. Cuantía Camarero/a en Málaga: Personal de comedor — categoría Tercera/Cuarta de establecimiento. Dataset auditado el 13 de mayo de 2026. Ver <a href="/convenio-hosteleria.html">pilar sectorial Hostelería</a> para más detalle.</p>
+</div>
+  <!-- CALLOUTS:END -->
 
   <h2>¿Cobras menos de lo que fija el convenio?</h2>
   <p>Si tu nómina está por debajo del Garantizado de tu categoría, puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación ante el CMAC de Málaga interrumpe el plazo y es gratuito.</p>
