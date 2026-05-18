@@ -35,3 +35,13 @@ research/informe-2026/*
 !research/informe-2026/metodologia.md
 !research/informe-2026/verificaciones.md
 !research/informe-2026/draft.md
+
+# Artefactos regenerados por scripts/audit/* — NO commitear (se regeneran de la
+# verdad con /sj-dashboard, /sj-invariantes). Lo versionado es el script, el
+# comando y la capa humana data/landings-notas.csv.
+LANDINGS.csv
+LANDINGS_DASHBOARD.md
+salud-invariantes.md
+discrepancias-titles.md
+patron-convenios.md
+kit-inventario.md
