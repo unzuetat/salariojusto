@@ -25,9 +25,15 @@
   </url>
   <url>
     <loc>https://salariojusto.es/ley-transparencia-salarial-2026.html</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://salariojusto.es/registro-retributivo-obligatorio-2026.html</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://salariojusto.es/rangos-salariales-empresa-transparencia-2026.html</loc>
