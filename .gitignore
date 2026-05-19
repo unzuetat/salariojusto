@@ -35,3 +35,6 @@ research/informe-2026/*
 !research/informe-2026/metodologia.md
 !research/informe-2026/verificaciones.md
 !research/informe-2026/draft.md
+# Generador del informe publicado (modo --prod escribe informe-transparencia-salarial-2026.html en la raíz).
+# Versionado para poder regenerar la página publicada desde cualquier máquina (2ª ola ~jul-2026).
+!research/informe-2026/build-preview.js
