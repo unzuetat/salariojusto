@@ -13,7 +13,7 @@
 ## 1 · Hallazgo principal (LEAD)
 
 **Titular**:
-> Solo **1 de cada 7 ofertas** de empleo en España permite saber el sueldo antes de aplicar. La Directiva UE 2023/970 entra en vigor en cinco semanas.
+> Solo **1 de cada 7 ofertas** de empleo en España permite saber el sueldo antes de aplicar. La Directiva UE 2023/970 entra en vigor el 7 de junio de 2026.
 
 **Subtítulo**:
 > Análisis de 200 ofertas en LinkedIn España estratificadas por sector revela una opacidad voluntaria del 85% — siete veces más alta en el comercio que en la sanidad — a las puertas del 7 de junio de 2026.
@@ -21,13 +21,13 @@
 **Lead (3 párrafos)**:
 
 > [PRIMER PÁRRAFO · GANCHO]
-> En España, **el 85% de las ofertas de empleo no permite a quien aplica saber cuánto se paga el puesto**. Es la conclusión del análisis de 200 ofertas publicadas en LinkedIn entre el 22 y el 29 de abril de 2026 que SalarioJusto presenta hoy. Solo 30 de las 200 — un 15% — incluían un rango o una cifra salarial concreta en el anuncio. Las 170 restantes recurrían al "salario competitivo", al "según valía" o a la omisión total. En cinco semanas, el 7 de junio de 2026, entra en vigor la Directiva (UE) 2023/970 de transparencia retributiva, que obliga al empleador a entregar esa información al candidato antes de la entrevista — en el anuncio o por otro medio. La práctica de hoy no es ilegal todavía, pero el margen para mantenerla se acaba.
+> En España, **el 85% de las ofertas de empleo no permite a quien aplica saber cuánto se paga el puesto**. Es la conclusión del análisis de 200 ofertas publicadas en LinkedIn entre el 22 y el 29 de abril de 2026 que SalarioJusto presenta hoy. Solo 30 de las 200 — un 15% — incluían un rango o una cifra salarial concreta en el anuncio. Las 170 restantes recurrían al "salario competitivo", al "según valía" o a la omisión total. El 7 de junio de 2026 entra en vigor la Directiva (UE) 2023/970 de transparencia retributiva, que obliga al empleador a entregar esa información al candidato antes de la entrevista — en el anuncio o por otro medio. La práctica de hoy no es ilegal todavía, pero su margen legal termina ese día.
 
 > [SEGUNDO PÁRRAFO · DATO SECTORIAL]
 > El detalle por sector marca un contraste de **siete veces** entre los más maduros y los más opacos. La sanidad es el sector que más publica el rango (35% de las ofertas analizadas), seguido por la industria (20%). En el extremo opuesto, el comercio al por menor publica el rango en una sola de cada veinte ofertas (5%). Educación, construcción y consultoría se quedan en el 10%. El tamaño de la empresa también pesa: las microempresas (<10 empleados) publican rango en el 25% de los casos, mientras que las grandes nacionales (250-999) lo hacen solo en el 8%.
 
 > [TERCER PÁRRAFO · LO QUE NO SE VE]
-> El otro pilar de la directiva — la prohibición de preguntar al candidato por su salario actual o anterior, taxativa desde el 7 de junio — no es observable desde una oferta pública. Esa pregunta se materializa en cribas telefónicas de RRHH y en entrevistas. Eso no significa que en la práctica no exista: significa que ningún análisis externo la puede medir, y que su vigilancia tras el 7 de junio dependerá de Inspección de Trabajo, sindicatos y denuncias individuales.
+> El otro pilar de la directiva — la prohibición de preguntar a la persona candidata por su salario actual o anterior, taxativa desde el 7 de junio — no es observable desde una oferta pública. Esa pregunta se materializa en cribas telefónicas de RRHH y en entrevistas. Eso no significa que en la práctica no exista: significa que ningún análisis externo la puede medir, y que su vigilancia tras el 7 de junio dependerá de Inspección de Trabajo, sindicatos y denuncias individuales.
 
 **Cifra titular para tarjeta visual / OG image**:
 > **85%** de las ofertas analizadas no publica el sueldo. **35%** sí lo hace en sanidad, **5%** en comercio. **7 veces** de spread entre el sector más transparente y el más opaco.
@@ -40,7 +40,7 @@ El cambio normativo tiene su origen en la **Directiva (UE) 2023/970 del Parlamen
 
 ### 2.1 · El derecho a recibir el rango salarial · artículo 5.1
 
-✅ El apartado 5.1 reconoce un derecho del candidato — no una obligación abstracta de la empresa de publicar — y delimita lo que debe entregársele:
+✅ El apartado 5.1 reconoce un derecho de la persona candidata — no una obligación abstracta de la empresa de publicar — y delimita lo que debe entregársele:
 
 > *"Los solicitantes de empleo tendrán derecho a recibir del empleador potencial información sobre lo siguiente: a) la retribución inicial o la banda retributiva inicial, basadas en criterios objetivos y neutros con respecto al género, correspondientes al puesto al que aspiran, y b) en su caso, las disposiciones pertinentes del convenio colectivo aplicado por el empleador con respecto al puesto. Esa información se facilitará de tal forma que se garantice una negociación informada y transparente sobre la retribución, por ejemplo, en el anuncio de la vacante que se publique o por otro medio."* — Art. 5.1
 
@@ -92,7 +92,7 @@ El cambio normativo tiene su origen en la **Directiva (UE) 2023/970 del Parlamen
 
 ## 3 · Cómo se midió
 
-El análisis observa lo que un candidato ve cuando aplica a una oferta en LinkedIn, no lo que ocurre después. Esa frontera define lo que el dato mide y lo que el dato no puede medir.
+El análisis observa lo que ve quien aplica a una oferta en LinkedIn, no lo que ocurre después. Esa frontera define lo que el dato mide y lo que el dato no puede medir.
 
 ### 3.1 · Diseño muestral
 
@@ -103,17 +103,17 @@ Se construyó una muestra estratificada con cuotas iguales por sector — diez s
 Cada oferta se evaluó con dos criterios independientes que corresponden a las dos disposiciones del artículo 5 de la directiva:
 
 - **Transparencia del rango (apartado 5.1)**: ¿publica la oferta una cifra o banda salarial concreta en su texto? Se etiqueta `SI` cuando aparece un rango numérico ("30.000-38.000 €/año") o una cifra clara, y `NO` cuando se recurre a expresiones vagas ("competitivo", "según valía") o a la omisión total. Esta es una métrica observable desde fuera.
-- **Petición del salario anterior (apartado 5.2)**: ¿pregunta la oferta al candidato por su salario actual o anterior, ya sea en el texto público o en el formulario nativo de aplicación de LinkedIn ("Easy Apply")? Esta métrica es parcialmente observable: del subconjunto de ofertas con Easy Apply, el formulario se puede revisar paso a paso sin enviarse; del subconjunto con aplicación a sistemas de selección externos a la empresa (ATS propios), **a veces no es accesible sin registrarse**.
+- **Petición del salario anterior (apartado 5.2)**: ¿pregunta la oferta a la persona candidata por su salario actual o anterior, ya sea en el texto público o en el formulario nativo de aplicación de LinkedIn ("Easy Apply")? Esta métrica es parcialmente observable: del subconjunto de ofertas con Easy Apply, el formulario se puede revisar paso a paso sin enviarse; del subconjunto con aplicación a sistemas de selección externos a la empresa (ATS propios), **a veces no es accesible sin registrarse**.
 
 Se capturaron además dos variables auxiliares — sector, tamaño de empresa y comunidad autónoma del puesto — para permitir cruces y verificación independiente.
 
 ### 3.3 · Lo que el dato mide y lo que no
 
-La transparencia del rango (5.1) es completamente observable desde la oferta: lo que está publicado, está publicado, y todas las ofertas analizadas se han podido leer en su versión pública. La petición del salario anterior (5.2) sólo es parcialmente observable. La pregunta por el salario actual o anterior se materializa típicamente en cribas telefónicas de RRHH y en la primera entrevista — terreno que vive fuera del texto público y del formulario de aplicación. Por construcción metodológica, ningún análisis observacional de ofertas puede medir bien la métrica del 5.2. El informe lo declara explícitamente y lo presenta como zona que el 7 de junio obliga a vigilar por mecanismos distintos al análisis externo — Inspección de Trabajo, sindicatos, denuncia individual, encuestas a candidatos.
+La transparencia del rango (5.1) es completamente observable desde la oferta: lo que está publicado, está publicado, y todas las ofertas analizadas se han podido leer en su versión pública. La petición del salario anterior (5.2) sólo es parcialmente observable. La pregunta por el salario actual o anterior se materializa típicamente en cribas telefónicas de RRHH y en la primera entrevista — terreno que vive fuera del texto público y del formulario de aplicación. Por construcción metodológica, ningún análisis observacional de ofertas puede medir bien la métrica del 5.2. El informe lo declara explícitamente y lo presenta como zona que el 7 de junio obliga a vigilar por mecanismos distintos al análisis externo — Inspección de Trabajo, sindicatos, denuncia individual, encuestas a las personas candidatas.
 
 ### 3.4 · Apertura del dataset
 
-La metodología completa, los criterios de inclusión y exclusión y el listado verificable de las doscientas empresas analizadas — sin la columna de transparencia asociada a empresa concreta — se publican junto con el informe en la sala de prensa de SalarioJusto, en formato CSV abierto bajo licencia CC-BY. Cualquier periodista, sindicato, investigador o ciudadano puede reproducir las cifras agregadas a partir de ese listado y de la metodología publicada. El dataset original con las dos columnas evaluativas (transparencia y petición de salario anterior por empresa) es interno: la decisión editorial es que el valor del informe está en el agregado, no en el escarnio individualizado.
+La metodología completa, los criterios de inclusión y exclusión y el listado verificable de las doscientas empresas analizadas — sin la columna de transparencia asociada a empresa concreta — se publican junto con el informe en la sala de prensa de SalarioJusto, en formato CSV abierto bajo licencia CC-BY. Cualquier periodista, sindicato, persona investigadora o ciudadana puede reproducir las cifras agregadas a partir de ese listado y de la metodología publicada. El dataset original con las dos columnas evaluativas (transparencia y petición de salario anterior por empresa) es interno: la decisión editorial es que el valor del informe está en el agregado, no en el escarnio individualizado.
 
 ---
 
@@ -155,7 +155,7 @@ El análisis evalúa 200 ofertas (cuota fija de 20 por sector) sobre dos métric
 
 > ### Punto ciego del 5.2 · lo que el análisis no puede ver
 >
-> La pregunta sobre el salario anterior, prohibida taxativamente desde el 7 de junio por el artículo 5.2 de la directiva, se hace típicamente en la criba telefónica de RRHH ("antes de continuar, ¿cuáles son tus expectativas basadas en tu salario actual?") o en la primera entrevista. No vive en el texto de la oferta ni en el formulario de aplicación. Ningún análisis observacional de ofertas puede medirla. El 7 de junio no obliga a las empresas a publicar nada nuevo en sus ofertas: obliga a cambiar lo que dicen sus reclutadores en privado. La vigilancia depende de inspección, sindicatos y denuncia individual — y de los testimonios que la prensa pueda recoger.
+> La pregunta sobre el salario anterior, prohibida taxativamente desde el 7 de junio por el artículo 5.2 de la directiva, se hace típicamente en la criba telefónica de RRHH ("antes de continuar, ¿cuáles son tus expectativas basadas en tu salario actual?") o en la primera entrevista. No vive en el texto de la oferta ni en el formulario de aplicación. Ningún análisis observacional de ofertas puede medirla. El 7 de junio no obliga a las empresas a publicar nada nuevo en sus ofertas: obliga a cambiar lo que se pregunta en privado durante la selección. La vigilancia depende de inspección, sindicatos y denuncia individual — y de los testimonios que la prensa pueda recoger.
 
 ### 4.3 · El proceso, no sólo la oferta
 
@@ -176,7 +176,7 @@ España no es la primera economía que regula la transparencia retributiva en la
 
 ### 5.1 · Estados Unidos · cinco años por delante
 
-**Colorado** fue el primer estado en obligar a publicar el rango salarial en cualquier oferta de empleo. Su **Equal Pay for Equal Work Act** (SB19-085) entró en vigor el **1 de enero de 2021**, y exige tres elementos en todo anuncio: tarifa horaria o salario (o un rango razonable), descripción de bonus y comisiones, y descripción de los beneficios. La ley además prohíbe expresamente preguntar al candidato por su historial salarial — la misma prohibición que España adoptará en junio. Las sanciones van de 500 a 10.000 dólares por anuncio no conforme.
+**Colorado** fue el primer estado en obligar a publicar el rango salarial en cualquier oferta de empleo. Su **Equal Pay for Equal Work Act** (SB19-085) entró en vigor el **1 de enero de 2021**, y exige tres elementos en todo anuncio: tarifa horaria o salario (o un rango razonable), descripción de bonus y comisiones, y descripción de los beneficios. La ley además prohíbe expresamente preguntar por el historial salarial de la persona candidata — la misma prohibición que España adoptará en junio. Las sanciones van de 500 a 10.000 dólares por anuncio no conforme.
 
 **Nueva York** legisló a nivel estatal el **17 de septiembre de 2023** (NY Labor Law §194-B). Exige rango de "buena fe" en toda oferta, promoción o transferencia, en empresas con cuatro o más empleados. La ley aplica a puestos físicamente en NY o remotos que reporten a un supervisor neoyorquino.
 
@@ -188,7 +188,7 @@ España no es la primera economía que regula la transparencia retributiva en la
 
 ### 5.2 · Alemania · entra a la vez que España
 
-Alemania transpone la Directiva 2023/970 en **el mismo plazo que España**: 7 de junio de 2026. Su ley actual, la **Entgelttransparenzgesetz** (EntgTranspG) de 2017, ya cubría parcialmente el derecho del propio empleado a conocer información retributiva comparada — pero solo en empresas con doscientos o más empleados.
+Alemania transpone la Directiva 2023/970 en **el mismo plazo que España**: 7 de junio de 2026. Su ley actual, la **Entgelttransparenzgesetz** (EntgTranspG) de 2017, ya cubría parcialmente el derecho de la propia plantilla a conocer información retributiva comparada — pero solo en empresas con doscientos o más empleados.
 
 La transposición de la directiva amplía el régimen en dos direcciones: añade la prohibición de preguntar por el salario anterior, y traslada el derecho de información al momento previo a la contratación. La Comisión federal "para la Implementación de Bajo-Burocracia de la Directiva" publicó su informe final el **24 de octubre de 2025**, con un borrador legislativo previsto para el primer trimestre de 2026.
 
@@ -249,28 +249,28 @@ Predominan dos perfiles dentro del subgrupo transparente. El primero: empresas p
 
 SalarioJusto publica en la sala de prensa el listado completo de las **200 empresas con nombre**, en formato CSV abierto y como tabla expandible al final de este informe, con siete columnas: identificador de oferta (1-200), nombre de empresa, código y nombre del sector, comunidad autónoma del puesto, tamaño y fecha de captura. **Lo que el listado no contiene es la etiqueta de transparencia asociada a cada empresa**: ni si publicó rango, ni si pidió salario anterior. Esa información se publica únicamente como agregado por sector y por tamaño de empresa (las tablas de las secciones 4.1 y 6.1).
 
-> 👉 [salariojusto.es/sala-de-prensa.html](https://salariojusto.es/sala-de-prensa.html) — sección "Recursos descargables".
-> 👉 Tabla expandible: al final del informe, sección "Anexo · muestra completa".
+> [salariojusto.es/sala-de-prensa.html](https://salariojusto.es/sala-de-prensa.html) — sección "Recursos descargables".
+> Tabla expandible: al final del informe, sección "Anexo · muestra completa".
 
-La decisión es deliberada y responde a tres principios del proyecto editorial. El primero, *menciones de excelencia, no scoring negativo*: ningún titular sobre transparencia salarial debería empezar señalando con el dedo a 170 empresas que hoy operan dentro de la legalidad. El segundo, *transparencia metodológica máxima*: la lista de 200 nombres permite a cualquier periodista, sindicato, investigador o ciudadano confirmar que las ofertas son reales, que los sectores están equilibrados y que el muestreo no se ha amañado para producir un titular. El tercero, *responsabilidad sobre la inferencia*: quien quiera saber si una empresa concreta de la muestra publicó o no su rango el día que se capturó la oferta, puede ir a su perfil de LinkedIn y comprobarlo en cinco segundos. Lo que no haremos es construir el informe con esa información asociada a nombre.
+La decisión es deliberada y responde a tres principios del proyecto editorial. El primero, *en esta entrega, mención de la excelencia antes que escarnio*: hoy —antes del 7 de junio de 2026— no publicar el rango todavía no incumple la ley, así que este informe no señala una a una a las 170 empresas que operan dentro de la legalidad vigente. Es una decisión editorial para esta foto inicial, no una renuncia: cuando el incumplimiento sea legalmente nítido, identificar a quien no cumpla es periodismo legítimo. El segundo, *transparencia metodológica máxima*: la lista de 200 nombres permite a cualquier periodista, sindicato, persona investigadora o ciudadana confirmar que las ofertas son reales, que los sectores están equilibrados y que el muestreo no se ha amañado para producir un titular. El tercero, *responsabilidad sobre la inferencia*: quien quiera saber si una empresa concreta de la muestra publicó o no su rango el día que se capturó la oferta, puede ir a su perfil de LinkedIn y comprobarlo en cinco segundos. En esta entrega no construimos el informe con esa información asociada a nombre.
 
 ---
 
 ## 7 · Cómo prepararte para el 7 de junio
 
-> ### Si eres trabajador
+> ### Si trabajas por cuenta ajena
 >
 > SalarioJusto ha publicado un Kit con diez plantillas redactadas para ejercer los derechos que entran en vigor el 7 de junio: pedir la banda salarial a tu empresa, reclamar atrasos por convenio, denunciar discriminación retributiva, y siete más. Todas con verificación contra fuente oficial (BOE, jurisprudencia del Tribunal Supremo) y referencias literales para que las puedas usar tal cual.
 >
-> 👉 [salariojusto.es/plantillas-transparencia-retributiva-2026.html](https://salariojusto.es/plantillas-transparencia-retributiva-2026.html)
+> [salariojusto.es/plantillas-transparencia-retributiva-2026.html](https://salariojusto.es/plantillas-transparencia-retributiva-2026.html)
 
 > ### Si eres empresa
 >
 > Hay tres cambios mínimos que pueden implementarse antes del 7 de junio:
 >
 > 1. **Eliminar la pregunta del salario anterior** de toda plantilla de proceso de selección — texto público, formulario de aplicación y guion de entrevista.
-> 2. **Redactar la banda salarial** de cada vacante antes de publicarla, basada en criterios objetivos del puesto, no del candidato esperado.
-> 3. **Formar al equipo de selección** en el matiz del 5.1: no es obligatorio publicar el rango en la oferta, pero sí entregárselo al candidato antes de la entrevista.
+> 2. **Redactar la banda salarial** de cada vacante antes de publicarla, basada en criterios objetivos del puesto, no del perfil que se espera contratar.
+> 3. **Formar al equipo de selección** en el matiz del 5.1: no es obligatorio publicar el rango en la oferta, pero sí entregárselo a la persona candidata antes de la entrevista.
 
 > ### Si eres prensa o sindicato
 >
