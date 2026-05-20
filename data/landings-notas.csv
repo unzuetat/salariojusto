@@ -19,3 +19,6 @@ slug,decision,notas,proximo_paso
 "convenio-construccion-bizkaia.html","Footer legal añadido (Privacidad/Aviso legal/Contacto/Prensa) — 19-may","HARD sj-invariantes RESUELTO. Landing nueva Tanda I","—"
 "convenio-metal-bizkaia.html","Footer legal añadido — 19-may","HARD sj-invariantes RESUELTO. Landing nueva Tanda I","—"
 "convenio-tecnicos-espectaculos.html","Añadido a llms.txt (sección Otros convenios sectoriales) — 19-may","WARN llms.txt RESUELTO","—"
+"convenio-hosteleria.html","—","🕳️ PILAR Hostelería detectado FUERA del sitemap (20-may via /sj-alcance). Enlazado desde 11 landings pero no se pide indexar. Causa: generador no lo emite","Decidir: añadir a mano (lo revierte el generador en P1) o esperar a arreglar el template del generador (Prioridad 1)"
+"en/index.html","Mirror EN desconectado de producción (20-may): quitado del sitemap + selector 'English' borrado de 12 landings","Razón: sección de 1 sola página = directorio incompleto, señal AdSense. en/index.html queda en disco huérfano","Opcional: añadir <meta robots noindex> a en/index.html para desindexación activa"
+"mapa-del-sitio.html","Bloque 'Idiomas' eliminado entero (20-may) + 'English' del footer","Consecuencia de quitar el mirror EN — no quedaba sentido al bloque","—"

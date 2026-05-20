@@ -7,15 +7,6 @@
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://salariojusto.es/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://salariojusto.es/en/" />
-  </url>
-  <url>
-    <loc>https://salariojusto.es/en/</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://salariojusto.es/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://salariojusto.es/en/" />
   </url>
   <url>
     <loc>https://salariojusto.es/guias.html</loc>
