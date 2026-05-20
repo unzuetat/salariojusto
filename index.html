@@ -2026,7 +2026,7 @@
         <a href="/convenio-hosteleria-madrid.html" class="nav-dropdown-item">
           <div class="nav-dropdown-tag">Madrid</div>
           <div class="nav-dropdown-title">Hostelería — Madrid</div>
-          <div class="nav-dropdown-desc">Tablas 2023–2025 · subtablas A (5★) y C (restaurantes)</div>
+          <div class="nav-dropdown-desc">Tablas 2023–2025 · Clases A/B/C + Catering · en ultraactividad</div>
         </a>
         <a href="/convenio-hosteleria-valencia.html" class="nav-dropdown-item">
           <div class="nav-dropdown-tag">Valencia</div>
@@ -4056,20 +4056,11 @@ function resolveConvenioAndRender() {
   const r = resolveConvenio(sector, provincia);
   const cards = [];
 
-  // Capa 1 · verificación con tabla JSON (primaria si existe)
-  if (r.verify) {
-    const title = r.verify.nombre.replace(' — ' + r.verify.provincia, '');
-    cards.push(
-      '<div class="convenio-result-card primary">' +
-        '<div class="convenio-result-card-body">' +
-          '<div class="convenio-result-card-tag">Verificación de cifras disponible</div>' +
-          '<div class="convenio-result-card-title">' + _escapeHtml(title) + (convenioEnUltraactividad(r.verify) ? ULTRA_BADGE : '') + '</div>' +
-          '<div class="convenio-result-card-sub">' + (convenioEnUltraactividad(r.verify) ? 'Convenio en ultraactividad: las tablas siguen vigentes mientras se negocia un nuevo texto. ' : '') + 'Introduce tu grupo profesional y año para comparar tu nómina con las tablas oficiales del convenio.</div>' +
-        '</div>' +
-        '<button type="button" class="convenio-result-action" data-action="verify" data-id="' + _escapeHtml(r.verify.id) + '" data-provincia="' + _escapeHtml(r.verify.provincia) + '">Usar verificación →</button>' +
-      '</div>'
-    );
-  }
+  // Capa 1 · verificación con tabla JSON: NO se renderiza card. El panel del verificador
+  // aparece directamente debajo (auto-activate al final de la función). UX 2026-05-20:
+  // antes había un paso intermedio con botón "Usar verificación →" que era ruido visual
+  // entre el filtro Sector+Ubicación y el dropdown Grupo+Año que el usuario esperaba ver
+  // a continuación. Si hay verify, simplemente se activa.
 
   // Capa 2 · landing provincial (primaria si no hay verify)
   if (r.provincialGuide) {
@@ -4103,33 +4094,47 @@ function resolveConvenioAndRender() {
     );
   }
 
-  if (!cards.length) {
+  // Si hay verify activo: vaciar el bloque cards (el panel se renderiza debajo con
+  // las cifras reales). Si hay otras cards de guías, también; el panel manda.
+  // "Explorar todos" se ofrece SOLO si no hay nada específico (sin verify ni guides).
+  if (r.verify) {
+    out.innerHTML = '';
+  } else if (!cards.length) {
     out.innerHTML =
       '<div class="convenio-results-empty">Todavía no tenemos material específico para <strong>' + _escapeHtml(sector) + '</strong> en <strong>' + _escapeHtml(provincia) + '</strong>. ' +
       'Puedes explorar el <a href="/convenios.html" style="color:var(--gold);">hub de convenios</a> o buscar tu convenio en el <a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener" style="color:var(--gold);">registro oficial REGCON</a>.</div>';
     return;
+  } else {
+    // Solo se llega aquí si hay provincialGuide y/o estatalGuide pero NO verify.
+    // Añadimos "Explorar todos" como atajo al final.
+    cards.push(
+      '<div class="convenio-result-card estatal">' +
+        '<div class="convenio-result-card-body">' +
+          '<div class="convenio-result-card-tag">Explorar todos</div>' +
+          '<div class="convenio-result-card-title">Ver todos los convenios disponibles</div>' +
+          '<div class="convenio-result-card-sub">' + CONVENIO_INDEX.length + ' convenios verificables + guías sectoriales por provincia.</div>' +
+        '</div>' +
+        '<a class="convenio-result-action" href="/convenios.html">Abrir hub →</a>' +
+      '</div>'
+    );
+    out.innerHTML = cards.join('');
   }
 
-  // Capa final · atajo siempre visible al hub completo
-  cards.push(
-    '<div class="convenio-result-card estatal">' +
-      '<div class="convenio-result-card-body">' +
-        '<div class="convenio-result-card-tag">Explorar todos</div>' +
-        '<div class="convenio-result-card-title">Ver todos los convenios disponibles</div>' +
-        '<div class="convenio-result-card-sub">' + CONVENIO_INDEX.length + ' convenios verificables + guías sectoriales por provincia.</div>' +
-      '</div>' +
-      '<a class="convenio-result-action" href="/convenios.html">Abrir hub →</a>' +
-    '</div>'
-  );
-
-  out.innerHTML = cards.join('');
-
-  // Bind click de la card de verificación
+  // Bind click de la card de verificación (queda como acción manual opcional)
   out.querySelectorAll('[data-action="verify"]').forEach(btn => {
     btn.addEventListener('click', () => {
       activateVerification(btn.dataset.provincia, btn.dataset.id);
     });
   });
+
+  // Auto-activar la verificación cuando hay UN convenio verificable claro.
+  // Antes el usuario tenía que clicar "Usar verificación →" como paso extra que
+  // no se entendía bien (UX 2026-05-20). Ahora al filtrar Sector + Ubicación
+  // el dropdown grupo+año aparece directamente y el panel se renderiza cuando
+  // el usuario selecciona.
+  if (r.verify) {
+    activateVerification(r.verify.provincia, r.verify.id);
+  }
 }
 
 function activateVerification(provincia, convenioId) {
@@ -4216,7 +4221,7 @@ async function updateConvenioGroups() {
     });
   }
 
-  const prof = (document.getElementById('profession').value || '').toLowerCase();
+  const prof = (document.getElementById('profession')?.value || document.getElementById('bruto')?.dataset?.profession || '').toLowerCase();
   if (prof) {
     const match = conv.grupos.find(g =>
       g.puestos.some(p => prof.includes(p.toLowerCase().split('/')[0].trim()) ||
@@ -4229,9 +4234,22 @@ async function updateConvenioGroups() {
   const anyosDisponibles = Object.keys(primerGrupo.salario).sort().reverse();
   const entryActual = CONVENIO_INDEX.find(c => c.id === val);
   const ultra = convenioEnUltraactividad(entryActual);
-  anyoSel.innerHTML = anyosDisponibles.map((a, i) =>
-    `<option value="${a}">${a}${i === 0 ? (ultra ? ' (en ultraactividad)' : ' (vigente)') : ''}</option>`
-  ).join('');
+  const currentYear = new Date().getFullYear();
+  anyoSel.innerHTML = anyosDisponibles.map((a, i) => {
+    let suffix = '';
+    if (i === 0) {
+      // Año más reciente del JSON: si el convenio está en ultraactividad, hay que
+      // dejar claro al usuario que esa tabla es la que SIGUE APLICANDO en el año
+      // actual (no la del año teórico del título). Si no, simplemente "vigente".
+      suffix = ultra ? ` (aplica en ${currentYear} · ultraactividad)` : ' (vigente)';
+    }
+    return `<option value="${a}">${a}${suffix}</option>`;
+  }).join('');
+  // Forzar value al año más reciente disponible. Sin esto, si el HTML inicial
+  // tenía un default obsoleto (ej. 2026 cuando el JSON solo tiene 2024-2025),
+  // el .value queda en "2026" inválido y updateConvenioPanel oculta el panel
+  // silenciosamente porque grupo.salario["2026"] es undefined.
+  if (anyosDisponibles.length > 0) anyoSel.value = anyosDisponibles[0];
 
   updateConvenioPanel();
 }
@@ -4260,7 +4278,10 @@ async function updateConvenioPanel() {
   document.getElementById('convenioPanelTitle').textContent = conv.nombre;
   document.getElementById('convenioPanelBadge').textContent = grupo.id;
 
-  const brutal = parseFloat(document.getElementById('salary').value) || 0;
+  // El input de la calculadora actual es id="bruto" (calc v2). Antes era "salary" (calc v1
+  // legacy). Defensive: si ningún input existe → brutal=0, el verificador muestra cifras
+  // del convenio sin comparación, lo cual es lo correcto.
+  const brutal = parseFloat(document.getElementById('bruto')?.value || document.getElementById('salary')?.value || '0') || 0;
   const minSBA = sal.sba;
   const minSBAPC = sal.sbapc || sal.sba;
   const tieneSBAPC = !!sal.sbapc;
@@ -4342,6 +4363,10 @@ async function updateConvenioPanel() {
 document.getElementById('convenioSelect').addEventListener('change', updateConvenioGroups);
 
 // Actualizar panel cuando cambia el salario (para recalcular alerta)
+// Recalcular panel cuando cambia el salario (input de calc v2 = id="bruto"; legacy "salary").
+document.getElementById('bruto')?.addEventListener('input', function() {
+  if (document.getElementById('convenioSelect').value) updateConvenioPanel();
+});
 document.getElementById('salary')?.addEventListener('input', function() {
   if (document.getElementById('convenioSelect').value) updateConvenioPanel();
 });
