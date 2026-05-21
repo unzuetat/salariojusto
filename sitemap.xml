@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://salariojusto.es/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://salariojusto.es/" />
@@ -217,9 +217,9 @@
   </url>
   <url>
     <loc>https://salariojusto.es/convenio-hosteleria-bizkaia.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://salariojusto.es/convenio-hosteleria-malaga.html</loc>

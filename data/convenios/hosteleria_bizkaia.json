@@ -1,0 +1,275 @@
+{
+  "nombre": "Hostelería de Bizkaia",
+  "bop": "BOB Núm. 81, 30/04/2025 (texto íntegro) · BOB Núm. 38, 25/02/2026 (tablas 2026)",
+  "codigo": "48001205011981",
+  "vigencia": "1 enero 2021 – 31 diciembre 2027 (efectos económicos retroactivos al 1 de marzo de 2025)",
+  "pagas": 15,
+  "jornadaAnual": 1746,
+  "urlBop": "https://ccoo.app/convenio/convenio-colectivo-hosteleria-de-vizcaya/",
+  "notaEditorial": "Convenio firmado en marzo de 2025 por la Asociación de Hostelería de Bizkaia (patronal) y los sindicatos ELA, CCOO y UGT, con vigencia hasta el 31 de diciembre de 2027. Las cifras son <strong>Total Garantizado mensual bruto</strong>, distribuidas en <strong>15 pagas</strong> (12 mensualidades ordinarias + 3 gratificaciones extraordinarias: abril, julio y diciembre — Art. 23). El convenio tiene <strong>6 categorías</strong> (1ª, 2ª, 3ª, 4ª, 5ª, Especial). La columna 'Complementos' del Anexo I ya incluye el complemento de Nocturnidad pactado (44 h/mes) más el antiguo Plus Convenio fusionado (Art. 22). <strong>Categoría Especial</strong>: aplica a personal de nuevo ingreso sin experiencia previa en el sector durante 12 meses (reducible a 6 meses con formación acreditada ≥120 h), salvo para tareas de limpieza/fregado (entran directamente en 5ª). En Bizkaia rige el <strong>IRPF foral</strong> (Hacienda Foral de Bizkaia, NF 13/2013 modificada por NF 7/2025): el neto se calcula con tarifa propia, no con la suma estatal+autonómica del régimen común. Para 2026: incremento de IPC 2025 + 0,5 puntos porcentuales (Art. 6).",
+  "grupos": [
+    {
+      "id": "PRIMERA",
+      "nombre": "1ª — Jefatura (Jefes/as de cocina, sala, recepción, contabilidad, operaciones)",
+      "puestos": [
+        "Jefe/a de recepción",
+        "Contable general",
+        "Jefe/a de cocina",
+        "Primer/a jefe/a de comedor",
+        "Jefe/a de sala",
+        "1er encargado/a de mostrador",
+        "1er encargado/a de barman",
+        "Jefe/a de operaciones",
+        "Primer/a conserje de día"
+      ],
+      "salario": {
+        "2025": { "mes": 1857.31, "sba": 27859.65 },
+        "2026": { "mes": 1920.46, "sba": 28806.90 }
+      }
+    },
+    {
+      "id": "SEGUNDA",
+      "nombre": "2ª — Jefatura intermedia (2º jefe/a, jefe/a de partida, encargado/a, mayordomo/a)",
+      "puestos": [
+        "Jefe/a de sala (caterings)",
+        "Interventor/a",
+        "Oficial de contabilidad",
+        "2º encargado/a de mostrador",
+        "2º encargado/a de barman",
+        "2º jefe/a de sala",
+        "2º jefe/a de comedor",
+        "2º jefe/a de cocina",
+        "2º jefe/a de recepción",
+        "2º conserje de día",
+        "Mayordomo/a de pisos",
+        "Encargado/a general o gobernanta",
+        "Jefe/a de partida",
+        "Jefe/a de sector",
+        "Encargado/a de trabajo",
+        "Cajero/a administrativo/a",
+        "Jefe/a repostero/a",
+        "Supervisor/a (caterings)",
+        "Encargado/a de economato y bodega"
+      ],
+      "salario": {
+        "2025": { "mes": 1763.82, "sba": 26457.30 },
+        "2026": { "mes": 1823.79, "sba": 27356.85 }
+      }
+    },
+    {
+      "id": "TERCERA",
+      "nombre": "3ª — Profesional (Camarero/a, Cocinero/a, Recepcionista, Barman, Repostero/a)",
+      "puestos": [
+        "Camarero/a",
+        "Cocinero/a",
+        "Recepcionista",
+        "Barman / Barwoman",
+        "Repostero/a",
+        "Dependiente/a de primera",
+        "Dependiente/a (caterings)",
+        "Planchista",
+        "Encargado/a de lencería y lavadero",
+        "Facturista de comedor",
+        "Telefonista de primera",
+        "Cajero/a de comedor",
+        "Cajero/a de mostrador",
+        "Conserje de noche",
+        "Gobernante/a (caterings)",
+        "Encargado/a de sala",
+        "Disc-jockey",
+        "Calefactor/a",
+        "Dietista"
+      ],
+      "salario": {
+        "2025": { "mes": 1639.01, "sba": 24585.15 },
+        "2026": { "mes": 1694.74, "sba": 25421.10 }
+      }
+    },
+    {
+      "id": "CUARTA",
+      "nombre": "4ª — Ayudantes (Ayudante de cocina, Camarero/a de piso, Telefonista 2ª)",
+      "puestos": [
+        "Dependiente/a de segunda",
+        "Ayudante de dependiente/a y barmans",
+        "Telefonista de segunda",
+        "Bodeguero/a",
+        "Ayudante de cocinero/a",
+        "Camarero/a de piso",
+        "Ayudante de repostero/a",
+        "Cafetero/a (en cocina)",
+        "Ayudante de camarero/a",
+        "Ayudante de planchista",
+        "Auxiliar de oficina",
+        "Conductor/a",
+        "Ayudante de supervisor/a (caterings)",
+        "Ayudante de equipo",
+        "Encargado/a de almacén y economato (cafeterías)",
+        "Taquillero/a",
+        "Ayudante de recepción",
+        "Portero/a de acceso",
+        "Guardarropa",
+        "Monitor/a, cuidador/a de colectividades",
+        "Auxiliar de colectividades"
+      ],
+      "salario": {
+        "2025": { "mes": 1547.93, "sba": 23218.95 },
+        "2026": { "mes": 1600.56, "sba": 24008.40 }
+      }
+    },
+    {
+      "id": "QUINTA",
+      "nombre": "5ª — Sin cualificación (Fregador/a, Pinche, Mozo/a de limpieza, Rider)",
+      "puestos": [
+        "Mozo/a de equipaje",
+        "Portero/a de servicio",
+        "Marmitón",
+        "Costurero/a, lavandero/a, planchador/a",
+        "Mozo/a de limpieza y limpiador/a",
+        "Fregador/a",
+        "Pinche",
+        "Ascensorista",
+        "Mozo/a de almacén",
+        "Vigilante de noche",
+        "Ordenanza de salón",
+        "Personal de platería",
+        "Ayudante de calefactor/a",
+        "Ayudante de economato y bodega",
+        "Ayudante de cafetero/a (cocina)",
+        "Mozo/a de habitaciones",
+        "Preparador/a (caterings)",
+        "Mozo/a de billar",
+        "Repartidor/a (Rider)"
+      ],
+      "salario": {
+        "2025": { "mes": 1441.88, "sba": 21628.20 },
+        "2026": { "mes": 1490.90, "sba": 22363.50 }
+      }
+    },
+    {
+      "id": "ESPECIAL",
+      "nombre": "Especial — Personal de nuevo ingreso sin experiencia (12 meses, o 6 con formación ≥120 h)",
+      "puestos": [
+        "Personal de nuevo ingreso sin experiencia previa en el sector (12 meses)",
+        "Personal de nuevo ingreso con formación acreditada ≥120 h (6 meses)",
+        "Excepción: NO aplica a personal de limpieza/fregado de nuevo ingreso (entra directo en 5ª)",
+        "Excepción: NO aplica a titulados/as con FP Específica Grado Superior en Hostelería"
+      ],
+      "salario": {
+        "2025": { "mes": 1158.29, "sba": 17374.35 },
+        "2026": { "mes": 1197.67, "sba": 17965.05 }
+      }
+    }
+  ],
+  "complementos": {
+    "2025": {
+      "plusFormacion": {
+        "mes": 30.13,
+        "anual": 451.95,
+        "nota": "30,13 €/mes × 15 pagas (Art. 20). La empresa queda EXIMIDA del pago si acredita ante la Comisión Paritaria su participación en formación del sector (mediante certificación de asociación empresarial, plan individual o plan agrupado sindical). Si tu empresa invoca acreditación, puedes consultar a la Comisión Paritaria (Gran Vía 38, 2º Bilbao) si la certificación está vigente para reclamar el plus."
+      },
+      "plusManutencion": {
+        "mes": 58.43,
+        "anual": null,
+        "nota": "Sustituye al complemento en especie de manutención cuando la empresa no la da en comida (Art. 26). Aplica a trabajadores incluidos en el Anexo III de la antigua Ordenanza Laboral de Hostelería. También se abona en metálico cuando el trabajador justifique con Certificación Médica una dieta especial que la empresa no pueda atender."
+      },
+      "plusDesgasteHerramientas": {
+        "mes": 45.46,
+        "anual": null,
+        "nota": "Si la empresa no facilita las herramientas de trabajo, abonará 45,46 €/mes durante 2025 (Art. 29)."
+      },
+      "plusRider": {
+        "mes": 60.00,
+        "anual": null,
+        "nota": "Plus específico para repartidores/as (Riders) clasificados/as en categoría 5ª. 60 €/mes, en proporción a la jornada (Art. 21)."
+      },
+      "nocturnidad": {
+        "mes": null,
+        "anual": null,
+        "nota": "La columna 'Complementos' del Anexo I YA INCLUYE el Plus de Nocturnidad correspondiente a 44 horas mensuales fusionado con el antiguo Plus Convenio (Art. 22). Las horas nocturnas trabajadas que excedan 44 h/mes se pagan según valor 'Plus H. nocturna' del Anexo I: 1,25 €/h (1ª) · 1,17 €/h (2ª) · 1,11 €/h (3ª, 4ª, 5ª, Especial)."
+      },
+      "horasExtra": {
+        "mes": null,
+        "anual": null,
+        "nota": "Cuantías por hora del Anexo I: 1ª 31,91 € · 2ª 30,31 € · 3ª 28,16 € · 4ª 26,60 € · 5ª 24,77 € · Especial 19,90 € (Art. 11, calculadas al 100% sobre hora ordinaria). H.E. Festivas (trabajadas en descanso semanal): 1ª 39,89 € · 2ª 37,88 € · 3ª 35,20 € · 4ª 33,25 € · 5ª 30,97 € · Especial 24,88 € (calculadas al 150%)."
+      },
+      "antiguedad": {
+        "mes": null,
+        "anual": null,
+        "nota": "Sobre Salario Base (no Garantizado) — Art. 19: 3 años → 3% · 6 años → +5% (acumulado 8%) · 9 años → +8% (acumulado 16%) · 14 años → +10% (acumulado 26%) · 19 años → +12% (acumulado 38%) · 24 años → +7% (acumulado 45%). Fijos discontinuos: cómputo de toda la duración de la relación laboral (no solo días trabajados) para los períodos posteriores al 1-jul-2021."
+      },
+      "vacaciones": {
+        "mes": null,
+        "anual": null,
+        "nota": "30 días naturales (Art. 12), preferentemente jun-sep. En subsector alojamiento, hasta 50% fuera del periodo estival por acuerdo con representación sindical. Retribuidas con el promedio del salario percibido en los 3 últimos meses naturales anteriores al disfrute. No compensables en metálico."
+      },
+      "festivos": {
+        "mes": null,
+        "anual": null,
+        "nota": "Fiestas retribuidas no recuperables trabajadas: pueden acumularse a vacaciones o disfrutarse en 2 fracciones (Art. 13). Si trabajas 8-9 fiestas: +2 días extra de descanso. Si trabajas ≥10 fiestas: +4 días extra. El 1 de mayo (Día del Trabajo) sustituye al descanso semanal para quien lo solicite."
+      },
+      "seguroVida": {
+        "mes": null,
+        "anual": null,
+        "nota": "Obligación de la empresa (Art. 32). Indemnizaciones no acumulables: 7.800 € fallecimiento por enfermedad o invalidez permanente total/absoluta/gran invalidez · 15.600 € fallecimiento por accidente · 23.400 € fallecimiento en accidente de circulación. Antigüedad mínima 1 mes."
+      }
+    },
+    "2026": {
+      "plusFormacion": {
+        "mes": 30.13,
+        "anual": 451.95,
+        "nota": "30,13 €/mes × 15 pagas (Art. 20). La empresa queda EXIMIDA del pago si acredita ante la Comisión Paritaria su participación en formación del sector (mediante certificación de asociación empresarial, plan individual o plan agrupado sindical). Si tu empresa invoca acreditación, puedes consultar a la Comisión Paritaria (Gran Vía 38, 2º Bilbao) si la certificación está vigente para reclamar el plus."
+      },
+      "plusManutencion": {
+        "mes": null,
+        "anual": null,
+        "nota": "El convenio fija 58,43 €/mes para 2025 (Art. 26). Las tablas de 2026 publicadas en BOB Núm. 38 (25-feb-2026) no detallan revisión de este plus — consulta con tu empresa o la Comisión Paritaria si te aplica el importe 2025 o una revisión IPC."
+      },
+      "plusDesgasteHerramientas": {
+        "mes": null,
+        "anual": null,
+        "nota": "El convenio fija 45,46 €/mes para 2025 (Art. 29). Las tablas de 2026 publicadas en BOB Núm. 38 (25-feb-2026) no detallan revisión de este plus — consulta con tu empresa o la Comisión Paritaria si te aplica el importe 2025 o una revisión IPC."
+      },
+      "plusRider": {
+        "mes": 60.00,
+        "anual": null,
+        "nota": "Plus específico para repartidores/as (Riders) clasificados/as en categoría 5ª. 60 €/mes, en proporción a la jornada (Art. 21)."
+      },
+      "nocturnidad": {
+        "mes": null,
+        "anual": null,
+        "nota": "La columna 'Complementos' del Anexo I YA INCLUYE el Plus de Nocturnidad correspondiente a 44 horas mensuales fusionado con el antiguo Plus Convenio (Art. 22). Las horas nocturnas trabajadas que excedan 44 h/mes se pagan según valor 'Plus H. Nocturna' del Anexo I: 1,25 €/h (1ª) · 1,17 €/h (2ª) · 1,11 €/h (3ª, 4ª, 5ª, Especial)."
+      },
+      "horasExtra": {
+        "mes": null,
+        "anual": null,
+        "nota": "Cuantías 2026 por hora del Anexo I: 1ª 33,00 € · 2ª 31,34 € · 3ª 29,12 € · 4ª 27,50 € · 5ª 25,62 € · Especial 20,58 € (Art. 11). H.E. Festivas: 1ª 41,25 € · 2ª 39,17 € · 3ª 36,40 € · 4ª 34,38 € · 5ª 32,02 € · Especial 25,72 €."
+      },
+      "antiguedad": {
+        "mes": null,
+        "anual": null,
+        "nota": "Sobre Salario Base (no Garantizado) — Art. 19: 3 años → 3% · 6 años → +5% (acumulado 8%) · 9 años → +8% (acumulado 16%) · 14 años → +10% (acumulado 26%) · 19 años → +12% (acumulado 38%) · 24 años → +7% (acumulado 45%). Fijos discontinuos: cómputo de toda la duración de la relación laboral (no solo días trabajados) para los períodos posteriores al 1-jul-2021."
+      },
+      "vacaciones": {
+        "mes": null,
+        "anual": null,
+        "nota": "30 días naturales (Art. 12), preferentemente jun-sep. En subsector alojamiento, hasta 50% fuera del periodo estival por acuerdo con representación sindical. Retribuidas con el promedio del salario percibido en los 3 últimos meses naturales anteriores al disfrute. No compensables en metálico."
+      },
+      "festivos": {
+        "mes": null,
+        "anual": null,
+        "nota": "Fiestas retribuidas no recuperables trabajadas: pueden acumularse a vacaciones o disfrutarse en 2 fracciones (Art. 13). Si trabajas 8-9 fiestas: +2 días extra de descanso. Si trabajas ≥10 fiestas: +4 días extra. El 1 de mayo (Día del Trabajo) sustituye al descanso semanal para quien lo solicite."
+      },
+      "seguroVida": {
+        "mes": null,
+        "anual": null,
+        "nota": "Obligación de la empresa (Art. 32). Indemnizaciones no acumulables: 7.800 € fallecimiento por enfermedad o invalidez permanente total/absoluta/gran invalidez · 15.600 € fallecimiento por accidente · 23.400 € fallecimiento en accidente de circulación. Antigüedad mínima 1 mes."
+      }
+    }
+  },
+  "relacionados": [
+    { "nombre": "Convenio Limpieza de Edificios y Locales — Bizkaia", "url": "/convenio-limpieza-bizkaia.html", "nota": "Para personal de limpieza de oficinas/locales fuera de hostelería" },
+    { "nombre": "Hostelería — Madrid", "url": "/convenio-hosteleria-madrid.html", "nota": "Para comparar con la capital" },
+    { "nombre": "Hostelería — Barcelona", "url": "/convenio-hosteleria-barcelona.html", "nota": "Si trabajas en provincia de Barcelona" },
+    { "nombre": "Pilar sectorial Hostelería en España", "url": "/convenio-hosteleria.html", "nota": "Hub con todas las provincias auditadas" }
+  ]
+}
