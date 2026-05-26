@@ -46,6 +46,9 @@ jobs:
             python scripts/ga4-fetch.py
           fi
 
+      - name: Generate RESUMEN.md
+        run: python scripts/ga4-resumen.py
+
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
