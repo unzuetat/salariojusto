@@ -1,0 +1,57 @@
+name: GA4 daily fetch
+
+on:
+  schedule:
+    # 06:00 UTC = 07:00 CET / 08:00 CEST. Datos del día anterior ya estables.
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Start date YYYY-MM-DD (default: yesterday)"
+        required: false
+      end_date:
+        description: "End date YYYY-MM-DD (default: same as start_date)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install --quiet google-analytics-data==0.18.16
+
+      - name: Fetch GA4 report
+        env:
+          GA4_SA_KEY: ${{ secrets.GA4_SA_KEY }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          START: ${{ inputs.start_date }}
+          END: ${{ inputs.end_date }}
+        run: |
+          if [ -n "$START" ] && [ -n "$END" ]; then
+            python scripts/ga4-fetch.py "$START" "$END"
+          elif [ -n "$START" ]; then
+            python scripts/ga4-fetch.py "$START"
+          else
+            python scripts/ga4-fetch.py
+          fi
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain analisis/ga4)" ]; then
+            echo "No new GA4 data to commit"
+            exit 0
+          fi
+          git add analisis/ga4
+          git commit -m "chore(ga4): daily fetch $(date -u +%Y-%m-%d)"
+          git push
