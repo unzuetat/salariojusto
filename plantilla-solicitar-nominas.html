@@ -144,6 +144,14 @@
     .template-actions button.btn-success { background: var(--green); border-color: var(--green); }
     .template-text { font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 1.65; color: var(--ink); padding: 22px 26px; white-space: pre-wrap; word-wrap: break-word; margin: 0; background: #fff; }
 
+    /* Tabs para alternar versiones del modelo */
+    .template-tabs { display: flex; gap: 0; margin: 12px 0 0; border-bottom: 1px solid var(--cream-200); }
+    .tab-btn { padding: 12px 22px; border: 1px solid var(--cream-200); border-bottom: none; background: var(--cream-50); cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--ink-light); margin-right: 4px; transition: background 0.15s, color 0.15s; }
+    .tab-btn:hover:not(.active) { background: var(--cream-100); color: var(--ink); }
+    .tab-btn.active { background: var(--ink); color: #fff; border-color: var(--ink); position: relative; top: 1px; }
+    .template-text-wrap.hidden { display: none; }
+    .template-version-note { font-size: 12px; color: var(--ink-lighter); margin: 10px 0 0; line-height: 1.6; }
+
     .faq-mini { border-bottom: 1px solid var(--cream-200); padding: 16px 0; }
     .faq-mini:last-of-type { border-bottom: none; }
     .faq-mini .faq-q { font-size: 14px; font-weight: 700; color: var(--ink); margin: 0 0 6px; }
@@ -228,12 +236,21 @@
   <h2>Modelo de carta</h2>
   <p>El modelo incluye <strong>tres opciones que se combinan</strong> según tu caso (te faltan algunos meses concretos, no tienes ninguna o necesitas otros documentos asociados). Borra las opciones que no apliquen y sustituye los campos en <strong>[CORCHETES]</strong> por tus datos antes de enviar.</p>
 
-  <div class="template-text-wrap">
+  <p>Elige el tono según tu relación con la empresa:</p>
+
+  <div class="template-tabs" role="tablist">
+    <button type="button" class="tab-btn active" data-tab="formal" role="tab" aria-selected="true">Versión formal</button>
+    <button type="button" class="tab-btn" data-tab="cercana" role="tab" aria-selected="false">Versión cercana</button>
+  </div>
+
+  <p class="template-version-note"><strong>Cuándo usar cada una:</strong> la <em>formal</em> blinda mejor ante conflicto o si vas a escalar a Inspección/juzgado. La <em>cercana</em> funciona mejor con empresas pequeñas o cuando la relación es buena y no quieres tensar — mantiene <strong>todas las referencias legales</strong> (art. 29.1 ET, 21 LISOS, 7.3 LISOS, 8.4 ET) pero quita la rigidez de la redacción.</p>
+
+  <div class="template-text-wrap" data-version="formal">
     <div class="template-actions">
-      <button type="button" class="btn-copy" data-target="template-text">Copiar al portapapeles</button>
-      <button type="button" class="btn-download" data-target="template-text" data-filename="solicitud-copia-nominas-art29.txt">Descargar como .txt</button>
+      <button type="button" class="btn-copy" data-target="template-text-formal">Copiar al portapapeles</button>
+      <button type="button" class="btn-download" data-target="template-text-formal" data-filename="solicitud-copia-nominas-art29-formal.txt">Descargar como .txt</button>
     </div>
-    <div id="template-text" class="template-text"><strong>[CIUDAD]</strong>, <strong>[FECHA]</strong>
+    <div id="template-text-formal" class="template-text"><strong>[CIUDAD]</strong>, <strong>[FECHA]</strong>
 
 A la atención de <strong>[NOMBRE DEL/DE LA RESPONSABLE DE RECURSOS HUMANOS]</strong>
 <strong>[RAZÓN SOCIAL DE LA EMPRESA]</strong>
@@ -273,6 +290,57 @@ Le agradeceré que me confirme por escrito la recepción de esta solicitud y que
 Quedo a su disposición para aclarar cualquier extremo.
 
 Atentamente,
+
+
+
+<strong>[FIRMA]</strong>
+
+<strong>[TU NOMBRE Y APELLIDOS]</strong>
+<strong>[TU NIF]</strong>
+</div>
+  </div>
+
+  <div class="template-text-wrap hidden" data-version="cercana">
+    <div class="template-actions">
+      <button type="button" class="btn-copy" data-target="template-text-cercana">Copiar al portapapeles</button>
+      <button type="button" class="btn-download" data-target="template-text-cercana" data-filename="solicitud-copia-nominas-art29-cercana.txt">Descargar como .txt</button>
+    </div>
+    <div id="template-text-cercana" class="template-text"><strong>[CIUDAD]</strong>, <strong>[FECHA]</strong>
+
+Hola <strong>[NOMBRE DEL/DE LA RESPONSABLE]</strong>:
+
+Soy <strong>[TU NOMBRE Y APELLIDOS]</strong>, con NIF <strong>[TU NIF]</strong>. Trabajo en <strong>[RAZÓN SOCIAL]</strong> desde el <strong>[FECHA DE INCORPORACIÓN]</strong> como <strong>[TU CATEGORÍA]</strong> (mi número de afiliación a la Seguridad Social es <strong>[TU NAF]</strong>).
+
+Te escribo para pediros por escrito copia de las nóminas que no conservo. El artículo 29.1 del Estatuto de los Trabajadores obliga a la empresa a entregar el recibo justificativo del pago del salario a cada persona trabajadora, así que aprovecho ese derecho para solicitarlas formalmente.
+
+En concreto necesitaría:
+
+<strong>[OPCIÓN A — Te faltan meses concretos:]</strong>
+Copia de las nóminas de:
+- <strong>[MES Y AÑO]</strong>
+- <strong>[MES Y AÑO]</strong>
+- <strong>[MES Y AÑO]</strong>
+
+<strong>[OPCIÓN B — No conservas ninguna o te faltan muchas:]</strong>
+Copia de todas las nóminas entre el <strong>[FECHA INICIAL]</strong> y el <strong>[FECHA ACTUAL]</strong>. Entiendo que están disponibles porque la empresa tiene obligación de conservar la documentación laboral durante 4 años (art. 21 LISOS).
+
+<strong>[OPCIÓN C — Necesitas además otra documentación:]</strong>
+Aprovecho la solicitud para pedir también:
+- Copia básica del contrato y de sus modificaciones (art. 8.4 ET).
+- Certificado de empresa con mis bases de cotización del periodo solicitado.
+
+Me viene bien recibirlo en <strong>[PAPEL FIRMADO / PDF FIRMADO DIGITALMENTE]</strong>. Puedes enviármelo a:
+- Correo electrónico: <strong>[TU EMAIL]</strong>
+- Dirección postal: <strong>[TU DIRECCIÓN]</strong>
+- O entregármelo en mano en mi puesto, con un recibo de la entrega.
+
+Si me confirmas por escrito que has recibido esta solicitud, te lo agradezco. Un plazo razonable para tener la documentación serían <strong>15 días naturales</strong> — si necesitas más tiempo para preparar algo, dímelo y vemos.
+
+Recuerda que no entregar el recibo de salarios o entregarlo incompleto es una infracción grave (art. 7.3 LISOS), pero no te lo digo por ponerme estricto/a sino para que sepamos en qué marco nos movemos.
+
+Si tienes cualquier duda con la petición, me dices y hablamos.
+
+Un saludo,
 
 
 
@@ -351,6 +419,19 @@ Atentamente,
   </div>
 
   <script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          const active = b === btn;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        document.querySelectorAll('.template-text-wrap[data-version]').forEach(w => {
+          w.classList.toggle('hidden', w.dataset.version !== tab);
+        });
+      });
+    });
     document.querySelectorAll('.btn-copy').forEach(btn => {
       btn.addEventListener('click', () => {
         const target = document.getElementById(btn.dataset.target);
