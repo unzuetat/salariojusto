@@ -31,7 +31,9 @@ jobs:
 
       - name: Fetch GA4 report
         env:
-          GA4_SA_KEY: ${{ secrets.GA4_SA_KEY }}
+          GA4_OAUTH_CLIENT_ID: ${{ secrets.GA4_OAUTH_CLIENT_ID }}
+          GA4_OAUTH_CLIENT_SECRET: ${{ secrets.GA4_OAUTH_CLIENT_SECRET }}
+          GA4_OAUTH_REFRESH_TOKEN: ${{ secrets.GA4_OAUTH_REFRESH_TOKEN }}
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           START: ${{ inputs.start_date }}
           END: ${{ inputs.end_date }}

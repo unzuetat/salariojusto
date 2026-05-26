@@ -2,9 +2,14 @@
 """
 Fetch daily GA4 report and write to analisis/ga4/YYYY-MM-DD.csv
 
+Auth: OAuth2 user credentials (refresh token flow). El refresh token se obtuvo
+una vez con la cuenta admin de GA4 vía OAuth Playground.
+
 Env vars required:
-  GA4_SA_KEY        Full JSON content of the service account key.
-  GA4_PROPERTY_ID   GA4 property ID (numeric, e.g. 352618734).
+  GA4_OAUTH_CLIENT_ID       OAuth Client ID (.apps.googleusercontent.com).
+  GA4_OAUTH_CLIENT_SECRET   OAuth Client Secret.
+  GA4_OAUTH_REFRESH_TOKEN   Refresh token de larga duración.
+  GA4_PROPERTY_ID           GA4 property ID numérico.
 
 CLI:
   python scripts/ga4-fetch.py              -> yesterday
@@ -12,7 +17,6 @@ CLI:
   python scripts/ga4-fetch.py 2026-05-01 2026-05-20  -> range (one file per day)
 """
 import csv
-import json
 import os
 import sys
 from datetime import date, datetime, timedelta, timezone
@@ -26,25 +30,39 @@ from google.analytics.data_v1beta.types import (
     OrderBy,
     RunReportRequest,
 )
-from google.oauth2 import service_account
+from google.oauth2.credentials import Credentials
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "analisis" / "ga4"
+TOKEN_URI = "https://oauth2.googleapis.com/token"
+SCOPES = ["https://www.googleapis.com/auth/analytics.readonly"]
 
 DIMENSIONS = ["date", "pagePath", "sessionDefaultChannelGroup"]
 METRICS = ["sessions", "totalUsers", "screenPageViews", "averageEngagementTime"]
 
 
 def client_from_env() -> tuple[BetaAnalyticsDataClient, str]:
-    sa_json = os.environ.get("GA4_SA_KEY")
+    client_id = os.environ.get("GA4_OAUTH_CLIENT_ID")
+    client_secret = os.environ.get("GA4_OAUTH_CLIENT_SECRET")
+    refresh_token = os.environ.get("GA4_OAUTH_REFRESH_TOKEN")
     property_id = os.environ.get("GA4_PROPERTY_ID")
-    if not sa_json:
-        sys.exit("ERROR: GA4_SA_KEY env var missing")
-    if not property_id:
-        sys.exit("ERROR: GA4_PROPERTY_ID env var missing")
+    missing = [k for k, v in {
+        "GA4_OAUTH_CLIENT_ID": client_id,
+        "GA4_OAUTH_CLIENT_SECRET": client_secret,
+        "GA4_OAUTH_REFRESH_TOKEN": refresh_token,
+        "GA4_PROPERTY_ID": property_id,
+    }.items() if not v]
+    if missing:
+        sys.exit(f"ERROR: env vars missing: {', '.join(missing)}")
 
-    info = json.loads(sa_json)
-    creds = service_account.Credentials.from_service_account_info(info)
+    creds = Credentials(
+        token=None,
+        refresh_token=refresh_token,
+        token_uri=TOKEN_URI,
+        client_id=client_id,
+        client_secret=client_secret,
+        scopes=SCOPES,
+    )
     return BetaAnalyticsDataClient(credentials=creds), property_id
 
 
