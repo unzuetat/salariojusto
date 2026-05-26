@@ -38,7 +38,7 @@ TOKEN_URI = "https://oauth2.googleapis.com/token"
 SCOPES = ["https://www.googleapis.com/auth/analytics.readonly"]
 
 DIMENSIONS = ["date", "pagePath", "sessionDefaultChannelGroup"]
-METRICS = ["sessions", "totalUsers", "screenPageViews", "averageEngagementTime"]
+METRICS = ["sessions", "totalUsers", "screenPageViews", "averageSessionDuration"]
 
 
 def client_from_env() -> tuple[BetaAnalyticsDataClient, str]:
