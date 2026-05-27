@@ -93,6 +93,9 @@ const CONVENIO_CONFIG = {
     sector: 'Hostelería', sectorSlug: 'hosteleria',
     provincia: 'Madrid', provinciaSlug: 'madrid',
     plurprovincial: false,
+    // BOE remixed manual 20-may-2026 (dwell 220s). NO regenerar HTML — solo
+    // se lee el JSON para listarla en el hub /convenios.html.
+    skipHtmlGeneration: true,
     relacionadas: ['hosteleria-valencia', 'hosteleria-barcelona']
   },
   'hosteleria_vlc.json': {
@@ -113,10 +116,13 @@ const CONVENIO_CONFIG = {
     plurprovincial: false,
     relacionadas: ['hosteleria-madrid', 'hosteleria-barcelona', 'hosteleria-valencia']
   },
-  'hosteleria_balears.json': {
+  'hosteleria_baleares.json': {
     sector: 'Hostelería', sectorSlug: 'hosteleria',
     provincia: 'Illes Balears', provinciaSlug: 'baleares',
     plurprovincial: false,
+    // BOE remixed manual (dwell 224s). NO regenerar HTML — solo se lee
+    // el JSON para listarla en el hub /convenios.html.
+    skipHtmlGeneration: true,
     relacionadas: ['hosteleria-barcelona', 'hosteleria-valencia', 'hosteleria-malaga']
   },
   'hosteleria_val.json': {
@@ -243,12 +249,12 @@ function headCSS() {
     .callout-info strong{color:var(--green);}
     .stat-item{border-left:3px solid var(--gold);padding:4px 14px;}
     .stat-label{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);margin-bottom:2px;}
-    .stat-value{font-size:15px;font-weight:700;color:var(--ink);line-height:1.3;}
+    .stat-value{font-size:15px;font-weight:700;color:var(--ink);line-height:1.3;font-variant-numeric:tabular-nums;}
     table{width:100%;border-collapse:collapse;margin:8px 0;}
     th{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);text-align:left;padding:10px 12px;border-bottom:2px solid var(--cream-200);background:var(--cream-50);}
     td{padding:12px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);vertical-align:top;}
     td:first-child{font-weight:700;color:var(--ink);white-space:nowrap;}
-    td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;}
+    td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
     @media (max-width:720px){
       .tabla-salarios{display:block;}
       .tabla-salarios thead{display:none;}
@@ -279,6 +285,20 @@ function headCSS() {
     .footer-text{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6;}
     .footer-text a{color:var(--gold-light);text-decoration:none;}
     @media(max-width:600px){main{padding:24px 16px 48px;}.card{padding:18px;}th,td{padding:8px 6px;font-size:12px;}}
+    .callout-comp-tabla{margin:14px 0;}
+    .callout-comp-tabla table{width:100%;border-collapse:collapse;font-size:14px;margin:0;}
+    .callout-comp-tabla th{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);text-align:left;padding:10px 8px;border-bottom:2px solid var(--cream-200);background:var(--cream-50);}
+    .callout-comp-tabla td{padding:12px 8px;border-bottom:1px solid var(--cream-100);color:var(--ink);vertical-align:top;font-size:14px;}
+    .callout-comp-tabla td:first-child{font-weight:600;}
+    .callout-comp-tabla__own{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__media{color:var(--ink-light);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__pos{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--pos{color:var(--green);}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neg{color:#B91C1C;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neutral{color:var(--ink-lighter);}
+    .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
+    .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
+    .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
   </style>`;
 }
 
@@ -420,8 +440,10 @@ function generateConvenioPage(data, meta) {
   <meta property="og:type" content="article">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   <script type="application/ld+json">${ORGANIZATION_SCHEMA}</script>
   <script type="application/ld+json">${breadcrumbSchema}</script>
@@ -431,7 +453,7 @@ function generateConvenioPage(data, meta) {
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110009006533891" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
   ${headCSS()}
 </head>
 <body>
@@ -456,7 +478,7 @@ ${navHTML()}
       <div class="stat-item"><div class="stat-label">Jornada anual</div><div class="stat-value">${data.jornadaAnual} horas</div></div>
       <div class="stat-item"><div class="stat-label">Pagas al año</div><div class="stat-value">${data.pagas} pagas</div></div>
       <div class="stat-item"><div class="stat-label">Vigencia</div><div class="stat-value">${data.vigencia}</div></div>
-      <div class="stat-item"><div class="stat-label">Código convenio</div><div class="stat-value" style="font-size:13px;font-family:monospace;">${data.codigo}</div></div>
+      <div class="stat-item"><div class="stat-label">Código convenio</div><div class="stat-value" style="font-size:13px;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">${data.codigo}</div></div>
     </div>
   </div>
 ${data.notaEditorial ? `
@@ -488,6 +510,9 @@ ${rows}
     <p>¿Tu salario real coincide con el convenio? Verifícalo ahora y reclama diferencias si las hay.</p>
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
+
+  <!-- CALLOUTS:START -->
+  <!-- CALLOUTS:END -->
 
   <h2>Preguntas frecuentes</h2>
 ${faqs.map(f => `  <h3>${f.q}</h3>\n  <p>${f.a}</p>`).join('\n\n')}
@@ -587,7 +612,11 @@ ${lista.map(c => `      <a href="${c.href}" style="display:block;padding:14px 16
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   <script type="application/ld+json">${ORGANIZATION_SCHEMA}</script>
   <script type="application/ld+json">${breadcrumbSchema}</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXJ8V2FBW9"></script>
@@ -595,7 +624,7 @@ ${lista.map(c => `      <a href="${c.href}" style="display:block;padding:14px 16
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110009006533891" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
   ${headCSS()}
 </head>
 <body>
@@ -673,16 +702,21 @@ function main() {
       }
     } else {
       const data = normalizeSimple(rawData);
-      const page = generateConvenioPage(data, {
-        sector: meta.sector, sectorSlug: meta.sectorSlug,
-        provincia: meta.provincia, provinciaSlug: meta.provinciaSlug
-      });
-      fs.writeFileSync(path.join(ROOT, page.fileName), page.html, 'utf8');
-      console.log(`  ✓ ${page.fileName}`);
+      const fileName = `convenio-${meta.sectorSlug}-${meta.provinciaSlug}.html`;
+      if (meta.skipHtmlGeneration) {
+        console.log(`  · ${fileName} (skip HTML — BOE remixed manual)`);
+      } else {
+        const page = generateConvenioPage(data, {
+          sector: meta.sector, sectorSlug: meta.sectorSlug,
+          provincia: meta.provincia, provinciaSlug: meta.provinciaSlug
+        });
+        fs.writeFileSync(path.join(ROOT, page.fileName), page.html, 'utf8');
+        console.log(`  ✓ ${page.fileName}`);
+      }
       generated.push({
         sector: meta.sector,
         provincia: meta.provincia,
-        href: '/' + page.fileName,
+        href: '/' + fileName,
         nombreCorto: `${meta.sector} — ${meta.provincia}`,
         vigencia: data.vigencia,
         enUltraactividad: detectaUltraactividad(data.vigencia),
@@ -708,6 +742,13 @@ function main() {
     { sector: 'Limpieza de Edificios y Locales', provincia: 'Murcia', href: '/convenio-limpieza-murcia.html', nombreCorto: 'Limpieza — Murcia', vigencia: 'Convenio 2023-2027 · Tabla 2026 · 16 pagas anuales · jornada 1.748 h' },
     { sector: 'Hostelería', provincia: 'Bizkaia', href: '/convenio-hosteleria-bizkaia.html', nombreCorto: 'Hostelería — Bizkaia', vigencia: 'Tabla 2026 (BOB-2026a038) · IRPF foral · vigente hasta dic-2027' },
     { sector: 'Hostelería', provincia: 'Málaga', href: '/convenio-hosteleria-malaga.html', nombreCorto: 'Hostelería — Málaga', vigencia: 'Tablas 2026 provisionales (BOP 14-abr-2026) · 9 secciones · vigente hasta dic-2027' },
+    { sector: 'Hostelería', provincia: 'Cádiz', href: '/convenio-hosteleria-cadiz.html', nombreCorto: 'Hostelería — Cádiz', vigencia: 'Tablas 2026 · 15 pagas · 1.253–1.515 €/mes' },
+    { sector: 'Hostelería', provincia: 'Cantabria', href: '/convenio-hosteleria-cantabria.html', nombreCorto: 'Hostelería — Cantabria', vigencia: 'Vigente · 15 pagas · Camarero/a 1.209 €/mes' },
+    { sector: 'Hostelería', provincia: 'Granada', href: '/convenio-hosteleria-granada.html', nombreCorto: 'Hostelería — Granada', vigencia: 'Camarero/a 1.436–1.676 €/mes · vigente por ultraactividad', enUltraactividad: true },
+    { sector: 'Hostelería', ambito: 'Estatal · Pilar sectorial', provincia: null, href: '/convenio-hosteleria.html', nombreCorto: 'Hostelería — Estatal (pilar sectorial)', vigencia: '9 provincias auditadas + visión sectorial' },
+    { sector: 'Construcción', provincia: 'Bizkaia', href: '/convenio-construccion-bizkaia.html', nombreCorto: 'Construcción — Bizkaia', vigencia: 'Tablas 2026 · Peón 28.446 € · Oficial 1ª 34.186 €' },
+    { sector: 'Metal', provincia: 'Bizkaia', href: '/convenio-metal-bizkaia.html', nombreCorto: 'Metal — Bizkaia', vigencia: 'Tablas 2026 · Mínimo 22.034 €/año · Oficial 1ª 23.509 €' },
+    { sector: 'Técnicos de Espectáculos', ambito: 'Sector sin convenio propio', provincia: null, href: '/convenio-tecnicos-espectaculos.html', nombreCorto: 'Técnicos de Espectáculos — sin regulación', vigencia: 'Sector sin convenio propio · huelga 2026' },
     { sector: 'Construcción', ambito: 'Estatal', provincia: null, href: '/construccion-estatal-suelo-salarial.html', nombreCorto: 'Construcción — Suelo salarial estatal', vigencia: '1 enero 2022 – 31 diciembre 2026' },
   ];
   for (const m of MANUAL_CONVENIOS) generated.push(m);

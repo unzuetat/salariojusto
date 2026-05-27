@@ -21,6 +21,14 @@ const SECTORS = [
   { id: 'hosteleria', label: 'Hostelería', pilarUrl: '/convenio-hosteleria.html' }
 ];
 
+// Landings BOE remixed con callout editorial enriquecido (categoría reconocible
+// + nota explicativa con desglose por clases de establecimiento). NO se
+// sobreescriben con el callout autogenerado del dataset.
+const MANUAL_OVERRIDE = new Set([
+  'convenio-hosteleria-madrid.html',
+  'convenio-hosteleria-bizkaia.html',
+]);
+
 // `useGrouping: true` explícito: Node 24 cambió el default es-ES a "min2",
 // lo que omitía el separador de miles en cifras de 4 dígitos (1100 en vez de 1.100).
 const fmtInt = n => new Intl.NumberFormat('es-ES', { useGrouping: true, maximumFractionDigits: 0 }).format(Math.round(n));
@@ -237,7 +245,13 @@ function processSector(sector) {
   console.log(`\n📊 ${sector.label} — ${dataset.provincias.length} provincias en dataset`);
 
   let updated = 0;
+  let skipped = 0;
   for (const provincia of dataset.provincias) {
+    if (MANUAL_OVERRIDE.has(provincia.landing)) {
+      console.log(`  · ${provincia.name} → ${provincia.landing} (skip — callout editorial manual)`);
+      skipped++;
+      continue;
+    }
     const html = buildTableHtml(provincia, dataset);
     const ok = injectIntoLanding(provincia.landing, html);
     if (ok) {
@@ -245,7 +259,7 @@ function processSector(sector) {
       console.log(`  ✓ ${provincia.name} → ${provincia.landing}`);
     }
   }
-  console.log(`\n${updated}/${dataset.provincias.length} landings regeneradas.`);
+  console.log(`\n${updated}/${dataset.provincias.length - skipped} landings regeneradas (${skipped} con callout manual).`);
 }
 
 function main() {

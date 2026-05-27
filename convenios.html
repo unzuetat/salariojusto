@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convenios colectivos: tablas salariales por sector y provincia | SalarioJusto</title>
-  <meta name="description" content="31 convenios colectivos con tablas salariales, jornada anual y complementos. Hostelería, Limpieza de Edificios y Locales, Oficinas y Despachos, Construcción por provincia y estatal.">
+  <meta name="description" content="32 convenios colectivos con tablas salariales, jornada anual y complementos. Hostelería, Limpieza de Edificios y Locales, Oficinas y Despachos, Construcción por provincia y estatal.">
   <link rel="canonical" href="https://salariojusto.es/convenios.html">
   <link rel="alternate" hreflang="es" href="https://salariojusto.es/convenios.html">
   <link rel="alternate" hreflang="x-default" href="https://salariojusto.es/convenios.html">
   <meta property="og:title" content="Convenios colectivos: tablas salariales por sector y provincia">
-  <meta property="og:description" content="31 convenios colectivos con tablas salariales, jornada anual y complementos. Hostelería, Limpieza de Edificios y Locales, Oficinas y Despachos, Construcción por provincia y estatal.">
+  <meta property="og:description" content="32 convenios colectivos con tablas salariales, jornada anual y complementos. Hostelería, Limpieza de Edificios y Locales, Oficinas y Despachos, Construcción por provincia y estatal.">
   <meta property="og:url" content="https://salariojusto.es/convenios.html">
   <meta property="og:image" content="https://salariojusto.es/preview.jpg">
   <meta property="og:type" content="website">
@@ -18,8 +18,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -95,12 +95,12 @@
     .callout-info strong{color:var(--green);}
     .stat-item{border-left:3px solid var(--gold);padding:4px 14px;}
     .stat-label{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);margin-bottom:2px;}
-    .stat-value{font-size:15px;font-weight:700;color:var(--ink);line-height:1.3;}
+    .stat-value{font-size:15px;font-weight:700;color:var(--ink);line-height:1.3;font-variant-numeric:tabular-nums;}
     table{width:100%;border-collapse:collapse;margin:8px 0;}
     th{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);text-align:left;padding:10px 12px;border-bottom:2px solid var(--cream-200);background:var(--cream-50);}
     td{padding:12px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);vertical-align:top;}
     td:first-child{font-weight:700;color:var(--ink);white-space:nowrap;}
-    td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;}
+    td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
     @media (max-width:720px){
       .tabla-salarios{display:block;}
       .tabla-salarios thead{display:none;}
@@ -131,6 +131,20 @@
     .footer-text{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6;}
     .footer-text a{color:var(--gold-light);text-decoration:none;}
     @media(max-width:600px){main{padding:24px 16px 48px;}.card{padding:18px;}th,td{padding:8px 6px;font-size:12px;}}
+    .callout-comp-tabla{margin:14px 0;}
+    .callout-comp-tabla table{width:100%;border-collapse:collapse;font-size:14px;margin:0;}
+    .callout-comp-tabla th{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);text-align:left;padding:10px 8px;border-bottom:2px solid var(--cream-200);background:var(--cream-50);}
+    .callout-comp-tabla td{padding:12px 8px;border-bottom:1px solid var(--cream-100);color:var(--ink);vertical-align:top;font-size:14px;}
+    .callout-comp-tabla td:first-child{font-weight:600;}
+    .callout-comp-tabla__own{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__media{color:var(--ink-light);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;}
+    .callout-comp-tabla__pos{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--pos{color:var(--green);}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neg{color:#B91C1C;}
+    .callout-comp-tabla td.callout-comp-tabla__pos--neutral{color:var(--ink-lighter);}
+    .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
+    .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
+    .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
   </style>
 </head>
 <body>
@@ -144,7 +158,7 @@
 <div class="breadcrumb"><a href="/">SalarioJusto</a> › Convenios colectivos</div>
 
 <section class="hero">
-  <div class="hero-badge">31 convenios disponibles</div>
+  <div class="hero-badge">32 convenios disponibles</div>
   <h1>Convenios colectivos: <em>tablas salariales</em> por sector y provincia</h1>
   <p class="hero-sub">Tablas oficiales, jornada anual, pagas extras y complementos de los convenios colectivos publicados en el BOE, DOGC y boletines provinciales.</p>
 </section>
@@ -157,7 +171,7 @@
       <a href="/convenio-hosteleria-madrid.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Madrid</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Madrid</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 enero 2023 – 31 diciembre 2025</div>
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 enero 2023 – 31 diciembre 2025 (en ultraactividad)</div>
         <div style="display:inline-block;margin-top:6px;padding:2px 8px;background:#FEF3C7;border:1px solid #B45309;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#B45309;">⚠ Ultraactividad</div>
       </a>
       <a href="/convenio-hosteleria-valencia.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
@@ -181,7 +195,7 @@
       <a href="/convenio-hosteleria-baleares.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Illes Balears</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Illes Balears</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 abril 2025 – 31 marzo 2028</div>
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 abril 2025 – 31 marzo 2028 (año fiscal abr-mar, no natural)</div>
         
       </a>
       <a href="/convenio-hosteleria-valladolid.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
@@ -224,25 +238,31 @@
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Málaga</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Málaga</div>
         <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Tablas 2026 provisionales (BOP 14-abr-2026) · 9 secciones · vigente hasta dic-2027</div>
-
+        
       </a>
       <a href="/convenio-hosteleria-cadiz.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Cádiz</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Cádiz</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 enero 2025 – 31 diciembre 2028</div>
-
-      </a>
-      <a href="/convenio-hosteleria-granada.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Granada</div>
-        <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Granada</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Tabla 2025 vigente en 2026 · 6 niveles × 4 establecimientos</div>
-        <div style="display:inline-block;margin-top:6px;padding:2px 8px;background:#FEF3C7;border:1px solid #B45309;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#B45309;">⚠ Ultraactividad pactada</div>
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Tablas 2026 · 15 pagas · 1.253–1.515 €/mes</div>
+        
       </a>
       <a href="/convenio-hosteleria-cantabria.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Cantabria</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Cantabria</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Tabla 2025 verificada · vigente en 2026 por tácita reconducción</div>
-
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Vigente · 15 pagas · Camarero/a 1.209 €/mes</div>
+        
+      </a>
+      <a href="/convenio-hosteleria-granada.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Granada</div>
+        <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Granada</div>
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Camarero/a 1.436–1.676 €/mes · vigente por ultraactividad</div>
+        <div style="display:inline-block;margin-top:6px;padding:2px 8px;background:#FEF3C7;border:1px solid #B45309;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#B45309;">⚠ Ultraactividad</div>
+      </a>
+      <a href="/convenio-hosteleria.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Estatal · Pilar sectorial</div>
+        <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Hostelería — Estatal (pilar sectorial)</div>
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">9 provincias auditadas + visión sectorial</div>
+        
       </a>
     </div>
   </div>
@@ -276,13 +296,7 @@
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Barcelona</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Limpieza — Barcelona</div>
         <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 enero 2026 – 31 diciembre 2030</div>
-
-      </a>
-      <a href="/convenio-limpieza-catalunya.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Catalunya</div>
-        <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Limpieza — Catalunya (autonómico)</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 enero 2026 – 31 diciembre 2030</div>
-
+        
       </a>
       <a href="/convenio-limpieza-valencia.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Valencia</div>
@@ -337,28 +351,39 @@
   <div class="card">
     <div class="card-title">Construcción</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
+      <a href="/convenio-construccion-bizkaia.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Bizkaia</div>
+        <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Construcción — Bizkaia</div>
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Tablas 2026 · Peón 28.446 € · Oficial 1ª 34.186 €</div>
+        
+      </a>
       <a href="/construccion-estatal-suelo-salarial.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Estatal</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Construcción — Suelo salarial estatal</div>
         <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">1 enero 2022 – 31 diciembre 2026</div>
-
-      </a>
-      <a href="/convenio-construccion-bizkaia.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Bizkaia</div>
-        <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Construcción — Bizkaia</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Vigente 2025-2027 · Tablas 2026 (+3,4%) · 14 pagas · Etorkizuna EPSV obligatoria · IRPF foral</div>
-
+        
       </a>
     </div>
   </div>
   <div class="card">
-    <div class="card-title">Industria Siderometalúrgica</div>
+    <div class="card-title">Metal</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
       <a href="/convenio-metal-bizkaia.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Bizkaia · ⚠ Ultraactividad</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Bizkaia</div>
         <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Metal — Bizkaia</div>
-        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Tablas 2025 vigentes en 2026 por ultraactividad ET 86.3 · Salario mínimo garantizado 22.034 €/año · Negociación nuevo convenio iniciada 15-ene-2026 · IRPF foral</div>
-
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Tablas 2026 · Mínimo 22.034 €/año · Oficial 1ª 23.509 €</div>
+        
+      </a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-title">Técnicos de Espectáculos</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;">
+      <a href="/convenio-tecnicos-espectaculos.html" style="display:block;padding:14px 16px;background:var(--cream-50);border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Sector sin convenio propio</div>
+        <div style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.35;">Técnicos de Espectáculos — sin regulación</div>
+        <div style="font-size:11px;color:var(--ink-lighter);margin-top:4px;">Sector sin convenio propio · huelga 2026</div>
+        
       </a>
     </div>
   </div>
@@ -374,16 +399,11 @@
   <h2>¿Cómo sé qué convenio me aplica?</h2>
   <p>Depende de tres factores: el <strong>sector de actividad</strong> de la empresa (qué hace, no qué haces tú), el <strong>ámbito territorial</strong> (provincial, autonómico o estatal) y el <strong>ámbito funcional</strong> (algunos convenios excluyen puestos concretos). Si no estás seguro, consulta tu contrato o tu nómina: suele aparecer el código de convenio.</p>
 
-  <h2>¿Y si mi sector no tiene convenio propio?</h2>
-  <p>Hay colectivos que trabajan sin un convenio sectorial que los proteja y están luchando por conseguirlo. No tener convenio no significa no tener derechos: el Estatuto de los Trabajadores sigue siendo el suelo legal irrenunciable. Lo explicamos con un caso real en <a href="/convenio-tecnicos-espectaculos.html">el convenio de los técnicos de espectáculos</a>, un sector sin regulación propia que protagonizó su primera huelga histórica en Euskadi.</p>
-
   <div class="related">
     <h2 style="font-size:18px;">Guías relacionadas</h2>
     <ul>
       <li><a href="/reclamar-diferencias-salariales-convenio.html">Reclamar diferencias salariales de convenio</a></li>
-      <li><a href="/convenio-tecnicos-espectaculos.html">Técnicos de espectáculos: un sector sin convenio propio</a></li>
       <li><a href="/salario-minimo-interprofesional-2026.html">Salario Mínimo Interprofesional 2026</a></li>
-      <li><a href="/ley-transparencia-salarial-2026.html">Ley de transparencia salarial: obligatoria desde el 7 de junio de 2026</a></li>
       <li><a href="/tramos-irpf-2026.html">Tramos IRPF 2026</a></li>
       <li><a href="/">Calculadora de salario neto</a></li>
     </ul>
