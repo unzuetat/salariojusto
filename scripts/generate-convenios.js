@@ -102,6 +102,9 @@ const CONVENIO_CONFIG = {
     sector: 'Hostelería', sectorSlug: 'hosteleria',
     provincia: 'Valencia', provinciaSlug: 'valencia',
     plurprovincial: false,
+    // BOE remixed manual 27-may-2026. NO regenerar HTML — solo se lee
+    // el JSON para listarla en el hub /convenios.html.
+    skipHtmlGeneration: true,
     relacionadas: ['hosteleria-madrid', 'oficinas-valencia']
   },
   'hosteleria_sev.json': {

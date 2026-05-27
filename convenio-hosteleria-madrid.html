@@ -222,6 +222,12 @@
     .related h2{border:none;padding:0;margin:0 0 12px;}
     .related ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;}
     .related a{color:var(--gold-dark);font-weight:500;font-size:14px;}
+    .toc{background:var(--cream-50);border:1px solid var(--cream-200);padding:14px 18px;margin:0 0 28px;}
+    .toc-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+    .toc-list{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0;}
+    .toc-list li{margin:0;}
+    .toc-list a{display:inline-block;padding:5px 11px;background:#fff;border:1px solid var(--cream-200);font-size:12.5px;font-weight:500;color:var(--ink-light);text-decoration:none;}
+    .toc-list a:hover{background:var(--gold);color:#fff;border-color:var(--gold);text-decoration:none;}
     .convenios-grid{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px;}
     .convenio-chip{display:inline-block;padding:7px 14px;background:#fff;border:1px solid var(--cream-200);font-size:13px;font-weight:500;color:var(--ink-light);text-decoration:none;}
     .convenio-chip:hover{background:var(--gold);color:#fff;border-color:var(--gold);text-decoration:none;}
@@ -272,6 +278,23 @@
 </section>
 
 <main>
+
+  <nav class="toc" aria-label="Índice del contenido">
+    <div class="toc-label">En esta página</div>
+    <ul class="toc-list">
+      <li><a href="#ambito">¿Te cubre?</a></li>
+      <li><a href="#tabla-salarial">Tablas salariales</a></li>
+      <li><a href="#jornada">Jornada</a></li>
+      <li><a href="#vacaciones">Vacaciones</a></li>
+      <li><a href="#pluses">Pluses</a></li>
+      <li><a href="#fijo-discontinuo">Fijo-discontinuo</a></li>
+      <li><a href="#subrogacion">Subrogación</a></li>
+      <li><a href="#comparativa">Comparativa</a></li>
+      <li><a href="#cobras-menos">Si cobras menos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#marco-legal">Marco legal</a></li>
+    </ul>
+  </nav>
 
   <div class="card">
     <div class="card-title">Datos clave del convenio</div>
@@ -415,7 +438,7 @@
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
-  <h2>Tu jornada y descansos</h2>
+  <h2 id="jornada">Tu jornada y descansos</h2>
 
   <h3>Lo básico</h3>
   <div style="overflow-x:auto;">
@@ -488,7 +511,7 @@
   <p>La empresa debe entregar mensualmente una relación firmada con tu nombre y las horas extras realizadas: al comité de empresa o, si no existe, a cada persona trabajadora.</p>
   <p class="nota-pie">Base: Arts. 14 (jornada), 15 (horas extras) y 17 (descanso semanal) del IV Convenio.</p>
 
-  <h2>Vacaciones, festivos y licencias</h2>
+  <h2 id="vacaciones">Vacaciones, festivos y licencias</h2>
 
   <h3>Vacaciones</h3>
   <ul>
@@ -542,7 +565,7 @@
   <p>Si tienes a tu cuidado un menor de 12 años o una persona con discapacidad física, psíquica o sensorial que no realiza otra actividad retribuida, puedes pedir una <strong>reducción de jornada de entre 1/8 y 1/2</strong> con disminución proporcional del salario (al inicio o al final de tu jornada, a tu elección).</p>
   <p class="nota-pie">Base: Arts. 18 (vacaciones), 19 (licencias) y 20 (festivos) del IV Convenio.</p>
 
-  <h2>Pluses y complementos: lo que se suma al salario</h2>
+  <h2 id="pluses">Pluses y complementos: lo que se suma al salario</h2>
 
   <h3>Plus Convenio: 191,22 €/mes durante 11 meses</h3>
   <p>Sustituye al antiguo Plus Transporte, suprimido el <strong>15 de junio de 2019</strong>. Lo cobra <strong>toda la plantilla</strong>, pero las condiciones dependen de cuándo te dieron de alta:</p>
@@ -695,7 +718,7 @@
   </div>
   <p class="nota-pie">Base: Disposición Transitoria 3ª del IV Convenio.</p>
 
-  <h2>Contrato fijo discontinuo: el que más se usa en hostelería</h2>
+  <h2 id="fijo-discontinuo">Contrato fijo discontinuo: el que más se usa en hostelería</h2>
   <p>El contrato fijo discontinuo es indefinido pero con períodos de actividad e inactividad. Si tu empresa te llama por temporadas (bodas, banquetes, catering, campaña de Navidad, eventos), probablemente sea el tuyo. El IV Convenio de Madrid pacta condiciones específicas que <strong>mejoran el ET por defecto</strong>.</p>
 
   <h3>Lo que el convenio te garantiza</h3>
@@ -721,7 +744,7 @@
   </ul>
   <p class="nota-pie">Base: Art. 12 del IV Convenio.</p>
 
-  <h2>Si te cambian de jefe: el convenio Madrid NO tiene subrogación</h2>
+  <h2 id="subrogacion">Si te cambian de jefe: el convenio Madrid NO tiene subrogación</h2>
   <p>Mucha gente del sector cree que cuando una empresa traspasa un local, la nueva está obligada a quedarse con la plantilla. <strong>En el sector de Limpieza eso es así por convenio</strong>. <strong>En el de Hostelería de Madrid, no lo es.</strong></p>
 
   <h3>Qué dice el IV Convenio de Hostelería Madrid</h3>
@@ -743,6 +766,7 @@
   </div>
   <p class="nota-pie">Base: Disposición Transitoria 7ª del IV Convenio + art. 44 del Estatuto de los Trabajadores.</p>
 
+  <div id="comparativa"></div>
   <!-- CALLOUTS:START -->
   <h2>Madrid frente a otras provincias del sector</h2>
   <p>Comparamos las cifras clave del convenio de Madrid con las 8 provincias auditadas en el pilar de Hostelería. Estas referencias son útiles si negocias subida, contrato nuevo o cambias de provincia.</p>
@@ -789,7 +813,7 @@
   </div>
   <!-- CALLOUTS:END -->
 
-  <h2>¿Cobras menos del convenio?</h2>
+  <h2 id="cobras-menos">¿Cobras menos del convenio?</h2>
   <p>Si tu nómina está por debajo de las cifras que marca la tabla para tu nivel y clase de establecimiento, puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 del Estatuto de los Trabajadores). Presentar papeleta de conciliación ante el <strong>SMAC de la Comunidad de Madrid</strong> interrumpe el plazo y es gratuito.</p>
 
   <h3>Pasos básicos</h3>
@@ -801,7 +825,7 @@
   </ol>
   <p><a href="/reclamar-diferencias-salariales-convenio.html">Consulta nuestra guía completa para reclamar diferencias salariales</a> paso a paso.</p>
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
 
   <h3>¿Qué salario mínimo me corresponde si trabajo en Hostelería en Madrid en 2026?</h3>
   <p>Las tablas 2025 siguen aplicándose en 2026 por ultraactividad (art. 86.3 ET). El mínimo depende de tu nivel (I a V) y de la clase del establecimiento (A, B o C):</p>
@@ -838,7 +862,7 @@
     </div>
   </details>
 
-  <h2>Marco legal y partes firmantes</h2>
+  <h2 id="marco-legal">Marco legal y partes firmantes</h2>
 
   <h3>Texto vigente</h3>
   <ul>
