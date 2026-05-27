@@ -189,6 +189,20 @@
     .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
     .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
     .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
+    .toc{background:var(--cream-50);border:1px solid var(--cream-200);padding:18px 22px;margin:0 0 24px;}
+    .toc-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .toc-list{display:flex;flex-wrap:wrap;gap:6px 8px;}
+    .toc-list a{display:inline-block;padding:5px 11px;background:#fff;border:1px solid var(--cream-200);font-size:12.5px;font-weight:500;color:var(--ink-light);text-decoration:none;border-radius:2px;transition:all 0.15s;}
+    .toc-list a:hover{background:var(--gold);color:#fff;border-color:var(--gold);text-decoration:none;}
+    .callout-warn{background:var(--amber-bg);border:1px solid #FCD34D;border-left:4px solid var(--amber);padding:18px 22px;margin:20px 0;font-size:14px;line-height:1.65;color:var(--ink-light);}
+    .callout-warn strong{color:var(--amber);}
+    .check-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px;}
+    .check-list li{padding:10px 14px;background:var(--cream-50);border-left:3px solid var(--gold);font-size:14px;color:var(--ink-light);}
+    .check-list li strong{color:var(--ink);}
+    td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .plus-destacado{background:#fff;border:1px solid var(--cream-200);border-left:4px solid var(--gold);padding:18px 22px;margin:18px 0;}
+    .plus-destacado h3{margin-top:0;font-size:14px;color:var(--gold-dark);letter-spacing:0.04em;text-transform:uppercase;}
+    .plus-destacado p{font-size:14px;margin-bottom:6px;}
   </style>
 </head>
 <body>
@@ -202,13 +216,31 @@
 <div class="breadcrumb"><a href="/">SalarioJusto</a> › <a href="/convenios.html">Convenios</a> › Hostelería Sevilla</div>
 
 <section class="hero">
-  <div class="hero-badge">Tablas salariales 2026</div>
-  <h1>Convenio de <em>Hostelería</em> en Sevilla</h1>
-  <p class="hero-sub">Tablas oficiales, jornada anual, pagas extras y complementos. BOP Sevilla núm. 102, 30/05/2025. Vigencia 1 enero 2025 – 31 diciembre 2028.</p>
-  
+  <div class="hero-badge">Tablas salariales 2025 · 2026 · 2027 · 2028</div>
+  <h1>Convenio de <em>Hostelería</em> en Sevilla 2026</h1>
+  <p class="hero-sub">Convenio recién firmado (BOP Sevilla núm. 102, 30/05/2025) con vigencia 2025-2028 y subida acumulada del +17%, una de las más altas de la hostelería estatal. 15 pagas, jornada 1.800 h/año, Nivel 3 Bis para Camarera/o de Pisos con +1,5% adicional cada año.</p>
+  <div style="display:inline-block;margin-top:18px;padding:8px 16px;background:rgba(193,123,62,0.15);border:1px solid rgba(193,123,62,0.5);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-light);">Subida histórica: +4 % / +5 % / +4 % / +4 %</div>
 </section>
 
 <main>
+
+  <nav class="toc" aria-label="Índice del convenio">
+    <div class="toc-label">En esta página</div>
+    <div class="toc-list">
+      <a href="#ambito">¿Te cubre?</a>
+      <a href="#tablas">Tablas salariales</a>
+      <a href="#jornada">Jornada</a>
+      <a href="#vacaciones">Vacaciones y licencias</a>
+      <a href="#pluses">Pluses y complementos</a>
+      <a href="#subrogacion">Subrogación</a>
+      <a href="#fijo-discontinuo">Fijo discontinuo</a>
+      <a href="#baja-medica">Baja médica</a>
+      <a href="#comparativa">Sevilla vs otras provincias</a>
+      <a href="#cobras-menos">Si cobras menos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#marco-legal">Marco legal</a>
+    </div>
+  </nav>
 
   <div class="card">
     <div class="card-title">Datos clave del convenio</div>
@@ -224,7 +256,24 @@
     Convenio recién firmado en 2025 con vigencia hasta diciembre de 2028. La subida acumulada en los cuatro años es del 17% (+4% en 2025, +5% en 2026, +4% en 2027, +4% en 2028), una de las más altas de la hostelería estatal. El convenio reconoce 17 sub-categorías de establecimiento — desde hoteles de 5 estrellas hasta tabernas sin comidas — con 5 niveles profesionales en cada una (más un 'Nivel 3 Bis' específico de Camarero/a de Pisos en hoteles, con un +1,5% adicional cada año). Las cifras de la tabla son <strong>salario base mensual bruto</strong>, distribuidas en <strong>15 pagas equivalentes</strong>: 12 mensualidades + 2 pagas extras (15 de julio y 15 de diciembre) + Paga de Primavera (antes del 1 de abril del año siguiente). Cada paga equivale al salario base + antigüedad. Adicionalmente, el Plus Convenio (20 días de salario base, abonado el 15 de octubre) y el Plus Asistencia (10 días, condicionados a faltas inferiores a 7 al año) se suman fuera de la tabla.
   </div>
 
-  <div class="card">
+  <h2 id="ambito">Antes de seguir: ¿este convenio te cubre?</h2>
+  <p>El Convenio Provincial de Hostelería de Sevilla aplica a <strong>toda persona trabajadora por cuenta ajena</strong> en cualquier establecimiento de hostelería, restauración o alojamiento de la provincia de Sevilla, con independencia de su titularidad pública o privada. Si trabajas en un bar, cafetería, restaurante, hotel, hostal, pensión, residencia geriátrica, sala de fiestas, casino o billar dentro del territorio sevillano, este convenio fija el suelo mínimo de tu salario y condiciones (Art. 1.º y 2.º).</p>
+
+  <h3>Las 17 sub-tablas según el tipo de establecimiento</h3>
+  <p>El convenio reconoce <strong>17 categorías de establecimiento</strong> con tablas salariales propias, agrupadas en cuatro familias: hoteles y apartamentos (4-5★, 3★, 2★, 1★, moteles/camping/pensiones/geriátricos), restaurantes (4-5 tenedores, 2-3 tenedores y catering, 1 tenedor/tabernas con comidas/pizzerías), cafeterías y cafés-bares (2-3 tazas, 1 taza/creperías, categoría especial/cervecerías/heladerías, 4ª, tabernas sin comidas), y discotecas/casinos/billares.</p>
+
+  <ul class="check-list">
+    <li><strong>Te aplica</strong> si tu centro está en la provincia de Sevilla y la actividad principal del establecimiento encaja en una de las 17 sub-tablas.</li>
+    <li><strong>Te aplica también</strong> si trabajas como personal de limpieza en <strong>Viviendas Turísticas de Uso Vacacional (VUT) o Vivienda Turística de Alojamiento Rural (VTAR)</strong>: el Art. 3.º asimila expresamente esta función a la categoría de Camarera/o de Pisos del convenio. Es una particularidad única de Sevilla.</li>
+    <li><strong>No te aplica</strong> si tu empresa tiene convenio propio inscrito en REGCON con tablas más favorables (rige el más beneficioso para la persona trabajadora).</li>
+    <li><strong>No te aplica</strong> si trabajas en hostelería de provincia distinta. Cada provincia tiene su propio convenio (Madrid, Cataluña, Valencia, Bizkaia, Baleares…).</li>
+  </ul>
+
+  <div class="callout-info">
+    <strong>Diferenciación clave</strong>: la asimilación de personal de limpieza de viviendas turísticas a Camarera/o de Pisos (Art. 3.º) es <strong>exclusiva del convenio de Sevilla</strong>. Extiende la cobertura del convenio a un colectivo que en otras provincias suele quedar fuera de regulación sectorial específica.
+  </div>
+
+  <div class="card" id="tablas">
     <div class="card-title">Tablas salariales 2026 — Sevilla</div>
     <p style="font-size:13px;color:var(--ink-lighter);margin-bottom:12px;">Salario base mensual bruto en 15 pagas. Cuantías oficiales publicadas en BOP Sevilla núm. 102, 30/05/2025.</p>
     <div style="overflow-x:auto;">
@@ -678,6 +727,165 @@
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
+  <h2 id="jornada">Tu jornada y descansos</h2>
+  <p>El Art. 30.º fija una <strong>jornada máxima de 1.800 horas anuales de trabajo efectivo</strong>. Es una de las jornadas más largas del corpus hostelero auditado, en línea con Madrid (1.800 h) y por encima de Valencia (1.794 h) o Cataluña (1.783 h desde 2026).</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Concepto</th><th>Valor (Art. 30.º)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Jornada anual máxima</td><td><strong>1.800 horas efectivas</strong></td></tr>
+        <tr><td>Jornada semanal ordinaria</td><td>40 horas (resto del año)</td></tr>
+        <tr><td>Jornada diaria máxima ordinaria</td><td>8 horas</td></tr>
+        <tr><td>Bolsa de horas irregulares</td><td><strong>180 horas/año</strong> distribuibles en feb-may y sept-dic</td></tr>
+        <tr><td>Jornada en período irregular</td><td>Hasta 10 horas/día y 50 horas/semana</td></tr>
+        <tr><td>Descanso entre jornadas</td><td>12 horas mínimo (Art. 34 ET aplicable)</td></tr>
+        <tr><td>Descanso semanal</td><td>1,5 días (centros ≤25 personas) · 2 días (centros &gt;25)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>vs Madrid 1.800 h · vs Valencia 1.794 h · vs Cataluña 1.783 h</strong>. Sevilla y Madrid empatan en la jornada más larga del corpus. La diferencia con Cataluña son 17 horas al año (≈ dos jornadas completas). La bolsa de 180 h irregulares en temporada alta (feb-may + sept-dic) permite a la empresa concentrarte hasta 50 h/semana — pero la jornada anual total no puede superar las 1.800 h.
+  </div>
+
+  <h2 id="vacaciones">Vacaciones, festivos y licencias</h2>
+  <p>El Art. 31.º reconoce <strong>30 días naturales de vacaciones</strong> retribuidas con salario base más antigüedad, en línea con el Estatuto de los Trabajadores. La particularidad sevillana está en la garantía de período estival.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Concepto</th><th>Sevilla (Art. 31.º)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Días de vacaciones</td><td>30 días naturales/año</td></tr>
+        <tr><td>Retribución</td><td>Salario base + antigüedad</td></tr>
+        <tr><td>Garantía período estival</td><td><strong>17 días entre 1 jun y 30 sep</strong> (todos los centros)</td></tr>
+        <tr><td>Garantía estival en centros &gt;50 trabajadores</td><td><strong>21 días entre 1 jun y 30 sep</strong></td></tr>
+        <tr><td>Disfrute</td><td>Año natural; no se pueden compensar en metálico salvo extinción</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Licencias retribuidas reguladas en el convenio</h3>
+  <p>El convenio sevillano <strong>se remite al Estatuto de los Trabajadores</strong> (Art. 37 ET) para licencias por matrimonio, fallecimiento, hospitalización, deber inexcusable y lactancia. Específicamente reconoce permiso retribuido para <strong>bautizo, comunión o boda de familiares de primer grado</strong> (Art. 30.º) — una particularidad cultural andaluza que no aparece en otros convenios del corpus.</p>
+
+  <h2 id="pluses">Pluses y complementos: lo que se suma al salario</h2>
+  <p>Sevilla destaca por una arquitectura de pluses pensada para premiar la asistencia y la antigüedad, con dos plus singulares fuera de la tabla salarial: el <strong>Plus Convenio</strong> y el <strong>Plus Asistencia</strong>.</p>
+
+  <div class="plus-destacado">
+    <h3>Plus Convenio (Art. 16.º)</h3>
+    <p><strong>20 días de salario base + antigüedad</strong>, devengado entre el 15 de octubre del año anterior y el 14 de octubre del año en curso, y abonado el <strong>15 de octubre</strong> de cada año. Es una paga complementaria fija que no depende de la asistencia.</p>
+  </div>
+
+  <div class="plus-destacado">
+    <h3>Plus Asistencia (Art. 17.º) <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">— único en el corpus</span></h3>
+    <p><strong>10 días de salario base + antigüedad</strong>, pero su cobro está <strong>escalonado en función de las faltas anuales</strong>:</p>
+    <div style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Faltas en el año</th><th style="text-align:right;">% del Plus Asistencia cobrado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hasta 7 faltas</td><td class="num"><strong>100 %</strong></td></tr>
+          <tr><td>8 faltas</td><td class="num">50 %</td></tr>
+          <tr><td>9 faltas</td><td class="num">40 %</td></tr>
+          <tr><td>10 faltas o más</td><td class="num">0 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:10px;font-size:13px;color:var(--ink-lighter);">Mecanismo no existente en Madrid, Valencia, Barcelona ni Bizkaia: el Plus Asistencia liga la retribución a la presencialidad efectiva con un umbral muy estrecho.</p>
+  </div>
+
+  <h3>Antigüedad (Art. 14.º) — escala sobre SMI congelado</h3>
+  <p>La antigüedad se calcula sobre un <strong>SMI congelado a la cifra de 420,71 €</strong> (una cuantía histórica que no se actualiza con el SMI vigente). Es una mecánica heredada del convenio anterior que aplana el peso real de la antigüedad respecto a otros convenios del corpus.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Antigüedad acumulada</th><th style="text-align:right;">% sobre SMI congelado (420,71 €)</th><th style="text-align:right;">Cuantía mensual</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>3 años</td><td class="num">3 %</td><td class="num">12,62 €</td></tr>
+        <tr><td>6 años</td><td class="num">8 %</td><td class="num">33,66 €</td></tr>
+        <tr><td>9 años</td><td class="num">16 %</td><td class="num">67,31 €</td></tr>
+        <tr><td>14 años</td><td class="num">26 %</td><td class="num">109,38 €</td></tr>
+        <tr><td>19 años</td><td class="num">38 %</td><td class="num">159,87 €</td></tr>
+        <tr><td>24 años o más</td><td class="num"><strong>45 %</strong></td><td class="num"><strong>189,32 €</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-warn">
+    <strong>Aviso editorial:</strong> al estar la antigüedad referenciada a un SMI congelado en 420,71 € (no al SMI vigente, que en 2026 supera los 1.200 €), el peso real de la antigüedad en la nómina sevillana es <strong>significativamente menor que en convenios con escala sobre salario base</strong> (como Bizkaia, donde el tope del 45 % es sobre el salario base completo). Para una persona con 24 años de servicio, hablamos de ~189 €/mes en Sevilla frente a varios cientos de euros en otras provincias.
+  </div>
+
+  <h3>Nocturnidad (Art. 15.º)</h3>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Modalidad</th><th>Recargo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Hora ordinaria realizada en jornada parcial nocturna</td><td><strong>+25 %</strong> sobre la hora ordinaria</td></tr>
+        <tr><td>Jornada nocturna completa</td><td><strong>+20 %</strong> sobre el sueldo base</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Horas extraordinarias (Art. 12.º)</h3>
+  <p>El convenio fija un <strong>incremento del 75 % sobre la hora ordinaria</strong> o compensación con descanso a razón de <strong>1 hora trabajada = 1 hora y 45 minutos de descanso</strong>.</p>
+
+  <div class="callout-info">
+    <strong>vs Madrid +100 % · vs Cataluña valor ordinario sin recargo · vs Sevilla +75 %</strong>. Sevilla se sitúa en una posición intermedia: paga el extra mejor que Cataluña (donde la hora extra se compensa al valor ordinario), pero peor que Madrid (que aplica +100 %). El equivalente en descanso es generoso: cada hora extra realizada se cambia por 1h 45m libres.
+  </div>
+
+  <h3>Plus Manutención (Art. 11.º)</h3>
+  <p>Si la empresa proporciona manutención al personal, descuenta <strong>5,80 € al mes</strong> de la nómina como retribución en especie. Si no la proporciona, no procede descuento.</p>
+
+  <h2 id="subrogacion">Si te cambian de jefe: subrogación parcial (concesiones administrativas)</h2>
+  <p>El Art. 29.º regula una subrogación <strong>limitada a un único supuesto</strong>: las <strong>concesiones administrativas del Estado</strong>. Cuando una infraestructura pública (estación, aeropuerto, complejo hospitalario, etc.) cambia de empresa concesionaria, la nueva titular debe absorber al personal de la empresa saliente y subrogarse en sus derechos y obligaciones laborales.</p>
+
+  <div class="callout-info">
+    <strong>vs Madrid (sin subrogación) · vs Valencia (subrogación total Art. 41) · vs Tarragona (Art. 51 — solo concesiones de restauración)</strong>. Sevilla se posiciona como Tarragona, en una banda intermedia: <strong>no hay subrogación general entre empresas privadas</strong>, pero sí existe protección si trabajas en establecimientos concedidos por la administración. Si tu empresa cambia por simple traspaso comercial, no hay obligación convencional de subrogación — se aplica el Art. 44 ET (sucesión de empresa) en su caso.
+  </div>
+
+  <h2 id="fijo-discontinuo">Contrato fijo discontinuo: el contrato más extendido en hostelería</h2>
+  <p>Los Arts. 24.º y 25.º regulan en detalle el fijo discontinuo, que es <strong>la modalidad mayoritaria en el sector hostelero sevillano</strong> por la estacionalidad de la actividad (Semana Santa, Feria de Abril, verano, congresos).</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Modalidad</th><th>Duración mínima</th><th>Llamamientos máx.</th><th>Preaviso</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fijo discontinuo a tiempo completo</td><td>4 meses de actividad / 12 meses</td><td>4</td><td>4 días</td></tr>
+        <tr><td>Fijo discontinuo a tiempo parcial</td><td>6 meses / 12 meses (mín. 4 h/día)</td><td>5</td><td>4 días</td></tr>
+        <tr><td>Catering especial (eventos)</td><td>120 días/año</td><td>3 períodos</td><td>4 días</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Reglas de llamamiento</h3>
+  <ul class="check-list">
+    <li><strong>Escalafón por antigüedad:</strong> la empresa debe llamar respetando el orden de antigüedad de la persona trabajadora dentro de cada categoría.</li>
+    <li><strong>Preaviso mínimo:</strong> 4 días por escrito antes del inicio de la actividad.</li>
+    <li><strong>Primera negativa injustificada:</strong> pasas al último lugar del escalafón.</li>
+    <li><strong>Segunda negativa injustificada:</strong> extinción del contrato.</li>
+    <li><strong>Antigüedad acumulada:</strong> se computa el tiempo total trabajado (no las pausas), igual que cualquier fijo discontinuo regulado por el Art. 16 ET.</li>
+  </ul>
+
+  <h2 id="baja-medica">Baja médica complementada hasta el 100 % del salario base</h2>
+  <p>El Art. 22.º obliga a la empresa a <strong>complementar la prestación de Seguridad Social hasta alcanzar el 100 % del salario base</strong> durante la situación de incapacidad temporal (IT), por un máximo de <strong>12 meses</strong>. La empresa puede condicionar el complemento a no haber contratado sustituto interino (con matices según antigüedad de la persona en IT).</p>
+
+  <div class="callout-info">
+    <strong>vs Madrid (no complemento automático) · vs Bizkaia (100 % desde el 1er día) · vs Sevilla (100 % durante 12 meses)</strong>. Sevilla está en el grupo de convenios que sí complementan la IT al 100 %, junto con Bizkaia, Valencia y Baleares. Por encima de Madrid, donde la prestación se queda en lo que abona la Seguridad Social (60 % entre el día 4-20, 75 % desde el 21).
+  </div>
+
+  <div id="comparativa"></div>
+
   <!-- CALLOUTS:START -->
 <h2>Sevilla frente a otras provincias del sector</h2>
 <p>Comparamos las cifras clave de Sevilla con las 8 provincias auditadas en el pilar de Hostelería. Estas referencias son útiles si negocias subida, contrato nuevo o cambias de provincia.</p>
@@ -724,22 +932,75 @@
 </div>
   <!-- CALLOUTS:END -->
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
+
   <h3>¿Cuál es el salario mínimo del convenio de Hostelería en Sevilla para 2026?</h3>
-  <p>Según las tablas salariales 2026 publicadas en BOP Sevilla núm. 102, 30/05/2025, el salario base mensual mínimo es de 1.191,80 € (categoría más baja) y puede llegar hasta 1.650,44 € en las categorías superiores. Son cuantías brutas en 15 pagas.</p>
+  <p>Según las tablas salariales 2026 publicadas en BOP Sevilla núm. 102, 30/05/2025, el salario base mensual mínimo es de <strong>1.191,80 €/mes</strong> (categoría más baja, Tabernas sin Comidas Nivel 5) y puede llegar hasta <strong>1.650,44 €/mes</strong> en las categorías superiores (Hotel 4-5★ Nivel 1). Son cuantías brutas en 15 pagas.</p>
 
   <h3>¿Cuántas horas de jornada anual fija el convenio?</h3>
-  <p>La jornada anual máxima pactada es de 1800 horas efectivas al año, distribuidas según el calendario laboral del centro de trabajo. Superar esta jornada genera horas extraordinarias con su correspondiente compensación.</p>
+  <p>La jornada anual máxima pactada es de <strong>1.800 horas efectivas al año</strong>, en línea con Madrid y por encima de Valencia (1.794 h) o Cataluña (1.783 h desde 2026). El Art. 30.º permite a la empresa concentrarla en bolsas de 180 horas irregulares en temporada alta (feb-may y sept-dic), con un máximo de 10 horas diarias y 50 horas semanales en esos meses.</p>
+
+  <h3>¿Qué es el Nivel 3 Bis y a quién le afecta?</h3>
+  <p>El Nivel 3 Bis es una <strong>categoría salarial específica para Camarera/o de Pisos</strong> creada por este convenio (Art. 10.º y Anexo I). Tiene su propia escala salarial y recibe un <strong>incremento adicional del +1,5 % cada año</strong> (acumulativo a la subida general), sin superar el salario del Nivel 3 regular. Es una medida de equiparación profesional pionera en el sector hostelero estatal: las camareras de piso, mayoritariamente mujeres y con cargas físicas elevadas, históricamente quedaban relegadas a las categorías más bajas. Por el Art. 3.º, también se aplica al personal de limpieza de Viviendas Turísticas (VUT/VTAR).</p>
+
+  <h3>¿Cómo funciona el Plus Asistencia?</h3>
+  <p>El Plus Asistencia (Art. 17.º) son <strong>10 días de salario base + antigüedad</strong> al año, pero su cobro depende de las faltas no justificadas: 100 % si tienes hasta 7 faltas, 50 % con 8, 40 % con 9 y 0 % con 10 o más. Es un mecanismo único en el corpus hostelero auditado. Las faltas justificadas (IT, permisos retribuidos, deber inexcusable) no cuentan.</p>
+
+  <h3>¿Existe subrogación si mi empresa cambia?</h3>
+  <p>Sí, pero <strong>limitada a concesiones administrativas del Estado</strong> (Art. 29.º). Si trabajas en un establecimiento operado por concesión pública (cafetería de estación, hospital, aeropuerto…), la nueva concesionaria debe subrogarte. Si tu empresa cambia por simple compraventa o traspaso privado, no hay obligación convencional de subrogación — se aplica el Art. 44 ET en su caso.</p>
 
   <h3>¿Qué hago si mi empresa paga menos que el convenio?</h3>
-  <p>Tienes derecho a reclamar las diferencias salariales. El plazo de prescripción es de 1 año por mensualidad desde que debió abonarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC interrumpe ese plazo. Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias de convenio</a>.</p>
+  <p>Tienes derecho a reclamar las diferencias salariales. El plazo de prescripción es de 1 año por mensualidad desde que debió abonarse (art. 59.2 ET). Presentar papeleta de conciliación ante el <strong>SMAC de Sevilla</strong> interrumpe ese plazo. Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias de convenio</a>.</p>
 
   <h3>¿Dónde puedo consultar el texto oficial del convenio?</h3>
   <p>El texto completo se publicó en BOP Sevilla núm. 102, 30/05/2025 con código de convenio 41001465011981. <a href="https://bopsevilla.dipusevilla.es/export/sites/bop/.galleries/Documentos-Anuncios-en-PDF/firmado-1748559753418-final-4f322455-1.pdf" target="_blank" rel="noopener">Abrir publicación oficial</a>.</p>
 
-  <h2>¿Cobras menos de lo que fija el convenio?</h2>
+  <h2 id="cobras-menos">¿Cobras menos de lo que fija el convenio?</h2>
   <p>Si tu nómina está por debajo de las cantidades de la tabla, puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC de Sevilla interrumpe el plazo y es gratuito.</p>
   <p>Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía completa para reclamar diferencias salariales</a> paso a paso.</p>
+
+  <h2 id="marco-legal">Marco legal y partes firmantes</h2>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Dato</th><th>Detalle</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Nombre oficial</td><td>Convenio Colectivo del Sector de Hostelería de la Provincia de Sevilla</td></tr>
+        <tr><td>Código de convenio</td><td>41001465011981</td></tr>
+        <tr><td>Publicación oficial</td><td>BOP Sevilla núm. 102, 30/05/2025</td></tr>
+        <tr><td>Vigencia (Art. 4.º)</td><td>1 enero 2025 – 31 diciembre 2028</td></tr>
+        <tr><td>Ámbito territorial</td><td>Provincia de Sevilla</td></tr>
+        <tr><td>Ámbito funcional</td><td>17 sub-tablas (hoteles, restaurantes, cafeterías, discotecas, casinos, billares, geriátricos)</td></tr>
+        <tr><td>Cláusula revisión salarial (Art. 10.º)</td><td>+4 % 2025 · <strong>+5 % 2026</strong> · +4 % 2027 · +4 % 2028 (+17 % acumulado) · Nivel 3 Bis Camarera/o Pisos: +1,5 % adicional cada año</td></tr>
+        <tr><td>Régimen disciplinario</td><td>Remite al VI Acuerdo Laboral de Ámbito Estatal para Hostelería (ALEH)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Partes firmantes</h3>
+  <ul class="check-list">
+    <li><strong>Patronales:</strong> Asociación de Hoteles de Sevilla · Asociación Empresarial de Hostelería</li>
+    <li><strong>Sindicatos:</strong> CCOO Sevilla · UGT Sevilla</li>
+  </ul>
+
+  <h3>Comisión paritaria (Art. 9.º)</h3>
+  <ul class="check-list">
+    <li><strong>Composición:</strong> 12 vocales (6 empresariales + 6 sindicales) + Presidente/a con voz pero sin voto.</li>
+    <li><strong>Sede:</strong> C/ Cardenal Bueno Monreal, 58 — Sevilla (Sindicato Provincial de Servicios CCOO Andalucía).</li>
+    <li><strong>Plazo de emisión de informes:</strong> 15 días desde la consulta.</li>
+    <li><strong>Atribuciones:</strong> interpretación del convenio, mediación en conflictos colectivos, seguimiento del cumplimiento, adaptación de la clasificación profesional.</li>
+  </ul>
+
+  <h3>Particularidades únicas de Sevilla</h3>
+  <ul class="check-list">
+    <li><strong>Art. 3.º — VUT/VTAR asimiladas:</strong> el personal de limpieza de Viviendas Turísticas de Uso Vacacional y Vivienda Turística de Alojamiento Rural se asimila a Camarera/o de Pisos del convenio. Es la única provincia del corpus que extiende explícitamente la cobertura a este colectivo.</li>
+    <li><strong>Art. 10.º — Nivel 3 Bis con +1,5 % adicional:</strong> categoría salarial específica para Camarera/o de Pisos con incremento anual extra, sin superar el Nivel 3 regular. Medida pionera de equiparación profesional en el sector.</li>
+    <li><strong>Art. 17.º — Plus Asistencia escalonado:</strong> 10 días de salario condicionados a un máximo de 7 faltas/año, con tramos descendentes (50 %/40 %/0 %) hasta extinguirse con 10 faltas. Único en el corpus auditado.</li>
+    <li><strong>Art. 30.º — Permiso por bautizo/comunión/boda de familiares de 1er grado:</strong> particularidad cultural andaluza no presente en otros convenios.</li>
+    <li><strong>Subida acumulada +17 %:</strong> la más alta del corpus hostelero auditado (vs Cataluña +15,7 % · vs Valencia condicionada a IPC).</li>
+  </ul>
 
   <div class="related">
     <h2 style="font-size:18px;">Más recursos para Sevilla</h2>

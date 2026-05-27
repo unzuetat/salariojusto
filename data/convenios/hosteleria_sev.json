@@ -2,6 +2,7 @@
   "nombre": "Hostelería — Provincia de Sevilla",
   "bop": "BOP Sevilla núm. 102, 30/05/2025",
   "codigo": "41001465011981",
+  "skipHtmlGeneration": true,
   "vigencia": "1 enero 2025 – 31 diciembre 2028",
   "pagas": 15,
   "jornadaAnual": 1800,
