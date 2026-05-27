@@ -145,6 +145,13 @@
     td{padding:12px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);vertical-align:top;}
     td:first-child{font-weight:700;color:var(--ink);white-space:nowrap;}
     td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+    .tabla-salarios{table-layout:fixed;}
+    .tabla-salarios td{white-space:normal;word-break:break-word;}
+    .tabla-salarios td:first-child{white-space:normal;}
+    .tabla-salarios td:first-child > span,.tabla-salarios td:first-child > div{display:block;margin-top:3px;}
+    .tabla-salarios th:nth-child(1),.tabla-salarios td:nth-child(1){width:40%;}
+    .tabla-salarios th:nth-child(2),.tabla-salarios td:nth-child(2){width:38%;}
+    .tabla-salarios th:nth-child(3),.tabla-salarios td:nth-child(3){width:22%;}
     @media (max-width:720px){
       .tabla-salarios{display:block;}
       .tabla-salarios thead{display:none;}
@@ -203,6 +210,16 @@
     .plus-destacado{background:#fff;border:1px solid var(--cream-200);border-left:4px solid var(--gold);padding:18px 22px;margin:18px 0;}
     .plus-destacado h3{margin-top:0;font-size:14px;color:var(--gold-dark);letter-spacing:0.04em;text-transform:uppercase;}
     .plus-destacado p{font-size:14px;margin-bottom:6px;}
+    .familia-tabla{margin:14px 0;background:#fff;border:1px solid var(--cream-200);}
+    .familia-tabla>summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;flex-direction:column;gap:4px;background:var(--cream-50);border-bottom:1px solid var(--cream-200);user-select:none;}
+    .familia-tabla>summary::-webkit-details-marker{display:none;}
+    .familia-tabla>summary::before{content:'▸';float:right;color:var(--gold);font-size:13px;line-height:1.4;margin-left:12px;transition:transform 0.2s;}
+    .familia-tabla[open]>summary::before{transform:rotate(90deg);}
+    .familia-tabla[open]>summary{background:#fff;border-bottom:1px solid var(--cream-200);}
+    .familia-tabla>summary:hover{background:var(--cream-100);}
+    .familia-tabla__titulo{font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);line-height:1.3;}
+    .familia-tabla__sub{font-size:12px;color:var(--ink-lighter);line-height:1.4;}
+    .familia-tabla[open]>div{padding-top:8px;}
   </style>
 </head>
 <body>
@@ -276,8 +293,13 @@
   <div class="card" id="tablas">
     <div class="card-title">Tablas salariales 2026 — Sevilla</div>
     <p style="font-size:13px;color:var(--ink-lighter);margin-bottom:12px;">Salario base mensual bruto en 15 pagas. Cuantías oficiales publicadas en BOP Sevilla núm. 102, 30/05/2025.</p>
-    <div style="overflow-x:auto;">
-      <table class="tabla-salarios">
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">Hoteles y apartamentos</span>
+          <span class="familia-tabla__sub">5 categorías × 5-6 niveles · incluye Camarera/o de Pisos Nivel 3 Bis · 30 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
         <thead>
           <tr>
             <th>Nivel</th>
@@ -285,440 +307,501 @@
             <th style="text-align:right;">Salario bruto</th>
           </tr>
         </thead>
-        <tbody>
-        <tr>
+            <tbody>
+<tr>
           <td>H45-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 4 y 5 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Hotel 4-5★)</td>
           <td class="sal">1.650,44 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.756,60 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H45-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 4 y 5 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Hotel 4-5★)</td>
           <td class="sal">1.592,02 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.880,30 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H45-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 4 y 5 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Hotel 4-5★)</td>
           <td class="sal">1.495,17 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.427,55 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H45-3B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 4 y 5 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a de Pisos</div></td>
           <td>Nivel 3 Bis — Camarero/a de Pisos (Hotel 4-5★)</td>
           <td class="sal">1.427,91 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.418,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H45-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 4 y 5 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Hotel 4-5★)</td>
           <td class="sal">1.328,42 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.926,30 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H45-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 4 y 5 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Hotel 4-5★)</td>
           <td class="sal">1.300,35 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.505,25 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H3-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 3 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Hotel 3★)</td>
           <td class="sal">1.488,37 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.325,55 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H3-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 3 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Hotel 3★)</td>
           <td class="sal">1.385,69 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.785,35 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H3-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 3 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Hotel 3★)</td>
           <td class="sal">1.337,55 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.063,25 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H3-3B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 3 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a de Pisos</div></td>
           <td>Nivel 3 Bis — Camarero/a de Pisos (Hotel 3★)</td>
           <td class="sal">1.337,55 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.063,25 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H3-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 3 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Hotel 3★)</td>
           <td class="sal">1.281,24 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.218,60 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H3-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 3 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Hotel 3★)</td>
           <td class="sal">1.281,24 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.218,60 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H2-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 2 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Hotel 2★)</td>
           <td class="sal">1.372,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.592,45 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H2-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 2 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Hotel 2★)</td>
           <td class="sal">1.338,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.079,75 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H2-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 2 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Hotel 2★)</td>
           <td class="sal">1.286,31 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.294,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H2-3B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 2 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a de Pisos</div></td>
           <td>Nivel 3 Bis — Camarero/a de Pisos (Hotel 2★)</td>
           <td class="sal">1.286,31 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.294,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H2-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 2 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Hotel 2★)</td>
           <td class="sal">1.222,16 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.332,40 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H2-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 2 estrellas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Hotel 2★)</td>
           <td class="sal">1.222,16 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.332,40 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H1-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 1 estrella)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Hotel 1★)</td>
           <td class="sal">1.339,63 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.094,45 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H1-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 1 estrella)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Hotel 1★)</td>
           <td class="sal">1.306,22 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.593,30 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H1-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 1 estrella)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Hotel 1★)</td>
           <td class="sal">1.254,97 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.824,55 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H1-3B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 1 estrella)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a de Pisos</div></td>
           <td>Nivel 3 Bis — Camarero/a de Pisos (Hotel 1★)</td>
           <td class="sal">1.254,97 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.824,55 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H1-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 1 estrella)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Hotel 1★)</td>
           <td class="sal">1.191,80 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.877,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>H1-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles y Apartamentos de 1 estrella)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Hotel 1★)</td>
           <td class="sal">1.191,80 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.877,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>MOT-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Moteles, Camping, Pensiones, Hostales y Residencias Geriátricas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Pensiones/Camping/Geriátricos)</td>
           <td class="sal">1.339,63 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.094,45 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>MOT-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Moteles, Camping, Pensiones, Hostales y Residencias Geriátricas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Pensiones/Camping/Geriátricos)</td>
           <td class="sal">1.306,22 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.593,30 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>MOT-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Moteles, Camping, Pensiones, Hostales y Residencias Geriátricas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Pensiones/Camping/Geriátricos)</td>
           <td class="sal">1.254,97 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.824,55 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>MOT-3B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Moteles, Camping, Pensiones, Hostales y Residencias Geriátricas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a de Pisos</div></td>
           <td>Nivel 3 Bis — Camarero/a de Pisos (Pensiones/Camping/Geriátricos)</td>
           <td class="sal">1.254,97 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.824,55 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>MOT-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Moteles, Camping, Pensiones, Hostales y Residencias Geriátricas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Pensiones/Camping/Geriátricos)</td>
           <td class="sal">1.191,80 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.877,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>MOT-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Moteles, Camping, Pensiones, Hostales y Residencias Geriátricas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Pensiones/Camping/Geriátricos)</td>
           <td class="sal">1.191,80 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.877,00 €/año</div></td>
         </tr>
-        <tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">Restaurantes y catering</span>
+          <span class="familia-tabla__sub">3 categorías × 5 niveles · incluye Riders y delivery (Nivel 4) · 15 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Categoría</th>
+            <th style="text-align:right;">Salario bruto</th>
+          </tr>
+        </thead>
+            <tbody>
+<tr>
           <td>R45-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 4 y 5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Restaurante 4-5 ten.)</td>
           <td class="sal">1.638,90 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.583,50 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R45-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 4 y 5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Restaurante 4-5 ten.)</td>
           <td class="sal">1.580,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.707,05 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R45-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 4 y 5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Restaurante 4-5 ten.)</td>
           <td class="sal">1.483,78 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.256,70 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R45-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 4 y 5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Restaurante 4-5 ten.)</td>
           <td class="sal">1.355,30 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.329,50 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R45-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 4 y 5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Restaurante 4-5 ten.)</td>
           <td class="sal">1.355,30 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.329,50 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R23-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 2 y 3 tenedores y Catering)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Restaurante 2-3 ten./Catering)</td>
           <td class="sal">1.427,00 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.405,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R23-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 2 y 3 tenedores y Catering)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Restaurante 2-3 ten./Catering)</td>
           <td class="sal">1.390,88 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.863,20 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R23-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 2 y 3 tenedores y Catering)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Restaurante 2-3 ten./Catering)</td>
           <td class="sal">1.356,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.350,20 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R23-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 2 y 3 tenedores y Catering)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Restaurante 2-3 ten./Catering)</td>
           <td class="sal">1.270,78 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.061,70 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R23-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes de 2 y 3 tenedores y Catering)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Restaurante 2-3 ten./Catering)</td>
           <td class="sal">1.270,78 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.061,70 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R1-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes 1 tenedor, Tabernas con Comidas, Pizzerías, Hamburgueserías, Bagueterías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Restaurante 1 ten./Tabernas/Pizzerías)</td>
           <td class="sal">1.413,70 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.205,50 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R1-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes 1 tenedor, Tabernas con Comidas, Pizzerías, Hamburgueserías, Bagueterías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Restaurante 1 ten./Tabernas/Pizzerías)</td>
           <td class="sal">1.377,90 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.668,50 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R1-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes 1 tenedor, Tabernas con Comidas, Pizzerías, Hamburgueserías, Bagueterías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Restaurante 1 ten./Tabernas/Pizzerías)</td>
           <td class="sal">1.344,20 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.163,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R1-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes 1 tenedor, Tabernas con Comidas, Pizzerías, Hamburgueserías, Bagueterías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Restaurante 1 ten./Tabernas/Pizzerías)</td>
           <td class="sal">1.258,91 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.883,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>R1-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Restaurantes 1 tenedor, Tabernas con Comidas, Pizzerías, Hamburgueserías, Bagueterías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Restaurante 1 ten./Tabernas/Pizzerías)</td>
           <td class="sal">1.258,91 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.883,65 €/año</div></td>
         </tr>
-        <tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">Cafeterías y cafés-bares</span>
+          <span class="familia-tabla__sub">5 categorías × 5 niveles · de Cafeterías 2-3 tazas a Tabernas sin comidas · 23 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Categoría</th>
+            <th style="text-align:right;">Salario bruto</th>
+          </tr>
+        </thead>
+            <tbody>
+<tr>
           <td>C23-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 2 y 3 tazas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Cafetería 2-3 tazas)</td>
           <td class="sal">1.413,54 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.203,10 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C23-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 2 y 3 tazas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Cafetería 2-3 tazas)</td>
           <td class="sal">1.363,00 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.445,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C23-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 2 y 3 tazas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Cafetería 2-3 tazas)</td>
           <td class="sal">1.310,96 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.664,40 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C23-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 2 y 3 tazas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Cafetería 2-3 tazas)</td>
           <td class="sal">1.276,62 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.149,30 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C23-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 2 y 3 tazas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Cafetería 2-3 tazas)</td>
           <td class="sal">1.276,62 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.149,30 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C1-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 1 taza y Creperías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Cafetería 1 taza/Crepería)</td>
           <td class="sal">1.368,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.526,75 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C1-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 1 taza y Creperías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Cafetería 1 taza/Crepería)</td>
           <td class="sal">1.334,69 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.020,35 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C1-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 1 taza y Creperías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Cafetería 1 taza/Crepería)</td>
           <td class="sal">1.284,71 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.270,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C1-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 1 taza y Creperías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Cafetería 1 taza/Crepería)</td>
           <td class="sal">1.264,73 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.970,95 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C1-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías de 1 taza y Creperías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Cafetería 1 taza/Crepería)</td>
           <td class="sal">1.264,73 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.970,95 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BE-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Bares de Categoría Especial, Cervecerías, Chocolaterías, Heladerías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Café/Bar Cat.Especial)</td>
           <td class="sal">1.367,30 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.509,50 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BE-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Bares de Categoría Especial, Cervecerías, Chocolaterías, Heladerías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Café/Bar Cat.Especial)</td>
           <td class="sal">1.317,28 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.759,20 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BE-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Bares de Categoría Especial, Cervecerías, Chocolaterías, Heladerías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Café/Bar Cat.Especial)</td>
           <td class="sal">1.265,56 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.983,40 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BE-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Bares de Categoría Especial, Cervecerías, Chocolaterías, Heladerías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Café/Bar Cat.Especial)</td>
           <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.475,20 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BE-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Bares de Categoría Especial, Cervecerías, Chocolaterías, Heladerías)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Café/Bar Cat.Especial)</td>
           <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.475,20 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>B4-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Cafés Bares de 4ª)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Café/Bar 4ª)</td>
           <td class="sal">1.328,99 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.934,85 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>B4-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Cafés Bares de 4ª)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Café/Bar 4ª)</td>
           <td class="sal">1.295,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.431,75 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>B4-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Cafés Bares de 4ª)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Café/Bar 4ª)</td>
           <td class="sal">1.245,79 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.686,85 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>B4-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Cafés Bares de 4ª)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Café/Bar 4ª)</td>
           <td class="sal">1.225,84 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.387,60 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>B4-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafés y Cafés Bares de 4ª)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Café/Bar 4ª)</td>
           <td class="sal">1.225,84 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.387,60 €/año</div></td>
         </tr>
-        <tr>
-          <td>DIS-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
-          <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Pub/Disco/Sala fiestas)</td>
-          <td class="sal">1.445,35 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.680,25 €/año</div></td>
-        </tr>
-        <tr>
-          <td>DIS-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
-          <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Pub/Disco/Sala fiestas)</td>
-          <td class="sal">1.373,66 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.604,90 €/año</div></td>
-        </tr>
-        <tr>
-          <td>DIS-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
-          <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Pub/Disco/Sala fiestas)</td>
-          <td class="sal">1.311,59 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.673,85 €/año</div></td>
-        </tr>
-        <tr>
-          <td>DIS-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
-          <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Pub/Disco/Sala fiestas)</td>
-          <td class="sal">1.295,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.434,75 €/año</div></td>
-        </tr>
-        <tr>
-          <td>DIS-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
-          <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Pub/Disco/Sala fiestas)</td>
-          <td class="sal">1.295,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.434,75 €/año</div></td>
-        </tr>
-        <tr>
+<tr>
           <td>TS-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Tabernas sin comidas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Taberna sin comidas)</td>
           <td class="sal">1.245,79 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.686,85 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>TS-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Tabernas sin comidas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Taberna sin comidas)</td>
           <td class="sal">1.225,84 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.387,60 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>TS-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Tabernas sin comidas)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Taberna sin comidas)</td>
           <td class="sal">1.225,84 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.387,60 €/año</div></td>
         </tr>
-        <tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">Discotecas, casinos y billares</span>
+          <span class="familia-tabla__sub">4 categorías × 5 niveles · Salas de fiestas, Tablaos, Casinos, Billares · 18 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Categoría</th>
+            <th style="text-align:right;">Salario bruto</th>
+          </tr>
+        </thead>
+            <tbody>
+<tr>
+          <td>DIS-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
+          <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Pub/Disco/Sala fiestas)</td>
+          <td class="sal">1.445,35 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.680,25 €/año</div></td>
+        </tr>
+<tr>
+          <td>DIS-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
+          <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Pub/Disco/Sala fiestas)</td>
+          <td class="sal">1.373,66 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.604,90 €/año</div></td>
+        </tr>
+<tr>
+          <td>DIS-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
+          <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Pub/Disco/Sala fiestas)</td>
+          <td class="sal">1.311,59 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.673,85 €/año</div></td>
+        </tr>
+<tr>
+          <td>DIS-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
+          <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Pub/Disco/Sala fiestas)</td>
+          <td class="sal">1.295,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.434,75 €/año</div></td>
+        </tr>
+<tr>
+          <td>DIS-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Pubs, Disco Bares, Salas de Fiestas, Discotecas, Tablaos Flamencos, Salas de Bailes)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
+          <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Pub/Disco/Sala fiestas)</td>
+          <td class="sal">1.295,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.434,75 €/año</div></td>
+        </tr>
+<tr>
           <td>C12-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 1ª y 2ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Casino 1ª-2ª)</td>
           <td class="sal">1.605,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.079,95 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C12-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 1ª y 2ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Casino 1ª-2ª)</td>
           <td class="sal">1.547,09 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.206,35 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C12-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 1ª y 2ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Casino 1ª-2ª)</td>
           <td class="sal">1.502,62 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.539,30 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C12-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 1ª y 2ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Casino 1ª-2ª)</td>
           <td class="sal">1.450,56 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.758,40 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C12-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 1ª y 2ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Casino 1ª-2ª)</td>
           <td class="sal">1.450,56 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.758,40 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C34-1 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 3ª y 4ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de Cocina, Jefe/a de Recepción, Jefe/a de Sala, Primer Jefe/a de Comedor…</div></td>
           <td>Nivel 1 — Jefes/as de Cocina, Sala, Recepción (Casino 3ª-4ª)</td>
           <td class="sal">1.538,51 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.077,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C34-2 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 3ª y 4ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cajero/a, Segundo/a Jefe/a de Cocina, Segundo/a Jefe/a de Sala…</div></td>
           <td>Nivel 2 — Recepcionista, Cajero/a, 2º Jefe/a, Repostero/a (Casino 3ª-4ª)</td>
           <td class="sal">1.504,66 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.569,90 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C34-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 3ª y 4ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Casino 3ª-4ª)</td>
           <td class="sal">1.452,94 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.794,10 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C34-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 3ª y 4ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Casino 3ª-4ª)</td>
           <td class="sal">1.418,93 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.283,95 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>C34-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Casinos de 3ª y 4ª Categoría)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Casino 3ª-4ª)</td>
           <td class="sal">1.418,93 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.283,95 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BIL-3 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Billares y Salones de Recreo)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Cocinero/a, Barman, Sumiller…</div></td>
           <td>Nivel 3 — Camarero/a, Cocinero/a, Barman, Sumiller (Billar/Salón recreo)</td>
           <td class="sal">1.271,54 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.073,10 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BIL-4 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Billares y Salones de Recreo)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante de Camarero/a, Ayudante de Cocina, Ayudante de Recepción, Conductor/a…</div></td>
           <td>Nivel 4 — Ayudante de Camarero/a, de Cocina, Mozo/a, Conductor/a, Rider (Billar/Salón recreo)</td>
           <td class="sal">1.249,73 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.745,95 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>BIL-5 <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Billares y Salones de Recreo)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Marmitón, Fregador/a, Limpiador/a, Lavandero/a…</div></td>
           <td>Nivel 5 — Marmitón, Fregador/a, Limpiador/a, Lavandero/a, Pinche (Billar/Salón recreo)</td>
           <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">18.475,20 €/año</div></td>
         </tr>
-        </tbody>
-      </table>
-    </div>
+            </tbody>
+          </table>
+        </div>
+      </details>
     <p style="font-size:12px;color:var(--ink-lighter);margin-top:12px;">Importes brutos antes de descuentos de IRPF y Seguridad Social. Para calcular tu <strong>salario neto exacto</strong> con tu situación familiar, usa la <a href="/">calculadora oficial de SalarioJusto</a>.</p>
   </div>
 
