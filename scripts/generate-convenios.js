@@ -143,6 +143,11 @@ const CONVENIO_CONFIG = {
   'hosteleria_cat.json': {
     sector: 'Hostelería', sectorSlug: 'hosteleria',
     plurprovincial: true,
+    // Barcelona BOE remixed manual 27-may-2026 (DOGC 9630).
+    // Tarragona pendiente de BOE remixed manual en commit aparte.
+    // Maresme y Girona quedan thin por ahora — NO regenerar ninguna desde
+    // el JSON cat para no machacar el trabajo manual de Barcelona/Tarragona.
+    skipHtmlGeneration: true,
     provincias: [
       { key: 'barcelona', nombre: 'Barcelona', slug: 'barcelona' },
       { key: 'maresme',   nombre: 'Maresme',   slug: 'maresme'   },
@@ -688,16 +693,21 @@ function main() {
         const data = adaptPlurProvincial(rawData, prov.key);
         if (!data) { console.warn(`  ⚠ Provincia ${prov.key} no disponible en ${filename}`); continue; }
         data.anyoMasReciente = Math.max(...Object.keys(rawData.provincias[prov.key].niveles[0].salario).map(Number));
-        const page = generateConvenioPage(data, {
-          sector: meta.sector, sectorSlug: meta.sectorSlug,
-          provincia: prov.nombre, provinciaSlug: prov.slug
-        });
-        fs.writeFileSync(path.join(ROOT, page.fileName), page.html, 'utf8');
-        console.log(`  ✓ ${page.fileName}`);
+        const fileName = `convenio-${meta.sectorSlug}-${prov.slug}.html`;
+        if (meta.skipHtmlGeneration) {
+          console.log(`  · ${fileName} (skip HTML — BOE remixed manual o thin protegida)`);
+        } else {
+          const page = generateConvenioPage(data, {
+            sector: meta.sector, sectorSlug: meta.sectorSlug,
+            provincia: prov.nombre, provinciaSlug: prov.slug
+          });
+          fs.writeFileSync(path.join(ROOT, page.fileName), page.html, 'utf8');
+          console.log(`  ✓ ${page.fileName}`);
+        }
         generated.push({
           sector: meta.sector,
           provincia: prov.nombre,
-          href: '/' + page.fileName,
+          href: '/' + fileName,
           nombreCorto: `${meta.sector} — ${prov.nombre}`,
           vigencia: data.vigencia,
           enUltraactividad: detectaUltraactividad(data.vigencia),
