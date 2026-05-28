@@ -1,0 +1,121 @@
+{
+  "nombre": "Oficinas y Despachos — Provincia de Valencia",
+  "bop": "BOP Valencia núm. 130, 10/07/2025 (Texto íntegro 2024-2026, firmado 17/06/2025 con efectos retroactivos a 01/01/2024)",
+  "codigo": "46000805011981",
+  "skipHtmlGeneration": true,
+  "vigencia": "1 enero 2024 – 31 diciembre 2026 (3 años, con renovación automática anual y +1 % si no hay denuncia 2 meses antes)",
+  "pagas": 14,
+  "jornadaAnual": 1750,
+  "urlBop": "https://ofydes.es/convenio/",
+  "notaEditorial": "Convenio provincial de Valencia firmado el <strong>17 de junio de 2025</strong> por OFYDES — única patronal sectorial firmante en la Comunitat Valenciana — junto con FeSMC-UGT PV y Federación Servicios CCOO PV. Texto íntegro en BOP Valencia núm. 130 (10/07/2025) con efectos económicos retroactivos al 1-ene-2024. Vigencia trianual hasta 31-dic-2026 con cláusula de renovación automática año por año (+1 % anual) si ninguna parte denuncia con 2 meses de antelación. Jornada anual 1.750 h. 14 pagas (12 mensualidades + 2 extras de junio y diciembre, cada una de 30 días de Salario Base + antigüedad consolidada). Particularidades únicas del convenio 2024-2026: <strong>festivos añadidos</strong> el 24 y 31 de diciembre completos y las tardes del 5 de enero (víspera Reyes) y 18 de marzo (víspera de Fallas) — la única referencia cultural valenciana del corpus auditado. <strong>Plus comida eliminado</strong> desde la publicación, aunque se consolida para quien ya lo venía percibiendo. <strong>Bolsa de vacaciones eliminada</strong>. <strong>Horas extras nocturnas (22:00-06:00) compensadas con +100 % sobre la hora ordinaria o 2 h de descanso por cada hora extra</strong>. <strong>Teletrabajo regulado expresamente</strong> (Art. 14): acuerdo individual por escrito, reversibilidad con 30 días de preaviso, empresa provee equipamiento y compensación económica al trabajador. <strong>Subrogación</strong> en pérdida/rescisión de contrata (Art. 24): adscripción a la nueva empresa con respeto íntegro de derechos. <strong>Extensión de derechos a parejas de hecho</strong> (Art. 8). Permisos retribuidos mejorados para cuidados de familiares dependientes. 8 niveles profesionales del Nivel I (Director/a y Titulado/a Superior) al Nivel VIII (Personal subalterno: Almacenero/a, Conserje, Ordenanza, Telefonista, Limpieza). Aspectos no explicitados en el resumen sindical (cuantías exactas de antigüedad, días concretos de vacaciones, porcentaje de IT, plus transporte) deben consultarse en el texto íntegro del BOP — esta landing remite a OFYDES, FeSMC-UGT y CCOO Servicios para verificación.",
+  "subtablas": {
+    "unica": "Tabla única — 8 niveles profesionales"
+  },
+  "grupos": [
+    {
+      "id": "I",
+      "subtabla": "unica",
+      "nombre": "Nivel I — Titulado Superior y Director",
+      "puestos": ["Director/a", "Titulado/a Grado Superior"],
+      "salario": { "2026": { "mes": 1781.58, "anual": 24942.08 } }
+    },
+    {
+      "id": "II",
+      "subtabla": "unica",
+      "nombre": "Nivel II — Titulado Medio / Diplomado",
+      "puestos": ["Diplomado/a Universitario/a", "Titulado/a Grado Medio", "Intérprete Jurado/a", "Traductor/a Titulado/a"],
+      "salario": { "2026": { "mes": 1583.66, "anual": 22171.27 } }
+    },
+    {
+      "id": "III",
+      "subtabla": "unica",
+      "nombre": "Nivel III — Jefe de Proyecto / Analista",
+      "puestos": ["Jefe/a de Proyecto", "Analista", "Jefe/a Superior", "Jefe/a Delineante"],
+      "salario": { "2026": { "mes": 1513.05, "anual": 21182.74 } }
+    },
+    {
+      "id": "IV",
+      "subtabla": "unica",
+      "nombre": "Nivel IV — Jefe de Oficina / Contable / Programador",
+      "puestos": ["Jefe/a de Oficina", "Contable", "Programador/a", "Delineante Proyectista"],
+      "salario": { "2026": { "mes": 1451.28, "anual": 20317.99 } }
+    },
+    {
+      "id": "V",
+      "subtabla": "unica",
+      "nombre": "Nivel V — Oficial 1ª Administrativo / Encargado",
+      "puestos": ["Oficial 1ª Administrativo/a", "Delineante", "Operador/a", "Encargado/a"],
+      "salario": { "2026": { "mes": 1272.02, "anual": 17808.30 } }
+    },
+    {
+      "id": "VI",
+      "subtabla": "unica",
+      "nombre": "Nivel VI — Oficial 2ª / Comercial / Azafata",
+      "puestos": ["Oficial 2ª Administrativo/a", "Comercial", "Azafata/o"],
+      "salario": { "2026": { "mes": 1207.23, "anual": 16901.25 } }
+    },
+    {
+      "id": "VII",
+      "subtabla": "unica",
+      "nombre": "Nivel VII — Conductor / Grabador / Auxiliar Adm.",
+      "puestos": ["Conductor/a", "Grabador/a de Datos", "Auxiliar Administrativo/a"],
+      "salario": { "2026": { "mes": 1177.41, "anual": 16483.73 } }
+    },
+    {
+      "id": "VIII",
+      "subtabla": "unica",
+      "nombre": "Nivel VIII — Personal subalterno",
+      "puestos": ["Almacenero/a", "Conserje", "Ordenanza", "Telefonista", "Personal de Limpieza"],
+      "salario": { "2026": { "mes": 1160.43, "anual": 16246.05 } }
+    }
+  ],
+  "festivosAniadidos": {
+    "dias": ["24 de diciembre (completo)", "31 de diciembre (completo)"],
+    "tardes": ["5 de enero (víspera Reyes)", "18 de marzo (víspera Fallas)"],
+    "nota": "Único en el corpus auditado por la referencia cultural valenciana (Fallas)."
+  },
+  "horasExtrasNocturnas": {
+    "compensacion": "+100 % sobre hora ordinaria o 2 horas de descanso por cada hora extra realizada",
+    "franja": "22:00 a 06:00"
+  },
+  "pagasExtras": {
+    "numero": 2,
+    "nombres": ["Verano (junio)", "Navidad (diciembre)"],
+    "cuantia": "30 días de Salario Base + antigüedad consolidada cada una"
+  },
+  "teletrabajo": {
+    "articulo": "Art. 14",
+    "regulado": true,
+    "modalidad": "Acuerdo individual por escrito",
+    "reversibilidad": "30 días de preaviso",
+    "equipamiento": "Proporcionado por la empresa",
+    "compensacionEconomica": "Empresa abona compensación económica al teletrabajador"
+  },
+  "subrogacion": { "articulo": "Art. 24", "supuesto": "Pérdida, rescisión o rescate de contrata" },
+  "parejasHecho": { "articulo": "Art. 8", "alcance": "Extensión de derechos del cónyuge a las parejas de hecho" },
+  "renovacionAutomatica": {
+    "preaviso": "2 meses antes del fin de vigencia",
+    "incrementoAnual": "+1 % anual sobre tablas si no hay denuncia"
+  },
+  "firmantes": {
+    "patronales": ["OFYDES — Asociación Empresarial de Oficinas y Despachos de la Comunitat Valenciana (patronal única firmante)"],
+    "sindicatos": ["FeSMC-UGT PV (UGT País Valenciano)", "Federación Servicios CCOO PV"]
+  },
+  "convenioEstatal": "No existe convenio sectorial estatal específico para Oficinas y Despachos (sector multiprovincial sin marco común). El convenio provincial es la única norma sectorial aplicable.",
+  "modificacionesClave2024_2026": [
+    "Plus comida eliminado desde publicación (consolidado para quien ya lo cobraba; aplica a jornada partida con comida ≤1 hora)",
+    "Bolsa de vacaciones eliminada",
+    "Festivos añadidos: 24-dic, 31-dic, tardes 5-ene y 18-mar",
+    "Horas extras nocturnas pasan a compensarse al 100 % o 2 h de descanso",
+    "Teletrabajo regulado expresamente en Art. 14",
+    "Permisos retribuidos ampliados para cuidados de familiares dependientes",
+    "Cláusula de renovación automática +1 % anual si no hay denuncia 2 meses antes"
+  ],
+  "noVerificadoEnFuentesPublicas": {
+    "antiguedadDetalle": "El convenio recoge antigüedad en su Art. 42 pero ni Iberley, CCOO App, ofydes.es ni FeSMC-UGT exponen literalmente el % ni el tipo (trienios/cuatrienios). Consultar texto íntegro del BOP 130 (10/07/2025).",
+    "vacacionesDias": "El convenio recoge vacaciones en su Art. 36 sin cifra accesible en fuentes públicas. Consultar BOP íntegro.",
+    "ITdetalle": "Art. 29 sin porcentajes públicos accesibles. Consultar BOP íntegro.",
+    "plusTransporte": "No mencionado en resúmenes sindicales — probable inexistencia, pero requiere verificación en BOP íntegro.",
+    "comisionParitariaSede": "Composición pública pero sede/dirección postal no consta en fuentes accesibles."
+  }
+}
