@@ -189,6 +189,37 @@
     .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
     .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
     .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
+    .toc{background:var(--cream-50);border:1px solid var(--cream-200);padding:18px 22px;margin:0 0 24px;}
+    .toc-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .toc-list{display:flex;flex-wrap:wrap;gap:6px 8px;}
+    .toc-list a{display:inline-block;padding:5px 11px;background:#fff;border:1px solid var(--cream-200);font-size:12.5px;font-weight:500;color:var(--ink-light);text-decoration:none;border-radius:2px;transition:all 0.15s;}
+    .toc-list a:hover{background:var(--gold);color:#fff;border-color:var(--gold);text-decoration:none;}
+    .callout-warn{background:var(--amber-bg);border:1px solid #FCD34D;border-left:4px solid var(--amber);padding:18px 22px;margin:20px 0;font-size:14px;line-height:1.65;color:var(--ink-light);}
+    .callout-warn strong{color:var(--amber);}
+    .check-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px;}
+    .check-list li{padding:10px 14px;background:var(--cream-50);border-left:3px solid var(--gold);font-size:14px;color:var(--ink-light);}
+    .check-list li strong{color:var(--ink);}
+    td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .plus-destacado{background:#fff;border:1px solid var(--cream-200);border-left:4px solid var(--gold);padding:18px 22px;margin:18px 0;}
+    .plus-destacado h3{margin-top:0;font-size:14px;color:var(--gold-dark);letter-spacing:0.04em;text-transform:uppercase;}
+    .plus-destacado p{font-size:14px;margin-bottom:6px;}
+    .tabla-salarios{table-layout:fixed;}
+    .tabla-salarios td{white-space:normal;word-break:break-word;}
+    .tabla-salarios td:first-child{white-space:normal;}
+    .tabla-salarios td:first-child > span,.tabla-salarios td:first-child > div{display:block;margin-top:3px;}
+    .tabla-salarios th:nth-child(1),.tabla-salarios td:nth-child(1){width:40%;}
+    .tabla-salarios th:nth-child(2),.tabla-salarios td:nth-child(2){width:38%;}
+    .tabla-salarios th:nth-child(3),.tabla-salarios td:nth-child(3){width:22%;}
+    .familia-tabla{margin:14px 0;background:#fff;border:1px solid var(--cream-200);}
+    .familia-tabla>summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;flex-direction:column;gap:4px;background:var(--cream-50);border-bottom:1px solid var(--cream-200);user-select:none;}
+    .familia-tabla>summary::-webkit-details-marker{display:none;}
+    .familia-tabla>summary::before{content:'▸';float:right;color:var(--gold);font-size:13px;line-height:1.4;margin-left:12px;transition:transform 0.2s;}
+    .familia-tabla[open]>summary::before{transform:rotate(90deg);}
+    .familia-tabla[open]>summary{background:#fff;border-bottom:1px solid var(--cream-200);}
+    .familia-tabla>summary:hover{background:var(--cream-100);}
+    .familia-tabla__titulo{font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);line-height:1.3;}
+    .familia-tabla__sub{font-size:12px;color:var(--ink-lighter);line-height:1.4;}
+    .familia-tabla[open]>div{padding-top:8px;}
   </style>
 </head>
 <body>
@@ -202,14 +233,33 @@
 <div class="breadcrumb"><a href="/">SalarioJusto</a> › <a href="/convenios.html">Convenios</a> › Hostelería Zaragoza</div>
 
 <section class="hero">
-  <div class="hero-badge">Tablas salariales 2025 · vigentes en 2026</div>
+  <div class="hero-badge">Convenio en ultraactividad · tablas 2025 vigentes</div>
   <h1>Convenio de <em>Hostelería</em> en Zaragoza 2026</h1>
-  <p class="hero-sub">Tablas oficiales, jornada anual, pagas extras y complementos. BOPZ núm. 84, 13/04/2024. Vigencia 1 enero 2023 – 31 diciembre 2025.</p>
-  <div style="display:inline-block;margin-top:18px;padding:8px 16px;background:rgba(193,123,62,0.15);border:1px solid rgba(193,123,62,0.5);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-light);">⚠ Convenio en ultraactividad desde 2026</div>
-  <p style="font-size:13px;color:rgba(255,255,255,0.55);max-width:620px;margin:12px auto 0;line-height:1.6;">El convenio expiró el 31/12/2025 pero las tablas siguen aplicándose por ultraactividad (art. 86.3 ET) mientras se negocia un nuevo texto. No hay incremento automático.</p>
+  <p class="hero-sub">Convenio en <strong>ultraactividad</strong> (art. 86.3 ET) desde el 1/1/2026 tras vencer el 31/12/2025: las tablas de 2025 siguen aplicándose hasta que la comisión paritaria publique las nuevas. BOPZ núm. 84, 13/04/2024.</p>
+  <div style="display:inline-block;margin-top:18px;padding:8px 16px;background:rgba(193,123,62,0.15);border:1px solid rgba(193,123,62,0.5);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-light);">14 pagas + Paga de Octubre · 1.776 h/año · Festividad Santa Marta</div>
 </section>
 
 <main>
+
+  <nav class="toc" aria-label="Índice del convenio">
+    <div class="toc-label">En esta página</div>
+    <div class="toc-list">
+      <a href="#ultraactividad">Qué significa la ultraactividad</a>
+      <a href="#ambito">¿Te cubre?</a>
+      <a href="#tablas">Tablas salariales</a>
+      <a href="#jornada">Jornada</a>
+      <a href="#vacaciones">Vacaciones y licencias</a>
+      <a href="#pluses">Pluses y complementos</a>
+      <a href="#subrogacion">Subrogación</a>
+      <a href="#fijo-discontinuo">Fijo discontinuo</a>
+      <a href="#baja-medica">Baja médica</a>
+      <a href="#clausula-ine">Cláusula INE 2026</a>
+      <a href="#comparativa">Zaragoza vs otras provincias</a>
+      <a href="#cobras-menos">Si cobras menos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#marco-legal">Marco legal</a>
+    </div>
+  </nav>
 
   <div class="card">
     <div class="card-title">Datos clave del convenio</div>
@@ -221,15 +271,42 @@
     </div>
   </div>
 
-  <div class="callout-info">
-    El convenio finalizó vigencia el 31 de diciembre de 2025 y desde el 1 de enero de 2026 está en <strong>ultraactividad</strong>: las tablas de 2025 siguen aplicándose hasta que la comisión paritaria publique las nuevas. La cláusula de revisión 2026 (Art. 6) prevé un incremento de hasta <strong>+1%</strong> condicionado a dos indicadores INE de la provincia: <strong>+0,5%</strong> si en 2025 se superan las pernoctaciones/viajeros de 2023 y <strong>+0,5%</strong> adicional si en 2024 se superaron los establecimientos de restauración (CNAE 56) de 2023. Los datos de referencia INE estaban pendientes de publicación al firmarse el convenio. Cinco grupos de actividad (hoteles 4-5★, hoteles 3★, cafeterías/discotecas, hoteles 1-2★/hostales, restaurantes 5-3 tenedores) con cinco niveles cada uno: 25 cuadros salariales en total. Convenio firmado por Asoc. Empresariales de Cafés, Bares, Hoteles y Restaurantes de Zaragoza con CCOO, UGT, OSTA y MIT. La estructura de pagas combina <strong>14 mensualidades</strong> (12 SB + 2 extras de julio y diciembre) más una <strong>paga de octubre</strong> de cuantía fija (1.359,07 € en 2025, con tope del SB del trabajador) y los pluses extrasalariales de Transporte, Mantenimiento de Ropa y Manutención.
+  <h2 id="ultraactividad">Qué significa que el convenio esté en ultraactividad</h2>
+  <p>El convenio venció el <strong>31 de diciembre de 2025</strong> y desde el 1 de enero de 2026 está en <strong>ultraactividad</strong> (art. 86.3 del Estatuto de los Trabajadores). En la práctica esto significa tres cosas:</p>
+
+  <ul class="check-list">
+    <li><strong>Las tablas de 2025 siguen vigentes en 2026.</strong> No hay incremento automático: las cuantías que cobras son las de 2025 hasta que se firme el nuevo convenio.</li>
+    <li><strong>Todo el contenido normativo del convenio sigue aplicándose</strong> (jornada 1.776 h, vacaciones, pluses, IT, fijo discontinuo, etc.). La ultraactividad protege el grueso del articulado, no solo las tablas.</li>
+    <li><strong>La comisión paritaria está negociando</strong>. Cuando el nuevo texto se firme, las cuantías 2026 se revisarán retroactivamente con efectos desde el 1 de enero de 2026 (lo habitual en este sector).</li>
+  </ul>
+
+  <div class="callout-warn">
+    <strong>Zaragoza no está sola en esta situación.</strong> Otros tres convenios del corpus auditado en SalarioJusto están también en ultraactividad en 2026: <strong>Madrid</strong> y <strong>Valencia</strong> por el mismo art. 86.3 ET (ambos vencieron el 31/12/2025), y <strong>Granada</strong>, que tiene <strong>ultraactividad pactada</strong> en el Art. 4.2 de su propio convenio sin fecha de caducidad. Los que sí tienen tablas 2026 firmadas y publicadas son Barcelona, Tarragona, Sevilla, Baleares y Bizkaia. Si cobras según las tablas 2025 en 2026, no es ilegal — es la ley estatutaria operando como red de seguridad mientras se negocia el nuevo texto.
   </div>
 
-  <div class="card">
-    <div class="card-title">Tablas salariales 2025 — Zaragoza</div>
+  <h2 id="ambito">Antes de seguir: ¿este convenio te cubre?</h2>
+  <p>El Convenio Provincial de Hostelería de Zaragoza aplica a <strong>toda persona trabajadora por cuenta ajena</strong> en empresas dedicadas a la hostelería, restauración, alojamiento y ocio de la provincia de Zaragoza. El convenio organiza el sector en <strong>cinco grupos de actividad</strong>, cada uno con su propia tabla salarial y cinco niveles profesionales (25 cuadros salariales en total).</p>
+
+  <ul class="check-list">
+    <li><strong>G1 · Hoteles y Balnearios 4-5★</strong> — área de Recepción, Administración y Limpieza.</li>
+    <li><strong>G2 · Hoteles y Balnearios 4-5★</strong> — área de Cocina y Comedor + <strong>Restaurantes 3-5 tenedores</strong>.</li>
+    <li><strong>G3 · Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos y Billares.</strong></li>
+    <li><strong>G4 · Hoteles 3★ + Restaurantes 1-2 tenedores + Colectividades + Tabernas + Cafés-Bares.</strong></li>
+    <li><strong>G5 · Hoteles 1-2★, Hostales, Pensiones y demás alojamientos.</strong></li>
+  </ul>
+
+  <p>Si tu centro de trabajo está en la provincia de Zaragoza y la actividad principal del establecimiento encaja en uno de estos cinco grupos, este convenio te aplica. Si tu empresa tiene convenio propio inscrito en REGCON con condiciones más favorables, rige el más beneficioso para la persona trabajadora.</p>
+
+  <div class="card" id="tablas">
+    <div class="card-title">Tablas salariales 2025 — Zaragoza <span style="font-weight:400;color:var(--ink-lighter);font-size:11px;letter-spacing:0;text-transform:none;">(vigentes en 2026 por ultraactividad)</span></div>
     <p style="font-size:13px;color:var(--ink-lighter);margin-bottom:12px;">Salario base mensual bruto en 14 pagas. Cuantías oficiales publicadas en BOPZ núm. 84, 13/04/2024.</p>
-    <div style="overflow-x:auto;">
-      <table class="tabla-salarios">
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">G1 · Hoteles y Balnearios 4-5★ (Recepción / Administración / Limpieza)</span>
+          <span class="familia-tabla__sub">Niveles IA, IB, II, III, IV · 5 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
         <thead>
           <tr>
             <th>Nivel</th>
@@ -237,135 +314,216 @@
             <th style="text-align:right;">Salario bruto</th>
           </tr>
         </thead>
-        <tbody>
-        <tr>
+            <tbody>
+<tr>
           <td>G1-IA <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Recepción, Administración, Limpieza))</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de recepción, Jefe/a de administración, Jefe/a comercial, Jefe/a de cocina…</div></td>
           <td>Nivel IA — Jefatura Recepción/Administración/Cocina (Hotel 4-5★)</td>
           <td class="sal">1.478,93 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.479,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G1-IB <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Recepción, Administración, Limpieza))</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Segundo/a jefe/a de recepción, Segundo/a jefe/a de cocina, Segundo/a jefe/a de restaurante o sala, Primer conserje…</div></td>
           <td>Nivel IB — Segundo/a Jefatura, Conserje, Encargado/a General (Hotel 4-5★)</td>
           <td class="sal">1.421,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.680,21 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G1-II <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Recepción, Administración, Limpieza))</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Conserje, Administrativo/a, Relaciones públicas…</div></td>
           <td>Recepcionista, Cocinero/a, Camarero/a, Barman/Barwoman (Hotel 4-5★)</td>
           <td class="sal">1.351,82 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.692,85 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G1-III <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Recepción, Administración, Limpieza))</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante/a de recepción y conserjería, Ayudante/a administrativo, Telefonista, Ayudante/a de economato…</div></td>
           <td>Ayudante/a de Recepción/Cocina/Camarero, Camarero/a de Pisos (Hotel 4-5★)</td>
           <td class="sal">1.291,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.790,48 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G1-IV <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Recepción, Administración, Limpieza))</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Auxiliar de recepción y conserjería, Auxiliar de cocina, Asistente de colectividades, Asistente de preparación/montaje de catering…</div></td>
           <td>Auxiliar de Recepción/Cocina/Pisos, Asistente Colectividades (Hotel 4-5★)</td>
           <td class="sal">1.222,12 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.747,29 €/año</div></td>
         </tr>
-        <tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">G2 · Hoteles 4-5★ (Cocina y Comedor) + Restaurantes 3-5 tenedores</span>
+          <span class="familia-tabla__sub">Niveles IA, IB, II, III, IV · 5 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Categoría</th>
+            <th style="text-align:right;">Salario bruto</th>
+          </tr>
+        </thead>
+            <tbody>
+<tr>
           <td>G2-IA <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Cocina y Comedor) + Restaurantes 3-5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de cocina, Jefe/a de restaurante o sala, Encargado/a general, Jefe/a comercial…</div></td>
           <td>Nivel IA — Jefatura Cocina/Sala (Hotel 4-5★ y Restaurantes 3-5 tenedores)</td>
           <td class="sal">1.562,56 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.650,33 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G2-IB <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Cocina y Comedor) + Restaurantes 3-5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Segundo/a jefe/a de cocina, Segundo/a jefe/a de restaurante, Encargado/a general</div></td>
           <td>Nivel IB — Segundo/a Jefatura, Encargado/a General (Hotel 4-5★ y Restaurantes 3-5 tenedores)</td>
           <td class="sal">1.481,51 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.515,69 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G2-II <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Cocina y Comedor) + Restaurantes 3-5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Cocinero/a, Repostero/a, Camarero/a, Barman/barwoman…</div></td>
           <td>Cocinero/a, Camarero/a, Repostero/a (Hotel 4-5★ y Restaurantes 3-5 tenedores)</td>
           <td class="sal">1.375,46 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.031,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G2-III <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Cocina y Comedor) + Restaurantes 3-5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante/a de cocina, Ayudante/a de camarero/a, Especialista de mantenimiento</div></td>
           <td>Ayudante/a Cocina/Camarero, Especialista (Hotel 4-5★ y Restaurantes 3-5 tenedores)</td>
           <td class="sal">1.258,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.295,43 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G2-IV <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 4-5★ (Cocina y Comedor) + Restaurantes 3-5 tenedores)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Auxiliar de cocina, Asistente de colectividades, Asistente de restauración moderna, Auxiliar de servicios</div></td>
           <td>Auxiliar de Cocina, Asistente, Auxiliar Servicios (Hotel 4-5★ y Restaurantes 3-5 tenedores)</td>
           <td class="sal">1.256,21 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.258,58 €/año</div></td>
         </tr>
-        <tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">G3 · Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos y Billares</span>
+          <span class="familia-tabla__sub">Niveles IA, IB, II, III, IV · 5 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Categoría</th>
+            <th style="text-align:right;">Salario bruto</th>
+          </tr>
+        </thead>
+            <tbody>
+<tr>
           <td>G3-IA <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos, Billares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Encargado/a de cafetería, Jefe/a de sala, Director/a de discoteca o sala de baile, Jefe/a de casino</div></td>
           <td>Nivel IA — Encargado/a, Jefe/a (Cafeterías, Discotecas, Casinos, Billares)</td>
           <td class="sal">1.562,56 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.650,33 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G3-IB <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos, Billares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Segundo/a encargado/a, Encargado/a de turno</div></td>
           <td>Nivel IB — Encargado/a (Cafeterías, Discotecas, Casinos, Billares)</td>
           <td class="sal">1.481,51 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.515,69 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G3-II <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos, Billares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Camarero/a, Barman/barwoman, Croupier, DJ/Disc-jockey…</div></td>
           <td>Camarero/a, Barman/Barwoman, Croupier (Cafeterías, Discotecas, Casinos, Billares)</td>
           <td class="sal">1.375,46 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.031,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G3-III <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos, Billares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante/a de camarero/a, Pinchadiscos / Disc-jockey, Recepcionista de discoteca, Especialista de servicios</div></td>
           <td>Ayudante/a, Especialista (Cafeterías, Discotecas, Casinos, Billares)</td>
           <td class="sal">1.311,65 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.090,37 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G3-IV <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Cafeterías, Cafés-Bares Especiales, Discotecas, Casinos, Billares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Auxiliar de servicios, Marcador/a de billar, Auxiliar de mantenimiento</div></td>
           <td>Auxiliar, Marcador/a de Billar (Cafeterías, Discotecas, Casinos, Billares)</td>
           <td class="sal">1.269,55 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.458,87 €/año</div></td>
         </tr>
-        <tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">G4 · Hoteles 3★ + Restaurantes 1-2 tenedores + Colectividades + Tabernas</span>
+          <span class="familia-tabla__sub">Niveles IA, IB, II, III, IV · 5 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Categoría</th>
+            <th style="text-align:right;">Salario bruto</th>
+          </tr>
+        </thead>
+            <tbody>
+<tr>
           <td>G4-IA <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas, Cafés y Bares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Jefe/a de cocina, Jefe/a de sala, Encargado/a general, Gerente</div></td>
           <td>Nivel IA — Encargado/a, Jefe/a (Hoteles 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas)</td>
           <td class="sal">1.447,39 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.038,06 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G4-IB <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas, Cafés y Bares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Segundo/a encargado/a, Recepcionista, Subgobernante/a</div></td>
           <td>Nivel IB — Segundo/a Encargado/a, Recepcionista (Hoteles 3★, Restaurantes 1-2 tenedores)</td>
           <td class="sal">1.401,93 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.401,62 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G4-II <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas, Cafés y Bares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Cocinero/a, Camarero/a, Barman/barwoman, Encargado/a de economato</div></td>
           <td>Cocinero/a, Camarero/a (Hoteles 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas)</td>
           <td class="sal">1.332,16 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.397,91 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G4-III <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas, Cafés y Bares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante/a de cocina, Ayudante/a de camarero/a, Camarero/a de pisos, Especialista de mantenimiento</div></td>
           <td>Ayudante/a, Camarero/a de Pisos (Hoteles 3★, Restaurantes 1-2 tenedores)</td>
           <td class="sal">1.219,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.708,00 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G4-IV <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 3★, Restaurantes 1-2 tenedores, Colectividades, Tabernas, Cafés y Bares)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Auxiliar de pisos y limpieza, Auxiliar de cocina, Asistente de colectividades, Auxiliar de servicios</div></td>
           <td>Auxiliar de Pisos/Cocina (Hoteles 3★, Restaurantes 1-2 tenedores)</td>
           <td class="sal">1.218,29 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.689,93 €/año</div></td>
         </tr>
-        <tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="familia-tabla">
+        <summary>
+          <span class="familia-tabla__titulo">G5 · Hoteles 1-2★, Hostales, Pensiones y demás alojamientos</span>
+          <span class="familia-tabla__sub">Niveles IA, IB, II, III, IV · 5 cuadros salariales</span>
+        </summary>
+        <div style="overflow-x:auto;">
+          <table class="tabla-salarios">
+        <thead>
+          <tr>
+            <th>Nivel</th>
+            <th>Categoría</th>
+            <th style="text-align:right;">Salario bruto</th>
+          </tr>
+        </thead>
+            <tbody>
+<tr>
           <td>G5-IA <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 1-2★, Hostales, Pensiones y demás alojamientos)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Encargado/a general, Recepcionista jefe, Jefe/a de cocina</div></td>
           <td>Nivel IA — Encargado/a (Hoteles 1-2★, Hostales, Pensiones)</td>
           <td class="sal">1.399,66 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">22.029,02 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G5-IB <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 1-2★, Hostales, Pensiones y demás alojamientos)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Segundo/a encargado/a, Subgobernante/a</div></td>
           <td>Nivel IB — Segundo/a Encargado/a (Hoteles 1-2★, Hostales, Pensiones)</td>
           <td class="sal">1.342,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.550,40 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G5-II <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 1-2★, Hostales, Pensiones y demás alojamientos)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Recepcionista, Cocinero/a, Camarero/a</div></td>
           <td>Recepcionista, Cocinero/a, Camarero/a (Hoteles 1-2★, Hostales, Pensiones)</td>
           <td class="sal">1.272,94 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">20.509,59 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G5-III <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 1-2★, Hostales, Pensiones y demás alojamientos)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Ayudante/a de cocina, Ayudante/a de camarero/a, Camarero/a de pisos, Especialista</div></td>
           <td>Ayudante/a, Camarero/a de Pisos (Hoteles 1-2★, Hostales, Pensiones)</td>
           <td class="sal">1.180,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.125,65 €/año</div></td>
         </tr>
-        <tr>
+<tr>
           <td>G5-IV <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Hoteles/Balnearios 1-2★, Hostales, Pensiones y demás alojamientos)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Auxiliar de pisos y limpieza, Auxiliar de cocina, Auxiliar de servicios</div></td>
           <td>Auxiliar de Pisos, Auxiliar de Servicios (Hoteles 1-2★, Hostales, Pensiones)</td>
           <td class="sal">1.179,53 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.108,32 €/año</div></td>
         </tr>
-        </tbody>
-      </table>
-    </div>
+            </tbody>
+          </table>
+        </div>
+      </details>
     <p style="font-size:12px;color:var(--ink-lighter);margin-top:12px;">Importes brutos antes de descuentos de IRPF y Seguridad Social. Para calcular tu <strong>salario neto exacto</strong> con tu situación familiar, usa la <a href="/">calculadora oficial de SalarioJusto</a>.</p>
   </div>
 
@@ -374,25 +532,244 @@
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
+  <h2 id="jornada">Tu jornada y descansos</h2>
+  <p>El Art. 26 fija una <strong>jornada máxima de 1.776 horas anuales</strong> de trabajo efectivo. Es la jornada anual <strong>más corta del corpus hostelero auditado</strong>, ligeramente por debajo de Cataluña (1.783 h desde 2026) y por debajo de Sevilla/Madrid (1.800 h).</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Concepto</th><th>Valor</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Jornada anual máxima (Art. 26)</td><td><strong>1.776 horas efectivas</strong></td></tr>
+        <tr><td>Jornada semanal ordinaria</td><td>40 horas</td></tr>
+        <tr><td>Jornada semanal con flexibilización</td><td>Hasta <strong>45 horas/semana durante 80 días/año</strong></td></tr>
+        <tr><td>Fraccionamiento de jornada (Art. 27)</td><td>Máx. 2 partes dentro de un mismo período de 12 horas · cada fracción entre 3 y 5 horas</td></tr>
+        <tr><td>Descanso semanal (Art. 28)</td><td>Mínimo 2 días · en centros &gt;50 personas, opción de 4 días continuados o 4 fines de semana/año</td></tr>
+        <tr><td>Festividad provincial específica (Art. 29)</td><td><strong>Santa Marta (29 de julio)</strong> — patrona del sector hostelero</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>vs Madrid 1.800 h · vs Sevilla 1.800 h · vs Valencia 1.794 h · vs Cataluña 1.783 h · Zaragoza 1.776 h.</strong> Zaragoza tiene la jornada anual más corta del corpus auditado: 24 horas menos que Madrid/Sevilla al año (tres jornadas completas). La festividad de Santa Marta el 29 de julio es <strong>una particularidad cultural única</strong>: patrona histórica de la hostelería que el convenio reconoce como festivo específico del sector.
+  </div>
+
+  <h2 id="vacaciones">Vacaciones, festivos y licencias</h2>
+  <p>El Art. 30 reconoce <strong>30 días naturales de vacaciones</strong>, retribuidos al <strong>promedio de los tres últimos meses</strong> trabajados (salario base + complementos personales y de puesto). Es una fórmula más favorable que el simple "salario base + antigüedad" de otros convenios: si has hecho horas extras o cobrado pluses variables, las vacaciones reflejan esa media.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Concepto</th><th>Zaragoza (Art. 30)</th></tr></thead>
+      <tbody>
+        <tr><td>Días de vacaciones</td><td>30 días naturales/año</td></tr>
+        <tr><td>Base de retribución</td><td><strong>Promedio de los últimos 3 meses</strong> (no solo SB)</td></tr>
+        <tr><td>Acumulación</td><td>Máx. 2 períodos, salvo pacto</td></tr>
+        <tr><td>Festivos coincidentes</td><td>Se disfrutan en otra fecha</td></tr>
+        <tr><td>Coincidencia con IT</td><td>Se aplazan, sin exceder 18 meses desde fin del año de origen</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Licencias retribuidas (Art. 33) — escala generosa</h3>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Motivo</th><th>Días retribuidos</th></tr></thead>
+      <tbody>
+        <tr><td>Matrimonio o registro de pareja de hecho</td><td><strong>15 días</strong></td></tr>
+        <tr><td>Fallecimiento de familiar</td><td>2 a 5 días según distancia</td></tr>
+        <tr><td>Cuidado hijo/a lactante &lt;9 meses</td><td>Acumulable hasta <strong>15 días</strong></td></tr>
+        <tr><td>Asuntos propios</td><td><strong>3 días/año</strong> (preaviso 7 días, distribuibles)</td></tr>
+        <tr><td>Violencia de género</td><td>Hasta 5 días justificados</td></tr>
+        <tr><td>Exámenes oficiales</td><td>Tiempo indispensable</td></tr>
+        <tr><td>Acompañamiento pediátrico</td><td><strong>6 horas/año</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>Tres días de asuntos propios + lactancia acumulable + acompañamiento pediátrico</strong> son derechos que están por encima del mínimo del ET. La fórmula de "vacaciones al promedio de 3 meses" también es notable: en convenios donde se paga al salario base seco, una baja por IT o un mes con menos pluses puede afectar a la base del cálculo. En Zaragoza no.
+  </div>
+
+  <h2 id="pluses">Pluses y complementos: la arquitectura económica del convenio</h2>
+  <p>Zaragoza tiene una estructura de pluses singular dominada por dos elementos sin equivalente en el resto del corpus: la <strong>Paga de Octubre</strong> y el <strong>Plus Domingo</strong>.</p>
+
+  <div class="plus-destacado">
+    <h3>Paga de Octubre (Art. 45) <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">— único en el corpus</span></h3>
+    <p>Una <strong>paga extraordinaria fija</strong> que se devenga del 1 de octubre al 30 de septiembre y se abona en octubre. La cuantía base estaba en <strong>1.256,54 € en 2023</strong> y se actualiza con un incremento +1 punto por encima del resto. En 2025 estaba en <strong>1.359,07 €</strong>. Si tu salario base mensual es inferior a esa cifra, el tope es tu salario base — la paga nunca puede ser mayor que una mensualidad ordinaria.</p>
+    <p style="margin-top:8px;font-size:13px;color:var(--ink-lighter);">No la confundas con las dos pagas extras de julio y diciembre, que sí son equivalentes a una mensualidad de SB + antigüedad. La Paga de Octubre es un complemento adicional fijo encima de las 14 pagas estructurales.</p>
+  </div>
+
+  <div class="plus-destacado">
+    <h3>Plus Domingo (Art. 51) <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">— único en el corpus</span></h3>
+    <p><strong>11,66 € por cada domingo trabajado</strong>, o como alternativa la empresa puede compensar con <strong>5 horas de descanso por domingo trabajado</strong>. Es el único convenio del corpus que regula expresamente el trabajo en domingo con un plus específico (no solo como festivo).</p>
+  </div>
+
+  <h3>Pluses extrasalariales (transporte, manutención, ropa)</h3>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Concepto</th><th>Artículo</th><th class="num">Cuantía 2023</th></tr></thead>
+      <tbody>
+        <tr><td>Plus Transporte</td><td>Art. 49</td><td class="num"><strong>95,22 €/mes</strong></td></tr>
+        <tr><td>Plus Manutención (sustitutorio)</td><td>Art. 47</td><td class="num">19,33 €/mes</td></tr>
+        <tr><td>Plus Mantenimiento de Ropa</td><td>Art. 48</td><td class="num">23,75 €/mes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--ink-lighter);margin-top:8px;">Los pluses extrasalariales <strong>no se cobran durante las vacaciones</strong> (no forman parte de la base salarial). La Manutención solo aplica en cafeterías/hoteles sin comedor donde no se ofrezca comida al personal.</p>
+
+  <h3>Otros pluses con cuantía</h3>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Concepto</th><th>Artículo</th><th>Cuantía / fórmula</th></tr></thead>
+      <tbody>
+        <tr><td>Nocturnidad</td><td>Art. 50</td><td>+25 % sobre salario base (franjas 22:00-6:00 ó 0:00-6:00)</td></tr>
+        <tr><td>Plus Festivo</td><td>Art. 52</td><td>25,00 €/festivo trabajado · exigible desde 01/01/2024</td></tr>
+        <tr><td>Horas extras</td><td>Art. 46</td><td>+75 % sobre la hora ordinaria — fórmula (SB/30/8) × 1,75</td></tr>
+        <tr><td>Antigüedad consolidada</td><td>Art. 44</td><td>Solo quienes la percibían antes del 01/02/1998 · +5 % desde 01/01/2023</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-warn">
+    <strong>Aviso editorial sobre antigüedad:</strong> Zaragoza tiene la antigüedad <strong>congelada por categoría histórica</strong>. Solo las personas que ya la percibían antes del 1 de febrero de 1998 conservan el derecho a cobrarla y revalorizarla. Para quienes empezaron después, la antigüedad no existe como complemento autónomo en este convenio — es una de las diferencias más relevantes frente a Bizkaia (escala hasta 45 %), Madrid o Sevilla (escala sobre SMI congelado).
+  </div>
+
+  <h2 id="subrogacion">Si te cambian de jefe: subrogación no regulada en convenio</h2>
+  <p>El Convenio Provincial de Hostelería de Zaragoza <strong>no regula subrogación de personal</strong> entre empresas del sector. El único artículo que menciona el cambio de empresa es el Art. 30, que obliga a las empresas saliente y entrante a coordinar el disfrute de las vacaciones de la persona trabajadora afectada.</p>
+
+  <div class="callout-info">
+    <strong>vs Madrid (sin subrogación) · vs Valencia (subrogación total Art. 41) · vs Tarragona (Art. 51 — solo concesiones de restauración) · vs Sevilla (Art. 29 — solo concesiones admin Estado) · Zaragoza (sin regulación).</strong> Zaragoza es <strong>el único del corpus que no menciona subrogación de personal en su articulado</strong>. Si tu empresa cambia, se aplica el Art. 44 ET (sucesión de empresa) en caso de cambio de titularidad, o se aplican las reglas estatutarias generales si la operación no encaja en ese supuesto.
+  </div>
+
+  <h2 id="fijo-discontinuo">Contrato fijo discontinuo: estacionalidad y balnearios</h2>
+  <p>El Art. 14.E regula el contrato fijo discontinuo. Zaragoza tiene un sub-régimen específico para <strong>balnearios</strong> que no aparece en otros convenios del corpus.</p>
+
+  <ul class="check-list">
+    <li><strong>Llamamiento por escrito:</strong> mínimo 7 días de preaviso, por orden de antigüedad dentro de cada categoría.</li>
+    <li><strong>Balnearios — adquisición del fijo discontinuo:</strong> tras 3 años consecutivos con contratos de 4+ meses al año (o 2+ meses si la actividad es estacional). Una protección específica para el personal de balnearios provinciales.</li>
+    <li><strong>Sin indemnización por fin de contrato:</strong> a diferencia de los temporales, los fijos discontinuos no perciben indemnización al cierre de cada período de actividad (es la naturaleza del contrato indefinido a tiempo intermitente).</li>
+    <li><strong>Plantilla mínima indefinida (Art. 14.A):</strong> el 40 % mínimo de la plantilla debe ser indefinida — fija u ordinaria. Es una cláusula que limita el abuso de la temporalidad y es <strong>única del convenio de Zaragoza</strong>.</li>
+  </ul>
+
+  <h2 id="baja-medica">Baja médica: complemento empresa muy generoso</h2>
+  <p>El Art. 53 regula uno de los complementos de IT más favorables del corpus hostelero auditado.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Situación</th><th>Complemento empresa</th></tr></thead>
+      <tbody>
+        <tr><td>Enfermedad común — primeros 20 días</td><td>Empresa complementa hasta <strong>85 % del salario real</strong></td></tr>
+        <tr><td>Enfermedad común — desde el día 21</td><td>Empresa complementa hasta <strong>100 % del salario real</strong></td></tr>
+        <tr><td>Accidente de trabajo</td><td><strong>100 % desde el primer día</strong></td></tr>
+        <tr><td>Duración máxima del complemento</td><td>Hasta <strong>18 mensualidades</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>vs Madrid (no complemento automático) · vs Sevilla (100 % máximo 12 meses) · vs Bizkaia (100 % desde el 1er día) · vs Zaragoza (85 % primeros 20 días → 100 % desde el 21, hasta 18 meses).</strong> Zaragoza está por encima de Sevilla en duración (18 meses vs 12) y por encima de Madrid (donde solo cobras la prestación de la Seguridad Social: 60 % entre días 4-20 y 75 % desde el 21). En accidente laboral, el 100 % desde el primer día empata con Bizkaia.
+  </div>
+
+  <h2 id="clausula-ine">Cláusula INE 2026: la revisión condicionada al turismo provincial</h2>
+  <p>El Art. 43 del convenio incluye una <strong>cláusula de revisión salarial 2026 única en el corpus</strong>: el incremento aplicable en 2026 depende de dos indicadores INE de la provincia de Zaragoza, no de un IPC nacional.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Indicador</th><th>Si se supera el dato 2023</th></tr></thead>
+      <tbody>
+        <tr><td>Pernoctaciones/viajeros provincia (encuesta INE 2025)</td><td><strong>+0,5 %</strong> a las tablas 2026</td></tr>
+        <tr><td>Establecimientos restauración CNAE 56 (datos INE 2024)</td><td><strong>+0,5 %</strong> adicional</td></tr>
+        <tr><td>Tope acumulado</td><td>Máximo <strong>+1,0 %</strong> sobre tablas 2025</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-warn">
+    <strong>Por qué importa:</strong> la cláusula vincula tu subida salarial al rendimiento real del sector turístico provincial. Es la única fórmula del corpus que liga el incremento a indicadores económicos reales en lugar de IPC. En 2026, mientras se negocia el nuevo convenio, este mecanismo es la base que la comisión paritaria está aplicando para fijar las nuevas tablas. Hasta que se firme, las cuantías son las de 2025.
+  </div>
+
+  <div id="comparativa"></div>
+
   <!-- CALLOUTS:START -->
   <!-- CALLOUTS:END -->
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
+
+  <h3>¿Qué significa que el convenio esté "en ultraactividad" en 2026?</h3>
+  <p>El convenio venció el 31/12/2025. Desde el 1/1/2026 está en ultraactividad (art. 86.3 ET): las tablas y el articulado completo siguen aplicándose mientras la comisión paritaria negocia el nuevo texto. <strong>Lo que cobras en 2026 son las cuantías de 2025</strong>. Cuando se firme el nuevo convenio se aplicará la cláusula de revisión INE (+0,5 % pernoctaciones + +0,5 % restauración, máximo +1 %).</p>
+
   <h3>¿Cuál es el salario mínimo del convenio de Hostelería en Zaragoza para 2026?</h3>
-  <p>Las tablas 2025 siguen aplicándose en 2026 por ultraactividad (art. 86.3 ET). Según el texto publicado en BOPZ núm. 84, 13/04/2024, el salario base mensual mínimo es de 1.179,53 € (categoría más baja) y puede llegar hasta 1.562,56 € en las categorías superiores. Son cuantías brutas en 14 pagas.</p>
+  <p>Las tablas 2025 siguen aplicándose en 2026. Según el texto publicado en BOPZ núm. 84, 13/04/2024, el salario base mensual mínimo es de <strong>1.179,53 €/mes</strong> (G5-IV, auxiliar de pisos en Hoteles 1-2★/Hostales/Pensiones) y puede llegar hasta <strong>1.562,56 €/mes</strong> (G2-IA/G3-IA, jefatura). Son cuantías brutas en 14 pagas + Paga de Octubre.</p>
 
   <h3>¿Cuántas horas de jornada anual fija el convenio?</h3>
-  <p>La jornada anual máxima pactada es de 1776 horas efectivas al año, distribuidas según el calendario laboral del centro de trabajo. Superar esta jornada genera horas extraordinarias con su correspondiente compensación.</p>
+  <p>La jornada anual máxima pactada es de <strong>1.776 horas efectivas al año</strong> (Art. 26), <strong>la más corta del corpus hostelero auditado</strong>: 24 horas menos que Madrid/Sevilla (1.800 h) y 7 horas menos que Cataluña (1.783 h). Permite picos de hasta 45 h/semana durante 80 días al año por flexibilización.</p>
+
+  <h3>¿Qué es la Paga de Octubre y a quién le corresponde?</h3>
+  <p>La Paga de Octubre (Art. 45) es una <strong>paga extraordinaria fija</strong> adicional a las 14 mensualidades. La cuantía base en 2025 era <strong>1.359,07 €</strong>, topada por el salario base mensual del trabajador (si tu SB es inferior, esa es la cifra). Se devenga del 1 de octubre al 30 de septiembre del año siguiente y se abona en octubre. Es un complemento <strong>único en el corpus hostelero auditado</strong>.</p>
+
+  <h3>¿Cómo se cobra el plus por trabajar en domingo?</h3>
+  <p>El Plus Domingo (Art. 51) es de <strong>11,66 € por cada domingo trabajado</strong>, o como alternativa la empresa puede compensar con <strong>5 horas de descanso</strong> por cada domingo. Zaragoza es <strong>el único convenio del corpus que regula expresamente esta retribución</strong>.</p>
+
+  <h3>¿Existe subrogación si mi empresa cambia?</h3>
+  <p><strong>No</strong>. El convenio de Zaragoza no regula subrogación convencional. Si tu empresa cambia, se aplica el Art. 44 ET (sucesión de empresa) si encaja en ese supuesto. Es el único convenio del corpus auditado que no incluye un artículo de subrogación.</p>
 
   <h3>¿Qué hago si mi empresa paga menos que el convenio?</h3>
-  <p>Tienes derecho a reclamar las diferencias salariales. El plazo de prescripción es de 1 año por mensualidad desde que debió abonarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC interrumpe ese plazo. Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias de convenio</a>.</p>
+  <p>Tienes derecho a reclamar las diferencias salariales. El plazo de prescripción es de 1 año por mensualidad desde que debió abonarse (art. 59.2 ET). Presentar papeleta de conciliación ante el <strong>SMAC de Zaragoza</strong> interrumpe ese plazo y es gratuito. Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias de convenio</a>.</p>
 
   <h3>¿Dónde puedo consultar el texto oficial del convenio?</h3>
   <p>El texto completo se publicó en BOPZ núm. 84, 13/04/2024 con código de convenio 50000655011982. <a href="https://boletin.dpz.es/BOPZ/UploadServlet?ruta=Boletines%5C2024%5C84%5Cbop.pdf" target="_blank" rel="noopener">Abrir publicación oficial</a>.</p>
 
-  <h2>¿Cobras menos de lo que fija el convenio?</h2>
+  <h2 id="cobras-menos">¿Cobras menos de lo que fija el convenio?</h2>
   <p>Si tu nómina está por debajo de las cantidades de la tabla, puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC de Zaragoza interrumpe el plazo y es gratuito.</p>
   <p>Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía completa para reclamar diferencias salariales</a> paso a paso.</p>
+
+  <h2 id="marco-legal">Marco legal y partes firmantes</h2>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Dato</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr><td>Nombre oficial</td><td>Convenio Colectivo del Sector Hostelería de la Provincia de Zaragoza</td></tr>
+        <tr><td>Código de convenio</td><td>50000655011982</td></tr>
+        <tr><td>Publicación oficial</td><td>BOPZ núm. 84, 13/04/2024</td></tr>
+        <tr><td>Vigencia (Art. 4)</td><td>1 enero 2023 – 31 diciembre 2025</td></tr>
+        <tr><td>Estado en 2026</td><td><strong>Ultraactividad</strong> (art. 86.3 ET): articulado y tablas 2025 siguen aplicándose</td></tr>
+        <tr><td>Ámbito territorial</td><td>Provincia de Zaragoza</td></tr>
+        <tr><td>Estructura salarial</td><td>5 grupos de actividad × 5 niveles = 25 cuadros salariales</td></tr>
+        <tr><td>Cláusula revisión 2026 (Art. 43)</td><td>+0,5 % si suben pernoctaciones INE · +0,5 % si suben establecimientos CNAE 56 · máximo +1 %</td></tr>
+        <tr><td>Régimen disciplinario (Art. 54)</td><td>Remite al VI Acuerdo Laboral de Ámbito Estatal para Hostelería (ALEH)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Partes firmantes</h3>
+  <ul class="check-list">
+    <li><strong>Patronales:</strong> Asociación de Cafés-Bares de Zaragoza · Asociación de Hoteles de Zaragoza · Asociación de Restaurantes de Zaragoza</li>
+    <li><strong>Sindicatos:</strong> CCOO Aragón · UGT Aragón · <strong>OSTA</strong> (Organización Sindical de Trabajadores de Aragón) · <strong>MIT</strong> (Movimiento Intersindical de Trabajadores) — <em>cuatro firmas sindicales, particularidad aragonesa</em></li>
+  </ul>
+
+  <h3>Comisión paritaria (Arts. 9-10)</h3>
+  <ul class="check-list">
+    <li><strong>Composición:</strong> 8 vocales empresariales + 8 vocales sindicales.</li>
+    <li><strong>Sede:</strong> Horeca — Paseo Sagasta 40, Zaragoza.</li>
+    <li><strong>Plazo de reunión:</strong> máximo 7 días desde la solicitud.</li>
+    <li><strong>Resoluciones:</strong> por unanimidad.</li>
+    <li><strong>ASECLA obligatorio (Art. 10 bis):</strong> los conflictos colectivos deben someterse al Servicio Aragonés de Mediación y Arbitraje (ASECLA) antes de la vía judicial.</li>
+  </ul>
+
+  <h3>Particularidades únicas de Zaragoza</h3>
+  <ul class="check-list">
+    <li><strong>Convenio en ultraactividad desde 2026:</strong> comparte esta situación con Madrid y Valencia (art. 86.3 ET) y con Granada (ultraactividad pactada en su Art. 4.2). Las tablas 2025 son las vigentes hasta que la comisión paritaria publique las de 2026.</li>
+    <li><strong>Cláusula INE 2026 (Art. 43):</strong> único convenio que liga el incremento salarial a indicadores INE provinciales (pernoctaciones + restauración) en lugar de IPC.</li>
+    <li><strong>Paga de Octubre (Art. 45):</strong> paga extra fija de 1.359,07 € (2025) topada por SB. No existe en ningún otro convenio del corpus.</li>
+    <li><strong>Plus Domingo (Art. 51):</strong> 11,66 €/domingo o 5 h descanso, exclusivo de Zaragoza.</li>
+    <li><strong>Festividad Santa Marta (Art. 29):</strong> 29 de julio como festivo específico del sector hostelero — particularidad cultural única.</li>
+    <li><strong>ASECLA obligatorio (Art. 10 bis):</strong> conflictos colectivos sometidos a mediación aragonesa antes de la vía judicial.</li>
+    <li><strong>Plantilla mínima 40 % indefinida (Art. 14.A):</strong> cláusula contra la temporalidad excesiva.</li>
+    <li><strong>4 firmas sindicales (CCOO + UGT + OSTA + MIT):</strong> cuatro centrales en la mesa de negociación, particularidad de Aragón.</li>
+    <li><strong>Antigüedad consolidada solo pre-1998 (Art. 44):</strong> no genera derechos para quienes empezaron después.</li>
+  </ul>
 
   <div class="related">
     <h2 style="font-size:18px;">Más recursos para Zaragoza</h2>
