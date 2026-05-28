@@ -76,7 +76,15 @@
       "name": "¿Cuál es el salario mínimo del convenio de Hostelería en Maresme para 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Según las tablas salariales 2026 publicadas en DOGC 9630 · 23/03/2026, el salario base mensual mínimo es de 1.231,68 € (categoría más baja) y puede llegar hasta 2.132,94 € en las categorías superiores. Son cuantías brutas en 14 pagas."
+        "text": "Según las tablas salariales 2026 publicadas en DOGC 9630 · 23/03/2026, el salario base mensual mínimo es de 1.231,68 € (Nivel V Bis, primer empleo sin experiencia) y puede llegar hasta 2.132,94 € en Nivel I-A (Jefe/a de departamento en establecimientos de máxima categoría). Son cuantías brutas en 14 pagas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué en Maresme un camarero/a cobra lo mismo en un hotel 4★ que en una pensión?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque las tablas del Maresme son planas en los niveles operativos III, IV, V y VI: el mismo salario aplica a las cuatro categorías de establecimiento (A, B, C, D). Es la única provincia del convenio autonómico catalán con esta nivelación. Solo en los niveles I y II (Jefes/as y 2º Jefes/as) la categoría del establecimiento sí diferencia el salario."
       }
     },
     {
@@ -84,15 +92,7 @@
       "name": "¿Cuántas horas de jornada anual fija el convenio?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La jornada anual máxima pactada es de 1783 horas efectivas al año, distribuidas según el calendario laboral del centro de trabajo. Superar esta jornada genera horas extraordinarias con su correspondiente compensación."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué hago si mi empresa paga menos que el convenio?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tienes derecho a reclamar las diferencias salariales. El plazo de prescripción es de 1 año por mensualidad desde que debió abonarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC interrumpe ese plazo. Consulta nuestra guía para reclamar diferencias de convenio."
+        "text": "La jornada anual máxima pactada es de 1.783 horas efectivas al año desde 2026 (1.791 horas en 2025), distribuidas según el calendario laboral del centro de trabajo. Superar esta jornada genera horas extraordinarias con su correspondiente compensación."
       }
     },
     {
@@ -111,7 +111,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
-  
+
   <style>
     :root{--cream-50:#FDFBF7;--cream-100:#F7F0E6;--cream-200:#EDE0CE;--gold:#C17B3E;--gold-dark:#A0622A;--gold-light:#D9A06A;--ink:#2D2520;--ink-light:#6B5E52;--ink-lighter:#9B8E88;--green:#2E7D52;--green-bg:#EAF5EE;--amber:#B45309;--amber-bg:#FEF3C7;}
     *{box-sizing:border-box;margin:0;padding:0;}
@@ -189,6 +189,42 @@
     .callout-comp-tabla__nota-row{font-style:italic;font-size:13px;color:var(--ink-light);background:var(--cream-50);}
     .callout-comp-tabla__source{font-size:12px;color:var(--ink-lighter);margin-top:10px;line-height:1.6;}
     .callout-comp-pos__arrow{display:inline-block;font-size:14px;line-height:1;}
+    .toc{background:var(--cream-50);border:1px solid var(--cream-200);padding:18px 22px;margin:0 0 24px;}
+    .toc-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .toc-list{display:flex;flex-wrap:wrap;gap:6px 8px;}
+    .toc-list a{display:inline-block;padding:5px 11px;background:#fff;border:1px solid var(--cream-200);font-size:12.5px;font-weight:500;color:var(--ink-light);text-decoration:none;border-radius:2px;transition:all 0.15s;}
+    .toc-list a:hover{background:var(--gold);color:#fff;border-color:var(--gold);text-decoration:none;}
+    .callout-warn{background:var(--amber-bg);border:1px solid #FCD34D;border-left:4px solid var(--amber);padding:18px 22px;margin:20px 0;font-size:14px;line-height:1.65;color:var(--ink-light);}
+    .callout-warn strong{color:var(--amber);}
+    .check-list{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px;}
+    .check-list li{padding:10px 14px;background:var(--cream-50);border-left:3px solid var(--gold);font-size:14px;color:var(--ink-light);}
+    .check-list li strong{color:var(--ink);}
+    td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .plus-destacado{background:#fff;border:1px solid var(--cream-200);border-left:4px solid var(--gold);padding:18px 22px;margin:18px 0;}
+    .plus-destacado h3{margin-top:0;font-size:14px;color:var(--gold-dark);letter-spacing:0.04em;text-transform:uppercase;}
+    .plus-destacado p{font-size:14px;margin-bottom:6px;}
+    .ref-cruz{background:#fff;border:1px solid var(--cream-200);border-radius:6px;padding:0;overflow:hidden;margin:14px 0;}
+    .ref-cruz table{margin:0;}
+    .ref-cruz td:first-child{font-weight:600;}
+    .callout-headline{background:var(--ink);border:1px solid var(--ink);border-left:4px solid var(--gold-light);padding:22px 26px;margin:24px 0;color:#fff;border-radius:2px;}
+    .callout-headline strong{color:var(--gold-light);}
+    .tabla-salarios{table-layout:fixed;}
+    .tabla-salarios td{white-space:normal;word-break:break-word;}
+    .tabla-salarios td:first-child{white-space:normal;}
+    .tabla-salarios td:first-child > span,.tabla-salarios td:first-child > div{display:block;margin-top:3px;}
+    .tabla-salarios th:nth-child(1),.tabla-salarios td:nth-child(1){width:40%;}
+    .tabla-salarios th:nth-child(2),.tabla-salarios td:nth-child(2){width:38%;}
+    .tabla-salarios th:nth-child(3),.tabla-salarios td:nth-child(3){width:22%;}
+    .familia-tabla{margin:14px 0;background:#fff;border:1px solid var(--cream-200);}
+    .familia-tabla>summary{list-style:none;cursor:pointer;padding:18px 22px;display:flex;flex-direction:column;gap:4px;background:var(--cream-50);border-bottom:1px solid var(--cream-200);user-select:none;}
+    .familia-tabla>summary::-webkit-details-marker{display:none;}
+    .familia-tabla>summary::before{content:'▸';float:right;color:var(--gold);font-size:13px;line-height:1.4;margin-left:12px;transition:transform 0.2s;}
+    .familia-tabla[open]>summary::before{transform:rotate(90deg);}
+    .familia-tabla[open]>summary{background:#fff;border-bottom:1px solid var(--cream-200);}
+    .familia-tabla>summary:hover{background:var(--cream-100);}
+    .familia-tabla__titulo{font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);line-height:1.3;}
+    .familia-tabla__sub{font-size:12px;color:var(--ink-lighter);line-height:1.4;}
+    .familia-tabla[open]>div{padding-top:8px;}
   </style>
 </head>
 <body>
@@ -202,18 +238,33 @@
 <div class="breadcrumb"><a href="/">SalarioJusto</a> › <a href="/convenios.html">Convenios</a> › Hostelería Maresme</div>
 
 <section class="hero">
-  <div class="hero-badge">Tablas salariales 2026</div>
-  <h1>Convenio de <em>Hostelería</em> en Maresme</h1>
-  <p class="hero-sub">Tablas oficiales, jornada anual, pagas extras y complementos. DOGC 9630 · 23/03/2026. Vigencia 1 enero 2025 – 31 diciembre 2028.</p>
-  
+  <div class="hero-badge">Convenio Cataluña · Anexo A.7-A.10 · 2025-2028</div>
+  <h1>Convenio de <em>Hostelería</em> en Maresme 2026</h1>
+  <p class="hero-sub">Única provincia catalana con <strong>tablas planas en los niveles operativos III-VI</strong>: un camarero/a, cocinero/a o recepcionista cobra exactamente lo mismo en un hotel 4★ que en una pensión. Convenio autonómico de Cataluña (DOGC 9630, 23/03/2026), vigente 2025-2028 con +15,7 % acumulado. Jornada 1.783 h/año desde 2026.</p>
+  <div style="display:inline-block;margin-top:18px;padding:8px 16px;background:rgba(193,123,62,0.15);border:1px solid rgba(193,123,62,0.5);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-light);">4 categorías de establecimiento · 7 niveles profesionales · 14 pagas</div>
 </section>
 
 <main>
 
+  <nav class="toc" aria-label="Índice del convenio">
+    <div class="toc-label">En esta página</div>
+    <div class="toc-list">
+      <a href="#ambito">¿Te cubre?</a>
+      <a href="#tablas">Tablas salariales Maresme</a>
+      <a href="#planas">Tablas planas III-VI</a>
+      <a href="#complementos">Complementos y servicios extra</a>
+      <a href="#resto-convenio">Resto del convenio (común Cataluña)</a>
+      <a href="#comparativa">Maresme vs Barcelona</a>
+      <a href="#cobras-menos">Si cobras menos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#marco-legal">Marco legal</a>
+    </div>
+  </nav>
+
   <div class="card">
     <div class="card-title">Datos clave del convenio</div>
     <div class="stats-grid">
-      <div class="stat-item"><div class="stat-label">Jornada anual</div><div class="stat-value">1783 horas</div></div>
+      <div class="stat-item"><div class="stat-label">Jornada anual</div><div class="stat-value">1.783 horas</div></div>
       <div class="stat-item"><div class="stat-label">Pagas al año</div><div class="stat-value">14 pagas</div></div>
       <div class="stat-item"><div class="stat-label">Vigencia</div><div class="stat-value">1 enero 2025 – 31 diciembre 2028</div></div>
       <div class="stat-item"><div class="stat-label">Código convenio</div><div class="stat-value" style="font-size:13px;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">79000275011992</div></div>
@@ -221,165 +272,321 @@
   </div>
 
   <div class="callout-info">
-    Convenio recién firmado para el cuatrienio 2025-2028 (DOGC 23/03/2026), con subidas pactadas del <strong>+4% en 2025, +4% en 2026, +4% en 2027 y +3% en 2028</strong>. La acumulada en los cuatro años supera el 15,7%. Además, la jornada anual se reduce de 1.791 horas en 2025 a 1.783 desde 2026, y los días de vacaciones aumentan de 30 a 31. Es un convenio autonómico catalán que cubre cuatro provincias con tablas salariales distintas: Barcelona, Maresme, Tarragona y Girona; las cifras varían según el centro de trabajo. Las del salario son <strong>mensuales brutas distribuidas en 14 pagas</strong> (12 mensualidades + 2 pagas extras). Nocturnidad: 25% sobre salario hora ordinario entre las 22:00 y las 06:00 (art. 42 del convenio).
+    Convenio recién firmado para el cuatrienio 2025-2028 (DOGC 23/03/2026), con subidas pactadas del <strong>+4 % en 2025, +4 % en 2026, +4 % en 2027 y +3 % en 2028</strong>. La acumulada en los cuatro años supera el 15,7 %. Además, la jornada anual se reduce de 1.791 horas en 2025 a 1.783 desde 2026, y los días de vacaciones aumentan de 30 a 31. Es un convenio autonómico catalán que cubre cuatro provincias con tablas salariales distintas: Barcelona, <strong>Maresme</strong>, Tarragona y Girona; las cifras varían según el centro de trabajo. <strong>14 pagas</strong> (12 mensualidades + Estiu el 10-jul + Nadal el 22-dic). Nocturnidad: 25 % sobre hora ordinaria entre las 22:00 y las 06:00 (Art. 42).
   </div>
 
-  <div class="card">
+  <h2 id="ambito">Antes de seguir: ¿este convenio te cubre?</h2>
+  <p>El convenio de Hostelería y Turismo de Cataluña aplica a toda persona trabajadora por cuenta ajena en establecimientos de hostelería, restauración, alojamiento y ocio del Maresme. La comarca tiene su tabla salarial propia (<strong>Anexo A.7 a A.10</strong>) con cuatro categorías de establecimiento, pero la clasificación de puestos por niveles profesionales es <strong>la misma que Barcelona</strong> (Anexo A conjunto).</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Categoría Maresme</th><th>Tipo de establecimiento (asimilado a Barcelona)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>A</strong></td><td>Categoría primera: hoteles GL, 5★, 4★ superior y 4★; restaurantes 4-5 tenedores; cafés-bares especiales A/B; bares americanos; salas de fiesta y discotecas lujo/1ª; motels 4★; salones de té; casinos 1ª</td></tr>
+        <tr><td><strong>B</strong></td><td>Categoría segunda: hoteles 3★; apartamentos extra-hoteleros 1ª-2ª; restaurantes 2-3 tenedores; bares 1ª-2ª; salas de fiesta 2ª; casinos 2ª-3ª; pizzerías; tablaos; restauración moderna</td></tr>
+        <tr><td><strong>C</strong></td><td>Categoría tercera: hostales residencia 3★; pensiones 3★; hoteles 1-2★; apartamentos extra-hoteleros 3ª</td></tr>
+        <tr><td><strong>D</strong></td><td>Categoría cuarta: hostales y pensiones 1-2★; fondas; restaurantes 1 tenedor; bares 3ª-4ª; tabernas; cervecerías; heladerías; salones de baile; casinos 3ª-4ª; casas rurales; albergues</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-headline">
+    Maresme <strong>no tiene categoría E (catering)</strong> ni la subcategoría Ai (lujo top) presente en Girona. Solo 4 categorías de establecimiento. Y a partir del Nivel III (Camarero/a, Cocinero/a, Recepcionista) hacia abajo, las 4 categorías cobran <strong>exactamente el mismo importe</strong>: un fenómeno único en el corpus auditado.
+  </div>
+
+  <ul class="check-list">
+    <li><strong>Te aplica</strong> si trabajas en hostelería, restauración o alojamiento en cualquiera de los 30 municipios del Maresme — desde Montgat hasta Tordera, costa o interior.</li>
+    <li><strong>La clasificación de puestos por nivel</strong> es la misma que Barcelona ciudad: jefes/as en Nivel I, camareros/as y cocineros/as en Nivel III, ayudantes en Nivel IV, etc. (ver <a href="/convenio-hosteleria-barcelona.html#ambito">Anexo A Barcelona</a>).</li>
+    <li><strong>No te aplica</strong> si tienes convenio propio de empresa inscrito en REGCON con tablas más favorables.</li>
+    <li><strong>No te aplica</strong> si trabajas en hostelería de otra provincia (Barcelona ciudad, Tarragona, Girona o fuera de Cataluña).</li>
+  </ul>
+
+  <div class="card" id="tablas">
     <div class="card-title">Tablas salariales 2026 — Maresme</div>
     <p style="font-size:13px;color:var(--ink-lighter);margin-bottom:12px;">Salario base mensual bruto en 14 pagas. Cuantías oficiales publicadas en DOGC 9630 · 23/03/2026.</p>
-    <div style="overflow-x:auto;">
-      <table class="tabla-salarios">
-        <thead>
-          <tr>
-            <th>Nivel</th>
-            <th>Categoría</th>
-            <th style="text-align:right;">Salario bruto</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>I-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona (ver anexo A)</div></td>
-          <td>Jefe/a (cocina, sala, recepción)</td>
-          <td class="sal">2.132,94 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">29.861,16 €/año</div></td>
-        </tr>
-        <tr>
-          <td>I-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona (ver anexo A)</div></td>
-          <td>Jefe/a (cocina, sala, recepción)</td>
-          <td class="sal">1.936,98 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">27.117,72 €/año</div></td>
-        </tr>
-        <tr>
-          <td>I-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona (ver anexo A)</div></td>
-          <td>Jefe/a (cocina, sala, recepción)</td>
-          <td class="sal">1.874,82 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">26.247,48 €/año</div></td>
-        </tr>
-        <tr>
-          <td>I-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona (ver anexo A)</div></td>
-          <td>Jefe/a (cocina, sala, recepción)</td>
-          <td class="sal">1.745,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.436,30 €/año</div></td>
-        </tr>
-        <tr>
-          <td>II-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
-          <td>2º Jefe/a, Jefe/a de partida</td>
-          <td class="sal">1.874,82 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">26.247,48 €/año</div></td>
-        </tr>
-        <tr>
-          <td>II-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
-          <td>2º Jefe/a, Jefe/a de partida</td>
-          <td class="sal">1.812,78 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">25.378,92 €/año</div></td>
-        </tr>
-        <tr>
-          <td>II-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
-          <td>2º Jefe/a, Jefe/a de partida</td>
-          <td class="sal">1.745,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.436,30 €/año</div></td>
-        </tr>
-        <tr>
-          <td>II-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
-          <td>2º Jefe/a, Jefe/a de partida</td>
-          <td class="sal">1.678,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.498,30 €/año</div></td>
-        </tr>
-        <tr>
-          <td>III-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
-          <td>Camarero/a, Cocinero/a, Recepcionista</td>
-          <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>III-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
-          <td>Camarero/a, Cocinero/a, Recepcionista</td>
-          <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>III-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
-          <td>Camarero/a, Cocinero/a, Recepcionista</td>
-          <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>III-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
-          <td>Camarero/a, Cocinero/a, Recepcionista</td>
-          <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>IV-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
-          <td>Ayudante/a, Camarero/a de pisos</td>
-          <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
-        </tr>
-        <tr>
-          <td>IV-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
-          <td>Ayudante/a, Camarero/a de pisos</td>
-          <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
-        </tr>
-        <tr>
-          <td>IV-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
-          <td>Ayudante/a, Camarero/a de pisos</td>
-          <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
-        </tr>
-        <tr>
-          <td>IV-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
-          <td>Ayudante/a, Camarero/a de pisos</td>
-          <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
-          <td>Auxiliar, Fregador/a, Limpieza</td>
-          <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
-          <td>Auxiliar, Fregador/a, Limpieza</td>
-          <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
-          <td>Auxiliar, Fregador/a, Limpieza</td>
-          <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
-          <td>Auxiliar, Fregador/a, Limpieza</td>
-          <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V Bis-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
-          <td>Nivel V Bis — Primer empleo sin experiencia</td>
-          <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V Bis-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
-          <td>Nivel V Bis — Primer empleo sin experiencia</td>
-          <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V Bis-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
-          <td>Nivel V Bis — Primer empleo sin experiencia</td>
-          <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
-        </tr>
-        <tr>
-          <td>V Bis-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
-          <td>Nivel V Bis — Primer empleo sin experiencia</td>
-          <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
-        </tr>
-        <tr>
-          <td>VI-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
-          <td>Botones 16-17 años, Aspirante administrativo/a</td>
-          <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
-        </tr>
-        <tr>
-          <td>VI-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
-          <td>Botones 16-17 años, Aspirante administrativo/a</td>
-          <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
-        </tr>
-        <tr>
-          <td>VI-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
-          <td>Botones 16-17 años, Aspirante administrativo/a</td>
-          <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
-        </tr>
-        <tr>
-          <td>VI-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
-          <td>Botones 16-17 años, Aspirante administrativo/a</td>
-          <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
+
+    <details class="familia-tabla">
+      <summary>
+        <span class="familia-tabla__titulo">Nivel I</span>
+        <span class="familia-tabla__sub">Jefe/a (cocina, sala, recepción) · 4 cuadros (A/B/C/D)</span>
+      </summary>
+      <div style="overflow-x:auto;">
+        <table class="tabla-salarios">
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Categoría</th>
+              <th style="text-align:right;">Salario bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>I-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona</div></td>
+              <td>Jefe/a (cocina, sala, recepción)</td>
+              <td class="sal">2.132,94 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">29.861,16 €/año</div></td>
+            </tr>
+            <tr>
+              <td>I-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona</div></td>
+              <td>Jefe/a (cocina, sala, recepción)</td>
+              <td class="sal">1.936,98 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">27.117,72 €/año</div></td>
+            </tr>
+            <tr>
+              <td>I-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona</div></td>
+              <td>Jefe/a (cocina, sala, recepción)</td>
+              <td class="sal">1.874,82 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">26.247,48 €/año</div></td>
+            </tr>
+            <tr>
+              <td>I-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel I de Barcelona</div></td>
+              <td>Jefe/a (cocina, sala, recepción)</td>
+              <td class="sal">1.745,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.436,30 €/año</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="familia-tabla">
+      <summary>
+        <span class="familia-tabla__titulo">Nivel II</span>
+        <span class="familia-tabla__sub">2º Jefe/a, Jefe/a de partida · 4 cuadros (A/B/C/D)</span>
+      </summary>
+      <div style="overflow-x:auto;">
+        <table class="tabla-salarios">
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Categoría</th>
+              <th style="text-align:right;">Salario bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>II-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera — igual que Barcelona grupo A)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
+              <td>2º Jefe/a, Jefe/a de partida</td>
+              <td class="sal">1.874,82 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">26.247,48 €/año</div></td>
+            </tr>
+            <tr>
+              <td>II-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda — igual que Barcelona grupo B)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
+              <td>2º Jefe/a, Jefe/a de partida</td>
+              <td class="sal">1.812,78 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">25.378,92 €/año</div></td>
+            </tr>
+            <tr>
+              <td>II-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera — igual que Barcelona grupo C)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
+              <td>2º Jefe/a, Jefe/a de partida</td>
+              <td class="sal">1.745,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">24.436,30 €/año</div></td>
+            </tr>
+            <tr>
+              <td>II-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta — igual que Barcelona grupo D)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel II de Barcelona</div></td>
+              <td>2º Jefe/a, Jefe/a de partida</td>
+              <td class="sal">1.678,45 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">23.498,30 €/año</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="familia-tabla">
+      <summary>
+        <span class="familia-tabla__titulo">Nivel III <span style="font-size:11px;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">— tabla plana</span></span>
+        <span class="familia-tabla__sub">Camarero/a, Cocinero/a, Recepcionista · mismo salario en las 4 categorías</span>
+      </summary>
+      <div style="overflow-x:auto;">
+        <table class="tabla-salarios">
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Categoría</th>
+              <th style="text-align:right;">Salario bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>III-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
+              <td>Camarero/a, Cocinero/a, Recepcionista</td>
+              <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
+            </tr>
+            <tr>
+              <td>III-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
+              <td>Camarero/a, Cocinero/a, Recepcionista</td>
+              <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
+            </tr>
+            <tr>
+              <td>III-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
+              <td>Camarero/a, Cocinero/a, Recepcionista</td>
+              <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
+            </tr>
+            <tr>
+              <td>III-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel III de Barcelona</div></td>
+              <td>Camarero/a, Cocinero/a, Recepcionista</td>
+              <td class="sal">1.515,33 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">21.214,62 €/año</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="familia-tabla">
+      <summary>
+        <span class="familia-tabla__titulo">Nivel IV <span style="font-size:11px;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">— tabla plana</span></span>
+        <span class="familia-tabla__sub">Ayudante/a, Camarero/a de pisos · mismo salario en las 4 categorías</span>
+      </summary>
+      <div style="overflow-x:auto;">
+        <table class="tabla-salarios">
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Categoría</th>
+              <th style="text-align:right;">Salario bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>IV-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
+              <td>Ayudante/a, Camarero/a de pisos</td>
+              <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
+            </tr>
+            <tr>
+              <td>IV-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
+              <td>Ayudante/a, Camarero/a de pisos</td>
+              <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
+            </tr>
+            <tr>
+              <td>IV-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
+              <td>Ayudante/a, Camarero/a de pisos</td>
+              <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
+            </tr>
+            <tr>
+              <td>IV-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel IV de Barcelona</div></td>
+              <td>Ayudante/a, Camarero/a de pisos</td>
+              <td class="sal">1.416,47 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.830,58 €/año</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="familia-tabla">
+      <summary>
+        <span class="familia-tabla__titulo">Nivel V <span style="font-size:11px;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">— tabla plana</span></span>
+        <span class="familia-tabla__sub">Auxiliar, Fregador/a, Limpieza · mismo salario en las 4 categorías</span>
+      </summary>
+      <div style="overflow-x:auto;">
+        <table class="tabla-salarios">
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Categoría</th>
+              <th style="text-align:right;">Salario bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>V-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
+              <td>Auxiliar, Fregador/a, Limpieza</td>
+              <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
+            </tr>
+            <tr>
+              <td>V-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
+              <td>Auxiliar, Fregador/a, Limpieza</td>
+              <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
+            </tr>
+            <tr>
+              <td>V-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
+              <td>Auxiliar, Fregador/a, Limpieza</td>
+              <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
+            </tr>
+            <tr>
+              <td>V-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Mismas categorías que Nivel V de Barcelona</div></td>
+              <td>Auxiliar, Fregador/a, Limpieza</td>
+              <td class="sal">1.377,83 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">19.289,62 €/año</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="familia-tabla">
+      <summary>
+        <span class="familia-tabla__titulo">Nivel V Bis <span style="font-size:11px;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">— tabla plana</span></span>
+        <span class="familia-tabla__sub">Primer empleo sin experiencia · mismo salario en las 4 categorías · 2026 ligeramente sobre SMI</span>
+      </summary>
+      <div style="overflow-x:auto;">
+        <table class="tabla-salarios">
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Categoría</th>
+              <th style="text-align:right;">Salario bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>V Bis-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
+              <td>Nivel V Bis — Primer empleo sin experiencia</td>
+              <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
+            </tr>
+            <tr>
+              <td>V Bis-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
+              <td>Nivel V Bis — Primer empleo sin experiencia</td>
+              <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
+            </tr>
+            <tr>
+              <td>V Bis-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
+              <td>Nivel V Bis — Primer empleo sin experiencia</td>
+              <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
+            </tr>
+            <tr>
+              <td>V Bis-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Trabajadores/as que acceden a su primera ocupación o sin experiencia profesional</div></td>
+              <td>Nivel V Bis — Primer empleo sin experiencia</td>
+              <td class="sal">1.231,68 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.243,52 €/año</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="familia-tabla">
+      <summary>
+        <span class="familia-tabla__titulo">Nivel VI <span style="font-size:11px;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;">— tabla plana</span></span>
+        <span class="familia-tabla__sub">Botones y marmitones 16-17 años, Aspirante administrativo/a · mismo salario en las 4 categorías</span>
+      </summary>
+      <div style="overflow-x:auto;">
+        <table class="tabla-salarios">
+          <thead>
+            <tr>
+              <th>Nivel</th>
+              <th>Categoría</th>
+              <th style="text-align:right;">Salario bruto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>VI-A <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría primera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
+              <td>Botones 16-17 años, Aspirante administrativo/a</td>
+              <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
+            </tr>
+            <tr>
+              <td>VI-B <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría segunda)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
+              <td>Botones 16-17 años, Aspirante administrativo/a</td>
+              <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
+            </tr>
+            <tr>
+              <td>VI-C <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría tercera)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
+              <td>Botones 16-17 años, Aspirante administrativo/a</td>
+              <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
+            </tr>
+            <tr>
+              <td>VI-D <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">(Categoría cuarta)</span><div style="font-size:11px;color:var(--ink-lighter);font-weight:400;margin-top:2px;">Botones y marmitones 16-17 años, Aspirante administrativo/a</div></td>
+              <td>Botones 16-17 años, Aspirante administrativo/a</td>
+              <td class="sal">1.239,50 €<div style="font-size:11px;color:var(--ink-lighter);font-weight:400;">17.353,00 €/año</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
     <p style="font-size:12px;color:var(--ink-lighter);margin-top:12px;">Importes brutos antes de descuentos de IRPF y Seguridad Social. Para calcular tu <strong>salario neto exacto</strong> con tu situación familiar, usa la <a href="/">calculadora oficial de SalarioJusto</a>.</p>
   </div>
 
@@ -388,33 +595,201 @@
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
+  <h2 id="planas">La rareza del Maresme: tablas planas en los niveles operativos</h2>
+  <p>En las otras tres provincias del convenio (Barcelona, Tarragona, Girona), un camarero/a o cocinero/a cobra más en un hotel 4★ que en una pensión 1ª. En el Maresme <strong>no</strong>: a partir del Nivel III hacia abajo, la categoría del establecimiento <em>deja de importar</em>.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Nivel</th><th>Puesto típico</th><th class="num">Categoría A (4★/5★)</th><th class="num">Categoría D (1★/pensión)</th><th class="num">Diferencia</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>I</strong></td><td>Jefe/a (cocina, sala, recepción)</td><td class="num">2.132,94 €</td><td class="num">1.745,45 €</td><td class="num" style="color:var(--gold-dark);font-weight:700;">387,49 €</td></tr>
+        <tr><td><strong>II</strong></td><td>2º Jefe/a, Jefe/a de partida</td><td class="num">1.874,82 €</td><td class="num">1.678,45 €</td><td class="num" style="color:var(--gold-dark);font-weight:700;">196,37 €</td></tr>
+        <tr style="background:var(--green-bg);"><td><strong>III</strong></td><td>Camarero/a, Cocinero/a, Recepcionista</td><td class="num">1.515,33 €</td><td class="num">1.515,33 €</td><td class="num" style="color:var(--green);font-weight:700;">0,00 €</td></tr>
+        <tr style="background:var(--green-bg);"><td><strong>IV</strong></td><td>Ayudante/a, Camarero/a de pisos</td><td class="num">1.416,47 €</td><td class="num">1.416,47 €</td><td class="num" style="color:var(--green);font-weight:700;">0,00 €</td></tr>
+        <tr style="background:var(--green-bg);"><td><strong>V</strong></td><td>Auxiliar, Fregador/a, Limpieza</td><td class="num">1.377,83 €</td><td class="num">1.377,83 €</td><td class="num" style="color:var(--green);font-weight:700;">0,00 €</td></tr>
+        <tr style="background:var(--green-bg);"><td><strong>V Bis</strong></td><td>Primer empleo sin experiencia</td><td class="num">1.231,68 €</td><td class="num">1.231,68 €</td><td class="num" style="color:var(--green);font-weight:700;">0,00 €</td></tr>
+        <tr style="background:var(--green-bg);"><td><strong>VI</strong></td><td>Botones 16-17 años, Aspirante</td><td class="num">1.239,50 €</td><td class="num">1.239,50 €</td><td class="num" style="color:var(--green);font-weight:700;">0,00 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>Lectura editorial:</strong> esto significa que si trabajas como camarera/o, cocinero/a o auxiliar en el Maresme, tu salario base de convenio <strong>no depende de si el establecimiento es de lujo o modesto</strong>. La categoría del centro solo afecta a los puestos de jefatura (Niveles I y II). En el resto del convenio catalán, sí hay escalado A/B/C/D progresivo en todos los niveles.
+  </div>
+
+  <p>La diferencia es relevante para personas que cambian de un hotel 4★ a un restaurante de barrio: <strong>en Barcelona ciudad esa transición supone unos 60-80 €/mes de bajada</strong> (Nivel III pasa de 1.803 € a 1.607 €). En el Maresme no: ambos pagan 1.515,33 €.</p>
+
+  <h2 id="complementos">Complementos y servicios extraordinarios específicos del Maresme (2026)</h2>
+  <p>Las cuantías de complementos del Anexo A.7-A.10 son propias del Maresme, casi iguales a Barcelona ciudad pero con leves diferencias decimales. Se actualizan cada año del cuatrienio según el incremento pactado.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Concepto</th><th class="num">2026</th><th class="num">2028 (proyección)</th></tr></thead>
+      <tbody>
+        <tr><td>Manutención (cuando la empresa la proporciona)</td><td class="num">59,17 €/mes</td><td class="num">63,39 €/mes</td></tr>
+        <tr><td>Alojamiento (cuando la empresa lo proporciona)</td><td class="num">55,36 €/mes</td><td class="num">59,30 €/mes</td></tr>
+        <tr><td>Plus transporte</td><td class="num">14,36 €/mes</td><td class="num">15,39 €/mes</td></tr>
+        <tr><td>Ropa de trabajo</td><td class="num">15,39 €/mes (184,69 €/año)</td><td class="num">16,49 €/mes (197,84 €/año)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Plus camareras/os de pisos (mozos/as de habitaciones)</h3>
+  <p>El convenio reconoce un plus específico para camareras/os de pisos y mozos/as de habitaciones que opera en función de la categoría del hotel. <strong>Aplica al término municipal de los hoteles del Maresme</strong>.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Categoría del hotel</th><th class="num">Plus 2026</th><th class="num">Plus 2028</th></tr></thead>
+      <tbody>
+        <tr><td>Hotel 5★ y 4★</td><td class="num">46,93 €/mes</td><td class="num">50,27 €/mes</td></tr>
+        <tr><td>Hotel 3★</td><td class="num">30,70 €/mes</td><td class="num">32,88 €/mes</td></tr>
+        <tr><td>Hotel 2★</td><td class="num">28,25 €/mes</td><td class="num">30,26 €/mes</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Servicios extraordinarios</h3>
+  <p>Para servicios contratados fuera de la jornada ordinaria, el convenio fija precios cerrados según el rol y si es día laborable o festivo. <strong>Se cobran por servicio prestado, no por hora</strong>. Máximo 6h30 por servicio; montaje y fin de fiesta +50 %.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Servicio</th><th class="num">Laborable 2026</th><th class="num">Festivo 2026</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cambrer / Cuiner</strong> (Camarero/a o Cocinero/a)</td><td class="num">119,29 €</td><td class="num">152,77 €</td></tr>
+        <tr><td><strong>Rentaplats</strong> (Lavaplatos)</td><td class="num">83,20 €</td><td class="num">96,95 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="resto-convenio">El resto del convenio: condiciones comunes con Cataluña</h2>
+  <p>Como el convenio es autonómico, la mayor parte del articulado (jornada, vacaciones, pluses, subrogación, fijo discontinuo, IT, etc.) <strong>es igual que en Barcelona, Tarragona y Girona</strong>. Y la clasificación de puestos por niveles del Maresme <em>es exactamente la misma que el Anexo A de Barcelona</em>. Para no duplicar contenido, te enlazamos al detalle ya redactado:</p>
+
+  <div class="ref-cruz">
+    <div style="overflow-x:auto;">
+      <table>
+        <thead><tr><th>Bloque del convenio</th><th>Cifras / detalle (común Cataluña)</th><th>Ver más</th></tr></thead>
+        <tbody>
+          <tr><td>Clasificación profesional</td><td>Anexo A Barcelona conjunto — mismos puestos, distinta tabla salarial</td><td><a href="/convenio-hosteleria-barcelona.html#categorias">Detalle</a></td></tr>
+          <tr><td>Jornada anual</td><td>1.791 h (2025) → <strong>1.783 h (2026-2028)</strong></td><td><a href="/convenio-hosteleria-barcelona.html#jornada">Detalle</a></td></tr>
+          <tr><td>Vacaciones</td><td>30 días (2025) → <strong>31 días (2026-2028)</strong></td><td><a href="/convenio-hosteleria-barcelona.html#vacaciones">Detalle</a></td></tr>
+          <tr><td>Pagas extras</td><td>2 al año: <strong>Estiu (10-jul) + Nadal (22-dic)</strong>, 30 días SB + antigüedad consolidada cada una</td><td><a href="/convenio-hosteleria-barcelona.html#pluses">Detalle</a></td></tr>
+          <tr><td>Nocturnidad (Art. 42)</td><td>+25 % sobre hora ordinaria · franja 22:00-06:00</td><td><a href="/convenio-hosteleria-barcelona.html#pluses">Detalle</a></td></tr>
+          <tr><td>Horas extras (Art. 34)</td><td>Valor hora ordinaria (sin recargo), máx. 80/año · compensables por descanso</td><td><a href="/convenio-hosteleria-barcelona.html#pluses">Detalle</a></td></tr>
+          <tr><td>Antigüedad (Art. 36)</td><td>Consolidada a 31/12/2007 — no se generan trienios nuevos · se revaloriza con los incrementos del convenio</td><td><a href="/convenio-hosteleria-barcelona.html#pluses">Detalle</a></td></tr>
+          <tr><td>Subrogación (Art. 51)</td><td>Solo en concesiones de restauración (no general)</td><td><a href="/convenio-hosteleria-barcelona.html#subrogacion">Detalle</a></td></tr>
+          <tr><td>Fijo discontinuo</td><td>Modalidad frecuente en hostelería de costa</td><td><a href="/convenio-hosteleria-barcelona.html#fijo-discontinuo">Detalle</a></td></tr>
+          <tr><td>Permisos retribuidos</td><td>Catástrofes 4 días · fuerza mayor familiar 4 días · visitas médicas 8 h/año · lactancia 19 días</td><td><a href="/convenio-hosteleria-barcelona.html#vacaciones">Detalle</a></td></tr>
+          <tr><td>Premio Vinculación (Art. 37)</td><td>50 años de edad + 10/15/20/25/30/35 años de servicio → 2-7 mensualidades</td><td><a href="/convenio-hosteleria-barcelona.html#pluses">Detalle</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 id="comparativa">Maresme vs Barcelona: cuándo conviene más cada tabla</h2>
+  <p>Como el Maresme y Barcelona ciudad comparten el mismo Anexo A pero con tablas separadas, la comparación es directa para personas que dudan entre buscar trabajo en una zona u otra.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Puesto típico</th><th>Nivel</th><th class="num">Maresme (cat. A) 2026</th><th class="num">Barcelona (cat. A) 2026</th><th class="num">Diferencia</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Jefe/a de cocina, sala, recepción</td><td>I</td><td class="num">2.132,94 €</td><td class="num">2.121,29 €</td><td class="num" style="color:var(--green);font-weight:700;">+11,65 €/mes Maresme</td></tr>
+        <tr><td>2º Jefe/a, Jefe/a de partida</td><td>II</td><td class="num">1.874,82 €</td><td class="num">1.864,51 €</td><td class="num" style="color:var(--green);font-weight:700;">+10,31 €/mes Maresme</td></tr>
+        <tr><td>Camarero/a, Cocinero/a, Recepcionista (hotel 4★)</td><td>III</td><td class="num">1.515,33 €</td><td class="num">1.803,05 €</td><td class="num" style="color:#B91C1C;font-weight:700;">−287,72 €/mes Maresme</td></tr>
+        <tr><td>Camarero/a, Cocinero/a, Recepcionista (pensión)</td><td>III-D</td><td class="num">1.515,33 €</td><td class="num">1.607,25 €</td><td class="num" style="color:#B91C1C;font-weight:700;">−91,92 €/mes Maresme</td></tr>
+        <tr><td>Ayudante/a, Camarero/a de pisos (hotel 4★)</td><td>IV</td><td class="num">1.416,47 €</td><td class="num">1.607,25 €</td><td class="num" style="color:#B91C1C;font-weight:700;">−190,78 €/mes Maresme</td></tr>
+        <tr><td>Auxiliar, Fregador/a, Limpieza (hotel 4★)</td><td>V</td><td class="num">1.377,83 €</td><td class="num">1.577,05 €</td><td class="num" style="color:#B91C1C;font-weight:700;">−199,22 €/mes Maresme</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-warn">
+    <strong>Conclusión:</strong> el Maresme paga ligeramente <strong>mejor que Barcelona ciudad en jefaturas</strong> (Niveles I-II) y <strong>claramente menos en niveles operativos</strong> de hoteles de categoría A. La diferencia se invierte cuando se compara con Barcelona categoría D (pensiones/restaurantes 1 tenedor): ahí Barcelona paga ~92 €/mes más para un camarero/a (1.607 € vs 1.515 €). Antes de aceptar oferta en hostelería, conviene mirar la categoría exacta del establecimiento.
+  </div>
+
+  <div id="cobras-menos"></div>
+
   <!-- CALLOUTS:START -->
   <!-- CALLOUTS:END -->
 
-  <h2>Preguntas frecuentes</h2>
-  <h3>¿Cuál es el salario mínimo del convenio de Hostelería en Maresme para 2026?</h3>
-  <p>Según las tablas salariales 2026 publicadas en DOGC 9630 · 23/03/2026, el salario base mensual mínimo es de 1.231,68 € (categoría más baja) y puede llegar hasta 2.132,94 € en las categorías superiores. Son cuantías brutas en 14 pagas.</p>
+  <h2 id="faq">Preguntas frecuentes</h2>
 
-  <h3>¿Cuántas horas de jornada anual fija el convenio?</h3>
-  <p>La jornada anual máxima pactada es de 1783 horas efectivas al año, distribuidas según el calendario laboral del centro de trabajo. Superar esta jornada genera horas extraordinarias con su correspondiente compensación.</p>
+  <h3>¿Cuál es el salario mínimo del convenio de Hostelería en el Maresme para 2026?</h3>
+  <p>Según las tablas 2026 publicadas en DOGC 9630 (23/03/2026), el salario base mensual mínimo es de <strong>1.231,68 €/mes</strong> (Nivel V Bis, personal sin experiencia profesional) y el techo es <strong>2.132,94 €/mes</strong> (Nivel I-A, Jefe/a de departamento en establecimientos de máxima categoría). Son cuantías brutas en 14 pagas.</p>
+
+  <h3>¿Por qué en el Maresme un camarero/a cobra lo mismo en un hotel 4★ que en una pensión?</h3>
+  <p>Porque las tablas del Anexo A.7-A.10 son <strong>planas a partir del Nivel III</strong>: la categoría del establecimiento (A, B, C, D) solo diferencia el salario en los Niveles I y II (jefaturas). En Niveles III a VI, las cuatro categorías cobran exactamente el mismo importe. Es la única provincia del convenio autonómico catalán con esta nivelación. La causa probable es la realidad económica de la comarca: predomina el alojamiento de categoría intermedia y costó al sindicalismo histórico justificar diferencias salariales en operativo entre tipos de establecimiento. Cualquiera que sea la causa, el efecto es que un Nivel III en el Maresme cobra siempre 1.515,33 € en 2026, sea hotel de lujo o restaurante de barrio.</p>
+
+  <h3>¿Cuántas horas de jornada anual y vacaciones tengo?</h3>
+  <p><strong>Jornada</strong>: 1.791 horas en 2025 · <strong>1.783 horas desde 2026</strong> (8 horas menos al año). <strong>Vacaciones</strong>: 30 días naturales en 2025 · <strong>31 días desde 2026</strong> (un día más). La reducción de jornada y el aumento de vacaciones son mejoras pactadas en el cuatrienio 2025-2028, vigentes en todo el convenio catalán.</p>
+
+  <h3>¿El Maresme tiene los Niveles VII Bis y VIII al SMI como Tarragona y Girona?</h3>
+  <p>No. Esa particularidad solo aplica a Tarragona y Girona. El Maresme <strong>no tiene</strong> Nivel VII Bis ni Nivel VIII. Su categoría más baja por antigüedad/edad es el Nivel V Bis (primer empleo sin experiencia), que en 2026 está fijada en 1.231,68 €/mes, ligeramente sobre el SMI legal (1.221 €/mes en 2026). La de menores de 18 años (botones, marmitones) está en el Nivel VI con 1.239,50 €/mes — también por encima del SMI.</p>
+
+  <h3>¿Qué municipios cubre exactamente el "Maresme" del convenio?</h3>
+  <p>La comarca natural del Maresme incluye 30 municipios entre Montgat y Tordera. Los principales centros hosteleros son Mataró (capital), Calella, Pineda de Mar, Santa Susanna, Malgrat de Mar, Premià de Mar, El Masnou, Vilassar de Mar, Arenys de Mar, Canet de Mar y Sant Pol de Mar. El convenio se aplica al centro de trabajo: si tu hotel/restaurante está físicamente en uno de estos municipios, se aplican las tablas del Anexo A.7-A.10 (Maresme). Si está en Barcelona ciudad o cualquier municipio del Vallès Oriental/Occidental, se aplican las tablas de Barcelona.</p>
+
+  <h3>¿Si trabajo de cocinero/a o camarero/a en un servicio especial fuera de la jornada normal, cómo me lo pagan?</h3>
+  <p>El convenio fija precios cerrados por servicio extraordinario (no por hora). En 2026 son <strong>119,29 € por servicio en día laborable y 152,77 € en festivo</strong> para personal de cocina y sala. Los lavaplatos cobran 83,20 € (laborable) y 96,95 € (festivo). Máximo 6h30 por servicio; montaje y fin de fiesta +50 %. Son cuantías propias del Anexo A.7-A.10 (Maresme) y se actualizan cada año del cuatrienio.</p>
+
+  <h3>¿Existe subrogación si mi empresa pierde la contrata?</h3>
+  <p>Solo en supuestos limitados — concretamente <strong>concesiones de restauración</strong>. No hay subrogación general como en el sector de limpieza. La regulación es la misma que en Barcelona (Art. 51 del convenio). Si tu empresa cambia por simple traspaso comercial, no hay obligación convencional de subrogación — se aplica el Art. 44 ET (sucesión de empresa) en su caso. Ver <a href="/convenio-hosteleria-barcelona.html#subrogacion">detalle en la página de Barcelona</a>.</p>
 
   <h3>¿Qué hago si mi empresa paga menos que el convenio?</h3>
-  <p>Tienes derecho a reclamar las diferencias salariales. El plazo de prescripción es de 1 año por mensualidad desde que debió abonarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC interrumpe ese plazo. Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias de convenio</a>.</p>
+  <p>Tienes derecho a reclamar las diferencias salariales. El plazo de prescripción es de 1 año por mensualidad desde que debió abonarse (Art. 59.2 ET). Presentar papeleta de conciliación ante el <strong>SMAC de Catalunya</strong> (Servei de Mediació i Conciliació de la Generalitat) interrumpe ese plazo y es gratuito. La oficina más cercana al Maresme suele ser la de Mataró o Barcelona. Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias de convenio</a>.</p>
 
   <h3>¿Dónde puedo consultar el texto oficial del convenio?</h3>
-  <p>El texto completo se publicó en DOGC 9630 · 23/03/2026 con código de convenio 79000275011992. <a href="https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040087&type=01&language=ca_ES" target="_blank" rel="noopener">Abrir publicación oficial</a>.</p>
+  <p>El texto completo se publicó en DOGC 9630 (23/03/2026) con código de convenio 79000275011992. <a href="https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040087&type=01&language=ca_ES" target="_blank" rel="noopener">Abrir publicación oficial</a>. La ficha completa con histórico en <a href="https://cido.diba.cat/convenis_collectius/9257/industria-dhostaleria-i-turisme-de-catalunya" target="_blank" rel="noopener">CIDO Diputació de Barcelona</a>.</p>
 
   <h2>¿Cobras menos de lo que fija el convenio?</h2>
-  <p>Si tu nómina está por debajo de las cantidades de la tabla, puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC de Maresme interrumpe el plazo y es gratuito.</p>
+  <p>Si tu nómina está por debajo de las cantidades de la tabla, puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación ante el SMAC (Mataró o Barcelona) interrumpe el plazo y es gratuito.</p>
   <p>Consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía completa para reclamar diferencias salariales</a> paso a paso.</p>
 
-  
+  <h2 id="marco-legal">Marco legal y partes firmantes</h2>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Dato</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr><td>Nombre oficial</td><td>Convenio Colectivo de Trabajo del Sector de Industrias y Estaciones de Servicio (Hostelería y Turismo) de Cataluña</td></tr>
+        <tr><td>Código de convenio</td><td>79000275011992</td></tr>
+        <tr><td>Publicación oficial</td><td>DOGC 9630, 23/03/2026 (Resolución EMT/774/2026, de 6 de marzo)</td></tr>
+        <tr><td>Vigencia</td><td>1 enero 2025 – 31 diciembre 2028</td></tr>
+        <tr><td>Ámbito territorial</td><td>Cataluña (Barcelona, Maresme, Tarragona, Girona) — tablas salariales propias por provincia</td></tr>
+        <tr><td>Anexo aplicable a Maresme</td><td>Annex A.7 a A.10 del convenio (mismo Anexo A conjunto con Barcelona, con tablas propias)</td></tr>
+        <tr><td>Incrementos pactados</td><td>+4 % 2025 · +4 % 2026 · +4 % 2027 · +3 % 2028 = <strong>+15,7 % acumulado</strong></td></tr>
+        <tr><td>Pagas extras</td><td>Estiu (10-jul) + Nadal (22-dic) — 1 mensualidad + antigüedad cada una</td></tr>
+        <tr><td>Régimen disciplinario</td><td>Propio del convenio (común Cataluña, ver Barcelona)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Particularidades del Maresme dentro del convenio catalán</h3>
+  <ul class="check-list">
+    <li><strong>Tablas planas en Niveles III a VI</strong>: las cuatro categorías de establecimiento (A/B/C/D) cobran el mismo salario en operativo. Única provincia del corpus auditado con esta nivelación.</li>
+    <li><strong>Solo 4 categorías de establecimiento</strong>: no existe la categoría E (catering) presente en Barcelona/Tarragona, ni la subcategoría Ai (lujo top) presente en Girona.</li>
+    <li><strong>Niveles I y II ligeramente sobre Barcelona</strong>: en jefaturas, el Maresme paga ~10-12 €/mes más que Barcelona ciudad. En operativo, sustancialmente menos en hoteles de categoría A.</li>
+    <li><strong>Sin Nivel VII Bis ni VIII al SMI</strong>: el escalado de "primer empleo / menores de 18" se cierra en Nivel V Bis (1.231,68 €) y Nivel VI (1.239,50 €), ambos por encima del SMI 2026.</li>
+    <li><strong>Plus camareras/os de pisos</strong>: en hoteles del Maresme se reconoce un plus específico por categoría del hotel (5★/4★: 46,93 €/mes · 3★: 30,70 €/mes · 2★: 28,25 €/mes en 2026).</li>
+  </ul>
+
+  <h3>Partes firmantes (DOGC 9630)</h3>
+  <ul class="check-list">
+    <li><strong>Patronales</strong> (las mismas firmantes que en Barcelona/Tarragona/Girona): Federación Empresarial de Hostelería y Restauración de Cataluña, Gremio de Restauración de Barcelona, Asociación de Hoteles de Cataluña, Confederación Empresarial Sector Turístico, etc.</li>
+    <li><strong>Sindicatos</strong>: UGT-FeSMC Cataluña · CCOO de Serveis Cataluña</li>
+  </ul>
 
   <div class="related">
     <h2 style="font-size:18px;">Guías y herramientas</h2>
     <ul>
       <li><a href="/convenios.html">← Ver todos los convenios colectivos</a></li>
       <li><a href="/">Calculadora de salario neto</a></li>
+      <li><a href="/convenio-hosteleria-barcelona.html">Convenio Hostelería Barcelona (mismo convenio, otra tabla)</a></li>
+      <li><a href="/convenio-hosteleria-girona.html">Convenio Hostelería Girona (mismo convenio, otra tabla)</a></li>
+      <li><a href="/convenio-hosteleria-tarragona.html">Convenio Hostelería Tarragona (mismo convenio, otra tabla)</a></li>
       <li><a href="/reclamar-diferencias-salariales-convenio.html">Cómo reclamar diferencias salariales</a></li>
       <li><a href="/salario-minimo-interprofesional-2026.html">Salario Mínimo Interprofesional 2026</a></li>
       <li><a href="/ley-transparencia-salarial-2026.html">Ley de Transparencia Salarial 2026</a></li>
