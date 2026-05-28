@@ -72,7 +72,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110009006533891" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{--cream-50:#FDFBF7;--cream-100:#F7F0E6;--cream-200:#EDE0CE;--gold:#C17B3E;--gold-dark:#A0622A;--gold-light:#D9A06A;--ink:#2D2520;--ink-light:#6B5E52;--ink-lighter:#9B8E88;--green:#2E7D52;--green-bg:#EAF5EE;--red:#B91C1C;--amber:#B45309;--amber-bg:#FEF3C7;}
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -93,8 +93,8 @@
   .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(28px,4.5vw,48px);color:#fff;font-weight:400;line-height:1.18;max-width:880px;margin:0 auto 22px;letter-spacing:-0.01em;}
   .hero h1 em{font-style:normal;color:var(--gold-light);}
   .hero-sub{font-size:17px;color:rgba(255,255,255,0.75);max-width:680px;margin:0 auto 28px;line-height:1.6;}
-  .hero-meta{font-size:12px;color:rgba(255,255,255,0.5);font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em;}
-  .countdown{display:inline-flex;align-items:baseline;gap:8px;background:rgba(193,123,62,0.12);border:1px solid rgba(193,123,62,0.4);padding:10px 20px;margin-top:22px;font-family:'IBM Plex Mono',monospace;}
+  .hero-meta{font-size:12px;color:rgba(255,255,255,0.5);font-variant-numeric:tabular-nums;letter-spacing:0.02em;letter-spacing:0.05em;}
+  .countdown{display:inline-flex;align-items:baseline;gap:8px;background:rgba(193,123,62,0.12);border:1px solid rgba(193,123,62,0.4);padding:10px 20px;margin-top:22px;font-variant-numeric:tabular-nums;letter-spacing:0.02em;}
   .countdown-num{font-size:22px;color:var(--gold-light);font-weight:700;}
   .countdown-lbl{font-size:11px;color:rgba(255,255,255,0.65);text-transform:uppercase;letter-spacing:0.1em;}
   main{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
@@ -102,15 +102,15 @@
   .toc-title{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
   .toc ol{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;counter-reset:secn;}
   .toc li{counter-increment:secn;padding-left:32px;position:relative;}
-  .toc li::before{content:counter(secn,decimal-leading-zero);position:absolute;left:0;top:0;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-lighter);font-weight:700;}
+  .toc li::before{content:counter(secn,decimal-leading-zero);position:absolute;left:0;top:0;font-variant-numeric:tabular-nums;letter-spacing:0.02em;font-size:11px;color:var(--ink-lighter);font-weight:700;}
   .toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;}
   .toc a:hover{color:var(--gold);border-bottom-color:var(--gold);}
   section{margin-bottom:64px;scroll-margin-top:80px;}
   h2{font-family:'DM Serif Display',serif;font-size:30px;font-weight:400;color:var(--ink);margin:0 0 8px;line-height:1.2;letter-spacing:-0.005em;}
-  h2 .secn{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold);font-weight:500;display:block;margin-bottom:8px;letter-spacing:0.08em;text-transform:uppercase;}
+  h2 .secn{font-variant-numeric:tabular-nums;letter-spacing:0.02em;font-size:13px;color:var(--gold);font-weight:500;display:block;margin-bottom:8px;letter-spacing:0.08em;text-transform:uppercase;}
   h2 + .deck{font-size:15px;color:var(--ink-light);margin-top:6px;margin-bottom:24px;font-style:italic;line-height:1.6;}
   h3{font-family:'Newsreader',serif;font-size:22px;font-weight:600;color:var(--ink);margin:36px 0 10px;line-height:1.3;}
-  h3 .subn{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);font-weight:500;letter-spacing:0.06em;display:inline-block;margin-right:10px;vertical-align:middle;}
+  h3 .subn{font-variant-numeric:tabular-nums;letter-spacing:0.02em;font-size:11px;color:var(--gold);font-weight:500;letter-spacing:0.06em;display:inline-block;margin-right:10px;vertical-align:middle;}
   h4{font-size:14px;font-weight:700;color:var(--ink);margin:24px 0 6px;letter-spacing:0.02em;}
   p{color:var(--ink-light);margin-bottom:18px;font-size:16px;}
   p.lead{font-family:'Newsreader',serif;font-size:21px;line-height:1.55;color:var(--ink);font-weight:500;margin-bottom:24px;}
@@ -137,7 +137,7 @@
   tbody td:first-child{font-weight:700;color:var(--ink);}
   tbody tr.top td:first-child{color:var(--green);}
   tbody tr.bot td:first-child{color:var(--red);}
-  td.num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-light);text-align:right;white-space:nowrap;}
+  td.num{font-variant-numeric:tabular-nums;letter-spacing:0.02em;font-size:12px;color:var(--ink-light);text-align:right;white-space:nowrap;}
   th.num{text-align:right;}
   .chart{margin:32px 0 28px;background:#fff;border:1px solid var(--cream-200);padding:24px 12px 20px;}
   .chart svg{display:block;width:100%;height:auto;max-width:100%;}
@@ -718,6 +718,11 @@
     <a href="https://salariojusto.es/">salariojusto.es</a> ·
     <a href="https://salariojusto.es/sala-de-prensa.html">Sala de prensa</a> ·
     <a href="mailto:prensa@salariojusto.es">prensa@salariojusto.es</a>
+  </p>
+  <p class="footer-text" style="font-size:11px;opacity:0.6;margin-top:10px;">
+    <a href="/privacidad.html">Privacidad</a> ·
+    <a href="/aviso-legal.html">Aviso legal</a> ·
+    <a href="/contacto.html">Contacto</a>
   </p>
 </footer>
 

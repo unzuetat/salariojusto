@@ -8,6 +8,7 @@
 - [Cómo denunciar la brecha salarial](https://salariojusto.es/denunciar-brecha-salarial-guia-practica-2026.html): guía práctica paso a paso para denuncia administrativa o judicial
 - [Cómo reclamar diferencias salariales](https://salariojusto.es/reclamar-diferencias-salariales-convenio.html): si tu empresa paga menos de lo que dice tu convenio colectivo
 - [Rangos salariales y transparencia](https://salariojusto.es/rangos-salariales-empresa-transparencia-2026.html): qué bandas debe publicar tu empresa según la Directiva
+- [Registro retributivo obligatorio 2026](https://salariojusto.es/registro-retributivo-obligatorio-2026.html): qué empresas deben tener registro retributivo, contenido obligatorio, derecho de acceso del trabajador y consecuencias de no tenerlo
 
 ## Plantillas para ejercer tus derechos
 
@@ -78,15 +79,26 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 ## Otros convenios sectoriales
 
 - [Convenio Oficinas y Despachos Valencia](https://salariojusto.es/convenio-oficinas-valencia.html)
+- [Convenio Técnicos del Espectáculo](https://salariojusto.es/convenio-tecnicos-espectaculos.html): convenio sectorial estatal del personal técnico del espectáculo en vivo
 
 ## Datos de referencia 2026
 
 - [Tramos IRPF 2026](https://salariojusto.es/tramos-irpf-2026.html): escala estatal completa
 - [Salario Mínimo Interprofesional 2026](https://salariojusto.es/salario-minimo-interprofesional-2026.html)
 
+## Pilares conceptuales y guías
+
+- [Qué es un salario justo](https://salariojusto.es/que-es-un-salario-justo.html): definición editorial del concepto vertebrador del proyecto — qué entendemos por salario justo y cómo se mide
+- [Hub de guías laborales](https://salariojusto.es/guias.html): índice de guías prácticas sobre derechos laborales, convenios, prestaciones y reclamaciones
+
+## Informes editoriales
+
+- [Informe Transparencia Retributiva en España 2026](https://salariojusto.es/informe-transparencia-salarial-2026.html): análisis editorial sobre el estado de la transparencia salarial en España antes de la Directiva UE 2023/970 (7-jun-2026), con datos de ofertas capturadas en abril 2026
+
 ## Sobre el proyecto
 
 - [Sobre SalarioJusto](https://salariojusto.es/sobre.html): metodología de cálculo IRPF, fuentes oficiales (BOE, REGCON, BOPs), proceso de verificación, principios del proyecto
+- [Sala de prensa](https://salariojusto.es/sala-de-prensa.html): material para periodistas — notas de prensa, copy ready-to-paste, contacto editorial
 - [Política de privacidad](https://salariojusto.es/privacidad.html)
 - [Aviso legal](https://salariojusto.es/aviso-legal.html)
 - [Contacto](https://salariojusto.es/contacto.html)
