@@ -174,6 +174,17 @@
     .footer-text{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6;}
     .footer-text a{color:var(--gold-light);text-decoration:none;}
     @media(max-width:600px){main{padding:24px 16px 48px;}.card{padding:18px;}th,td{padding:8px 6px;font-size:12px;}}
+    .toc{background:var(--cream-50);border:1px solid var(--cream-200);padding:18px 22px;margin:0 0 24px;}
+    .toc-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+    .toc-list{display:flex;flex-wrap:wrap;gap:6px 8px;}
+    .toc-list a{display:inline-block;padding:5px 11px;background:#fff;border:1px solid var(--cream-200);font-size:12.5px;font-weight:500;color:var(--ink-light);text-decoration:none;border-radius:2px;transition:all 0.15s;}
+    .toc-list a:hover{background:var(--gold);color:#fff;border-color:var(--gold);text-decoration:none;}
+    .callout-warn{background:var(--amber-bg);border:1px solid #FCD34D;border-left:4px solid var(--amber);padding:18px 22px;margin:20px 0;font-size:14px;line-height:1.65;color:var(--ink-light);}
+    .callout-warn strong{color:var(--amber);}
+    td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .plus-destacado{background:#fff;border:1px solid var(--cream-200);border-left:4px solid var(--gold);padding:18px 22px;margin:18px 0;}
+    .plus-destacado h3{margin-top:0;font-size:14px;color:var(--gold-dark);letter-spacing:0.04em;text-transform:uppercase;}
+    .plus-destacado p{font-size:14px;margin-bottom:6px;}
   </style>
 </head>
 <body>
@@ -187,12 +198,36 @@
 <div class="breadcrumb"><a href="/">SalarioJusto</a> › <a href="/convenios.html">Convenios</a> › <a href="/convenio-limpieza-edificios-locales.html">Limpieza</a> › Barcelona</div>
 
 <section class="hero">
-  <div class="hero-badge">Tablas salariales 2026 · Provincia de Barcelona</div>
-  <h1>Convenio de <em>Limpieza de Edificios y Locales</em> — Barcelona</h1>
-  <p class="hero-sub">Convenio autonómico de Catalunya renovado hasta 2030, con Acuerdo parcial publicado en el DOGC del 26 de febrero de 2026. Tabla salarial 2026, pluses específicos de Barcelona, y derechos laborales del sector.</p>
+  <div class="hero-badge">Convenio autonómico Catalunya · 2026-2030 · 5 años de vigencia</div>
+  <h1>Convenio de <em>Limpieza de Edificios y Locales</em> — Barcelona 2026</h1>
+  <p class="hero-sub">Convenio autonómico de Catalunya renovado para cinco años (Acuerdo parcial DOGC 9613 del 26-feb-2026, con corrección de erratas DOGC 9635 del 30-mar-2026). +3,25% sobre tablas 2025, estructura Salario Base + Complemento con plan de transición 2026-2030, 31 días de vacaciones, 15 mensualidades equivalentes, jornada 1.792 h/año.</p>
+  <div style="display:inline-block;margin-top:18px;padding:8px 16px;background:rgba(193,123,62,0.15);border:1px solid rgba(193,123,62,0.5);font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold-light);">Suelo salarial: 1.211,81 €/mes · IT 100 % accidente · Subrogación 4 meses</div>
 </section>
 
 <main>
+
+  <nav class="toc" aria-label="Índice del convenio">
+    <div class="toc-label">En esta página</div>
+    <div class="toc-list">
+      <a href="#ambito">¿Te cubre?</a>
+      <a href="#estructura">Estructura SB+Complemento</a>
+      <a href="#tablas">Tablas salariales</a>
+      <a href="#pluses-bcn">Pluses Barcelona</a>
+      <a href="#jornada">Jornada</a>
+      <a href="#vacaciones">Vacaciones y licencias</a>
+      <a href="#antiguedad">Antigüedad</a>
+      <a href="#pluses-sect">Pluses sectoriales</a>
+      <a href="#fines-semana">Fines de semana</a>
+      <a href="#baja-medica">Baja médica</a>
+      <a href="#seguro">Seguro accidentes</a>
+      <a href="#subrogacion">Subrogación</a>
+      <a href="#fijo-discontinuo">Fijo discontinuo</a>
+      <a href="#comparativa">Barcelona vs otras provincias</a>
+      <a href="#cobras-menos">Si cobras menos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#marco-legal">Marco legal</a>
+    </div>
+  </nav>
 
   <div class="card">
     <div class="card-title">Datos clave del convenio</div>
@@ -214,7 +249,79 @@
     <strong>CCOO del Hàbitat no firmó el Acuerdo parcial.</strong> La mesa negociadora dejó constancia de su desacuerdo con el preacuerdo alcanzado, por lo que no figura como parte firmante. Esto no afecta a la validez del Acuerdo —publicado en el DOGC y plenamente aplicable—, pero sí es un contexto relevante: si eres afiliado o afiliada a CCOO y tienes dudas sobre cómo interpretar la tabla, conviene contactar con tu delegación.
   </div>
 
-  <h2>Tablas salariales 2026 — Barcelona, Girona y Lleida</h2>
+  <h2 id="ambito">Antes de seguir: ¿este convenio te cubre?</h2>
+  <p>El Convenio de Limpieza de Edificios y Locales de Catalunya (código REGCON 79002415012005) aplica a toda persona trabajadora por cuenta ajena en empresas dedicadas a la <strong>limpieza, mantenimiento e higienización</strong> de cualquier edificio, local, hospital, centro sanitario, industria, medio de transporte (terrestre/aéreo/marítimo, FGC y Metro de Barcelona), máquinas, espacios, soportes publicitarios o mobiliario urbano de la comunidad autónoma de Catalunya (Art. 1 y 2), con independencia de dónde tenga sede la empresa.</p>
+
+  <ul class="check-list">
+    <li><strong>Te aplica</strong> si trabajas en una empresa de limpieza con servicio en Catalunya, tanto si tu centro está en Barcelona como en Girona, Lleida o Tarragona. Las cuatro provincias comparten convenio, con anexos salariales propios.</li>
+    <li><strong>Te aplica también</strong> si tu empresa presta servicio en <strong>domicilios particulares</strong> contratados por la titularidad del hogar familiar a una empresa del sector (Art. 2).</li>
+    <li><strong>Te aplica en contratas y subcontratas</strong>, salvo que haya otro convenio sectorial aplicable (Art. 42.6 ET).</li>
+    <li><strong>NO te aplica</strong> al personal de alta dirección (Art. 3) ni a socios cooperativistas no-trabajadores ni a autónomos (Art. 69).</li>
+    <li><strong>Centros especiales de trabajo</strong> (no de iniciativa social): si las retribuciones de este convenio son superiores a las del XV Convenio General de centros de atención a personas con discapacidad, prevalece este (Disposición adicional I).</li>
+  </ul>
+
+  <h2 id="estructura">Tu nómina tiene dos partes (y una de ellas va a desaparecer en 2030)</h2>
+  <p>Lo más confuso del convenio 2026-2030 es la estructura salarial. Te lo explicamos en tres pasos.</p>
+
+  <h3>Paso 1 · Tu sueldo bruto se compone de dos conceptos</h3>
+  <p>Mira tu nómina: en lugar de un único "salario base", verás dos líneas:</p>
+  <div class="pill-grid">
+    <div class="pill-card">
+      <div class="pill-card-title">Salario Base Convenio</div>
+      <div class="pill-card-body">Cuantía por día natural según tu categoría (ver tablas). Es la parte "principal" del salario. Sube cada año.</div>
+    </div>
+    <div class="pill-card">
+      <div class="pill-card-title">Complemento a Salario Base · 208,90 €/mes en 2026</div>
+      <div class="pill-card-body">Concepto retributivo nuevo creado el 1-ene-2026 (<strong>Art. 34 bis</strong>). Naturaleza salarial. Aplica a <strong>Barcelona, Girona y Lleida</strong> (no Tarragona). Lo cobran <strong>todas</strong> las personas trabajadoras desde el primer día.</div>
+    </div>
+  </div>
+  <p><strong>Salario Base + Complemento = Total mensual bruto.</strong> Si eres Personal limpiador/a y peón (Grupo IV Nivel 4), de enero a agosto de 2026 cobras 1.007,97 € de Salario Base + 208,90 € de Complemento = <strong>1.216,86 €/mes</strong>.</p>
+
+  <h3>Paso 2 · El Complemento se va a ir &laquo;mudando&raquo; al Salario Base hasta desaparecer en 2030</h3>
+  <p>Cada cierto tiempo, una parte del Complemento se traslada al Salario Base. Tu <strong>Total mensual no cambia</strong>: lo que está en una columna pasa a la otra. Es como mover dinero de un bolsillo a otro de la misma chaqueta.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>A partir de…</th><th class="num">Pasa al Salario Base</th><th class="num">Complemento queda en</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Hoy (enero-agosto 2026)</strong></td><td class="num">—</td><td class="num">208,90 €</td></tr>
+        <tr><td><strong>1 sept 2026</strong></td><td class="num">+12 €</td><td class="num">196,90 €</td></tr>
+        <tr><td><strong>1 enero 2027</strong></td><td class="num">+50 € más</td><td class="num">146,90 €</td></tr>
+        <tr><td><strong>1 enero 2028</strong></td><td class="num">+50 € más</td><td class="num">96,90 €</td></tr>
+        <tr><td><strong>1 enero 2029</strong></td><td class="num">+50 € más</td><td class="num">46,90 €</td></tr>
+        <tr><td><strong>1 enero 2030</strong></td><td class="num">Lo que quede</td><td class="num"><strong>0 € · desaparece</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Paso 3 · Ejemplo concreto con Personal limpiador/a (Grupo IV Nivel 4)</h3>
+  <p>Para que se vea la mecánica con tu categoría real. Aquí no estamos sumando los incrementos pactados de 2027-2030 (que están pendientes de negociar) — solo mostramos el reparto interno entre Salario Base y Complemento:</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Periodo</th><th class="num">Salario Base</th><th class="num">Complemento</th><th class="num">Total mes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Enero-agosto 2026</td><td class="num">1.007,97 €</td><td class="num">208,90 €</td><td class="num"><strong>1.216,86 €</strong></td></tr>
+        <tr><td>Septiembre-diciembre 2026</td><td class="num">1.019,97 € <span style="font-size:11px;color:var(--green);">↑ +12 €</span></td><td class="num">196,90 € <span style="font-size:11px;color:#B91C1C;">↓ −12 €</span></td><td class="num"><strong>1.216,86 €</strong> <span style="font-size:11px;color:var(--ink-lighter);">igual</span></td></tr>
+        <tr style="background:var(--cream-50);"><td colspan="4" style="font-size:12.5px;font-style:italic;color:var(--ink-lighter);padding:10px;">2027-2029: el Complemento sigue trasvasándose 50 € cada año al Salario Base. El Total mensual sí subirá, pero por el incremento pactado del año (a negociar), no por el trasvase.</td></tr>
+        <tr><td>Desde 1 enero 2030</td><td class="num">Todo el sueldo en una sola línea</td><td class="num">0 €</td><td class="num">El que resulte tras 4 años de incrementos</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>¿Por qué se hace este trasvase si el total no cambia?</strong> Porque el Salario Base es la base de cotización a la Seguridad Social (afecta a tu jubilación, prestación por desempleo, IT, baja por maternidad…). Al integrar progresivamente los 208,90 € del Complemento, esas prestaciones futuras suben con cada mudanza. Es una mejora invisible en la nómina pero real en el largo plazo. Por eso el Acuerdo dice que el Complemento <strong>no es compensable ni absorbible</strong> con los incrementos pactados: es un compromiso a 5 años que no se puede revertir.
+  </div>
+
+  <div class="callout-warn">
+    <strong>Si trabajas en Tarragona, esto no te aplica.</strong> El Complemento solo existe en Barcelona, Girona y Lleida. Tarragona mantiene la estructura clásica de un único Salario Base sin Complemento.
+  </div>
+
+  <h2 id="tablas">Tablas salariales 2026 — Barcelona, Girona y Lleida</h2>
   <p>El Acuerdo parcial publica las cuantías en dos tramos del año con el <strong>mismo total mensual en ambos</strong>: solo se reestructura la proporción entre Salario Base y Plus Convenio (a partir del 1 de septiembre pasan 12 € del plus a la base). Mostramos abajo la tabla de enero-agosto 2026 y, a continuación, la estructura del segundo tramo.</p>
 
   <div class="card" style="padding:16px;">
@@ -270,7 +377,7 @@
   </ul>
   <p style="font-size:12.5px;color:var(--ink-lighter);">Cuantías brutas antes de IRPF y Seguridad Social. Para calcular tu <strong>salario neto</strong> a partir del total anual de tu categoría, usa la <a href="/">calculadora de SalarioJusto</a> indicando el bruto anual orientativo (Total mes × número de pagas previstas en tu convenio).</p>
 
-  <h2>Pluses específicos para Barcelona</h2>
+  <h2 id="pluses-bcn">Pluses específicos para Barcelona (2026)</h2>
   <p>Además del salario mensual, el convenio recoge los siguientes complementos para la provincia de Barcelona (aplicables también a Girona):</p>
   <div class="pill-grid">
     <div class="pill-card">
@@ -291,12 +398,203 @@
     </div>
     <div class="pill-card">
       <div class="pill-card-title">Retribución 41 bis (jornada completa)</div>
-      <div class="pill-card-body"><strong>20,00 €</strong> en los supuestos previstos en el artículo 41 bis del convenio.</div>
+      <div class="pill-card-body"><strong>20,00 €</strong> en los supuestos previstos en el artículo 41 bis del convenio (ver más abajo).</div>
     </div>
   </div>
 
-  <h2>Jornada y pagas</h2>
-  <p>El Convenio sectorial estatal de Limpieza de Edificios y Locales fija una jornada ordinaria máxima de <strong>1.728 horas anuales</strong> (equivalentes a 38 horas semanales). El convenio autonómico de Catalunya puede mejorarla (reducirla) pero nunca empeorarla. La distribución concreta y el calendario laboral, así como el número exacto de pagas extras y su cálculo, se fijan en el texto del convenio.</p>
+  <h2 id="jornada">Tu jornada y descansos</h2>
+  <p>El Art. 55 fija una <strong>jornada anual máxima de 1.792 horas</strong> (desde el 1-ene-2025, reducida desde las 1.800 previas — 8 horas menos al año). La jornada semanal es de <strong>40 horas</strong>, con máximo de <strong>9 horas diarias</strong> y descanso mínimo entre jornadas de <strong>12 horas</strong>.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Concepto</th><th>Valor</th></tr></thead>
+      <tbody>
+        <tr><td>Jornada anual (Art. 55)</td><td><strong>1.792 horas</strong> (desde 1-ene-2025; antes 1.800)</td></tr>
+        <tr><td>Jornada semanal</td><td>40 horas</td></tr>
+        <tr><td>Jornada diaria máxima</td><td>9 horas</td></tr>
+        <tr><td>Descanso entre jornadas</td><td>12 horas mínimo</td></tr>
+        <tr><td>Jornada partida (Art. 56)</td><td>Máx. 3 partes en Bcn/Girona, mínimo 1 h entre cada parte</td></tr>
+        <tr><td>Trabajo nocturno (Art. 58)</td><td>Franja 22:00 a 06:00</td></tr>
+        <tr><td>Descanso semanal (Art. 60)</td><td>1,5 días continuados — sábado tarde + domingo, o domingo + lunes mañana</td></tr>
+        <tr><td>Descanso durante jornada (Art. 59) — Bcn/Girona</td><td>25 min (jornada continuada completa) · 20 min (si trabajas ≥5 h seguidas)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>El descanso durante la jornada se computa como trabajo efectivo</strong> y se retribuye como salario cotizado (Art. 59). Lo mismo aplica a los <strong>tiempos de desplazamiento entre centros de trabajo dentro de la jornada laboral continuada</strong> (Art. 64). Sin embargo, el desplazamiento de casa al primer centro y del último centro a casa no genera compensación.
+  </div>
+
+  <h2 id="vacaciones">Vacaciones, festivos y licencias</h2>
+  <p>El Art. 61 reconoce <strong>31 días naturales de vacaciones</strong> retribuidos con salario base + Complemento + antigüedad + plus de nocturnidad (si lo cobras habitualmente). Es <strong>un día más que el estándar de 30 días</strong> del corpus.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Concepto</th><th>Catalunya (Art. 61-62)</th></tr></thead>
+      <tbody>
+        <tr><td>Días de vacaciones</td><td><strong>31 días naturales/año</strong></td></tr>
+        <tr><td>Periodo preferente</td><td>1 junio – 30 septiembre · Plan con 2 meses de antelación</td></tr>
+        <tr><td>Periodo de devengo</td><td>Barcelona/Girona: 1 ago – 31 jul · Lleida/Tarragona: año natural</td></tr>
+        <tr><td>Coincidencia con IT</td><td>Las vacaciones se aplazan tras el alta</td></tr>
+        <tr><td>Coincidencia con maternidad/paternidad</td><td>Vacaciones a continuación del descanso</td></tr>
+        <tr><td>No inician en festivo ni en descanso semanal</td><td>—</td></tr>
+        <tr><td>Asuntos propios (Bcn/Girona)</td><td><strong>2 días retribuidos</strong> + <strong>Dissabte Sant</strong> festivo (preaviso 7 días)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Licencias retribuidas (Art. 62)</h3>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Motivo</th><th>Días</th></tr></thead>
+      <tbody>
+        <tr><td>Matrimonio o pareja de hecho registrada</td><td><strong>15 días</strong></td></tr>
+        <tr><td>Nacimiento o adopción de familiar 1er grado</td><td>1 día (provincia) · 2 días (fuera)</td></tr>
+        <tr><td>Muerte o enfermedad grave (cónyuge/ascendientes/descendientes/hermanos)</td><td>4 días (provincia) · 8 días (fuera)</td></tr>
+        <tr><td>Hospitalización ≥3 días (cónyuge/ascendientes/descendientes/hermanos)</td><td>4 días (+1 fuera provincia, +2 fuera Catalunya); 2 días si hospitalización 1-2 días</td></tr>
+        <tr><td>Intervención quirúrgica sin hospitalización + reposo domiciliario</td><td>2 días (4 si fuera provincia)</td></tr>
+        <tr><td>Traslado de domicilio</td><td>1 día</td></tr>
+        <tr><td>Matrimonio de hijos o hermanos</td><td>1 día (provincia) · 2 días (fuera)</td></tr>
+        <tr><td>Médico de cabecera coincidente con jornada</td><td>4 horas/trimestre (no acumulables)</td></tr>
+        <tr><td>Médico especialista</td><td>Tiempo necesario (con parte facultativo)</td></tr>
+        <tr><td>Acompañamiento quimioterapia/radioterapia (cónyuge/padres/hijos &gt;16 años)</td><td><strong>3 días</strong> (preaviso 2 días hábiles)</td></tr>
+        <tr><td>Embarazadas: exámenes y preparación al parto</td><td>Tiempo necesario, retribuido</td></tr>
+        <tr><td>Lactancia (Art. 30)</td><td>1 hora/día hasta los 9 meses; hasta 12 meses si ambos progenitores ejercen el derecho con reducción salarial proporcional desde el mes 9</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="antiguedad">Antigüedad: cuatrienios al 4 % con tope del 60 % a 25 años o más</h2>
+  <p>El Art. 39 regula la antigüedad de forma distinta por provincia. <strong>Barcelona y Girona</strong> tienen el régimen más generoso del corpus:</p>
+
+  <ul class="check-list">
+    <li><strong>Cuatrienios al 4 %</strong> sobre el salario base, para personas que ingresaron a partir del 1-ene-1997.</li>
+    <li><strong>Trienios al 5 %</strong> adquiridos hasta el 1-jun-1998 se conservan y se suman a los cuatrienios posteriores.</li>
+    <li><strong>Tope máximo acumulado</strong>: 10 % a los 5 años, 25 % a los 15 años, 40 % a los 20 años, <strong>60 % a los 25 años o más</strong>.</li>
+  </ul>
+
+  <div class="callout-info">
+    <strong>vs Tarragona (trienios 5 % ilimitados) · vs Lleida (congelada al 31-dic-2000)</strong>. Tarragona ofrece trienios al 5 % sin tope acumulado. Lleida tiene tablas de antigüedad congeladas desde finales del año 2000 — quienes ingresaron después no generan derechos por antigüedad. Barcelona/Girona se sitúan en una banda intermedia con un tope alto pero alcanzable (60 % a los 25 años).
+  </div>
+
+  <h2 id="pluses-sect">Pluses sectoriales: hospitales, aeropuerto, pluricentre, toxicidad</h2>
+  <p>Más allá de los pluses festivos generales, el convenio reconoce pluses específicos según el centro o las condiciones del trabajo.</p>
+
+  <div class="plus-destacado">
+    <h3>Plus Hospitalario (Art. 45) <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">— Bcn/Girona 20 % SB</span></h3>
+    <p>El personal que limpia en <strong>centros sanitarios con internamiento y quirófano</strong> en el mismo centro percibe un <strong>20 % adicional sobre el salario base</strong> del convenio, proporcional a la jornada en ese centro. Compensable con pluses de la misma naturaleza que ya cobre la persona. En Tarragona: 10,5 % SB. En Lleida: cuantía diaria según tabla.</p>
+  </div>
+
+  <div class="plus-destacado">
+    <h3>Plus Aeroportuario (Art. 48) <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">— Barcelona, Aeropuerto del Prat</span></h3>
+    <p>Personal que limpia <strong>aviones e instalaciones</strong> adjudicadas por AENA o entidad pública sustituta en el Aeropuerto del Prat de Llobregat: <strong>16 % mínimo sobre el salario base</strong>. Si ya percibías cuantías superiores antes de la entrada en vigor del convenio, se mantienen y suben con los incrementos pactados.</p>
+  </div>
+
+  <div class="plus-destacado">
+    <h3>Complemento Pluricentre (Art. 43) <span style="font-size:11px;color:var(--ink-lighter);font-weight:400;">— único en el corpus</span></h3>
+    <p>Las personas limpiadoras que hacen <strong>jornada habitual diaria en 3 o más centros</strong> perciben un complemento del <strong>2 % del salario base</strong>, proporcional a la jornada. Compensa el desgaste de cambiar de centro varias veces al día.</p>
+  </div>
+
+  <div class="plus-destacado">
+    <h3>Plus Toxicidad / Peligrosidad / Excepcional Penosidad (Art. 50)</h3>
+    <p>Para puestos con riesgo evaluado: <strong>+20 % del salario base</strong> del grupo y nivel profesional. Si las tareas tóxicas/peligrosas/penosas se realizan solo durante <strong>media jornada o menos</strong>, el plus se reduce al <strong>10 %</strong>. La determinación se hace según Ley de Prevención de Riesgos Laborales.</p>
+  </div>
+
+  <h3>Otros pluses por concepto</h3>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Concepto</th><th>Artículo</th><th>Cuantía / fórmula</th></tr></thead>
+      <tbody>
+        <tr><td>Plus Nocturno</td><td>Art. 44</td><td>+25 % sobre salario base del nivel profesional · Franja 22:00-06:00</td></tr>
+        <tr><td>Horas extras (Bcn/Girona/Lleida)</td><td>Art. 40</td><td>+75 % sobre hora ordinaria · Máx. <strong>80 horas/año</strong> · <strong>Prohibidas en jornada nocturna y para menores de 18</strong></td></tr>
+        <tr><td>Trabajar día de descanso compensatorio</td><td>Art. 42</td><td><strong>+140 %</strong> sobre todos los conceptos retributivos del día (Bcn/Girona/Tarragona)</td></tr>
+        <tr><td>Domingos/festivos (Bcn/Girona)</td><td>Art. 41</td><td>Día compensatorio + plus festivo diurno/nocturno según tablas</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-warn">
+    <strong>Horas extras prohibidas en jornada nocturna y para menores de 18 años (Art. 40).</strong> Es una protección reforzada respecto al ET (que solo limita las horas extras de menores). Si te las imponen, son ilegales y puedes reclamar.
+  </div>
+
+  <h2 id="fines-semana">Si trabajas en exclusiva fines de semana y festivos (Art. 41 bis)</h2>
+  <p>El Acuerdo parcial 2026 crea un régimen específico para personas con <strong>contrato exclusivo de fines de semana y festivos</strong> en Barcelona, Girona o Tarragona. La retribución se escala a lo largo de los cinco años del convenio:</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Año</th><th class="num">Por día efectivo (8h)</th></tr></thead>
+      <tbody>
+        <tr><td>2026</td><td class="num">20 €</td></tr>
+        <tr><td>2027</td><td class="num">20 €</td></tr>
+        <tr><td>2028</td><td class="num">25 €</td></tr>
+        <tr><td>2029</td><td class="num">30 €</td></tr>
+        <tr><td>2030</td><td class="num"><strong>55,40 €</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="check-list">
+    <li><strong>25 de diciembre y 1 de enero</strong> (Bcn/Girona): +15 € adicionales por encima de la retribución 41 bis.</li>
+    <li><strong>Preferencia para vacantes a jornada completa</strong>: si surgen vacantes definitivas en el centro, este personal tiene preferencia para cubrirlas (por antigüedad, adecuación y desempeño).</li>
+    <li><strong>Incompatible con Art. 41 ordinario</strong> (domingos/festivos): no se cobran ambos, solo el régimen 41 bis.</li>
+  </ul>
+
+  <h2 id="baja-medica">Baja médica: complemento empresa muy generoso (Art. 51)</h2>
+  <p>El Art. 51 (modificado por el Acuerdo parcial 2026) regula uno de los regímenes de IT más favorables del corpus.</p>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Situación</th><th>Complemento empresa (Bcn/Girona/Lleida)</th></tr></thead>
+      <tbody>
+        <tr><td>Accidente laboral o enfermedad profesional <strong>con hospitalización</strong></td><td><strong>100 % base reguladora desde día 1</strong>, mientras dure la internación</td></tr>
+        <tr><td>Hospitalización por enfermedad común o accidente no laboral</td><td>100 % desde día 1, máx. <strong>35 días</strong> (sumando hospitalización + recuperación)</td></tr>
+        <tr><td>Accidente laboral sin hospitalización</td><td>100 % desde el día 3 durante los 68 días siguientes</td></tr>
+        <tr><td>Enfermedad común sin hospitalización</td><td><strong>50 % los 3 primeros días de baja</strong>, máx. 4 días/año (3 días primera baja + 1 día segunda)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:13px;color:var(--ink-lighter);">No se incluyen en el complemento las partes proporcionales de Plus Transporte, Complemento a Salario Base y Plus Festivo.</p>
+
+  <div class="callout-info">
+    <strong>vs Madrid (sin complemento auto · ultraactividad) · vs Bizkaia (100 % desde día 1 todo) · vs Tarragona (100 % SB+antigüedad desde día 1 accidente).</strong> Catalunya cubre todos los supuestos de hospitalización al 100 % desde el día 1, lo que es muy generoso. La parte más débil es la enfermedad común sin hospitalización: solo se cobra el 50 % los 3 primeros días con tope anual.
+  </div>
+
+  <h2 id="seguro">Seguro de accidentes: 7.500 € por muerte o incapacidad (Art. 53)</h2>
+  <p>Todas las empresas están obligadas a concertar una <strong>póliza de seguro</strong> que garantice una indemnización de <strong>7.500 €</strong> a la persona trabajadora (o beneficiarios) en caso de:</p>
+  <ul class="check-list">
+    <li><strong>Muerte derivada de accidente de trabajo</strong> (incluido in itinere).</li>
+    <li><strong>Incapacidad Permanente Absoluta o Gran Invalidez</strong> por accidente laboral.</li>
+  </ul>
+  <p>La persona trabajadora puede designar beneficiario; en su defecto, va a quien corresponda legalmente.</p>
+
+  <h2 id="subrogacion">Subrogación: 4 meses de antigüedad mínimos (Art. 69)</h2>
+  <p>El convenio regula con detalle la subrogación de personal en cualquier <strong>cambio de contratista o subcontratista</strong>, ya sea con cliente público o privado. La regulación es la misma que en el convenio estatal pero el convenio catalán añade matices propios.</p>
+
+  <h3>Quién se subroga (Art. 69.1)</h3>
+  <ul class="check-list">
+    <li><strong>Personal en activo</strong> con <strong>4 meses de antigüedad mínima</strong> en la contrata, sea cual sea la modalidad de su contrato.</li>
+    <li><strong>Personal con reserva de puesto</strong> (IT, excedencia, vacaciones, maternidad, incapacidad permanente revisable): 4 meses mínimo en el centro.</li>
+    <li><strong>Sustitutos</strong> de personal con reserva, sin importar su antigüedad propia.</li>
+    <li><strong>Nuevos ingresos por ampliación</strong> de contrato en los últimos 4 meses.</li>
+    <li><strong>Nuevos ingresos por vacantes definitivas</strong> producidas en los últimos 4 meses (con alta simultánea en centro y empresa).</li>
+    <li><strong>Personal de primera contracta de servicio continuado</strong>, si la duración mínima es de 4 meses (excluye servicios eventuales y primeras limpiezas sin contrato de mantenimiento).</li>
+  </ul>
+
+  <h3>Qué documentación debe entregar la empresa saliente (Art. 71)</h3>
+  <p>Plazo: <strong>5-15 días naturales</strong> desde la comunicación del cambio. Documentación obligatoria: contratos, últimas 4 nóminas, IDC, RNT, RLC, comunicados IT, certificado al corriente de pago de Seguridad Social, permiso residencia (extranjeros), acta electoral del comité si lo hay, copia de sanciones no prescritas, y liquidación de partes proporcionales devengadas.</p>
+
+  <p>En Barcelona la subrogación es habitual cuando cambian las adjudicatarias en <strong>hospitales y CAP del ICS y Consorci Sanitari, colegios públicos y concertados, universidades públicas (UB/UAB/UPC/UPF), edificios municipales del Ajuntament, sedes corporativas del 22@</strong> y grandes comunidades de propietarios.</p>
+
+  <h2 id="fijo-discontinuo">Contrato fijo discontinuo: 9-10,5 meses con preaviso de 5 días</h2>
+  <p>El Art. 16 regula el contrato fijo discontinuo, el contrato indefinido de prestación intermitente típico del sector.</p>
+
+  <ul class="check-list">
+    <li><strong>Duración ordinaria</strong>: entre 9 y 10,5 meses de período de actividad al año (las vacaciones se incluyen dentro de los 10,5 máximos).</li>
+    <li><strong>Llamamiento</strong> por escrito (correo certificado o mensajería electrónica con justificante de recepción), preaviso mínimo de <strong>5 días naturales</strong> antes de la reanudación de cada ciclo.</li>
+    <li><strong>Sectores que permiten duración menor a 9 meses</strong>: educación (centros escolares con duración &gt;8 meses), deportiva, cultural, restauración/hostelería/comercio/transporte, eventos, industrial, alimentaria, sanitaria, administración (con comunicación motivada a la Comisión paritaria).</li>
+    <li><strong>Tres días sin justificar la incorporación</strong> tras llamamiento en tiempo y forma → causa de dimisión (con excepciones por pluriempleo y estudios académicos justificados).</li>
+  </ul>
 
   <h2>Suelo absoluto: el SMI</h2>
   <p>Con independencia de lo que fije la tabla del convenio, <strong>ninguna empresa puede pagar por debajo del Salario Mínimo Interprofesional vigente</strong>. Aunque la tabla 2026 de Barcelona ya está por encima del SMI en todas las categorías, si por cualquier circunstancia tu nómina cayera por debajo, se aplica el SMI como suelo. <a href="/salario-minimo-interprofesional-2026.html">Consulta el SMI 2026</a>.</p>
@@ -306,17 +604,37 @@
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
-  <h2>Subrogación en contratas de Barcelona</h2>
-  <p>La subrogación de personal la regula el <a href="/convenio-limpieza-edificios-locales.html">Convenio sectorial estatal</a>, por lo que aplica en Barcelona con las mismas condiciones que en el resto de España:</p>
-  <ul class="check-list">
-    <li><strong>Personal en activo:</strong> antigüedad mínima de 4 meses en la contrata.</li>
-    <li><strong>Con reserva de puesto</strong> (baja, excedencia): antigüedad mínima de 6 meses.</li>
-    <li>La empresa saliente debe entregar a la entrante la documentación completa (Anexo II del convenio estatal).</li>
-    <li>No aplica en "primera limpieza" sin contrato de mantenimiento.</li>
-  </ul>
-  <p>En Barcelona es muy habitual cuando cambian las adjudicatarias de servicios en <strong>hospitales y CAP del ICS y del Consorci Sanitari, colegios públicos y concertados, universidades públicas (UB, UAB, UPC, UPF), edificios municipales del Ajuntament, sedes corporativas del 22@ y grandes comunidades de propietarios</strong>. Si te subrogan, tus condiciones (antigüedad, salario, jornada, vacaciones) se conservan íntegras. Detalles sobre cómo actuar si no se cumple, en la <a href="/convenio-limpieza-edificios-locales.html">guía completa del pilar estatal</a>.</p>
+  <h2 id="comparativa">Barcelona vs otras provincias del corpus</h2>
+  <p>Cómo se sitúa el convenio de Limpieza de Catalunya frente al resto del corpus auditado en SalarioJusto. Los datos clave que diferencian:</p>
 
-  <h2>Si cobras menos del convenio: cómo reclamar en Catalunya</h2>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>Dimensión</th><th>Barcelona (Catalunya)</th><th>Madrid</th><th>Tarragona (mismo convenio)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Estado del convenio en 2026</td><td><strong>Vigente 2026-2030</strong> (5 años)</td><td>En ultraactividad (vencido 31/12/2025)</td><td>Vigente 2026-2030</td></tr>
+        <tr><td>Vacaciones (días naturales)</td><td><strong>31 días</strong></td><td>30 días</td><td>31 días</td></tr>
+        <tr><td>Jornada anual</td><td>1.792 h (desde 2025)</td><td>1.792 h (estatal)</td><td>1.792 h</td></tr>
+        <tr><td>Estructura salarial</td><td><strong>SB + Complemento 208,90 € (plan transición 2026-2030)</strong></td><td>SB + Plus convenio</td><td>Solo SB (sin Complemento)</td></tr>
+        <tr><td>Antigüedad</td><td><strong>Cuatrienios 4 %, tope 60 % a 25+ años</strong></td><td>Tablas propias</td><td>Trienios 5 % ilimitados</td></tr>
+        <tr><td>Plus Hospitalario</td><td><strong>20 % SB</strong> (Bcn/Girona)</td><td>—</td><td>10,5 % SB</td></tr>
+        <tr><td>Plus Aeroportuario (Aeropuerto del Prat)</td><td><strong>16 % SB</strong></td><td>—</td><td>—</td></tr>
+        <tr><td>Complemento Pluricentre</td><td><strong>2 % SB (≥3 centros)</strong> — único corpus</td><td>—</td><td>—</td></tr>
+        <tr><td>IT accidente con hospitalización</td><td>100 % desde día 1</td><td>Solo prestación SS</td><td>100 % SB+antig desde día 1</td></tr>
+        <tr><td>Subrogación antigüedad mínima</td><td><strong>4 meses</strong> en activo</td><td>4 meses (estatal)</td><td>4 meses</td></tr>
+        <tr><td>Horas extras nocturnas</td><td><strong>Prohibidas (Art. 40)</strong></td><td>—</td><td>—</td></tr>
+        <tr><td>Personal limpiador/a — total/mes 2026</td><td>1.216,86 €</td><td>~1.030 €/mes (categoría base)</td><td>1.216,86 € (sin Complemento)</td></tr>
+        <tr><td>Bolsa de maternidad</td><td><strong>322,73 €</strong></td><td>—</td><td>322,73 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>Particularidades únicas del convenio catalán:</strong> es el único del corpus auditado con plan de transición progresiva SB+Complemento 2026-2030, con plus pluricentre, con horas extras prohibidas en jornada nocturna, y con plus aeroportuario específico para el Aeropuerto del Prat. La duración de 5 años (2026-2030) es también más larga que el estándar de 4 años habitual.
+  </div>
+
+  <h2 id="cobras-menos">Si cobras menos del convenio: cómo reclamar en Catalunya</h2>
   <p>Tienes derecho a reclamar las diferencias impagadas. El plazo es de <strong>1 año por cada mensualidad</strong> desde que debió abonarse (art. 59.2 del Estatuto de los Trabajadores). Pasos en Catalunya:</p>
   <ul class="check-list">
     <li>Conserva <strong>todas tus nóminas</strong> del periodo a reclamar y tu contrato.</li>
@@ -354,21 +672,33 @@
     </div>
   </div>
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
 
   <h3>¿Cuál es el salario de una persona limpiadora en Barcelona en 2026?</h3>
-  <p>Según el Acuerdo parcial publicado en el DOGC 9613 del 26 de febrero de 2026, la categoría <strong>Personal limpiador/a y peón</strong> (Grupo IV Nivel 4) percibe <strong>un total mensual bruto de 1.216,86 €</strong>, del cual 1.007,97 € son salario base y 208,90 € Plus Convenio (en el periodo enero-agosto 2026). El total mensual se mantiene igual en septiembre-diciembre 2026, solo cambia la estructura interna entre base y plus.</p>
+  <p>Según el Acuerdo parcial publicado en el DOGC 9613 del 26 de febrero de 2026, la categoría <strong>Personal limpiador/a y peón</strong> (Grupo IV Nivel 4) percibe <strong>un total mensual bruto de 1.216,86 €</strong>, del cual 1.007,97 € son salario base y 208,90 € Complemento a Salario Base (en el periodo enero-agosto 2026). El total mensual se mantiene igual en septiembre-diciembre 2026, solo cambia la estructura interna entre base y Complemento.</p>
 
   <h3>¿Desde cuándo y hasta cuándo aplica este convenio?</h3>
-  <p>El Acuerdo parcial del 3 de febrero de 2026 renueva el convenio del sector de Limpieza de Edificios y Locales de Catalunya con vigencia del <strong>1 de enero de 2026 al 31 de diciembre de 2030</strong>. Supone un incremento del 3,25% sobre las tablas vigentes a 31 de diciembre de 2025, con efectos retroactivos al 1-ene-2026.</p>
+  <p>El Acuerdo parcial del 3 de febrero de 2026 renueva el convenio del sector de Limpieza de Edificios y Locales de Catalunya con vigencia del <strong>1 de enero de 2026 al 31 de diciembre de 2030</strong>. Cinco años de duración (uno más que el estándar habitual). Supone un incremento del 3,25 % sobre las tablas vigentes a 31 de diciembre de 2025, con efectos retroactivos al 1-ene-2026.</p>
 
-  <h3>¿Por qué hay dos tablas para 2026?</h3>
-  <p>La tabla de enero-agosto y la de septiembre-diciembre de 2026 tienen el <strong>mismo total mensual</strong> para cada categoría. Lo único que cambia es la estructura interna: a partir del 1 de septiembre se trasfieren 12 € del Plus Convenio al Salario Base. La cuantía total que percibe el trabajador o la trabajadora no varía.</p>
+  <h3>¿Qué es el Complemento a Salario Base?</h3>
+  <p>Es un concepto retributivo de naturaleza salarial creado el 1-ene-2026 (Art. 34 bis nuevo), de 208,90 €/mes en 2026, proporcional a la jornada, computable a efectos del SMI y abonado en <strong>15 pagas anuales</strong> (3 integradas en las extras). Aplica solo a Barcelona, Girona y Lleida (no a Tarragona). <strong>Se integra progresivamente al Salario Base entre 2026 y 2030</strong> (12 €/mes desde sep-2026, 50 €/mes adicionales cada 1-ene de 2027-2029, e integración total el 1-ene-2030). <strong>No es compensable ni absorbible</strong> con los incrementos pactados.</p>
 
   <h3>¿Este convenio vale también para Girona, Lleida y Tarragona?</h3>
-  <p>El convenio es autonómico y aplica en toda Catalunya, pero con anexos salariales específicos por provincia. <strong>Barcelona, Girona y Lleida comparten las mismas tablas y los mismos complementos</strong> (festivos, bolsa de maternidad). Tarragona tiene su propia tabla y sus propios pluses (dieta, kilometraje, horas extras). Lleida además tiene pluses sectoriales específicos (geriátrico, ambulatorio, hospitalario).</p>
+  <p>Sí, el convenio es <strong>autonómico</strong> (REGCON 79002415012005) y aplica en toda Catalunya, con anexos salariales específicos por provincia. <strong>Barcelona, Girona y Lleida comparten las mismas tablas y el Complemento</strong> (festivos, bolsa de maternidad). Tarragona tiene su propia tabla (sin Complemento) y sus propios pluses (dieta 13,28 €, dieta entera 38,78 €, kilometraje 0,29 €/km, hora extra 12,01 €). Lleida además tiene pluses sectoriales específicos (geriátrico 1,04 €, ambulatorio 1,04 €, hospitalario 1,91 € por día trabajado).</p>
 
-  <h3>¿Qué hago si mi empresa paga por debajo de la tabla?</h3>
+  <h3>¿Cuántas vacaciones tengo?</h3>
+  <p><strong>31 días naturales al año</strong> (Art. 61), uno más que el estándar de 30 del corpus. Periodo preferente entre el 1 de junio y el 30 de septiembre. Las vacaciones se retribuyen con salario base + Complemento + antigüedad + plus de nocturnidad si lo cobras habitualmente. Si tu IT coincide con vacaciones, se aplazan tras el alta. Además, Barcelona y Girona tienen <strong>2 días de asuntos propios</strong> + el <strong>Dissabte Sant</strong> como festivo retribuido.</p>
+
+  <h3>¿Cómo es la baja por enfermedad o accidente?</h3>
+  <p>El Art. 51 regula uno de los regímenes de IT más generosos del corpus. <strong>En accidente laboral o enfermedad profesional con hospitalización</strong>, la empresa complementa al 100 % desde el primer día. <strong>En enfermedad común con hospitalización</strong>, también al 100 % desde el día 1, hasta un máximo de 35 días (hospitalización + recuperación). <strong>En accidente sin hospitalización</strong>, 100 % desde el día 3 durante 68 días. En enfermedad común sin hospitalización: 50 % los 3 primeros días, máximo 4 días/año.</p>
+
+  <h3>¿Tengo derecho a antigüedad?</h3>
+  <p>Sí (Art. 39). En Barcelona y Girona la antigüedad se reconoce como <strong>cuatrienios al 4 % sobre el salario base</strong> (personas ingresadas a partir del 1-ene-1997). Quienes acumulaban trienios al 5 % antes del 1-jun-1998 los conservan y se suman a los nuevos cuatrienios. Tope acumulado: 10 % a los 5 años, 25 % a los 15 años, 40 % a los 20 años, <strong>60 % a los 25 años o más</strong>. En Tarragona son trienios al 5 % sin tope. En Lleida la escala está congelada desde el 31-dic-2000 (quienes ingresaron después no generan derechos por antigüedad).</p>
+
+  <h3>¿Existe subrogación si mi empresa pierde la contrata?</h3>
+  <p>Sí (Art. 69). Se subrogan: personas en activo con <strong>4 meses de antigüedad mínima</strong> en la contrata (sea cual sea su contrato), personas con reserva de puesto (IT, excedencia, maternidad…) que cumplan el mismo plazo, sustitutos del personal con reserva, y nuevos ingresos por ampliación o vacante definitiva en los últimos 4 meses. <strong>No aplica</strong> a socios cooperativistas no-trabajadores, autónomos, ni a primeras limpiezas sin contrato de mantenimiento. La empresa saliente debe entregar la documentación en 5-15 días naturales.</p>
+
+  <h3>¿Y si voy a cobrar por debajo de la tabla?</h3>
   <p>Puedes reclamar las diferencias salariales. El plazo es de 1 año por cada mensualidad impagada (art. 59.2 ET). Presentar papeleta de conciliación en <a href="https://conciliacions.gencat.cat" target="_blank" rel="noopener">conciliacions.gencat.cat</a> es gratuito e interrumpe la prescripción. CCOO del Hàbitat y FeSMC-UGT Catalunya ofrecen asesoramiento gratuito a personas afiliadas.</p>
 
   <h2>Fuentes oficiales verificadas</h2>
@@ -379,6 +709,69 @@
     <li><strong>BOE-A-2013-5424</strong> — I Convenio colectivo sectorial estatal de limpieza de edificios y locales (marco regulador de la subrogación y jornada). <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2013-5424" target="_blank" rel="noopener">Ver publicación</a>.</li>
     <li><strong>BOE-A-2026-2705</strong> — Adenda LGTBI+ del convenio sectorial estatal (aplica también a Catalunya). <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-2705" target="_blank" rel="noopener">Ver adenda</a>.</li>
     <li><strong>REGCON</strong> — Registro estatal de convenios del Ministerio de Trabajo. Código: 79002415012005. <a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener">Acceder</a>.</li>
+  </ul>
+
+  <h2 id="marco-legal">Marco legal y partes firmantes</h2>
+
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Dato</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr><td>Nombre oficial</td><td>Convenio Colectivo del Sector de la Limpieza de Edificios y Locales de Catalunya</td></tr>
+        <tr><td>Código de convenio</td><td>79002415012005</td></tr>
+        <tr><td>Publicación original (2022-2025)</td><td>Resolución EMT/1729/2023, DOGC 8921 del 23-mayo-2023</td></tr>
+        <tr><td>Acuerdo parcial 2026-2030</td><td>Resolución EMT/427/2026, DOGC 9613 del 26-febrero-2026</td></tr>
+        <tr><td>Corrección de erratas</td><td>DOGC 9635 del 30-marzo-2026 (rectifica denominación)</td></tr>
+        <tr><td>Vigencia actual</td><td>1 enero 2026 – 31 diciembre 2030 (5 años)</td></tr>
+        <tr><td>Ámbito territorial</td><td>Comunidad autónoma de Catalunya (Barcelona, Girona, Lleida, Tarragona)</td></tr>
+        <tr><td>Incrementos pactados</td><td>+3,25 % en 2026 · 2027-2030 pendiente de negociación</td></tr>
+        <tr><td>Convenio estatal supletorio</td><td>I Convenio Sectorial de Limpieza de Edificios y Locales (BOE-A-2013-5424) + adenda LGTBI+ (BOE-A-2026-2705)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Partes firmantes del convenio 2022-2025</h3>
+  <ul class="check-list">
+    <li><strong>Patronales:</strong> Associació Catalana d'Empreses de Neteja (<strong>ASCEN</strong>) · Asociación Profesional de Empresas de Limpieza (<strong>ASPEL</strong>)</li>
+    <li><strong>Sindicatos:</strong> Federació de l'Hàbitat de Comissions Obreres de Catalunya (<strong>CCOO de l'Hàbitat</strong>) · UGT de Catalunya – Federació de Serveis, Mobilitat i Consum (<strong>FeSMC-UGT</strong>)</li>
+    <li><strong>Acuerdo parcial 2026-2030:</strong> firmaron ASCEN, ASPEL y FeSMC-UGT. <strong>CCOO del Hàbitat dejó constancia de su desacuerdo y no firmó.</strong> Esto no afecta a la validez del Acuerdo.</li>
+  </ul>
+
+  <h3>Comisión paritaria (Art. 11)</h3>
+  <ul class="check-list">
+    <li><strong>Composición:</strong> 5 vocales empresariales + 5 sindicales (asesores con voz pero sin voto).</li>
+    <li><strong>Sede:</strong> ASCEN, C/ Biscaia 441-443, entresòl, 08027 Barcelona · ascen@ascen.net</li>
+    <li><strong>Reuniones:</strong> ordinarias trimestrales · extraordinarias en máximo 7 días tras la solicitud.</li>
+    <li><strong>Conflictos:</strong> resolución por mayoría · vía extrajudicial obligatoria ante el Tribunal Laboral de Catalunya (TLC).</li>
+  </ul>
+
+  <h3>Régimen disciplinario (Arts. 72-75)</h3>
+  <p>El convenio regula su propio régimen disciplinario (no remite al estatal). Las faltas se clasifican en leves, graves y muy graves.</p>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead><tr><th>Tipo</th><th>Sanción máxima</th><th>Prescripción</th></tr></thead>
+      <tbody>
+        <tr><td>Leves</td><td>Amonestación escrita o suspensión 2 días</td><td>10 días</td></tr>
+        <tr><td>Graves</td><td>Suspensión de 3 a 15 días</td><td>20 días</td></tr>
+        <tr><td>Muy graves</td><td>Suspensión 16-60 días o <strong>despido</strong></td><td>60 días (tope 6 meses)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--ink-lighter);">El <strong>acoso laboral, sexual, moral o psicológico</strong> es falta muy grave (Art. 72). En estos casos no se aplica el grado mínimo de la sanción cuando hay prevalencia de la posición jerárquica de la persona agresora. La audiencia previa al delegado sindical o a la representación es obligatoria en sanciones graves/muy graves a representantes — su incumplimiento provoca la nulidad de la sanción (Art. 74).</p>
+
+  <h3>Particularidades únicas del convenio catalán</h3>
+  <ul class="check-list">
+    <li><strong>Estructura SB+Complemento con plan transición 2026-2030</strong>: única en el corpus de convenios auditados. El Complemento (208,90 €) se integra progresivamente al SB hasta su supresión en 2030.</li>
+    <li><strong>Complemento Pluricentre 2 % SB</strong> (Art. 43): reconoce el desgaste de quien hace jornada habitual en 3 o más centros — único en el corpus.</li>
+    <li><strong>Plus Hospitalario 20 % SB</strong> (Art. 45): para personal de limpieza en centros con internamiento y quirófano.</li>
+    <li><strong>Plus Aeroportuario 16 % SB</strong> (Art. 48): exclusivo del Aeropuerto del Prat de Llobregat.</li>
+    <li><strong>Horas extras prohibidas</strong> en jornada nocturna y para personas menores de 18 años (Art. 40).</li>
+    <li><strong>Trabajar día de descanso compensatorio: +140 %</strong> sobre todos los conceptos retributivos (Art. 42, Bcn/Girona/Tarragona).</li>
+    <li><strong>31 días naturales de vacaciones</strong> + 2 días asuntos propios + Dissabte Sant festivo (Bcn/Girona): más generoso que el estándar de 30 días.</li>
+    <li><strong>Vigencia de 5 años</strong> (2026-2030): el plazo más largo del corpus auditado.</li>
+    <li><strong>15 pagas anuales equivalentes</strong> (3 pagas extras de julio/Navidad/marzo, cada una de 30 días de SB+antigüedad+Complemento).</li>
+    <li><strong>Seguro accidentes 7.500 €</strong> obligatorio (muerte o invalidez por accidente laboral, in itinere incluido).</li>
+    <li><strong>Adhesión al Tribunal Laboral de Catalunya (TLC)</strong> para conflictos extrajudiciales (Art. 12).</li>
   </ul>
 
   <div class="related">

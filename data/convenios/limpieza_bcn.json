@@ -1,0 +1,187 @@
+{
+  "nombre": "Limpieza de Edificios y Locales — Provincia de Barcelona (Convenio autonómico Catalunya)",
+  "bop": "DOGC 9613, 26/02/2026 (Acuerdo parcial 2026-2030) · Texto íntegro 2022-2025 en DOGC 8921, 23/05/2023 · Corrección de erratas DOGC 9635, 30/03/2026",
+  "codigo": "79002415012005",
+  "skipHtmlGeneration": true,
+  "vigencia": "1 enero 2026 – 31 diciembre 2030 (5 años, Acuerdo parcial)",
+  "pagas": 15,
+  "jornadaAnual": 1792,
+  "urlBop": "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1037935&type=01&language=ca_ES",
+  "notaEditorial": "Convenio autonómico de Catalunya renovado para cinco años con el Acuerdo parcial 2026-2030 publicado en DOGC 9613 (26/02/2026), suscrito por ASCEN, ASPEL y FeSMC-UGT. CCOO del Hàbitat no firmó por desacuerdo. Incremento del <strong>+3,25 %</strong> sobre las tablas vigentes a 31-dic-2025, con efectos retroactivos al 1-ene-2026. Estructura salarial única en el corpus: Salario Base + Complemento a Salario Base (208,90 €/mes en 2026), con plan de transición progresiva 2026-2030 que va integrando el Complemento al Salario Base (12 € en sep-2026, 50 € adicionales cada 1-ene de 2027 a 2029, integración total en 2030). 15 pagas equivalentes: 12 mensualidades + 3 pagas extras (julio, Navidad, marzo), cada una de 30 días de Salario Base + antigüedad + Complemento. Jornada anual 1.792 h desde 1-ene-2025 (8 horas menos que las 1.800 previas). 31 días naturales de vacaciones (uno más que el estándar). Antigüedad Bcn/Girona: cuatrienios al 4 % sobre Salario Base con tope acumulado del 60 % a 25 años o más. Pluses específicos Barcelona/Girona: festivo diurno 57,20 €, festivo nocturno 62,18 €, festivo especial 15,95 €, bolsa maternidad 322,73 €, retribución 41 bis fines de semana 20 €. Pluses sectoriales únicos: hospitalario 20 % SB (centros con internamiento y quirófano), aeroportuario 16 % SB (Aeropuerto del Prat), pluricentre 2 % SB (3 o más centros — único en el corpus), toxicidad/peligrosidad 20 % SB. Horas extras +75 % sobre hora ordinaria, máximo 80/año, prohibidas en nocturna y para menores de 18 años. IT muy generosa: 100 % desde día 1 en accidente laboral o enfermedad común con hospitalización (máx. 35 días), 100 % desde día 3 hasta los 68 siguientes en accidente sin hospitalización. Seguro accidentes obligatorio de 7.500 € por muerte o invalidez absoluta/gran invalidez por accidente laboral (in itinere incluido). Subrogación con 4 meses de antigüedad mínima. Comisión paritaria con sede en ASCEN, C/ Biscaia 441-443 entresòl, Barcelona. Convenio estatal supletorio: BOE-A-2013-5424 + adenda LGTBI+ BOE-A-2026-2705. Adhesión al Tribunal Laboral de Catalunya (TLC) para conflictos extrajudiciales. Las categorías están organizadas en cuatro grupos profesionales: Grupo I (directivo y titulado), Grupo II (administrativo), Grupo III (mandos intermedios) y Grupo IV (operario). 17 categorías totales con tabla salarial común a Barcelona, Girona y Lleida (el Complemento solo aplica a estas tres provincias, no a Tarragona).",
+  "subtablas": {
+    "I": "Grupo I — Personal directivo y titulado",
+    "II": "Grupo II — Personal administrativo",
+    "III": "Grupo III — Mandos intermedios",
+    "IV": "Grupo IV — Personal operario"
+  },
+  "grupos": [
+    {
+      "id": "I-1",
+      "subtabla": "I",
+      "nombre": "Dirección",
+      "puestos": [
+        "Dirección",
+        "Dirección comercial",
+        "Dirección administrativa",
+        "Jefe/a de compras",
+        "Jefe/a de servicio"
+      ],
+      "salario": {
+        "2026": { "mes": 1894.22, "sba": 28413.30, "sb": 1685.33, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "I-2",
+      "subtabla": "I",
+      "nombre": "Personal titulado de grado superior",
+      "puestos": ["Personal titulado de grado superior"],
+      "salario": {
+        "2026": { "mes": 1566.72, "sba": 23500.80, "sb": 1357.82, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "I-3",
+      "subtabla": "I",
+      "nombre": "Personal titulado de grado medio",
+      "puestos": ["Personal titulado de grado medio"],
+      "salario": {
+        "2026": { "mes": 1519.96, "sba": 22799.40, "sb": 1311.07, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "I-4",
+      "subtabla": "I",
+      "nombre": "Personal titulado laboral o profesional",
+      "puestos": ["Personal titulado laboral o profesional (Cicle Formatiu Grau Mitjà o Superior)"],
+      "salario": {
+        "2026": { "mes": 1360.91, "sba": 20413.65, "sb": 1152.01, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "II-1",
+      "subtabla": "II",
+      "nombre": "Jefe/a administrativo/a (1ª y 2ª)",
+      "puestos": ["Jefe/a administrativo 1ª", "Jefe/a administrativo 2ª"],
+      "salario": {
+        "2026": { "mes": 1519.96, "sba": 22799.40, "sb": 1311.07, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "II-2",
+      "subtabla": "II",
+      "nombre": "Personal oficial administrativo/a (1ª y 2ª)",
+      "puestos": ["Personal oficial 1ª administrativo", "Personal oficial 2ª administrativo"],
+      "salario": {
+        "2026": { "mes": 1360.91, "sba": 20413.65, "sb": 1152.01, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "II-3",
+      "subtabla": "II",
+      "nombre": "Personal auxiliar administrativo",
+      "puestos": ["Personal auxiliar administrativo"],
+      "salario": {
+        "2026": { "mes": 1221.87, "sba": 18328.05, "sb": 1012.98, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "II-4",
+      "subtabla": "II",
+      "nombre": "Telefonista",
+      "puestos": ["Telefonista"],
+      "salario": {
+        "2026": { "mes": 1211.81, "sba": 18177.15, "sb": 1002.92, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "III-1",
+      "subtabla": "III",
+      "nombre": "Personal supervisor/a o encargado/a general",
+      "puestos": ["Personal supervisor/a o encargado/a general"],
+      "salario": {
+        "2026": { "mes": 1494.02, "sba": 22410.30, "sb": 1285.12, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "III-2",
+      "subtabla": "III",
+      "nombre": "Personal supervisor/a o encargado/a de zona",
+      "puestos": ["Personal supervisor/a o encargado/a de zona"],
+      "salario": {
+        "2026": { "mes": 1447.26, "sba": 21708.90, "sb": 1238.36, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "III-3",
+      "subtabla": "III",
+      "nombre": "Personal supervisor/a o encargado/a de sector",
+      "puestos": ["Personal supervisor/a o encargado/a de sector"],
+      "salario": {
+        "2026": { "mes": 1400.39, "sba": 21005.85, "sb": 1191.49, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "III-4",
+      "subtabla": "III",
+      "nombre": "Personal encargado/a de edificio",
+      "puestos": ["Personal encargado/a de edificio"],
+      "salario": {
+        "2026": { "mes": 1322.70, "sba": 19840.50, "sb": 1113.81, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "III-5",
+      "subtabla": "III",
+      "nombre": "Responsable de equipo",
+      "puestos": ["Responsable de equipo (control y supervisión de equipo de 3-9 personas)"],
+      "salario": {
+        "2026": { "mes": 1280.12, "sba": 19201.80, "sb": 1071.23, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "IV-1",
+      "subtabla": "IV",
+      "nombre": "Especialista y oficial/a",
+      "puestos": ["Especialista", "Oficial/a"],
+      "salario": {
+        "2026": { "mes": 1265.89, "sba": 18988.35, "sb": 1056.99, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "IV-2",
+      "subtabla": "IV",
+      "nombre": "Peón especializado y ayudante",
+      "puestos": ["Peón especializado", "Ayudante"],
+      "salario": {
+        "2026": { "mes": 1237.47, "sba": 18562.05, "sb": 1028.58, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "IV-3",
+      "subtabla": "IV",
+      "nombre": "Personal conductor/a-limpiador/a",
+      "puestos": ["Personal conductor/a-limpiador/a (con carnet de conducir)"],
+      "salario": {
+        "2026": { "mes": 1308.54, "sba": 19628.10, "sb": 1099.64, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "IV-4",
+      "subtabla": "IV",
+      "nombre": "Personal limpiador/a y peón",
+      "puestos": ["Personal limpiador/a", "Peón"],
+      "salario": {
+        "2026": { "mes": 1216.86, "sba": 18252.90, "sb": 1007.97, "complemento": 208.90 }
+      }
+    },
+    {
+      "id": "IV-5",
+      "subtabla": "IV",
+      "nombre": "Personal subalterno (ordenanza, almacén, listero, vigilante)",
+      "puestos": ["Ordenanza", "Personal de almacén", "Personal listero", "Personal vigilante"],
+      "salario": {
+        "2026": { "mes": 1211.81, "sba": 18177.15, "sb": 1002.92, "complemento": 208.90 }
+      }
+    }
+  ]
+}
