@@ -1,0 +1,293 @@
+{
+  "nombre": "Limpieza de Edificios y Locales — Comunidad de Madrid",
+  "bop": "BOCM 24/09/2022 (Texto íntegro 2022-2024) · BOCM 03/03/2025 (Revisión salarial 2025) · Adenda LGTBI+ BOE-A-2026-2705",
+  "codigo": "28002585011981",
+  "skipHtmlGeneration": true,
+  "vigencia": "1 enero 2022 – 31 diciembre 2024 (en ultraactividad, tablas 2025 vigentes mientras se negocia 2026)",
+  "pagas": 15,
+  "jornadaAnual": 1739,
+  "jornadaAnualNocturna": 1650,
+  "urlBop": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/03/03/BOCM-20250303-21.PDF",
+  "urlBopIntegro": "https://www.bocm.es/boletin/CM_Orden_BOCM/2022/09/24/BOCM-20220924-1.PDF",
+  "notaEditorial": "Convenio autonómico de la Comunidad de Madrid en <strong>ultraactividad</strong>: el texto vigente fue suscrito para 2022-2024 (BOCM 24/09/2022), revisado salarialmente en 2025 con +2,80 % de IPC (BOCM 03/03/2025), y al no haber sido denunciado en plazo se mantiene aplicable mientras patronales (AELMA + ASPEL) y sindicatos (CCOO del Hábitat + FeSMC UGT Madrid) negocian el convenio 2026. Estructura salarial estándar de Limpieza: Salario Base + Plus Convenio. <strong>15 pagas equivalentes</strong>: 12 mensualidades + 3 pagas extras (Verano 10-jul, Navidad 15-dic, Beneficios 30-mar), cada una de 30 días de Salario Base + antigüedad + Plus Convenio (Art. 31). Jornada anual <strong>dual</strong>: 1.739 horas en jornada diurna · 1.650 horas en jornada nocturna (Art. 20.1) — 89 horas menos al año para quien trabaja en horario de noche, una particularidad distintiva del convenio madrileño. 31 días naturales de vacaciones (Art. 23). Antigüedad por <strong>trienios al 4 %</strong> sobre Salario Base (Art. 29.2) — diferente al patrón catalán de cuatrienios. Nocturnidad: 25 % sobre Salario Base entre 22:00 y 06:00 (Art. 29.5). Horas extras: +75 % de recargo, máximo 80/año (Art. 32). Plus Domingos y Festivos: 24,11 €/día trabajado (Art. 29.4). Plus Escuelas Infantiles y Guarderías: 30,89 €/mes (único en el corpus auditado) por prestar servicios en centros educativos infantiles. Plus Convenio: 7,27 €/día (Limpiador/a) o equivalente mensualizado según categoría. Subrogación regulada en Art. 24 con remisión al sectorial estatal BOE-A-2013-5424 (mínimo 4 meses de antigüedad para personal en activo, 6 meses con reserva). Especialmente frecuente en hospitales del SERMAS, colegios públicos de la Comunidad, universidades y comunidades de propietarios. Articulado autonómico no desarrolla expresamente IT, ropa de trabajo ni plus transporte — esos bloques se rigen por el sectorial estatal supletorio (BOE-A-2013-5424). Adhesión obligatoria a la adenda LGTBI+ del sectorial estatal (BOE-A-2026-2705, publicada 05/02/2026). 29 categorías totales organizadas en 6 grupos profesionales: Grupo 1 (directivos y técnicos), Grupo 2 (administrativos), Grupo 3 (mandos intermedios), Grupo 4 (subalternos), Grupo 5 (personal obrero), Grupo 6 (oficios varios). El Plus Convenio se aplica como complemento por día o por mes según la categoría.",
+  "subtablas": {
+    "1": "Grupo 1 — Directivos y técnicos",
+    "2": "Grupo 2 — Administrativos",
+    "3": "Grupo 3 — Mandos intermedios",
+    "4": "Grupo 4 — Subalternos",
+    "5": "Grupo 5 — Personal obrero",
+    "6": "Grupo 6 — Oficios varios"
+  },
+  "grupos": [
+    {
+      "id": "1-1",
+      "subtabla": "1",
+      "nombre": "Director/a",
+      "puestos": ["Director/a"],
+      "salario": {
+        "2025": { "mes": 1651.98, "plusMes": 251.26, "totalAnual": 28548.59 }
+      }
+    },
+    {
+      "id": "1-2",
+      "subtabla": "1",
+      "nombre": "Jefe/a de Departamento o Servicio",
+      "puestos": ["Jefe/a de Departamento o Servicio"],
+      "salario": {
+        "2025": { "mes": 1547.17, "plusMes": 246.40, "totalAnual": 26903.58 }
+      }
+    },
+    {
+      "id": "1-3",
+      "subtabla": "1",
+      "nombre": "Titulado/a Grado Superior",
+      "puestos": ["Titulado/a Grado Superior"],
+      "salario": {
+        "2025": { "mes": 1333.22, "plusMes": 236.82, "totalAnual": 23550.66 }
+      }
+    },
+    {
+      "id": "1-4",
+      "subtabla": "1",
+      "nombre": "Titulado/a Grado Medio",
+      "puestos": ["Titulado/a Grado Medio"],
+      "salario": {
+        "2025": { "mes": 1265.06, "plusMes": 233.77, "totalAnual": 22482.36 }
+      }
+    },
+    {
+      "id": "2-1",
+      "subtabla": "2",
+      "nombre": "Jefe/a Administrativo",
+      "puestos": ["Jefe/a Administrativo"],
+      "salario": {
+        "2025": { "mes": 1335.20, "plusMes": 236.89, "totalAnual": 23581.34 }
+      }
+    },
+    {
+      "id": "2-2",
+      "subtabla": "2",
+      "nombre": "Cajero/a",
+      "puestos": ["Cajero/a"],
+      "salario": {
+        "2025": { "mes": 1216.86, "plusMes": 231.58, "totalAnual": 21726.63 }
+      }
+    },
+    {
+      "id": "2-3",
+      "subtabla": "2",
+      "nombre": "Oficial 1ª Administrativo",
+      "puestos": ["Oficial 1ª Administrativo"],
+      "salario": {
+        "2025": { "mes": 1180.43, "plusMes": 229.96, "totalAnual": 21155.93 }
+      }
+    },
+    {
+      "id": "2-4",
+      "subtabla": "2",
+      "nombre": "Oficial 2ª Administrativo",
+      "puestos": ["Oficial 2ª Administrativo"],
+      "salario": {
+        "2025": { "mes": 1112.14, "plusMes": 226.84, "totalAnual": 20084.70 }
+      }
+    },
+    {
+      "id": "2-5",
+      "subtabla": "2",
+      "nombre": "Auxiliar Administrativo",
+      "puestos": ["Auxiliar Administrativo"],
+      "salario": {
+        "2025": { "mes": 1043.83, "plusMes": 223.81, "totalAnual": 19014.56 }
+      }
+    },
+    {
+      "id": "2-6",
+      "subtabla": "2",
+      "nombre": "Aspirante Administrativo",
+      "puestos": ["Aspirante Administrativo"],
+      "salario": {
+        "2025": { "mes": 797.13, "plusMes": 212.72, "totalAnual": 15147.84 }
+      }
+    },
+    {
+      "id": "2-7",
+      "subtabla": "2",
+      "nombre": "Telefonista",
+      "puestos": ["Telefonista"],
+      "salario": {
+        "2025": { "mes": 1023.45, "plusMes": 222.89, "totalAnual": 18695.05 }
+      }
+    },
+    {
+      "id": "2-8",
+      "subtabla": "2",
+      "nombre": "Cobrador/a",
+      "puestos": ["Cobrador/a"],
+      "salario": {
+        "2025": { "mes": 1023.45, "plusMes": 222.89, "totalAnual": 18695.05 }
+      }
+    },
+    {
+      "id": "3-1",
+      "subtabla": "3",
+      "nombre": "Encargado/a General",
+      "puestos": ["Encargado/a General"],
+      "salario": {
+        "2025": { "mes": 1333.22, "plusMes": 236.82, "totalAnual": 23550.66 }
+      }
+    },
+    {
+      "id": "3-2",
+      "subtabla": "3",
+      "nombre": "Supervisor/a o Encargado/a de Zona",
+      "puestos": ["Supervisor/a o Encargado/a de Zona"],
+      "salario": {
+        "2025": { "mes": 1269.39, "plusMes": 233.93, "totalAnual": 22549.90 }
+      }
+    },
+    {
+      "id": "3-3",
+      "subtabla": "3",
+      "nombre": "Supervisor/a o Encargado/a de Sector",
+      "puestos": ["Supervisor/a o Encargado/a de Sector"],
+      "salario": {
+        "2025": { "mes": 1216.86, "plusMes": 231.51, "totalAnual": 21725.55 }
+      }
+    },
+    {
+      "id": "3-4",
+      "subtabla": "3",
+      "nombre": "Encargado/a de Grupo o Edificio",
+      "puestos": ["Encargado/a de Grupo o Edificio"],
+      "salario": {
+        "2025": { "dia": 35.64, "plusDia": 7.43, "totalAnual": 19596.85 }
+      }
+    },
+    {
+      "id": "3-5",
+      "subtabla": "3",
+      "nombre": "Responsable de Equipo",
+      "puestos": ["Responsable de Equipo"],
+      "salario": {
+        "2025": { "dia": 32.20, "plusDia": 7.30, "totalAnual": 17972.50 }
+      }
+    },
+    {
+      "id": "4-1",
+      "subtabla": "4",
+      "nombre": "Personal subalterno (Ordenanza, Almacenero, Vistero, Vigilante)",
+      "puestos": ["Ordenanza", "Almacenero/a", "Vistero/a", "Vigilante"],
+      "salario": {
+        "2025": { "mes": 967.72, "plusMes": 220.36, "totalAnual": 17821.20 }
+      }
+    },
+    {
+      "id": "5-1",
+      "subtabla": "5",
+      "nombre": "Especialista",
+      "puestos": ["Especialista"],
+      "salario": {
+        "2025": { "dia": 35.64, "plusDia": 7.43, "totalAnual": 19596.85 }
+      }
+    },
+    {
+      "id": "5-2",
+      "subtabla": "5",
+      "nombre": "Peón Especialista o Cristalero Especialista",
+      "puestos": ["Peón Especialista", "Cristalero Especialista"],
+      "salario": {
+        "2025": { "dia": 32.20, "plusDia": 7.30, "totalAnual": 17972.50 }
+      }
+    },
+    {
+      "id": "5-3",
+      "subtabla": "5",
+      "nombre": "Conductor/a–Limpiador/a",
+      "puestos": ["Conductor/a–Limpiador/a"],
+      "salario": {
+        "2025": { "dia": 37.00, "plusDia": 7.47, "totalAnual": 20233.85 }
+      }
+    },
+    {
+      "id": "5-4",
+      "subtabla": "5",
+      "nombre": "Limpiador/a",
+      "puestos": ["Limpiador/a"],
+      "salario": {
+        "2025": { "dia": 31.82, "plusDia": 7.27, "totalAnual": 17785.95 }
+      }
+    },
+    {
+      "id": "6-1",
+      "subtabla": "6",
+      "nombre": "Oficial",
+      "puestos": ["Oficial"],
+      "salario": {
+        "2025": { "dia": 35.63, "plusDia": 7.42, "totalAnual": 19587.75 }
+      }
+    },
+    {
+      "id": "6-2",
+      "subtabla": "6",
+      "nombre": "Ayudante",
+      "puestos": ["Ayudante"],
+      "salario": {
+        "2025": { "dia": 32.20, "plusDia": 7.30, "totalAnual": 17972.50 }
+      }
+    },
+    {
+      "id": "6-3",
+      "subtabla": "6",
+      "nombre": "Peón",
+      "puestos": ["Peón"],
+      "salario": {
+        "2025": { "dia": 31.82, "plusDia": 7.27, "totalAnual": 17785.95 }
+      }
+    }
+  ],
+  "plusesEspeciales": {
+    "domingosFestivos": { "cuantia2025": 24.11, "unidad": "€/día trabajado", "articulo": "Art. 29.4" },
+    "guarderias": { "cuantia2025": 30.89, "unidad": "€/mes", "nota": "Único en el corpus auditado. Para personal que presta servicios en escuelas infantiles y guarderías." }
+  },
+  "antiguedad": {
+    "tipo": "trienios",
+    "porcentaje": 4,
+    "base": "Salario Base",
+    "articulo": "Art. 29.2"
+  },
+  "nocturnidad": {
+    "porcentaje": 25,
+    "base": "Salario Base",
+    "franja": "22:00 a 06:00",
+    "articulo": "Art. 29.5"
+  },
+  "horasExtra": {
+    "recargo": 75,
+    "maxAnual": 80,
+    "articulo": "Art. 32"
+  },
+  "vacaciones": { "dias": 31, "tipo": "naturales", "articulo": "Art. 23" },
+  "pagasExtras": {
+    "numero": 3,
+    "nombres": ["Verano", "Navidad", "Beneficios"],
+    "fechasAbono": ["10 de julio", "15 de diciembre", "30 de marzo"],
+    "cuantia": "30 días de Salario Base + antigüedad + Plus Convenio cada una",
+    "articulo": "Art. 31"
+  },
+  "subrogacion": {
+    "articulo": "Art. 24",
+    "remision": "Convenio sectorial estatal BOE-A-2013-5424",
+    "antiguedadMinima": "4 meses en activo, 6 meses con reserva de puesto"
+  },
+  "firmantes": {
+    "patronales": ["AELMA — Asociación de Empresarios de Limpieza de Madrid", "ASPEL — Asociación Profesional de Empresas de Limpieza"],
+    "sindicatos": ["CCOO del Hábitat de Madrid", "FeSMC UGT Madrid"]
+  },
+  "convenioEstatal": "BOE-A-2013-5424 (sectorial estatal) + Adenda LGTBI+ BOE-A-2026-2705",
+  "noRegulado": {
+    "incapacidadTemporal": "No desarrollada en el articulado autonómico. Se rige por el convenio sectorial estatal BOE-A-2013-5424.",
+    "ropaTrabajo": "Art. 13 menciona la obligación de cuidado del vestuario, sin cuantía propia. Se rige por el estatal.",
+    "plusTransporte": "No consta como plus propio del convenio autonómico.",
+    "comisionParitariaSede": "Art. 7 fija composición (4 vocales máx por parte), sin sede pública en BOCM."
+  }
+}
