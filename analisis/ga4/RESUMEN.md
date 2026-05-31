@@ -1,25 +1,25 @@
 # GA4 — Resumen automático
 
-_Generado: 2026-05-30 08:30 UTC · datos hasta 2026-05-29 · 5 días disponibles_
+_Generado: 2026-05-31 08:48 UTC · datos hasta 2026-05-30 · 6 días disponibles_
 
 ## Tendencia sitewide
 
-Sessions últimos 7 días: **715** · vs **0** los 7 días anteriores · **+0%**
+Sessions últimos 7 días: **789** · vs **0** los 7 días anteriores · **+0%**
 
-## Top 10 páginas por sesiones · 2026-05-29
+## Top 10 páginas por sesiones · 2026-05-30
 
 | Página | Sessions | Users | Views | Dwell (s) |
 |---|---:|---:|---:|---:|
-| `/convenio-limpieza-barcelona.html` | 15 | 15 | 9 | 101 |
-| `/convenio-limpieza-bizkaia.html` | 15 | 15 | 10 | 5 |
-| `/convenio-hosteleria-valencia.html` | 12 | 12 | 9 | 44 |
-| `/convenio-limpieza-zaragoza.html` | 11 | 11 | 10 | 172 |
-| `/convenio-hosteleria-madrid.html` | 10 | 8 | 7 | 22 |
-| `/convenio-limpieza-asturias.html` | 9 | 7 | 8 | 41 |
-| `/` | 8 | 8 | 6 | 71 |
-| `/convenio-limpieza-malaga.html` | 4 | 4 | 3 | 0 |
-| `/ley-transparencia-salarial-2026.html` | 4 | 4 | 2 | 256 |
-| `/convenio-hosteleria-sevilla.html` | 3 | 2 | 3 | 87 |
+| `/` | 12 | 12 | 9 | 92 |
+| `/convenio-hosteleria-valencia.html` | 10 | 10 | 8 | 40 |
+| `/convenio-limpieza-barcelona.html` | 7 | 7 | 6 | 62 |
+| `/convenio-hosteleria-madrid.html` | 5 | 5 | 5 | 53 |
+| `/convenio-hosteleria-girona.html` | 5 | 5 | 3 | 4 |
+| `/convenio-hosteleria-tarragona.html` | 4 | 3 | 4 | 775 |
+| `/convenio-limpieza-valencia.html` | 3 | 3 | 4 | 294 |
+| `/convenio-hosteleria-baleares.html` | 3 | 3 | 3 | 274 |
+| `/convenio-limpieza-asturias.html` | 3 | 3 | 3 | 0 |
+| `/convenio-hosteleria-barcelona.html` | 2 | 2 | 2 | 62 |
 
 ## Movers · semana actual vs anterior
 
@@ -27,27 +27,31 @@ Sessions últimos 7 días: **715** · vs **0** los 7 días anteriores · **+0%**
 
 | Página | Sessions esta semana |
 |---|---:|
-| `/convenio-hosteleria-valencia.html` | 66 |
-| `/` | 61 |
-| `/convenio-limpieza-zaragoza.html` | 50 |
-| `/convenio-limpieza-barcelona.html` | 48 |
-| `/convenio-limpieza-bizkaia.html` | 47 |
+| `/convenio-hosteleria-valencia.html` | 76 |
+| `/` | 73 |
+| `/convenio-limpieza-barcelona.html` | 55 |
+| `/convenio-limpieza-zaragoza.html` | 51 |
+| `/convenio-limpieza-bizkaia.html` | 48 |
 
-## Distribución por canal · 2026-05-29
+## Distribución por canal · 2026-05-30
 
 | Canal | Sessions | % |
 |---|---:|---:|
-| Organic Search | 85 | 69% |
-| Unassigned | 35 | 28% |
-| Direct | 4 | 3% |
+| Organic Search | 49 | 66% |
+| Unassigned | 19 | 26% |
+| Direct | 4 | 5% |
+| Paid Search | 1 | 1% |
+| Referral | 1 | 1% |
 
 ## ⚡ Anomalías DoD (>50% en páginas con ≥10 sessions)
 
 | Página | Último día | Día anterior | Δ% |
 |---|---:|---:|---:|
-| `/convenio-limpieza-bizkaia.html` | 15 | 8 | +88% |
-| `/convenio-limpieza-edificios-locales.html` | 2 | 13 | -85% |
-| `/` | 8 | 23 | -65% |
+| `/convenio-limpieza-bizkaia.html` | 1 | 15 | -93% |
+| `/convenio-limpieza-zaragoza.html` | 1 | 11 | -91% |
+| `/convenio-limpieza-barcelona.html` | 7 | 15 | -53% |
+| `/convenio-hosteleria-madrid.html` | 5 | 10 | -50% |
+| `/` | 12 | 8 | +50% |
 
 ---
 
