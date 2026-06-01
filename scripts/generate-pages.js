@@ -127,8 +127,7 @@ function footerHTML() {
     <a href="/convenios.html" style="color:#D9A06A;text-decoration:none;">Convenios</a> ·
     <a href="/guias.html" style="color:#D9A06A;text-decoration:none;">Guías</a> ·
     <a href="/sobre.html" style="color:#D9A06A;text-decoration:none;">Sobre</a> ·
-    <a href="/mapa-del-sitio.html" style="color:#D9A06A;text-decoration:none;">Mapa del sitio</a> ·
-    <a href="/en/" style="color:#D9A06A;text-decoration:none;">English</a>
+    <a href="/mapa-del-sitio.html" style="color:#D9A06A;text-decoration:none;">Mapa del sitio</a>
   </p>
   <p style="font-size:11px;color:rgba(255,255,255,0.35);line-height:1.5;margin-top:14px;">
     <a href="/privacidad.html" style="color:rgba(255,255,255,0.55);text-decoration:none;">Privacidad</a> ·
@@ -808,7 +807,6 @@ ${rows}
     <ul>
       <li><a href="/">← Volver a la calculadora</a></li>
       <li><a href="/guias.html">Guías para trabajadores</a></li>
-      <li><a href="/en/">English version</a></li>
     </ul>
   </div>
 
@@ -944,14 +942,6 @@ ${conveniosHTML}
     </ul>
   </div>
 
-  <div class="card">
-    <div class="card-title">Idiomas</div>
-    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
-      <li><a href="/">Español (principal)</a></li>
-      <li><a href="/en/">English version</a></li>
-    </ul>
-  </div>
-
   <div class="related">
     <h2 style="font-size:18px;">¿Buscas algo más?</h2>
     <ul>
@@ -972,8 +962,7 @@ ${footerHTML()}
 // ── Generar sitemap ────────────────────────────────────────────────
 function generateSitemap(pages, convenios = [], plantillas = [], plantillasHubUrl = null) {
   const existingPages = [
-    { url: 'https://salariojusto.es/', priority: '1.00', freq: 'weekly', hreflang: [{ lang: 'es', href: 'https://salariojusto.es/' }, { lang: 'en', href: 'https://salariojusto.es/en/' }] },
-    { url: 'https://salariojusto.es/en/', priority: '0.90', freq: 'weekly', hreflang: [{ lang: 'es', href: 'https://salariojusto.es/' }, { lang: 'en', href: 'https://salariojusto.es/en/' }] },
+    { url: 'https://salariojusto.es/', priority: '1.00', freq: 'weekly', hreflang: [{ lang: 'es', href: 'https://salariojusto.es/' }, { lang: 'x-default', href: 'https://salariojusto.es/' }] },
     { url: 'https://salariojusto.es/guias.html', priority: '0.90', freq: 'weekly' },
     { url: 'https://salariojusto.es/ley-transparencia-salarial-2026.html', priority: '0.85', freq: 'monthly' },
     { url: 'https://salariojusto.es/rangos-salariales-empresa-transparencia-2026.html', priority: '0.80', freq: 'monthly' },
