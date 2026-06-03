@@ -145,7 +145,7 @@
     <p>El cálculo del salario neto utiliza el <strong>algoritmo oficial del IRPF 2026 publicado por la Agencia Tributaria</strong>, basado en el Real Decreto 439/2007 (Reglamento del IRPF) actualizado con las novedades del Real Decreto-ley aplicable en 2026.</p>
     <p>El cálculo incluye:</p>
     <ul>
-      <li><strong>Tramos estatales y autonómicos.</strong> En las landings provinciales se aplica la escala autonómica de cada Comunidad (9 régimen común + Bizkaia foral). Norma citada en cada landing.</li>
+      <li><strong>Tramos estatales y autonómicos.</strong> La calculadora aplica la tarifa estatal del IRPF. Para los matices autonómicos (escalas de cada Comunidad de régimen común y los regímenes forales de Bizkaia, Gipuzkoa, Álava y Navarra), cada ficha de convenio cita la normativa autonómica vigente y advierte cuándo el régimen aplicable cambia el cálculo final.</li>
       <li><strong>Reducciones por situación familiar.</strong> Soltero/a sin descendientes a cargo, familia monoparental con un descendiente, casado/a con cónyuge sin ingresos.</li>
       <li><strong>Mínimos personales y familiares.</strong> Aplicados según la tabla del artículo 57-60 LIRPF.</li>
       <li><strong>Cotizaciones a la Seguridad Social.</strong> 7,56% (4,80% Contingencias Comunes + 1,55% Desempleo + 0,10% FOGASA + 1,11% Formación, vigentes en 2026).</li>
@@ -192,7 +192,7 @@
   <div class="card">
     <div class="card-title">Stack técnico</div>
     <p>HTML estático + JavaScript vanilla, sin frameworks. Fuentes Google Fonts (DM Sans + DM Serif Display). Hosting en Vercel. Análisis con Google Analytics 4 (sin cookies invasivas más allá del consentimiento estándar). Monetización con Google AdSense Auto Ads en formato no intrusivo.</p>
-    <p>Las páginas programáticas (168 landings de salario neto + 8 de convenios) se generan con scripts en Node.js a partir de fuentes de datos JSON verificadas.</p>
+    <p>Cobertura activa: <strong>más de 30 fichas de convenios provinciales y sectoriales</strong> (Hostelería, Limpieza, Construcción, Metal, Oficinas y Despachos), cada una construida artículo por artículo a partir del BOE, BOP o boletín autonómico correspondiente y verificada cifra a cifra contra el texto literal. La página de inicio incluye la calculadora de salario neto IRPF 2026 con escalas autonómicas. No hay landings programáticas (rechazamos la práctica anterior de combinatorias salario × provincia, que no añaden valor sobre la calculadora unificada).</p>
   </div>
 
   <div class="card">
