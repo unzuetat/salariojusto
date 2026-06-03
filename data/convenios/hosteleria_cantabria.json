@@ -1,0 +1,136 @@
+{
+  "nombre": "Hostelería — Comunidad Autónoma de Cantabria",
+  "bop": "BOC NÚM. 66, 4/04/2025 (tablas 2025 vigentes) · BOC NÚM. 204, 24/10/2022 (convenio íntegro)",
+  "codigo": "39000605011982",
+  "skipHtmlGeneration": true,
+  "vigencia": "1 enero 2022 – 31 diciembre 2025 (denuncia automática Art. 5 + tácita reconducción Art. 4 → vigente en 2026)",
+  "pagas": 15,
+  "jornadaAnual": 1766,
+  "urlBop": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=418295",
+  "notaEditorial": "Convenio vigente en 2026 por <strong>doble blindaje</strong>: el Art. 5 establece denuncia automática del convenio dos meses antes del vencimiento (ipso iure el 31 de octubre de 2025), y el Art. 4 dispone tácita reconducción <em>'en su totalidad hasta que entre en vigor un nuevo convenio'</em>. La combinación blinda al personal frente al decaimiento del Art. 86.3 ET. Singularidades del corpus: <strong>Cláusula de fidelidad Art. 24</strong> (3 mensualidades extra al cumplir 20 años en la empresa + 1 mensualidad por cada 3 años adicionales, por cese en jubilación voluntaria anticipada / IPA / Gran invalidez / despido colectivo / fallecimiento); <strong>Plus de Formación Art. 36 BIS</strong> (25 €/mes × 14 pagas = 350 €/año cuando la empresa no acredita planes formativos); <strong>Santa Marta (29 jul)</strong> como festivo retribuido del sector (Art. 17); <strong>32 días de vacaciones</strong> (Art. 16, +2 sobre el mínimo legal); <strong>Sistemática Camareras de Pisos</strong> con Documento de Control de Métodos de Trabajo consensuado obligatorio (Art. 29); <strong>IT enfermedad común al 100% Salario Convenio desde el 4º día</strong> con índice de ausencias <4% (Art. 28). Subsanación SMI 2025: las 7 categorías del Nivel 5 cobran 1.184 €/mes durante los primeros 6 meses (14 pagas = SMI exacto) y 1.156,68 €/mes a partir del 6º mes (15 pagas con paga octubre activada = 17.350,20 €/año, supera SMI). Acta de la Comisión Negociadora del 26 de marzo de 2025 firmada por UGT (Giráldez Camus, Basurto Gómez) y Asociación Empresarial (Lamadrid de Pablo, Fidalgo González, Gutiérrez Vian) por requerimiento de la Dirección General de Trabajo (Expediente 39/01/009/2025).",
+  "subtablas": {
+    "N1": "Nivel 1 — Jefatura de departamento (Grupo I)",
+    "N2": "Nivel 2 — Segunda jefatura + Encargados + Recepcionista (Grupos I-II)",
+    "N3": "Nivel 3 — Oficios cualificados (Grupos II-III)",
+    "N4": "Nivel 4 — Camarero/a + Barman/Sumiller + Ayte. Recepción (Grupos II-III)",
+    "N5": "Nivel 5 — Ayudantes y Auxiliares (Grupos III-IV)"
+  },
+  "grupos": [
+    {
+      "id": "N1",
+      "subtabla": "N1",
+      "nombre": "Nivel 1 — Jefatura de departamento",
+      "puestos": [
+        "Jefe/a de Recepción",
+        "Jefe/a de Administración",
+        "Jefe/a Comercial",
+        "Jefe/a de Catering",
+        "Jefe/a de Cocina",
+        "Jefe/a de Restaurante/Sala"
+      ],
+      "salario": {
+        "2025": { "mes": 1507.94, "sba": 22619.10 }
+      }
+    },
+    {
+      "id": "N2",
+      "subtabla": "N2",
+      "nombre": "Nivel 2 — Segunda jefatura + Encargados + Recepcionista",
+      "puestos": [
+        "Jefe/a de Recepción 2",
+        "Primer/a Conserje",
+        "2º Jefe/a de Cocina",
+        "Jefe/a de Operaciones Catering",
+        "2º Jefe/a de Restaurante/Sala",
+        "Recepcionista",
+        "Administrativo/a",
+        "Relaciones Públicas",
+        "Comercial",
+        "Jefe/a de Partida",
+        "Repostero/a",
+        "Encargado/a de Economato",
+        "Jefe/a de Sector",
+        "Jefe/a de Sala Catering",
+        "Encargado/a General",
+        "Encargado/a de Sección",
+        "Encargado/a Mantenimiento/Servicio"
+      ],
+      "salario": {
+        "2025": { "mes": 1383.41, "sba": 20751.15 }
+      }
+    },
+    {
+      "id": "N3",
+      "subtabla": "N3",
+      "nombre": "Nivel 3 — Oficios cualificados",
+      "puestos": [
+        "Conserje",
+        "Cocinero/a",
+        "Jefe/a Equipo / Supervisor Catering",
+        "Ayudante Administrativo/a",
+        "Telefonista",
+        "Conductor/a de Catering",
+        "Especialista Mantenimiento/Servicio"
+      ],
+      "salario": {
+        "2025": { "mes": 1260.06, "sba": 18900.90 }
+      }
+    },
+    {
+      "id": "N4",
+      "subtabla": "N4",
+      "nombre": "Nivel 4 — Camarero/a + Barman/Sumiller + Ayte. Recepción/Conserjería",
+      "puestos": [
+        "Camarero/a",
+        "Barman / Sumiller",
+        "Ayudante de Recepción / Conserjería"
+      ],
+      "salario": {
+        "2025": { "mes": 1209.55, "sba": 18143.25 }
+      }
+    },
+    {
+      "id": "N5",
+      "subtabla": "N5",
+      "nombre": "Nivel 5 — Ayudantes y Auxiliares (con subsanación SMI <6 meses)",
+      "puestos": [
+        "Ayudante / Auxiliar de Cocina",
+        "Ayudante / Auxiliar de Catering",
+        "Ayudante de Camarero/a",
+        "Camarero/a de Pisos",
+        "Aux. Recepción / Conserjería",
+        "Aux. Pisos / Limpieza",
+        "Aux. Mantenimiento / Servicios"
+      ],
+      "salario": {
+        "2025": { "mes": 1156.68, "mes_menos_6m": 1184.00, "sba": 17350.20, "sba_menos_6m": 16576.00 }
+      }
+    }
+  ],
+  "pluses": {
+    "antiguedad_3_anos": { "tipo": "porcentaje", "valor": 3, "articulo": "Art. 36" },
+    "antiguedad_6_anos": { "tipo": "porcentaje", "valor": 8, "articulo": "Art. 36" },
+    "nocturnidad_jornada_habitual": { "tipo": "fijo_mes", "valor": 76.36, "articulo": "Art. 13 + Anexo" },
+    "trabajo_despues_24h": { "tipo": "porcentaje_hora", "valor": 15, "articulo": "Art. 13" },
+    "trabajos_jornada_no_habitual": { "tipo": "fijo", "valor": 3.09, "articulo": "Anexo" },
+    "manutencion": { "tipo": "fijo_mes", "valor": 18.47, "articulo": "Art. 34" },
+    "horas_extras": { "tipo": "porcentaje_hora", "valor": 175, "articulo": "Art. 33" },
+    "festivo_no_dominical_solo_dinero": { "tipo": "porcentaje_dia", "valor": 175, "articulo": "Art. 23" },
+    "festivo_no_dominical_con_descanso": { "tipo": "porcentaje_dia", "valor": 75, "articulo": "Art. 23" },
+    "tiempo_parcial_corto": { "tipo": "porcentaje", "valor": 15, "articulo": "Art. 13" },
+    "plus_formacion": { "tipo": "fijo_mes_14_pagas", "valor": 25.00, "anual": 350.00, "articulo": "Art. 36 BIS" }
+  },
+  "vacaciones_dias": 32,
+  "festivo_sectorial": "Santa Marta (29 de julio)",
+  "fidelidad_art24": {
+    "antiguedad_minima": 20,
+    "mensualidades_base": 3,
+    "mensualidades_extra_por_cada": 3,
+    "causas": ["Jubilación voluntaria anterior a edad reglamentaria", "Incapacidad Permanente Absoluta", "Gran invalidez", "Despido colectivo por causas organizativas (no acumulable a indemnización legal)", "Fallecimiento"]
+  },
+  "it": {
+    "accidente_laboral": { "desde_dia": 1, "base": "Salario Real", "porcentaje": 100, "duracion_meses": null },
+    "hospitalizacion_quirurgica": { "desde_dia": 1, "base": "Salario Convenio", "porcentaje": 100, "duracion_meses": 12 },
+    "enfermedad_comun": { "desde_dia": 4, "base": "Salario Convenio", "porcentaje": 100, "duracion_meses": 12, "condicion_indice_ausencias_max": 0.04 }
+  }
+}
