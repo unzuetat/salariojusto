@@ -209,6 +209,7 @@
 <div class="article-hero">
   <div class="article-hero-inner">
     <div class="article-badge">Kit del trabajador · Directiva UE 2023/970</div>
+    <div class="article-badge" data-updated="2026-06-04" style="margin-bottom:20px;border-color:rgba(120,180,120,0.55);color:#a9d6a9;background:rgba(120,180,120,0.10);"><span style="color:#7ed47e;">●</span> Actualizado <span class="badge-actualizado-texto">hace pocos días</span></div>
     <h1>Plantillas para ejercer tus derechos de transparencia salarial</h1>
     <p class="lede">Modelos de carta y solicitud listos para personalizar y enviar. Cada plantilla cubre un escenario concreto previsto por la Directiva UE 2023/970 (en vigor el 7 de junio de 2026) y la normativa laboral española en vigor.</p>
     <div class="article-meta">
@@ -383,5 +384,29 @@
   </p>
 </footer>
 
+<script>
+/* Badge "Actualizado hace X" — texto relativo calculado desde data-updated */
+(function(){
+  var hoy = new Date();
+  var updNodos = document.querySelectorAll('[data-updated]');
+  for (var u = 0; u < updNodos.length; u++) {
+    var p = updNodos[u].getAttribute('data-updated').split('-');
+    if (p.length !== 3) continue;
+    var f = new Date(parseInt(p[0],10), parseInt(p[1],10)-1, parseInt(p[2],10));
+    var d = Math.floor((hoy - f) / 86400000);
+    var s = updNodos[u].querySelector('.badge-actualizado-texto');
+    if (!s) continue;
+    var t;
+    if (d <= 0) t = 'hoy';
+    else if (d === 1) t = 'ayer';
+    else if (d < 7) t = 'hace ' + d + ' días';
+    else if (d < 14) t = 'hace 1 semana';
+    else if (d < 30) t = 'hace ' + Math.floor(d/7) + ' semanas';
+    else if (d < 60) t = 'hace 1 mes';
+    else t = 'hace ' + Math.floor(d/30) + ' meses';
+    s.textContent = t;
+  }
+})();
+</script>
 </body>
 </html>
