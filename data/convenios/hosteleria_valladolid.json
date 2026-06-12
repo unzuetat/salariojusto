@@ -1,0 +1,144 @@
+{
+  "nombre": "Hostelería y Alojamientos Turísticos — Valladolid",
+  "bop": "BOP Valladolid núm. 247, 28/12/2021 (Resolución de 14/12/2021 de la Oficina Territorial de Trabajo de la Junta de Castilla y León) — convenio íntegro con Anexo III (tablas 2018-2026)",
+  "codigo": "47000235011982",
+  "skipHtmlGeneration": true,
+  "vigencia": "1 enero 2018 – 31 diciembre 2026 (denuncia automática Art. 3 ipso iure el 31/12/2026 + ultraactividad pactada: tablas 2026 se mantienen sin actualización hasta nuevo convenio)",
+  "pagas": 14,
+  "jornadaAnual": 1782,
+  "urlBop": "https://bop.sede.diputaciondevalladolid.es/boletines/2021/diciembre/28",
+  "notaEditorial": "Convenio de duración excepcional de <strong>9 años (2018-2026)</strong>. Historia editorial distintiva: <strong>4 años con tablas congeladas</strong> (2018-2021, aplicando las cifras vigentes en 2017) + <strong>prima de demora 600 € no consolidable</strong> (Disposición Transitoria 4ª, pago tope 30/09/2023, proporcional a antigüedad 2018-2021) + <strong>sprint de equiparación progresiva 2022-2026</strong> hasta tabla única para todo el sector en 2026 (Art. 9: Grupo I +1,6% anual, Grupos II y III subida hasta equiparar, Grupo IV eliminado en 2023 al absorberse en III). <strong>Sistemática Camareras/os de Pisos Art. 19</strong>: plus de intensidad de 291,18 € integrado al salario base desde 1-ene-2022 + subida lineal 2,84% anual Grupo I hasta equiparar al Nivel Salarial IV en 2026 (+11,84% acumulado 2022-2026 vs +6,55% del resto). <strong>Promoción automática Art. 8</strong> (única en el sector): 5 años como ayudante/auxiliar → ascenso automático al nivel salarial superior; 3 años como Auxiliar de Pisos → paso automático a Camarero/a de Pisos. <strong>Doble blindaje de vigencia</strong>: Art. 3 fija denuncia automática al fin de plazo SIN necesidad de comunicación, y mantiene aplicables las tablas 2026 sin actualización hasta nuevo convenio. <strong>Nivel V-A de ingreso</strong> (Art. 49): transitorio máximo 12 meses para personal sin certificación de cualificación (1.079,58 €/mes en 2026). Artículos modernos: <strong>Desconexión digital Art. 47</strong>, <strong>Registro de jornada Art. 47 bis</strong> (copia a petición con preaviso 5 días), <strong>Externalización Art. 48</strong> (obligatoria aplicación del convenio sectorial). <strong>Subrogación Anexo I solo en restauración colectiva</strong> (concesiones/contratas de catering, comedores escolares, hospitales): NO se aplica a hoteles, bares, restaurantes ni cafeterías independientes. <strong>Plus transporte Art. 16 (0,71 €/día)</strong>: derecho adquirido residual solo para personal anterior a septiembre de 1982. Patronal firmante (Art. 2): APEHVA (Asociación Provincial de Empresarios de la Hostelería de Valladolid) y Asociación Provincial de Empresarios de Alojamientos Turísticos de Valladolid (Asociación de Hoteles de Valladolid). Parte social: CCOO y UGT.",
+  "subtablas": {
+    "NS-I": "Nivel Salarial I — Jefaturas plenas",
+    "NS-II": "Nivel Salarial II — Segundas jefaturas",
+    "NS-III": "Nivel Salarial III — Cualificados con mando (técnicos y jefes de sector)",
+    "NS-IV": "Nivel Salarial IV — Cualificados ejecutivos (incluye Camarero/a de Pisos en 2026)",
+    "NS-V": "Nivel Salarial V — Auxiliares",
+    "NS-V-A": "Nivel Salarial V-A — Personal de ingreso sin experiencia (máx. 12 meses, Art. 49)",
+    "NS-VI": "Nivel Salarial VI — Pinches, aprendices y botones mayores de 18 años"
+  },
+  "grupos": [
+    {
+      "id": "NS-I",
+      "subtabla": "NS-I",
+      "nombre": "Nivel Salarial I — Jefaturas plenas (Grupo Profesional I)",
+      "puestos": [
+        "Jefe/a de Recepción",
+        "Jefe/a de Administración",
+        "Jefe/a Comercial",
+        "Primer/a Conserje",
+        "Jefe/a de Cocina",
+        "Jefe/a de Restaurante o Sala",
+        "Gerente de Centro",
+        "Encargado/a General (Pisos y Limpieza)",
+        "Jefe/a de Servicio (Mantenimiento)",
+        "Responsable de Servicio (Servicios Complementarios)"
+      ],
+      "salario": {
+        "2026": { "mes": 1416.06, "sba": 19824.84 }
+      }
+    },
+    {
+      "id": "NS-II",
+      "subtabla": "NS-II",
+      "nombre": "Nivel Salarial II — Segundas jefaturas (Grupo Profesional I)",
+      "puestos": [
+        "2º Jefe/a de Recepción",
+        "2º Jefe/a de Cocina",
+        "2º Jefe/a de Restaurante o Sala",
+        "Encargado/a de Mantenimiento y Servicios Técnicos / Auxiliares",
+        "Encargado/a de Sección (Mantenimiento)",
+        "Técnico/a de Servicio (Dietista, Fisioterapeuta y otros titulados de la Salud)"
+      ],
+      "salario": {
+        "2026": { "mes": 1322.96, "sba": 18521.44 }
+      }
+    },
+    {
+      "id": "NS-III",
+      "subtabla": "NS-III",
+      "nombre": "Nivel Salarial III — Cualificados con mando (Grupo Profesional II)",
+      "puestos": [
+        "Comercial",
+        "Relaciones Públicas",
+        "Técnico/a de Prevención de Riesgos Laborales",
+        "Jefe/a de Partida (Cocina)",
+        "Jefe/a de Sector (Sala)",
+        "Encargado/a de Sección (Pisos y Limpieza)",
+        "Especialista de Servicios (Socorrista, primeros auxilios, masajista, quiromasajista, disc-jockey, especialista de atención al cliente)"
+      ],
+      "salario": {
+        "2026": { "mes": 1276.03, "sba": 17864.42 }
+      }
+    },
+    {
+      "id": "NS-IV",
+      "subtabla": "NS-IV",
+      "nombre": "Nivel Salarial IV — Cualificados ejecutivos (Grupo Profesional II)",
+      "puestos": [
+        "Administrativo/a",
+        "Conserje",
+        "Recepcionista",
+        "Telefonista",
+        "Cocinero/a",
+        "Repostero/a",
+        "Encargado/a de Economato y Bodega",
+        "Camarero/a",
+        "Barman / Barwoman",
+        "Sumiller/a",
+        "Camarero/a de Pisos (equiparación completa desde 2026)",
+        "Especialista de Mantenimiento y Servicios Auxiliares",
+        "Auxiliar de Servicio (atención al cliente, auxiliar de balneario o piscina)"
+      ],
+      "salario": {
+        "2026": { "mes": 1206.26, "sba": 16887.64 }
+      }
+    },
+    {
+      "id": "NS-V",
+      "subtabla": "NS-V",
+      "nombre": "Nivel Salarial V — Auxiliares (Grupo Profesional III)",
+      "puestos": [
+        "Ayudante/a de Recepción y Conserjería",
+        "Ayudante/a Administrativo",
+        "Auxiliar de Recepción / Conserjería",
+        "Ayudante/a de Economato",
+        "Ayudante/a de Cocina",
+        "Auxiliar de Cocina",
+        "Ayudante/a de Camarero",
+        "Asistente/a de Restauración Moderna",
+        "Riders (reparto de comidas y bebidas, incluidas plataformas digitales)",
+        "Auxiliar de Pisos y Limpieza (3 años → ascenso automático a Camarero/a de Pisos, Art. 8)",
+        "Auxiliar de Mantenimiento y Servicios Auxiliares",
+        "Monitor/a o Cuidador/a"
+      ],
+      "salario": {
+        "2026": { "mes": 1112.96, "sba": 15581.44 }
+      }
+    },
+    {
+      "id": "NS-V-A",
+      "subtabla": "NS-V-A",
+      "nombre": "Nivel Salarial V-A — Personal de ingreso sin experiencia (transitorio, Art. 49)",
+      "puestos": [
+        "Personal de nuevo ingreso sin certificación acreditativa de cualificación — permanencia máxima 12 meses"
+      ],
+      "salario": {
+        "2026": { "mes": 1079.58, "sba": 15114.12 }
+      }
+    },
+    {
+      "id": "NS-VI",
+      "subtabla": "NS-VI",
+      "nombre": "Nivel Salarial VI — Pinches, aprendices y botones (≥18 años)",
+      "puestos": [
+        "Pinche",
+        "Aprendiz",
+        "Botones mayor de 18 años"
+      ],
+      "salario": {
+        "2026": { "mes": 1066.35, "sba": 14928.90 }
+      }
+    }
+  ]
+}
