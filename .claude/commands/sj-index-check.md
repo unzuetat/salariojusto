@@ -48,19 +48,21 @@ grep -oE '<h2[^>]*id="[^"]+"[^>]*>[^<]+</h2>' <archivo> | head -1 | sed -E 's/<[
 
 Si no hay H2 con id útil, escoger una frase de 6-10 palabras del primer `<p>` editorial (no del directorio de cards). La huella debe ser **suficientemente única** como para que Google la devuelva con cero ruido — evita frases genéricas tipo "Salario Mínimo Interprofesional" o "Convenios colectivos".
 
-**2b. 🕐 GATE TEMPORAL — chequeo previo de last-modified** (siempre, sea con --exhaustive o no, basta 1 curl rápido).
+**2b. 🕐 GATE TEMPORAL — chequeo previo de edad real del archivo** (siempre, sin red).
 
 ```bash
-curl -sI -A "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" \
-  "https://salariojusto.es/<ruta>" | grep -i '^last-modified' | head -1
+GIT_EPOCH=$(git log -1 --format='%at' -- <archivo>)
+HOURS=$(( ($(date -u +%s) - GIT_EPOCH) / 3600 ))
 ```
 
-Convertir esa fecha a horas-desde-ahora con `date`. Si `last-modified < 48h`:
-- **No emitir veredicto ❌/⏳ negativo**. Marcar como **🕐 Demasiado pronto para chequear (modificada hace XhYZmin)**.
-- Estimación realista: Google tarda entre 24h y 7 días en rastrear una URL refrescada tras un push, incluso con "Solicitar indexación" en GSC.
-- Acción sugerida: "Volver a correr `/sj-index-check <url>` en 48-72h." Saltar los pasos 2c-2e para esta URL (ahorra cuota WebSearch).
+**⚠️ Por qué git log y NO `last-modified` HTTP**: Vercel re-toca la cabecera HTTP `last-modified` con cada deploy aunque el contenido del archivo no haya cambiado. Si esta semana ha habido cualquier deploy a producción (incluso de otra landing), todas las URLs muestran `last-modified` reciente — el HTTP no refleja la edición real del cuerpo editorial. La fecha del último commit del archivo en git es la fuente de verdad inmutable. Esto se detectó tras la v1 del skill: el bug habría hecho saltar el gate erróneamente para landings editadas días atrás pero deployadas hoy.
 
-Solo si `last-modified ≥ 48h`, continuar con 2c-2f.
+Si `HOURS < 48`:
+- **No emitir veredicto ❌/⏳ negativo**. Marcar como **🕐 Demasiado pronto para chequear (editada hace ${HOURS}h)**.
+- Estimación realista: Google tarda entre 24h y 7 días en rastrear una URL refrescada tras un push, incluso con "Solicitar indexación" en GSC.
+- Acción sugerida: "Volver a correr `/sj-index-check <url>` en $((48 - HOURS))h aprox." Saltar los pasos 2c-2e para esta URL (ahorra cuota WebSearch).
+
+Solo si `HOURS ≥ 48`, continuar con 2c-2f. El `last-modified` HTTP **sí se usa, pero solo en el paso 2f con `--exhaustive`** para validar producción (no para gating temporal).
 
 **2c. `site:URL` en Google con title forzado** (WebSearch). En vez de `site:URL_exacta` solo (poco fiable con motores tipo Bing/DuckDuckGo), usar:
 
