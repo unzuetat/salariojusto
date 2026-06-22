@@ -19,6 +19,9 @@ Thumbs.db
 .env.local
 .env.*.local
 
+# Python venv (deps de scripts/ga4-fetch.py etc.)
+.venv/
+
 # Outreach interno — datos de terceros + estrategia, NO subir a GitHub
 outreach/
 

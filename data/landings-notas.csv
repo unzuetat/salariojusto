@@ -9,7 +9,7 @@ slug,decision,notas,proximo_paso
 "convenio-hosteleria-girona.html","—","Google title formato '(2028)' viejo. 1193 imp","Tanda J reindex"
 "convenio-oficinas-valencia.html","—","Google formato viejo sin cifra-arrancante. 852 imp","Tanda J reindex"
 "convenio-hosteleria-maresme.html","—","Google title '(2028)' viejo. 273 imp (CTR alto)","Tanda J reindex"
-"convenio-hosteleria-valencia.html","Title nuevo CONFIRMADO en GSC 'Ver página rastreada' (19-may): Google ya tiene cifras 1.100–1.415 + 'Valencia 2026'","Tanda G/H propagaron. Audit SERP 12-may falso positivo. PD: el 1.415 del title no es el techo real (HTML llega a 1.787,67); revisar por separado si conviene ampliar rango","Medir CTR 14-28d; revisar techo de rango en title aparte. NO reindexar"
+"convenio-hosteleria-valencia.html","Fix hero 18-jun (PR #41): cifras 1.100,46-1.415,47 €/mes al hero-sub + stat-item nuevo en card 'Datos clave'. Ataca pogosticking detectado por /sj-radar 17-jun (sess=11, dwell=0s, CTR GSC 3.31%). NO se ha tocado title ni meta description (CTR los valida). Title nuevo del 19-may confirmado en GSC propaga","Edicion manual: generadores P1 bloqueados. PD: el 1.415 del title no es el techo real (HTML llega a 1.787,67); revisar por separado si conviene ampliar rango","Medir dwell GA4 a 7-14d post-merge (baseline 17-jun: dwell=0). Exito: dwell ≥30s manteniendo CTR ≥3%. NO reindexar"
 "convenio-limpieza-bizkaia.html","—","✓ SINCRONIZADO (control; mejor CTR del sitio 6,97%)","—"
 "convenio-limpieza-malaga.html","—","✓ SINCRONIZADO (CTR 4,88%)","—"
 "convenio-limpieza-murcia.html","—","✓ SINCRONIZADO","—"
