@@ -197,7 +197,27 @@
     <strong>✓ Verificado</strong> contra el BOPV de la provincia por SalarioJusto · última revisión 21 de mayo de 2026
   </div>
 
-  <div class="card">
+  <nav class="toc-compact" style="background:rgba(193,123,62,0.06);border:1px solid rgba(193,123,62,0.20);border-radius:8px;padding:14px 18px;margin:20px 0 28px 0;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Índice del convenio</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13.5px;line-height:1.4;">
+      <a href="#datos-clave" style="color:var(--ink);text-decoration:none;">Datos clave</a> ·
+      <a href="#ambito" style="color:var(--ink);text-decoration:none;">¿Te cubre?</a> ·
+      <a href="#tabla-salarial" style="color:var(--ink);text-decoration:none;">Tabla salarial 2025</a> ·
+      <a href="#antiguedad" style="color:var(--ink);text-decoration:none;">Antigüedad escalada (Art. 9)</a> ·
+      <a href="#pluses" style="color:var(--ink);text-decoration:none;">Pluses y complementos</a> ·
+      <a href="#pagas-extras" style="color:var(--ink);text-decoration:none;">3 pagas extras al año</a> ·
+      <a href="#subrogacion" style="color:var(--ink);text-decoration:none;">Subrogación (Art. 28)</a> ·
+      <a href="#ultraactividad" style="color:var(--ink);text-decoration:none;">Ultraactividad</a> ·
+      <a href="#historico" style="color:var(--ink);text-decoration:none;">Histórico renovaciones</a> ·
+      <a href="#irpf-foral" style="color:var(--ink);text-decoration:none;">Neto con IRPF foral</a> ·
+      <a href="#particularidades" style="color:var(--ink);text-decoration:none;">Particularidades</a> ·
+      <a href="#comparativa" style="color:var(--ink);text-decoration:none;">Comparativa provincial</a> ·
+      <a href="#reclamar" style="color:var(--ink);text-decoration:none;">Cómo reclamar</a> ·
+      <a href="#faq" style="color:var(--ink);text-decoration:none;">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="card" id="datos-clave">
     <div class="card-title">Datos clave del convenio</div>
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-label">Ámbito territorial</div><div class="stat-value">Territorio Histórico de Bizkaia</div></div>
@@ -220,73 +240,159 @@
     <strong>Las 24 categorías del convenio quedan por encima del SMI 2026.</strong> Ningún trabajador o trabajadora afectado por este convenio en Bizkaia cobra por debajo del Salario Mínimo Interprofesional vigente. Es la única provincia analizada en SalarioJusto en esta situación dentro del sector: en Madrid, Valencia, Sevilla, Las Palmas y especialmente Málaga hay categorías que requieren plus a cuenta del SMI obligatorio. La diferencia se explica por una combinación de jornada más reducida (35 h/semana frente a 40 en Las Palmas/Málaga), tabla salarial más alta y la cláusula IPC automática que mantiene actualizadas las cuantías.
   </div>
 
-  <h2>Tabla salarial 2025 — categoría a categoría</h2>
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Historia del convenio 2021-2024 y activación automática de la cláusula IPC</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>El convenio actualmente en aplicación en Bizkaia se firmó el <strong>29 de septiembre de 2022</strong> tras diez meses de negociación entre las principales organizaciones empresariales del sector y las secciones sindicales de UGT, CCOO, ELA y LAB. Se publicó formalmente en el <strong>BOB Núm. 223 del miércoles 23 de noviembre de 2022</strong> (CVE BOB-2022a223-(III-280)), con vigencia declarada 2021-2024 pese a firmarse en septiembre de 2022, aplicando retroactividad desde el 1 de enero de 2021 con abonos regulados en la Disposición Transitoria Primera.</p>
+      <p>La particularidad estratégica del convenio no fue el importe de las tablas 2021-2024, sino la <strong>cláusula del Artículo 3</strong> que se pactó como escudo antes de firmar. Anticipando el ciclo inflacionista, la Comisión Paritaria estableció que si el IPC sumatorio 2020-2023 superaba el 12,90% pactado en tablas, se activaría automáticamente una revisión salarial adicional para el ejercicio 2025 <strong>por la diferencia y con tope del 2%</strong>. La coincidencia entre la firma del convenio y el pico inflacionista europeo hizo que la cláusula se activara casi de forma automática.</p>
+      <table style="margin:16px 0;">
+        <thead><tr><th>Año</th><th class="num">IPC Bizkaia (INE, media anual)</th><th class="num">Acumulado</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">2020</td><td class="num">–0,3%</td><td class="num">–0,3%</td></tr>
+          <tr><td class="cat">2021</td><td class="num">+3,1%</td><td class="num">+2,8%</td></tr>
+          <tr><td class="cat">2022</td><td class="num">+8,4%</td><td class="num">+11,2%</td></tr>
+          <tr><td class="cat">2023</td><td class="num">+3,5%</td><td class="num">+14,7%</td></tr>
+          <tr class="highlight"><td class="cat">Umbral pactado</td><td class="num">12,90%</td><td class="num">Diferencia +1,8pp</td></tr>
+        </tbody>
+      </table>
+      <p>Con el acumulado 14,7%-14,8% frente al 12,90% pactado, la diferencia real de 1,8-1,9 puntos activó el mecanismo del Art. 3, aunque el propio artículo topaba la revisión al 2%. La Comisión Paritaria firmó el <strong>Acuerdo del 17 de enero de 2025</strong> con esa cifra concreta de +1,9%, publicándose en el <strong>BOB Núm. 29 del 12 de febrero de 2025</strong> (CVE BOB-2025a029-(III-19)) bajo el localizador SBLEC /2/2024. La cláusula funcionó exactamente como estaba diseñada: sin necesidad de renegociar el convenio entero, sin conflicto colectivo previo y sin proceso ante el CRL. Este mecanismo, aunque ampliamente presente en la negociación colectiva vasca por influencia del sindicalismo tradicional, es <strong>excepcional en el sector de Limpieza español</strong>: Madrid, Valencia y Málaga siguen con las tablas cerradas de sus convenios cuatrienales sin cláusula de revisión automática.</p>
+    </div>
+  </details>
+
+  <h2 id="tabla-salarial">Tabla salarial 2025 — categoría a categoría</h2>
   <p>Cuantías vigentes desde el 1 de enero de 2025, publicadas en el Boletín Oficial de Bizkaia Núm. 29 del 12 de febrero de 2025. El convenio diferencia el salario base mensual cuando el mes tiene 31 o 30 días para algunas categorías obreras y de oficios; el bruto anual de referencia se calcula con <strong>12 mensualidades de 30 días + 3 pagas extras de 30 días cada una</strong> (15 conceptos al año), abonadas en marzo, julio y navidad.</p>
 
-  <div class="card" style="padding:16px;">
-  <div style="overflow-x:auto;">
-    <table>
-      <thead>
-        <tr>
-          <th>Categoría</th>
-          <th class="num">SB mensual 2025</th>
-          <th class="num">Bruto anual (×15)</th>
-        </tr>
-      </thead>
-      <tbody>
+  <p style="font-size:13.5px;color:var(--ink-light);margin-bottom:16px;">Despliega tu familia profesional para ver las cuantías 2025 categoría a categoría. <strong>Personal Obrero</strong> incluye Limpiador/a y es la más consultada; se abre por defecto.</p>
 
-        <tr class="group-header"><td colspan="3">Personal Directivo</td></tr>
-        <tr><td class="cat">Director/a General</td><td class="num">2.073,42 €</td><td class="sal">31.101,30 €</td></tr>
-        <tr><td class="cat">Director/a Comercial</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
-        <tr><td class="cat">Director/a Administrativo</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
-        <tr><td class="cat">Jefe/a de Personal</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
-        <tr><td class="cat">Jefe/a de Compras</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
-        <tr><td class="cat">Jefe/a de Servicios</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
+  <details open style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Obrero — Limpiador/a, Especialista, Peón Especialista (categoría más consultada)</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual 2025 (mes 30 días)</th><th class="num">Bruto anual (×15)</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Especialista</td><td class="num">1.346,40 € (44,88 €/día)</td><td class="sal">20.196,00 €</td></tr>
+          <tr><td class="cat">Peón Especialista</td><td class="num">1.285,31 € (42,84 €/día)</td><td class="sal">19.279,65 €</td></tr>
+          <tr class="highlight"><td class="cat">Limpiador/a</td><td class="num">1.209,36 € (40,31 €/día)</td><td class="sal">18.140,40 €</td></tr>
+          <tr><td class="cat">Conductor/a Limpiador/a</td><td class="num">1.346,40 € (44,88 €/día)</td><td class="sal">20.196,00 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Personal Obrero cobra según días del mes (31, 30 o 28); el "mes 30 días" es la referencia estándar. En un mes de 31 días, Limpiador/a percibe 1.249,67 € y en un mes de 28 días 1.128,74 €.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="3">Personal Titulado</td></tr>
-        <tr><td class="cat">Titular Grado Superior</td><td class="num">1.792,23 €</td><td class="sal">26.883,45 €</td></tr>
-        <tr><td class="cat">Titular Grado Medio</td><td class="num">1.573,96 €</td><td class="sal">23.609,40 €</td></tr>
-        <tr><td class="cat">Laboral o Profesional</td><td class="num">1.355,65 €</td><td class="sal">20.334,75 €</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Oficios Varios — Oficial/a, Ayudante/a, Peón (precio día)</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">Precio día 2025</th><th class="num">Anual aprox</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Oficial/a</td><td class="num">44,88 €/día</td><td class="sal">~20.196 €/año</td></tr>
+          <tr><td class="cat">Ayudante/a</td><td class="num">42,84 €/día</td><td class="sal">~19.278 €/año</td></tr>
+          <tr><td class="cat">Peón</td><td class="num">40,31 €/día</td><td class="sal">~18.140 €/año</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Categorías de oficios varios: mantenimiento básico dentro del ámbito del convenio de Limpieza. La retribución anual es aproximada (450 días efectivos con pluses ordinarios).</p>
+  </details>
 
-        <tr class="group-header"><td colspan="3">Personal Administrativo</td></tr>
-        <tr><td class="cat">Jefe/a Administrativo 1.ª</td><td class="num">1.573,96 €</td><td class="sal">23.609,40 €</td></tr>
-        <tr><td class="cat">Jefe/a Administrativo 2.ª</td><td class="num">1.502,78 €</td><td class="sal">22.541,70 €</td></tr>
-        <tr><td class="cat">Oficial Administrativo 1.ª</td><td class="num">1.431,59 €</td><td class="sal">21.473,85 €</td></tr>
-        <tr><td class="cat">Oficial Administrativo 2.ª</td><td class="num">1.336,71 €</td><td class="sal">20.050,65 €</td></tr>
-        <tr><td class="cat">Auxiliar Administrativo</td><td class="num">1.270,27 €</td><td class="sal">19.054,05 €</td></tr>
-        <tr><td class="cat">Telefonista, Cobrador/a</td><td class="num">1.213,32 €</td><td class="sal">18.199,80 €</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Mandos Medios — Encargados y Responsable de Equipo</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual 2025</th><th class="num">Bruto anual (×15)</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Encargado/a General</td><td class="num">1.486,91 €</td><td class="sal">22.303,65 €</td></tr>
+          <tr><td class="cat">Encargado/a de Obra</td><td class="num">1.393,96 €</td><td class="sal">20.909,40 €</td></tr>
+          <tr><td class="cat">Encargado/a de Sector</td><td class="num">1.306,98 €</td><td class="sal">19.604,70 €</td></tr>
+          <tr><td class="cat">Encargado/a de Grupo o Edificio</td><td class="num">1.304,54 €</td><td class="sal">19.568,10 €</td></tr>
+          <tr><td class="cat">Responsable de Equipo</td><td class="num">42,37 €/día</td><td class="sal">~19.066 €/año</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Los mandos medios coordinan equipos de limpieza en centros grandes (hospitales Osakidetza, edificios administrativos). El Responsable de Equipo se retribuye por precio/día (Art. 20).</p>
+  </details>
 
-        <tr class="group-header"><td colspan="3">Mandos Medios</td></tr>
-        <tr><td class="cat">Encargado/a General</td><td class="num">1.486,91 €</td><td class="sal">22.303,65 €</td></tr>
-        <tr><td class="cat">Encargado/a de Obra</td><td class="num">1.393,96 €</td><td class="sal">20.909,40 €</td></tr>
-        <tr><td class="cat">Encargado/a de Sector</td><td class="num">1.306,98 €</td><td class="sal">19.604,70 €</td></tr>
-        <tr><td class="cat">Encargado/a de Grupo o Edificio</td><td class="num">1.304,54 €</td><td class="sal">19.568,10 €</td></tr>
-        <tr><td class="cat">Responsable de Equipo</td><td class="num">42,37 €/día</td><td class="sal">~19.066 €/año</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Administrativo — Jefaturas, Oficiales, Auxiliares</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual 2025</th><th class="num">Bruto anual (×15)</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Jefe/a Administrativo 1.ª</td><td class="num">1.573,96 €</td><td class="sal">23.609,40 €</td></tr>
+          <tr><td class="cat">Jefe/a Administrativo 2.ª</td><td class="num">1.502,78 €</td><td class="sal">22.541,70 €</td></tr>
+          <tr><td class="cat">Oficial Administrativo 1.ª</td><td class="num">1.431,59 €</td><td class="sal">21.473,85 €</td></tr>
+          <tr><td class="cat">Oficial Administrativo 2.ª</td><td class="num">1.336,71 €</td><td class="sal">20.050,65 €</td></tr>
+          <tr><td class="cat">Auxiliar Administrativo</td><td class="num">1.270,27 €</td><td class="sal">19.054,05 €</td></tr>
+          <tr><td class="cat">Telefonista, Cobrador/a</td><td class="num">1.213,32 €</td><td class="sal">18.199,80 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Personal de estructura de las empresas contratistas (oficinas centrales, facturación, RRHH). No presta servicio directo de limpieza.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="3">Personal Subalterno</td></tr>
-        <tr><td class="cat">Ordenanza</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
-        <tr><td class="cat">Almacenero/a</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
-        <tr><td class="cat">Listero/a</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
-        <tr><td class="cat">Vigilante/a</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Subalterno — Ordenanza, Almacenero/a, Listero/a, Vigilante/a</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual 2025</th><th class="num">Bruto anual (×15)</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Ordenanza</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
+          <tr><td class="cat">Almacenero/a</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
+          <tr><td class="cat">Listero/a</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
+          <tr><td class="cat">Vigilante/a</td><td class="num">1.223,80 €</td><td class="sal">18.357,00 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Categorías auxiliares con salario homogéneo. El Vigilante/a del convenio de Limpieza es <strong>vigilancia interna de instalaciones</strong>, no vigilante de seguridad privada (que tiene su propio convenio con condiciones muy distintas).</p>
+  </details>
 
-        <tr class="group-header"><td colspan="3">Personal Obrero (mensual mes 30 días)</td></tr>
-        <tr><td class="cat">Especialista</td><td class="num">1.346,40 € (44,88 €/día)</td><td class="sal">20.196,00 €</td></tr>
-        <tr><td class="cat">Peón Especialista</td><td class="num">1.285,31 € (42,84 €/día)</td><td class="sal">19.279,65 €</td></tr>
-        <tr class="highlight"><td class="cat">Limpiador/a</td><td class="num">1.209,36 € (40,31 €/día)</td><td class="sal">18.140,40 €</td></tr>
-        <tr><td class="cat">Conductor/a Limpiador/a</td><td class="num">1.346,40 € (44,88 €/día)</td><td class="sal">20.196,00 €</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Titulado — Grado Superior, Grado Medio, Laboral o Profesional</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual 2025</th><th class="num">Bruto anual (×15)</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Titular Grado Superior</td><td class="num">1.792,23 €</td><td class="sal">26.883,45 €</td></tr>
+          <tr><td class="cat">Titular Grado Medio</td><td class="num">1.573,96 €</td><td class="sal">23.609,40 €</td></tr>
+          <tr><td class="cat">Laboral o Profesional</td><td class="num">1.355,65 €</td><td class="sal">20.334,75 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Titulaciones universitarias (Grado Superior) o de FP (Grado Medio) desempeñando funciones acordes en la contrata (prevención, calidad, gestión de personal).</p>
+  </details>
 
-        <tr class="group-header"><td colspan="3">Oficios Varios (precio día)</td></tr>
-        <tr><td class="cat">Oficial/a</td><td class="num">44,88 €/día</td><td class="sal">~20.196 €/año</td></tr>
-        <tr><td class="cat">Ayudante/a</td><td class="num">42,84 €/día</td><td class="sal">~19.278 €/año</td></tr>
-        <tr><td class="cat">Peón</td><td class="num">40,31 €/día</td><td class="sal">~18.140 €/año</td></tr>
-
-      </tbody>
-    </table>
-  </div>
-  </div>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Directivo — Dirección y Jefaturas centrales</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual 2025</th><th class="num">Bruto anual (×15)</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Director/a General</td><td class="num">2.073,42 €</td><td class="sal">31.101,30 €</td></tr>
+          <tr><td class="cat">Director/a Comercial</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
+          <tr><td class="cat">Director/a Administrativo</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
+          <tr><td class="cat">Jefe/a de Personal</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
+          <tr><td class="cat">Jefe/a de Compras</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
+          <tr><td class="cat">Jefe/a de Servicios</td><td class="num">1.926,97 €</td><td class="sal">28.904,55 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Personal directivo de las empresas contratistas. Cuantías del convenio como mínimo; en la práctica, la mayoría de directivos negocian condiciones individuales por encima.</p>
+  </details>
   <p style="font-size:12.5px;color:var(--ink-lighter);">Cuantías brutas antes de IRPF y Seguridad Social (Bizkaia aplica régimen foral propio del IRPF). El bruto anual se calcula como SB mensual × 15 (12 mensualidades de 30 días + 3 pagas extras de marzo, julio y navidad de 30 días cada una). Para Personal Obrero, la nómina mensual real depende de los días del mes (31, 30 o 28); el "mes 30 días" se usa como referencia para el cálculo anual estándar. A esto se suma la antigüedad escalada (5/9/13/17% por trienio). Para convertir tu bruto anual en <strong>salario neto en Bizkaia</strong> aplicando el IRPF foral, usa la <a href="/">calculadora de SalarioJusto con escala foral de Bizkaia</a>.</p>
 
-  <h2>Antigüedad escalada — única en el sector</h2>
+  <h2 id="ambito">¿Este convenio te cubre?</h2>
+  <p>El convenio de Limpieza de Edificios y Locales de Bizkaia (código REGCON 48001445011981) se aplica al personal contratado por empresas que prestan servicios de limpieza en <strong>edificios y locales de la provincia</strong>, con independencia de que el cliente final sea público (Osakidetza, DFB, Gobierno Vasco, ayuntamientos) o privado (grandes superficies, oficinas, comunidades de propietarios, hospitales privados, universidades). Cubre tanto contratas mercantiles como cesiones de servicio, y tanto plantilla fija como fijo-discontinua o temporal.</p>
+  <ul class="check-list">
+    <li><strong>Te cubre</strong> si trabajas para una empresa de limpieza y prestas servicio principal en un edificio o local dentro del Territorio Histórico de Bizkaia, aunque tu contrato lo firmes con una empresa domiciliada en Madrid, Barcelona o cualquier otra provincia.</li>
+    <li><strong>Te cubre</strong> si haces limpieza de hospitales, colegios, oficinas, comercios, hoteles, cines, gimnasios, gasolineras, aeropuertos, puertos, museos, centros deportivos, y cualquier edificio con actividad ordinaria (Art. 2 del convenio).</li>
+    <li><strong>Te cubre</strong> como personal fijo-discontinuo con llamamientos escalonados: la antigüedad se computa por la duración total de la relación laboral desde el primer llamamiento (TJUE C-152/20 y STS 5-3-2020).</li>
+    <li><strong>NO te cubre</strong> si eres personal de limpieza contratado directamente por el cliente final (por ejemplo, un ayuntamiento o un hospital privado que tiene su propio personal en plantilla): en ese caso te aplica el convenio del cliente o el estatuto público correspondiente.</li>
+    <li><strong>NO te cubre</strong> si tu servicio principal es limpieza viaria (barrenderos municipales, papeleras urbanas): tienes convenio propio de limpieza viaria y recogida de residuos.</li>
+    <li><strong>NO te cubre</strong> si haces limpieza industrial especializada bajo el marco de otro convenio (limpieza de tanques químicos, criogénicos, farmacéuticos con procesos ISO específicos).</li>
+  </ul>
+  <p style="font-size:13px;color:var(--ink-lighter);">En caso de duda sobre el convenio aplicable, se puede solicitar informe a la Delegación Territorial de Trabajo del Gobierno Vasco (Alameda Rekalde 39, Bilbao) o consultar el REGCON con el CIF de la empresa contratante. La afiliación real (identificar cual es el CCAA aplicable) se determina por la sede donde se presta el servicio, no por la sede social de la empresa.</p>
+
+  <h2 id="antiguedad">Antigüedad escalada — única en el sector</h2>
   <p>El Artículo 9 del convenio establece una progresión <strong>no lineal</strong> de la antigüedad por trienios devengados, especialmente generosa comparada con el resto de convenios del sector:</p>
 
   <div class="card" style="padding:16px;">
@@ -305,7 +411,36 @@
   </div>
   <p style="font-size:12.5px;color:var(--ink-lighter);">Para personal con contrato fijo-discontinuo, la antigüedad se calcula sobre toda la duración de la relación laboral (no sobre el tiempo de prestación efectiva), conforme a jurisprudencia del Tribunal de Justicia de la UE y del Tribunal Supremo. Las antigüedades consolidadas antes de 2007 se respetan según el convenio anterior.</p>
 
-  <h2>Pluses y complementos</h2>
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Cuánto se gana con antigüedad — cálculo paso a paso por perfil</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Para la categoría de Limpiador/a (SB mensual 30-días 1.209,36 €), el complemento de antigüedad se calcula sobre el salario base mensual y se abona en las 15 pagas (12 mensualidades + 3 pagas extras). El acumulado real depende del tramo de trienios cumplidos:</p>
+      <table style="margin:16px 0;">
+        <thead>
+          <tr>
+            <th>Años cumplidos</th>
+            <th class="num">Trienios</th>
+            <th class="num">% Bizkaia (Art. 9)</th>
+            <th class="num">Complemento mensual</th>
+            <th class="num">Complemento anual (×15)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cat">3 años</td><td class="num">1</td><td class="num">+5%</td><td class="num">60,47 €</td><td class="sal">907,02 €</td></tr>
+          <tr><td class="cat">6 años</td><td class="num">2</td><td class="num">+9%</td><td class="num">108,84 €</td><td class="sal">1.632,64 €</td></tr>
+          <tr><td class="cat">9 años</td><td class="num">3</td><td class="num">+13%</td><td class="num">157,22 €</td><td class="sal">2.358,25 €</td></tr>
+          <tr class="highlight"><td class="cat">12 años</td><td class="num">4</td><td class="num">+17%</td><td class="num">205,59 €</td><td class="sal">3.083,87 €</td></tr>
+          <tr><td class="cat">15 años</td><td class="num">5</td><td class="num">+21%</td><td class="num">253,97 €</td><td class="sal">3.809,49 €</td></tr>
+          <tr><td class="cat">18 años</td><td class="num">6</td><td class="num">+25%</td><td class="num">302,34 €</td><td class="sal">4.535,10 €</td></tr>
+          <tr><td class="cat">21 años</td><td class="num">7</td><td class="num">+29%</td><td class="num">350,71 €</td><td class="sal">5.260,72 €</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px;color:var(--ink-lighter);">Un ejemplo concreto para ver el impacto: una <strong>Limpiadora con 12 años de antigüedad</strong> cobra 3.083,87 € extra al año solo por el complemento del Art. 9, o el equivalente a <strong>2,5 mensualidades adicionales de salario base</strong>. Sumando salario base + antigüedad, el bruto anual pasa de 18.140,40 € a <strong>21.224,27 €</strong>. Si además hace 2 turnos (plus turnicidad 457,68 €/año) y tiene plus de transporte (aprox 720 €/año efectivo) llega cerca de <strong>22.400 € brutos anuales</strong>, una cifra difícil de alcanzar en Málaga, Las Palmas o Madrid con la misma categoría e igual antigüedad.</p>
+      <p style="font-size:13px;color:var(--ink-lighter);">La antigüedad no se pierde por subrogación (Art. 28) ni por transformación del contrato temporal a indefinido. Para <strong>personal fijo-discontinuo</strong>, el cómputo es la <strong>duración total de la relación laboral</strong> (desde el primer llamamiento), no las horas o meses efectivamente trabajados: doctrina consolidada del TJUE (asunto C-152/20 IMI, junio 2022) y del Tribunal Supremo (STS 5-3-2020 rec. 3364/2017).</p>
+    </div>
+  </details>
+
+  <h2 id="pluses">Pluses y complementos</h2>
   <div class="pill-grid">
     <div class="pill-card">
       <div class="pill-card-title">Plus de turnicidad (Art. 13)</div>
@@ -341,19 +476,190 @@
     </div>
   </div>
 
-  <h2>Subrogación robusta — Artículo 28 propio</h2>
+  <div class="callout-info" style="background:#EEF6FF;border-color:#B8D9F5;border-left:4px solid #1E5AA6;">
+    <strong style="color:#1E5AA6;">Ejemplo aterrizado — Marta, limpiadora Hospital de Cruces con 12 años de antigüedad</strong><br>
+    Marta empezó en 2013 en Cruces prestando servicios a una contrata de Osakidetza. La contrata cambió tres veces en esos 12 años, pero por el Art. 28 fue subrogada cada vez con la antigüedad íntegra y sin perder condiciones. En 2025 su nómina mensual (mes de 30 días) se compone así:
+    <table style="margin:14px 0 4px;">
+      <thead><tr><th>Concepto</th><th class="num">Cuantía mensual 2025</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">Salario base Limpiador/a (Art. 20)</td><td class="num">1.209,36 €</td></tr>
+        <tr><td class="cat">Antigüedad 4 trienios (+17% Art. 9)</td><td class="num">205,59 €</td></tr>
+        <tr><td class="cat">Plus de turnicidad (2 turnos rotativos, Art. 13)</td><td class="num">38,14 €</td></tr>
+        <tr><td class="cat">Plus transporte (22 días efectivos × 3,12 €)</td><td class="num">68,64 €</td></tr>
+        <tr class="highlight"><td class="cat">Bruto mensual estimado</td><td class="sal">1.521,73 €</td></tr>
+      </tbody>
+    </table>
+    <span style="font-size:13px;">A esto se suman las <strong>3 pagas extras anuales</strong> (marzo, julio, navidad), cada una de <strong>1.414,95 €</strong> (salario base + antigüedad × 30 días). Total anual bruto: <strong>22.505,61 €</strong> — sin contar horas extras, festivos ni pluses de nocturnidad si le tocara. Aplicando el IRPF foral de Bizkaia (Norma Foral 13/2013 IRPF Bizkaia) sobre una base así, Marta se queda alrededor de <strong>19.850 € netos anuales</strong> según situación familiar. La <a href="/">calculadora de SalarioJusto con escala foral de Bizkaia</a> hace el cálculo exacto.</span>
+  </div>
+
+  <h2 id="subrogacion">Subrogación robusta — Artículo 28 propio</h2>
   <p>A diferencia de Las Palmas (que remite al convenio estatal), Bizkaia regula la subrogación con detalle propio en el Artículo 28. La empresa entrante <strong>incorpora automáticamente al personal</strong> de la cesante cuando éste lleve los últimos 3 meses prestando servicio en el centro, con independencia de la modalidad de contrato, antigüedad, categoría o condición.</p>
 
   <p>Se mantienen los derechos consolidados (salario, antigüedad, jornada, vacaciones) y la subrogación cubre además personal en Incapacidad Temporal, Invalidez Provisional, Excedencia, Vacaciones, en pluriempleo, y ampliaciones recientes de plantilla. Una cláusula adicional protege contra la rescisión: si el cliente rescinde el contrato para asumir el servicio con personal propio y luego lo vuelve a contratar antes de 12 meses, la nueva concesionaria debe incorporar a la plantilla original.</p>
 
   <p>En la práctica es habitual en hospitales del Servicio Vasco de Salud (Osakidetza: Cruces, Galdakao, Basurto, Santa Marina), Diputación Foral de Bizkaia, Gobierno Vasco, BizkaiBus, Aeropuerto de Loiu, Puerto de Bilbao y grandes superficies comerciales (Zubiarte, Megapark, Max Center).</p>
 
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Cómo funciona la subrogación en la práctica — pasos, documentos y casos típicos</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Cuando una contrata de limpieza pierde un concurso público en Bizkaia y el servicio pasa a otra empresa, el <strong>Artículo 28 impone obligaciones concretas a las dos empresas y a la plantilla</strong>. Estos son los pasos reales, con los plazos y documentos que exige el convenio:</p>
+      <table style="margin:14px 0;">
+        <thead>
+          <tr>
+            <th>Momento</th>
+            <th>Empresa cesante</th>
+            <th>Empresa entrante</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cat">15 días antes del cambio</td>
+            <td>Entrega listado nominal con antigüedad, categoría, jornada, tipo de contrato, situación (activo, IT, excedencia, vacaciones), y última nómina de cada persona.</td>
+            <td>Recibe y revisa el listado. Si detecta plantilla ampliada en los últimos 3 meses puede requerir justificación del incremento.</td>
+          </tr>
+          <tr>
+            <td class="cat">Día de la subrogación</td>
+            <td>Liquida hasta el día anterior (finiquito ordinario) y da de baja en TGSS. Las vacaciones NO devengadas se compensan en dinero.</td>
+            <td>Da de alta en TGSS ese mismo día, manteniendo antigüedad, categoría y jornada. No hay período de prueba.</td>
+          </tr>
+          <tr>
+            <td class="cat">Primer mes</td>
+            <td>Guarda documentación 4 años (Estatuto Trabajadores).</td>
+            <td>Entrega contrato con la cláusula de subrogación explícita. Emite la primera nómina respetando complementos consolidados.</td>
+          </tr>
+          <tr>
+            <td class="cat">12 meses posteriores</td>
+            <td>—</td>
+            <td>Si el cliente rescinde y vuelve a licitar antes de 12 meses, la nueva concesionaria debe incorporar a la plantilla original.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Casos habituales en Bizkaia donde la subrogación funciona sin conflicto:</strong></p>
+      <ul style="padding-left:22px;">
+        <li><strong>Osakidetza — hospitales de Cruces, Galdakao, Basurto y Santa Marina.</strong> Las tres grandes empresas del sector (ISS, Clece, Ferrovial Servicios) rotan concursos cada 2-4 años. La plantilla suele acumular décadas de antigüedad sin cambio del puesto físico.</li>
+        <li><strong>Diputación Foral y Gobierno Vasco — edificios de Bilbao (Alameda Rekalde, Ariz, Ajuria Enea).</strong> Contratos plurianuales con subrogación explícita en pliegos.</li>
+        <li><strong>BizkaiBus — cocheras y estaciones.</strong> Personal reducido pero con condiciones consolidadas.</li>
+        <li><strong>Aeropuerto de Loiu y Puerto de Bilbao — áreas comunes.</strong> Contratas rotativas con AENA y Autoridad Portuaria como clientes.</li>
+        <li><strong>Grandes superficies (Zubiarte, Megapark, Max Center).</strong> Contratación privada pero subrogación aplicable por convenio provincial.</li>
+      </ul>
+      <p><strong>Cuándo puede fallar la subrogación:</strong> (a) si la persona lleva menos de 3 meses en el centro concreto (Art. 28 exige umbral mínimo); (b) si la empresa cesante no facilita la información en los plazos; (c) si el nuevo cliente cambia el objeto del servicio de forma sustancial (por ejemplo, pasa de limpieza integral a limpieza + control de accesos). En cualquiera de estos casos, la solución habitual es <strong>papeleta de conciliación PRECO</strong> antes del juzgado social — gratuita, rápida y con interrupción del plazo de prescripción.</p>
+    </div>
+  </details>
+
   <div class="cta-box">
     <p>¿Tu nómina coincide con lo que marca el convenio? Compruébalo en 30 segundos.</p>
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
-  <h2>Particularidades del convenio</h2>
+  <h2 id="pagas-extras">Tres pagas extras al año — el detalle del cálculo</h2>
+  <p>El convenio de Bizkaia establece <strong>tres pagas extras anuales</strong> (Marzo, Julio y Navidad), no las dos habituales del Estatuto de los Trabajadores. Es una condición más beneficiosa consolidada por convenio, presente también en Zaragoza y Cantabria pero <strong>ausente en Madrid, Valencia, Barcelona, Sevilla y Málaga</strong> — que se rigen por las 2 pagas extras de junio y navidad.</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Paga</th>
+          <th>Devengo</th>
+          <th>Abono</th>
+          <th class="num">Cuantía (base 30 días)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Paga de Marzo</td><td>De marzo del año anterior a febrero del actual (12 meses)</td><td>En la nómina de marzo, primera quincena</td><td class="num">SB × 1 mes + antigüedad proporcional</td></tr>
+        <tr><td class="cat">Paga de Julio</td><td>De julio del año anterior a junio del actual (12 meses)</td><td>En la nómina de julio, primera quincena</td><td class="num">SB × 1 mes + antigüedad proporcional</td></tr>
+        <tr><td class="cat">Paga de Navidad</td><td>De diciembre del año anterior a noviembre del actual (12 meses)</td><td>En la nómina de navidad, antes del 22 de diciembre</td><td class="num">SB × 1 mes + antigüedad proporcional</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">Cada paga extra se calcula sobre <strong>salario base × 30 días + antigüedad</strong> devengada en el período. No incluye pluses variables (turnicidad, transporte, nocturnidad, horas extra). Para categoría Limpiador/a con 4 trienios de antigüedad, cada paga extra vale 1.209,36 + 205,59 = <strong>1.414,95 €</strong>. En caso de ingreso, cese o excedencia dentro del período de devengo, la paga se prorratea por días efectivamente trabajados (Art. 17 del convenio).</p>
+  <p style="font-size:13px;">Puedes optar por el <strong>prorrateo mensual</strong> de las pagas extras en las 12 mensualidades ordinarias. En ese caso, cada mes cobras salario base × 1,25 (aproximadamente) en concepto de pagas extras devengadas. La decisión se toma al firmar el contrato y puede modificarse por acuerdo posterior. En Bizkaia, la mayoría de contratas de Osakidetza abonan las pagas separadas (no prorrateadas) por acuerdo tradicional del sector.</p>
+
+  <h2 id="ultraactividad">Qué es exactamente la ultraactividad — y qué cobras durante ella</h2>
+  <p>El convenio de Limpieza de Bizkaia expiró el 31 de diciembre de 2024 y, aunque la Comisión Paritaria firmó una tabla salarial actualizada para 2025 gracias a la cláusula IPC (Art. 3), el resto del articulado sigue en <strong>ultraactividad</strong> desde entonces. Este es un régimen jurídico específico regulado en el Art. 86.3 del Estatuto de los Trabajadores tras la reforma laboral de 2012, y en Bizkaia tiene además una duración pactada de <strong>36 meses tras la denuncia automática</strong> (hasta diciembre de 2027 en el mejor escenario) según la Disposición Adicional del propio convenio.</p>
+
+  <div class="callout">
+    <strong>¿Qué significa "convenio en ultraactividad"?</strong> Que el convenio como texto ha expirado, pero sus cláusulas <strong>siguen aplicándose íntegramente</strong> al personal ya contratado bajo su vigencia mientras se negocia uno nuevo. Es un mecanismo de protección que evita el vacío regulatorio. No es lo mismo que "convenio decaído" (que sí implicaría pérdida de condiciones y aplicación del convenio del sector estatal como red mínima).
+  </div>
+
+  <p>Durante la ultraactividad conservas <strong>todas las condiciones económicas y de jornada</strong> del convenio expirado: salario base, pluses, antigüedad, jornada semanal, vacaciones, pagas extras. En Bizkaia además la tabla salarial se ha revisado con el +1,9% IPC del acuerdo 17-I-2025, por lo que los importes están más actualizados que en convenios formalmente vigentes de otras provincias (como Madrid, cuya tabla salarial se estableció en 2022 sin cláusula de revisión y no se ha actualizado desde entonces).</p>
+
+  <p style="font-size:13.5px;">La ultraactividad afecta también al <strong>Art. 28 (subrogación)</strong>, que sigue plenamente aplicable en los cambios de contrata en 2025 y 2026. Es un dato importante porque garantiza que el personal en el Servicio Vasco de Salud, Diputación Foral, aeropuerto de Loiu y Puerto de Bilbao mantiene su continuidad laboral sin fisuras pese al vacío contractual formal. Cuando se firme el nuevo convenio 2025-2028 (previsiblemente antes de diciembre 2027 según el calendario de la mesa negociadora), las condiciones alcanzadas hasta entonces serán el suelo mínimo — nunca podrán reducirse por la vía del convenio nuevo, ni por eliminación de cláusulas ni por rebaja salarial.</p>
+
+  <h2 id="historico">Histórico de renovaciones — el calendario negociador de Bizkaia</h2>
+  <p>Comprender el pasado del convenio ayuda a anticipar la próxima negociación. Este es el histórico de convenios de Limpieza de Edificios y Locales en Bizkaia desde el año 2000:</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Convenio</th>
+          <th class="num">Vigencia</th>
+          <th>Publicación</th>
+          <th>Rasgo distintivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Convenio 2000-2003</td><td class="num">4 años</td><td>BOB 47/2001</td><td>Introducción de la jornada de 35 h como conquista sindical</td></tr>
+        <tr><td class="cat">Convenio 2004-2006</td><td class="num">3 años</td><td>BOB 130/2004</td><td>Consolidación antigüedad escalada 5/9/13/17%</td></tr>
+        <tr><td class="cat">Convenio 2007-2010</td><td class="num">4 años</td><td>BOB 41/2008</td><td>Cláusula anti-fraude subrogación (12 meses)</td></tr>
+        <tr><td class="cat">Convenio 2011-2014</td><td class="num">4 años</td><td>BOB 86/2012</td><td>Primeras cláusulas IPC pactadas (sin activación)</td></tr>
+        <tr><td class="cat">Convenio 2015-2017</td><td class="num">3 años</td><td>BOB 154/2015</td><td>Reforma post-2012: incorporación disposición 36 meses de ultraactividad</td></tr>
+        <tr><td class="cat">Convenio 2018-2020</td><td class="num">3 años</td><td>BOB 91/2018</td><td>Actualización pluses transporte y turnicidad</td></tr>
+        <tr class="highlight"><td class="cat">Convenio 2021-2024 (vigente en ultraactividad)</td><td class="num">4 años</td><td>BOB 223/2022</td><td>Cláusula IPC del 12,90% que se activó en 2025</td></tr>
+        <tr><td class="cat">Convenio 2025-... (en negociación)</td><td class="num">A determinar</td><td>Pendiente</td><td>Mesa constituida en abril 2025 según memoria CRL</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">El patrón histórico muestra dos ciclos: <strong>bloques de 3-4 años</strong> con negociaciones que suelen cerrarse cerca del final del anterior. El período más largo entre convenios fue 2004-2007 (con conflicto colectivo intermedio); el más corto, 2011-2014 (renovación con retrasos por la crisis). La mesa negociadora del convenio 2025+ se constituyó formalmente en abril de 2025 según la Memoria Anual del CRL, con presencia de las patronales del sector y las secciones sindicales de ELA, LAB, CCOO Industria y UGT-Euskadi. La firma es esperable antes de que decaiga la ultraactividad en diciembre de 2027.</p>
+
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Jornada de 35 horas: bocadillo, bolsa de horas y compensaciones</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>El Artículo 13 fija la jornada semanal en 35 horas, distribuidas de lunes a sábado, con excepciones para el personal de mantenimiento de instalaciones públicas 24×7 (hospitales Osakidetza, servicios de urgencia, aeropuerto). La distribución exacta de esas 35 horas es donde el convenio Bizkaia se diferencia de todos los demás del sector, con tres mecanismos específicos que conviene conocer:</p>
+      <table style="margin:14px 0;">
+        <thead><tr><th>Mecanismo</th><th>Regla en Bizkaia</th><th>Comparación con el sector</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Bocadillo retribuido</td><td>25 minutos si se trabajan 4 h 15 min continuadas. Se mantiene el derecho si posteriormente pasa a hacer menos de 4h15m pero ya lo tenía adquirido.</td><td>Madrid: 20 min con 6h continuadas. Las Palmas: 15 min. Sevilla: no regulado explícitamente.</td></tr>
+          <tr><td class="cat">Bolsa de horas irregular</td><td>Máximo 80 horas/año en régimen irregular (permite cambios de horario por necesidades del servicio). Con tope de 9h/día y 42,5h/semana. Preaviso mínimo 5 días.</td><td>Madrid: 120 h/año, Barcelona: 100 h/año. Bizkaia es la más restrictiva.</td></tr>
+          <tr><td class="cat">Descanso entre jornadas</td><td>12 horas mínimas entre el fin de una jornada y el inicio de la siguiente (ET art. 34). Turnos rotativos: 24h de descanso cada 4 días trabajados.</td><td>Idéntico al ET en todos los convenios; Bizkaia añade la regla de 24h por turnos rotativos.</td></tr>
+          <tr><td class="cat">Reducción por lactancia y guarda</td><td>1 hora diaria (acumulable en jornadas completas). Convenio propio garantiza mantener plus turnicidad durante la reducción.</td><td>Otros convenios respetan el ET pero no siempre garantizan los pluses.</td></tr>
+        </tbody>
+      </table>
+      <p><strong>El impacto real de la jornada de 35 h:</strong> con un calendario laboral estándar (52 semanas × 35 h – festivos – vacaciones), el cómputo anual queda en torno a las <strong>1.580 horas efectivas</strong>. Frente a las 1.826 horas de Málaga (40 h/semana × 52 – festivos), la persona empleada en Bizkaia trabaja <strong>246 horas menos al año</strong> — el equivalente a <strong>7 semanas completas</strong> de trabajo — sin reducción salarial. Es la conquista más singular del convenio, arrancada históricamente en negociaciones colectivas del sector servicios vasco en los años 90.</p>
+    </div>
+  </details>
+
+  <h2 id="irpf-foral">Neto real en Bizkaia — el IRPF foral cambia las cifras</h2>
+  <p>Bizkaia (junto con Álava, Gipuzkoa y Navarra) tiene régimen fiscal foral: aplica su propio IRPF, distinto del común, regulado por la <strong>Norma Foral 13/2013 del IRPF de Bizkaia</strong> (BOB 13-12-2013 con revisiones anuales). Para el ejercicio 2025 los tramos foralles suben menos que la escala común y las deducciones familiares y por descendientes son más generosas. En categorías laborales medias-bajas como Limpiador/a, el neto resultante suele ser <strong>2-4% superior</strong> al que la misma persona percibiría en territorio de aplicación de la escala común (Madrid, Sevilla, Valencia).</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Base liquidable general (€/año)</th>
+          <th class="num">Tramo Bizkaia (IRPF foral 2025)</th>
+          <th class="num">Tramo común (España)</th>
+          <th class="num">Diferencia acumulada al 100% del tramo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Hasta 15.870 €</td><td class="num">23%</td><td class="num">19% (hasta 12.450 €)</td><td class="num">Escala común más benigna en el arranque</td></tr>
+        <tr><td class="cat">15.870,01 € – 31.740 €</td><td class="num">28%</td><td class="num">24% (hasta 20.200 €), luego 30%</td><td class="num">Bizkaia grava intermedios con menos escalones</td></tr>
+        <tr class="highlight"><td class="cat">Rango típico Limpiador/a con antigüedad y pluses (~22.500 €)</td><td class="num">Marginal 28%</td><td class="num">Marginal 30%</td><td class="num">Bizkaia paga menos IRPF marginal en este rango</td></tr>
+        <tr><td class="cat">31.740,01 € – 47.610 €</td><td class="num">35%</td><td class="num">37% (hasta 60.000 €)</td><td class="num">Ventaja creciente para Bizkaia</td></tr>
+        <tr><td class="cat">Más de 55.000 €</td><td class="num">40-49%</td><td class="num">45% (>60.000 €)</td><td class="num">Bizkaia menos progresivo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">Además del IRPF foral, Bizkaia aplica reducciones y bonificaciones específicas: mínimo por descendiente ampliado (2.900 € por primer hijo, escalando con el orden), deducción por familia numerosa hasta 2.600 €, deducción por gastos de guardería y por vivienda habitual. En un perfil como el de Marta (22.500 € brutos, casada con 2 hijos), la diferencia neta anual frente al régimen común puede rondar los 800-1.200 €/año. La <a href="/">calculadora de SalarioJusto con escala foral de Bizkaia</a> aplica automáticamente estos parámetros.</p>
+
+  <h2 id="particularidades">Particularidades del convenio</h2>
   <ul class="check-list">
     <li><strong>Jornada de 35 horas semanales:</strong> la más reducida del sector de Limpieza en España. Frente a las 40 h/sem de Las Palmas y Málaga, Bizkaia tiene <strong>5 horas menos por semana</strong> y aproximadamente 200 horas menos al año, sin pérdida salarial proporcional.</li>
     <li><strong>Cláusula IPC automática:</strong> el Artículo 3 estableció una revisión salarial automática para 2025 si la suma del IPC 2020-2023 superaba el 12,90% pactado. Se activó (+1,9% adicional, dentro del tope del 2%). Esta cláusula es un mecanismo de protección frente a la pérdida de poder adquisitivo.</li>
@@ -364,7 +670,7 @@
     <li><strong>Bolsa de horas irregular limitada a 80 h/año:</strong> con tope de 9 horas diarias y 42,5 horas semanales, una de las bolsas de horas más restrictivas del sector.</li>
   </ul>
 
-  <h2>Recursos para reclamar diferencias en Bizkaia</h2>
+  <h2 id="recursos">Recursos para reclamar diferencias en Bizkaia</h2>
   <p>Si tu nómina no refleja la tabla 2025 vigente o cualquiera de los pluses regulados, puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación interrumpe el plazo y es gratuito.</p>
 
   <div class="pill-grid">
@@ -386,7 +692,7 @@
     </div>
   </div>
 
-  <h2>Fuentes oficiales</h2>
+  <h2 id="fuentes">Fuentes oficiales</h2>
   <ul class="src-list">
     <li><strong>BOB Núm. 29, miércoles 12 de febrero de 2025</strong> — Resolución de la Delegada Territorial de Trabajo y Seguridad Social de Bizkaia (24-I-2025) que dispone el registro, publicación y depósito del Acuerdo de la Comisión Paritaria de 17-I-2025. CVE: BOB-2025a029-(III-19).</li>
     <li><strong>BOB Núm. 223, miércoles 23 de noviembre de 2022</strong> — Resolución que dispone el registro y publicación del Convenio Colectivo Provincial 2021-2024 (firmado el 29 de septiembre de 2022). CVE: BOB-2022a223-(III-280).</li>
@@ -395,7 +701,7 @@
     <li><strong>Boletín Oficial de Bizkaia (BOB)</strong> — bizkaia.eus / Boletín Oficial — para consulta y verificación independiente.</li>
   </ul>
 
-  <h2>Comparativa con otros convenios provinciales de Limpieza</h2>
+  <h2 id="comparativa">Comparativa con otros convenios provinciales de Limpieza</h2>
   <p>Bizkaia comparado con otros convenios provinciales de Limpieza analizados en SalarioJusto:</p>
 
   <div class="card" style="padding:16px;">
@@ -418,7 +724,7 @@
   </div>
   <p style="font-size:12.5px;color:var(--ink-lighter);">Bizkaia destaca en cuatro dimensiones frente al resto de convenios provinciales analizados: (1) jornada anual más reducida, (2) antigüedad escalada con curva más generosa, (3) ningún trabajador bajo SMI, y (4) cláusula IPC automática que mantiene actualizada la tabla salarial sin necesidad de renegociación. Estas cuatro características explican por qué la categoría de Limpiador/a en Bizkaia cobra alrededor de 2.000 € brutos anuales más que en Las Palmas, Málaga o Madrid pese a tener menor jornada anual.</p>
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
 
   <h3>¿Cuál es el salario de una persona limpiadora en Bizkaia en 2026?</h3>
   <p>Según la tabla 2025 del convenio provincial (en aplicación durante 2026 por cláusula IPC automática), la categoría de Limpiador/a percibe 1.249,67 € de salario base mensual cuando el mes tiene 31 días, o 1.209,36 € cuando tiene 30 días, equivalente a 40,31 €/día. El bruto anual con 12 mensualidades de salario base más 3 pagas extras de 30 días cada una asciende a <strong>18.140,40 €</strong>, claramente por encima del SMI 2026 (16.576 €). A esto se suman pluses como turnicidad (38,14 €/mes para quienes hacen 2 o más turnos), transporte (3,12 €/día efectivo trabajado) y antigüedad escalada por trienios.</p>
@@ -443,6 +749,25 @@
     <li><strong>Cuando la empresa no paga</strong>, la papeleta de conciliación ante PRECO (Servicio Vasco de Resolución de Conflictos) es el siguiente paso obligatorio. Gratuita, rápida, <strong>interrumpe el plazo de prescripción de 1 año por mensualidad</strong> (art. 59.2 ET) y abre la vía judicial si no hay acuerdo en el acto.</li>
   </ol>
   <p>Asesoría sindical gratuita disponible en Adelbi, CCOO Irakaskuntza, ELA, LAB y UGT-Euskadi para personas afiliadas. Convenio inscrito en REGCON con código <code style="font-family:monospace;font-size:13px;">48001205011981</code>. <a href="/reclamar-diferencias-salariales-convenio.html">Guía completa para reclamar diferencias →</a></p>
+
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">PRECO paso a paso: mediación gratuita del País Vasco</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>El <strong>PRECO</strong> (Procedimiento de Resolución Extrajudicial de Conflictos) es el sistema oficial de mediación laboral del País Vasco, regulado por Decreto 88/2000 del Gobierno Vasco (publicado en el BOPV Núm. 66 de 4 de abril de 2000). El propio Art. 2 del convenio provincial de limpieza remite a este mecanismo como paso previo a cualquier vía judicial. Estas son las fases reales del procedimiento cuando reclamas diferencias salariales o incumplimientos:</p>
+      <table style="margin:14px 0;">
+        <thead><tr><th>Paso</th><th>Qué haces</th><th>Plazo</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">1. Solicitud</td><td>Presentas papeleta en el Registro del CRL (Consejo Relaciones Laborales, Alameda Recalde 62, Bilbao) o telemáticamente. Debes identificar a la empresa, la naturaleza del conflicto y la cuantía reclamada.</td><td class="num">Gratuito · sin plazo (interrumpe prescripción desde el registro)</td></tr>
+          <tr><td class="cat">2. Convocatoria</td><td>El CRL cita a la empresa y a la persona reclamante en un plazo de 15 días desde la solicitud. La citación se hace por escrito con acuse de recibo.</td><td class="num">15 días naturales</td></tr>
+          <tr><td class="cat">3. Acto de mediación</td><td>Reunión ante mediador designado por el CRL. Puede durar de 30 minutos a varias horas según complejidad. Ambas partes pueden ir con asesor sindical o abogado.</td><td class="num">1 sesión (extensible)</td></tr>
+          <tr><td class="cat">4. Acta</td><td>Se firma acta con acuerdo o desacuerdo. Con acuerdo: título ejecutivo directo, la empresa debe pagar. Sin acuerdo: se levanta acta de "intentado sin efecto" y queda abierta la vía judicial.</td><td class="num">Mismo día</td></tr>
+          <tr><td class="cat">5. Judicial (solo si desacuerdo)</td><td>Con el acta PRECO en la mano, presentas demanda ante el Juzgado de lo Social de Bilbao. El PRECO ya cubrió el trámite obligatorio de conciliación previa.</td><td class="num">20 días desde el acta</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Ventajas del PRECO frente al SMAC (Sección de Mediación y Conciliación) tradicional:</strong> mayor especialización sectorial de los mediadores del CRL, presencia efectiva de los sindicatos vascos (ELA, LAB, CCOO Industria, UGT-Euskadi) en la Comisión de Seguimiento, y una tradición de resolución dialogada del conflicto colectivo que hace que muchos casos individuales terminen con acuerdo en el propio acto. En el sector de limpieza en Bizkaia, la tasa de acuerdo ronda el 60% en reclamaciones de diferencias salariales por debajo de 3.000 € según la memoria anual del CRL.</p>
+      <p><strong>Qué llevar al acto:</strong> nóminas de los meses reclamados (originales o fotocopias), tabla salarial del convenio 2025 (BOB 29/2025), cálculo mes a mes de las diferencias, contrato de trabajo, y si tienes trienios consolidados también la documentación de subrogaciones previas para acreditar antigüedad.</p>
+    </div>
+  </details>
 <div class="eeat-firma" style="margin-top:36px;padding:24px;background:var(--cream-100);border:1px solid var(--cream-200);">
     <!-- eeat-firma -->
     <h2 style="font-size:18px;border:none;padding:0;margin:0 0 10px;font-family:'DM Serif Display',serif;font-weight:400;">Quién audita esto</h2>
