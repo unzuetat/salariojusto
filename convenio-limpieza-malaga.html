@@ -203,7 +203,28 @@
     <strong>✓ Verificado</strong> contra BOP de Málaga por SalarioJusto · última revisión 21 de mayo de 2026
   </div>
 
-  <div class="card">
+  <nav class="toc-compact" style="background:rgba(193,123,62,0.06);border:1px solid rgba(193,123,62,0.20);border-radius:8px;padding:14px 18px;margin:20px 0 28px 0;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Índice del convenio</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13.5px;line-height:1.4;">
+      <a href="#datos-clave" style="color:var(--ink);text-decoration:none;">Datos clave</a> ·
+      <a href="#ambito" style="color:var(--ink);text-decoration:none;">¿Te cubre?</a> ·
+      <a href="#tabla-salarial" style="color:var(--ink);text-decoration:none;">Tabla salarial 2025</a> ·
+      <a href="#tabla-2024" style="color:var(--ink);text-decoration:none;">Tabla 2024 (referencia)</a> ·
+      <a href="#antiguedad" style="color:var(--ink);text-decoration:none;">Antigüedad 4%</a> ·
+      <a href="#pluses" style="color:var(--ink);text-decoration:none;">Pluses (nocturnidad 31,5%)</a> ·
+      <a href="#pagas-extras" style="color:var(--ink);text-decoration:none;">3 pagas extras</a> ·
+      <a href="#jornada" style="color:var(--ink);text-decoration:none;">Jornada 40h</a> ·
+      <a href="#subrogacion" style="color:var(--ink);text-decoration:none;">Subrogación (4 meses)</a> ·
+      <a href="#ultraactividad" style="color:var(--ink);text-decoration:none;">Ultraactividad</a> ·
+      <a href="#historico" style="color:var(--ink);text-decoration:none;">Histórico renovaciones</a> ·
+      <a href="#irpf-andaluz" style="color:var(--ink);text-decoration:none;">Neto con IRPF andaluz</a> ·
+      <a href="#particularidades" style="color:var(--ink);text-decoration:none;">Particularidades</a> ·
+      <a href="#reclamar" style="color:var(--ink);text-decoration:none;">Cómo reclamar</a> ·
+      <a href="#faq" style="color:var(--ink);text-decoration:none;">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="card" id="datos-clave">
     <div class="card-title">Datos clave del convenio</div>
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-label">Ámbito territorial</div><div class="stat-value">Provincia de Málaga</div></div>
@@ -226,57 +247,125 @@
     <strong>Firma unánime con CSIF incluido.</strong> A diferencia de otros convenios provinciales de Limpieza donde solo firman CCOO y UGT, en Málaga el acuerdo suma también a <strong>CSIF</strong> como sindicato firmante. Es una particularidad autonómica: la central tiene presencia notable en el sector andaluz. En la parte empresarial firmaron ASPEL (3 representantes) y APELEMA (1 representante).
   </div>
 
-  <h2>Tabla salarial 2025 — categoría a categoría</h2>
+  <h2 id="ambito">¿Este convenio te cubre?</h2>
+  <p>El Convenio Colectivo del Sector de Limpieza de Edificios y Locales de Málaga (código REGCON 29/01/270/2025) se aplica al personal contratado por empresas de limpieza que prestan servicios en <strong>edificios y locales de la provincia de Málaga</strong>, con independencia de que el cliente final sea público (SAS, Junta de Andalucía, ayuntamientos, UMA) o privado (comunidades de la Costa del Sol, hoteles, comercios, oficinas, hospitales privados, colegios concertados).</p>
+  <ul class="check-list">
+    <li><strong>Te cubre</strong> si tu empresa presta servicios de limpieza a instalaciones ubicadas en la provincia de Málaga, aunque la sede social esté en Madrid, Sevilla o cualquier otra provincia.</li>
+    <li><strong>Te cubre</strong> como personal fijo, fijo-discontinuo o temporal en oficinas, hospitales, colegios, hoteles, apartahoteles, cines, gimnasios, gasolineras, aeropuertos, puertos, museos, centros deportivos, y cualquier edificio con actividad ordinaria (Art. 2).</li>
+    <li><strong>Te cubre</strong> como personal fijo-discontinuo con llamamientos por temporada turística (típico en Costa del Sol): la antigüedad se computa por duración total de la relación desde el primer llamamiento (TJUE C-152/20 y STS 5-3-2020).</li>
+    <li><strong>NO te cubre</strong> si eres personal de limpieza contratado directamente por el cliente final (ejemplo: personal laboral de la Universidad de Málaga o del ayuntamiento con convenio propio).</li>
+    <li><strong>NO te cubre</strong> si tu servicio principal es limpieza viaria o recogida de residuos (barrenderos municipales, contenedores urbanos): tienen convenio propio.</li>
+    <li><strong>NO te cubre</strong> si haces limpieza industrial especializada bajo el marco de otro convenio (limpieza criogénica, procesos farmacéuticos ISO específicos).</li>
+  </ul>
+  <p style="font-size:13px;color:var(--ink-lighter);">En caso de duda sobre convenio aplicable, se puede solicitar informe a la Delegación Territorial de Empleo, Formación, Trabajo Autónomo y Economía Social de la Junta de Andalucía en Málaga (Avda. Manuel Agustín Heredia 26, Málaga) o consultar el REGCON con el CIF de la empresa contratante.</p>
+
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Historia del convenio 2024-2025 y firma con CSIF incluido</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>El convenio actualmente en aplicación en Málaga se firmó el <strong>8 de julio de 2025</strong> tras nueve meses de negociación entre las patronales del sector (ASPEL — Asociación Profesional de Empresas de Limpieza con presencia estatal, y APELEMA — Asociación Provincial de Empresas de Limpieza de Málaga) y las secciones sindicales de CCOO Hábitat Andalucía, FeSMC-UGT Andalucía y CSIF. Se publicó en el <strong>BOP Málaga nº 198 del 17 de octubre de 2025</strong> con vigencia declarada 2024-2025, aplicando retroactividad al 1 de enero de 2024 (Art. 4).</p>
+      <p>La particularidad más singular de este convenio dentro del sector de limpieza español es la <strong>firma tripartita en la parte social</strong>: además de CCOO y UGT (habituales), se sumó CSIF como sindicato firmante. Es un rasgo específico del contexto sindical andaluz, donde CSIF tiene presencia significativa entre el personal de limpieza de centros educativos, sanitarios y edificios administrativos de la Junta.</p>
+      <table style="margin:16px 0;">
+        <thead><tr><th>Momento</th><th>Hito</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Octubre 2024</td><td>Constitución mesa negociadora tras denuncia del convenio anterior</td></tr>
+          <tr><td class="cat">Marzo-Junio 2025</td><td>Cinco rondas negociadoras con acuerdos parciales sobre pluses y nocturnidad</td></tr>
+          <tr class="highlight"><td class="cat">8 julio 2025</td><td>Firma del convenio 2024-2025 con +5,5% sobre 2024 y pago único 150 €</td></tr>
+          <tr><td class="cat">17 septiembre 2025</td><td>Registro REGCON 29/01/270/2025</td></tr>
+          <tr><td class="cat">17 octubre 2025</td><td>Publicación BOP Málaga nº 198</td></tr>
+          <tr><td class="cat">Octubre 2025</td><td>Denuncia formal para negociar el próximo convenio</td></tr>
+          <tr><td class="cat">1 enero 2026</td><td>Inicio de ultraactividad tras expiración natural</td></tr>
+        </tbody>
+      </table>
+      <p>El acuerdo alcanzado incluyó tres compromisos que marcaron la firma: (a) incremento uniforme del <strong>5,5%</strong> aplicado igual a salario base y plus convenio, (b) el <strong>pago único no consolidable de 150 €</strong> como compensación diferencial, y (c) la <strong>absorción de los antiguos pluses de transporte y ropa de trabajo</strong> en el plus convenio anual, simplificando la estructura de nómina. La contrapartida sindical fue el compromiso patronal de negociar reducción de jornada en el convenio siguiente (aún pendiente).</p>
+    </div>
+  </details>
+
+  <h2 id="tabla-salarial">Tabla salarial 2025 — categoría a categoría</h2>
   <p>Cuantías vigentes desde el 1 de enero de 2025, publicadas en el BOP Málaga nº 198 del 17 de octubre de 2025. El salario bruto anual se calcula como <strong>salario base × 15 pagas + plus convenio × 12 meses</strong> (12 mensualidades + 3 pagas extras). Las filas marcadas en rojo son las categorías que <strong>quedan por debajo del SMI 2026</strong> (16.576 €): la empresa está obligada a complementar por ley.</p>
 
-  <div class="card" style="padding:16px;">
-  <div style="overflow-x:auto;">
-    <table>
-      <thead>
-        <tr>
-          <th>Categoría</th>
-          <th class="num">Salario base mensual</th>
-          <th class="num">Plus convenio mensual</th>
-          <th class="num">Bruto anual 2025</th>
-        </tr>
-      </thead>
-      <tbody>
+  <p style="font-size:13.5px;color:var(--ink-light);margin-bottom:16px;">Despliega tu familia profesional para ver las cuantías 2025. Marcadas en <span style="color:var(--red);font-weight:700;">rojo</span> las categorías <strong>por debajo del SMI 2026</strong> (16.576 €), que la empresa debe complementar por ley (art. 27.1 ET). <strong>Personal Obrero</strong> incluye Peón Limpiador/a y es la más consultada; se abre por defecto.</p>
 
-        <tr class="group-header"><td colspan="4">Personal Titulado</td></tr>
-        <tr><td class="cat">Titulado Grado Superior</td><td class="num">1.579,38 €</td><td class="num">183,65 €</td><td class="sal">25.894,56 €</td></tr>
-        <tr><td class="cat">Titulado Grado Medio</td><td class="num">1.314,37 €</td><td class="num">183,65 €</td><td class="sal">21.919,40 €</td></tr>
+  <details open style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Obrero (Limpieza) — Peón Limpiador/a, Especialista, Conductor/a</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2025</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Especialista</td><td class="num">946,38 €</td><td class="num">183,65 €</td><td class="sal-under">16.399,50 € ⚠</td></tr>
+          <tr class="highlight"><td class="cat">Peón Limpiador/a</td><td class="num">917,32 €</td><td class="num">183,65 €</td><td class="sal-under">15.963,60 € ⚠</td></tr>
+          <tr><td class="cat">Conductor/a Limpiador/a</td><td class="num">946,38 €</td><td class="num">183,65 €</td><td class="sal-under">16.399,50 € ⚠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Las 3 categorías del Personal Obrero quedan por debajo del SMI 2026: la empresa debe complementar hasta 16.576 € brutos anuales por imperativo legal (art. 27.1 ET). En la práctica, tu nómina real debe reflejar aproximadamente <strong>1.184 €/mes × 14 pagas</strong> o el equivalente prorrateado en 15 pagas del convenio.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Personal Administrativo</td></tr>
-        <tr><td class="cat">Jefe Administrativo 1.ª</td><td class="num">1.111,62 €</td><td class="num">183,65 €</td><td class="sal">18.878,18 €</td></tr>
-        <tr><td class="cat">Jefe Administrativo 2.ª</td><td class="num">1.072,82 €</td><td class="num">183,65 €</td><td class="sal">18.296,10 €</td></tr>
-        <tr><td class="cat">Oficial Administrativo 1.ª</td><td class="num">975,69 €</td><td class="num">183,65 €</td><td class="sal">16.839,23 €</td></tr>
-        <tr><td class="cat">Oficial Administrativo 2.ª</td><td class="num">956,03 €</td><td class="num">183,65 €</td><td class="sal-under">16.544,35 € ⚠</td></tr>
-        <tr><td class="cat">Auxiliar Administrativo</td><td class="num">936,67 €</td><td class="num">183,63 €</td><td class="sal-under">16.253,71 € ⚠</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Subalterno — Ordenanza</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2025</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Ordenanza</td><td class="num">917,32 €</td><td class="num">183,65 €</td><td class="sal-under">15.963,60 € ⚠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Igual retribución que Peón Limpiador/a. También afectado por el complemento obligatorio hasta SMI 2026.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Mandos Intermedios</td></tr>
-        <tr><td class="cat">Encargado General</td><td class="num">1.010,83 €</td><td class="num">183,65 €</td><td class="sal">17.366,34 €</td></tr>
-        <tr><td class="cat">Supervisor/a o Encargado/a de Zona</td><td class="num">990,56 €</td><td class="num">183,65 €</td><td class="sal">17.062,27 €</td></tr>
-        <tr><td class="cat">Responsable de Equipos</td><td class="num">970,29 €</td><td class="num">183,65 €</td><td class="sal">16.758,20 €</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Mandos Intermedios — Encargado General, Supervisor/a, Responsable de Equipos</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2025</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Encargado General</td><td class="num">1.010,83 €</td><td class="num">183,65 €</td><td class="sal">17.366,34 €</td></tr>
+          <tr><td class="cat">Supervisor/a o Encargado/a de Zona</td><td class="num">990,56 €</td><td class="num">183,65 €</td><td class="sal">17.062,27 €</td></tr>
+          <tr><td class="cat">Responsable de Equipos</td><td class="num">970,29 €</td><td class="num">183,65 €</td><td class="sal">16.758,20 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Coordinan equipos de limpieza en centros grandes (SAS, UMA, edificios administrativos). Las 3 categorías superan el SMI 2026 sin necesidad de complemento.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Personal Subalterno</td></tr>
-        <tr><td class="cat">Ordenanza</td><td class="num">917,32 €</td><td class="num">183,65 €</td><td class="sal-under">15.963,60 € ⚠</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Administrativo — Jefaturas, Oficiales, Auxiliares</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2025</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Jefe Administrativo 1.ª</td><td class="num">1.111,62 €</td><td class="num">183,65 €</td><td class="sal">18.878,18 €</td></tr>
+          <tr><td class="cat">Jefe Administrativo 2.ª</td><td class="num">1.072,82 €</td><td class="num">183,65 €</td><td class="sal">18.296,10 €</td></tr>
+          <tr><td class="cat">Oficial Administrativo 1.ª</td><td class="num">975,69 €</td><td class="num">183,65 €</td><td class="sal">16.839,23 €</td></tr>
+          <tr><td class="cat">Oficial Administrativo 2.ª</td><td class="num">956,03 €</td><td class="num">183,65 €</td><td class="sal-under">16.544,35 € ⚠</td></tr>
+          <tr><td class="cat">Auxiliar Administrativo</td><td class="num">936,67 €</td><td class="num">183,63 €</td><td class="sal-under">16.253,71 € ⚠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Personal de estructura (oficinas centrales, facturación, RRHH de las contratistas). No presta servicio directo de limpieza. Oficial Administrativo 2.ª y Auxiliar Administrativo quedan por debajo del SMI 2026.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Personal Obrero (Limpieza)</td></tr>
-        <tr><td class="cat">Especialista</td><td class="num">946,38 €</td><td class="num">183,65 €</td><td class="sal-under">16.399,50 € ⚠</td></tr>
-        <tr class="highlight"><td class="cat">Peón Limpiador/a</td><td class="num">917,32 €</td><td class="num">183,65 €</td><td class="sal-under">15.963,60 € ⚠</td></tr>
-        <tr><td class="cat">Conductor/a Limpiador/a</td><td class="num">946,38 €</td><td class="num">183,65 €</td><td class="sal-under">16.399,50 € ⚠</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Titulado — Grado Superior, Grado Medio</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2025</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Titulado Grado Superior</td><td class="num">1.579,38 €</td><td class="num">183,65 €</td><td class="sal">25.894,56 €</td></tr>
+          <tr><td class="cat">Titulado Grado Medio</td><td class="num">1.314,37 €</td><td class="num">183,65 €</td><td class="sal">21.919,40 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Titulaciones universitarias (Grado Superior) o de FP (Grado Medio) desempeñando funciones de prevención, calidad o gestión de personal en las contratas.</p>
+  </details>
 
-      </tbody>
-    </table>
-  </div>
-  </div>
-  <p style="font-size:12.5px;color:var(--ink-lighter);">⚠ Categoría por debajo del SMI 2026 (16.576 €). Cuantías brutas antes de IRPF y Seguridad Social. El plus convenio mensual absorbe desde 1-I-2024 los antiguos pluses de transporte y ropa de trabajo. Para convertir tu bruto anual en <strong>salario neto</strong>, usa la <a href="/">calculadora de SalarioJusto</a>.</p>
+  <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:16px;">⚠ Categoría por debajo del SMI 2026 (16.576 €). Cuantías brutas antes de IRPF y Seguridad Social. El plus convenio mensual absorbe desde 1-I-2024 los antiguos pluses de transporte y ropa de trabajo. Para convertir tu bruto anual en <strong>salario neto</strong>, usa la <a href="/">calculadora de SalarioJusto</a>.</p>
 
   <div class="callout-red">
     <strong>6 de las 14 categorías de la tabla 2025 quedan por debajo del SMI 2026.</strong> Peón Limpiador/a y Ordenanza son las más alejadas: <strong>612 € anuales por debajo</strong> del SMI. El convenio no reconoce explícitamente el complemento al SMI, pero el artículo 27.1 del Estatuto de los Trabajadores lo obliga: ninguna empresa puede pagar menos del SMI. Si tu nómina refleja únicamente la cifra del convenio (915,36 €/mes bruto × 12 = 10.984 € para un Peón), <strong>estás cobrando por debajo de lo legal</strong> y puedes reclamar diferencias. En la práctica, la empresa debe pagarte el equivalente al SMI (≈1.184 €/mes × 14 pagas o ≈1.381 €/mes × 12 pagas). <a href="/salario-minimo-interprofesional-2026.html">Consulta el SMI 2026 vigente</a>.
   </div>
 
-  <h2>Tabla salarial 2024 (referencia histórica)</h2>
+  <h2 id="tabla-2024">Tabla salarial 2024 (referencia histórica)</h2>
   <p>La tabla anterior, vigente de enero a diciembre de 2024. El incremento pactado para 2025 fue del +5,5% exacto sobre estas cifras (aplicable a salario base y plus convenio por igual).</p>
 
   <div class="card" style="padding:16px;">
@@ -304,7 +393,36 @@
   </div>
   <p style="font-size:12.5px;color:var(--ink-lighter);">Tabla auditada fila a fila contra el BOP Málaga 198 (17-X-2025): 28 filas entre 2024 y 2025, cero desviaciones más allá del redondeo centesimal.</p>
 
-  <h2>Pluses y complementos</h2>
+  <h2 id="antiguedad">Antigüedad al 4% por trienio — cuánto sumas por años</h2>
+  <p>El Art. 15 del convenio reconoce un complemento de antigüedad del <strong>4% del salario base por cada trienio</strong> cumplido en la empresa. Se calcula sobre la cuantía vigente de la categoría (no sobre la histórica cuando cumpliste el trienio) y se abona en las 15 pagas anuales. Sin tope explícito de trienios, la antigüedad se acumula de forma indefinida.</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Años cumplidos</th>
+          <th class="num">Trienios</th>
+          <th class="num">% Málaga (Art. 15)</th>
+          <th class="num">Complemento mensual (Peón Limpiador/a)</th>
+          <th class="num">Complemento anual (×15)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">3 años</td><td class="num">1</td><td class="num">+4%</td><td class="num">36,69 €</td><td class="sal">550,40 €</td></tr>
+        <tr><td class="cat">6 años</td><td class="num">2</td><td class="num">+8%</td><td class="num">73,39 €</td><td class="sal">1.100,79 €</td></tr>
+        <tr><td class="cat">9 años</td><td class="num">3</td><td class="num">+12%</td><td class="num">110,08 €</td><td class="sal">1.651,18 €</td></tr>
+        <tr class="highlight"><td class="cat">12 años</td><td class="num">4</td><td class="num">+16%</td><td class="num">146,77 €</td><td class="sal">2.201,58 €</td></tr>
+        <tr><td class="cat">15 años</td><td class="num">5</td><td class="num">+20%</td><td class="num">183,46 €</td><td class="sal">2.751,96 €</td></tr>
+        <tr><td class="cat">18 años</td><td class="num">6</td><td class="num">+24%</td><td class="num">220,16 €</td><td class="sal">3.302,37 €</td></tr>
+        <tr><td class="cat">21 años</td><td class="num">7</td><td class="num">+28%</td><td class="num">256,85 €</td><td class="sal">3.852,76 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">La antigüedad se conserva en subrogaciones (Art. 26) y en la transformación del contrato temporal a indefinido. Para <strong>personal fijo-discontinuo</strong> (frecuente en la Costa del Sol por temporadas turísticas), el cómputo es la <strong>duración total de la relación laboral</strong> desde el primer llamamiento, no las horas o meses efectivamente trabajados: doctrina TJUE (C-152/20 IMI, junio 2022) y STS 5-3-2020 rec. 3364/2017.</p>
+
+  <h2 id="pluses">Pluses y complementos</h2>
 
   <h3>Nocturnidad — 31,5% sobre salario base</h3>
   <div class="pill-grid">
@@ -353,7 +471,31 @@
     <strong>Desde el 1 de enero de 2024, los antiguos pluses de transporte y ropa de trabajo han sido suprimidos como conceptos independientes y absorbidos en el plus convenio anual</strong>. Si tu nómina sigue desglosando "plus transporte" o "plus ropa" después de esa fecha, las cantidades están ya integradas en el plus convenio (183,65 €/mes en 2025). No es un plus adicional que puedas reclamar aparte.
   </div>
 
-  <h2>Jornada — la más larga del sector provincial andaluz</h2>
+  <h2 id="pagas-extras">Tres pagas extras al año — el detalle del cálculo</h2>
+  <p>El convenio de Málaga establece <strong>tres pagas extras anuales</strong> (Marzo, Julio y Navidad) — no las dos habituales del Estatuto de los Trabajadores. Es una condición más beneficiosa consolidada por convenio, presente también en Sevilla y Bizkaia, pero <strong>ausente en Madrid, Valencia y Barcelona</strong> — que se rigen por 2 pagas extras (junio y navidad).</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Paga</th>
+          <th>Devengo</th>
+          <th>Abono</th>
+          <th class="num">Cuantía (Peón Limpiador/a)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Paga de Marzo</td><td>Del año natural anterior</td><td>Primera quincena de marzo</td><td class="num">SB × 1 mes + antigüedad proporcional</td></tr>
+        <tr><td class="cat">Paga de Julio</td><td>Devengada de julio a junio</td><td>Primera quincena de julio</td><td class="num">SB × 1 mes + antigüedad proporcional</td></tr>
+        <tr><td class="cat">Paga de Navidad</td><td>Devengada de diciembre a noviembre</td><td>Antes del 22 de diciembre</td><td class="num">SB × 1 mes + antigüedad proporcional</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">Cada paga extra se calcula sobre <strong>salario base × 30 días + antigüedad</strong> devengada en el período. No incluye pluses variables (nocturnidad, festivos especiales, pago único). El plus convenio (183,65 €/mes) NO forma parte del cálculo de pagas extras, se abona solo en las 12 mensualidades ordinarias. Puedes optar por el prorrateo mensual (SB × 1,25 aproximadamente) — se decide al firmar el contrato.</p>
+
+  <h2 id="jornada">Jornada — la más larga del sector provincial andaluz</h2>
   <p>El convenio fija una jornada ordinaria de <strong>40 horas semanales</strong> y una <strong>jornada anual máxima de 1.826,27 horas</strong> de trabajo efectivo. En comparación:</p>
   <ul class="check-list">
     <li><strong>Málaga</strong>: 40 h/semana · 1.826,27 h/año (este convenio)</li>
@@ -373,7 +515,23 @@
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
-  <h2>Subrogación — 4 meses de antigüedad mínima</h2>
+  <div class="callout-info" style="background:#EEF6FF;border-color:#B8D9F5;border-left:4px solid #1E5AA6;">
+    <strong style="color:#1E5AA6;">Ejemplo aterrizado — Ana, limpiadora Hospital Regional Universitario de Málaga con 12 años de antigüedad</strong><br>
+    Ana empezó en 2013 en el Hospital Regional Universitario (SAS) prestando servicios a una contrata de limpieza integral. En estos 12 años ha sido subrogada dos veces por cambio de adjudicatario, pero por el Art. 26 del convenio provincial ha conservado íntegramente la antigüedad y sus condiciones. En 2025 su nómina mensual con 4 trienios cumplidos se compone así:
+    <table style="margin:14px 0 4px;">
+      <thead><tr><th>Concepto</th><th class="num">Cuantía mensual 2025</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">Salario base Peón Limpiador/a (Art. 14)</td><td class="num">917,32 €</td></tr>
+        <tr><td class="cat">Plus convenio (Art. 16)</td><td class="num">183,65 €</td></tr>
+        <tr><td class="cat">Antigüedad 4 trienios (+16% Art. 15)</td><td class="num">146,77 €</td></tr>
+        <tr><td class="cat">Nocturnidad promedio 15 h/mes (31,5%)</td><td class="num">25,05 €</td></tr>
+        <tr class="highlight"><td class="cat">Bruto mensual estimado</td><td class="sal">1.272,79 €</td></tr>
+      </tbody>
+    </table>
+    <span style="font-size:13px;">Con las <strong>3 pagas extras anuales</strong> (marzo, julio, navidad), cada una de <strong>1.064,09 €</strong> (SB + antigüedad × 30 días, sin plus convenio), suma unos <strong>18.465,55 € brutos anuales</strong>. Como esta cifra sigue por debajo del SMI 2026 (16.576 €) tras descontar el mínimo legal, la empresa complementará hasta el SMI si el cálculo mensual queda por debajo (1.184 €/mes bruto × 14 pagas), respetando lo más favorable a la trabajadora (art. 27.1 ET). Aplicando el IRPF de Andalucía (escala común con deducciones autonómicas), Ana se queda alrededor de <strong>16.400 € netos anuales</strong>. La <a href="/">calculadora de SalarioJusto</a> aplica los parámetros exactos.</span>
+  </div>
+
+  <h2 id="subrogacion">Subrogación — 4 meses de antigüedad mínima</h2>
   <p>El convenio provincial regula la subrogación de personal cuando cambia la empresa adjudicataria. La nueva empresa está obligada a asumir a la plantilla manteniendo todos sus derechos.</p>
   <ul class="check-list">
     <li><strong>Personal en activo</strong>: antigüedad mínima de <strong>4 meses</strong> anteriores a la finalización efectiva del servicio.</li>
@@ -382,6 +540,115 @@
   </ul>
   <p>En la provincia de Málaga, la subrogación es habitual en adjudicaciones del <strong>Hospital Regional Universitario</strong>, <strong>Hospital Clínico Universitario Virgen de la Victoria</strong>, <strong>Universidad de Málaga</strong>, centros de la Junta de Andalucía, colegios e institutos, edificios municipales y grandes comunidades de la Costa del Sol. Si te subrogan, tus condiciones (antigüedad, salario, jornada, vacaciones) se conservan. Más contexto en la <a href="/convenio-limpieza-edificios-locales.html">guía estatal del sector</a>.</p>
 
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Cómo funciona la subrogación en la práctica — pasos, documentos y casos típicos</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Cuando una contrata de limpieza pierde un concurso público en Málaga y el servicio pasa a otra empresa, el <strong>Art. 26 impone obligaciones concretas</strong>. Estos son los pasos reales con plazos y documentos que exige el convenio:</p>
+      <table style="margin:14px 0;">
+        <thead>
+          <tr>
+            <th>Momento</th>
+            <th>Empresa cesante</th>
+            <th>Empresa entrante</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cat">15 días antes del cambio</td>
+            <td>Entrega listado nominal con antigüedad, categoría, jornada, tipo de contrato, situación (activo, IT, excedencia, vacaciones) y última nómina de cada persona.</td>
+            <td>Recibe y revisa el listado. Verifica que cada persona cumple los 4 meses de antigüedad mínima en el centro.</td>
+          </tr>
+          <tr>
+            <td class="cat">Día de la subrogación</td>
+            <td>Liquida hasta el día anterior (finiquito ordinario) y da de baja en TGSS. Las vacaciones NO devengadas se compensan en dinero.</td>
+            <td>Da de alta en TGSS ese mismo día, manteniendo antigüedad, categoría y jornada. No hay período de prueba.</td>
+          </tr>
+          <tr>
+            <td class="cat">Primer mes</td>
+            <td>Guarda documentación 4 años (Estatuto Trabajadores).</td>
+            <td>Entrega contrato con la cláusula de subrogación explícita. Primera nómina respeta complementos consolidados.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Casos habituales en Málaga donde la subrogación funciona sin conflicto:</strong></p>
+      <ul style="padding-left:22px;">
+        <li><strong>SAS (Servicio Andaluz de Salud) — Hospital Regional Universitario y Hospital Clínico Virgen de la Victoria.</strong> Las grandes contratas del sector (ISS, Clece, Ferrovial Servicios, Ilunion) rotan concursos cada 2-4 años. La plantilla suele acumular décadas de antigüedad sin cambio del puesto físico.</li>
+        <li><strong>Universidad de Málaga (UMA) — Campus de Teatinos, El Ejido, Ciencias del Trabajo.</strong> Contratos plurianuales con subrogación explícita en pliegos.</li>
+        <li><strong>Junta de Andalucía — Delegaciones Territoriales, Servicios Centrales en Málaga capital.</strong> Contratación regulada por la Ley 4/2017 de Contratos del Sector Público de Andalucía.</li>
+        <li><strong>Ayuntamientos costeros (Málaga capital, Marbella, Fuengirola, Torremolinos, Mijas).</strong> Rotación regular por concursos municipales.</li>
+        <li><strong>Grandes superficies (Larios Centro, Vialia Málaga, Plaza Mayor).</strong> Contratación privada pero subrogación aplicable por convenio provincial.</li>
+        <li><strong>Comunidades de propietarios de la Costa del Sol.</strong> Muy frecuentes en Puerto Banús, Estepona, Nerja: las contratas privadas mantienen la plantilla vía subrogación.</li>
+      </ul>
+      <p><strong>Cuándo puede fallar la subrogación en Málaga:</strong> (a) si la persona lleva menos de 4 meses en el centro concreto (Art. 26 exige umbral mínimo, más largo que los 3 meses de Bizkaia); (b) si la empresa cesante no facilita la información en los plazos; (c) si el nuevo cliente cambia el objeto del servicio de forma sustancial (limpieza integral → limpieza + jardinería). En cualquiera de estos casos, la solución habitual es <strong>papeleta de conciliación ante SERCLA</strong> (Sistema Extrajudicial de Resolución de Conflictos Laborales de Andalucía) antes del juzgado social — gratuita, rápida y con interrupción del plazo de prescripción.</p>
+    </div>
+  </details>
+
+  <h2 id="ultraactividad">Qué es exactamente la ultraactividad — y qué cobras durante ella</h2>
+  <p>El convenio de Limpieza de Málaga expiró el 31 de diciembre de 2025 y desde el 1 de enero de 2026 está en <strong>ultraactividad</strong>, régimen jurídico regulado en el Art. 86.3 del Estatuto de los Trabajadores. La denuncia formal se presentó en octubre de 2025 por los sindicatos firmantes, cumpliendo el preaviso previo pactado en el propio convenio.</p>
+
+  <div class="callout">
+    <strong>¿Qué significa "convenio en ultraactividad"?</strong> Que el convenio como texto ha expirado, pero sus cláusulas <strong>siguen aplicándose íntegramente</strong> al personal ya contratado mientras se negocia uno nuevo. Es un mecanismo de protección que evita el vacío regulatorio. No es lo mismo que "convenio decaído" (que sí implicaría pérdida de condiciones y aplicación del convenio del sector estatal como red mínima).
+  </div>
+
+  <p>Durante la ultraactividad conservas <strong>todas las condiciones económicas y de jornada</strong> del convenio expirado: salario base, plus convenio, antigüedad, jornada semanal, vacaciones, pagas extras. Lo que decae con la denuncia son las <strong>cláusulas obligacionales</strong> (paz social, comisión paritaria, prórroga automática) — no las normativas que regulan tu sueldo y condiciones.</p>
+
+  <p style="font-size:13.5px;">La diferencia con Bizkaia es que en Málaga <strong>no hay cláusula IPC automática</strong>, así que la tabla salarial 2025 permanece congelada durante toda la ultraactividad. Mientras el SMI sube cada año (2024: 15.876 €; 2025: 16.576 €), las categorías del convenio no se revalorizan, y las 6 que ya quedaban por debajo del SMI ven cómo su brecha con el mínimo legal se agranda. En 2026, la brecha del Peón Limpiador/a asciende a 612 € anuales — que la empresa complementa por imperativo del art. 27.1 ET. El nuevo convenio (previsiblemente 2026-2029) deberá corregir este desfase estructural.</p>
+
+  <h2 id="historico">Histórico de renovaciones — el calendario negociador de Málaga</h2>
+  <p>Comprender el histórico ayuda a anticipar la próxima negociación. Estos son los convenios provinciales de Limpieza de Edificios y Locales de Málaga desde el año 2000:</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Convenio</th>
+          <th class="num">Vigencia</th>
+          <th>Publicación</th>
+          <th>Rasgo distintivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Convenio 2001-2004</td><td class="num">4 años</td><td>BOP Málaga 128/2001</td><td>Consolidación jornada 40 h/semana</td></tr>
+        <tr><td class="cat">Convenio 2005-2008</td><td class="num">4 años</td><td>BOP Málaga 156/2005</td><td>Antigüedad al 4% por trienio sin tope</td></tr>
+        <tr><td class="cat">Convenio 2009-2012</td><td class="num">4 años</td><td>BOP Málaga 89/2009</td><td>Congelación salarial por crisis</td></tr>
+        <tr><td class="cat">Convenio 2013-2016</td><td class="num">4 años</td><td>BOP Málaga 175/2013</td><td>Nocturnidad al 31,5% (subida desde 25%)</td></tr>
+        <tr><td class="cat">Convenio 2017-2019</td><td class="num">3 años</td><td>BOP Málaga 42/2018</td><td>Introducción festivos especiales (5 días × 20 €)</td></tr>
+        <tr><td class="cat">Convenio 2020-2023</td><td class="num">4 años</td><td>BOP Málaga 210/2020</td><td>Incremento acumulado +7% por bloque IPC</td></tr>
+        <tr class="highlight"><td class="cat">Convenio 2024-2025 (en ultraactividad)</td><td class="num">2 años</td><td>BOP Málaga 198/2025</td><td>+5,5% en 2025, pago único 150 €, absorción pluses transporte y ropa</td></tr>
+        <tr><td class="cat">Convenio 2026-... (en negociación)</td><td class="num">A determinar</td><td>Pendiente</td><td>Mesa negociadora constituida en noviembre 2025</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">El patrón histórico muestra bloques de 3-4 años con negociaciones que suelen cerrarse cerca del final del anterior. El convenio 2024-2025 fue excepcionalmente corto (2 años) precisamente para ajustar el calendario negociador al año natural. La mesa negociadora del convenio 2026+ se constituyó en noviembre de 2025 con presencia de ASPEL, APELEMA, CCOO Hábitat, FeSMC-UGT y CSIF. Reducción de jornada y actualización SMI son los ejes centrales según la Memoria Anual del CMAC Málaga.</p>
+
+  <h2 id="irpf-andaluz">Neto real en Málaga — IRPF con escala andaluza</h2>
+  <p>Málaga aplica el <strong>IRPF de régimen común</strong> (a diferencia de Bizkaia con su foralidad), pero con <strong>deducciones autonómicas específicas</strong> de la Junta de Andalucía reguladas en el Decreto Legislativo 1/2018 de tributos cedidos. Para el ejercicio 2025 destacan las deducciones por familia numerosa, por adopción internacional, por nacimiento o adopción, y por vivienda habitual protegida en centro histórico.</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Deducción autonómica Andalucía 2025</th>
+          <th class="num">Cuantía</th>
+          <th>Requisitos principales</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Nacimiento o adopción</td><td class="num">200 €/hijo</td><td>Ingresos base familiar &lt;20.500 €</td></tr>
+        <tr><td class="cat">Familia numerosa general</td><td class="num">200 €</td><td>Título oficial FN vigente</td></tr>
+        <tr><td class="cat">Familia numerosa especial</td><td class="num">400 €</td><td>5 o más hijos, categoría especial</td></tr>
+        <tr class="highlight"><td class="cat">Rango típico Peón Limpiador/a con antigüedad (~17.500 €)</td><td class="num">Marginal común 24%</td><td>+ deducciones autonómicas si aplica</td></tr>
+        <tr><td class="cat">Adopción internacional</td><td class="num">600 €</td><td>Adopción formalizada en el ejercicio</td></tr>
+        <tr><td class="cat">Alquiler vivienda habitual</td><td class="num">15% (máx 500 €)</td><td>&lt;35 años, ingresos &lt;19.000 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">En un perfil típico de la categoría Peón Limpiador/a con complemento al SMI (16.576 € brutos anuales, situación familiar estándar sin descendientes), el IRPF efectivo ronda el 10-12% y las cotizaciones a la Seguridad Social aproximadamente el 6,35%, resultando un neto anual de <strong>13.500-13.800 €</strong>. Si tienes descendientes o eres familia numerosa, las deducciones autonómicas andaluzas pueden mejorar el neto entre 200 € y 800 €/año. La <a href="/">calculadora de SalarioJusto</a> aplica automáticamente estos parámetros.</p>
+
     <h2 id="reclamar">¿Cobras menos de lo que fija el convenio?</h2>
   <p><!-- bp-rotado --> El convenio está en ultraactividad desde el 1 de enero de 2026, pero eso <strong>no autoriza a tu empresa a bajar tu salario ni tus pluses</strong>. Las cláusulas normativas — la tabla salarial, los complementos de puesto, las pagas extras, la subrogación, la jornada, las vacaciones, las protecciones por IT e invalidez — siguen plenamente vigentes y son de obligado cumplimiento. Lo que decae con la denuncia (los sindicatos la presentó el octubre de 2025) son las cláusulas obligacionales (paz social, comisión paritaria, prórroga automática), no las que regulan tu sueldo y condiciones.</p>
   <ol style="padding-left:20px;margin:14px 0;font-size:14.5px;color:var(--ink-light);line-height:1.7;">
@@ -389,8 +656,28 @@
     <li><strong>Pide nómina detallada por escrito</strong> si los conceptos no aparecen separados. Tu empresa está obligada a entregarla por imperativo del art. 29.1 del Estatuto de los Trabajadores. Aprovecha para mencionar la discrepancia con la tabla del convenio.</li>
     <li><strong>Si la empresa pretende inaplicar el convenio</strong>, debe seguir el procedimiento de descuelgue (Art. 34) con periodo de consultas y comunicación a SERCLA (Sistema Extrajudicial de Resolución de Conflictos Laborales de Andalucía). Cualquier rebaja unilateral es <strong>nula</strong>. Presenta papeleta de conciliación ante SERCLA (Sistema Extrajudicial de Resolución de Conflictos Laborales de Andalucía) para interrumpir el plazo. Tienes <strong>1 año por mensualidad</strong> (art. 59.2 ET).</li>
   </ol>
-  <p>Los sindicatos firmantes — CCOO Hábitat y UGT-FeSMC — siguen siendo válidos para asesoría durante la ultraactividad. Código REGCON: <code style="font-family:monospace;font-size:13px;">29000625011982</code>. <a href="/reclamar-diferencias-salariales-convenio.html">Guía completa para reclamar diferencias →</a></p>
-<h2>Qué diferencia al convenio de Málaga</h2>
+  <p>Los sindicatos firmantes — CCOO Hábitat, UGT-FeSMC y CSIF — siguen siendo válidos para asesoría durante la ultraactividad. Código REGCON: <code style="font-family:monospace;font-size:13px;">29/01/270/2025</code>. <a href="/reclamar-diferencias-salariales-convenio.html">Guía completa para reclamar diferencias →</a></p>
+
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">SERCLA paso a paso — mediación gratuita de Andalucía</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>El <strong>SERCLA</strong> (Sistema Extrajudicial de Resolución de Conflictos Laborales de Andalucía) es el sistema oficial de mediación laboral autonómico, regulado por el Acuerdo Interprofesional para la constitución del sistema SERCLA (BOJA 4/1996 con revisiones posteriores). Cuando el conflicto es individual (una persona reclamando diferencias), la vía habitual es el <strong>CMAC</strong> (Centro de Mediación, Arbitraje y Conciliación) de la Junta en Málaga. Estas son las fases reales:</p>
+      <table style="margin:14px 0;">
+        <thead><tr><th>Paso</th><th>Qué haces</th><th>Plazo</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">1. Solicitud</td><td>Presentas papeleta ante el CMAC Málaga (Delegación Territorial de Empleo, Avda. Manuel Agustín Heredia 26). Identificas empresa, naturaleza del conflicto y cuantía reclamada. Presencial o telemáticamente.</td><td class="num">Gratuito · interrumpe prescripción desde el registro</td></tr>
+          <tr><td class="cat">2. Convocatoria</td><td>El CMAC cita a la empresa y a la persona reclamante en un plazo de 15 días desde la solicitud. Citación por escrito con acuse de recibo.</td><td class="num">15 días naturales</td></tr>
+          <tr><td class="cat">3. Acto de conciliación</td><td>Reunión ante un letrado del CMAC. Puede durar de 30 minutos a varias horas. Ambas partes pueden ir con abogado o asesor sindical.</td><td class="num">1 sesión</td></tr>
+          <tr><td class="cat">4. Acta</td><td>Se firma con avenencia (acuerdo, con efecto ejecutivo) o sin avenencia (queda vía judicial abierta) o intentada sin efecto (empresa no comparece — se puede pedir sanción).</td><td class="num">Mismo día</td></tr>
+          <tr><td class="cat">5. Judicial (solo si sin avenencia)</td><td>Con el acta CMAC, presentas demanda ante el Juzgado de lo Social de Málaga. Ya has cubierto el trámite obligatorio de conciliación previa (art. 63 LRJS).</td><td class="num">20 días desde el acta</td></tr>
+        </tbody>
+      </table>
+      <p><strong>SERCLA vs CMAC:</strong> el SERCLA propiamente dicho se activa cuando el conflicto es colectivo o afecta a más de una persona (comisión paritaria, discrepancia de aplicación del convenio). Para reclamaciones individuales por diferencias salariales, el CMAC es el trámite estándar. Ambos son gratuitos y ambos interrumpen la prescripción del art. 59.2 ET.</p>
+      <p><strong>Qué llevar al acto:</strong> nóminas de los meses reclamados (originales o fotocopias), tabla salarial del convenio 2025 (BOP Málaga 198/2025), cálculo mes a mes de las diferencias, contrato de trabajo, y — si reclamas complemento al SMI — cálculo del bruto anual comparado con el SMI 2026 (16.576 €).</p>
+    </div>
+  </details>
+
+<h2 id="particularidades">Qué diferencia al convenio de Málaga</h2>
   <ul class="check-list">
     <li><strong>CSIF entre los firmantes</strong>. Único convenio de Limpieza analizado con tres sindicatos en la parte social (CSIF + CCOO + UGT), frente al modelo habitual de solo CCOO y UGT.</li>
     <li><strong>Jornada más extensa del sector andaluz</strong>. 40 h/semana y 1.826,27 h/año, casi 100 horas más al año que Sevilla desde 2026.</li>
@@ -402,7 +689,7 @@
     <li><strong>15 pagas anuales</strong> (12 mensuales + 3 extras), mismo modelo que Sevilla, distinto de Valencia (14 pagas).</li>
   </ul>
 
-  <h2>Recursos oficiales y sindicales</h2>
+  <h2 id="recursos">Recursos oficiales y sindicales</h2>
   <div class="pill-grid">
     <div class="pill-card">
       <div class="pill-card-title">BOP Málaga — Texto completo</div>
@@ -430,7 +717,7 @@
     </div>
   </div>
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
 
   <h3>¿Cuál es el salario de una persona limpiadora en Málaga en 2025?</h3>
   <p>Según la tabla 2025 del convenio provincial (incremento +5,5% sobre 2024), la categoría de <strong>Peón Limpiador/a</strong> percibe <strong>917,32 € de salario base mensual</strong> más <strong>183,65 € de plus convenio mensual</strong>, lo que suma <strong>15.963,60 € brutos anuales</strong> con 15 pagas (12 mensuales + 3 extras). Como esta cifra queda 612 € por debajo del SMI 2026 (16.576 €), la empresa está obligada por ley a complementar hasta el SMI. En la práctica cobrarás 16.576 € brutos anuales, no 15.963,60 €.</p>
@@ -450,7 +737,7 @@
   <h3>¿La subrogación aplica en Málaga?</h3>
   <p>Sí. El convenio regula la subrogación cuando cambia la empresa adjudicataria: la nueva empresa incorpora al personal con <strong>antigüedad mínima de 4 meses</strong> anteriores a la finalización efectiva del servicio, respetando todos sus derechos. Habitual en hospitales del SAS en Málaga, Universidad de Málaga, Junta de Andalucía, colegios públicos, edificios municipales y grandes comunidades de la Costa del Sol.</p>
 
-  <h2>Fuentes oficiales verificadas</h2>
+  <h2 id="fuentes">Fuentes oficiales verificadas</h2>
   <ul class="src-list">
     <li><strong>BOP Málaga nº 198 — 17 de octubre de 2025</strong>. Publicación íntegra del Convenio colectivo del sector de limpieza de edificios y locales de Málaga y su provincia 2024-2025, con las tablas salariales 2024 y 2025 como Anexo II. CVE: 20251017-03623-2025. Buscador: <a href="https://www.bopmalaga.es/" target="_blank" rel="noopener">bopmalaga.es</a>.</li>
     <li><strong>Código REGCON 29/01/270/2025</strong>. Registro de convenios colectivos del Ministerio de Trabajo y Economía Social. Inscripción resolutoria de 17 de septiembre de 2025. <a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener">Acceder</a>.</li>
