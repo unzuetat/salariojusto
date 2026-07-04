@@ -112,10 +112,22 @@ def compute_raw(s: dict) -> float:
 
 
 def compute_thin_score(raw: float, tipo: str) -> int:
-    if tipo in ("home/calculadora", "herramienta", "institucional"):
+    if tipo in ("home/calculadora", "herramienta"):
+        # Calc/home real: cap a 3 (no tiene contenido editorial extenso por diseño)
         if raw < 4: return 1
         if raw < 7: return 2
         return 3
+    if tipo == "institucional":
+        # Institucional: escala normal capada a 8 (permite reflejar sobre.html rico
+        # sin subir a 10 reservado para BOE remixed)
+        if raw >= 22: return 8
+        if raw >= 19: return 7
+        if raw >= 17: return 6
+        if raw >= 14: return 5
+        if raw >= 10: return 4
+        if raw >= 7: return 3
+        if raw >= 4: return 2
+        return 1
     # Bins calibrados contra CSV 28-may (convenio-provincial, guia-legal, plantilla, hub)
     if raw >= 28: return 10
     if raw >= 25: return 9
