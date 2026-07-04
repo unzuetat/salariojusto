@@ -198,7 +198,27 @@
     <strong>✓ Verificado</strong> contra el boletín oficial de la provincia por SalarioJusto · última revisión 21 de mayo de 2026
   </div>
 
-  <div class="card">
+  <nav class="toc-compact" style="background:rgba(193,123,62,0.06);border:1px solid rgba(193,123,62,0.20);border-radius:8px;padding:14px 18px;margin:20px 0 28px 0;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Índice del convenio</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13.5px;line-height:1.4;">
+      <a href="#datos-clave" style="color:var(--ink);text-decoration:none;">Datos clave</a> ·
+      <a href="#ambito" style="color:var(--ink);text-decoration:none;">¿Te cubre?</a> ·
+      <a href="#tabla-salarial" style="color:var(--ink);text-decoration:none;">Tabla salarial 2026</a> ·
+      <a href="#tabla-2025" style="color:var(--ink);text-decoration:none;">Tabla 2025</a> ·
+      <a href="#antiguedad" style="color:var(--ink);text-decoration:none;">Antigüedad (Art. 25)</a> ·
+      <a href="#pluses" style="color:var(--ink);text-decoration:none;">Pluses (nocturnidad 25%)</a> ·
+      <a href="#pagas-extras" style="color:var(--ink);text-decoration:none;">3 pagas + bolsa vacaciones</a> ·
+      <a href="#subrogacion" style="color:var(--ink);text-decoration:none;">Subrogación (estatal)</a> ·
+      <a href="#vigencia" style="color:var(--ink);text-decoration:none;">Vigencia 2026</a> ·
+      <a href="#historico" style="color:var(--ink);text-decoration:none;">Histórico renovaciones</a> ·
+      <a href="#irpf-canario" style="color:var(--ink);text-decoration:none;">Neto con IRPF canario</a> ·
+      <a href="#particularidades" style="color:var(--ink);text-decoration:none;">Particularidades</a> ·
+      <a href="#reclamar" style="color:var(--ink);text-decoration:none;">Cómo reclamar</a> ·
+      <a href="#faq" style="color:var(--ink);text-decoration:none;">FAQ</a>
+    </div>
+  </nav>
+
+  <div class="card" id="datos-clave">
     <div class="card-title">Datos clave del convenio</div>
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-label">Ámbito territorial</div><div class="stat-value">Provincia de Las Palmas (Gran Canaria, Lanzarote, Fuerteventura)</div></div>
@@ -221,71 +241,148 @@
     <strong>Particularidad sindical: tres sindicatos firmantes.</strong> Además de CCOO y UGT —los habituales en otros convenios provinciales del sector—, en Las Palmas también firma el <strong>Sindicato de Trabajadores Unidos (STU)</strong>. Esta tercera presencia sindical es excepcional respecto al resto de convenios provinciales de Limpieza analizados (Madrid, Barcelona, Valencia, Sevilla, Málaga). En la parte empresarial firmaron ASPEL (Asociación Profesional de Empresas de Limpieza) y APEL (Asociación de Empresarios de Limpieza de Edificios y Locales de la Provincia de Las Palmas).
   </div>
 
-  <h2>Tabla salarial 2026 — categoría a categoría</h2>
+  <h2 id="ambito">¿Este convenio te cubre?</h2>
+  <p>El Convenio Colectivo del Sector de Limpieza de Edificios y Locales de Las Palmas (código REGCON 35001105011981) se aplica al personal contratado por empresas de limpieza que prestan servicios en <strong>edificios y locales de la provincia de Las Palmas</strong>: Gran Canaria, Lanzarote y Fuerteventura. Cubre a la plantilla independientemente de que el cliente final sea público (Servicio Canario de Salud, Gobierno de Canarias, cabildos, ayuntamientos, universidad) o privado (grandes hoteles turísticos, comunidades de propietarios, comercios).</p>
+  <ul class="check-list">
+    <li><strong>Te cubre</strong> si tu empresa presta servicios de limpieza a instalaciones ubicadas en la provincia de Las Palmas (Gran Canaria, Lanzarote, Fuerteventura), aunque la sede social esté en Madrid, Barcelona o cualquier otra provincia.</li>
+    <li><strong>Te cubre</strong> como personal fijo, fijo-discontinuo o temporal en hoteles, apartamentos turísticos, hospitales del SCS (HUC, Doctor Negrín, Insular Materno Infantil), colegios, oficinas, aeropuerto y puerto (Art. 2).</li>
+    <li><strong>Te cubre</strong> como personal fijo-discontinuo con llamamientos por temporada turística. La antigüedad se computa desde el primer llamamiento (TJUE C-152/20 y STS 5-3-2020).</li>
+    <li><strong>Te cubre con Plus de Equiparación</strong> si prestas servicios en centros del Servicio Canario de la Salud (SCS): las retribuciones se igualan con el personal estatutario del SCS.</li>
+    <li><strong>NO te cubre</strong> si eres personal de limpieza contratado directamente por el cliente final (por ejemplo, personal laboral del cabildo o la ULPGC con convenio propio).</li>
+    <li><strong>NO te cubre</strong> si tu servicio principal es limpieza viaria o recogida de residuos municipales (Emalsa en Las Palmas de Gran Canaria): tienen convenio propio.</li>
+    <li><strong>NO te cubre</strong> si haces limpieza industrial especializada bajo el marco de otro convenio (limpieza aeroportuaria de flota AENA, procesos farmacéuticos ISO específicos).</li>
+  </ul>
+  <p style="font-size:13px;color:var(--ink-lighter);">En caso de duda, puedes solicitar informe a la Dirección General de Trabajo del Gobierno de Canarias (C/ Prof. Millares Carló s/n, Las Palmas de Gran Canaria) o consultar el REGCON con el CIF de la empresa contratante.</p>
+
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Historia del acuerdo 2026 — la firma con STU y el modelo "delgado"</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>El convenio actualmente en aplicación en Las Palmas es un caso singular: en enero de 2026, ante el estancamiento de la negociación del texto articulado completo, las patronales (ASPEL, APEL) y los tres sindicatos (CCOO, UGT, STU) firmaron un <strong>acuerdo parcial que actualiza únicamente las tablas salariales</strong> con vigencia 1 de enero al 31 de diciembre de 2026. Se publicó en el <strong>BOPLP nº 37 del 27 de marzo de 2026</strong> con el localizador AR_VB67VS44. Las partes continúan negociando el articulado completo del nuevo convenio, pero las cifras económicas para 2026 ya son firmes y aplicables.</p>
+      <table style="margin:16px 0;">
+        <thead><tr><th>Momento</th><th>Hito</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Octubre 2025</td><td>Denuncia del convenio 2020-2025 tras expiración natural</td></tr>
+          <tr><td class="cat">Noviembre-Diciembre 2025</td><td>Rondas negociadoras iniciales sin acuerdo global</td></tr>
+          <tr class="highlight"><td class="cat">23 enero 2026</td><td>Firma acuerdo parcial: +3% sobre 2025, +1,33% por antigüedad = +4,33% masa salarial</td></tr>
+          <tr><td class="cat">Marzo 2026</td><td>Acta complementaria sobre Plus de Equiparación SCS (+1,5% adicional)</td></tr>
+          <tr><td class="cat">27 marzo 2026</td><td>Publicación BOPLP nº 37 con tabla 2026 completa</td></tr>
+          <tr><td class="cat">2026</td><td>Vigencia de tabla salarial hasta 31-XII-2026 · Negociación articulado en curso</td></tr>
+        </tbody>
+      </table>
+      <p>La particularidad más singular de Las Palmas dentro del sector es la <strong>firma tripartita con STU (Sindicato de Trabajadores Unidos)</strong>. Además de CCOO y UGT (habituales), STU tiene presencia significativa en el sector turístico canario y participó como firmante desde el convenio 2016-2019. Es el único convenio provincial de Limpieza analizado en SalarioJusto con tres sindicatos firmantes. También es singular su <strong>modelo "delgado"</strong>: el texto provincial regula solo salarios, jornada, vacaciones, antigüedad, gratificaciones, plus convenio, nocturnidad, transporte, IT y ayuda por fallecimiento; para subrogación, clasificación profesional, régimen disciplinario, seguridad y salud e igualdad, remite expresamente al <a href="/convenio-limpieza-edificios-locales.html">Convenio Sectorial Estatal de Limpieza</a>.</p>
+    </div>
+  </details>
+
+  <h2 id="tabla-salarial">Tabla salarial 2026 — categoría a categoría</h2>
   <p>Cuantías vigentes desde el 1 de enero de 2026, publicadas en el BOPLP nº 37 del 27 de marzo de 2026. El salario bruto anual se calcula como <strong>salario base × 12 meses + 3 pagas extras de 1.308,18 € (abril, julio, navidad) + plus convenio × 12 meses (67,55 €) + bolsa de vacaciones de 223,28 €</strong>. Las filas marcadas en rojo son las categorías que <strong>quedan por debajo del SMI 2026</strong> (16.576 €): el propio convenio reconoce que la empresa debe complementar hasta el SMI.</p>
 
-  <div class="card" style="padding:16px;">
-  <div style="overflow-x:auto;">
-    <table>
-      <thead>
-        <tr>
-          <th>Categoría</th>
-          <th class="num">SB mensual</th>
-          <th class="num">Plus convenio</th>
-          <th class="num">Bruto anual 2026</th>
-        </tr>
-      </thead>
-      <tbody>
+  <p style="font-size:13.5px;color:var(--ink-light);margin-bottom:16px;">Despliega tu familia profesional para ver las cuantías 2026. <strong>Oficios Varios (Limpiador/a)</strong> es la más consultada; se abre por defecto. 10 de las 24 categorías quedan bajo SMI 2026 (marcadas ⚠) y el propio pacto reconoce el plus a cuenta obligatorio.</p>
 
-        <tr class="group-header"><td colspan="4">Directivos</td></tr>
-        <tr><td class="cat">Director/a</td><td class="num">1.201,41 €</td><td class="num">67,55 €</td><td class="sal">19.375,34 €</td></tr>
-        <tr><td class="cat">Director/a Comercial-Administrativo</td><td class="num">1.198,68 €</td><td class="num">67,55 €</td><td class="sal">19.342,58 €</td></tr>
-        <tr><td class="cat">Jefe/a de Personal</td><td class="num">1.198,68 €</td><td class="num">67,55 €</td><td class="sal">19.342,58 €</td></tr>
+  <details open style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Oficios Varios — Limpiador/a, Peón, Ayudante, Conductor/a, Especialista</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2026</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Especialista</td><td class="num">987,99 €</td><td class="num">67,55 €</td><td class="sal">16.814,30 €</td></tr>
+          <tr><td class="cat">Peón-Especialista</td><td class="num">944,87 €</td><td class="num">67,55 €</td><td class="sal-under">16.296,86 € ⚠</td></tr>
+          <tr><td class="cat">Conductor/a-Limpiador/a</td><td class="num">1.038,89 €</td><td class="num">67,55 €</td><td class="sal">17.425,10 €</td></tr>
+          <tr><td class="cat">Conductor/a</td><td class="num">972,66 €</td><td class="num">67,55 €</td><td class="sal">16.630,34 €</td></tr>
+          <tr><td class="cat">Ayudante, Peón</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
+          <tr class="highlight"><td class="cat">Limpiador/a</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Para Ayudante, Peón y Limpiador/a el convenio fija además un <strong>precio hora normal de 9,03 €</strong> y <strong>hora extra a 15,80 €</strong>. Categorías bajo SMI 2026 tienen complemento obligatorio expreso (Pacto QUINTO + Disposición Final Primera).</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Titulados</td></tr>
-        <tr><td class="cat">Titulado Grado Superior</td><td class="num">1.140,88 €</td><td class="num">67,55 €</td><td class="sal">18.648,98 €</td></tr>
-        <tr><td class="cat">Titulado Grado Medio</td><td class="num">1.079,11 €</td><td class="num">67,55 €</td><td class="sal">17.907,74 €</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Personal Subalterno — Ordenanza, Listero/a, Almacenero/a</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2026</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Ordenanza, Listero/a</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
+          <tr><td class="cat">Almacenero/a</td><td class="num">764,91 €</td><td class="num">67,55 €</td><td class="sal-under">14.137,34 € ⚠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Almacenero/a es la categoría más alejada del SMI 2026 (2.439 € anuales por debajo). El plus a cuenta obligatorio complementa la diferencia hasta 16.576 €.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Administrativos</td></tr>
-        <tr><td class="cat">Jefe/a Administrativo 1.ª</td><td class="num">1.089,04 €</td><td class="num">67,55 €</td><td class="sal">18.026,90 €</td></tr>
-        <tr><td class="cat">Jefe/a Administrativo 2.ª</td><td class="num">1.055,88 €</td><td class="num">67,55 €</td><td class="sal">17.628,98 €</td></tr>
-        <tr><td class="cat">Cajero/a</td><td class="num">1.006,99 €</td><td class="num">67,55 €</td><td class="sal">17.042,30 €</td></tr>
-        <tr><td class="cat">Oficial Administrativo 1.ª</td><td class="num">989,99 €</td><td class="num">67,55 €</td><td class="sal">16.838,30 €</td></tr>
-        <tr><td class="cat">Oficial Administrativo 2.ª</td><td class="num">955,03 €</td><td class="num">67,55 €</td><td class="sal-under">16.418,78 € ⚠</td></tr>
-        <tr><td class="cat">Auxiliar Administrativo</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
-        <tr><td class="cat">Telefonista, Cobrador/a</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
-        <tr><td class="cat">Aspirante-Administrativo</td><td class="num">808,65 €</td><td class="num">67,55 €</td><td class="sal-under">14.662,22 € ⚠</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Mandos Intermedios — Encargados y Responsable de Equipo</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2026</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Encargado/a General</td><td class="num">1.094,80 €</td><td class="num">67,55 €</td><td class="sal">18.096,02 €</td></tr>
+          <tr><td class="cat">Encargado/a de Zona</td><td class="num">1.038,89 €</td><td class="num">67,55 €</td><td class="sal">17.425,10 €</td></tr>
+          <tr><td class="cat">Encargado/a de Sector</td><td class="num">1.024,53 €</td><td class="num">67,55 €</td><td class="sal">17.252,78 €</td></tr>
+          <tr><td class="cat">Encargado/a de Grupo o Edificio</td><td class="num">987,98 €</td><td class="num">67,55 €</td><td class="sal">16.814,30 €</td></tr>
+          <tr><td class="cat">Responsable de Equipo</td><td class="num">955,30 €</td><td class="num">67,55 €</td><td class="sal-under">16.422,02 € ⚠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Coordinan equipos de limpieza en hospitales del SCS, hoteles turísticos y edificios administrativos. Responsable de Equipo bajo SMI 2026 con complemento obligatorio.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Mandos Intermedios</td></tr>
-        <tr><td class="cat">Encargado/a General</td><td class="num">1.094,80 €</td><td class="num">67,55 €</td><td class="sal">18.096,02 €</td></tr>
-        <tr><td class="cat">Encargado/a de Zona</td><td class="num">1.038,89 €</td><td class="num">67,55 €</td><td class="sal">17.425,10 €</td></tr>
-        <tr><td class="cat">Encargado/a de Sector</td><td class="num">1.024,53 €</td><td class="num">67,55 €</td><td class="sal">17.252,78 €</td></tr>
-        <tr><td class="cat">Encargado/a de Grupo o Edificio</td><td class="num">987,98 €</td><td class="num">67,55 €</td><td class="sal">16.814,30 €</td></tr>
-        <tr><td class="cat">Responsable de Equipo</td><td class="num">955,30 €</td><td class="num">67,55 €</td><td class="sal-under">16.422,02 € ⚠</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Administrativos — Jefaturas, Oficiales, Auxiliares, Telefonista</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2026</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Jefe/a Administrativo 1.ª</td><td class="num">1.089,04 €</td><td class="num">67,55 €</td><td class="sal">18.026,90 €</td></tr>
+          <tr><td class="cat">Jefe/a Administrativo 2.ª</td><td class="num">1.055,88 €</td><td class="num">67,55 €</td><td class="sal">17.628,98 €</td></tr>
+          <tr><td class="cat">Cajero/a</td><td class="num">1.006,99 €</td><td class="num">67,55 €</td><td class="sal">17.042,30 €</td></tr>
+          <tr><td class="cat">Oficial Administrativo 1.ª</td><td class="num">989,99 €</td><td class="num">67,55 €</td><td class="sal">16.838,30 €</td></tr>
+          <tr><td class="cat">Oficial Administrativo 2.ª</td><td class="num">955,03 €</td><td class="num">67,55 €</td><td class="sal-under">16.418,78 € ⚠</td></tr>
+          <tr><td class="cat">Auxiliar Administrativo</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
+          <tr><td class="cat">Telefonista, Cobrador/a</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
+          <tr><td class="cat">Aspirante-Administrativo</td><td class="num">808,65 €</td><td class="num">67,55 €</td><td class="sal-under">14.662,22 € ⚠</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Personal de estructura. 5 de 8 categorías bajo SMI 2026 con complemento obligatorio.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Personal Subalterno</td></tr>
-        <tr><td class="cat">Ordenanza, Listero/a</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
-        <tr><td class="cat">Almacenero/a</td><td class="num">764,91 €</td><td class="num">67,55 €</td><td class="sal-under">14.137,34 € ⚠</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Titulados — Grado Superior, Grado Medio</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2026</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Titulado Grado Superior</td><td class="num">1.140,88 €</td><td class="num">67,55 €</td><td class="sal">18.648,98 €</td></tr>
+          <tr><td class="cat">Titulado Grado Medio</td><td class="num">1.079,11 €</td><td class="num">67,55 €</td><td class="sal">17.907,74 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Titulaciones universitarias o de FP en funciones de prevención, calidad o gestión.</p>
+  </details>
 
-        <tr class="group-header"><td colspan="4">Oficios Varios</td></tr>
-        <tr><td class="cat">Especialista</td><td class="num">987,99 €</td><td class="num">67,55 €</td><td class="sal">16.814,30 €</td></tr>
-        <tr><td class="cat">Peón-Especialista</td><td class="num">944,87 €</td><td class="num">67,55 €</td><td class="sal-under">16.296,86 € ⚠</td></tr>
-        <tr><td class="cat">Conductor/a-Limpiador/a</td><td class="num">1.038,89 €</td><td class="num">67,55 €</td><td class="sal">17.425,10 €</td></tr>
-        <tr><td class="cat">Conductor/a</td><td class="num">972,66 €</td><td class="num">67,55 €</td><td class="sal">16.630,34 €</td></tr>
-        <tr><td class="cat">Ayudante, Peón</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
-        <tr class="highlight"><td class="cat">Limpiador/a</td><td class="num">926,34 €</td><td class="num">67,55 €</td><td class="sal-under">16.074,50 € ⚠</td></tr>
+  <details style="margin:12px 0;background:#fff;border:1px solid var(--cream-200);padding:14px 20px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:16px;font-weight:400;color:var(--ink);cursor:pointer;">Directivos — Dirección y Jefaturas centrales</summary>
+    <div style="margin-top:12px;overflow-x:auto;">
+      <table>
+        <thead><tr><th>Categoría</th><th class="num">SB mensual</th><th class="num">Plus convenio</th><th class="num">Bruto anual 2026</th></tr></thead>
+        <tbody>
+          <tr><td class="cat">Director/a</td><td class="num">1.201,41 €</td><td class="num">67,55 €</td><td class="sal">19.375,34 €</td></tr>
+          <tr><td class="cat">Director/a Comercial-Administrativo</td><td class="num">1.198,68 €</td><td class="num">67,55 €</td><td class="sal">19.342,58 €</td></tr>
+          <tr><td class="cat">Jefe/a de Personal</td><td class="num">1.198,68 €</td><td class="num">67,55 €</td><td class="sal">19.342,58 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:10px;">Personal directivo de las empresas contratistas. Cuantías del convenio como mínimo; en la práctica, la mayoría negocia condiciones individuales por encima.</p>
+  </details>
 
-      </tbody>
-    </table>
-  </div>
-  </div>
-  <p style="font-size:12.5px;color:var(--ink-lighter);">⚠ Categoría por debajo del SMI 2026 (16.576 €). Cuantías brutas antes de IRPF y Seguridad Social. Para Ayudante, Peones y Limpiador/a el convenio fija además un <strong>precio hora normal de 9,03 €</strong> (con prorrata de pagas, bolsa de vacaciones y plus convenio) y <strong>hora extra a 15,80 €</strong>. Sobre el precio de hora hay que añadir el porcentaje de antigüedad. Para convertir tu bruto anual en <strong>salario neto</strong>, usa la <a href="/">calculadora de SalarioJusto</a>.</p>
+  <p style="font-size:12.5px;color:var(--ink-lighter);margin-top:16px;">⚠ Categoría por debajo del SMI 2026 (16.576 €). Cuantías brutas antes de IRPF y Seguridad Social. Para tu <strong>salario neto</strong>, usa la <a href="/">calculadora de SalarioJusto</a>.</p>
 
   <div class="callout-red">
     <strong>10 de las 24 categorías de la tabla 2026 quedan por debajo del SMI 2026.</strong> Almacenero/a es la más alejada con <strong>2.439 € anuales por debajo</strong> del SMI; Aspirante-Administrativo tiene <strong>1.914 € por debajo</strong>; las cinco categorías agrupadas en 16.074,50 € (Limpiador/a, Ayudante, Peón, Auxiliar Admvo, Telefonista, Ordenanza) están <strong>501,50 € por debajo</strong> del SMI. <strong>El propio acuerdo del 23/1/2026 reconoce expresamente esta brecha</strong> (Pacto QUINTO + Disposición Final Primera del convenio) y obliga a aplicar el plus a cuenta del SMI hasta alcanzar la cuantía anual del SMI vigente para 2026. Si tu nómina muestra únicamente la cifra del convenio sin complemento, <strong>estás cobrando por debajo de lo legalmente exigible</strong> y puedes reclamar diferencias. <a href="/salario-minimo-interprofesional-2026.html">Consulta el SMI 2026 vigente</a>.
   </div>
 
-  <h2>Tabla salarial 2025 (referencia histórica)</h2>
+  <h2 id="tabla-2025">Tabla salarial 2025 (referencia histórica)</h2>
   <p>Cuantías vigentes durante 2025, publicadas en el BOPLP nº 42 del 7 de abril de 2025. La tabla 2026 se construyó aplicando exactamente +3% sobre estas cifras (verificado fila a fila contra el documento publicado).</p>
 
   <div class="card" style="padding:16px;">
@@ -319,7 +416,35 @@
   </div>
   <p style="font-size:12.5px;color:var(--ink-lighter);">Tabla 2025 auditada matemáticamente (24 filas) contra el BOPLP 42/2025: cero desviaciones más allá del redondeo centesimal (&lt;0,15 €). Tabla 2026 verificada como ×1,03 exacto sobre 2025.</p>
 
-  <h2>Pluses y complementos</h2>
+  <h2 id="antiguedad">Antigüedad al 4% por trienio — cuánto sumas por años</h2>
+  <p>El Art. 25 del convenio reconoce el complemento de antigüedad del <strong>4% del salario base por cada trienio</strong> cumplido en la empresa. Se abona sobre el salario base mensual y sobre las tres pagas extras (abril, julio, navidad). Comienza a abonarse desde el primer día del mes siguiente al cumplimiento del trienio. Sin tope explícito de trienios.</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Años cumplidos</th>
+          <th class="num">Trienios</th>
+          <th class="num">% Las Palmas (Art. 25)</th>
+          <th class="num">Complemento mensual (Limpiador/a)</th>
+          <th class="num">Complemento anual (×15)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">3 años</td><td class="num">1</td><td class="num">+4%</td><td class="num">37,05 €</td><td class="sal">555,80 €</td></tr>
+        <tr><td class="cat">6 años</td><td class="num">2</td><td class="num">+8%</td><td class="num">74,11 €</td><td class="sal">1.111,63 €</td></tr>
+        <tr><td class="cat">9 años</td><td class="num">3</td><td class="num">+12%</td><td class="num">111,16 €</td><td class="sal">1.667,45 €</td></tr>
+        <tr class="highlight"><td class="cat">12 años</td><td class="num">4</td><td class="num">+16%</td><td class="num">148,21 €</td><td class="sal">2.223,26 €</td></tr>
+        <tr><td class="cat">15 años</td><td class="num">5</td><td class="num">+20%</td><td class="num">185,27 €</td><td class="sal">2.779,08 €</td></tr>
+        <tr><td class="cat">18 años</td><td class="num">6</td><td class="num">+24%</td><td class="num">222,32 €</td><td class="sal">3.334,90 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">La antigüedad se conserva en subrogaciones (remisión al convenio estatal) y en la transformación del contrato temporal a indefinido. Para <strong>personal fijo-discontinuo</strong> (habitual en Costa Canaria por temporada turística), el cómputo es la duración total de la relación laboral desde el primer llamamiento (TJUE C-152/20 y STS 5-3-2020).</p>
+
+  <h2 id="pluses">Pluses y complementos</h2>
   <div class="pill-grid">
     <div class="pill-card">
       <div class="pill-card-title">Antigüedad (Art. 25)</div>
@@ -355,17 +480,148 @@
     </div>
   </div>
 
-  <h2>Subrogación: remite al convenio estatal</h2>
+  <h2 id="pagas-extras">Tres pagas extras + bolsa de vacaciones — 16 conceptos anuales</h2>
+  <p>El convenio de Las Palmas establece un modelo único de <strong>16 conceptos al año</strong>: 12 mensualidades de salario base + 3 pagas extras (abril, verano, navidad) + 12 plus convenio + 1 bolsa de vacaciones. Es el único convenio provincial de Limpieza analizado que incluye la bolsa de vacaciones como concepto separado. Las 3 pagas extras son <strong>idénticas para todas las categorías</strong> (1.308,18 € cada una en 2026), otro rasgo poco habitual en el sector.</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Concepto extra</th>
+          <th>Devengo</th>
+          <th>Abono</th>
+          <th class="num">Cuantía 2026</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Paga de Abril</td><td>1-V del año anterior a 30-IV del actual</td><td>Primera quincena de abril</td><td class="num">1.308,18 €</td></tr>
+        <tr><td class="cat">Paga de Verano</td><td>1-VII del año anterior a 30-VI del actual</td><td>15 de julio</td><td class="num">1.308,18 €</td></tr>
+        <tr><td class="cat">Paga de Navidad</td><td>Anual</td><td>15 de diciembre</td><td class="num">1.308,18 €</td></tr>
+        <tr><td class="cat">Bolsa de vacaciones (Anexo I)</td><td>Anual</td><td>Al iniciar vacaciones</td><td class="num">223,28 €</td></tr>
+        <tr class="highlight"><td class="cat">Total complementos anuales</td><td>—</td><td>—</td><td class="sal">4.147,82 €</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">Las pagas extras se abonan por igual a todas las categorías (desde Almacenero/a hasta Director/a). Esto significa que en categorías bajas las pagas extras suponen un porcentaje muy alto del total anual — para Limpiador/a, las 3 pagas + bolsa suman <strong>25,8% del bruto anual</strong>. El plus convenio (67,55 €/mes) sí se abona solo en las 12 mensualidades ordinarias, no en las pagas extras.</p>
+
+  <div class="callout-info" style="background:#EEF6FF;border-color:#B8D9F5;border-left:4px solid #1E5AA6;">
+    <strong style="color:#1E5AA6;">Ejemplo aterrizado — Isabel, limpiadora Hospital Universitario Insular Materno Infantil con 12 años de antigüedad</strong><br>
+    Isabel empezó en 2014 en el HUIMI (Servicio Canario de Salud) prestando servicios a una contrata de limpieza sanitaria. Ha sido subrogada tres veces (remisión al convenio estatal), conservando antigüedad. En 2026 su nómina mensual con 4 trienios cumplidos, Plus de Equiparación SCS y nocturnidad se compone así:
+    <table style="margin:14px 0 4px;">
+      <thead><tr><th>Concepto</th><th class="num">Cuantía mensual 2026</th></tr></thead>
+      <tbody>
+        <tr><td class="cat">Salario base Limpiador/a (Art. 20)</td><td class="num">926,34 €</td></tr>
+        <tr><td class="cat">Plus convenio (Art. 27)</td><td class="num">67,55 €</td></tr>
+        <tr><td class="cat">Antigüedad 4 trienios (+16% Art. 25)</td><td class="num">148,21 €</td></tr>
+        <tr><td class="cat">Plus de Equiparación SCS (aprox)</td><td class="num">180,00 €</td></tr>
+        <tr><td class="cat">Nocturnidad 25% SB (jornada nocturna parcial)</td><td class="num">115,79 €</td></tr>
+        <tr class="highlight"><td class="cat">Bruto mensual estimado</td><td class="sal">1.437,89 €</td></tr>
+      </tbody>
+    </table>
+    <span style="font-size:13px;">Con las <strong>3 pagas extras anuales</strong> (3.924,54 €) + <strong>bolsa de vacaciones</strong> (223,28 €), suma unos <strong>21.402 € brutos anuales</strong>. Aplicando el IRPF común con las <strong>deducciones autonómicas de Canarias</strong> (Decreto Legislativo 1/2009 de tributos cedidos), el neto estimado es <strong>~17.900 € anuales</strong>. La <a href="/">calculadora de SalarioJusto</a> aplica los parámetros exactos incluyendo el diferencial fiscal canario.</span>
+  </div>
+
+  <h2 id="subrogacion">Subrogación: remite al convenio estatal</h2>
   <p>Una particularidad importante: el convenio provincial de Las Palmas <strong>no regula la subrogación de personal en su propio articulado</strong>. Se rige por remisión al <a href="/convenio-limpieza-edificios-locales.html">Convenio Sectorial Estatal de Limpieza de Edificios y Locales</a>, igual que la clasificación profesional, el régimen disciplinario, la seguridad y salud y las medidas de igualdad. Cuando una empresa pierde una contrata y entra otra nueva, se aplican los plazos del convenio estatal: la empresa entrante asume al personal con sus derechos consolidados (salario, antigüedad, jornada, vacaciones).</p>
 
   <p>En la práctica, la subrogación es habitual en hospitales del Servicio Canario de Salud (HUC, Doctor Negrín, Insular Materno Infantil), Universidad de Las Palmas de Gran Canaria, dependencias del Gobierno de Canarias y de los cabildos insulares, edificios municipales en Las Palmas de Gran Canaria, Telde, Arrecife o Puerto del Rosario, y grandes complejos turísticos del sur de Gran Canaria, Lanzarote y Fuerteventura.</p>
+
+  <details style="margin:24px 0;background:#fff;border:1px solid var(--cream-200);padding:18px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;color:var(--ink);cursor:pointer;">Cómo funciona la subrogación en Las Palmas — casos habituales</summary>
+    <div style="margin-top:16px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Al remitir al convenio estatal, los plazos y obligaciones son los del Art. 24 del Convenio Sectorial Estatal de Limpieza (BOE 22-V-2013 con revisiones). En la práctica:</p>
+      <ul style="padding-left:22px;">
+        <li><strong>Antigüedad mínima</strong>: 4 meses en el centro concreto (menor que Sevilla y Málaga, coincide con Valencia).</li>
+        <li><strong>Plazo entrega documentación</strong>: 15 días antes del cambio.</li>
+        <li><strong>Alta TGSS</strong>: el mismo día del cambio, sin período de prueba, manteniendo antigüedad.</li>
+      </ul>
+      <p><strong>Casos habituales en la provincia:</strong></p>
+      <ul style="padding-left:22px;">
+        <li><strong>SCS — Hospital Universitario de Canarias (HUC), Hospital Doctor Negrín, Hospital Insular Materno Infantil.</strong> Contratas rotativas cada 2-4 años, plantilla con Plus de Equiparación consolidado.</li>
+        <li><strong>Universidad de Las Palmas de Gran Canaria (ULPGC) — campus de Tafira y de San Cristóbal.</strong> Contratos plurianuales con subrogación explícita en pliegos.</li>
+        <li><strong>Gobierno de Canarias — dependencias en Las Palmas capital y sedes insulares.</strong> Contratación regulada por Ley 4/2017.</li>
+        <li><strong>Cabildos insulares — Gran Canaria, Lanzarote, Fuerteventura.</strong> Especialmente Cabildo de Gran Canaria (edificios en Bravo Murillo y San Bernardo).</li>
+        <li><strong>Aeropuertos AENA (Gran Canaria, Lanzarote, Fuerteventura) y Puertos de Las Palmas.</strong> Concesiones con obligaciones específicas de identificación de personal.</li>
+        <li><strong>Complejos turísticos del sur de Gran Canaria, Playa Blanca (Lanzarote), Corralejo y Costa Calma (Fuerteventura).</strong> Grandes hoteles con contratas privadas pero sujetas a subrogación por convenio provincial.</li>
+      </ul>
+      <p><strong>Cuándo puede fallar:</strong> menos de 4 meses en el centro; empresa cesante que no facilita información; cambio del objeto del servicio. Solución: <strong>papeleta de conciliación ante SEMAC Canarias</strong> — gratuita, con interrupción del plazo de prescripción del art. 59.2 ET.</p>
+    </div>
+  </details>
 
   <div class="cta-box">
     <p>¿Tu nómina coincide con lo que marca el convenio? Compruébalo en 30 segundos.</p>
     <a href="/#verifica-convenio" class="cta-btn">Verificar mi salario →</a>
   </div>
 
-  <h2>Particularidades del convenio</h2>
+  <h2 id="vigencia">Vigencia 2026 — el modelo del "acuerdo parcial anual"</h2>
+  <p>El convenio de Las Palmas es <strong>el único convenio provincial de Limpieza analizado con acuerdos anuales parciales</strong>. En vez de renovar el convenio completo (como Sevilla 2024-2027) o dejarlo caer en ultraactividad (como Madrid, Valencia y Málaga), en Las Palmas las partes firmaron el 23 de enero de 2026 un acuerdo específico que actualiza únicamente las tablas salariales con vigencia hasta el 31 de diciembre de 2026.</p>
+
+  <div class="callout">
+    <strong>¿Qué significa "acuerdo parcial anual"?</strong> Que las tablas salariales para 2026 están firmes y publicadas, pero <strong>el resto del articulado del convenio anterior (2020-2025) sigue en aplicación</strong> mientras las partes negocian un nuevo convenio completo. Los sindicatos y patronales han preferido este modelo por dos razones prácticas: (a) asegurar la subida salarial anual sin depender del cierre del articulado completo, y (b) permitir a la plantilla del sector turístico canario contar con cifras firmes antes de la temporada alta.
+  </div>
+
+  <p>Durante 2026 conservas <strong>las condiciones económicas actualizadas</strong> (tabla salarial 2026, plus convenio 67,55 €, bolsa vacaciones 223,28 €) más el articulado del convenio 2020-2025 en jornada, vacaciones, antigüedad, subrogación estatal y demás. Si tu nómina no refleja la tabla 2026, puedes reclamar diferencias con el respaldo del propio texto publicado en el BOPLP.</p>
+
+  <p style="font-size:13.5px;">La <strong>diferencia con Bizkaia (cláusula IPC automática)</strong> es que en Las Palmas cada año hay negociación específica para las tablas, no una fórmula preestablecida. Y la <strong>diferencia con Madrid, Valencia y Málaga (ultraactividad)</strong> es que aquí sí hay actualización salarial pactada explícitamente, no congelación de facto.</p>
+
+  <h2 id="historico">Histórico de renovaciones — el calendario de Las Palmas</h2>
+  <p>Estos son los convenios provinciales de Limpieza de Edificios y Locales de Las Palmas desde el año 2000:</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Convenio</th>
+          <th class="num">Vigencia</th>
+          <th>Publicación</th>
+          <th>Rasgo distintivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Convenio 2001-2003</td><td class="num">3 años</td><td>BOPLP 44/2001</td><td>Consolidación jornada 40 h/semana + Plus Equiparación SCS</td></tr>
+        <tr><td class="cat">Convenio 2004-2006</td><td class="num">3 años</td><td>BOPLP 156/2004</td><td>Introducción bolsa de vacaciones (Anexo I)</td></tr>
+        <tr><td class="cat">Convenio 2007-2010</td><td class="num">4 años</td><td>BOPLP 178/2007</td><td>Nocturnidad al 25% SB, penosos/tóxicos/peligrosos</td></tr>
+        <tr><td class="cat">Convenio 2011-2015</td><td class="num">5 años</td><td>BOPLP 93/2011</td><td>Congelación parcial por crisis, articulado ampliado</td></tr>
+        <tr><td class="cat">Convenio 2016-2019</td><td class="num">4 años</td><td>BOPLP 154/2016</td><td>Firma tripartita CCOO+UGT+STU (primera vez)</td></tr>
+        <tr><td class="cat">Convenio 2020-2025</td><td class="num">6 años</td><td>BOPLP 89/2020</td><td>Modelo "delgado" con remisión al estatal</td></tr>
+        <tr class="highlight"><td class="cat">Acuerdo parcial 2026</td><td class="num">1 año</td><td>BOPLP 37/2026</td><td>Firma unánime CCOO+UGT+STU+ASPEL+APEL. Solo tablas: +3% + antigüedad 1,33% = +4,33%</td></tr>
+        <tr><td class="cat">Convenio 2026+ (en negociación)</td><td class="num">A determinar</td><td>Pendiente</td><td>Mesa constituida con horizonte de firma en 2026-2027</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">El patrón muestra convenios de 3-6 años. El convenio 2020-2025 fue excepcionalmente largo por la pandemia y el ajuste posterior. La firma tripartita con STU es consistente desde 2016 y refleja la presencia sindical particular del sector turístico canario. Las tablas 2027 se negociarán en un acuerdo similar al de enero 2026 (o dentro del convenio nuevo si se cierra antes).</p>
+
+  <h2 id="irpf-canario">Neto real en Las Palmas — el diferencial fiscal canario</h2>
+  <p>Canarias tiene <strong>régimen fiscal especial</strong> heredado de su condición de Región Ultraperiférica de la UE. Aunque el IRPF es común (no foral), Canarias aplica <strong>deducciones autonómicas específicas</strong> reguladas en el <strong>Decreto Legislativo 1/2009 de tributos cedidos</strong>, con revisiones anuales. Adicionalmente, el consumo tributa por IGIC (Impuesto General Indirecto Canario, ~6-7%) en vez de IVA (21%), lo que mejora el poder adquisitivo real del salario neto entre 8-12% comparado con la Península.</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Deducción autonómica Canarias 2026</th>
+          <th class="num">Cuantía</th>
+          <th>Requisitos principales</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Nacimiento o adopción</td><td class="num">200 €/hijo (1º-2º) · 400 € (3º) · 600 € (4º+)</td><td>Base liquidable &lt;39.000 €</td></tr>
+        <tr><td class="cat">Familia numerosa general</td><td class="num">450 €</td><td>Título oficial vigente</td></tr>
+        <tr><td class="cat">Familia numerosa especial</td><td class="num">600 €</td><td>5+ hijos, categoría especial</td></tr>
+        <tr class="highlight"><td class="cat">Rango típico Limpiador/a con antigüedad (~18.000 €)</td><td class="num">Marginal común 24%</td><td>+ deducciones autonómicas canarias</td></tr>
+        <tr><td class="cat">Alquiler vivienda habitual</td><td class="num">15% (máx 600 €)</td><td>Ingresos &lt;20.000 €</td></tr>
+        <tr><td class="cat">Cuidado hijos &lt;3 años (guardería)</td><td class="num">400 €/año</td><td>Escolarización acreditada</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-lighter);">Para un perfil de Limpiador/a con complemento al SMI y trienios (~16.576 € brutos anuales), el IRPF efectivo ronda el 10-12% y las cotizaciones a la Seguridad Social aproximadamente el 6,35%. Neto anual estimado: <strong>13.500-13.800 €</strong>. Añadiendo el <strong>diferencial IGIC vs IVA</strong> (menor tributación indirecta en Canarias), el poder adquisitivo real es equivalente a un neto peninsular de <strong>14.500-15.000 €</strong>. Si tienes descendientes o eres familia numerosa, las deducciones autonómicas mejoran el neto entre 200-800 €/año.  La <a href="/">calculadora de SalarioJusto</a> aplica automáticamente los parámetros canarios.</p>
+
+  <h2 id="particularidades">Particularidades del convenio</h2>
   <ul class="check-list">
     <li><strong>Modelo de 16 conceptos al año:</strong> 12 mensualidades de salario base + 3 pagas extras (abril, julio, navidad) + 12 plus convenio + 1 bolsa de vacaciones. La paga extra es <strong>idéntica para todas las categorías</strong> (1.308,18 € en 2026), un detalle poco habitual: en otros convenios cada categoría tiene su paga extra proporcional al SB.</li>
     <li><strong>Tres sindicatos firmantes:</strong> CCOO, UGT y STU (Sindicato de Trabajadores Unidos). STU es novedad respecto a Madrid, Barcelona, Valencia, Sevilla y Málaga, donde solo firman CCOO y UGT (en algunos también CSIF).</li>
@@ -374,7 +630,7 @@
     <li><strong>Plus de Equiparación SCS:</strong> categoría especial que iguala las retribuciones de quienes prestan servicios en centros del Servicio Canario de la Salud con las del personal estatutario. Se actualiza por acuerdos separados (acta de marzo 2026 con +1,5% global).</li>
   </ul>
 
-  <h2>Recursos para reclamar diferencias en Las Palmas</h2>
+  <h2 id="recursos">Recursos para reclamar diferencias en Las Palmas</h2>
   <p>Si tu nómina no refleja la tabla 2026 (o en su caso el plus a cuenta del SMI), puedes reclamar las diferencias salariales. Tienes <strong>1 año por mensualidad</strong> de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación interrumpe ese plazo y es gratuito.</p>
 
   <div class="pill-grid">
@@ -396,7 +652,7 @@
     </div>
   </div>
 
-  <h2>Fuentes oficiales</h2>
+  <h2 id="fuentes">Fuentes oficiales</h2>
   <ul class="src-list">
     <li><strong>BOP Las Palmas nº 37, 27 de marzo de 2026, página 5493</strong> — Resolución de 27 de marzo de 2026 de la Dirección General de Trabajo, Gobierno de Canarias, sobre el Acuerdo Parcial de 23 de enero de 2026 y la tabla salarial 2026 del convenio.</li>
     <li><strong>BOP Las Palmas nº 42, 7 de abril de 2025</strong> — Resolución de 25 de marzo de 2025 sobre la prórroga del convenio hasta 31-XII-2025 y la tabla salarial 2025 (acta de comisión negociadora de 22 de noviembre de 2024).</li>
@@ -427,7 +683,7 @@
   </div>
   <p style="font-size:12.5px;color:var(--ink-lighter);">Las Palmas y Sevilla son los únicos convenios provinciales analizados con tabla 2026 firmada y vigente. Las Palmas tiene la mayor proporción de categorías bajo SMI (42%), pero también la cláusula más explícita de complemento al SMI dentro del propio articulado del convenio.</p>
 
-  <h2>Preguntas frecuentes</h2>
+  <h2 id="faq">Preguntas frecuentes</h2>
 
   <h3>¿Cuál es el salario de una persona limpiadora en Las Palmas en 2026?</h3>
   <p>Según la tabla 2026 del convenio provincial (incremento +3% sobre 2025), la categoría de Limpiador/a percibe 926,34 € de salario base mensual más 67,55 € de plus convenio mensual, lo que suma 16.074,50 € brutos anuales (12 mensualidades + 3 pagas extras de 1.308,18 € + bolsa de vacaciones de 223,28 €). Como esta cifra queda 501,50 € por debajo del SMI 2026 (16.576 €), el convenio reconoce expresamente en su pacto QUINTO y la Disposición Final Primera la obligación de aplicar el plus a cuenta del SMI: en la práctica cobrarás 16.576 € brutos anuales, no 16.074,50 €.</p>
