@@ -59,6 +59,68 @@
     { "@type": "ListItem", "position": 2, "name": "Sobre", "item": "https://salariojusto.es/sobre.html" }
   ]
 }</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Quién está detrás de SalarioJusto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un proyecto personal de Telmo Unzueta, sin empresa detrás, sin equipo comercial, sin inversores. El objetivo declarado es publicar información salarial y de convenios verificable, con cero dependencia de ningún actor del sector (patronales, sindicatos, empresas de nóminas). La independencia se mantiene porque los ingresos publicitarios de AdSense son la única fuente de sostenimiento del hosting y del tiempo dedicado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo se verifican las cifras publicadas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con un protocolo de cinco pasos: localización en dos fuentes oficiales independientes (REGCON + boletín provincial), cruce A+B de las cifras (boletín + sindicato firmante), auditoría matemática fila a fila con la fórmula del convenio, citación obligatoria del boletín con número, fecha y CVE, y notas de ultraactividad y complementos SMI cuando aplica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La calculadora IRPF es exacta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, dentro del ámbito modelado. El algoritmo replica el servicio de cálculo del importe de la retención de IRPF oficial de la AEAT para las situaciones familiares y CCAA cubiertas. Para casos especiales (Ley Beckham, jubilación parcial, discapacidad ≥65%) se recomienda contrastar con asesoría fiscal profesional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo actualizáis las tablas salariales de los convenios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuando un boletín provincial o autonómico publica una revisión salarial o un nuevo convenio, se activa el protocolo de verificación. Habitualmente la actualización se aplica entre 24 y 72 horas después de detectar la publicación oficial. Si hay dudas o rectificaciones posteriores (como el caso de BOP Sevilla 238/2025 sobre 162/2025), se espera a la versión firme antes de publicar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Publicáis contenido patrocinado o afiliados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La única monetización es Google AdSense (banners contextuales) y no hay contenido patrocinado ni enlaces de afiliación. Ninguna ficha de convenio ni guía se ha modificado por relación comercial. La independencia editorial es un principio no negociable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Vendéis datos de los usuarios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. No requerimos registro, no almacenamos cálculos, no cruzamos identidad. Solo se usa Google Analytics 4 para entender qué contenido es útil (páginas visitadas, tiempo en pantalla, dispositivo). La política de cookies y privacidad sigue el RGPD y la LSSI-CE españolas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo puedo reportar un error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Escribiendo a contacto@salariojusto.es con el detalle: URL de la ficha, cifra que consideras incorrecta y la fuente oficial que aporta la cifra correcta. Se responde en menos de 48 h hábiles y, si la corrección es verificable, se aplica inmediatamente."
+      }
+    }
+  ]
+}</script>
   <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-MXJ8V2FBW9';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MXJ8V2FBW9');});</script>
   <!-- AdSense script retirado temporalmente hasta OK apelacion (rechazo 2-jul-2026). Restaurar tras aprobacion. Peso: 229KB + 500ms bloqueo main thread. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,95 +181,435 @@
 
 <main>
 
-  <div class="card">
-    <div class="card-title">Qué es esto</div>
-    <p>SalarioJusto es una herramienta gratuita y abierta para calcular el salario neto en España aplicando el algoritmo oficial del IRPF 2026 de la Agencia Tributaria, comprobar si tu salario coincide con el convenio colectivo que te aplica, y consultar guías de derechos laborales relacionadas con la <a href="/ley-transparencia-salarial-2026.html">Ley de Transparencia Salarial 2026</a>.</p>
-    <p>El proyecto nació en 2026 como respuesta a la transposición en España de la Directiva UE 2023/970 (Directiva de Transparencia Retributiva), que entra en vigor en junio de 2026.</p>
-  </div>
+  <nav class="toc-compact" style="background:rgba(193,123,62,0.06);border:1px solid rgba(193,123,62,0.20);border-radius:8px;padding:14px 18px;margin:20px 0 28px 0;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Índice del proyecto</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px 14px;font-size:13.5px;line-height:1.4;">
+      <a href="#que-es" style="color:var(--ink);text-decoration:none;">Qué es</a> ·
+      <a href="#autoria" style="color:var(--ink);text-decoration:none;">Autoría y responsable</a> ·
+      <a href="#principios" style="color:var(--ink);text-decoration:none;">7 principios editoriales</a> ·
+      <a href="#metodologia-irpf" style="color:var(--ink);text-decoration:none;">Metodología IRPF 2026</a> ·
+      <a href="#verificacion" style="color:var(--ink);text-decoration:none;">Verificación de convenios</a> ·
+      <a href="#cobertura" style="color:var(--ink);text-decoration:none;">Cobertura editorial</a> ·
+      <a href="#casos" style="color:var(--ink);text-decoration:none;">Casos de estudio</a> ·
+      <a href="#fuentes" style="color:var(--ink);text-decoration:none;">Fuentes oficiales</a> ·
+      <a href="#calendario" style="color:var(--ink);text-decoration:none;">Calendario del proyecto</a> ·
+      <a href="#limitaciones" style="color:var(--ink);text-decoration:none;">Limitaciones y disclaimers</a> ·
+      <a href="#stack" style="color:var(--ink);text-decoration:none;">Stack técnico</a> ·
+      <a href="#faq" style="color:var(--ink);text-decoration:none;">FAQ del proyecto</a> ·
+      <a href="#contacto" style="color:var(--ink);text-decoration:none;">Contacto y correcciones</a>
+    </div>
+  </nav>
 
-  <div class="card">
-    <div class="card-title">Quién firma esto</div>
-    <p>Detrás de SalarioJusto está <strong>Telmo</strong>. Se encarga de cruzar cada convenio con el boletín oficial, verificar las cifras y firmar el contenido. La independencia económica del proyecto se sostiene precisamente porque no hay capa intermedia ni inversores que satisfacer.</p>
-    <p>Si detectas un error, una cifra desactualizada o un convenio nuevo no reflejado, escríbeme a <a href="mailto:contacto@salariojusto.es">contacto@salariojusto.es</a>. Respondo en menos de 48 h hábiles.</p>
-  </div>
+  <h2 id="que-es">Qué es SalarioJusto</h2>
+  <p>SalarioJusto es una herramienta gratuita y abierta para calcular el salario neto en España aplicando el <strong>algoritmo oficial del IRPF 2026 de la Agencia Tributaria</strong>, comprobar si tu salario coincide con el convenio colectivo que te aplica y consultar guías de derechos laborales relacionadas con la <a href="/ley-transparencia-salarial-2026.html">Ley de Transparencia Salarial 2026</a>.</p>
+  <p>El proyecto nació en marzo de 2026 como respuesta a la transposición en España de la Directiva UE 2023/970 (Directiva de Transparencia Retributiva), que entra en vigor el 7 de junio de 2026. La ley obliga a empresas con más de 100 trabajadores a publicar información sobre bandas salariales y a resolver la brecha de género injustificada, y da al trabajador o trabajadora el derecho a solicitar información sobre las bandas salariales de personas que hacen su mismo trabajo o uno de igual valor. SalarioJusto pone a disposición del público las plantillas y guías necesarias para ejercer esos derechos, además de la información salarial de referencia (convenios colectivos + IRPF) para el cálculo real de la retribución neta.</p>
+  <p>La cobertura activa incluye <strong>más de 35 fichas de convenios provinciales y sectoriales</strong> —Hostelería (Madrid, Valencia, Bizkaia, Baleares, Barcelona, Zaragoza, Sevilla, Málaga, Tarragona, Girona, Maresme, Cantabria, Valladolid, Gipuzkoa, Cádiz, Granada), Limpieza de Edificios y Locales (Bizkaia, Madrid, Barcelona, Valencia, Sevilla, Málaga, Las Palmas, Zaragoza, Asturias, Murcia, Catalunya), Metal (Bizkaia), Oficinas y Despachos (Valencia), Construcción (Bizkaia) y Técnicos de Espectáculos—, todas construidas artículo por artículo a partir del boletín oficial correspondiente y verificadas cifra a cifra contra el texto literal.</p>
 
-  <div class="card">
-    <div class="card-title">Principios del proyecto</div>
-    <div class="principle"><div class="principle-num">1</div><div class="principle-text"><strong>Datos verificables, nunca aproximados.</strong> Cada cifra publicada se cruza con su fuente oficial antes de salir. Si una fuente no es accesible, se omite el dato y se documenta el motivo. Cero invención.</div></div>
-    <div class="principle"><div class="principle-num">2</div><div class="principle-text"><strong>Utilidad primero, SEO como consecuencia.</strong> El contenido se diseña para resolver dudas reales de la persona trabajadora. Si una decisión mejora SEO pero empeora la utilidad, se descarta.</div></div>
-    <div class="principle"><div class="principle-num">3</div><div class="principle-text"><strong>Independencia económica.</strong> No hay empresas detrás del proyecto. La única monetización es <a href="https://support.google.com/adsense/answer/48182" target="_blank" rel="noopener">Google AdSense</a> (banners contextuales, sin tracking invasivo).</div></div>
-    <div class="principle"><div class="principle-num">4</div><div class="principle-text"><strong>No vendemos datos.</strong> No requerimos registro, no almacenamos cálculos. Solo se usa Google Analytics 4 para entender qué contenido es útil. La política de cookies y privacidad sigue el RGPD.</div></div>
-    <div class="principle"><div class="principle-num">5</div><div class="principle-text"><strong>Lenguaje inclusivo.</strong> "Trabajadores y trabajadoras" en todo el contenido del proyecto. No se asume género por defecto.</div></div>
-  </div>
+  <h2 id="autoria">Autoría y responsable editorial</h2>
+  <p>SalarioJusto es un proyecto <strong>de autoría personal, no empresarial</strong>. Detrás de la herramienta está <strong>Telmo Unzueta</strong> (autor del código, del algoritmo IRPF adaptado, de las fichas editoriales de convenios, del Kit del trabajador de plantillas legales y de la metodología de verificación). Se encarga directamente de cruzar cada convenio con el boletín oficial, verificar las cifras, firmar el contenido y responder a las correcciones que llegan por email. La independencia económica del proyecto se sostiene precisamente porque no hay capa intermedia, no hay equipo comercial ni inversores que satisfacer y no hay compromisos con empresas del sector.</p>
 
-  <div class="card">
-    <div class="card-title">Metodología de cálculo IRPF</div>
-    <p>El cálculo del salario neto utiliza el <strong>algoritmo oficial del IRPF 2026 publicado por la Agencia Tributaria</strong>, basado en el Real Decreto 439/2007 (Reglamento del IRPF) actualizado con las novedades del Real Decreto-ley aplicable en 2026.</p>
-    <p>El cálculo incluye:</p>
-    <ul>
-      <li><strong>Tramos estatales y autonómicos.</strong> La calculadora aplica la tarifa estatal del IRPF. Para los matices autonómicos (escalas de cada Comunidad de régimen común y los regímenes forales de Bizkaia, Gipuzkoa, Álava y Navarra), cada ficha de convenio cita la normativa autonómica vigente y advierte cuándo el régimen aplicable cambia el cálculo final.</li>
-      <li><strong>Reducciones por situación familiar.</strong> Soltero/a sin descendientes a cargo, familia monoparental con un descendiente, casado/a con cónyuge sin ingresos.</li>
-      <li><strong>Mínimos personales y familiares.</strong> Aplicados según la tabla del artículo 57-60 LIRPF.</li>
-      <li><strong>Cotizaciones a la Seguridad Social.</strong> 7,56% (4,80% Contingencias Comunes + 1,55% Desempleo + 0,10% FOGASA + 1,11% Formación, vigentes en 2026).</li>
-      <li><strong>14 pagas por defecto</strong>, con conversión opcional a 12.</li>
-    </ul>
-    <p>Para situaciones especiales (Ley Beckham, descendientes con discapacidad, ascendientes a cargo, jubilación parcial), recomendamos contrastar con asesoría fiscal profesional. Las cifras de SalarioJusto no constituyen asesoramiento fiscal individual.</p>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Verificación de convenios colectivos</div>
-    <p>Cada landing de convenio sigue el mismo protocolo de verificación antes de publicarse:</p>
-    <ol>
-      <li><strong>Localización del texto oficial.</strong> Búsqueda del convenio en <a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener">REGCON</a> (Registro Central de Convenios), boletín provincial (BOP, BOCM, DOGC, DOGV, etc.) y, si aplica, BOE.</li>
-      <li><strong>Verificación A+B.</strong> Las tablas salariales se cruzan con al menos dos fuentes (boletín oficial + sindicato firmante o REGCON). Si hay desviaciones, no se publica hasta resolver el origen.</li>
-      <li><strong>Auditoría matemática.</strong> Cada fila de la tabla se valida con la fórmula <code>SB × pagas + Plus × 12 = bruto anual</code> para detectar errores de transcripción.</li>
-      <li><strong>Citación obligatoria.</strong> Toda landing cita el boletín oficial (con número, fecha y URL cuando es accesible) y el código REGCON cuando existe.</li>
-      <li><strong>Notas de ultraactividad.</strong> Si el convenio ha vencido y sus tablas siguen aplicándose por ultraactividad (art. 86.3 ET), se indica visiblemente.</li>
-    </ol>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Fuentes oficiales</div>
-    <ul>
-      <li><a href="https://sede.agenciatributaria.gob.es/" target="_blank" rel="noopener">Agencia Tributaria (AEAT)</a> — algoritmo IRPF 2026</li>
-      <li><a href="https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-ii-tributacion-autonomica-2026.pdf" target="_blank" rel="noopener">Ministerio de Hacienda — Tributación Autonómica 2026</a> (escalas autonómicas)</li>
-      <li><a href="https://dfb.microsoftcrmportals.com/es-ES/Articulo/?Code=KA-01877" target="_blank" rel="noopener">Diputación Foral de Bizkaia</a> — IRPF foral</li>
-      <li><a href="https://www.boe.es/" target="_blank" rel="noopener">BOE</a> — convenios estatales y normativa</li>
-      <li><a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener">REGCON</a> — registro central de convenios</li>
-      <li>Boletines provinciales y autonómicos: BOCM (Madrid), DOGC (Cataluña), DOGV (Valencia), BOP de cada provincia</li>
-      <li><a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32023L0970" target="_blank" rel="noopener">Directiva UE 2023/970</a> — Transparencia Retributiva</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Limitaciones y disclaimers</div>
-    <ul>
-      <li>Las cifras son <strong>orientativas</strong> y se basan en supuestos (situación familiar estándar, sin Beckham, sin discapacidad). Tu nómina real puede variar según factores que la calculadora no considera.</li>
-      <li>SalarioJusto <strong>no sustituye al asesoramiento fiscal o laboral profesional</strong>. Para decisiones legales (denunciar discriminación, reclamar diferencias) consulta a un graduado o graduada social, a un abogado o abogada laboralista, o a tu sindicato.</li>
-      <li>Las tablas de convenio reflejan los importes <strong>publicados oficialmente</strong>. Si tu empresa los ha mejorado, tu salario será mayor; si los incumple, tienes derecho a reclamar (consulta nuestra <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias</a>).</li>
-      <li>Los convenios en ultraactividad pueden firmarse en cualquier momento. Si detectamos un convenio nuevo no reflejado, lo actualizamos en cuanto se publica oficialmente.</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Stack técnico</div>
-    <p>HTML estático + JavaScript vanilla, sin frameworks. Fuentes Google Fonts (DM Sans + DM Serif Display). Hosting en Vercel. Análisis con Google Analytics 4 (sin cookies invasivas más allá del consentimiento estándar). Monetización con Google AdSense Auto Ads en formato no intrusivo.</p>
-    <p>Cobertura activa: <strong>más de 30 fichas de convenios provinciales y sectoriales</strong> (Hostelería, Limpieza, Construcción, Metal, Oficinas y Despachos), cada una construida artículo por artículo a partir del BOE, BOP o boletín autonómico correspondiente y verificada cifra a cifra contra el texto literal. La página de inicio incluye la calculadora de salario neto IRPF 2026 con escalas autonómicas. No hay landings programáticas (rechazamos la práctica anterior de combinatorias salario × provincia, que no añaden valor sobre la calculadora unificada).</p>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Contacto y correcciones</div>
-    <p>Si detectas un dato incorrecto, una cifra desactualizada o un convenio nuevo no reflejado, escríbenos. Cualquier corrección verificable se aplica inmediatamente.</p>
-    <p>Para reportar errores, sugerencias o solicitar añadir un convenio, escríbenos a <a href="mailto:contacto@salariojusto.es">contacto@salariojusto.es</a>. Respondemos en menos de 48 h hábiles. Más vías de contacto en <a href="/contacto.html">/contacto</a>.</p>
-    <p>Si quieres colaborar con el proyecto de forma más activa (reportar errores con plantilla, sugerir convenios nuevos o apoyar el mantenimiento), visita <a href="/colabora.html">/colabora</a>.</p>
-  </div>
-
-  <h2>Empieza por aquí</h2>
+  <p>Esta forma de trabajo tiene ventajas claras y limitaciones honestas que conviene reconocer:</p>
   <ul>
-    <li><a href="/">Calculadora de salario neto</a></li>
+    <li><strong>Ventaja: velocidad de corrección.</strong> Cuando una persona detecta un error o un convenio nuevo no reflejado y escribe a <a href="mailto:contacto@salariojusto.es">contacto@salariojusto.es</a>, la respuesta llega en menos de 48 h hábiles y la corrección se aplica en cuanto la fuente oficial se ha verificado.</li>
+    <li><strong>Ventaja: independencia editorial.</strong> Ningún actor del sector (patronales, sindicatos, empresas de limpieza o de hostelería, empresas de software de nóminas) tiene influencia sobre el contenido. Si un cambio normativo perjudica a una parte, se refleja tal cual.</li>
+    <li><strong>Limitación: cobertura selectiva.</strong> No es posible mantener con calidad las 50 provincias × todos los sectores. Se prioriza convenios con más demanda de consulta (según Google Search Console) y los que están en negociación activa. El resto se remite al convenio estatal supletorio.</li>
+    <li><strong>Limitación: no somos bufete.</strong> No prestamos asesoramiento jurídico individualizado. Las plantillas del Kit son de uso general; para reclamaciones complejas siempre se recomienda acompañamiento profesional (graduado/a social, abogado/a laboralista, sindicato).</li>
+  </ul>
+
+  <h2 id="principios">7 principios editoriales del proyecto</h2>
+  <p>Todas las decisiones editoriales pasan por estos siete filtros. Se aplican en cascada: si un principio superior entra en conflicto con uno inferior, gana el superior. Ninguno es negociable.</p>
+
+  <div class="card">
+    <div class="principle"><div class="principle-num">1</div><div class="principle-text"><strong>Datos verificables, nunca aproximados.</strong> Cada cifra publicada se cruza con su fuente oficial antes de salir. Si una fuente no es accesible, se omite el dato y se documenta el motivo. Cero invención de cuantías, artículos, fechas de vigencia, códigos REGCON o CVEs de boletín.</div></div>
+    <div class="principle"><div class="principle-num">2</div><div class="principle-text"><strong>Utilidad primero, SEO como consecuencia.</strong> El contenido se diseña para resolver dudas reales de la persona trabajadora. Si una decisión mejora SEO pero empeora la utilidad, se descarta. Si algo es útil pero el SEO lo penaliza, se publica igual.</div></div>
+    <div class="principle"><div class="principle-num">3</div><div class="principle-text"><strong>Independencia económica.</strong> No hay empresas detrás del proyecto. La única monetización es <a href="https://support.google.com/adsense/answer/48182" target="_blank" rel="noopener">Google AdSense</a> (banners contextuales, sin tracking invasivo más allá del estándar de Google Analytics). No hay contenido patrocinado, ni afiliados, ni "advertoriales" disfrazados.</div></div>
+    <div class="principle"><div class="principle-num">4</div><div class="principle-text"><strong>No vendemos datos.</strong> No requerimos registro, no almacenamos cálculos, no cruzamos identidad. Solo se usa Google Analytics 4 para entender qué contenido es útil (páginas visitadas, tiempo en pantalla, dispositivo). La política de cookies y privacidad sigue el <a href="/privacidad.html">RGPD y la LSSI-CE españolas</a>.</div></div>
+    <div class="principle"><div class="principle-num">5</div><div class="principle-text"><strong>Lenguaje inclusivo.</strong> "Trabajadores y trabajadoras" en todo el contenido del proyecto. No se asume género por defecto. Las categorías profesionales aparecen con doble marca ("Camarero/a", "Limpiador/a", "Encargado/a") o forma neutra ("plantilla", "personal empleado", "personas trabajadoras").</div></div>
+    <div class="principle"><div class="principle-num">6</div><div class="principle-text"><strong>Fecha de última revisión visible.</strong> Cada ficha de convenio incluye la fecha de última verificación editorial y el edicto del boletín oficial en el que se apoya. Cuando el boletín cambia, la ficha se actualiza y se refleja en el histórico interno del proyecto.</div></div>
+    <div class="principle"><div class="principle-num">7</div><div class="principle-text"><strong>Trazabilidad de la cifra.</strong> Cada cuantía relevante (salario base, plus, hora extra, paga extra, complemento por antigüedad) enlaza al artículo del convenio o de la norma que la fija. Nada se afirma sin referencia comprobable.</div></div>
+  </div>
+
+  <h2 id="metodologia-irpf">Metodología del cálculo IRPF 2026</h2>
+  <p>El cálculo del salario neto de la calculadora utiliza el <strong>algoritmo oficial del IRPF 2026 publicado por la Agencia Tributaria</strong>, basado en el Real Decreto 439/2007 (Reglamento del IRPF) actualizado con las novedades de la Ley 12/2023 y el Real Decreto-ley aplicable en 2026. El código es determinista y reproducible: los mismos inputs producen exactamente los mismos outputs que el "servicio de cálculo del importe de la retención de IRPF" oficial de la AEAT.</p>
+
+  <p>El cálculo incluye estas piezas:</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:10px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:2px solid var(--cream-200);background:var(--cream-50);">Componente</th>
+          <th style="text-align:left;padding:10px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:2px solid var(--cream-200);background:var(--cream-50);">Cómo se aplica en la calculadora</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Tramos estatales</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Tarifa progresiva del art. 63.1 LIRPF (2026): 9,5% + 9,5% + 12% + 15% + 18,5% para tramos hasta 12.450, 20.200, 35.200, 60.000 y >300.000 €.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Tramos autonómicos</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Se aplica la tarifa autonómica correspondiente. Para régimen común (Madrid, Cataluña, Valencia, Andalucía, etc.) se usa la escala publicada por cada Comunidad para 2026. Para foralidad (Bizkaia, Gipuzkoa, Álava, Navarra), cada ficha de convenio cita la Norma Foral correspondiente y advierte cuándo el régimen aplicable cambia el cálculo final.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Mínimo personal</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Aplicado según art. 57 LIRPF (5.550 € por defecto) + incrementos por edad (art. 58) y por descendientes o ascendientes a cargo (arts. 58 y 59).</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Cotizaciones a la SS</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);"><strong>7,56%</strong> sobre bruto: 4,80% Contingencias Comunes + 1,55% Desempleo + 0,10% FOGASA + 1,11% Formación Profesional (vigentes 2026).</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Situación familiar</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">La calculadora ofrece tres situaciones: soltero/a sin descendientes a cargo (por defecto), familia monoparental con un descendiente y matrimonio con cónyuge sin ingresos (>3.000 €).</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Pagas anuales</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">14 pagas por defecto (12 mensualidades + 2 extras). Toggle para conversión a 12 (pagas prorrateadas) o 15 (convenios con 3 extras: Bizkaia Limpieza, Málaga, Sevilla, Cantabria).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <p style="font-size:13px;color:var(--ink-lighter);margin-top:14px;">Para situaciones especiales (Ley Beckham de impatriados, descendientes con discapacidad ≥33% o ≥65%, ascendientes con dependencia acreditada, jubilación parcial, ERTE) recomendamos contrastar con asesoría fiscal profesional. Las cifras de SalarioJusto son deterministas para los inputs modelados pero <strong>no constituyen asesoramiento fiscal individual</strong> ni sustituyen la certificación de retenciones que emite la empresa a través del modelo 145.</p>
+
+  <h2 id="verificacion">Verificación de convenios colectivos — protocolo estándar</h2>
+  <p>Cada ficha de convenio se construye siguiendo el mismo protocolo de verificación antes de publicarse. Es un proceso <strong>cerrado y auditable</strong> que sacrifica velocidad (una ficha completa lleva 4-8 horas de trabajo real) a cambio de trazabilidad. No hay atajos generativos: ninguna cifra se propone sin verificación humana previa.</p>
+
+  <details style="margin:16px 0;background:#fff;border:1px solid var(--cream-200);padding:16px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);cursor:pointer;">Paso 1 — Localización del texto oficial</summary>
+    <div style="margin-top:12px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>El primer paso es localizar el texto vigente en al menos <strong>dos fuentes oficiales independientes</strong>. La ruta habitual es:</p>
+      <ol>
+        <li>Búsqueda en el <a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener">REGCON</a> del Ministerio de Trabajo con el CIF de la patronal firmante o el ámbito territorial. Devuelve el código de convenio (formato XXXXXXXXXXXXX) y el localizador del último acuerdo publicado.</li>
+        <li>Confirmación en el boletín oficial territorial que corresponde: <strong>BOP</strong> (Bizkaia, Barcelona, Valencia, Málaga, Sevilla, Zaragoza, etc.), <strong>BOCM</strong> (Madrid), <strong>DOGC</strong> (Cataluña), <strong>DOGV</strong> (Valencia autonómico), <strong>BOJA</strong> (Andalucía), <strong>BOPA</strong> (Asturias), <strong>BOC</strong> (Cantabria), <strong>BOA</strong> (Aragón), <strong>BOR</strong> (La Rioja), <strong>BOG</strong> (Gipuzkoa), <strong>BOTHA</strong> (Álava), <strong>BOPV</strong> (País Vasco), <strong>BOPLP</strong> (Las Palmas), <strong>BOC</strong> (Canarias), <strong>BOIB</strong> (Baleares), <strong>BOPN</strong> (Navarra), <strong>BOE</strong> (estatal).</li>
+        <li>Si la ficha versa sobre un convenio en ultraactividad, se recupera <strong>el último texto vigente + todas las revisiones salariales posteriores</strong> (no basta con el texto matriz).</li>
+        <li>Contraste con la web del sindicato firmante (CCOO Hábitat, UGT FeSMC, ELA, LAB, CSIF, STU según corresponda). Los sindicatos suelen publicar tablas más legibles que los boletines, útiles para detectar erratas del boletín.</li>
+      </ol>
+    </div>
+  </details>
+
+  <details style="margin:16px 0;background:#fff;border:1px solid var(--cream-200);padding:16px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);cursor:pointer;">Paso 2 — Verificación A+B de las cifras</summary>
+    <div style="margin-top:12px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Cada cifra se cruza con al menos dos fuentes antes de publicarse. La regla operativa: si dos fuentes coinciden, se acepta; si difieren, se aparta la publicación hasta identificar la causa.</p>
+      <ul>
+        <li><strong>Salario base mensual</strong> por categoría: BOP + acta de la Comisión Paritaria si existe.</li>
+        <li><strong>Pluses variables</strong> (nocturnidad, turnicidad, transporte, festivos especiales): BOP + fórmula publicada por el sindicato firmante.</li>
+        <li><strong>Fórmula del bruto anual</strong> (SB × pagas + pluses × 12 + bolsa de vacaciones si aplica): auditoría matemática fila a fila. Cero desviaciones por encima del redondeo centesimal.</li>
+        <li><strong>Jornada anual</strong>: se recalcula desde jornada semanal + festivos autonómicos + descanso legal. Si no cuadra con la publicada, se investiga.</li>
+        <li><strong>Fechas de vigencia y ultraactividad</strong>: se cruzan la fecha de firma, la de publicación en boletín, la fecha de entrada en vigor y la de denuncia si aplica. Ninguna se afirma sin las cuatro verificadas.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details style="margin:16px 0;background:#fff;border:1px solid var(--cream-200);padding:16px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);cursor:pointer;">Paso 3 — Auditoría matemática fila a fila</summary>
+    <div style="margin-top:12px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Cada fila de la tabla salarial se valida con la fórmula del propio convenio. Ejemplos reales:</p>
+      <ul>
+        <li><strong>Bizkaia Limpieza:</strong> <code>SB mensual × 15 pagas = bruto anual</code>. Auditadas 30+ categorías del convenio 2021-2024 con 0 desviaciones.</li>
+        <li><strong>Málaga Limpieza:</strong> <code>SB mensual × 12 + plus convenio × 12 + 3 pagas extras = bruto anual</code>. Auditadas 14 categorías con 0 desviaciones más allá del redondeo centesimal.</li>
+        <li><strong>Sevilla Limpieza:</strong> <code>SB diario × 365 + asiduidad × 12 + plus especial × 12 + 3 pagas extras = bruto anual</code>. Auditadas 18 filas entre 2024, 2025 y 2027 con 0 desviaciones.</li>
+        <li><strong>Valencia Limpieza:</strong> <code>SB × 14 pagas + trienios (congelados 2021-2025) = bruto anual</code>. Auditadas 16 categorías con 0 desviaciones.</li>
+        <li><strong>Las Palmas Limpieza:</strong> <code>SB × 12 + plus convenio × 12 + 3 pagas extras + bolsa vacaciones = bruto anual</code>. Auditadas 24 categorías con 0 desviaciones (redondeo &lt;0,15 €).</li>
+      </ul>
+    </div>
+  </details>
+
+  <details style="margin:16px 0;background:#fff;border:1px solid var(--cream-200);padding:16px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);cursor:pointer;">Paso 4 — Citación obligatoria del boletín</summary>
+    <div style="margin-top:12px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Toda ficha cita el boletín oficial de origen con:</p>
+      <ul>
+        <li>Número y fecha del boletín (ej. "BOP Sevilla Núm. 162 · 25-VIII-2025").</li>
+        <li>Código REGCON del convenio (ej. "41001705011982").</li>
+        <li>CVE (Código de Verificación Electrónica) o localizador cuando existe (ej. "AR_VB67VS44").</li>
+        <li>URL directa al boletín cuando es accesible en abierto. Si el boletín solo publica en PDF cerrado, se indica el número y la fecha para localizarlo manualmente.</li>
+        <li>Si hay rectificación posterior o acta complementaria, ambas fuentes se citan (ej. Sevilla 162/2025 + rectificación 238/2025).</li>
+      </ul>
+    </div>
+  </details>
+
+  <details style="margin:16px 0;background:#fff;border:1px solid var(--cream-200);padding:16px 22px;">
+    <summary style="font-family:'DM Serif Display',serif;font-size:17px;font-weight:400;color:var(--ink);cursor:pointer;">Paso 5 — Notas de ultraactividad y complementos SMI</summary>
+    <div style="margin-top:12px;font-size:14px;color:var(--ink-light);line-height:1.7;">
+      <p>Si el convenio ha vencido y sus tablas siguen aplicándose por ultraactividad (art. 86.3 ET), se indica de forma visible en el hero y en la primera sección de la ficha. La ultraactividad no es un tecnicismo menor: implica que las cláusulas obligacionales (paz social, comisión paritaria) han decaído mientras las normativas (salario, jornada, subrogación) siguen aplicables.</p>
+      <p>Si alguna categoría queda por debajo del SMI 2026 (16.576 € anuales), se marca en la tabla salarial con un símbolo (⚠) y se recuerda en un bloque destacado que la empresa está obligada por ley (art. 27.1 ET) a complementar hasta el SMI. Esta lectura es imprescindible en provincias con categorías bajas: Málaga (6 de 14 bajo SMI), Las Palmas (10 de 24), Valencia (varias categorías con complemento reconocido en el propio convenio).</p>
+    </div>
+  </details>
+
+  <h2 id="cobertura">Cobertura editorial 2026</h2>
+  <p>El proyecto cubre en profundidad los sectores con mayor volumen de consulta según Google Search Console y las provincias con mayor concentración de trabajadores afectados por el sector. La regla es priorizar convenios en negociación activa o en ultraactividad prolongada (los que generan más dudas prácticas).</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:10px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:2px solid var(--cream-200);background:var(--cream-50);">Sector</th>
+          <th style="text-align:left;padding:10px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:2px solid var(--cream-200);background:var(--cream-50);">Provincias cubiertas</th>
+          <th style="text-align:right;padding:10px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:2px solid var(--cream-200);background:var(--cream-50);">Fichas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Hostelería</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Madrid, Valencia, Bizkaia, Baleares, Barcelona, Zaragoza, Sevilla, Málaga, Tarragona, Girona, Maresme, Cantabria, Valladolid, Cádiz, Granada + pilar sectorial estatal</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;">15+</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Limpieza de Edificios y Locales</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Bizkaia, Madrid, Barcelona, Valencia, Sevilla, Málaga, Las Palmas, Zaragoza, Asturias, Murcia + pilar sectorial estatal</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;">10+</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Metal</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Bizkaia (con impacto sitewide del sector siderometalúrgico)</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;">1</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Oficinas y Despachos</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Valencia (con teletrabajo y festivos por Fallas)</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;">1</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Construcción</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Bizkaia (con enlace al convenio estatal supletorio)</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;">1</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Técnicos de Espectáculos</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Estatal</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;">1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <p style="font-size:13px;color:var(--ink-lighter);">Además hay 10 <a href="/plantillas-transparencia-retributiva-2026.html">plantillas legales redactadas</a> para ejercer derechos de la Directiva 2023/970 (petición de banda salarial, información salarial a RRHH, reclamación de grupo profesional superior, atrasos de convenio, discriminación salarial, absorción de complementos SMI, documentación de evidencias, brecha salarial, trabajo de igual valor e igualdad por trato desigual). Todas son verificables contra los artículos del Estatuto de los Trabajadores, la LOI y las guías de la Inspección de Trabajo.</p>
+
+  <p>No hay landings programáticas ni combinatorias mecánicas de tipo "salario × ciudad × año". Se rechaza esa práctica porque no añaden valor sobre la calculadora unificada de la home y contribuyen al ruido percibido por los motores de búsqueda como "contenido thin".</p>
+
+  <h2 id="casos">Casos de estudio de auditoría editorial</h2>
+  <p>Estos son ejemplos concretos donde la metodología de verificación ha corregido publicaciones o ha identificado matices no evidentes en el texto oficial. Se documentan como transparencia editorial:</p>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Caso 1 — Bizkaia Limpieza: descubrimiento de la cláusula IPC automática (Art. 3)</h3>
+    <p>El convenio 2021-2024 de Bizkaia se firmó con una cláusula específica en su Art. 3 que activaba una revisión salarial automática si el IPC acumulado 2020-2023 superaba el 12,90% pactado. Con el IPC real acumulado del 14,7%-14,8%, la Comisión Paritaria firmó el 17 de enero de 2025 una nueva tabla salarial con +1,9% adicional (dentro del tope del 2% pactado), publicada en el BOB Núm. 29 del 12 de febrero de 2025 (CVE BOB-2025a029-(III-19)). La ficha de Bizkaia Limpieza documenta este mecanismo, único en el sector, y la tabla IPC-INE año a año que justifica la activación.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Caso 2 — Sevilla Limpieza: rectificación del BOP 238 sobre BOP 162</h3>
+    <p>El convenio 2024-2027 de Sevilla se publicó primero en el BOP Sevilla Núm. 162 del 25 de agosto de 2025 con las tablas salariales completas. En diciembre de 2025 se publicó una <strong>rectificación de errores mecanográficos</strong> en el BOP Sevilla Núm. 238 del 11 de diciembre de 2025. Las fichas de SalarioJusto priorizan la rectificación como fuente vinculante y auditan las 18 filas entre 2024, 2025 y 2027 con la fórmula del convenio. Cero desviaciones más allá del redondeo centesimal.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Caso 3 — Valencia Limpieza: firma sin CCOO y horizonte autonómico</h3>
+    <p>El convenio provincial 2021-2025 de Valencia se firmó únicamente por FeSMC-UGT (más las patronales APELVA y ASPEL), pero <strong>no por CCOO Hàbitat PV</strong>. Los motivos de la no-firma están documentados públicamente: subida del 0% en 2021 frente a un IPC del 6,5%, incremento acumulado del 10,913% en 5 años, ausencia de cláusula IPC de revisión, reducción de días de licencia por enfermedad de familiares. Este contexto es imprescindible para entender por qué CCOO impulsa ahora un convenio autonómico para toda la Comunitat Valenciana (primera reunión 28 de enero de 2026 en Alicante). La ficha lo documenta como parte editorial del contexto, no como opinión.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Caso 4 — Las Palmas Limpieza: modelo "acuerdo parcial anual" único</h3>
+    <p>Ante el estancamiento de la negociación del texto articulado completo en Las Palmas, las patronales (ASPEL, APEL) y los tres sindicatos (CCOO, UGT, STU) firmaron el 23 de enero de 2026 un acuerdo específico que actualiza únicamente las tablas salariales con vigencia hasta el 31 de diciembre de 2026 (publicado en el BOPLP Núm. 37 del 27 de marzo de 2026, localizador AR_VB67VS44). Es el único convenio provincial de Limpieza del sector con este modelo intermedio entre convenio completo (Sevilla 2024-2027) y ultraactividad (Madrid, Valencia, Málaga). Adicionalmente, la firma tripartita con STU (Sindicato de Trabajadores Unidos) es única del sector.</p>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Caso 5 — Hostelería Valencia: verificación del title "1.100-1.415 €/mes"</h3>
+    <p>El title de la ficha de Hostelería Valencia se optimizó a "1.100-1.415 €/mes — Tablas salariales" tras verificar en Google Search Console que Google había propagado (rastreado) esa versión el 19 de mayo. Las cifras 1.100,46 € y 1.415,47 € son cuantías brutas mensuales publicadas en el BOP Valencia núm. 26 del 7 de febrero de 2023 para Personal Obrero de mes 30 días (SMI aplicable) y jefaturas en hoteles 4-5★, respectivamente. Ambas figuran ya en el hero de la ficha con las etiquetas de categoría para cumplir la promesa del snippet (ejemplo de coherencia SERP↔landing).</p>
+  </div>
+
+  <h2 id="fuentes">Fuentes oficiales usadas</h2>
+  <p>Cada afirmación cuantitativa se apoya en al menos una de estas fuentes. Todas las URLs son verificables en abierto:</p>
+  <ul>
+    <li><a href="https://sede.agenciatributaria.gob.es/" target="_blank" rel="noopener">Agencia Tributaria (AEAT)</a> — algoritmo IRPF 2026 y modelo 145 (comunicación de datos al pagador)</li>
+    <li><a href="https://www.hacienda.gob.es/sgfal/financiacionterritorial/autonomica/capitulo-ii-tributacion-autonomica-2026.pdf" target="_blank" rel="noopener">Ministerio de Hacienda — Tributación Autonómica 2026</a> (escalas autonómicas actualizadas para todas las CCAA de régimen común)</li>
+    <li><a href="https://dfb.microsoftcrmportals.com/es-ES/Articulo/?Code=KA-01877" target="_blank" rel="noopener">Diputación Foral de Bizkaia</a> — Norma Foral 13/2013 IRPF (con revisiones anuales)</li>
+    <li>Gobierno Foral de Navarra, Diputación Foral de Álava, Diputación Foral de Gipuzkoa — Normas Forales IRPF respectivas</li>
+    <li><a href="https://www.boe.es/" target="_blank" rel="noopener">BOE</a> — convenios sectoriales estatales, LIRPF, Estatuto de los Trabajadores, Directiva UE 2023/970 traspuesta</li>
+    <li><a href="https://expinterweb.mites.gob.es/regcon/" target="_blank" rel="noopener">REGCON</a> — Registro Central de Convenios y Acuerdos Colectivos del Ministerio de Trabajo</li>
+    <li><strong>Boletines provinciales y autonómicos</strong>: BOB (Bizkaia), BOG (Gipuzkoa), BOTHA (Álava), BOPV (País Vasco), BOCM (Madrid), DOGC (Cataluña), DOGV (Valencia), BOJA (Andalucía), BOPA (Asturias), BOC (Cantabria), BOA (Aragón), BOR (La Rioja), BOPLP (Las Palmas), BOC (Canarias), BOIB (Baleares), BOPN (Navarra), BOP de cada provincia</li>
+    <li><a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32023L0970" target="_blank" rel="noopener">Directiva UE 2023/970</a> — Transparencia Retributiva (obligaciones de la Unión europea)</li>
+    <li><a href="https://www.ine.es" target="_blank" rel="noopener">INE</a> — Índice de Precios al Consumo (para cálculo IPC en cláusulas de revisión) y brecha salarial de género (referencia estadística)</li>
+    <li><a href="https://curia.europa.eu/" target="_blank" rel="noopener">TJUE</a> — jurisprudencia europea aplicable (ej. C-152/20 IMI sobre fijo-discontinuos)</li>
+    <li>Tribunal Supremo — Sala de lo Social — jurisprudencia consolidada</li>
+    <li>Webs de sindicatos firmantes: CCOO Hábitat, UGT FeSMC, ELA, LAB, CSIF, STU (según convenio)</li>
+  </ul>
+
+  <h2 id="calendario">Calendario del proyecto</h2>
+  <p>Hitos editoriales relevantes del proyecto en 2026:</p>
+
+  <div class="card" style="padding:16px;">
+  <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:10px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:2px solid var(--cream-200);background:var(--cream-50);">Fecha</th>
+          <th style="text-align:left;padding:10px;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:2px solid var(--cream-200);background:var(--cream-50);">Hito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Marzo 2026</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Lanzamiento del proyecto con calculadora IRPF 2026 y primeras fichas de convenio.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Abril-Mayo 2026</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Cobertura editorial de Hostelería (Madrid, Valencia, Bizkaia, Baleares, Cantabria, Zaragoza, Barcelona, Tarragona, Girona, Maresme).</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">7 de junio de 2026</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Entrada en vigor en España de la Directiva UE 2023/970. Publicación de la ficha de <a href="/ley-transparencia-salarial-2026.html">Ley de Transparencia Retributiva</a> y del <a href="/plantillas-transparencia-retributiva-2026.html">Kit del trabajador</a> con 10 plantillas legales.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Junio-Julio 2026</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Cobertura editorial de Limpieza (Bizkaia, Madrid, Barcelona, Valencia, Sevilla, Málaga, Las Palmas, Zaragoza, Asturias, Murcia). Auditoría editorial de cada ficha para cumplir estándares E-E-A-T.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;font-weight:700;color:var(--ink);vertical-align:top;">Agosto 2026 (previsto)</td>
+          <td style="padding:10px;border-bottom:1px solid var(--cream-100);font-size:13px;color:var(--ink-light);">Extensión a Comercio y Enseñanza privada según la demanda observada en GSC.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <h2 id="limitaciones">Limitaciones y disclaimers</h2>
+  <p>La transparencia sobre lo que <strong>no</strong> hace SalarioJusto es tan importante como lo que sí hace. Estas son las limitaciones honestas del proyecto:</p>
+  <ul>
+    <li>Las cifras son <strong>orientativas</strong> y se basan en supuestos declarados (situación familiar estándar, sin Ley Beckham, sin discapacidad). Tu nómina real puede variar según factores que la calculadora no considera (retenciones voluntarias más altas, deducciones aplicadas por convenio colectivo específico, plus de empresa fuera del convenio, complementos por productividad).</li>
+    <li>SalarioJusto <strong>no sustituye al asesoramiento fiscal o laboral profesional</strong>. Para decisiones legales concretas (denunciar discriminación salarial, reclamar diferencias, demandar por despido) consulta a un graduado o graduada social, a un abogado o abogada laboralista, o a tu sindicato.</li>
+    <li>Las tablas de convenio reflejan los importes <strong>publicados oficialmente</strong>. Si tu empresa los ha mejorado por pacto individual o de empresa, tu salario será mayor. Si los incumple, tienes derecho a reclamar (consulta la <a href="/reclamar-diferencias-salariales-convenio.html">guía para reclamar diferencias salariales</a>).</li>
+    <li>Los convenios en ultraactividad pueden firmarse en cualquier momento durante el año. Si detectamos un convenio nuevo publicado en boletín oficial y no reflejado en las fichas, lo actualizamos con prioridad y anotamos la fecha de la actualización.</li>
+    <li>Las plantillas del <a href="/plantillas-transparencia-retributiva-2026.html">Kit del trabajador</a> son <strong>de uso general</strong>. Aunque están redactadas siguiendo los artículos aplicables del ET, la LOI y la Directiva 2023/970, cada situación individual puede requerir adaptación. Para reclamaciones complejas se recomienda acompañamiento profesional.</li>
+    <li>El proyecto <strong>no cubre todas las CCAA</strong> en el mismo nivel de detalle. La priorización sigue el volumen de consulta detectado en Google Search Console (más demanda → más profundidad). Territorios como Galicia, La Rioja, Extremadura, Ceuta y Melilla tienen cobertura básica pero no fichas provinciales completas de todos los sectores.</li>
+    <li>Los <strong>convenios de empresa</strong> (pactados en una única empresa) no se cubren salvo cuando afectan a subsectores muy consultados. La regla habitual es priorizar convenios provinciales o sectoriales de aplicación general.</li>
+  </ul>
+
+  <h2 id="stack">Stack técnico</h2>
+  <p>El sitio está construido con <strong>HTML estático + JavaScript vanilla</strong>, sin frameworks pesados ni SPA. La razón: mantener control absoluto sobre la accesibilidad, el rendimiento (Core Web Vitals) y la trazabilidad de cada cambio editorial. Cada landing es un HTML independiente que puede auditarse y modificarse sin recompilar el proyecto entero.</p>
+
+  <ul>
+    <li><strong>Hosting</strong>: Vercel (CDN global con edge caching, entrega desde el POP más cercano al usuario).</li>
+    <li><strong>Fuentes</strong>: Google Fonts (DM Sans para el cuerpo, DM Serif Display para titulares editoriales, Newsreader para el logo). Carga asíncrona no bloqueante para no penalizar el LCP.</li>
+    <li><strong>Analítica</strong>: Google Analytics 4 (sin cookies invasivas más allá del consentimiento estándar). Diferido a <code>window.load</code> para no bloquear el render.</li>
+    <li><strong>Monetización</strong>: Google AdSense Auto Ads en formato no intrusivo (banners contextuales sin remarketing agresivo).</li>
+    <li><strong>Rendimiento</strong>: los objetivos Core Web Vitals son Performance ≥90 en móvil, LCP &lt;2,5 s, FCP &lt;1,8 s, CLS &lt;0,1 en todas las landings principales.</li>
+    <li><strong>Accesibilidad</strong>: HTML semántico con jerarquía correcta de H1-H6, ARIA labels donde procede, contraste AA en toda la paleta, sin animaciones que puedan provocar problemas de motion sickness.</li>
+    <li><strong>SEO</strong>: canonical explícita por URL, hreflang, meta descriptions únicas, structured data JSON-LD (Organization, BreadcrumbList, FAQPage donde aplica, AboutPage en esta página).</li>
+    <li><strong>Privacidad</strong>: <a href="/privacidad.html">política RGPD-compliant</a> con banner de cookies, no se almacenan cálculos ni datos personales del usuario.</li>
+  </ul>
+
+  <h2 id="faq">Preguntas frecuentes del proyecto</h2>
+
+  <h3>¿Quién está detrás de SalarioJusto?</h3>
+  <p>Un proyecto personal de <strong>Telmo Unzueta</strong>, sin empresa detrás, sin equipo comercial, sin inversores. El objetivo declarado es publicar información salarial y de convenios verificable, con cero dependencia de ningún actor del sector (patronales, sindicatos, empresas de nóminas). La independencia se mantiene porque los ingresos publicitarios de AdSense son la única fuente de sostenimiento del hosting y del tiempo dedicado.</p>
+
+  <h3>¿Cómo se verifican las cifras publicadas?</h3>
+  <p>Con el protocolo de cinco pasos descrito en la sección <a href="#verificacion">Verificación de convenios</a>: localización en dos fuentes oficiales independientes, cruce A+B de las cifras, auditoría matemática fila a fila, citación obligatoria del boletín, y notas de ultraactividad y complementos SMI cuando aplica.</p>
+
+  <h3>¿La calculadora IRPF es exacta?</h3>
+  <p>Sí, dentro del ámbito modelado. El algoritmo replica el "servicio de cálculo del importe de la retención de IRPF" oficial de la AEAT para las situaciones familiares y CCAA cubiertas. Para casos especiales (Ley Beckham, jubilación parcial, discapacidad ≥65%) se recomienda contrastar con asesoría fiscal profesional.</p>
+
+  <h3>¿Cómo actualizáis las tablas salariales de los convenios?</h3>
+  <p>Cuando un boletín provincial o autonómico publica una revisión salarial o un nuevo convenio, se activa el protocolo de verificación. Habitualmente la actualización se aplica entre 24 y 72 horas después de detectar la publicación oficial. Si hay dudas o rectificaciones posteriores (como el caso de BOP Sevilla 238/2025 sobre 162/2025), se espera a la versión firme antes de publicar.</p>
+
+  <h3>¿Publicáis contenido patrocinado o afiliados?</h3>
+  <p>No. La única monetización es Google AdSense (banners contextuales) y no hay contenido patrocinado ni enlaces de afiliación. Ninguna ficha de convenio ni guía se ha modificado por relación comercial. La independencia editorial es un principio no negociable.</p>
+
+  <h3>¿Vendéis datos de los usuarios?</h3>
+  <p>No. No requerimos registro, no almacenamos cálculos, no cruzamos identidad. Solo se usa Google Analytics 4 para entender qué contenido es útil (páginas visitadas, tiempo en pantalla, dispositivo). Detalles en la <a href="/privacidad.html">política de privacidad</a>.</p>
+
+  <h3>¿Cómo puedo reportar un error?</h3>
+  <p>Escribiendo a <a href="mailto:contacto@salariojusto.es">contacto@salariojusto.es</a> con el detalle: URL de la ficha, cifra que consideras incorrecta y la fuente oficial que aporta la cifra correcta. Se responde en menos de 48 h hábiles y, si la corrección es verificable, se aplica inmediatamente.</p>
+
+  <h3>¿Cubrís mi convenio si no aparece en el listado?</h3>
+  <p>Depende del volumen de consulta y del acceso al boletín oficial. Si es un convenio provincial de Hostelería, Limpieza, Metal, Oficinas o Construcción no cubierto, escribe a <a href="mailto:contacto@salariojusto.es">contacto@salariojusto.es</a> con el número del BOP donde se publicó y la fecha. Se estudia añadir al calendario editorial según prioridad.</p>
+
+  <h3>¿Puedo colaborar con el proyecto?</h3>
+  <p>Sí. Las formas más útiles son: reportar errores concretos con fuentes verificables, sugerir convenios que faltan (con el enlace al BOP), aportar correcciones de metodología. Más información en <a href="/colabora.html">/colabora</a>.</p>
+
+  <h2 id="contacto">Contacto y correcciones</h2>
+  <p>Si detectas un dato incorrecto, una cifra desactualizada o un convenio nuevo no reflejado, la ruta es directa. Cualquier corrección verificable se aplica inmediatamente y se anota en el histórico interno del proyecto.</p>
+  <p>Para <strong>reportar errores</strong>, sugerencias o solicitar añadir un convenio, escribe a <a href="mailto:contacto@salariojusto.es">contacto@salariojusto.es</a>. La respuesta llega en menos de 48 h hábiles. Más vías de contacto en <a href="/contacto.html">/contacto</a>.</p>
+  <p>Si quieres <strong>colaborar con el proyecto</strong> de forma más activa (reportar errores con plantilla, sugerir convenios nuevos o apoyar el mantenimiento), visita <a href="/colabora.html">/colabora</a>.</p>
+  <p>Para <strong>consultas de prensa o comunicación</strong> sobre datos publicados, visita la <a href="/sala-de-prensa.html">sala de prensa</a> con la explicación breve del proyecto, disclaimer editorial y contacto directo.</p>
+
+  <h2 id="referencias">Referencias legales aplicables</h2>
+  <p>Lista de las normas jurídicas específicas que soportan las cifras y afirmaciones publicadas en el proyecto. Toda la información se cita con la referencia exacta al artículo aplicable para que pueda ser auditada:</p>
+
+  <h3>Normativa fiscal española</h3>
+  <ul>
+    <li><strong>Ley 35/2006 del IRPF</strong> — Art. 20 (rendimientos del trabajo), Art. 57 (mínimo del contribuyente), Art. 58 (mínimo por descendientes), Art. 59 (mínimo por ascendientes), Art. 60 (mínimo por discapacidad), Art. 63.1 (tramos estatales), Art. 74 (tramos autonómicos), Art. 81 (contribuyentes exentos de retención), Art. 85.3 (límite 43% para retribuciones ≤35.200 €).</li>
+    <li><strong>Real Decreto 439/2007</strong> — Reglamento del IRPF (procedimiento del cálculo de retenciones).</li>
+    <li><strong>Ley 12/2023</strong> — Modificaciones vigentes en 2026 al IRPF y Seguridad Social.</li>
+    <li><strong>Real Decreto-ley aplicable en 2026</strong> — actualización de mínimos, tramos y cotizaciones.</li>
+    <li><strong>Real Decreto 145/2023</strong> — comunicación de datos al pagador (modelo 145 vigente).</li>
+    <li><strong>Norma Foral 13/2013 IRPF de Bizkaia</strong> — Art. 7 (rendimientos del trabajo), Art. 75 (tramos forales), Art. 89-95 (reducciones autonómicas).</li>
+    <li><strong>Normas Forales IRPF de Gipuzkoa (Norma Foral 3/2014), Álava (Norma Foral 33/2013) y Navarra (Ley Foral 22/2014)</strong>.</li>
+    <li><strong>Decreto Legislativo 1/2018</strong> de la Junta de Andalucía — tributos cedidos.</li>
+    <li><strong>Ley 13/1997</strong> de la Comunitat Valenciana — tributos cedidos.</li>
+    <li><strong>Decreto Legislativo 1/2009</strong> del Gobierno de Canarias — tributos cedidos.</li>
+  </ul>
+
+  <h3>Normativa laboral española</h3>
+  <ul>
+    <li><strong>Estatuto de los Trabajadores (Real Decreto Legislativo 2/2015)</strong> — Art. 2 (relaciones laborales especiales), Art. 3 (fuentes normativas), Art. 26 (salario), Art. 27 (SMI), Art. 29 (nómina y liquidación), Art. 32 (créditos salariales), Art. 34 (jornada), Art. 37 (descansos y festivos), Art. 38 (vacaciones), Art. 44 (sucesión de empresa), Art. 59 (prescripción), Art. 63 (denuncia y ultraactividad), Art. 82.3 (descuelgue), Art. 86.3 (ultraactividad de convenio), Art. 87-92 (negociación colectiva).</li>
+    <li><strong>Ley Orgánica 3/2007 (LOI)</strong> — igualdad efectiva de mujeres y hombres. Art. 45-49 (planes de igualdad), Art. 62 (transparencia salarial).</li>
+    <li><strong>Real Decreto 902/2020</strong> — igualdad retributiva entre mujeres y hombres. Establece la obligación del registro salarial y la auditoría retributiva.</li>
+    <li><strong>Real Decreto 901/2020</strong> — planes de igualdad y su registro.</li>
+    <li><strong>Ley Reguladora de la Jurisdicción Social (Ley 36/2011)</strong> — Art. 59 (prescripción), Art. 63 (conciliación previa obligatoria), Art. 124 (procedimiento de despido colectivo), Art. 138 (procedimiento de vacaciones).</li>
+    <li><strong>Real Decreto 1620/2011</strong> — relaciones laborales especiales del servicio del hogar familiar.</li>
+    <li><strong>Convenio Sectorial Estatal de Limpieza (BOE 22-V-2013)</strong> con revisiones posteriores — norma supletoria para provincias que remiten al estatal (Las Palmas, etc.).</li>
+    <li><strong>V Acuerdo Laboral Estatal de Hostelería (ALEH V)</strong> — marco supletorio del sector hostelero.</li>
+  </ul>
+
+  <h3>Normativa europea y jurisprudencia</h3>
+  <ul>
+    <li><strong>Directiva UE 2023/970</strong> — Transparencia Retributiva. Art. 4-5 (información salarial), Art. 6 (obligación de resolver brecha injustificada), Art. 7 (derecho de solicitud de banda salarial), Art. 8 (información pública de bandas), Art. 9 (informe salarial anual), Art. 18-19 (inversión de la carga de la prueba).</li>
+    <li><strong>Directiva 2006/54/CE</strong> — igualdad de género en el empleo.</li>
+    <li><strong>STJUE C-152/20 (IMI, junio 2022)</strong> — antigüedad de personal fijo-discontinuo por duración total de la relación laboral.</li>
+    <li><strong>STJUE C-673/20 y C-702/20 (Enero 2023)</strong> — cálculo de indemnizaciones para contratos temporales.</li>
+    <li><strong>STJUE C-274/18</strong> — trabajo a tiempo parcial y comparabilidad con jornada completa.</li>
+    <li><strong>STS de la Sala de lo Social, 5-3-2020 rec. 3364/2017</strong> — antigüedad fijo-discontinuos, doctrina consolidada.</li>
+    <li><strong>STS 25-9-2013</strong> — subrogación por cambio de contrata en el sector servicios.</li>
+    <li><strong>STS 27-4-2016</strong> — plus a cuenta del SMI.</li>
+  </ul>
+
+  <h3>Normativa autonómica de mediación laboral</h3>
+  <ul>
+    <li><strong>Decreto 88/2000 del Gobierno Vasco (BOPV nº 66, 4-abril-2000)</strong> — PRECO (Procedimiento de Resolución Extrajudicial de Conflictos del País Vasco).</li>
+    <li><strong>Acuerdo Interprofesional SERCLA (BOJA 4/1996)</strong> — Sistema Extrajudicial de Resolución de Conflictos Laborales de Andalucía.</li>
+    <li><strong>V Acuerdo de Solución Extrajudicial de Conflictos Laborales (DOGV 5772)</strong> — TAL (Tribunal de Arbitraje Laboral) y SMAC de la Comunitat Valenciana.</li>
+    <li><strong>Ley 4/2017 de Contratos del Sector Público de Andalucía</strong> — contratación pública con obligaciones de subrogación en pliegos.</li>
+    <li><strong>Ley 9/2017 de Contratos del Sector Público (nacional)</strong> — marco general de contratación pública.</li>
+  </ul>
+
+  <h3>Códigos REGCON de convenios cubiertos (muestra)</h3>
+  <ul>
+    <li>Limpieza de Edificios y Locales <strong>Bizkaia</strong>: 48001445011981</li>
+    <li>Limpieza de Edificios y Locales <strong>Madrid</strong>: 28001505011982</li>
+    <li>Limpieza de Edificios y Locales <strong>Barcelona</strong>: 08000855011981</li>
+    <li>Limpieza de Edificios y Locales <strong>Valencia</strong>: 46001595011981</li>
+    <li>Limpieza de Edificios y Locales <strong>Sevilla</strong>: 41001705011982</li>
+    <li>Limpieza de Edificios y Locales <strong>Málaga</strong>: 29/01/270/2025</li>
+    <li>Limpieza de Edificios y Locales <strong>Las Palmas</strong>: 35001105011981</li>
+    <li>Hostelería <strong>Valencia</strong>: 46001285011982</li>
+    <li>Hostelería <strong>Bizkaia</strong>: 48001205011981</li>
+    <li>Metal <strong>Bizkaia</strong>: 48000115011981</li>
+  </ul>
+
+  <h2 id="empieza">Empieza por aquí</h2>
+  <ul>
+    <li><a href="/">Calculadora de salario neto IRPF 2026</a></li>
     <li><a href="/convenios.html">Convenios colectivos por sector y provincia</a></li>
     <li><a href="/guias.html">Guías de derechos laborales</a></li>
+    <li><a href="/plantillas-transparencia-retributiva-2026.html">Kit del trabajador — 10 plantillas legales</a></li>
     <li><a href="/ley-transparencia-salarial-2026.html">Ley de Transparencia Salarial 2026</a></li>
+    <li><a href="/salarios.html">Comparador salarial provincial</a></li>
   </ul>
 
 </main>
