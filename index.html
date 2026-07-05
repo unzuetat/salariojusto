@@ -2425,6 +2425,414 @@
     @media(max-width:560px){.hub-strip-inner{grid-template-columns:1fr;}.hub-card-title{font-size:17px;}}
   </style>
 
+  <!-- C2 · Directorio de convenios provinciales (redisenio home 2026-07) -->
+  <style>
+    .directorio-c2{max-width:1080px;margin:40px auto 0;padding:24px 8px 40px;scroll-margin-top:120px;}
+    .directorio-c2 .dir-eyebrow{display:inline-block;font-family:'Newsreader',Georgia,serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px;padding-bottom:8px;border-bottom:1px solid var(--gold);}
+    .directorio-c2 h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(28px,4.2vw,44px);font-weight:400;color:var(--ink);line-height:1.18;margin:0 0 18px;text-wrap:balance;max-width:820px;}
+    .directorio-c2 h2 em{font-style:italic;color:var(--gold);font-family:'Newsreader',Georgia,serif;font-weight:500;}
+    .directorio-c2 .dir-lede{font-size:16px;line-height:1.65;color:var(--ink-light);max-width:640px;margin-bottom:12px;text-wrap:pretty;}
+    .directorio-c2 .dir-lede strong{color:var(--ink);font-weight:600;}
+    .directorio-c2 .dir-meta-line{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:22px;padding-top:20px;border-top:1px solid var(--cream-200);font-size:12px;color:var(--ink-lighter);}
+    .directorio-c2 .dir-meta-line strong{color:var(--ink);font-weight:700;}
+    .directorio-c2 .dir-meta-line a{color:var(--gold);text-decoration:none;}
+    .directorio-c2 .dir-meta-line .sep{color:var(--cream-300);}
+    .directorio-c2 .dir-sector{margin-top:56px;}
+    .directorio-c2 .dir-sector-head{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--ink);flex-wrap:wrap;}
+    .directorio-c2 .dir-sector-head h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:26px;color:var(--ink);line-height:1;margin:0;text-wrap:balance;}
+    .directorio-c2 .dir-sector-head .count{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-variant-numeric:tabular-nums;}
+    .directorio-c2 .dir-sector-head .rule{flex:1;}
+    .directorio-c2 .dir-sector-note{font-size:13px;color:var(--ink-lighter);line-height:1.6;margin:0 0 24px;max-width:720px;text-wrap:pretty;}
+    .directorio-c2 .dir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1px;background:var(--cream-200);border:1px solid var(--cream-200);}
+    .directorio-c2 .dir-card{background:#fff;padding:22px 48px 20px 22px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;position:relative;transition:background 0.15s,transform 0.15s;min-height:152px;}
+    .directorio-c2 .dir-card:hover{background:var(--cream-50);transform:translateY(-1px);}
+    .directorio-c2 .dir-card:hover .dir-arrow{color:var(--gold);transform:translateX(4px);}
+    .directorio-c2 .dir-card:hover .dir-place{color:var(--gold);}
+    .directorio-c2 .dir-meta{font-size:11px;color:var(--ink-lighter);letter-spacing:0.08em;text-transform:uppercase;font-weight:600;font-variant-numeric:tabular-nums;}
+    .directorio-c2 .dir-place{font-family:'DM Serif Display',Georgia,serif;font-size:20px;line-height:1.15;color:var(--ink);font-weight:400;transition:color 0.15s;text-wrap:balance;hyphens:none;overflow-wrap:normal;}
+    .directorio-c2 .dir-place.compact{font-size:17px;line-height:1.2;}
+    .directorio-c2 .dir-bottom{margin-top:auto;padding-top:12px;border-top:1px dashed var(--cream-200);display:flex;flex-direction:column;gap:8px;}
+    .directorio-c2 .dir-chips{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:11px;color:var(--ink-light);line-height:1.35;font-variant-numeric:tabular-nums;}
+    .directorio-c2 .dir-chips .chip{display:inline-flex;align-items:center;gap:4px;letter-spacing:0.02em;}
+    .directorio-c2 .dir-chips .chip-sep{color:var(--cream-300);margin:0 -4px;}
+    .directorio-c2 .dir-chips strong{color:var(--ink);font-weight:700;}
+    .directorio-c2 .dir-status{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;padding:3px 8px;align-self:flex-start;max-width:100%;}
+    .directorio-c2 .dir-status.vigente{color:var(--green);background:var(--green-bg);}
+    .directorio-c2 .dir-status.ultra{color:var(--amber);background:var(--amber-bg);}
+    .directorio-c2 .dir-status .dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;}
+    .directorio-c2 .dir-arrow{position:absolute;top:22px;right:22px;font-size:14px;color:var(--ink-lighter);transition:color 0.15s,transform 0.15s;line-height:1;}
+    .directorio-c2 .dir-hublink{grid-column:1 / -1;background:var(--ink);color:#fff;padding:22px 26px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;transition:background 0.2s;}
+    .directorio-c2 .dir-hublink:hover{background:var(--gold-dark);}
+    .directorio-c2 .dir-hublink-text{flex:1 1 280px;min-width:240px;}
+    .directorio-c2 .dir-hublink-label{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-light);font-weight:700;margin-bottom:6px;}
+    .directorio-c2 .dir-hublink-title{font-family:'DM Serif Display',Georgia,serif;font-size:19px;color:#fff;line-height:1.25;font-weight:400;text-wrap:balance;}
+    .directorio-c2 .dir-hublink-arrow{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-light);font-weight:700;white-space:nowrap;flex-shrink:0;}
+    .directorio-c2 .dir-footnote{margin-top:48px;padding:22px 26px;background:var(--cream-100);border-left:3px solid var(--gold);font-size:14px;color:var(--ink-light);line-height:1.65;text-wrap:pretty;}
+    .directorio-c2 .dir-footnote strong{color:var(--ink);}
+    .directorio-c2 .dir-footnote a{color:var(--gold);text-decoration:none;}
+    @media(max-width:600px){
+      .directorio-c2{padding:24px 4px 32px;}
+      .directorio-c2 h2{font-size:28px;}
+      .directorio-c2 .dir-grid{grid-template-columns:1fr;}
+      .directorio-c2 .dir-card{padding-right:42px;}
+      .directorio-c2 .dir-hublink{flex-direction:column;align-items:flex-start;}
+      .directorio-c2 .dir-hublink-arrow{align-self:flex-end;}
+    }
+  </style>
+
+  <section id="directorio-convenios" class="directorio-c2" aria-label="Directorio de convenios provinciales verificados en BOE">
+    <span class="dir-eyebrow">Directorio · 30 fichas · BOE 2026</span>
+    <h2>Te ayudamos a <em>descifrar</em> lo que dice el BOE de tu convenio.</h2>
+    <p class="dir-lede">Verificamos cada tabla salarial contra el boletín oficial que la publica. Categorías profesionales, pagas extras, antigüedad, ultraactividad, ejemplos reales. Cada card muestra los datos objetivos del convenio; para el detalle salarial, entra en la ficha. <strong>30 provincias hoy, más en camino.</strong></p>
+
+    <div class="dir-meta-line">
+      <span><strong>Fuente:</strong> BOE + boletines provinciales</span>
+      <span class="sep">·</span>
+      <span><strong>Actualizado:</strong> julio 2026</span>
+      <span class="sep">·</span>
+      <span><strong>Método:</strong> <a href="/sobre.html">metodología completa</a></span>
+    </div>
+
+    <!-- LIMPIEZA -->
+    <div class="dir-sector">
+      <div class="dir-sector-head">
+        <h3>Limpieza de edificios y locales</h3>
+        <span class="count">11 fichas · 10 provincias + estatal</span>
+        <span class="rule"></span>
+      </div>
+      <p class="dir-sector-note">Convenio provincial en cada plaza más el marco estatal supletorio. Cada ficha desglosa tablas salariales por categoría (Personal de Limpieza, Peón/a Especialista, responsable de equipo), pagas extras y antigüedad.</p>
+
+      <div class="dir-grid">
+
+        <a class="dir-card" href="/convenio-limpieza-bizkaia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Vizcaya · 2026</span>
+          <span class="dir-place">Bizkaia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOB</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>31</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-barcelona.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Barcelona · 2026</span>
+          <span class="dir-place">Barcelona</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>DOGC</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>18</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2026 – 2030</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-madrid.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Madrid · 2026</span>
+          <span class="dir-place">Madrid</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOCM</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>29</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-zaragoza.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Zaragoza · 2026</span>
+          <span class="dir-place">Zaragoza</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOPZ</strong> 2023</span><span class="chip-sep">·</span><span class="chip"><strong>19</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-asturias.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Asturias · 2026</span>
+          <span class="dir-place">Asturias</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOPA</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>27</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2026</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-malaga.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Málaga · 2026</span>
+          <span class="dir-place">Málaga</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Málaga</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>14</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-valencia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Valencia · 2026</span>
+          <span class="dir-place">Valencia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP València</strong> 2022</span><span class="chip-sep">·</span><span class="chip"><strong>16</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-sevilla.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Sevilla · 2026</span>
+          <span class="dir-place">Sevilla</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Sevilla</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>6</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2027</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-laspalmas.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Las Palmas · 2026</span>
+          <span class="dir-place">Las Palmas</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOPLP</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>26</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2026</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-limpieza-murcia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Murcia · 2026</span>
+          <span class="dir-place">Murcia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BORM</strong> 2024</span><span class="chip-sep">·</span><span class="chip"><strong>13</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>4</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2026</span>
+          </div>
+        </a>
+
+        <a class="dir-hublink" href="/convenio-limpieza-edificios-locales.html">
+          <div class="dir-hublink-text">
+            <div class="dir-hublink-label">Marco estatal · supletorio</div>
+            <div class="dir-hublink-title">Convenio Estatal de Limpieza de Edificios y Locales</div>
+          </div>
+          <span class="dir-hublink-arrow">Ver marco estatal →</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- HOSTELERÍA -->
+    <div class="dir-sector">
+      <div class="dir-sector-head">
+        <h3>Hostelería</h3>
+        <span class="count">16 fichas · 15 provincias + pilar</span>
+        <span class="rule"></span>
+      </div>
+      <p class="dir-sector-note">Convenio provincial en cada plaza. Cada ficha detalla los niveles retributivos, los grupos de establecimiento (hoteles 4-5★, restaurantes, cafeterías…), pluses y jornada. Categorías típicas: Ayudante, Camarero/a, Cocinero/a, Recepcionista, Jefatura de sala.</p>
+
+      <div class="dir-grid">
+
+        <a class="dir-card" href="/convenio-hosteleria-baleares.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Illes Balears · 2026</span>
+          <span class="dir-place">Baleares</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOIB</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>6</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2028</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-valencia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Valencia · 2026</span>
+          <span class="dir-place">Valencia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP València</strong> 2024</span><span class="chip-sep">·</span><span class="chip"><strong>5</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-madrid.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Madrid · 2026</span>
+          <span class="dir-place">Madrid</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOCM</strong> 2024</span><span class="chip-sep">·</span><span class="chip"><strong>6</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-barcelona.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Barcelona · 2026</span>
+          <span class="dir-place">Barcelona</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>DOGC</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>7</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2025 – 2028</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-bizkaia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Vizcaya · 2026</span>
+          <span class="dir-place">Bizkaia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOB</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>6</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2027</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-malaga.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Málaga · 2026</span>
+          <span class="dir-place">Málaga</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Málaga</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>27</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2027</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-sevilla.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Sevilla · 2026</span>
+          <span class="dir-place">Sevilla</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Sevilla</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>5</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2025 – 2028</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-cadiz.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Cádiz · 2026</span>
+          <span class="dir-place">Cádiz</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Cádiz</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>5</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2028</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-girona.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Girona · 2026</span>
+          <span class="dir-place">Girona</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>DOGC</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>9</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2028</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-cantabria.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Cantabria · 2026</span>
+          <span class="dir-place">Cantabria</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOC</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>40</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2026</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-tarragona.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Tarragona · 2026</span>
+          <span class="dir-place">Tarragona</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>DOGC</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>6</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2028</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-granada.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Granada · 2026</span>
+          <span class="dir-place">Granada</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Granada</strong> 2023</span><span class="chip-sep">·</span><span class="chip"><strong>50</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-zaragoza.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Zaragoza · 2026</span>
+          <span class="dir-place">Zaragoza</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOPZ</strong> 2024</span><span class="chip-sep">·</span><span class="chip"><strong>25</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>3</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-valladolid.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Valladolid · 2026</span>
+          <span class="dir-place">Valladolid</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Valladolid</strong> 2021</span><span class="chip-sep">·</span><span class="chip"><strong>7</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2026</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-maresme.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Maresme · 2026</span>
+          <span class="dir-place">Maresme</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>DOGC</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>7</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2025 – 2028</span>
+          </div>
+        </a>
+
+        <a class="dir-hublink" href="/convenio-hosteleria.html">
+          <div class="dir-hublink-text">
+            <div class="dir-hublink-label">Pilar sectorial</div>
+            <div class="dir-hublink-title">Convenio de Hostelería — visión sectorial y comparativa</div>
+          </div>
+          <span class="dir-hublink-arrow">Ver pilar hostelería →</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- OTROS -->
+    <div class="dir-sector">
+      <div class="dir-sector-head">
+        <h3>Otros sectores</h3>
+        <span class="count">3 fichas · piloto</span>
+        <span class="rule"></span>
+      </div>
+      <p class="dir-sector-note">Fichas piloto en sectores todavía por expandir: construcción, metal, oficinas y despachos. Amplían el marco de referencia salarial más allá de los servicios.</p>
+
+      <div class="dir-grid">
+        <a class="dir-card" href="/convenio-construccion-bizkaia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Vizcaya · 2026</span>
+          <span class="dir-place compact">Construcción · Bizkaia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOB</strong> 2026</span><span class="chip-sep">·</span><span class="chip"><strong>50</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2027</span>
+          </div>
+        </a>
+        <a class="dir-card" href="/convenio-metal-bizkaia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Vizcaya · 2026</span>
+          <span class="dir-place compact">Metal · Bizkaia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOB</strong> 2023</span><span class="chip-sep">·</span><span class="chip"><strong>30</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+        <a class="dir-card" href="/convenio-oficinas-valencia.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Valencia · 2026</span>
+          <span class="dir-place compact">Oficinas y Despachos · Valencia</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP València</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>8</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status vigente"><span class="dot"></span>Vigente 2026</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="dir-footnote">
+      <strong>¿No ves tu convenio?</strong> El proyecto crece por sectores tractor (limpieza + hostelería) y añade uno nuevo cada 2-3 semanas. Escríbenos a <a href="mailto:hola@salariojusto.es">hola@salariojusto.es</a> y te avisamos cuando publiquemos tu provincia.
+    </div>
+  </section>
+  <!-- /C2 · Directorio de convenios -->
+
   <div id="section-calc" style="scroll-margin-top:120px;">
 
   <!-- CALCULATOR · v2 minimalista (capa 1 + toggle + capa 2 + 3 interacciones) -->
