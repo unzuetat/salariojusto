@@ -29,7 +29,7 @@
 
 - [Calculadora de salario neto IRPF 2026](https://salariojusto.es/): bruto-a-neto con escalas estatal y autonómica reales (9 CCAA + tarifa foral Bizkaia)
 - [Hub salarial provincial](https://salariojusto.es/salarios.html): índice de convenios y datos salariales agrupados por CCAA y provincia
-- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 33 convenios indexables con tablas salariales oficiales (17 hostelería + 12 limpieza + 1 oficinas + 1 construcción estatal + 1 construcción provincial Bizkaia + 1 metal provincial Bizkaia)
+- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 34 convenios indexables con tablas salariales oficiales (17 hostelería + 12 limpieza + 1 oficinas + 1 construcción estatal + 1 construcción provincial Bizkaia + 2 metal provincial Bizkaia y Barcelona)
 
 ## Convenios provinciales de Limpieza auditados (Sprint 1)
 
@@ -77,6 +77,7 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 ## Convenios de Industria del Metal
 
 - [Convenio Metal Bizkaia](https://salariojusto.es/convenio-metal-bizkaia.html) (REGCON 48001985011981, BOB Núm. 90 del 11-may-2023, vigencia formal 2022-2025, ultraactividad ET 86.3 desde 1-ene-2026, tablas 2025 vigentes en 2026 sin actualización por cláusula IPC no activada, salario bruto anual mínimo garantizado 22.034,57 €/año, Oficial 1ª 23.509 €, Ingeniero/a 38.246 €, antigüedad quinquenios 5% ilimitados, jornada 1.708 h partida o 1.688 h continuada, 14 pagas, IRPF foral Bizkaia, negociación nuevo convenio iniciada 15-ene-2026)
+- [Convenio Metal Barcelona](https://salariojusto.es/convenio-metal-barcelona.html) (REGCON 08002545011994, BOPB del 13-feb-2026, XX Convenio Colectivo Industria Siderometalúrgica provincia Barcelona 2025-2027, firmado 22-dic-2025 por UPM + CCOO Indústria Catalunya + UGT-FICA, ≈200.000 personas trabajadoras cubiertas (mayor volumen sectorial provincial de España), estructura 7 grupos profesionales × 3 divisiones funcionales, rango 2026 de 1.979,76 a 2.578,30 €/mes en 14 pagas, bruto anual 27.716,67 - 36.096,26 €, subida cuatrienal acumulada +10% (2025 +4%, 2026 +3%, 2027 +3%), cláusula garantía IPC única al 31-dic-2027 si suma inflaciones > 10%, jornada anual decreciente 1.750/1.746/1.742 h con máx 9h/día, complemento AT 100% base reguladora desde día 1 en bajas >4 días como novedad enero 2026, plus nocturnidad 1,23 €/hora fijo todos los grupos (22h-6h), 30 días vacaciones, 20h/año retribuidas acompañamiento oncológico familiar 1er grado Art. 65.h, 12h/año libre disposición Art. 65.i, servicio retén con compensación económica sin ser tiempo de trabajo vs servicio guardia como tiempo de trabajo efectivo Art. 58, bolsa horaria empresa 80h/año, sin antigüedad activa (solo complementos ad personam ex vinculación/ex jefe equipo/ex categoría profesional para adquiridos antes 1995-1999), sometimiento expreso al Tribunal Laboral de Catalunya, bilingüismo obligatorio castellano-catalán en avisos empresa Art. 84)
 
 ## Otros convenios sectoriales
 
