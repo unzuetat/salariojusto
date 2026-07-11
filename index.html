@@ -324,6 +324,163 @@
 
     .nav-spacer { flex: 1; }
 
+    /* MEGA-MENU · dropdown ancho para Convenios (5 columnas por sector) */
+    .navbar { position: relative; }
+    .nav-item.has-mega { position: static; }
+    .mega-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid var(--cream-200);
+      border-top: none;
+      box-shadow: 0 12px 32px rgba(45,37,32,0.12);
+      z-index: 200;
+      padding: 28px 32px 20px;
+    }
+    .nav-item.has-mega:hover .mega-menu,
+    .nav-item.has-mega:focus-within .mega-menu { display: block; }
+    .nav-item.has-mega:hover .nav-chevron { transform: rotate(180deg); }
+    .mega-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .mega-col-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--cream-200);
+    }
+    .mega-col-count {
+      font-size: 10.5px;
+      color: var(--ink-lighter);
+      letter-spacing: 0.04em;
+      display: block;
+      margin-top: 2px;
+      font-weight: 500;
+      text-transform: none;
+    }
+    .mega-col-pilar {
+      display: block;
+      padding: 8px 0 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--cream-100);
+      margin-bottom: 8px;
+    }
+    .mega-col-pilar:hover { color: var(--gold); }
+    .mega-col-pilar em {
+      font-style: normal;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-lighter);
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 600;
+    }
+    .mega-col-links { display: flex; flex-direction: column; gap: 3px; }
+    .mega-col-links a {
+      font-size: 13px;
+      color: var(--ink-light);
+      text-decoration: none;
+      padding: 3px 0;
+      transition: color 0.15s, transform 0.15s;
+      display: block;
+    }
+    .mega-col-links a:hover { color: var(--gold); transform: translateX(2px); }
+    .mega-footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--cream-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--ink-lighter);
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mega-footer strong { color: var(--ink); }
+    .mega-footer a { color: var(--gold); text-decoration: none; font-weight: 600; }
+    @media (max-width: 900px) {
+      .mega-menu { position: static; box-shadow: none; padding: 16px 12px; }
+      .mega-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    }
+    @media (max-width: 560px) {
+      .mega-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SIDEBAR STICKY · TOC lateral con scroll spy (solo desktop grande) */
+    .sidebar-toc {
+      display: none;
+      position: fixed;
+      left: 24px;
+      top: 120px;
+      width: 200px;
+      max-height: calc(100vh - 160px);
+      overflow-y: auto;
+      background: var(--cream-50);
+      border: 1px solid var(--cream-200);
+      padding: 16px 14px 14px;
+      z-index: 50;
+    }
+    @media (min-width: 1240px) { .sidebar-toc { display: block; } }
+    .sidebar-toc-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--cream-200);
+    }
+    .sidebar-toc-nav { display: flex; flex-direction: column; gap: 1px; }
+    .sidebar-toc-nav a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 8px 7px 12px;
+      font-size: 12.5px;
+      color: var(--ink-light);
+      text-decoration: none;
+      border-left: 3px solid transparent;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
+      line-height: 1.35;
+    }
+    .sidebar-toc-nav a:hover {
+      color: var(--gold);
+      background: rgba(193,123,62,0.05);
+    }
+    .sidebar-toc-nav a.active {
+      color: var(--ink);
+      background: rgba(193,123,62,0.08);
+      border-left-color: var(--gold);
+      font-weight: 700;
+    }
+    .stn-num {
+      font-size: 10px;
+      color: var(--ink-lighter);
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .sidebar-toc-nav a.active .stn-num { color: var(--gold); }
+
+
     .nav-badge {
       font-size: 9px;
       font-weight: 700;
@@ -1963,35 +2120,7 @@
       <a href="#section-calc" class="nav-link active">
         <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="12" y1="10" x2="14" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="12" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="12" y2="18"/></svg>
         Calculadora Neto
-        <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
       </a>
-      <div class="nav-dropdown">
-        <a href="#section-calc" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Personalizada</div>
-          <div class="nav-dropdown-title">Calculadora completa</div>
-          <div class="nav-dropdown-desc">Tu situación familiar exacta · IRPF 2026</div>
-        </a>
-        <a href="/salarios.html" class="nav-dropdown-item" style="border-top:1px solid var(--cream-200);">
-          <div class="nav-dropdown-tag">Por provincia</div>
-          <div class="nav-dropdown-title">Convenios y salarios por provincia</div>
-          <div class="nav-dropdown-desc">Tablas auditadas en 13 provincias · Hostelería, Limpieza, Oficinas</div>
-        </a>
-        <a href="/convenios.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Por sector</div>
-          <div class="nav-dropdown-title">Hub de convenios colectivos</div>
-          <div class="nav-dropdown-desc">Hostelería, Limpieza, Oficinas, Construcción</div>
-        </a>
-        <a href="/salario-minimo-interprofesional-2026.html" class="nav-dropdown-item" style="border-top:1px solid var(--cream-200);">
-          <div class="nav-dropdown-tag">SMI</div>
-          <div class="nav-dropdown-title">Salario Mínimo Interprofesional 2026</div>
-          <div class="nav-dropdown-desc">Cuantía, neto y evolución histórica</div>
-        </a>
-        <a href="/tramos-irpf-2026.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">IRPF</div>
-          <div class="nav-dropdown-title">Tramos IRPF 2026</div>
-          <div class="nav-dropdown-desc">Tabla oficial y ejemplos</div>
-        </a>
-      </div>
     </div>
 
     <div class="nav-item">
@@ -2001,48 +2130,92 @@
       </a>
     </div>
 
-    <div class="nav-item">
-      <a href="#verifica-convenio" class="nav-link">
+    <div class="nav-item has-mega">
+      <a href="/convenios.html" class="nav-link">
         <svg viewBox="0 0 24 24"><path d="M4 7V4a2 2 0 012-2h8.5L20 7.5V20a2 2 0 01-2 2H6a2 2 0 01-2-2v-3"/><polyline points="14 2 14 8 20 8"/><line x1="2" y1="12" x2="12" y2="12"/><polyline points="9 9 12 12 9 15"/></svg>
         Convenios
         <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
       </a>
-      <div class="nav-dropdown">
-        <a href="/convenios.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Todos</div>
-          <div class="nav-dropdown-title">Ver todos los convenios</div>
-          <div class="nav-dropdown-desc">8 convenios disponibles · tablas salariales y complementos</div>
-        </a>
-        <a href="/construccion-estatal-suelo-salarial.html" class="nav-dropdown-item" style="border-top:1px solid var(--cream-200);">
-          <div class="nav-dropdown-tag">Estatal</div>
-          <div class="nav-dropdown-title">Construcción — VII Convenio General</div>
-          <div class="nav-dropdown-desc">Niveles II a XII · Vigencia 2022–2026</div>
-        </a>
-        <a href="/convenio-hosteleria-madrid.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Madrid</div>
-          <div class="nav-dropdown-title">Hostelería — Madrid</div>
-          <div class="nav-dropdown-desc">Tablas 2023–2025 · Clases A/B/C + Catering · en ultraactividad</div>
-        </a>
-        <a href="/convenio-hosteleria-valencia.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Valencia</div>
-          <div class="nav-dropdown-title">Hostelería — Valencia</div>
-          <div class="nav-dropdown-desc">Tablas 2022–2025</div>
-        </a>
-        <a href="/convenio-hosteleria-barcelona.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Barcelona</div>
-          <div class="nav-dropdown-title">Hostelería — Barcelona (Cataluña)</div>
-          <div class="nav-dropdown-desc">Tablas 2025–2028 · autonómico plurprovincial</div>
-        </a>
-        <a href="/convenio-hosteleria-bizkaia.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Bizkaia</div>
-          <div class="nav-dropdown-title">Hostelería — Bizkaia</div>
-          <div class="nav-dropdown-desc">Tablas 2026 · 6 categorías × 15 pagas · IRPF foral</div>
-        </a>
-        <a href="/convenio-hosteleria-baleares.html" class="nav-dropdown-item">
-          <div class="nav-dropdown-tag">Illes Balears</div>
-          <div class="nav-dropdown-title">Hostelería — Illes Balears</div>
-          <div class="nav-dropdown-desc">Tablas 2026-27 · 6 niveles × 3 cat × 14 pagas · plus desplazamiento</div>
-        </a>
+      <div class="mega-menu">
+        <div class="mega-grid">
+
+          <div class="mega-col">
+            <div class="mega-col-title">Hostelería<span class="mega-col-count">17 fichas · 16 provincias</span></div>
+            <a href="/convenio-hosteleria.html" class="mega-col-pilar">
+              <em>Pilar sectorial</em>
+              Ver marco hostelería
+            </a>
+            <div class="mega-col-links">
+              <a href="/convenio-hosteleria-alicante.html">Alicante</a>
+              <a href="/convenio-hosteleria-baleares.html">Baleares</a>
+              <a href="/convenio-hosteleria-barcelona.html">Barcelona</a>
+              <a href="/convenio-hosteleria-bizkaia.html">Bizkaia</a>
+              <a href="/convenio-hosteleria-cadiz.html">Cádiz</a>
+              <a href="/convenio-hosteleria-cantabria.html">Cantabria</a>
+              <a href="/convenio-hosteleria-girona.html">Girona</a>
+              <a href="/convenio-hosteleria-granada.html">Granada</a>
+              <a href="/convenio-hosteleria-laspalmas.html">Las Palmas</a>
+              <a href="/convenio-hosteleria-madrid.html">Madrid</a>
+              <a href="/convenio-hosteleria-malaga.html">Málaga</a>
+              <a href="/convenio-hosteleria-maresme.html">Maresme</a>
+              <a href="/convenio-hosteleria-sevilla.html">Sevilla</a>
+              <a href="/convenio-hosteleria-tarragona.html">Tarragona</a>
+              <a href="/convenio-hosteleria-valencia.html">Valencia</a>
+              <a href="/convenio-hosteleria-valladolid.html">Valladolid</a>
+              <a href="/convenio-hosteleria-zaragoza.html">Zaragoza</a>
+            </div>
+          </div>
+
+          <div class="mega-col">
+            <div class="mega-col-title">Limpieza<span class="mega-col-count">11 fichas · 10 prov. + estatal</span></div>
+            <a href="/convenio-limpieza-edificios-locales.html" class="mega-col-pilar">
+              <em>Marco estatal</em>
+              Convenio Estatal Limpieza
+            </a>
+            <div class="mega-col-links">
+              <a href="/convenio-limpieza-asturias.html">Asturias</a>
+              <a href="/convenio-limpieza-barcelona.html">Barcelona</a>
+              <a href="/convenio-limpieza-bizkaia.html">Bizkaia</a>
+              <a href="/convenio-limpieza-laspalmas.html">Las Palmas</a>
+              <a href="/convenio-limpieza-madrid.html">Madrid</a>
+              <a href="/convenio-limpieza-malaga.html">Málaga</a>
+              <a href="/convenio-limpieza-murcia.html">Murcia</a>
+              <a href="/convenio-limpieza-sevilla.html">Sevilla</a>
+              <a href="/convenio-limpieza-valencia.html">Valencia</a>
+              <a href="/convenio-limpieza-zaragoza.html">Zaragoza</a>
+            </div>
+          </div>
+
+          <div class="mega-col">
+            <div class="mega-col-title">Construcción<span class="mega-col-count">2 fichas · estatal + Bizkaia</span></div>
+            <a href="/construccion-estatal-suelo-salarial.html" class="mega-col-pilar">
+              <em>VII Convenio General</em>
+              Suelo salarial estatal
+            </a>
+            <div class="mega-col-links">
+              <a href="/convenio-construccion-bizkaia.html">Bizkaia</a>
+            </div>
+          </div>
+
+          <div class="mega-col">
+            <div class="mega-col-title">Metal<span class="mega-col-count">1 ficha · Bizkaia</span></div>
+            <div class="mega-col-links" style="margin-top: 42px;">
+              <a href="/convenio-metal-bizkaia.html">Bizkaia</a>
+            </div>
+          </div>
+
+          <div class="mega-col">
+            <div class="mega-col-title">Oficinas y Despachos<span class="mega-col-count">1 ficha · Valencia</span></div>
+            <div class="mega-col-links" style="margin-top: 42px;">
+              <a href="/convenio-oficinas-valencia.html">Valencia</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="mega-footer">
+          <span><strong>32 convenios provinciales</strong> auditados contra BOE/BOP · actualizado julio 2026</span>
+          <a href="/convenios.html">Ver directorio completo →</a>
+        </div>
       </div>
     </div>
 
@@ -2148,6 +2321,18 @@
 </nav>
 </div>
 <!-- /.site-top -->
+
+<!-- SIDEBAR STICKY · TOC lateral con scroll spy (solo desktop >=1200px) -->
+<aside class="sidebar-toc" id="sidebarToc" aria-label="Índice de la página">
+  <div class="sidebar-toc-label">En esta página</div>
+  <nav class="sidebar-toc-nav">
+    <a href="#directorio-convenios" data-target="directorio-convenios"><span class="stn-num">01</span> Directorio convenios</a>
+    <a href="#section-calc" data-target="section-calc"><span class="stn-num">02</span> Calculadora IRPF</a>
+    <a href="#convenio-section" data-target="convenio-section"><span class="stn-num">03</span> Verificar convenio</a>
+    <a href="#s-recursos" data-target="s-recursos"><span class="stn-num">04</span> Recursos</a>
+  </nav>
+</aside>
+<!-- /sidebar-toc -->
 
 <!-- NEWS MODAL -->
 
@@ -2343,7 +2528,7 @@
   </div>
 </div>
 
-<section class="hero">
+<section class="hero" id="s-hero">
   <div class="hero-eyebrow">Portal editorial · Datos oficiales BOE 2026</div>
   <h1>Sueldos, convenios y derechos laborales en España, <em>con los datos oficiales del BOE</em>.</h1>
   <p class="hero-sub">Descifra tu convenio provincial, verifica tu tabla salarial contra el boletín oficial y calcula tu salario neto con el IRPF 2026 vigente en tu comunidad autónoma.</p>
@@ -2377,7 +2562,7 @@
 <main>
 
   <!-- HUB DEL TRABAJADOR · 4 accesos primarios visibles desde la home -->
-  <section class="hub-strip" aria-label="Accesos principales">
+  <section class="hub-strip" id="s-accesos" aria-label="Accesos principales" style="scroll-margin-top:120px;">
     <div class="hub-strip-inner">
       <a href="#section-calc" class="hub-card">
         <div class="hub-card-eyebrow">Calculadora</div>
@@ -2615,7 +2800,7 @@
     <div class="dir-sector">
       <div class="dir-sector-head">
         <h3>Hostelería</h3>
-        <span class="count">16 fichas · 15 provincias + pilar</span>
+        <span class="count">17 fichas · 16 provincias + pilar</span>
         <span class="rule"></span>
       </div>
       <p class="dir-sector-note">Convenio provincial en cada plaza. Cada ficha detalla los niveles retributivos, los grupos de establecimiento (hoteles 4-5★, restaurantes, cafeterías…), pluses y jornada. Categorías típicas: Ayudante, Camarero/a, Cocinero/a, Recepcionista, Jefatura de sala.</p>
@@ -2738,6 +2923,16 @@
           <span class="dir-place">Granada</span>
           <div class="dir-bottom">
             <div class="dir-chips"><span class="chip"><strong>BOP Granada</strong> 2023</span><span class="chip-sep">·</span><span class="chip"><strong>50</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
+            <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
+          </div>
+        </a>
+
+        <a class="dir-card" href="/convenio-hosteleria-laspalmas.html">
+          <span class="dir-arrow">→</span>
+          <span class="dir-meta">Las Palmas · 2026</span>
+          <span class="dir-place">Las Palmas</span>
+          <div class="dir-bottom">
+            <div class="dir-chips"><span class="chip"><strong>BOP Las Palmas</strong> 2025</span><span class="chip-sep">·</span><span class="chip"><strong>6×5</strong> categorías</span><span class="chip-sep">·</span><span class="chip"><strong>2</strong> pagas extras</span></div>
             <span class="dir-status ultra"><span class="dot"></span>En ultraactividad</span>
           </div>
         </a>
@@ -3312,63 +3507,6 @@
 
 </main>
 
-<!-- VERIFICADORES DE CONVENIO — Sección para descubrir landings por sector -->
-<div id="verifica-convenio" style="max-width:860px;margin:0 auto;padding:48px 24px 0;scroll-margin-top:120px;">
-  <div style="border-top:1px solid var(--cream-200);padding-top:40px;">
-    <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Verifica tu convenio</div>
-    <h2 style="font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink);margin:0 0 10px;line-height:1.2;">¿Cobras el mínimo que fija tu convenio?</h2>
-    <p style="color:var(--ink-light);font-size:14px;line-height:1.65;margin:0 0 24px;max-width:620px;">Los convenios colectivos fijan un suelo salarial por categoría profesional. Comprueba si tu empresa cumple el mínimo garantizado en tu sector y provincia.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;">
-
-      <a href="/construccion-estatal-suelo-salarial.html" style="display:block;padding:20px 22px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(45,37,32,0.08)'" onmouseout="this.style.borderColor='var(--cream-200)';this.style.boxShadow='none'">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Construcción · Estatal</div>
-        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.3;">Suelo salarial 2022–2026</div>
-        <div style="font-size:12px;color:var(--ink-light);line-height:1.5;margin-bottom:12px;">Niveles II a XII del VII Convenio General del Sector de la Construcción.</div>
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:0.04em;">Verificar →</div>
-      </a>
-
-      <a href="/convenio-hosteleria-madrid.html" style="display:block;padding:20px 22px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(45,37,32,0.08)'" onmouseout="this.style.borderColor='var(--cream-200)';this.style.boxShadow='none'">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Hostelería · Madrid</div>
-        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.3;">Tablas 2023–2025</div>
-        <div style="font-size:12px;color:var(--ink-light);line-height:1.5;margin-bottom:8px;">Convenio en ultraactividad: tablas 2025 vigentes en 2026.</div>
-        <div style="display:inline-block;margin-bottom:12px;padding:2px 8px;background:#FEF3C7;border:1px solid #B45309;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#B45309;">⚠ Ultraactividad</div>
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:0.04em;">Ver landing →</div>
-      </a>
-
-      <a href="/convenio-hosteleria-valencia.html" style="display:block;padding:20px 22px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(45,37,32,0.08)'" onmouseout="this.style.borderColor='var(--cream-200)';this.style.boxShadow='none'">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Hostelería · Valencia</div>
-        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.3;">Tablas 2022–2025</div>
-        <div style="font-size:12px;color:var(--ink-light);line-height:1.5;margin-bottom:8px;">Convenio en ultraactividad: tablas 2025 vigentes en 2026.</div>
-        <div style="display:inline-block;margin-bottom:12px;padding:2px 8px;background:#FEF3C7;border:1px solid #B45309;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#B45309;">⚠ Ultraactividad</div>
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:0.04em;">Ver landing →</div>
-      </a>
-
-      <a href="/convenio-limpieza-edificios-locales.html" style="display:block;padding:20px 22px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;transition:all 0.15s;" onmouseover="this.style.borderColor='var(--gold)';this.style.boxShadow='0 4px 16px rgba(45,37,32,0.08)'" onmouseout="this.style.borderColor='var(--cream-200)';this.style.boxShadow='none'">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Limpieza · 10 provincias</div>
-        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.3;">Edificios y Locales</div>
-        <div style="font-size:12px;color:var(--ink-light);line-height:1.5;margin-bottom:12px;">Pilar estatal + tablas verificadas: Madrid, Barcelona, Valencia, Sevilla, Málaga, Las Palmas, Bizkaia, Zaragoza, Asturias y Murcia.</div>
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:0.04em;">Ver pilar y provincias →</div>
-      </a>
-
-      <a href="/convenios.html" style="display:block;padding:20px 22px;background:var(--cream-50);border:1px solid var(--gold);text-decoration:none;transition:all 0.15s;" onmouseover="this.style.background='var(--cream-100)'" onmouseout="this.style.background='var(--cream-50)'">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Explorar todos</div>
-        <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.3;">Ver todos los convenios</div>
-        <div style="font-size:12px;color:var(--ink-light);line-height:1.5;margin-bottom:12px;">Hub completo con cards por sector y provincia. Ver el catálogo entero.</div>
-        <div style="font-size:11px;font-weight:700;color:var(--gold);letter-spacing:0.04em;">Abrir hub →</div>
-      </a>
-
-      <a href="#convenio-section" style="display:block;padding:20px 22px;background:var(--ink);border:1px solid var(--ink);text-decoration:none;transition:all 0.15s;" onmouseover="this.style.background='#1a1410'" onmouseout="this.style.background='var(--ink)'">
-        <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px;">Verifica tu convenio</div>
-        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.3;">Comprueba si cobras el mínimo legal</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.5;margin-bottom:12px;">Selecciona tu convenio y grupo profesional en la calculadora para verificar al instante.</div>
-        <div style="font-size:11px;font-weight:700;color:var(--gold-light);letter-spacing:0.04em;">Ir al verificador →</div>
-      </a>
-
-    </div>
-  </div>
-</div>
-
 <!-- COMPARADOR DE PAÍSES — Acordeón secundario, fuera de results, siempre visible -->
 <div style="max-width:860px;margin:0 auto;padding:0 24px 80px;">
 
@@ -3446,7 +3584,7 @@
 </div>
 
 <!-- Hub SEO compacto: convenios provinciales más consultados + referencias fiscales -->
-<section style="max-width:960px;margin:0 auto;padding:56px 32px 32px;border-top:1px solid var(--cream-200);">
+<section id="s-recursos" style="max-width:960px;margin:0 auto;padding:56px 32px 32px;border-top:1px solid var(--cream-200);scroll-margin-top:120px;">
   <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
     <h2 style="font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink);margin:0;">Recursos más consultados</h2>
     <a href="/salarios.html" style="font-size:13px;font-weight:600;color:var(--gold);text-decoration:none;">Ver todas las provincias →</a>
@@ -4795,6 +4933,32 @@ document.getElementById('bruto')?.addEventListener('input', function() {
 document.getElementById('salary')?.addEventListener('input', function() {
   if (document.getElementById('convenioSelect').value) updateConvenioPanel();
 });
+</script>
+
+<script>
+/* Sidebar sticky · scroll spy */
+(function(){
+  var toc = document.getElementById('sidebarToc');
+  if (!toc) return;
+  var links = toc.querySelectorAll('a[data-target]');
+  var sections = Array.from(links).map(function(a){
+    return document.getElementById(a.getAttribute('data-target'));
+  });
+  function onScroll(){
+    var y = window.scrollY + 140;
+    var activeIdx = 0;
+    sections.forEach(function(sec, i){
+      if (sec && sec.offsetTop <= y) activeIdx = i;
+    });
+    links.forEach(function(a, i){
+      if (i === activeIdx) a.classList.add('active');
+      else a.classList.remove('active');
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
+})();
 </script>
 
 </body>
