@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🅲 Buscador-first · Mockup Home · SalarioJusto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&display=swap">
+<style>
+:root{
+  --cream-50:#FDFBF7;--cream-100:#F7F0E6;--cream-200:#EDE0CE;
+  --gold:#C17B3E;--gold-dark:#A0622A;--gold-light:#D9A06A;
+  --ink:#2D2520;--ink-light:#6B5E52;--ink-lighter:#9B8E88;
+  --green:#2E7D52;--green-bg:#EAF5EE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--cream-50);color:var(--ink);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;}
+
+.variante-badge{position:fixed;top:12px;right:12px;z-index:1000;background:var(--ink);color:var(--gold-light);padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+
+/* NAV mínimo */
+.top-nav{padding:22px 40px;display:flex;align-items:center;justify-content:space-between;font-size:13px;}
+.top-brand{font-family:'Newsreader',serif;font-size:22px;font-weight:600;text-decoration:none;color:var(--ink);letter-spacing:-0.02em;}
+.top-brand em{color:var(--gold-dark);font-style:normal;}
+.top-nav-links{display:flex;gap:24px;font-size:13px;font-weight:500;}
+.top-nav-links a{color:var(--ink-light);text-decoration:none;transition:color 0.15s;}
+.top-nav-links a:hover{color:var(--ink);}
+.top-nav-cta{color:var(--gold-dark);font-weight:600;border-bottom:1px solid var(--gold);padding-bottom:2px;}
+
+/* HERO CENTRADO */
+.hero-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 32px 60px;text-align:center;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-lighter);margin-bottom:32px;padding:6px 16px;border:1px solid var(--cream-200);background:#fff;}
+.hero-eyebrow-dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 0 3px rgba(46,125,82,0.15);}
+.hero-h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,5.5vw,64px);font-weight:400;line-height:1.05;letter-spacing:-0.02em;color:var(--ink);margin-bottom:18px;max-width:820px;}
+.hero-h1 em{color:var(--gold-dark);font-style:normal;}
+.hero-sub{font-family:'Newsreader',serif;font-size:20px;color:var(--ink-light);max-width:640px;margin-bottom:48px;line-height:1.4;}
+
+/* BUSCADOR MASSIVE */
+.search-box{width:100%;max-width:720px;position:relative;margin-bottom:32px;}
+.search-input{width:100%;padding:24px 72px 24px 32px;background:#fff;border:2px solid var(--cream-200);font-family:'DM Sans';font-size:20px;color:var(--ink);outline:none;transition:all 0.15s;box-shadow:0 4px 24px rgba(45,37,32,0.04);}
+.search-input:focus{border-color:var(--gold);box-shadow:0 4px 32px rgba(193,123,62,0.15);}
+.search-input::placeholder{color:var(--ink-lighter);font-weight:400;}
+.search-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:52px;height:52px;background:var(--ink);color:#fff;border:none;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.15s;}
+.search-btn:hover{background:var(--gold-dark);}
+
+/* Suggestions dropdown mock */
+.search-suggestions{margin-top:10px;text-align:left;background:#fff;border:1px solid var(--cream-200);max-width:720px;width:100%;display:none;}
+.search-hint{font-size:12px;color:var(--ink-lighter);margin-bottom:18px;}
+.search-hint kbd{font-family:inherit;padding:2px 8px;background:#fff;border:1px solid var(--cream-200);font-size:11px;color:var(--ink-light);}
+
+/* Accesos rápidos */
+.quick-access{width:100%;max-width:960px;margin-top:24px;}
+.quick-access-label{font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-lighter);margin-bottom:18px;}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.quick-chip{padding:16px 18px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;color:var(--ink);text-align:left;transition:all 0.15s;}
+.quick-chip:hover{border-color:var(--gold);transform:translateY(-1px);box-shadow:0 4px 16px rgba(193,123,62,0.1);}
+.quick-chip-sector{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:6px;}
+.quick-chip-name{font-size:15px;font-weight:600;color:var(--ink);}
+.quick-chip-meta{font-size:11px;color:var(--ink-lighter);margin-top:4px;font-family:'DM Sans';}
+
+/* Herramientas fila */
+.tools-row{margin-top:56px;padding-top:32px;border-top:1px solid var(--cream-200);width:100%;max-width:960px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;}
+.tool-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink-light);font-size:14px;font-weight:500;}
+.tool-link:hover{color:var(--gold-dark);}
+.tool-icon{width:36px;height:36px;background:var(--cream-100);border:1px solid var(--cream-200);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;color:var(--gold-dark);font-size:18px;}
+.tool-text small{display:block;font-size:11px;color:var(--ink-lighter);margin-top:2px;}
+
+/* Trust bar minimalista al pie */
+.trust-bar{background:#fff;border-top:1px solid var(--cream-200);padding:24px 32px;text-align:center;}
+.trust-bar-eyebrow{font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-lighter);margin-bottom:12px;}
+.trust-bar-sources{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;font-family:'Newsreader',serif;font-size:15px;font-weight:600;color:var(--ink-light);}
+.trust-bar-source{opacity:0.7;}
+
+footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:24px 32px;text-align:center;font-size:11px;}
+footer a{color:var(--gold-light);text-decoration:none;margin:0 8px;}
+</style>
+</head>
+<body>
+
+<div class="variante-badge">🅲 Buscador-first (Google-style)</div>
+
+<!-- NAV -->
+<div class="top-nav">
+  <a href="/" class="top-brand">Salario<em>Justo</em></a>
+  <div class="top-nav-links">
+    <a href="#">Directorio</a>
+    <a href="#">Salarios por provincia</a>
+    <a href="#">Guías</a>
+    <a href="#">Kit del trabajador</a>
+    <a href="#" class="top-nav-cta">Calculadora →</a>
+  </div>
+</div>
+
+<!-- HERO CENTRADO -->
+<section class="hero-center">
+
+  <div class="hero-eyebrow">
+    <span class="hero-eyebrow-dot"></span>
+    36 convenios auditados · actualizado 18 jul
+  </div>
+
+  <h1 class="hero-h1">Encuentra tu <em>convenio</em>.</h1>
+  <p class="hero-sub">Escribe tu sector, tu provincia o tu categoría. Verifica tu tabla salarial contra el boletín oficial en segundos.</p>
+
+  <div class="search-box">
+    <input type="text" class="search-input" placeholder="Ej. hostelería madrid, limpieza barcelona, camarera bizkaia...">
+    <button class="search-btn">→</button>
+  </div>
+
+  <p class="search-hint">También puedes navegar por sector: pulsa <kbd>Tab</kbd> o elige uno de los accesos frecuentes debajo</p>
+
+  <!-- Accesos rápidos: los 8 más buscados -->
+  <div class="quick-access">
+    <div class="quick-access-label">Los más consultados esta semana</div>
+    <div class="quick-grid">
+      <a class="quick-chip" href="/convenio-hosteleria-madrid.html">
+        <div class="quick-chip-sector">Hostelería</div>
+        <div class="quick-chip-name">Madrid</div>
+        <div class="quick-chip-meta">1.086–1.415 €/mes</div>
+      </a>
+      <a class="quick-chip" href="/convenio-hosteleria-barcelona.html">
+        <div class="quick-chip-sector">Hostelería</div>
+        <div class="quick-chip-name">Barcelona</div>
+        <div class="quick-chip-meta">Cuatrienio +15,7%</div>
+      </a>
+      <a class="quick-chip" href="/convenio-limpieza-madrid.html">
+        <div class="quick-chip-sector">Limpieza</div>
+        <div class="quick-chip-name">Madrid</div>
+        <div class="quick-chip-meta">Jornada 1.792 h</div>
+      </a>
+      <a class="quick-chip" href="/convenio-limpieza-barcelona.html">
+        <div class="quick-chip-sector">Limpieza</div>
+        <div class="quick-chip-name">Barcelona</div>
+        <div class="quick-chip-meta">DOGC 2026-2030</div>
+      </a>
+      <a class="quick-chip" href="/convenio-oficinas-madrid.html">
+        <div class="quick-chip-sector">Oficinas</div>
+        <div class="quick-chip-name">Madrid</div>
+        <div class="quick-chip-meta">+2,7% en 2026</div>
+      </a>
+      <a class="quick-chip" href="/convenio-hosteleria-baleares.html">
+        <div class="quick-chip-sector">Hostelería</div>
+        <div class="quick-chip-name">Baleares</div>
+        <div class="quick-chip-meta">1.614–2.310 €/mes</div>
+      </a>
+      <a class="quick-chip" href="/convenio-metal-bizkaia.html">
+        <div class="quick-chip-sector">Metal</div>
+        <div class="quick-chip-name">Bizkaia</div>
+        <div class="quick-chip-meta">Mínimo 22.034 €/año</div>
+      </a>
+      <a class="quick-chip" href="/convenio-hosteleria-bizkaia.html">
+        <div class="quick-chip-sector">Hostelería</div>
+        <div class="quick-chip-name">Bizkaia</div>
+        <div class="quick-chip-meta">Vigente hasta dic-2027</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Herramientas -->
+  <div class="tools-row">
+    <a href="#" class="tool-link">
+      <span class="tool-icon">€</span>
+      <div class="tool-text"><strong>Calculadora salario neto</strong><small>IRPF 2026 · 9 CCAA + Bizkaia foral</small></div>
+    </a>
+    <a href="#" class="tool-link">
+      <span class="tool-icon">§</span>
+      <div class="tool-text"><strong>Kit del trabajador</strong><small>10 plantillas Directiva UE 2023/970</small></div>
+    </a>
+    <a href="#" class="tool-link">
+      <span class="tool-icon">◈</span>
+      <div class="tool-text"><strong>Guías laborales</strong><small>Reclamar diferencias, atrasos, brecha</small></div>
+    </a>
+  </div>
+
+</section>
+
+<!-- Trust bar minimalista -->
+<div class="trust-bar">
+  <div class="trust-bar-eyebrow">Datos oficiales verificados en</div>
+  <div class="trust-bar-sources">
+    <span class="trust-bar-source">BOE</span>
+    <span class="trust-bar-source">DOGC</span>
+    <span class="trust-bar-source">BOCM</span>
+    <span class="trust-bar-source">BOPB</span>
+    <span class="trust-bar-source">BOG</span>
+    <span class="trust-bar-source">REGCON</span>
+  </div>
+</div>
+
+<footer>
+  <p><strong>SalarioJusto</strong> · Sin registro · Sin publicidad · Metodología pública</p>
+  <p style="margin-top:6px;">
+    <a href="/privacidad.html">Privacidad</a> ·
+    <a href="/aviso-legal.html">Aviso legal</a> ·
+    <a href="/contacto.html">Contacto</a> ·
+    <a href="/sobre.html">Sobre</a>
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🅱 Dashboard profesional · Mockup Home · SalarioJusto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --cream-50:#FDFBF7;--cream-100:#F7F0E6;--cream-200:#EDE0CE;
+  --gold:#C17B3E;--gold-dark:#A0622A;--gold-light:#D9A06A;
+  --ink:#2D2520;--ink-light:#6B5E52;--ink-lighter:#9B8E88;
+  --green:#2E7D52;--green-bg:#EAF5EE;--amber:#B45309;--amber-bg:#FEF3C7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:#fff;line-height:1.6;font-size:14px;}
+
+.variante-badge{position:fixed;top:12px;right:12px;z-index:1000;background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+
+/* NAV densa */
+.navbar{background:var(--ink);border-bottom:1px solid rgba(255,255,255,0.1);padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.navbar-brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-size:18px;font-weight:700;letter-spacing:-0.02em;}
+.navbar-brand-dot{width:8px;height:8px;background:var(--gold);}
+.navbar-brand em{color:var(--gold-light);font-style:normal;}
+.navbar-search{flex:1;max-width:520px;margin:0 32px;position:relative;}
+.navbar-search input{width:100%;padding:10px 16px 10px 40px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;font-family:'DM Sans';font-size:13px;outline:none;}
+.navbar-search input::placeholder{color:rgba(255,255,255,0.4);}
+.navbar-search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.5);font-size:14px;}
+.navbar-search-kbd{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-family:'DM Mono';font-size:10px;color:rgba(255,255,255,0.4);padding:2px 6px;border:1px solid rgba(255,255,255,0.15);}
+.navbar-nav{display:flex;gap:24px;font-size:13px;}
+.navbar-nav a{color:rgba(255,255,255,0.65);text-decoration:none;}
+.navbar-nav a:hover{color:#fff;}
+.navbar-cta{background:var(--gold);color:#fff;padding:8px 14px;font-size:12px;font-weight:600;text-decoration:none;text-transform:uppercase;letter-spacing:0.06em;}
+
+/* HERO KPI panel */
+.hero-panel{background:var(--ink);padding:56px 32px 40px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.hero-inner{max-width:1400px;margin:0 auto;}
+.hero-eyebrow{font-family:'DM Mono';font-size:11px;letter-spacing:0.14em;color:var(--gold-light);margin-bottom:16px;text-transform:uppercase;}
+.hero-eyebrow-dot{display:inline-block;width:6px;height:6px;background:var(--green);border-radius:50%;margin-right:8px;vertical-align:middle;box-shadow:0 0 0 3px rgba(46,125,82,0.25);}
+.hero-h1{font-size:clamp(28px,4vw,44px);font-weight:600;line-height:1.15;letter-spacing:-0.02em;margin-bottom:14px;max-width:900px;}
+.hero-h1 em{color:var(--gold-light);font-style:normal;}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.65);max-width:720px;margin-bottom:36px;}
+
+/* KPI GRID */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;}
+.kpi{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-left:3px solid var(--gold);padding:20px 22px;}
+.kpi-label{font-family:'DM Mono';font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:10px;}
+.kpi-value{font-size:32px;font-weight:600;color:#fff;letter-spacing:-0.02em;font-variant-numeric:tabular-nums;line-height:1;}
+.kpi-value em{color:var(--gold-light);font-style:normal;font-size:18px;font-weight:500;}
+.kpi-delta{font-family:'DM Mono';font-size:11px;color:var(--green);margin-top:8px;}
+.kpi-delta.neutral{color:rgba(255,255,255,0.45);}
+
+/* MAIN grid — 2 col */
+.main-grid{max-width:1400px;margin:0 auto;padding:40px 32px;display:grid;grid-template-columns:1fr 340px;gap:32px;background:var(--cream-50);color:var(--ink);}
+.main-panel{background:var(--cream-50);}
+.panel-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;margin-bottom:20px;border-bottom:1px solid var(--cream-200);}
+.panel-header h2{font-size:15px;font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:0.08em;}
+.panel-header-actions{display:flex;gap:12px;font-size:12px;font-family:'DM Mono';color:var(--ink-lighter);}
+.panel-header-action{padding:4px 10px;background:#fff;border:1px solid var(--cream-200);cursor:pointer;color:var(--ink-light);}
+.panel-header-action.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* Convenio rows */
+.convenio-table{background:#fff;border:1px solid var(--cream-200);}
+.convenio-row{display:grid;grid-template-columns:60px 1fr 130px 100px 120px 40px;gap:16px;padding:14px 20px;border-bottom:1px solid var(--cream-100);align-items:center;text-decoration:none;color:var(--ink);font-size:13px;transition:background 0.1s;}
+.convenio-row:hover{background:var(--cream-50);}
+.convenio-row:last-child{border-bottom:none;}
+.convenio-sector{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-dark);}
+.convenio-name{font-weight:600;color:var(--ink);}
+.convenio-name small{display:block;font-size:11px;font-weight:400;color:var(--ink-lighter);margin-top:2px;}
+.convenio-source{font-family:'DM Mono';font-size:11px;color:var(--ink-light);}
+.convenio-subida{font-family:'DM Mono';font-size:12px;font-weight:600;color:var(--green);}
+.convenio-vigencia{font-size:11px;padding:3px 8px;background:var(--green-bg);color:var(--green);font-weight:600;text-align:center;text-transform:uppercase;letter-spacing:0.06em;}
+.convenio-vigencia.ultra{background:var(--amber-bg);color:var(--amber);}
+.convenio-arrow{color:var(--ink-lighter);text-align:right;}
+
+/* Sidebar */
+.sidebar-card{background:#fff;border:1px solid var(--cream-200);padding:22px;margin-bottom:16px;}
+.sidebar-card-eyebrow{font-family:'DM Mono';font-size:10px;letter-spacing:0.12em;color:var(--gold-dark);text-transform:uppercase;margin-bottom:10px;}
+.sidebar-card h3{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:14px;line-height:1.25;}
+.calc-mini{background:var(--ink);color:#fff;padding:22px;}
+.calc-mini h3{color:#fff;}
+.calc-mini-field{margin-bottom:12px;}
+.calc-mini-label{font-family:'DM Mono';font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:6px;}
+.calc-mini-input{width:100%;padding:10px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;font-family:'DM Sans';font-size:14px;font-weight:600;}
+.calc-mini-cta{width:100%;padding:12px;background:var(--gold);color:#fff;border:none;font-family:'DM Sans';font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;margin-top:8px;cursor:pointer;}
+
+.trust-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
+.trust-chip{font-family:'DM Mono';font-size:10px;padding:4px 8px;background:var(--cream-100);color:var(--ink-light);border:1px solid var(--cream-200);}
+.trust-chip strong{color:var(--gold-dark);}
+
+.updates-list{list-style:none;font-size:12.5px;}
+.updates-list li{padding:10px 0;border-bottom:1px solid var(--cream-100);display:flex;gap:10px;align-items:flex-start;line-height:1.4;}
+.updates-list li:last-child{border-bottom:none;}
+.updates-date{font-family:'DM Mono';font-size:10px;color:var(--ink-lighter);white-space:nowrap;padding-top:2px;}
+.updates-text a{color:var(--ink);text-decoration:none;font-weight:500;}
+.updates-text a:hover{color:var(--gold-dark);}
+.updates-text small{display:block;color:var(--ink-lighter);font-size:11px;margin-top:2px;}
+
+footer{background:var(--ink);color:rgba(255,255,255,0.6);padding:32px;text-align:center;font-size:12px;border-top:1px solid rgba(255,255,255,0.08);}
+footer a{color:var(--gold-light);text-decoration:none;margin:0 8px;}
+</style>
+</head>
+<body>
+
+<div class="variante-badge">🅱 Dashboard profesional</div>
+
+<!-- NAV -->
+<nav class="navbar">
+  <a href="/" class="navbar-brand"><span class="navbar-brand-dot"></span>Salario<em>Justo</em></a>
+  <div class="navbar-search">
+    <span class="navbar-search-icon">⌕</span>
+    <input type="text" placeholder="Busca tu convenio: hostelería madrid, limpieza barcelona, metal bizkaia...">
+    <span class="navbar-search-kbd">⌘K</span>
+  </div>
+  <div class="navbar-nav">
+    <a href="#">Directorio</a>
+    <a href="#">Salarios</a>
+    <a href="#">Guías</a>
+    <a href="#">Kit</a>
+  </div>
+  <a href="#" class="navbar-cta">Calcular</a>
+</nav>
+
+<!-- HERO KPI panel -->
+<section class="hero-panel">
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Actualizado 18 jul 2026 · 17:56 UTC</div>
+    <h1 class="hero-h1">Verificador de convenios colectivos y calculadora <em>IRPF 2026</em> con datos oficiales del BOE.</h1>
+    <p class="hero-sub">36 convenios provinciales auditados cifra a cifra contra los boletines oficiales (BOE, DOGC, BOCM, BOPB, BOG). Escalas IRPF autonómicas del régimen común + tarifa foral Bizkaia integrada. Metodología pública, sin registro.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Convenios verificados</div>
+        <div class="kpi-value">36 <em>fichas</em></div>
+        <div class="kpi-delta">+3 esta semana</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Personas cubiertas</div>
+        <div class="kpi-value">~800K</div>
+        <div class="kpi-delta neutral">18 provincias + estatales</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Fuentes oficiales cotejadas</div>
+        <div class="kpi-value">6 <em>boletines</em></div>
+        <div class="kpi-delta neutral">BOE · DOGC · BOCM · BOPB · BOG · REGCON</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Sectores cubiertos</div>
+        <div class="kpi-value">6</div>
+        <div class="kpi-delta neutral">Hostelería · Limpieza · Metal · Oficinas · Construcción · Espectáculos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN GRID -->
+<section class="main-grid">
+  <div class="main-panel">
+    <div class="panel-header">
+      <h2>Directorio de convenios</h2>
+      <div class="panel-header-actions">
+        <span class="panel-header-action active">Todos (36)</span>
+        <span class="panel-header-action">Vigentes</span>
+        <span class="panel-header-action">Ultraactividad</span>
+        <span class="panel-header-action">+5% en 2026</span>
+      </div>
+    </div>
+
+    <div class="convenio-table">
+
+      <a class="convenio-row" href="/convenio-hosteleria-gipuzkoa.html">
+        <div class="convenio-sector">Nuevo</div>
+        <div class="convenio-name">Hostelería Gipuzkoa 2026<small>Empresas de Restauración · REGCON 20104585012023</small></div>
+        <div class="convenio-source">BOG 29/2026</div>
+        <div class="convenio-subida">+5,9%</div>
+        <div class="convenio-vigencia">Vigente</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+      <a class="convenio-row" href="/convenio-oficinas-madrid.html">
+        <div class="convenio-sector">Nuevo</div>
+        <div class="convenio-name">Oficinas y Despachos Madrid<small>REGCON 28003005011981 · 5 grupos × 9 niveles</small></div>
+        <div class="convenio-source">BOCM 189</div>
+        <div class="convenio-subida">+2,7%</div>
+        <div class="convenio-vigencia">Vigente</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+      <a class="convenio-row" href="/convenio-metal-barcelona.html">
+        <div class="convenio-sector">Metal</div>
+        <div class="convenio-name">Metal Barcelona<small>200.000 personas cubiertas · Siderometalúrgica</small></div>
+        <div class="convenio-source">BOPB 2026</div>
+        <div class="convenio-subida">+3,0%</div>
+        <div class="convenio-vigencia">Vigente</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+      <a class="convenio-row" href="/convenio-hosteleria-laspalmas.html">
+        <div class="convenio-sector">Hostelería</div>
+        <div class="convenio-name">Hostelería Las Palmas<small>Gran Canaria + Fuerteventura + Lanzarote · Prima 650 €</small></div>
+        <div class="convenio-source">BOP 79/2025</div>
+        <div class="convenio-subida">+4,0%</div>
+        <div class="convenio-vigencia ultra">Ultraact.</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+      <a class="convenio-row" href="/convenio-hosteleria-baleares.html">
+        <div class="convenio-sector">Hostelería</div>
+        <div class="convenio-name">Hostelería Illes Balears<small>+ Plus 141 € desplazamiento · 14 pagas + año fiscal abr-mar</small></div>
+        <div class="convenio-source">BOIB 2025</div>
+        <div class="convenio-subida">+4,0%</div>
+        <div class="convenio-vigencia">Vigente</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+      <a class="convenio-row" href="/convenio-hosteleria-barcelona.html">
+        <div class="convenio-sector">Hostelería</div>
+        <div class="convenio-name">Hostelería Barcelona<small>Cuatrienio 2025-2028 · +15,7% acumulado</small></div>
+        <div class="convenio-source">DOGC 2026</div>
+        <div class="convenio-subida">+4,0%</div>
+        <div class="convenio-vigencia">Vigente</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+      <a class="convenio-row" href="/convenio-limpieza-madrid.html">
+        <div class="convenio-sector">Limpieza</div>
+        <div class="convenio-name">Limpieza Madrid<small>Jornada 1.792 h · tabla 2025 vigente</small></div>
+        <div class="convenio-source">BOCM 2022</div>
+        <div class="convenio-subida">—</div>
+        <div class="convenio-vigencia ultra">Ultraact.</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+      <a class="convenio-row" href="/convenio-hosteleria-madrid.html">
+        <div class="convenio-sector">Hostelería</div>
+        <div class="convenio-name">Hostelería Madrid<small>1.086–1.415 €/mes · tabla 2025 vigente</small></div>
+        <div class="convenio-source">BOCM 2024</div>
+        <div class="convenio-subida">—</div>
+        <div class="convenio-vigencia ultra">Ultraact.</div>
+        <div class="convenio-arrow">→</div>
+      </a>
+
+    </div>
+    <p style="margin-top:14px;font-size:12px;color:var(--ink-lighter);font-family:'DM Mono';">Mostrando 8 de 36 · <a href="/convenios.html" style="color:var(--gold-dark);text-decoration:none;">Ver directorio completo →</a></p>
+  </div>
+
+  <aside>
+
+    <div class="sidebar-card calc-mini">
+      <div class="sidebar-card-eyebrow" style="color:var(--gold-light);">Herramienta</div>
+      <h3>Calcula tu neto en 30 segundos</h3>
+      <div class="calc-mini-field">
+        <div class="calc-mini-label">Bruto anual (€)</div>
+        <input type="text" class="calc-mini-input" placeholder="Ej. 24.500" value="24.500">
+      </div>
+      <div class="calc-mini-field">
+        <div class="calc-mini-label">Comunidad autónoma</div>
+        <input type="text" class="calc-mini-input" placeholder="Elige" value="Comunidad de Madrid">
+      </div>
+      <button class="calc-mini-cta">Calcular →</button>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-eyebrow">Metodología</div>
+      <h3>Datos verificados contra fuentes oficiales</h3>
+      <p style="font-size:13px;color:var(--ink-light);">Cada tabla salarial se coteja con el boletín oficial que la publica. Sin datos inventados, sin promedios genéricos.</p>
+      <div class="trust-chips">
+        <span class="trust-chip"><strong>BOE</strong> Estatal</span>
+        <span class="trust-chip"><strong>DOGC</strong> Catalunya</span>
+        <span class="trust-chip"><strong>BOCM</strong> Madrid</span>
+        <span class="trust-chip"><strong>BOG</strong> Gipuzkoa</span>
+        <span class="trust-chip"><strong>BOPB</strong> Barcelona</span>
+        <span class="trust-chip"><strong>REGCON</strong> Registro</span>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-eyebrow">Últimas actualizaciones</div>
+      <h3 style="margin-bottom:6px;">Registro editorial</h3>
+      <ol class="updates-list">
+        <li><span class="updates-date">18 JUL</span><div class="updates-text"><a href="#">Hostelería Gipuzkoa +5,9%</a><small>Fórmula IPC 2025 + 3% pactado</small></div></li>
+        <li><span class="updates-date">17 JUL</span><div class="updates-text"><a href="#">Oficinas Madrid nuevo convenio</a><small>Firmado CEIM + CCOO + UGT</small></div></li>
+        <li><span class="updates-date">11 JUL</span><div class="updates-text"><a href="#">Metal Barcelona 200.000 personas</a><small>Cláusula IPC 10% al 31-dic-2027</small></div></li>
+      </ol>
+    </div>
+
+  </aside>
+</section>
+
+<footer>
+  <p><strong>SalarioJusto</strong> · Verificador y calculadora sin registro · Auditado contra BOE 2026</p>
+  <p style="margin-top:8px;">
+    <a href="/privacidad.html">Privacidad</a> ·
+    <a href="/aviso-legal.html">Aviso legal</a> ·
+    <a href="/contacto.html">Contacto</a> ·
+    <a href="/sobre.html">Sobre</a>
+  </p>
+</footer>
+
+</body>
+</html>
