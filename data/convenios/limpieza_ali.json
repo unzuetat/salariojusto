@@ -1,0 +1,151 @@
+{
+  "nombre": "Convenio Colectivo provincial de Limpieza de Edificios y Locales de la provincia de Alicante",
+  "bop": "BOP Alicante nº 87 · 8 de mayo de 2023 (edicto 3699)",
+  "codigo": "03000145011982",
+  "skipHtmlGeneration": true,
+  "vigencia": "01/01/2020 – 31/12/2023 (denunciado automáticamente el 31/10/2023, en ultraactividad)",
+  "pagas": 15,
+  "jornadaSemanal": 39,
+  "urlBop": "https://sede.diputacionalicante.es/convenios-colectivos/",
+  "notaEditorial": "<strong>Qué es.</strong> El convenio provincial que regula la limpieza de edificios y locales en toda la provincia de Alicante, incluida la limpieza de aviones, aeronaves y barcos. No se aplica al personal de centros dependientes del Servicio Valenciano de la Salud ni de la Diputación Provincial, que tienen convenio propio.<br><br><strong>Estructura.</strong> El salario se compone de tres piezas que se abonan en 15 pagos: salario base, Plus Profesional (Art. 40, no absorbible ni compensable) y Plus Convenio (Art. 38, sustituye al antiguo plus de transporte). Son tres las pagas extraordinarias: Verano, Diciembre y Beneficios.<br><br><strong>La paradoja del SMI.</strong> Las tablas son de 2023 y quedan por debajo del salario mínimo legal: Limpiador/a figura con 14.400,00 € anuales frente a los 17.094 € del SMI 2026 (RD 126/2026). El propio convenio previó el desfase en su Disposición Adicional Octava, que obliga a complementar hasta el SMI. En la práctica, 16 de las 34 categorías cobran el mínimo legal y no su convenio.<br><br><strong>Lo singular.</strong> El Art. 41 concede hasta 240 días naturales de vacaciones retribuidas a quien cause baja voluntaria a los 60 años —unos ocho meses de sueldo—, derecho que se conserva ante subrogación. El Art. 19 reserva además un día de licencia retribuida el 3 de noviembre, festividad de San Martín de Porres, patrón del sector.",
+  "subtablas": {
+    "1": "Grupo I — Personal Directivo y Titulado",
+    "2": "Grupo II — Personal Administrativo",
+    "3": "Grupo III — Mandos Intermedios",
+    "4": "Grupo IV — Personal Operario"
+  },
+  "grupos": [
+    { "id": "1-1", "subtabla": "1", "nombre": "Director/a", "puestos": ["Director/a"], "salario": { "2023": { "mes": 1419.09, "plusProfesionalMes": 185.73, "plusConvenioMes": 117.43, "totalAnual": 25833.75 } } },
+    { "id": "1-2", "subtabla": "1", "nombre": "Director/a Comercial", "puestos": ["Director/a Comercial"], "salario": { "2023": { "mes": 1327.20, "plusProfesionalMes": 174.62, "plusConvenioMes": 117.43, "totalAnual": 24288.82 } } },
+    { "id": "1-3", "subtabla": "1", "nombre": "Director/a Administrativo/a", "puestos": ["Director/a Administrativo/a"], "salario": { "2023": { "mes": 1327.20, "plusProfesionalMes": 174.62, "plusConvenioMes": 117.43, "totalAnual": 24288.82 } } },
+    { "id": "1-4", "subtabla": "1", "nombre": "Jefe/a de Personal", "puestos": ["Jefe/a de Personal"], "salario": { "2023": { "mes": 1327.20, "plusProfesionalMes": 174.62, "plusConvenioMes": 117.43, "totalAnual": 24288.82 } } },
+    { "id": "1-5", "subtabla": "1", "nombre": "Jefe/a de Compras", "puestos": ["Jefe/a de Compras"], "salario": { "2023": { "mes": 1327.20, "plusProfesionalMes": 174.62, "plusConvenioMes": 117.43, "totalAnual": 24288.82 } } },
+    { "id": "1-6", "subtabla": "1", "nombre": "Jefe/a de Servicios", "puestos": ["Jefe/a de Servicios"], "salario": { "2023": { "mes": 1327.20, "plusProfesionalMes": 174.62, "plusConvenioMes": 117.43, "totalAnual": 24288.82 } } },
+    { "id": "1-7", "subtabla": "1", "nombre": "Titulado/a Grado Superior", "puestos": ["Titulado/a Grado Superior"], "salario": { "2023": { "mes": 1139.43, "plusProfesionalMes": 151.92, "plusConvenioMes": 117.43, "totalAnual": 21131.81 } } },
+    { "id": "1-8", "subtabla": "1", "nombre": "Titulado/a Grado Medio", "puestos": ["Titulado/a Grado Medio"], "salario": { "2023": { "mes": 1075.46, "plusProfesionalMes": 144.19, "plusConvenioMes": 117.43, "totalAnual": 20056.10 } } },
+    { "id": "1-9", "subtabla": "1", "nombre": "Titulado/a Laboral o Profesional", "puestos": ["Titulado/a Laboral o Profesional"], "salario": { "2023": { "mes": 963.59, "plusProfesionalMes": 130.67, "plusConvenioMes": 117.43, "totalAnual": 18175.40 } } },
+
+    { "id": "2-1", "subtabla": "2", "nombre": "Jefe/a Administrativo/a de 1ª", "puestos": ["Jefe/a Administrativo/a de 1ª"], "salario": { "2023": { "mes": 1099.46, "plusProfesionalMes": 147.09, "plusConvenioMes": 117.43, "totalAnual": 20459.90 } } },
+    { "id": "2-2", "subtabla": "2", "nombre": "Jefe/a Administrativo/a de 2ª", "puestos": ["Jefe/a Administrativo/a de 2ª"], "salario": { "2023": { "mes": 1055.51, "plusProfesionalMes": 141.78, "plusConvenioMes": 117.43, "totalAnual": 19720.84 } } },
+    { "id": "2-3", "subtabla": "2", "nombre": "Cajero/a", "puestos": ["Cajero/a"], "salario": { "2023": { "mes": 995.60, "plusProfesionalMes": 134.54, "plusConvenioMes": 117.43, "totalAnual": 18713.34 } } },
+    { "id": "2-4", "subtabla": "2", "nombre": "Oficial de 1ª", "puestos": ["Oficial de 1ª"], "salario": { "2023": { "mes": 963.59, "plusProfesionalMes": 130.67, "plusConvenioMes": 117.43, "totalAnual": 18175.40 } } },
+    { "id": "2-5", "subtabla": "2", "nombre": "Oficial de 2ª", "puestos": ["Oficial de 2ª"], "salario": { "2023": { "mes": 903.69, "plusProfesionalMes": 123.43, "plusConvenioMes": 117.43, "totalAnual": 17168.42 } } },
+    { "id": "2-6", "subtabla": "2", "nombre": "Auxiliar", "puestos": ["Auxiliar"], "bajoSMI": true, "salario": { "2023": { "mes": 843.27, "plusProfesionalMes": 116.13, "plusConvenioMes": 117.43, "totalAnual": 16152.51 } } },
+    { "id": "2-7", "subtabla": "2", "nombre": "Telefonista", "puestos": ["Telefonista"], "bajoSMI": true, "salario": { "2023": { "mes": 751.84, "plusProfesionalMes": 105.07, "plusConvenioMes": 117.43, "totalAnual": 14615.28 } } },
+    { "id": "2-8", "subtabla": "2", "nombre": "Cobrador/a", "puestos": ["Cobrador/a"], "bajoSMI": true, "salario": { "2023": { "mes": 751.84, "plusProfesionalMes": 105.07, "plusConvenioMes": 117.43, "totalAnual": 14615.28 } } },
+
+    { "id": "3-1", "subtabla": "3", "nombre": "Encargado/a General", "puestos": ["Encargado/a General"], "salario": { "2023": { "mes": 1055.51, "plusProfesionalMes": 141.78, "plusConvenioMes": 117.43, "totalAnual": 19720.84 } } },
+    { "id": "3-2", "subtabla": "3", "nombre": "Supervisor/a o Encargado/a de Zona", "puestos": ["Supervisor/a o Encargado/a de Zona"], "salario": { "2023": { "mes": 995.60, "plusProfesionalMes": 134.54, "plusConvenioMes": 117.43, "totalAnual": 18713.34 } } },
+    { "id": "3-3", "subtabla": "3", "nombre": "Supervisor/a o Encargado/a de Sector", "puestos": ["Supervisor/a o Encargado/a de Sector"], "salario": { "2023": { "mes": 947.62, "plusProfesionalMes": 128.74, "plusConvenioMes": 117.43, "totalAnual": 17906.77 } } },
+    { "id": "3-4", "subtabla": "3", "nombre": "Encargado/a de Grupo o Edificio", "puestos": ["Encargado/a de Grupo o Edificio"], "bajoSMI": true, "salario": { "2023": { "mes": 821.59, "plusProfesionalMes": 113.50, "plusConvenioMes": 117.43, "totalAnual": 15787.70 } } },
+    { "id": "3-5", "subtabla": "3", "nombre": "Responsable de Equipo", "puestos": ["Responsable de Equipo"], "bajoSMI": true, "salario": { "2023": { "mes": 789.98, "plusProfesionalMes": 109.68, "plusConvenioMes": 117.43, "totalAnual": 15256.41 } } },
+
+    { "id": "4-1", "subtabla": "4", "nombre": "Limpiador/a", "puestos": ["Limpiador/a"], "bajoSMI": true, "salario": { "2023": { "mes": 739.04, "plusProfesionalMes": 103.53, "plusConvenioMes": 117.43, "totalAnual": 14400.00 } } },
+    { "id": "4-2", "subtabla": "4", "nombre": "Peón", "puestos": ["Peón"], "bajoSMI": true, "salario": { "2023": { "mes": 739.04, "plusProfesionalMes": 103.53, "plusConvenioMes": 117.43, "totalAnual": 14400.00 } } },
+    { "id": "4-3", "subtabla": "4", "nombre": "Ordenanza", "puestos": ["Ordenanza"], "bajoSMI": true, "salario": { "2023": { "mes": 751.84, "plusProfesionalMes": 105.07, "plusConvenioMes": 117.43, "totalAnual": 14615.28 } } },
+    { "id": "4-4", "subtabla": "4", "nombre": "Listero/a", "puestos": ["Listero/a"], "bajoSMI": true, "salario": { "2023": { "mes": 751.84, "plusProfesionalMes": 105.07, "plusConvenioMes": 117.43, "totalAnual": 14615.28 } } },
+    { "id": "4-5", "subtabla": "4", "nombre": "Vigilante", "puestos": ["Vigilante"], "bajoSMI": true, "salario": { "2023": { "mes": 751.84, "plusProfesionalMes": 105.07, "plusConvenioMes": 117.43, "totalAnual": 14615.28 } } },
+    { "id": "4-6", "subtabla": "4", "nombre": "Almacenero/a", "puestos": ["Almacenero/a"], "bajoSMI": true, "salario": { "2023": { "mes": 763.84, "plusProfesionalMes": 106.52, "plusConvenioMes": 117.43, "totalAnual": 14817.09 } } },
+    { "id": "4-7", "subtabla": "4", "nombre": "Peón Especializado", "puestos": ["Peón Especializado"], "bajoSMI": true, "salario": { "2023": { "mes": 793.60, "plusProfesionalMes": 110.12, "plusConvenioMes": 117.43, "totalAnual": 15317.44 } } },
+    { "id": "4-8", "subtabla": "4", "nombre": "Ayudante", "puestos": ["Ayudante"], "bajoSMI": true, "salario": { "2023": { "mes": 793.60, "plusProfesionalMes": 110.12, "plusConvenioMes": 117.43, "totalAnual": 15317.44 } } },
+    { "id": "4-9", "subtabla": "4", "nombre": "Conductor/a Especializado", "puestos": ["Conductor/a Especializado"], "bajoSMI": true, "salario": { "2023": { "mes": 823.70, "plusProfesionalMes": 113.65, "plusConvenioMes": 117.43, "totalAnual": 15808.39 } } },
+    { "id": "4-10", "subtabla": "4", "nombre": "Especialista", "puestos": ["Especialista"], "bajoSMI": true, "salario": { "2023": { "mes": 884.86, "plusProfesionalMes": 121.15, "plusConvenioMes": 117.43, "totalAnual": 16851.52 } } },
+    { "id": "4-11", "subtabla": "4", "nombre": "Oficial", "puestos": ["Oficial"], "bajoSMI": true, "salario": { "2023": { "mes": 884.86, "plusProfesionalMes": 121.15, "plusConvenioMes": 117.43, "totalAnual": 16851.52 } } },
+    { "id": "4-12", "subtabla": "4", "nombre": "Conductor/a Especialista", "puestos": ["Conductor/a Especialista"], "salario": { "2023": { "mes": 921.58, "plusProfesionalMes": 125.59, "plusConvenioMes": 117.43, "totalAnual": 17469.04 } } }
+  ],
+  "garantiaSMI": {
+    "articulo": "Disposición Adicional Octava",
+    "smiVigente": 17094,
+    "smiNorma": "Real Decreto 126/2026 (BOE-A-2026-3815)",
+    "categoriasBajoSMI": 16,
+    "categoriasTotales": 34,
+    "nota": "El convenio obliga a complementar hasta el SMI cuando la retribución anual total no lo alcance."
+  },
+  "antiguedad": {
+    "tipo": "trienios",
+    "porcentaje": 5,
+    "base": "Salario Base de la categoría",
+    "articulo": "Art. 35"
+  },
+  "nocturnidad": {
+    "porcentaje": 30,
+    "base": "Salario Base más antigüedad",
+    "articulo": "Art. 33"
+  },
+  "jornada": {
+    "semanal": 39,
+    "distribucion": "Entre los seis días de trabajo salvo pacto en contrario",
+    "descansoJornadaContinuada": "20 minutos retribuidos",
+    "descansoComidaCena": "45 minutos retribuidos si la jornada supera 5 horas seguidas y comprende íntegramente la franja 14:15-15:00 o 22:15-23:00",
+    "articulo": "Art. 17"
+  },
+  "vacaciones": {
+    "dias": 32,
+    "tipo": "naturales",
+    "periodo": "Entre junio y septiembre, por meses naturales",
+    "incrementoFueraPeriodo": 3,
+    "articulo": "Art. 21"
+  },
+  "pagasExtras": {
+    "numero": 3,
+    "nombres": ["Verano", "Diciembre", "Beneficios"],
+    "fechasAbono": ["Con la nómina de junio", "15 de diciembre", "Antes del 15 de febrero (prorrateable)"],
+    "cuantia": "30 días de salario convenio + antigüedad + 1 mensualidad de Plus Convenio + 1 mensualidad de Plus Profesional",
+    "articulo": "Art. 36"
+  },
+  "subrogacion": {
+    "articulo": "Art. 7",
+    "antiguedadMinima": "4 meses en activo, 6 meses con reserva de puesto",
+    "plazoDocumentacion": "Entre 5 y 15 días naturales",
+    "preaviso": "3 días hábiles antes del inicio del nuevo servicio"
+  },
+  "prejubilacion": {
+    "articulo": "Art. 41",
+    "denominacion": "Promoción económica: vacaciones retribuidas adicionales",
+    "escala": { "60": 240, "61": 210, "62": 120, "63": 90, "64": 30 },
+    "unidad": "días naturales retribuidos por baja voluntaria",
+    "conservaAnteSubrogacion": true
+  },
+  "seguroColectivo": {
+    "articulo": "Art. 43",
+    "muerteAccidenteTrabajo": 7212.15,
+    "invalidezPermanente": 10217.21,
+    "auxilioDefuncion": "75 días de sueldo a herederos legales (Art. 30)"
+  },
+  "firmantes": {
+    "patronales": [
+      "AELPA — Asociación Provincial de Empresas de Limpieza de Edificios y Locales",
+      "ASPEL — Asociación Profesional de Empresas de Limpieza"
+    ],
+    "sindicatos": ["CCOO", "UGT"]
+  },
+  "comisionParitaria": {
+    "articulo": "Art. 6",
+    "domicilio": "Locales de CCOO PV, Avenida de Salamanca 33, 3.ª, 03005 Alicante",
+    "composicion": "4 representantes empresariales y 4 de los trabajadores, más presidencia",
+    "plazoReunion": "10 días desde la solicitud",
+    "plazoResolucion": "7 días",
+    "acuerdos": "Por unanimidad"
+  },
+  "convenioEstatal": "I Convenio colectivo sectorial de limpieza de edificios y locales, BOE de 23/05/2013 (Art. 5, marco supletorio)",
+  "particularidades": [
+    "Ámbito funcional incluye limpieza de aviones, aeronaves y barcos (Art. 1)",
+    "Excluye centros dependientes del Servicio Valenciano de la Salud y de la Diputación Provincial, con convenio propio (Art. 1)",
+    "Tres pagas extraordinarias: 15 pagas anuales (Art. 36)",
+    "Hasta 240 días naturales de vacaciones retribuidas por baja voluntaria a los 60 años (Art. 41)",
+    "Día de licencia retribuida por San Martín de Porres, 3 de noviembre, patrón del sector (Art. 19.10)",
+    "Plus Profesional no absorbible ni compensable (Art. 40)",
+    "Dos días de descanso por cada festivo no domingo trabajado, tres si no se disfrutan en 30 días (Art. 18)",
+    "Tope de 19 domingos trabajados al año y mínimo de dos domingos de descanso al mes (Art. 18)",
+    "Fijos discontinuos a tiempo parcial limitados a centros docentes (Art. 11)",
+    "Contratación temporal topada al 15 % de plantilla (Art. 11)",
+    "Prohibición expresa de descuelgue durante la vigencia (Art. 37)",
+    "Gastos de desplazamiento entre centros a partir de 2,5 km a cargo de la empresa (Art. 39)",
+    "18 días naturales de licencia por matrimonio, tres más que el mínimo legal (Art. 19.1)"
+  ],
+  "fuentes": [
+    "BOP Alicante nº 87 de 8 de mayo de 2023 (edicto 3699) — texto articulado íntegro y tablas salariales 2020-2022 y 2023",
+    "Real Decreto 126/2026 (BOE-A-2026-3815) — SMI 2026: 1.221 €/mes y 17.094 € en cómputo anual",
+    "Real Decreto 99/2023 (BOE-A-2023-3982) — SMI 2023: 1.080 €/mes y 15.120 € anuales"
+  ]
+}
