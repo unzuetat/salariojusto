@@ -39,6 +39,7 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 - [Convenio Limpieza Barcelona](https://salariojusto.es/convenio-limpieza-barcelona.html) (cubierto por convenio autonómico Catalunya 2026-2030)
 - [Convenio Limpieza Catalunya](https://salariojusto.es/convenio-limpieza-catalunya.html) (autonómico, DOGC 9613 del 26-feb-2026, REGCON 79002415012005, vigente 2026-2030 con +3,25% sobre 2025, cubre Barcelona, Girona, Lleida y Tarragona)
 - [Convenio Limpieza Valencia](https://salariojusto.es/convenio-limpieza-valencia.html)
+- [Convenio Limpieza Alicante](https://salariojusto.es/convenio-limpieza-alicante.html) (provincial, BOP Alicante 87 del 8-may-2023, REGCON 03000145011982, en ultraactividad desde 31-oct-2023 con tablas 2023 por debajo del SMI: obliga a complementar hasta 17.094 € del SMI 2026; 15 pagas, 39 h/semana, hasta 240 días de vacaciones retribuidas al prejubilarse a los 60)
 - [Convenio Limpieza Sevilla](https://salariojusto.es/convenio-limpieza-sevilla.html)
 - [Convenio Limpieza Málaga](https://salariojusto.es/convenio-limpieza-malaga.html)
 - [Convenio Limpieza Las Palmas](https://salariojusto.es/convenio-limpieza-laspalmas.html)
