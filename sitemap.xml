@@ -261,4 +261,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+<url>
+    <loc>https://salariojusto.es/aviso-legal.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+<url>
+    <loc>https://salariojusto.es/privacidad.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+<url>
+    <loc>https://salariojusto.es/contacto.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
 </urlset>
