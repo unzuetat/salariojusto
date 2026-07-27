@@ -2096,10 +2096,7 @@
 </head>
 <body>
 
-<!-- Wrapper sticky · banner aviso 7-jun + header bajan juntos en el scroll
-     TODO 2026-06-07: cambiar el texto del banner a algo en presente/pasado
-     ("Ley en vigor · Conoce tus derechos →" u otra opción). Recordatorio
-     programado vía RemoteTrigger trig_014BRNoKYMrZp5ZXYwH2b5oo. -->
+<!-- Wrapper sticky · banner + header bajan juntos en el scroll -->
 <div class="site-top">
   <header>
     <a href="/" class="logo">
@@ -2107,8 +2104,8 @@
       <div class="logo-text">Salario<span>Justo</span></div>
     </a>
     <a href="/ley-transparencia-salarial-2026.html" class="header-notice">
-      <span class="full"><strong>7 de junio de 2026</strong> · entrada en vigor de la Directiva UE de transparencia retributiva<span class="cta">Saber qué cambia →</span></span>
-      <span class="short"><strong>7 jun 2026</strong><span class="cta">Ley UE →</span></span>
+      <span class="full"><strong>Ley de transparencia salarial en vigor</strong> · Directiva UE 2023/970 · conoce tus derechos<span class="cta">Qué cambia →</span></span>
+      <span class="short"><strong>Ley UE en vigor</strong><span class="cta">Tus derechos →</span></span>
     </a>
   </header>
 
@@ -2217,7 +2214,7 @@
 
         </div>
         <div class="mega-footer">
-          <span><strong>37 convenios provinciales</strong> auditados contra BOE/BOP · actualizado julio 2026</span>
+          <span><strong>39 convenios</strong> auditados contra BOE/BOP · actualizado julio 2026</span>
           <a href="/convenios.html">Ver directorio completo →</a>
         </div>
       </div>
@@ -2537,7 +2534,7 @@
   <h1>Sueldos, convenios y derechos laborales en España, <em>con los datos oficiales del BOE</em>.</h1>
   <p class="hero-sub">Descifra tu convenio provincial, verifica tu tabla salarial contra el boletín oficial y calcula tu salario neto con el IRPF 2026 vigente en tu comunidad autónoma.</p>
   <div class="hero-cta-group">
-    <a href="#directorio-convenios" class="hero-btn hero-btn-primary">Ver los 37 convenios →</a>
+    <a href="#directorio-convenios" class="hero-btn hero-btn-primary">Ver los 39 convenios →</a>
     <a href="/plantillas-transparencia-retributiva-2026.html" class="hero-btn hero-btn-secondary">Kit del trabajador</a>
     <a href="#section-calc" class="hero-btn hero-btn-secondary">Calcular mi salario neto</a>
   </div>
@@ -2666,9 +2663,9 @@
   </style>
 
   <section id="directorio-convenios" class="directorio-c2" aria-label="Directorio de convenios provinciales verificados en BOE">
-    <span class="dir-eyebrow">Directorio · 37 fichas · BOE 2026</span>
+    <span class="dir-eyebrow">Directorio · 39 fichas · BOE 2026</span>
     <h2>Te ayudamos a <em>descifrar</em> lo que dice el BOE de tu convenio.</h2>
-    <p class="dir-lede">Verificamos cada tabla salarial contra el boletín oficial que la publica. Categorías profesionales, pagas extras, antigüedad, ultraactividad, ejemplos reales. Cada card muestra los datos objetivos del convenio; para el detalle salarial, entra en la ficha. <strong>37 fichas hoy, más en camino.</strong></p>
+    <p class="dir-lede">Verificamos cada tabla salarial contra el boletín oficial que la publica. Categorías profesionales, pagas extras, antigüedad, ultraactividad, ejemplos reales. Cada card muestra los datos objetivos del convenio; para el detalle salarial, entra en la ficha. <strong>39 fichas hoy, más en camino.</strong></p>
 
     <div class="dir-meta-line">
       <span><strong>Fuente:</strong> BOE + boletines provinciales</span>
@@ -3568,92 +3565,17 @@
 
 </main>
 
-<!-- COMPARADOR DE PAÍSES — Acordeón secundario, fuera de results, siempre visible -->
-<div style="max-width:860px;margin:0 auto;padding:0 24px 80px;">
-
-  <div class="accordion" id="accordionCompare">
-    <button class="accordion-header" onclick="toggleAccordion('accordionCompare')" style="gap:12px;">
-      <span style="display:flex;align-items:center;gap:10px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-        Comparar tu neto con otros países europeos
-      </span>
-      <svg class="accordion-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <polyline points="6 9 12 15 18 9"/>
-      </svg>
-    </button>
-    <div class="accordion-body">
-
-      <p style="color:var(--ink-light);font-size:13px;line-height:1.65;margin-bottom:20px;">Introduce un salario bruto y compara cuánto te llevarías a casa en España frente a otros países europeos. Tipos impositivos estándar 2024-2025, empleado soltero sin hijos.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:480px;margin-bottom:20px;">
-        <div class="field">
-          <label>Salario bruto anual</label>
-          <input type="number" id="compareSalary" placeholder="Ej: 50000" oninput="updateComparison()">
-        </div>
-        <div class="field">
-          <label>Moneda</label>
-          <div class="select-wrapper">
-            <select id="currency" onchange="updateComparison()">
-              <option value="EUR">€ Euro</option>
-              <option value="USD">$ Dólar</option>
-              <option value="CAD">CA$ Canadiense</option>
-              <option value="GBP">£ Libra</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;font-size:13px;">
-          <thead>
-            <tr>
-              <th style="text-align:left;padding:10px 12px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);background:var(--cream-50);">País</th>
-              <th style="text-align:left;padding:10px 12px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);background:var(--cream-50);">IRPF</th>
-              <th style="text-align:left;padding:10px 12px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);background:var(--cream-50);">Seg. Social</th>
-              <th style="text-align:left;padding:10px 12px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);background:var(--cream-50);">Neto anual</th>
-              <th style="text-align:left;padding:10px 12px;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);background:var(--cream-50);">Neto mensual</th>
-            </tr>
-          </thead>
-          <tbody id="compareBody">
-            <tr><td colspan="5" style="text-align:center;padding:20px;color:var(--ink-lighter);">Introduce un salario bruto para ver la comparativa</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="margin-top:12px;font-size:11px;color:var(--ink-lighter);line-height:1.6;">⚠ Cálculos orientativos con tipos estándar 2024-2025. No incluye variaciones regionales ni regímenes especiales.</p>
-
-      <!-- Beckham Law -->
-      <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--cream-200);">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Ley Beckham — Régimen especial para expatriados</div>
-        <p style="color:var(--ink-light);font-size:12px;line-height:1.6;margin-bottom:12px;">Permite a nuevos residentes fiscales tributar al <strong>24% de IRPF</strong> sobre rentas hasta 600.000 €/año, en lugar de los tipos progresivos (hasta 45%).</p>
-        <table style="width:100%;border-collapse:collapse;font-size:12px;">
-          <thead><tr>
-            <th style="text-align:left;padding:8px 10px;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);">Bruto</th>
-            <th style="text-align:left;padding:8px 10px;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);">IRPF estándar</th>
-            <th style="text-align:left;padding:8px 10px;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);">Beckham (24%)</th>
-            <th style="text-align:left;padding:8px 10px;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-lighter);border-bottom:1px solid var(--cream-200);">Ahorro</th>
-          </tr></thead>
-          <tbody>
-            <tr><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);font-weight:600;">40.000 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">~8.200 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">9.600 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--amber);">–1.400 €</td></tr>
-            <tr><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);font-weight:600;">60.000 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">~15.800 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">14.400 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--green);font-weight:700;">+1.400 €</td></tr>
-            <tr><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);font-weight:600;">80.000 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">~24.000 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--ink-light);">19.200 €</td><td style="padding:8px 10px;border-bottom:1px solid var(--cream-100);color:var(--green);font-weight:700;">+4.800 €</td></tr>
-            <tr><td style="padding:8px 10px;font-weight:600;">120.000 €</td><td style="padding:8px 10px;color:var(--ink-light);">~40.000 €</td><td style="padding:8px 10px;color:var(--ink-light);">28.800 €</td><td style="padding:8px 10px;color:var(--green);font-weight:700;">+11.200 €</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-    </div>
-  </div>
-
-</div>
 
 <!-- Hub SEO compacto: convenios provinciales más consultados + referencias fiscales -->
 <section id="s-recursos" style="max-width:960px;margin:0 auto;padding:56px 32px 32px;border-top:1px solid var(--cream-200);scroll-margin-top:120px;">
   <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
-    <h2 style="font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink);margin:0;">Recursos más consultados</h2>
-    <a href="/salarios.html" style="font-size:13px;font-weight:600;color:var(--gold);text-decoration:none;">Ver todas las provincias →</a>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink);margin:0;">Recursos útiles</h2>
+    <a href="/convenios.html" style="font-size:13px;font-weight:600;color:var(--gold);text-decoration:none;">Ver todos los convenios →</a>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
-    <a href="/convenio-limpieza-bizkaia.html" style="display:block;padding:16px 18px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Bizkaia</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Convenio Limpieza · jornada 35h</div></a>
-    <a href="/convenio-limpieza-barcelona.html" style="display:block;padding:16px 18px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Barcelona</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Convenio Limpieza 2026 – 2030</div></a>
-    <a href="/convenio-hosteleria-madrid.html" style="display:block;padding:16px 18px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Madrid</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Convenio Hostelería · tablas 2025</div></a>
+    <a href="/convenios.html" style="display:block;padding:16px 18px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Directorio</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Convenios por sector y provincia</div></a>
+    <a href="/plantillas-transparencia-retributiva-2026.html" style="display:block;padding:16px 18px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Plantillas</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Kit del trabajador</div></a>
+    <a href="/ley-transparencia-salarial-2026.html" style="display:block;padding:16px 18px;background:#fff;border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Derechos</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Ley de transparencia 2026</div></a>
     <a href="/salario-minimo-interprofesional-2026.html" style="display:block;padding:16px 18px;background:var(--cream-100);border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Referencia</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Salario Mínimo 2026</div></a>
     <a href="/tramos-irpf-2026.html" style="display:block;padding:16px 18px;background:var(--cream-100);border:1px solid var(--cream-200);text-decoration:none;"><div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Referencia</div><div style="font-size:14px;font-weight:600;color:var(--ink);">Tramos IRPF 2026</div></a>
   </div>
