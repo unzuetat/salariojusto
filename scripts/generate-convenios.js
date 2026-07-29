@@ -111,6 +111,10 @@ const CONVENIO_CONFIG = {
     sector: 'Hostelería', sectorSlug: 'hosteleria',
     provincia: 'Sevilla', provinciaSlug: 'sevilla',
     plurprovincial: false,
+    // HTML enriquecido a mano por encima del JSON (H2 de singularidad no
+    // presentes en la notaEditorial). NO regenerar — solo se lee el JSON
+    // para listarla en el hub. Blindado 27-jul-2026 (auditoría AdSense P0).
+    skipHtmlGeneration: true,
     relacionadas: ['hosteleria-madrid', 'hosteleria-valencia', 'hosteleria-barcelona']
   },
   'hosteleria_zar.json': {
@@ -132,12 +136,19 @@ const CONVENIO_CONFIG = {
     sector: 'Hostelería', sectorSlug: 'hosteleria',
     provincia: 'Valladolid', provinciaSlug: 'valladolid',
     plurprovincial: false,
+    // HTML enriquecido a mano por encima del JSON (H2 "historia de las
+    // camareras de pisos", "promoción automática Art. 8", etc. no están en
+    // la notaEditorial). NO regenerar. Blindado 27-jul-2026 (auditoría AdSense P0).
+    skipHtmlGeneration: true,
     relacionadas: ['hosteleria-madrid', 'hosteleria-zaragoza', 'hosteleria-barcelona']
   },
   'ofydes_vlc.json': {
     sector: 'Oficinas y Despachos', sectorSlug: 'oficinas',
     provincia: 'Valencia', provinciaSlug: 'valencia',
     plurprovincial: false,
+    // HTML enriquecido a mano por encima del JSON. NO regenerar — solo se
+    // lee el JSON para el hub. Blindado 27-jul-2026 (auditoría AdSense P0).
+    skipHtmlGeneration: true,
     relacionadas: ['hosteleria-valencia']
   },
   'hosteleria_cat.json': {
@@ -775,5 +786,20 @@ function main() {
   return generated;
 }
 
-if (require.main === module) main();
+if (require.main === module) {
+  if (process.env.ALLOW_LEGACY_GENERATOR === '1') {
+    main();
+  } else {
+    console.error(
+      '\n⛔ generate-convenios.js NEUTRALIZADO (27-jul-2026).\n' +
+      '   Reconstruye el hub /convenios.html desde listas internas caducadas y\n' +
+      '   sobrescribe HTML de convenios enriquecidos a mano (machacó\n' +
+      '   convenio-hosteleria-zaragoza.html: 831→435 líneas). El flujo real\n' +
+      '   (MD → landing escrita a mano → integración manual) NO lo usa.\n' +
+      '   Ver analisis/auditoria-adsense-poco-valor-2026-07-27.md\n' +
+      '   Override consciente: ALLOW_LEGACY_GENERATOR=1 node scripts/generate-convenios.js\n'
+    );
+    process.exit(1);
+  }
+}
 module.exports = { main };

@@ -1066,4 +1066,18 @@ function main() {
   console.log(`\nDone!`);
 }
 
-main();
+if (process.env.ALLOW_LEGACY_GENERATOR === '1') {
+  main();
+} else {
+  console.error(
+    '\n⛔ generate-pages.js NEUTRALIZADO (27-jul-2026).\n' +
+    '   Orquestador: regenera sitemap.xml, mapa-del-sitio.html, salarios.html,\n' +
+    '   SMI y tramos-IRPF, y dispara generate-convenios + generate-plantillas,\n' +
+    '   machacando HTML enriquecido a mano y desincronizando hub/sitemap desde\n' +
+    '   listas internas caducadas. El flujo real (MD → landing a mano →\n' +
+    '   integración manual) NO lo usa. Ningún build/CI lo ejecuta.\n' +
+    '   Ver analisis/auditoria-adsense-poco-valor-2026-07-27.md\n' +
+    '   Override consciente: ALLOW_LEGACY_GENERATOR=1 node scripts/generate-pages.js\n'
+  );
+  process.exit(1);
+}
