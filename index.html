@@ -2327,10 +2327,11 @@
 <aside class="sidebar-toc" id="sidebarToc" aria-label="Índice de la página">
   <div class="sidebar-toc-label">En esta página</div>
   <nav class="sidebar-toc-nav">
-    <a href="#directorio-convenios" data-target="directorio-convenios"><span class="stn-num">01</span> Directorio convenios</a>
-    <a href="#section-calc" data-target="section-calc"><span class="stn-num">02</span> Calculadora IRPF</a>
-    <a href="#convenio-section" data-target="convenio-section"><span class="stn-num">03</span> Verificar convenio</a>
-    <a href="#s-recursos" data-target="s-recursos"><span class="stn-num">04</span> Recursos</a>
+    <a href="#s-eeat" data-target="s-eeat"><span class="stn-num">01</span> Quién verifica</a>
+    <a href="#directorio-convenios" data-target="directorio-convenios"><span class="stn-num">02</span> Directorio convenios</a>
+    <a href="#section-calc" data-target="section-calc"><span class="stn-num">03</span> Calculadora IRPF</a>
+    <a href="#convenio-section" data-target="convenio-section"><span class="stn-num">04</span> Verificar convenio</a>
+    <a href="#s-recursos" data-target="s-recursos"><span class="stn-num">05</span> Recursos</a>
   </nav>
 </aside>
 <!-- /sidebar-toc -->
@@ -2540,7 +2541,7 @@
   </div>
   <div class="trust-bar">
     <div class="trust-item">
-      <div class="trust-value">35</div>
+      <div class="trust-value">39</div>
       <div class="trust-label">Convenios BOE</div>
     </div>
     <div class="trust-item">
@@ -2562,39 +2563,23 @@
 
 <main>
 
-  <!-- HUB DEL TRABAJADOR · 4 accesos primarios visibles desde la home -->
-  <section class="hub-strip" id="s-accesos" aria-label="Accesos principales" style="scroll-margin-top:120px;">
-    <div class="hub-strip-inner">
-      <a href="#section-calc" class="hub-card">
-        <div class="hub-card-eyebrow">Calculadora</div>
-        <div class="hub-card-title">Salario neto IRPF 2026</div>
-        <div class="hub-card-desc">Tu neto exacto en menos de un minuto, con 14 pagas y situación familiar.</div>
-        <div class="hub-card-arrow">Calcular →</div>
-      </a>
-      <a href="#convenio-section" class="hub-card">
-        <div class="hub-card-eyebrow">Tu convenio</div>
-        <div class="hub-card-title">Verificador de convenio</div>
-        <div class="hub-card-desc">Comprueba si tu salario respeta el mínimo legal de tu sector y provincia.</div>
-        <div class="hub-card-arrow">Verificar →</div>
-      </a>
-      <a href="/plantillas-transparencia-retributiva-2026.html" class="hub-card hub-card-highlight">
-        <div class="hub-card-eyebrow">Kit del trabajador</div>
-        <div class="hub-card-title">10 plantillas legales</div>
-        <div class="hub-card-desc">Cartas redactadas para pedir tu rango, denunciar discriminación o reclamar atrasos.</div>
-        <div class="hub-card-arrow">Ver el Kit →</div>
-      </a>
-      <a href="/ley-transparencia-salarial-2026.html" class="hub-card">
-        <div class="hub-card-eyebrow">La ley</div>
-        <div class="hub-card-title">Directiva UE 2023/970</div>
-        <div class="hub-card-desc">Resumen claro de la ley que entra en vigor el 7 de junio de 2026.</div>
-        <div class="hub-card-arrow">Leer en 2 min →</div>
-      </a>
+  <!-- Cabecera editorial del directorio (subida arriba · reenfoque publisher 2026-07-27) -->
+  <section class="directorio-c2" style="margin-top:32px;padding-bottom:0;" aria-label="Qué es SalarioJusto">
+    <span class="dir-eyebrow">Directorio · 39 fichas · BOE 2026</span>
+    <h2>Te ayudamos a <em>descifrar</em> lo que dice el BOE de tu convenio.</h2>
+    <p class="dir-lede">Verificamos cada tabla salarial contra el boletín oficial que la publica. Categorías profesionales, pagas extras, antigüedad, ultraactividad, ejemplos reales. Cada card muestra los datos objetivos del convenio; para el detalle salarial, entra en la ficha. <strong>39 fichas hoy, más en camino.</strong></p>
+    <div class="dir-meta-line">
+      <span><strong>Fuente:</strong> BOE + boletines provinciales</span>
+      <span class="sep">·</span>
+      <span><strong>Actualizado:</strong> julio 2026</span>
+      <span class="sep">·</span>
+      <span><strong>Método:</strong> <a href="/sobre.html">metodología completa</a></span>
     </div>
   </section>
 
   <style>
     .hub-strip{margin:32px 0 40px;padding:0 4px;}
-    .hub-strip-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1200px;margin:0 auto;}
+    .hub-strip-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1080px;margin:0 auto;}
     .hub-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--cream-200);padding:18px 20px 16px;text-decoration:none;color:var(--ink);transition:border-color 0.15s,box-shadow 0.15s,transform 0.15s;}
     .hub-card:hover{border-color:var(--gold);box-shadow:0 4px 18px rgba(45,37,32,0.08);transform:translateY(-1px);}
     .hub-card-highlight{background:var(--cream-100);border-color:var(--gold-light);}
@@ -2606,6 +2591,62 @@
     @media(max-width:980px){.hub-strip-inner{grid-template-columns:repeat(2,1fr);}}
     @media(max-width:560px){.hub-strip-inner{grid-template-columns:1fr;}.hub-card-title{font-size:17px;}}
   </style>
+
+  <!-- E-E-A-T · Quién verifica esto (reenfoque publisher 2026-07-27) -->
+  <style>
+    .eeat-sec{max-width:1080px;margin:48px auto 0;padding:0 8px;scroll-margin-top:120px;}
+    .eeat{background:var(--cream-100);border:1px solid var(--cream-200);border-left:3px solid var(--gold);padding:34px 34px 30px;display:grid;grid-template-columns:1.4fr 1fr;gap:34px;align-items:start;}
+    .eeat-eyebrow{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+    .eeat h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(24px,3vw,32px);line-height:1.2;color:var(--ink);margin:0 0 16px;text-wrap:balance;}
+    .eeat h2 em{font-style:italic;color:var(--gold);font-family:'Newsreader',Georgia,serif;font-weight:500;}
+    .eeat p{font-size:15px;color:var(--ink-light);line-height:1.68;margin:0 0 16px;max-width:56ch;}
+    .eeat p strong{color:var(--ink);font-weight:600;}
+    .eeat-sign{display:flex;align-items:center;gap:12px;margin-top:20px;padding-top:18px;border-top:1px solid var(--cream-200);}
+    .eeat-avatar{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--cream-50);display:grid;place-items:center;font-family:'DM Serif Display',Georgia,serif;font-size:20px;flex-shrink:0;}
+    .eeat-sign-name{font-family:'Newsreader',Georgia,serif;font-size:16px;color:var(--ink);font-weight:600;}
+    .eeat-sign-role{font-size:12px;color:var(--ink-lighter);}
+    .eeat-links{margin-top:16px;font-size:13px;}
+    .eeat-links a{color:var(--gold);text-decoration:none;font-weight:600;}
+    .eeat-method{background:#fff;border:1px solid var(--cream-200);padding:22px 22px 8px;}
+    .eeat-method-h{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-lighter);margin-bottom:14px;}
+    .eeat-step{display:flex;gap:12px;padding:0 0 16px;font-size:13.5px;color:var(--ink-light);line-height:1.5;}
+    .eeat-step .n{font-family:'DM Serif Display',Georgia,serif;font-size:13px;color:var(--gold);font-weight:700;flex-shrink:0;width:22px;height:22px;border:1px solid var(--gold-light);border-radius:50%;display:grid;place-items:center;}
+    .eeat-step b{color:var(--ink);font-weight:600;}
+    .eeat-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+    .eeat-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--green);background:var(--green-bg);padding:5px 11px;font-weight:600;}
+    .eeat-chip .dot{width:6px;height:6px;border-radius:50%;background:currentColor;}
+    @media(max-width:860px){.eeat{grid-template-columns:1fr;gap:24px;padding:26px 22px;}}
+  </style>
+  <section class="eeat-sec" id="s-eeat" aria-label="Quién verifica los datos de SalarioJusto">
+    <div class="eeat">
+      <div class="eeat-main">
+        <div class="eeat-eyebrow">Quién está detrás</div>
+        <h2>Cada tabla la verifica <em>SalarioJusto</em>, cifra a cifra, contra el BOE.</h2>
+        <p>SalarioJusto es un <strong>proyecto editorial independiente</strong>, no un agregador automático ni una empresa. La verificación y la redacción las firma <strong>Telmo</strong>, responsable editorial del proyecto. Ninguna cifra se publica sin <strong>cruzarla contra el boletín oficial</strong> y dejar registrado el código del edicto y la fecha de revisión.</p>
+        <p>Sin empresas detrás, sin venta de datos y sin contenido patrocinado. Si detectas un error, se corrige.</p>
+        <div class="eeat-sign">
+          <div class="eeat-avatar">T</div>
+          <div>
+            <div class="eeat-sign-name">Telmo</div>
+            <div class="eeat-sign-role">Responsable editorial · SalarioJusto</div>
+          </div>
+        </div>
+        <div class="eeat-links"><a href="/sobre.html">Metodología completa y quién está detrás →</a></div>
+      </div>
+      <div class="eeat-method">
+        <div class="eeat-method-h">Cómo se verifica cada ficha</div>
+        <div class="eeat-step"><span class="n">1</span><div><b>Fuente oficial.</b> Se localiza el convenio en el BOE o boletín provincial vigente.</div></div>
+        <div class="eeat-step"><span class="n">2</span><div><b>Cotejo cifra a cifra.</b> Salarios, pluses, jornada y pagas contra el texto íntegro.</div></div>
+        <div class="eeat-step"><span class="n">3</span><div><b>Doble fuente.</b> Cada dato se contrasta con al menos dos fuentes antes de publicarse.</div></div>
+        <div class="eeat-step"><span class="n">4</span><div><b>Trazabilidad.</b> Queda registrado el código del edicto y la fecha de revisión en la propia ficha.</div></div>
+        <div class="eeat-chips">
+          <span class="eeat-chip"><span class="dot"></span>39 convenios auditados a mano</span>
+          <span class="eeat-chip"><span class="dot"></span>2 fuentes mínimo por cifra</span>
+          <span class="eeat-chip"><span class="dot"></span>Edicto + fecha en cada ficha</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- C2 · Directorio de convenios provinciales (redisenio home 2026-07) -->
   <style>
@@ -2663,17 +2704,6 @@
   </style>
 
   <section id="directorio-convenios" class="directorio-c2" aria-label="Directorio de convenios provinciales verificados en BOE">
-    <span class="dir-eyebrow">Directorio · 39 fichas · BOE 2026</span>
-    <h2>Te ayudamos a <em>descifrar</em> lo que dice el BOE de tu convenio.</h2>
-    <p class="dir-lede">Verificamos cada tabla salarial contra el boletín oficial que la publica. Categorías profesionales, pagas extras, antigüedad, ultraactividad, ejemplos reales. Cada card muestra los datos objetivos del convenio; para el detalle salarial, entra en la ficha. <strong>39 fichas hoy, más en camino.</strong></p>
-
-    <div class="dir-meta-line">
-      <span><strong>Fuente:</strong> BOE + boletines provinciales</span>
-      <span class="sep">·</span>
-      <span><strong>Actualizado:</strong> julio 2026</span>
-      <span class="sep">·</span>
-      <span><strong>Método:</strong> <a href="/sobre.html">metodología completa</a></span>
-    </div>
 
     <!-- LIMPIEZA -->
     <div class="dir-sector">
@@ -3567,6 +3597,36 @@
 
 
 <!-- Hub SEO compacto: convenios provinciales más consultados + referencias fiscales -->
+  <!-- Accesos rápidos · herramientas de apoyo (movidos al final · reenfoque publisher 2026-07-27) -->
+  <section class="hub-strip" id="s-accesos" aria-label="Accesos principales" style="scroll-margin-top:120px;margin-top:8px;">
+    <div class="hub-strip-inner">
+      <a href="#convenio-section" class="hub-card">
+        <div class="hub-card-eyebrow">Tu convenio</div>
+        <div class="hub-card-title">Verificador de convenio</div>
+        <div class="hub-card-desc">Comprueba si tu salario respeta el mínimo legal de tu sector y provincia.</div>
+        <div class="hub-card-arrow">Verificar →</div>
+      </a>
+      <a href="/plantillas-transparencia-retributiva-2026.html" class="hub-card hub-card-highlight">
+        <div class="hub-card-eyebrow">Kit del trabajador</div>
+        <div class="hub-card-title">10 plantillas legales</div>
+        <div class="hub-card-desc">Cartas redactadas para pedir tu rango, denunciar discriminación o reclamar atrasos.</div>
+        <div class="hub-card-arrow">Ver el Kit →</div>
+      </a>
+      <a href="/ley-transparencia-salarial-2026.html" class="hub-card">
+        <div class="hub-card-eyebrow">La ley</div>
+        <div class="hub-card-title">Directiva UE 2023/970</div>
+        <div class="hub-card-desc">Resumen claro de la ley que entra en vigor el 7 de junio de 2026.</div>
+        <div class="hub-card-arrow">Leer en 2 min →</div>
+      </a>
+      <a href="#section-calc" class="hub-card">
+        <div class="hub-card-eyebrow">Recurso</div>
+        <div class="hub-card-title">Calculadora de salario neto</div>
+        <div class="hub-card-desc">Utilidad de apoyo: tu neto con IRPF 2026, 14 pagas y situación familiar.</div>
+        <div class="hub-card-arrow">Calcular →</div>
+      </a>
+    </div>
+  </section>
+
 <section id="s-recursos" style="max-width:960px;margin:0 auto;padding:56px 32px 32px;border-top:1px solid var(--cream-200);scroll-margin-top:120px;">
   <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;">
     <h2 style="font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink);margin:0;">Recursos útiles</h2>
@@ -3585,7 +3645,7 @@
 
 <footer>
   <p class="footer-text">
-    SalarioJusto es una herramienta informativa independiente. Los cálculos son estimaciones orientativas basadas en la normativa fiscal vigente (IRPF 2026) y datos de mercado de referencia. No constituyen asesoría laboral, fiscal ni jurídica.<br>
+    SalarioJusto es un medio editorial independiente sobre transparencia salarial. Los cálculos son estimaciones orientativas basadas en la normativa fiscal vigente (IRPF 2026) y datos de mercado de referencia. No constituyen asesoría laboral, fiscal ni jurídica.<br>
     Basado en <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-13408" target="_blank">Directiva UE 2023/970 de Transparencia Retributiva</a> · <a href="https://www.ine.es" target="_blank">Datos de referencia: INE</a>
   </p>
   <p class="footer-text" style="margin-top:16px;">

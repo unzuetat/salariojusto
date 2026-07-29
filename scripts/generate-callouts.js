@@ -270,7 +270,19 @@ function main() {
 }
 
 if (require.main === module) {
-  main();
+  if (process.env.ALLOW_LEGACY_GENERATOR === '1') {
+    main();
+  } else {
+    console.error(
+      '\n⛔ generate-callouts.js NEUTRALIZADO (29-jul-2026).\n' +
+      '   Genera la comparativa POSICIONAL ("Xª de N provincias") entre los\n' +
+      '   marcadores <!-- CALLOUTS -->, que la regla T9 PROHÍBE (se desactualiza\n' +
+      '   en N y en el puesto). Sustituir por anclas fijas (SMI / pilar / historia)\n' +
+      '   a mano. Ver docs/estandar-ficha-convenio.md y CORRECCIONES_JULIO.md (T9).\n' +
+      '   Override consciente: ALLOW_LEGACY_GENERATOR=1 node scripts/generate-callouts.js\n'
+    );
+    process.exit(1);
+  }
 }
 
 module.exports = { main, computeMeans, rankProvincias, buildTableHtml };
