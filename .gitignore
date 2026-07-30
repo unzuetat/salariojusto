@@ -52,3 +52,6 @@ auditoria-thin.csv
 auditoria-thin-sheets.csv
 paginas-publicadas.csv
 paginas-publicadas-sheets.csv
+
+# Detector: cola de candidatos (estado runtime)
+data/detector/candidatos.json
