@@ -1,0 +1,62 @@
+{
+  "nombre": "Convenio Colectivo de la Industria, Servicios e Instalaciones del Metal de la Comunidad de Madrid",
+  "bocm": "BOCM nº 15 · 18 de enero de 2025 (texto y tablas 2024) · tabla 2026 corregida en BOCM nº 59 · 11 de marzo de 2026",
+  "codigo": "28003715011982",
+  "skipHtmlGeneration": true,
+  "vigencia": "01/01/2024 – 31/12/2026, prórroga anual salvo denuncia (Arts. 4-5)",
+  "pagas": "14 pagas (12 mensualidades + 2 extras: 15 julio y 22 diciembre, 30 días cada una, Art. 33)",
+  "jornadaAnual": 1756,
+  "jornadaAnualEfectiva": 1748,
+  "urlBocm": "https://www.bocm.es/",
+  "notaEditorial": "<strong>Qué es.</strong> El convenio de la industria del metal de la Comunidad de Madrid, código REGCON 28003715011982, con vigencia 2024-2026. Es uno de los grandes convenios sectoriales de la región, con un ámbito amplísimo: metalurgia, siderurgia, automoción, naval, aeroespacial, ferroviario, renovables, robótica, electrónica, telecomunicaciones, talleres e ITV, fontanería, climatización, data centers e incluso fabricación y mantenimiento de drones. No cubre el comercio del metal (solo venta), que tiene convenio propio.<br><br><strong>Estructura.</strong> 7 grupos profesionales con un único salario de grupo por grupo (sistema unificado desde 2015). Se cobra en 14 pagas: 12 mensualidades más dos extras de 30 días el 15 de julio y el 22 de diciembre. No hay paga de marzo (a diferencia de Valencia).<br><br><strong>Actualización.</strong> La tabla 2026 aplica un +2% sobre 2025 (Art. 29). La tabla vigente es la corregida en el BOCM nº 59 del 11 de marzo de 2026, que subsanó un error material publicado en el BOCM nº 56 del 7 de marzo. Verificado contra ese anexo corregido.<br><br><strong>Lo singular.</strong> Complemento de productividad del 1,5% del salario convenio (Art. 42), sistema de incentivos por rendimiento medido (Arts. 10-12 y 17) y un complemento de incapacidad temporal que solo cubre accidente de trabajo y enfermedad profesional (15% desde el día 11, Art. 47), no la enfermedad común.",
+  "grupos": [
+    { "id": "1", "grupo": "1", "division": "Licenciada/o – Grado", "nombre": "Ingeniería, licenciatura, grado universitario; dirección de áreas y servicios", "salarioGrupoMes": 2527.07, "salarioAnual": 35378.96, "quinquenio": 42.72, "baseComplementosMes": 1130.84 },
+    { "id": "2", "grupo": "2", "division": "Técnico/a", "nombre": "Jefe/a de taller, ATS/DUE, jefe/a 1ª administrativo/a, jefe/a de laboratorio 1ª, analista informático/a, graduado/a social", "salarioGrupoMes": 2120.71, "salarioAnual": 29689.98, "quinquenio": 38.88, "baseComplementosMes": 1002.16 },
+    { "id": "3", "grupo": "3", "division": "Técnica/o Auxiliar", "nombre": "Delineante proyectista, jefe/a de organización 1ª, jefe/a 2ª administrativo/a, programador/a, maestro/a industrial, contramaestre", "salarioGrupoMes": 1912.06, "salarioAnual": 26768.79, "quinquenio": 35.78, "baseComplementosMes": 913.80 },
+    { "id": "4", "grupo": "4", "division": "Empleado/a", "nombre": "Delineante 1ª/2ª, operador/a informático/a, oficial administrativo/a 1ª/2ª, conductor/a, comercial, encargado/a de sección de taller", "salarioGrupoMes": 1709.33, "salarioAnual": 23930.65, "quinquenio": 33.37, "baseComplementosMes": 841.22 },
+    { "id": "5", "grupo": "5", "division": "Operaria/o", "nombre": "Profesional de oficio de 1ª y 2ª; capataz de especialistas y peones", "salarioGrupoMes": 1590.26, "salarioAnual": 22263.68, "quinquenio": 31.91, "baseComplementosDia": 26.46 },
+    { "id": "6", "grupo": "6", "division": "Empleado/a Auxiliar", "nombre": "Auxiliar (oficina, laboratorio, administrativo/a, organización), almacenero/a, telefonista, conserje, ordenanza, portero/a, analista de laboratorio 2ª", "salarioGrupoMes": 1573.63, "salarioAnual": 22030.78, "quinquenio": 31.19, "baseComplementosMes": 781.71 },
+    { "id": "7", "grupo": "7", "division": "Operaria/o Auxiliar", "nombre": "Peón/a, mozo/a especialista de almacén, especialista, oficial de 3ª de taller", "salarioGrupoMes": 1477.68, "salarioAnual": 20687.47, "quinquenio": 30.82, "baseComplementosDia": 25.28 },
+    { "id": "8", "grupo": "Aprendices", "division": "Especial", "nombre": "Aprendices/as (hasta 21 años, máximo 2 años en el puesto)", "salarioAnual": 17438.11 }
+  ],
+  "incrementos": { "2024": "3%", "2025": "3%", "2026": "2%", "articulo": "Art. 29", "revisionIPC": "cláusula 2026: si el IPC real 2026 > 2% al 31-dic, revisión de la diferencia para tablas siguientes, sin retroactividad ni revisión negativa", "nota": "La tabla 2025 (+3%) no está publicada en los BOCM disponibles; la ficha muestra la tabla vigente 2026 (corregida BOCM 11-mar-2026)" },
+  "antiguedad": { "tipo": "quinquenios", "articulo": "Art. 41", "nota": "Máximo 5 quinquenios; la cuantía se revaloriza cada año con las tablas (2026: 30,82 €–42,72 €/mes según grupo)" },
+  "nocturnidad": { "porcentaje": 25, "base": "salario convenio", "articulo": "Art. 39", "franja": "22:00 – 06:00" },
+  "jefaturaEquipo": { "porcentaje": 20, "base": "salario grupo", "articulo": "Art. 40" },
+  "toxicosPenososPeligrosos": { "uno": 20, "dos": 25, "tres": 30, "base": "salario base (Art. 37)", "reduccion": "mitad si el trabajo penoso/tóxico/peligroso dura menos de media jornada (>60 min)", "articulo": "Art. 38" },
+  "jornada": { "anual": 1756, "efectiva": 1748, "libreDisposicion": 8, "sabadosDomingos": "máximo 6 al año obligatorios; sábado +150% o domingo +175% (o descanso 1h30/1h45)", "descansoBocadillo": "no computa como trabajo efectivo", "articulo": "Art. 48" },
+  "vacaciones": { "dias": 22, "tipo": "laborables", "minimoNaturales": 30, "distribucion": "preferentemente en verano; si no empiezan el 1 o 15, comienzan en lunes (o martes si el lunes es festivo)", "articulo": "Art. 35" },
+  "pagasExtras": { "numero": 2, "nombres": ["Verano (15 julio)", "Navidad (22 diciembre)"], "cuantia": "30 días de salario convenio + antigüedad cada una", "articulo": "Art. 33" },
+  "productividad": { "porcentaje": 1.5, "base": "salario convenio anual", "condicion": "sin ausencias > 8 horas laborables al mes (salvo vacaciones, crédito sindical y licencias)", "articulo": "Art. 42" },
+  "incentivos": { "regla": "sistema de rendimiento medido: mínimo exigible, correcto (+12,5%) y óptimo; al alcanzar el rendimiento correcto, incentivo mínimo del 25% de la retribución de convenio", "carenciaIncentivos2026": "2,87 €/día trabajado para grupos 5 y 7 sin sistema de incentivo (Art. 17)", "articulos": "Arts. 10-12, 17" },
+  "horasExtras": { "regla": "base = retribución total anual del convenio / horas efectivas (1.748 en 2026)", "compensacion": "por acuerdo, 1 hora extra = 1 h 45 min de descanso", "articulo": "Art. 34" },
+  "incapacidadTemporal": { "accidenteTrabajoEP": "complemento del 15% de la base reguladora desde el día 11 (baja > 10 días); excluye accidente in itinere", "enfermedadComun": "no complementada por el convenio", "articulo": "Art. 47" },
+  "subrogacion": { "articulo": "Art. 20 bis y DT 3ª", "ambito": "gestión integral y energética de instalaciones eléctricas en vías y espacios públicos (concursos públicos municipales)", "requisito": "personal con más de 6 meses adscrito al servicio; entrada en vigor tras la publicación del convenio" },
+  "kilometraje": { "cuantia": 0.26, "unidad": "€/km", "alternativa": "o la cantidad que Hacienda fije como exenta si es superior", "articulo": "Art. 44" },
+  "quebrantoMoneda": { "regla": "0,50 por 1.000 de las cantidades cobradas/pagadas", "maximoMes": 3, "articulo": "Art. 46" },
+  "otrosConceptos2026": { "mediaDieta": 12.14, "dietaCompletaMenos7dias": 59.17, "dietaCompletaMas7dias": 47.36, "carenciaIncentivosDia": 2.87, "aprendicesAnual": 17438.11 },
+  "comisionParitaria": { "articulo": "Art. 69", "composicion": "8 vocales titulares + 8 suplentes (4 sindicales + 4 empresariales)", "funciones": "interpretación, arbitraje, conciliación y vigilancia del cumplimiento", "nota": "domicilio y secretaría designados tras la homologación del convenio" },
+  "convenioEstatal": "IV Convenio Estatal para la Industria, las Nuevas Tecnologías y los Servicios del Sector del Metal (CEM), BOE 12/01/2022 (marco supletorio: acoso, prevención de riesgos, solución extrajudicial de conflictos)",
+  "clasificacion": "7 grupos profesionales con salario de grupo unificado — Anexo II (con equivalencia orientativa de categorías anteriores)",
+  "firmantes": {
+    "patronales": ["AECIM — Asociación de Empresas del Comercio e Industria del Metal de Madrid"],
+    "sindicatos": ["CCOO de Industria de Madrid", "UGT-FICA Madrid (Federación de Industria, Construcción y Agro)"]
+  },
+  "particularidades": [
+    "14 pagas (2 extras de 30 días el 15 de julio y 22 de diciembre); sin paga de marzo (Art. 33)",
+    "Complemento de productividad del 1,5% del salario convenio anual (Art. 42)",
+    "Sistema de incentivos por rendimiento medido; incentivo mínimo del 25% al alcanzar el rendimiento correcto (Arts. 11-12)",
+    "Carencia de incentivos de 2,87 €/día para grupos 5 y 7 sin sistema de incentivo (Art. 17)",
+    "Complemento de IT solo para accidente de trabajo y enfermedad profesional (15% desde día 11); no cubre enfermedad común (Art. 47)",
+    "Plus tóxicos/penosos/peligrosos hasta el 30% (20% una circunstancia, 25% dos, 30% las tres) (Art. 38)",
+    "Tabla 2026 corregida en el BOCM nº 59 (11-mar-2026) tras un error material del BOCM nº 56 (7-mar-2026)",
+    "Ámbito modernizado en 2024: incluye drones, data centers, robótica y renovables (Art. 2)",
+    "Vinculación al IV Convenio Estatal del Metal (BOE 12-01-2022)",
+    "Vigencia hasta 31-dic-2026: entra en prórroga anual salvo denuncia"
+  ],
+  "fuentes": [
+    "Convenio Industria, Servicios e Instalaciones del Metal de la Comunidad de Madrid 2024-2026, BOCM nº 15 (18-ene-2025), REGCON 28003715011982",
+    "Tabla salarial 2026 corregida, BOCM nº 59 (11-mar-2026) — corrección de errores del BOCM nº 56 (7-mar-2026)",
+    "IV Convenio Estatal del Metal (CEM), BOE 12-01-2022 (marco supletorio)"
+  ]
+}
