@@ -1,7 +1,7 @@
 {
   "_doc": "CENSO ÚNICO DE ESTADO DE CONVENIOS — fuente de verdad hand-curated. El nº de fichas y su estado (vigente/ultraactividad) se consultan AQUÍ, nunca grepeando el HTML (ver memoria feedback_estado_convenios_registro_no_grep). Lo consume scripts/audit/convenios-sync.js. Al añadir/actualizar un convenio: editar su fila aquí. Campo 'revisado:false' = estado propuesto por Claude, PENDIENTE de ratificación humana contra boletín. 'confianza:revisar' = caso jurídico dudoso (prórroga/tácita/pactada vs 86.3).",
-  "actualizado": "2026-07-30",
-  "canon": { "provinciales": 37, "marcos": 3, "total": 40 },
+  "actualizado": "2026-07-31",
+  "canon": { "provinciales": 38, "marcos": 3, "total": 41 },
   "estados": {
     "vigente": "Convenio con vigencia formal en curso (o prórroga/tácita reconducción que lo mantiene plenamente vigente).",
     "ultraactividad": "Vigencia formal vencida sin convenio nuevo; tablas congeladas en aplicación del art. 86.3 ET (o ultraactividad pactada).",
@@ -14,6 +14,7 @@
     { "archivo": "convenio-tecnicos-espectaculos.html", "sector": "tecnicos", "ambito": "Estatal", "tipo": "marco", "indexable": false, "vigenciaFin": null, "estado": "marco", "fuenteEstado": "explainer sin convenio sectorial propio", "confianza": "alta", "revisado": false, "nota": "noindex deliberado" },
 
     { "archivo": "convenio-construccion-bizkaia.html", "sector": "construccion", "ambito": "Bizkaia", "tipo": "provincial", "indexable": true, "vigenciaFin": "2027-12-31", "estado": "vigente", "fuenteEstado": "BOB 18-dic-2025 + BOB 2-feb-2026 · vigente 2025-2027", "confianza": "alta", "revisado": false, "nota": "" },
+    { "archivo": "convenio-construccion-madrid.html", "sector": "construccion", "ambito": "Comunidad de Madrid", "tipo": "provincial", "indexable": true, "vigenciaFin": "2026-12-31", "estado": "vigente", "fuenteEstado": "REGCON 28001055011982 · convenio 2025-2026 (BOCM 311, 31-dic-2025) · tablas 2025 y 2026 en vigor", "confianza": "alta", "revisado": false, "nota": "convenio 'puente' de 2 años; vigencia formal hasta 31-dic-2026, luego VII Convenio General estatal salvo nuevo convenio. Vigilar renegociación a partir de 2027" },
 
     { "archivo": "convenio-hosteleria-alicante.html", "sector": "hosteleria", "ambito": "Alicante", "tipo": "provincial", "indexable": true, "vigenciaFin": null, "estado": "especial", "fuenteEstado": "Tablas 2026 oficiales", "confianza": "alta", "revisado": true, "nota": "especial: cláusula de ultraactividad futura si se denuncia; hoy aplica tablas 2026" },
     { "archivo": "convenio-hosteleria-baleares.html", "sector": "hosteleria", "ambito": "Illes Balears", "tipo": "provincial", "indexable": true, "vigenciaFin": "2028-03-31", "estado": "vigente", "fuenteEstado": "XVII Convenio autonómico · BOIB 154/2025 · 1-abr-2025 a 31-mar-2028", "confianza": "alta", "revisado": false, "nota": "" },
