@@ -29,7 +29,7 @@
 
 - [Calculadora de salario neto IRPF 2026](https://salariojusto.es/): bruto-a-neto con escalas estatal y autonómica reales (9 CCAA + tarifa foral Bizkaia)
 - [Hub salarial provincial](https://salariojusto.es/salarios.html): índice de convenios y datos salariales agrupados por CCAA y provincia
-- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 38 convenios indexables con tablas salariales oficiales (18 hostelería + 12 limpieza + 2 oficinas autonómicos Madrid y Valencia + 1 construcción estatal + 1 construcción provincial Bizkaia + 4 metal provincial Bizkaia, Barcelona, Valencia y Madrid)
+- [Verificador de convenios colectivos](https://salariojusto.es/convenios.html): 39 convenios indexables con tablas salariales oficiales (18 hostelería + 12 limpieza + 2 oficinas autonómicos Madrid y Valencia + 1 construcción estatal + 2 construcción provincial Bizkaia y Madrid + 4 metal provincial Bizkaia, Barcelona, Valencia y Madrid)
 
 ## Convenios provinciales de Limpieza auditados (Sprint 1)
 
@@ -75,6 +75,7 @@ Datos extraídos de boletines oficiales con metodología A+B (verificación cruz
 
 - [Construcción estatal — suelo salarial](https://salariojusto.es/construccion-estatal-suelo-salarial.html): marco general del VII Convenio General Sector Construcción (BOE 23-sept-2023) que sirve de suelo a los convenios provinciales
 - [Convenio Construcción Bizkaia](https://salariojusto.es/convenio-construccion-bizkaia.html) (REGCON 48000715011981, BOB Núm. 242 del 18-dic-2025 + BOB Núm. 21 del 2-feb-2026, vigente 2025-2027 con +3,4% en 2026, jornada 1.700 h/año reducida a 1.696 h/año en 2027, 14 pagas, antigüedad escalada en 9 tramos 5→59%, Etorkizuna EPSV obligatoria 282-440 €/año por persona, indemnización 90.000 € por muerte/IPA/Gran Invalidez por accidente, IRPF foral Bizkaia)
+- [Convenio Construcción Madrid](https://salariojusto.es/convenio-construccion-madrid.html) (Sector de Construcción y Obras Públicas de la Comunidad de Madrid, REGCON 28001055011982, BOCM nº 311 del 31-dic-2025, convenio "puente" vigente 2025-2026, jornada 1.736 h/año, 14 pagas, tablas diaria para operarios (niveles VI-XIII) y mensual para empleados y técnicos (II-XIII), Peón suelto 23.052 €/año y Oficial 1ª de Oficio 25.103 €/año en 2026, incentivo de trabajo en obra 147 €/mes exclusivo de Madrid para personal de obra (D.A. Quinta), prima de 150 €/día por trabajo en sábado/domingo/festivo bajo distribución irregular vigilada por Comisión Técnica de Visitas a Obra (Art. 49.10 y Anexo XVI), antigüedad congelada como complemento ad personam desde 1996 (Art. 38), complemento de hospitalización al 100% durante la baja + 60 días (Art. 45), indemnización 47.000 € por muerte/IPA/gran invalidez y 28.000 € por IPT por accidente de trabajo (Art. 47), dietas 2026 completa 61,83 € / media 14,50 €, plan de pensiones PPESSC, cláusula de adaptación por calor extremo AEMET (Art. 53 bis), firmantes AECOM + CCOO del Hábitat de Madrid + UGT FICA Madrid, IRPF común estatal; marco supletorio VII Convenio General de la Construcción; NO cubre sectores con convenio propio como metal o madera)
 
 ## Convenios de Industria del Metal
 
