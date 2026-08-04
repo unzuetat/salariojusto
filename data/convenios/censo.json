@@ -1,7 +1,7 @@
 {
   "_doc": "CENSO ÚNICO DE ESTADO DE CONVENIOS — fuente de verdad hand-curated. El nº de fichas y su estado (vigente/ultraactividad) se consultan AQUÍ, nunca grepeando el HTML (ver memoria feedback_estado_convenios_registro_no_grep). Lo consume scripts/audit/convenios-sync.js. Al añadir/actualizar un convenio: editar su fila aquí. Campo 'revisado:false' = estado propuesto por Claude, PENDIENTE de ratificación humana contra boletín. 'confianza:revisar' = caso jurídico dudoso (prórroga/tácita/pactada vs 86.3).",
-  "actualizado": "2026-07-31",
-  "canon": { "provinciales": 38, "marcos": 3, "total": 41 },
+  "actualizado": "2026-08-04",
+  "canon": { "provinciales": 39, "marcos": 3, "total": 42 },
   "estados": {
     "vigente": "Convenio con vigencia formal en curso (o prórroga/tácita reconducción que lo mantiene plenamente vigente).",
     "ultraactividad": "Vigencia formal vencida sin convenio nuevo; tablas congeladas en aplicación del art. 86.3 ET (o ultraactividad pactada).",
@@ -52,6 +52,7 @@
     { "archivo": "convenio-metal-bizkaia.html", "sector": "metal", "ambito": "Bizkaia", "tipo": "provincial", "indexable": true, "vigenciaFin": "2025-12-31", "estado": "ultraactividad", "fuenteEstado": "REGCON 48001985011981 · vigencia formal 2022-2025 · ultraactividad ET 86.3 desde 1-ene-2026", "confianza": "alta", "revisado": false, "nota": "el <title> NO lo anuncia; solo el cuerpo/meta — caso que motivó el censo" },
     { "archivo": "convenio-metal-valencia.html", "sector": "metal", "ambito": "Valencia", "tipo": "provincial", "indexable": true, "vigenciaFin": null, "estado": "vigente", "fuenteEstado": "convenio 2026 · +2,5% · paga de marzo", "confianza": "alta", "revisado": false, "nota": "" },
     { "archivo": "convenio-metal-madrid.html", "sector": "metal", "ambito": "Comunidad de Madrid", "tipo": "provincial", "indexable": true, "vigenciaFin": "2026-12-31", "estado": "vigente", "fuenteEstado": "REGCON 28003715011982 · convenio 2024-2026 (BOCM 15, 18-ene-2025) · tabla 2026 corregida BOCM 59 (11-mar-2026) · +2%", "confianza": "alta", "revisado": false, "nota": "vigencia formal hasta 31-dic-2026; luego prórroga anual salvo denuncia (Art. 5). Vigilar denuncia/ultraactividad a partir de 2027" },
+    { "archivo": "convenio-metal-gipuzkoa.html", "sector": "metal", "ambito": "Gipuzkoa", "tipo": "provincial", "indexable": true, "vigenciaFin": "2026-12-31", "estado": "vigente", "fuenteEstado": "REGCON 20001095011981 · convenio 2023-2026 (BOG 110, 08-jun-2023) · revisión salarial 2026 (BOG 30, 16-feb-2026, republicada íntegra 4-mar-2026) · +2,9%", "confianza": "alta", "revisado": false, "nota": "denuncia automática desde 1-nov-2026 → ultraactividad posterior; vigilar renegociación 2027" },
 
     { "archivo": "convenio-oficinas-madrid.html", "sector": "oficinas", "ambito": "Madrid", "tipo": "provincial", "indexable": true, "vigenciaFin": "2026-12-31", "estado": "vigente", "fuenteEstado": "BOCM 9-ago-2025 · tablas 2026 (denuncia automática tras 31-dic-2026)", "confianza": "alta", "revisado": false, "nota": "" },
     { "archivo": "convenio-oficinas-valencia.html", "sector": "oficinas", "ambito": "Valencia", "tipo": "provincial", "indexable": true, "vigenciaFin": "2026-12-31", "estado": "vigente", "fuenteEstado": "vigente 2024-2026", "confianza": "alta", "revisado": false, "nota": "" }
