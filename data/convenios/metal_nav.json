@@ -1,0 +1,73 @@
+{
+  "nombre": "Convenio Colectivo Autonómico para la Industria Siderometalúrgica de la Comunidad Foral de Navarra",
+  "bon": "BON nº 31 · 14 de febrero de 2023 (texto 2022-2026) · revisión salarial 2026 en BON nº 31 · 12 de febrero de 2026 (Resolución 9C/2026)",
+  "codigo": "31006805011981",
+  "skipHtmlGeneration": true,
+  "vigencia": "01/01/2022 – 31/12/2026, denunciado con efectos 31/12/2026 y ultraactividad posterior; actualización por IPC prevista en enero de 2027 antes de negociar el nuevo convenio (Arts. 5 y 72.F)",
+  "regimenFiscal": "IRPF foral de Navarra (Comunidad Foral, régimen tributario propio; no es régimen común)",
+  "pagas": "12 mensualidades + 2 gratificaciones extraordinarias (1.ª semana de julio y 22 de diciembre, 30 días cada una sobre Salario Base + Plus Convenio); prorrateables por acuerdo",
+  "jornadaAnual": 1695,
+  "urlBon": "https://bon.navarra.es/",
+  "notaEditorial": "<strong>Qué es.</strong> El convenio de la industria siderometalúrgica de Navarra, código REGCON 31006805011981, con vigencia 2022-2026. Cubre a las empresas y personas trabajadoras de la fabricación, transformación, montaje, instalación y reparación del metal en toda la Comunidad Foral (siderurgia, metalurgia, talleres, calderería, instalaciones eléctricas, energías renovables). No cubre el comercio del metal, que tiene convenio propio.<br><br><strong>Estructura.</strong> El salario se fija como Salario Garantizado anual por Grupo Profesional: 7 grupos, de 26.111,60 € (Grupo 7) a 31.750,36 € (Grupo 1) en 2026. Cada grupo integra personal técnico, empleado y operario. Dos pagas extra de 30 días (julio y diciembre) y antigüedad por trienios sobre valores fijos, no por porcentaje.<br><br><strong>Actualización.</strong> La subida 2026 es del +2% sobre la tabla vigente a 31 de diciembre de 2025, aplicado también a salarios reales, antigüedad, pluses y dietas (Art. 41.A.E). Verificado contra el BON nº 31 (12-feb-2026, Resolución 9C/2026), sin actualización previa por IPC en 2026 (esa cláusula se aplicó en enero de 2025).<br><br><strong>Lo singular.</strong> Paga no consolidable de 400 € brutos en marzo de 2026 a toda la plantilla (Art. 41.C); acuerdo de competitividad con jornada de referencia de +48 h y bolsa de disponibilidad de horas (80 h al alza / 88 h a la baja); compensación de teletrabajo de 50 €/mes; y una subrogación limitada a las contratas de mantenimiento con la Administración Pública. Régimen fiscal foral de Navarra. 2026 es el último año de vigencia: el convenio está denunciado y entra en renovación.",
+  "jornada": { "anual": 1695, "evolucion": "1.695 h de trabajo efectivo durante toda la vigencia del convenio", "articulo": "Art. 29.1", "flexibilidad": "Acuerdo de competitividad: jornada de referencia superior en 48 h (Art. 29.2). Bolsa de disponibilidad de horas: 80 h al alza / 88 h a la baja (Art. 30). Jornada irregular ±½-1 h con 5 días de preaviso (Art. 31). Día de libre disposición (Art. 38 bis)." },
+  "vacaciones": { "diasNaturales": 30, "diasLaborables": null, "retribucion": "salario según conceptos del año anterior; para personal a prima/incentivo, promedio de la prima de los 3 meses anteriores", "articulo": "Art. 32", "periodo": "preferentemente entre el 15 de junio y el 30 de septiembre" },
+  "pagasExtras": { "numero": 2, "nombres": ["Julio (1.ª semana)", "Navidad (22 de diciembre)"], "cuantia": "30 días de Salario Base + Plus Convenio cada una", "prorrateo": "prorrateables en las 12 mensualidades por acuerdo empresa-RLT", "articulo": "Art. 44" },
+  "pagaNoConsolidable": { "importe": 400, "mes": "marzo de 2026", "alcance": "toda la plantilla, cualquiera que sea su grupo y retribución; no consolidable ni genera derecho adquirido", "articulo": "Art. 41.C" },
+  "antiguedad": { "tipo": "trienios", "base": "valores fijos por trienio (no porcentaje), ilimitados", "computo": "servicios prestados en la empresa, de tres en tres años", "prorrateo": "en 14 pagas", "articulo": "Art. 46", "importes2026": { "trienio1": 177.53, "trienio2": 355.09, "trienio3": 621.34, "trienio4": 798.73, "trienio5": 887.24, "trienio6": 1154.41, "trienio7": 1242.64, "trienio8": 1331.42, "sucesivos": 90.99 } },
+  "plusCarenciaIncentivos": { "importeMensual2026": 111.96, "regla": "para quien lo perciba adicionalmente al Salario Garantizado por no tenerlo incluido (Art. 41.B)" },
+  "toxicosPenososPeligrosos": { "regla": "plus por día trabajado; +2% sobre 2025; empresas nuevas fórmula Salario Garantizado × 0,0381 / 100; +25% si concurren dos circunstancias, +50% si las tres", "articulo": "Art. 47" },
+  "centrosSanitarios": { "regla": "plus de centros sanitarios (radiaciones ionizantes, agentes biológicos grupos 3-4, sustancias tóxicas): Salario Garantizado × 0,0381 / 100; incompatible con toxicidad/penosidad/peligrosidad", "articulo": "Art. 47 bis" },
+  "nocturnidad": { "regla": "plus de nocturnidad; empresas nuevas fórmula Salario Garantizado × 0,0476 / 100; +2% sobre 2025", "articulo": "Art. 48" },
+  "horasExtras": { "regla": "supresión de las horas extraordinarias habituales; preferencia por compensar en descanso frente a retribuirlas; precio +2% sobre 2025", "articulo": "Arts. 36 y 45" },
+  "incrementos": { "2026": "+2% sobre la tabla de Salario Garantizado vigente a 31 de diciembre de 2025, con efectos 1-ene-2026, sin actualización previa; mismo +2% a salarios reales, antigüedad, pluses y dietas", "articulo": "Art. 41.A.E", "revisionIPC": "actualización por IPC prevista en enero de 2027 si el IPC 2024-2025 supera el 4,04% (Art. 72.F), antes de negociar el convenio siguiente" },
+  "teletrabajo": { "compensacionMensual": 50, "nota": "50 €/mes brutos para jornada completa 100% a distancia, proporcional en otros casos; solo en periodos de actividad", "articulo": "Art. 75" },
+  "incapacidadTemporal": { "enfermedadComun": "50% del salario real los tres primeros días de la primera baja del año (Art. 51)", "accidenteTrabajo": "complemento hasta el 100% de la base de cotización desde el primer día, durante 1 año prorrogable 6 meses (Art. 52)" },
+  "seguroAccidentes": { "muerteAT": 28750, "invalidezAbsolutaAT": 51750, "nota": "capitales vigentes desde el 1 de enero de 2024", "articulo": "Art. 53" },
+  "dietas2026": { "dietaCompleta": 49.22, "dietaViajeCorto": 59.97, "mediaDieta": 28.51, "articulo": "Art. 49" },
+  "subrogacion": { "aplica": "parcial", "nota": "convenio de industria, sin cláusula general de subrogación; sí subrogación limitada del personal de contratas de mantenimiento con la Administración Pública (mín. 12 meses de servicio, mín. 6 meses de adscripción), Art. 50.F" },
+  "contratosFormativos": { "alternancia": "65% del Salario Garantizado el 1.er año, 80% el 2.º", "practicaProfesional": "85% del Salario Garantizado", "articulo": "Art. 50", "nota": "nunca por debajo del SMI" },
+  "clasificacionProfesional": { "grupos": 7, "divisiones": ["Técnicos", "Empleados", "Operarios"], "articulo": "Art. 70" },
+  "comisionParitaria": { "nombre": "Comisión Paritaria del Sector", "sede": "Tribunal Laboral de Navarra, C/ Nueva 30 bajo, 31001 Pamplona", "funciones": "interpretación, mediación, arbitraje y vigilancia del cumplimiento; sometimiento previo al Tribunal Laboral de Navarra (Art. 68)" },
+  "marcoSupletorio": "Convenio Estatal del Sector del Metal (CONFEMETAL, UGT y CCOO)",
+  "rangoSalarial2026": { "min": 26111.60, "max": 31750.36, "unidad": "€/año (Salario Garantizado bruto, en 14 pagas)", "grupos": 7, "nota": "el Salario Garantizado incluye Salario Base, Plus Convenio y Plus Carencia de Incentivos; excluye antigüedad, pluses de toxicidad/penosidad/peligrosidad y prima de producción" },
+  "salarioGarantizado2026": {
+    "grupo1": 31750.36,
+    "grupo2": 30892.29,
+    "grupo3": 30034.25,
+    "grupo4": 29053.55,
+    "grupo5": 28195.04,
+    "grupo6": 27460.03,
+    "grupo7": 26111.60
+  },
+  "salarioGarantizado2025": {
+    "grupo1": 31127.80,
+    "grupo2": 30286.56,
+    "grupo3": 29445.34,
+    "grupo4": 28483.87,
+    "grupo5": 27642.20,
+    "grupo6": 26921.60,
+    "grupo7": 25599.61
+  },
+  "ambitoFuncional": "producción, transformación, manipulación y almacenaje del metal; montaje, instalación, reparación y mantenimiento; energías renovables; industrias metalgráficas y de envases metálicos (chapa > 0,5 mm); joyería y relojería; instalaciones eléctricas y tendido de líneas; óptica y mecánica de precisión; recuperación y reciclaje de metales; circuitos impresos; infraestructuras TIC y telecomunicaciones. Excluye la venta en proceso exclusivo de comercialización (comercio del metal)",
+  "firmantes": {
+    "patronales": ["ANEM — Asociación Navarra de Empresarios del Metal", "APMEN — Asociación de la Pequeña y Mediana Empresa del Metal de Navarra"],
+    "sindicatos": ["FICA-UGT", "CCOO de Industria"]
+  },
+  "particularidades": [
+    "Salario Garantizado anual por 7 Grupos Profesionales, de 26.111,60 € (G7) a 31.750,36 € (G1) en 2026",
+    "Paga no consolidable de 400 € brutos en marzo de 2026 a toda la plantilla (Art. 41.C)",
+    "Antigüedad por trienios sobre valores fijos (no porcentaje), ilimitados (Art. 46)",
+    "Acuerdo de competitividad: jornada de referencia +48 h; bolsa de disponibilidad de horas 80 h alza / 88 h baja (Arts. 29.2 y 30)",
+    "Compensación de teletrabajo de 50 €/mes (Art. 75)",
+    "IT por enfermedad común cubierta (50% los 3 primeros días de la primera baja) y AT al 100% desde el primer día (Arts. 51-52)",
+    "Subrogación limitada a contratas de mantenimiento con la Administración Pública (Art. 50.F)",
+    "Régimen fiscal foral de Navarra (IRPF propio, no común)",
+    "Subida 2026 del +2% fija sobre la tabla de 2025; actualización por IPC prevista en enero de 2027 (Art. 72.F)",
+    "Vigencia 2022-2026: 2026 es el último año, el convenio está denunciado y entra en renovación con ultraactividad posterior"
+  ],
+  "fuentes": [
+    "Convenio Colectivo Autonómico para la Industria Siderometalúrgica de la Comunidad Foral de Navarra 2022-2026, BON nº 31 (14-feb-2023), REGCON 31006805011981 — ANEM, APMEN, FICA-UGT y CCOO (firmado el 4-nov-2022)",
+    "Acuerdo de revisión salarial para 2026, Resolución 9C/2026 de 16 de enero, BON nº 31 (12-feb-2026) — Salario Garantizado por grupos, antigüedad, dietas, plus carencia de incentivos y pluses (+2% sobre 2025)",
+    "Real Decreto 126/2026, SMI 2026 (referencia comparativa)"
+  ]
+}
