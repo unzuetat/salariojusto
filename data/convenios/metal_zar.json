@@ -1,0 +1,95 @@
+{
+  "nombre": "Convenio Colectivo del Sector de la Industria, la Tecnología y los Servicios del Metal de la provincia de Zaragoza",
+  "bopz": "BOPZ nº 293 · 23 de diciembre de 2023 (texto 2023-2026) · revisión salarial 2026 en BOPZ de 21 de febrero de 2026 (acta de la comisión paritaria de 15 de enero de 2026)",
+  "codigo": "50000675011982",
+  "skipHtmlGeneration": true,
+  "vigencia": "01/01/2023 – 31/12/2026, denunciado automáticamente; negociación del nuevo convenio a partir de enero de 2027 y ultraactividad hasta que se sustituya (Arts. 1.4 y 2)",
+  "regimenFiscal": "IRPF de régimen común (Estado + tramo autonómico de Aragón)",
+  "pagas": "12 mensualidades + 2 gratificaciones extraordinarias reglamentarias, semestrales, sobre el salario convenio del anexo I; prorrateables mensualmente por acuerdo",
+  "jornadaAnual": 1752,
+  "urlBopz": "https://bop.dpz.es/BOPZ/obtenerContenidoEdicto.do?idEdicto=824148&numBop=293",
+  "notaEditorial": "<strong>Qué es.</strong> El convenio de la industria, la tecnología y los servicios del metal de Zaragoza, código 50000675011982, con vigencia 2023-2026. Cubre la fabricación, transformación, montaje, instalación y reparación del metal en toda la provincia: metalurgia, siderurgia, automoción (polo de Stellantis y su industria auxiliar), naval, aeroespacial, ferroviario, energías renovables, telecomunicaciones, ITV y talleres de reparación de vehículos. No cubre la venta en proceso exclusivo de comercialización.<br><br><strong>Estructura.</strong> Salario por 7 Grupos Profesionales (el 2 subdividido en niveles 2.1/2.2/2.3), con divisiones Técnicos, Empleados y Operarios. Las tablas del anexo I fijan la retribución bruta anual de convenio; muchas plantillas suman además el complemento personal ex categoría y las primas de productividad del art. 17. Rango 2026: de 21.274,38 € (Grupo 7, peón) a 30.469,41 € (Grupo 1, titulado superior).<br><br><strong>Actualización.</strong> La subida 2026 es del +2,5% sobre las tablas definitivas de 2025 (art. 13), con efectos desde el 1 de enero de 2026. Verificado contra la revisión salarial publicada en el BOPZ de 21 de febrero de 2026. Se actualizan también nocturnidad, primas, plus de transporte/distancia, dietas y el seguro de invalidez y muerte.<br><br><strong>Lo singular.</strong> Las tablas de convenio son de las más contenidas del corpus, pero son mínimos: en automoción el salario real sube vía primas de rendimiento (art. 17) y el complemento ex categoría. Paga compensatoria de 400 € el 31 de enero de 2026 (art. 14); sin antigüedad activa (solo complemento ad personam para quienes la consolidaron antes de 1997); subrogación amplia en contratas de mantenimiento con administraciones y empresas privadas; plus de transporte de 744 €/año; y marco autonómico AMIMA (Acuerdo Marco de la Industria del Metal de Aragón).",
+  "jornada": { "anual": 1752, "evolucion": "1.760 h en 2023; 1.752 h desde 2024 y durante el resto de la vigencia", "articulo": "Art. 10", "flexibilidad": "Bolsa de disponibilidad de horas: 6 días al alza y 6 días a la baja (Art. 10.2). Bolsa individual de 16 horas anuales a petición de la persona trabajadora (Art. 10.3). Disponibilidad horaria / retén: 70 € (Art. 10.4)." },
+  "vacaciones": { "diasNaturales": 30, "diasLaborables": 26, "retribucion": "promedio de salario base y complementos salariales de los 90 días anteriores; se amplía a la media anual si los pluses se perciben de forma intermitente", "articulo": "Art. 12", "periodo": "todo el año, preferentemente en verano" },
+  "pagasExtras": { "numero": 2, "nombres": ["Extra semestral", "Extra semestral"], "cuantia": "sobre el salario convenio del anexo I más el complemento ad personam, en su caso", "prorrateo": "prorrateables mensualmente por acuerdo", "articulo": "Art. 15" },
+  "pagaCompensatoria": { "importe": 400, "fecha": "31 de enero de 2026", "requisitos": "jornada completa (o reducida por conciliación) y permanencia en la empresa del 01-01-2023 al 31-12-2025; proporcional en jubilaciones, fin de contrato temporal y nuevas contrataciones", "articulo": "Art. 14" },
+  "antiguedad": { "tipo": "ad personam", "base": "complemento ad personam sustitutivo de la antigüedad, solo para quienes lo consolidaron a 31 de diciembre de 1996; no compensable ni absorbible; se revaloriza como el salario", "computo": "no hay devengo de nuevos tramos de antigüedad", "articulo": "Art. 16" },
+  "exCategoria": { "regla": "complemento personal ex categoría para quienes, en la adaptación a grupos de 2017, procedían de una categoría con salario superior al del grupo; se trata como salario base y computa para todos los pluses", "articulo": "Art. 22" },
+  "primas": { "regla": "en empresas con sistemas de incentivos, prima mínima del 25% de la tabla cálculo prima a 110 puntos de actividad y del 50% a 133,33 puntos; mínimo garantizado del 22% si no se alcanzan los 110 puntos por causas no imputables", "articulo": "Art. 17" },
+  "nocturnidad": { "porcentaje": 20, "base": "20% del salario convenio y 20% del complemento ex categoría; se considera nocturno el trabajo entre las 22:00 y las 06:00", "articulo": "Art. 19" },
+  "horasExtras": { "regla": "máximo 80 al año; recargos del 40% (dos primeras del día / primeras 25 del mes entre 06:00 y 22:00), 60% (exceso) y 75% (entre 22:00 y 06:00, domingos y festivos); compensables en descanso con el recargo correspondiente", "articulo": "Art. 11" },
+  "incrementos": { "2026": "+2,5% sobre las tablas definitivas de 2025, con efectos 1-ene-2026 (art. 13); se aplica también a antigüedad ad personam, ex categoría, primas, nocturnidad, transporte/distancia y dietas", "articulo": "Arts. 13 y 14", "revisionIPC": "si el IPC real de 2026 supera el incremento pactado, se aplicará un incremento adicional en 2027; si supera en más del 30% del pactado, paga única de atrasos en el primer trimestre de 2027 (art. 14)" },
+  "plusTransporte": { "importe2026Mes": 62, "importe2026Anio": 744, "nota": "para quien preste servicio fuera del casco urbano; incompatible con el plus de distancia; empresas con transporte colectivo propio quedan excluidas", "articulo": "Art. 20" },
+  "plusDistancia": { "importe2026Km": 0.31, "nota": "complemento personal consolidado de 0,29 €/km (base 1958), revalorizado +3% en 2025 y +2,5% en 2026; garantía de 60 €/mes para quien perciba importes inferiores", "articulo": "Art. 20" },
+  "dietas2026": { "dietaCompleta": 54.60, "mediaDieta": 20.46, "articulo": "Art. 21" },
+  "plusFormacion": { "importeMensual": 50, "regla": "plus compensatorio de formación de 50 €/mes para las empresas que no acrediten su participación en un plan formativo del sector", "articulo": "Art. 50" },
+  "incapacidadTemporal": { "accidenteTrabajo": "complemento del 25% de la base reguladora, máximo 6 meses, en supuestos de accidente de trabajo con hospitalización de 48 h o más, intervención quirúrgica con ingreso, mutilación o accidente in itinere (Art. 24)" },
+  "seguroAccidentes": { "muerteInvalidezAT": 38750, "nota": "capital 2026 para incapacidad permanente total, absoluta, gran invalidez y muerte por accidente de trabajo o enfermedad profesional (Art. 23)" },
+  "subrogacion": { "aplica": true, "nota": "sí en contratas de montaje, instalación, mantenimiento o prestación de servicios cuya principal sea una administración pública o empresa privada (tendidos eléctricos, telecomunicaciones, alumbrado público >8.000 hab., ferroviario, puertos/aeropuertos, ITV, gas, parques eólicos y fotovoltaicos): subrogación de al menos el 60% de la plantilla, con 6 meses mínimos de adscripción; empresas de menos de 15 personas exentas con excepciones (Art. 7)" },
+  "comisionParitaria": { "nombre": "Comisión Paritaria del Convenio", "sede": "FEMZ (c/ Santander 36, Zaragoza), CCOO de Industria de Aragón y UGT-FICA Aragón", "funciones": "interpretación, conciliación, arbitraje y vigilancia; conflictos vía ASECLA (Servicio Aragonés de Mediación y Arbitraje)" },
+  "marcoSupletorio": "Convenio Colectivo Estatal de la Industria, la Tecnología y los Servicios del Metal (CEM) y Acuerdo Marco de la Industria del Metal de Aragón (AMIMA)",
+  "rangoSalarial2026": { "min": 21274.38, "max": 30469.41, "unidad": "€/año (retribución bruta anual de convenio, anexo I)", "grupos": 7, "nota": "mínimos de convenio; muchas plantillas suman el complemento ex categoría y las primas de productividad del art. 17. Suelo de los más contenidos del corpus metal" },
+  "tablaSalarial2026": {
+    "grupo1": [
+      { "categoria": "Titulado Superior (Técnicos)", "rba": 30469.41 },
+      { "categoria": "Director Gerente (Empleados)", "rba": 30469.41 }
+    ],
+    "grupo2": [
+      { "categoria": "Nivel 2.1 · Titulado Medio (Aparejadores), ATS, Titulado Superior de Entrada", "rba": 29627.69 },
+      { "categoria": "Nivel 2.2 · Ayudantes de Ingeniero y de Arquitecto", "rba": 28110.56 },
+      { "categoria": "Nivel 2.3 · Graduados Sociales", "rba": 26322.07 },
+      { "categoria": "Jefe Primera Administración (Empleados)", "rba": 26701.76 }
+    ],
+    "grupo3": [
+      { "categoria": "Jefe Taller (Operarios)", "rba": 26322.07 },
+      { "categoria": "Jefe Segunda Administración (Empleados)", "rba": 25626.99 },
+      { "categoria": "Jefe Primera Laboratorio (Técnicos)", "rba": 25501.45 },
+      { "categoria": "Dibujante y Delineante Proyectista, Jefe 1ª Organización", "rba": 25501.45 },
+      { "categoria": "Jefe Segunda Laboratorio y de Organización", "rba": 25501.45 }
+    ],
+    "grupo4": [
+      { "categoria": "Maestros Industriales (Técnicos)", "rba": 24950.55 },
+      { "categoria": "Maestro Taller (Operarios)", "rba": 24172.32 },
+      { "categoria": "Viajante, Oficial Primera Administración (Empleados)", "rba": 23895.03 },
+      { "categoria": "Técnico Organización Primera, Delineante Primera", "rba": 23895.03 }
+    ],
+    "grupo5": [
+      { "categoria": "Analista Primera, Oficial Segunda Administración (Empleados)", "rba": 22960.13 },
+      { "categoria": "Delineante Segunda, Técnico Organización Segunda", "rba": 22960.13 },
+      { "categoria": "Encargado, Chófer Camión-Grúa (Operarios)", "rba": 22443.50 },
+      { "categoria": "Oficial Primera y Oficial Segunda de oficio", "rba": 22443.49 }
+    ],
+    "grupo6": [
+      { "categoria": "Analista Segunda, Auxiliar Organización y Administrativo (Empleados)", "rba": 21814.22 },
+      { "categoria": "Auxiliar Calcador, de Laboratorio, Almacenero", "rba": 21814.22 },
+      { "categoria": "Chófer Turismo, Capataz (Operarios)", "rba": 21805.04 },
+      { "categoria": "Oficial Tercera, Especialista", "rba": 21805.04 }
+    ],
+    "grupo7": [
+      { "categoria": "Telefonista, Vigilante, Ordenanza, Portero (Empleados)", "rba": 21274.38 },
+      { "categoria": "Peón (Operarios)", "rba": 21274.38 }
+    ]
+  },
+  "ambitoFuncional": "fabricación, elaboración y transformación de productos industriales y tecnológicos; montaje, reparación, conservación, mantenimiento, almacenaje y puesta en funcionamiento de equipos e instalaciones. Metalurgia y siderurgia; automoción y componentes; construcción naval; industria aeroespacial y ferroviaria; energías renovables; robótica, domótica y automatismos; ordenadores y periféricos; circuitos impresos; telecomunicaciones; drones; joyería, relojería y bisutería; óptica y mecánica de precisión; recuperación y reciclaje de metales; reparación y mantenimiento de vehículos e ITV. Excluye la venta en proceso exclusivo de comercialización",
+  "firmantes": {
+    "patronales": ["FEMZ — Federación de Empresarios del Metal de Zaragoza"],
+    "sindicatos": ["CCOO de Industria de Aragón", "UGT-FICA Aragón"]
+  },
+  "particularidades": [
+    "Salario por 7 Grupos Profesionales (el 2 con niveles 2.1/2.2/2.3), de 21.274,38 € (G7) a 30.469,41 € (G1) en 2026",
+    "Tablas de las más contenidas del corpus, pero son mínimos: en automoción el real sube por primas de productividad (Art. 17) y ex categoría (Art. 22)",
+    "Paga compensatoria de 400 € el 31 de enero de 2026 (Art. 14)",
+    "Sin antigüedad activa: solo complemento ad personam para quienes la consolidaron antes de 1997 (Art. 16)",
+    "Complemento ex categoría para quienes, tras la adaptación a grupos de 2017, venían de una categoría con salario superior (Art. 22)",
+    "Bolsa de horas 6+6 días, bolsa individual de 16 h y retén de 70 € (Art. 10)",
+    "Plus de transporte de 744 €/año y plus de distancia de 0,31 €/km (Art. 20)",
+    "Subrogación amplia en contratas de mantenimiento con administraciones y empresas privadas (Art. 7)",
+    "Régimen fiscal común (IRPF estatal + tramo autonómico de Aragón)",
+    "Vigencia 2023-2026, denunciado; negociación del nuevo convenio en enero de 2027 y ultraactividad. Marco autonómico AMIMA"
+  ],
+  "fuentes": [
+    "Convenio Colectivo del Sector de la Industria, la Tecnología y los Servicios del Metal de la provincia de Zaragoza 2023-2026, BOPZ nº 293 (23-dic-2023), código 50000675011982 — FEMZ, CCOO de Industria de Aragón y UGT-FICA Aragón (firmado el 2-nov-2023)",
+    "Revisión salarial 2026 (+2,5%), acta de la comisión paritaria de 15 de enero de 2026, publicada en el BOPZ de 21 de febrero de 2026 — tablas del anexo I, nocturnidad, primas, plus de transporte/distancia, dietas y seguro de invalidez y muerte",
+    "Real Decreto 126/2026, SMI 2026 (referencia comparativa)"
+  ]
+}

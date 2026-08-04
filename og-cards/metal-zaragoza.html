@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&display=swap');
+  :root{--ink:#2D2520;--gold:#C17B3E;--gold-light:#D9A06A;--cream-50:#FDFBF7;--cream-200:#EDE0CE;--green-light:#7FCBA0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:630px;overflow:hidden;}
+  body{background:var(--ink);font-family:'DM Sans',sans-serif;color:#fff;
+       padding:64px 72px;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
+  body::after{content:'';position:absolute;right:-120px;top:-120px;width:520px;height:520px;
+       border:2px solid rgba(193,123,62,0.18);border-radius:50%;}
+  body::before{content:'';position:absolute;right:-40px;bottom:-160px;width:420px;height:420px;
+       border:2px solid rgba(193,123,62,0.12);border-radius:50%;}
+  .top{display:flex;align-items:center;gap:14px;position:relative;z-index:2;}
+  .mark{width:40px;height:40px;border:1.5px solid rgba(217,160,106,0.55);display:flex;align-items:center;
+        justify-content:center;font-family:'Newsreader',serif;font-size:24px;color:var(--gold-light);padding-top:3px;}
+  .brand{font-family:'Newsreader',serif;font-size:30px;font-weight:600;color:var(--gold-light);letter-spacing:-0.02em;}
+  .brand span{color:#fff;}
+  .mid{position:relative;z-index:2;}
+  .badge{display:inline-block;font-size:15px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;
+        color:var(--gold-light);border:1px solid rgba(193,123,62,0.4);padding:8px 18px;margin-bottom:26px;}
+  h1{font-family:'DM Serif Display',serif;font-size:66px;font-weight:400;line-height:1.08;max-width:900px;}
+  h1 em{font-style:normal;color:var(--gold-light);}
+  .tag{font-size:22px;color:rgba(255,255,255,0.6);margin-top:20px;}
+  .tag b{color:#fff;font-weight:600;}
+  .stats{display:flex;gap:56px;position:relative;z-index:2;}
+  .stat{border-left:3px solid var(--gold);padding:6px 0 6px 20px;}
+  .stat .lbl{font-size:15px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;}
+  .stat .val{font-size:34px;font-weight:700;color:#fff;line-height:1;}
+  .stat .val small{font-size:19px;color:var(--gold-light);font-weight:600;}
+  .foot{display:flex;justify-content:space-between;align-items:center;font-size:18px;color:rgba(255,255,255,0.55);position:relative;z-index:2;}
+  .foot .verif{color:var(--green-light);font-weight:600;}
+  .foot .url{color:var(--gold-light);font-weight:600;}
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="mark">§</div>
+    <div class="brand">Salario<span>Justo</span></div>
+  </div>
+
+  <div class="mid">
+    <span class="badge">Industria del Metal · Zaragoza · 2026</span>
+    <h1>Convenio del <em>Metal de Zaragoza</em></h1>
+    <div class="tag">Salario por <b>7 grupos</b> · <b>+2,5%</b> en 2026 · más <b>primas</b> de productividad</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="lbl">Peón/a · G7</div><div class="val">21.274 <small>€/año</small></div></div>
+    <div class="stat"><div class="lbl">Oficial · G5</div><div class="val">22.443 <small>€/año</small></div></div>
+    <div class="stat"><div class="lbl">Titulado · G1</div><div class="val">30.469 <small>€/año</small></div></div>
+  </div>
+
+  <div class="foot">
+    <span><span class="verif">✓ Verificado</span> contra el BOPZ (feb-2026) · tablas mínimas</span>
+    <span class="url">salariojusto.es</span>
+  </div>
+</body>
+</html>
