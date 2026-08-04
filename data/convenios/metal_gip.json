@@ -1,0 +1,43 @@
+{
+  "nombre": "Convenio Colectivo para la Industria Siderometalúrgica de Gipuzkoa",
+  "bog": "BOG nº 110 · 8 de junio de 2023 (texto 2023-2026) · revisión salarial 2026 en BOG nº 30 · 16 de febrero de 2026 (republicada íntegra el 4 de marzo de 2026)",
+  "codigo": "20001095011981",
+  "skipHtmlGeneration": true,
+  "vigencia": "01/01/2023 – 31/12/2026, denuncia automática desde el 1 de noviembre de 2026 y ultraactividad posterior (Art. 3)",
+  "pagas": "12 mensualidades + 2 pagas extraordinarias (Verano y Navidad, 30 días cada una) sobre columnas A+B más antigüedad; no prorrateables salvo acuerdo",
+  "jornadaAnual": 1695,
+  "urlBog": "https://egoitza.gipuzkoa.eus/es/bog",
+  "notaEditorial": "<strong>Qué es.</strong> El convenio de la industria siderometalúrgica de Gipuzkoa, código REGCON 20001095011981, con vigencia 2023-2026. Cubre a más de 30.000 personas trabajadoras de la fabricación, transformación y reparación del metal (siderurgia, metalurgia, talleres, calderería, montaje). No cubre el comercio del metal, que tiene convenio propio.<br><br><strong>Estructura.</strong> A diferencia de la hostelería o la limpieza, el salario no se fija por mes: cada una de las más de 70 categorías tiene un valor hora y una retribución anualizada sobre 1.695 horas (retribución anual = valor hora × 1.695, Art. 42). Cada retribución se estructura en tres columnas: A (salario base), B (plus de convenio) y C (plus de carencia de incentivo). Dos pagas extra de 30 días y quinquenios del 5% sobre la columna A.<br><br><strong>Actualización.</strong> La subida 2026 actúa en triple mecanismo: las tablas de retribuciones mínimas suben el IPC de 2025 (+2,9%), el salario base de convenio sube el 55% de esa subida y el salario real percibido el 85% (Art. 29). Verificado contra el BOG nº 30 (16-feb-2026), republicado íntegro el 4-mar-2026 tras omitirse el acta en la primera publicación (las tablas no cambiaron).<br><br><strong>Lo singular.</strong> Salario por valor hora sobre 1.695 h/año, estructura A/B/C, triple mecanismo de subida y horas extraordinarias suprimidas salvo casos excepcionales (acuerdo Confebask–ELA–UGT). Sin cláusula general de subrogación, por ser convenio de industria.",
+  "jornada": { "anual": 1695, "evolucion": "1.697 h en 2023; 1.695 h en 2024, 2025 y 2026", "articulo": "Art. 5" },
+  "vacaciones": { "diasNaturales": 30, "diasLaborables": 26, "retribucion": "salario real en jornada ordinaria de día; para personal a prima/destajo, promedio de los 3 meses anteriores", "articulo": "vacaciones (30 naturales / 26 laborables)" },
+  "pagasExtras": { "numero": 2, "nombres": ["Verano", "Navidad"], "cuantia": "30 días sobre columnas A+B + plus de antigüedad cada una", "prorrateo": "no prorrateables salvo acuerdo en contrario" },
+  "antiguedad": { "tipo": "quinquenios", "porcentaje": 5, "base": "salario columna A", "computo": "desde la fecha de ingreso, incluido el período de aprendizaje o aspirantazgo" },
+  "nocturnidad": { "porcentaje": 20, "base": "retribución (trabajo nocturno)" },
+  "toxicosPenososPeligrosos": { "base": "salario columna A incrementado con el plus de antigüedad", "regla": "bonificación por uno, dos o los tres conceptos (penosidad, toxicidad, peligrosidad)" },
+  "horasExtras": { "regla": "suprimidas salvo supuestos excepcionales", "marco": "Acuerdo Interconfederal sobre supresión de horas extraordinarias (Confebask y ELA, CC.OO., UGT y LAB, 15 de enero de 1999)", "articulo": "Art. 24" },
+  "incrementos": { "2026": "tablas +2,9% (IPC 2025); salario base de convenio +55% de la subida de tablas; salario real +85% (Art. 29)", "articulo": "Arts. 15 y 29", "revisionIPC": "si el IPC de 2025 hubiera sido negativo, las tablas no se habrían modificado" },
+  "estructuraColumnas": { "A": "salario base", "B": "plus de convenio", "C": "plus de carencia de incentivo (empresas sin sistema de primas)" },
+  "subrogacion": { "aplica": false, "nota": "convenio de industria, sin cláusula general de subrogación de personal" },
+  "otrosConceptos2026": { "dietaCompleta": 71.94, "desayuno": 2.37, "comida": 24.02, "cena": 16.92, "kilometraje": 0.439, "pernoctacionSuplemento": 8.90, "contratoFormativoMin1": 17012.38, "contratoFormativoMin2": 18430.07, "articulo": "Art. 26 (dietas) y Art. 41 (contrato formativo)" },
+  "comisionParitaria": { "nombre": "Comisión Mixta Interpretativa", "funciones": "interpretación, arbitraje, conciliación y vigilancia del cumplimiento" },
+  "rangoSalarial2026": { "minOficioPleno": 28255.65, "maxOficioPleno": 48322.75, "unidad": "€/año (retribución anualizada, valor hora × 1.695)", "categorias": 79, "nota": "las categorías de aspirante y botones son de formación, con cuantías reducidas por debajo de 20.000 €" },
+  "firmantes": {
+    "patronales": ["Adegi — Asociación de Empresas de Gipuzkoa"],
+    "sindicatos": ["ELA", "UGT"]
+  },
+  "particularidades": [
+    "Salario por valor hora sobre 1.695 h/año, no por mes: retribución anual = valor hora × 1.695 (Art. 42)",
+    "Estructura A/B/C: salario base + plus de convenio + plus de carencia de incentivo",
+    "Triple mecanismo de subida 2026: tablas +2,9%, salario base +55%, salario real +85%",
+    "Dos pagas extra de 30 días sobre A+B + antigüedad, no prorrateables salvo acuerdo",
+    "Quinquenios del 5% sobre la columna A, computando desde el ingreso (incluido el aprendizaje)",
+    "Horas extraordinarias suprimidas salvo casos excepcionales (acuerdo Confebask–ELA–UGT)",
+    "Sin subrogación: convenio de industria, no de servicios",
+    "Vigencia hasta 31-dic-2026; denuncia automática desde el 1-nov-2026 y ultraactividad posterior"
+  ],
+  "fuentes": [
+    "Convenio Colectivo para la Industria Siderometalúrgica de Gipuzkoa 2023-2026, BOG nº 110 (8-jun-2023), REGCON 20001095011981 — Adegi, ELA y UGT",
+    "Revisión salarial 2026, BOG nº 30 (16-feb-2026), Resolución de 27-ene-2026, republicada íntegra el 4-mar-2026 (Anexo I retribuciones mínimas y Anexo II valor hora)",
+    "Real Decreto 126/2026, SMI 2026 (referencia comparativa)"
+  ]
+}
