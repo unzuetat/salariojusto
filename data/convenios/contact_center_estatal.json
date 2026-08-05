@@ -1,0 +1,95 @@
+{
+  "nombre": "III Convenio Colectivo de ámbito estatal del sector de Contact Center (antes telemarketing)",
+  "tipo": "sectorial_estatal",
+  "ambito": "estatal",
+  "sector": "Contact Center",
+  "bop": "Texto: BOE núm. 137 · 9 de junio de 2023 (Resolución de 30 de mayo de 2023). Tablas 2026: BOE núm. 58 · 6 de marzo de 2026 (acta de la comisión paritaria de 19 de enero de 2026, +3,4%)",
+  "codigo": "99012145012002",
+  "skipHtmlGeneration": true,
+  "vigencia": "Efectos económicos desde el 1 de enero de 2020; duración hasta el 31 de diciembre de 2026, con prórroga tácita anual y mantenimiento del contenido normativo en ultraactividad (arts. 5 y 6). Se renegocia a partir de 2027",
+  "regimenFiscal": "IRPF de régimen común en todo el territorio estatal (Estado + tramo autonómico de la comunidad de residencia)",
+  "pagas": "14 pagas: los importes anuales del anexo I incluyen el salario base de los 12 meses más 2 gratificaciones extraordinarias (junio y navidad), abonadas entre el 15 y el 20 de junio y de diciembre; prorrateables en 12 por acuerdo (Art. 47)",
+  "jornadaAnual": 1764,
+  "urlBop": "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-13741",
+  "urlPdf": "https://www.boe.es/boe/dias/2023/06/09/pdfs/BOE-A-2023-13741.pdf",
+  "urlTablas2026": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-5300",
+  "urlModificacion2025": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-22414",
+  "firmadoFecha": "14 de marzo de 2023",
+  "smiReferencia": { "mensual": 1221, "anual": 17094, "norma": "RD 126/2026" },
+  "notaEditorial": "<strong>Qué es.</strong> El III Convenio Colectivo de ámbito estatal del sector de Contact Center (antes telemarketing), código 99012145012002, publicado en el BOE núm. 137 de 9 de junio de 2023. Es el convenio <strong>estatal</strong> del sector de los centros de llamadas y atención al cliente (BPO): se aplica en toda España a las empresas que prestan servicios de contact center a terceros (atención telefónica, soporte técnico, ventas, back office, gestión de cobros, encuestas…). Firmado por la patronal CEX y los sindicatos CCOO y FeSMC-UGT.<br><br><strong>Estructura.</strong> Salario por 10 niveles (grupos profesionales A a E). Los importes del anexo I son la retribución bruta anual (14 pagas). El puesto más común, el <strong>Teleoperador/a (Nivel 10)</strong>, cobra 17.139,58 €/año en 2026. Rango 2026: de ese Nivel 10 al Directivo/a (Nivel 1, 41.801,45 €/año).<br><br><strong>Actualización.</strong> Las tablas 2026 (anexo, +3,4%) se aprobaron por acta de la comisión paritaria de 19-ene-2026, publicada en el BOE núm. 58 de 6-mar-2026. Los incrementos del convenio fueron: 0% (2020 y 2021), +3,5% (2022), +3,5% (2023), +3% (2024), IPC del año anterior en 2025 y IPC+0,5% en 2026 (mín. 1%, tope 3,5%).<br><br><strong>Lo singular.</strong> El Nivel 10 (teleoperador/a) está a unos 46 € del SMI 2026 (17.094 €): el sector paga prácticamente el mínimo legal en su categoría de entrada. Convenio con fuerte peso del teletrabajo (art. 19), reglas propias de subrogación por fin de campaña (art. 20), topes de temporalidad (80% indefinidos desde 2024, art. 13), plus de idiomas y la consolidación de jornada del art. 27 (modificada en 2025). El convenio vence el 31-dic-2026: a vigilar la renegociación.",
+  "jornada": { "anual": 1764, "semanal": 39, "articulo": "Art. 22", "reduccionEmpresasBajoSalario": "las empresas que, por otro convenio, paguen menos que este sectorial tienen una jornada máxima de 1.597 h/año", "distribucionIrregular": "máximo 48 h/semana; ajuste mensual (Art. 23)", "descansoSemanal": "acumulable hasta 14 días, con un mínimo de un día por cada 7 (Art. 23)" },
+  "vacaciones": { "diasNaturales": 32, "articulo": "Art. 29", "detalle": "divisibles en periodos de 7 días continuados (al menos 14 seguidos en verano) más 4 días sueltos; comienzan siempre en día laborable; se conocen con 2 meses de antelación" },
+  "pagasExtras": { "numero": 2, "nombres": ["Extra de junio", "Extra de navidad"], "cuantia": "incluidas ya en el importe anual del anexo I; se abonan entre el 15 y el 20 de junio y de diciembre, en proporción al semestre trabajado", "prorrateo": "prorrateables en 12 mensualidades por acuerdo individual", "articulo": "Art. 47" },
+  "clasificacion": {
+    "articulo": "Arts. 39-41 y DT 2ª",
+    "grupos": [
+      "Grupo A — Dirección o mandos superiores (Niveles 1-2)",
+      "Grupo B — Personal técnico (Niveles 4-5)",
+      "Grupo C — Personal técnico en informática (Niveles 3-8)",
+      "Grupo D — Administración y operación (Niveles 5-10)",
+      "Grupo E — Servicios generales (Nivel 10)"
+    ],
+    "operaciones": "El grupo de operaciones (el grueso del sector) tiene los niveles: Teleoperador/a, Gestor/a, Coordinador/a, Formador/a y Agente de calidad (quality). Desde 2024 los antiguos niveles 11 y 12 se fundieron en el Nivel 10 (Teleoperador/a/Operador/a) (Art. 40 y DT 2ª)"
+  },
+  "incrementos": { "2020": "0%", "2021": "0%", "2022": "+3,5%", "2023": "+3,5%", "2024": "+3%", "2025": "IPC cerrado del año anterior (mín. 1%, tope 3,5%)", "2026": "IPC + 0,5% = +3,4% (mín. 1%, tope 3,5%)", "articulo": "Art. 45", "nota": "las tablas 2026 (+3,4%) se aprobaron por acta de la comisión paritaria de 19-ene-2026, BOE núm. 58 de 6-mar-2026" },
+  "horasExtras": { "regla": "sobre la hora tipo ordinaria (salario tabla anual / jornada anual): +25% diurnas, +60% nocturnas, +60% festivas diurnas, +80% festivas nocturnas; compensables en descanso (hora por hora las diurnas/nocturnas ordinarias, hora y media el resto)", "articulo": "Art. 51" },
+  "incapacidadTemporal": { "accidenteTrabajo": "complemento hasta el 100% del salario convenio desde el primer día (Art. 70.2)", "enfermedadComun": "días 1-3 el 70% (tope 9 días/año), días 4-20 el 75%, del día 21 en adelante el 100% (hasta un año), siempre con baja médica", "hospitalizacion": "100% del salario convenio desde el primer día de baja, sea cual sea el día de hospitalización", "articulo": "Art. 70" },
+  "subrogacion": { "aplica": true, "nota": "cuando finaliza una campaña o servicio por extinción del contrato mercantil y el cliente vuelve a adjudicarla (a la misma u otra empresa, o la internaliza), se aplica la subrogación del art. 44 ET: la nueva adjudicataria se queda con la plantilla adscrita. Forma la unidad productiva el personal con al menos 6 meses adscrito a la campaña (y quienes fueron contratados en exclusiva para ella). Plazos y documentación detallados en el Art. 20", "articulo": "Art. 20" },
+  "teletrabajo": { "regla": "hasta el 30% de la plantilla puede teletrabajar el 100% de la jornada; además, sistema híbrido con un mínimo de presencialidad de 9 días/trimestre (2 en el mismo mes). Reversible con 20 días de preaviso. La empresa dota los medios y compensa gastos", "compensacionGastos2024": "1,26 €/día (jornada ≥ 30 h) y 0,99 €/día (jornada < 30 h) en 2024, actualizables cada año con las tablas", "articulo": "Art. 19" },
+  "contratacion": { "regla": "desde el 1-ene-2024: al menos el 80% de la plantilla con contrato indefinido ordinario; como máximo el 20% en temporal, fijo-discontinuo o ETT (Art. 13). Cómputo sobre la plantilla media del año anterior (Art. 14)", "fijoDiscontinuo": "para campañas y servicios; con bolsa de llamamiento y baremo (50% antigüedad, 10% formación, 40% desempeño); topes de inactividad de 3 a 6 meses según antigüedad", "articulo": "Arts. 13-14" },
+  "consolidacionJornada": { "regla": "las ampliaciones temporales de jornada se consolidan (voluntariamente para la persona) cuando se alcanzan 110 días con jornada ampliada en el año natural, con efectos desde enero del año siguiente. No cabe ampliar jornada en los primeros 30 días de un nuevo contrato salvo necesidad imprevista justificada", "articulo": "Art. 27 (modificado por acuerdo de 2-oct-2025, BOE 5-nov-2025)" },
+  "periodoPrueba": { "regla": "6 meses el personal técnico titulado, 1 mes el personal teleoperador (cualquier nivel), 15 días el no cualificado y 2 meses el resto", "articulo": "Art. 18" },
+  "cesesVoluntarios": { "regla": "preaviso de baja voluntaria: 2 meses (niveles 1-2), 1 mes (niveles 3-4) y 15 días (resto)", "articulo": "Art. 17" },
+  "disciplinario": { "regla": "faltas leves, graves y muy graves (Arts. 72-74); sanciones de amonestación a despido (Art. 75). Prescripción: leves 10 días, graves 20, muy graves 60 desde que la empresa lo conoce", "articulo": "Arts. 71-75" },
+  "comisionParitaria": { "nombre": "Comisión Paritaria de interpretación y seguimiento", "sede": "Madrid", "extrajudicial": "adhesión al VI ASAC para conflictos colectivos de ámbito estatal (Art. 95)", "articulo": "Arts. 88-91" },
+  "desconexionDigital": { "regla": "derecho a la desconexión digital fuera del tiempo de trabajo; política interna en cada empresa (Art. 28)", "articulo": "Art. 28" },
+  "saludPVD": { "regla": "pausa de 5 minutos por cada hora de trabajo efectivo en pantalla de visualización de datos (PVD), además de los descansos generales del art. 24; reconocimiento médico anual voluntario", "articulo": "Arts. 57 y 60" },
+  "pluses": {
+    "idioma": { "mes2026": 130.95, "nota": "para el personal de operaciones al que se le exija uno o más idiomas extranjeros o lenguas cooficiales fuera de su comunidad; proporcional a la jornada", "articulo": "Art. 48" },
+    "nocturnidad": { "hora2026": 1.96, "nota": "trabajo habitual entre las 22:00 y las 06:00", "articulo": "Art. 50" },
+    "transporte": { "dia2026": 6.56, "nota": "plus extrasalarial por día trabajado para quien inicie o termine la jornada entre las 24:00 y las 06:00; doble si ambos extremos caen en esa franja", "articulo": "Art. 53" },
+    "festivosYDomingos": { "regla": "recargos por nivel por trabajar festivos, festivos especiales (25-dic, 1 y 6-ene y 24/31-dic desde las 20:00) y domingos, además de un día libre retribuido (salvo festivos especiales de fin de año). Si el festivo no se compensa con día libre, se paga con +75% (diurno) o +80% (nocturno)", "articulo": "Art. 49" }
+  },
+  "dietas": { "kilometraje": "0,21 €/km (Art. 54, base 2023, actualizable)", "unaComida": "16,41 € (base 2023)", "dosComidas": "28,91 € (base 2023)", "articulo": "Art. 54" },
+  "rangoSalarial2026": { "min": 17139.58, "max": 41801.45, "unidad": "€/año (salario base de tabla, 14 pagas)", "niveles": 10, "nota": "mínimos de convenio; muchas nóminas suman plus de idiomas, nocturnidad, recargos de festivos/domingos e incentivos/comisiones variables" },
+  "tablaSalarial2026": {
+    "unidad": "€/año (salario base, anexo, +3,4% · BOE-A-2026-5300)",
+    "niveles": [
+      { "nivel": 10, "categoria": "Teleoperador/a · Operador/a · Personal de Oficios Propios · Auxiliar Administrativo", "anio": 17139.58, "destacado": true },
+      { "nivel": 9, "categoria": "Gestor/a Telefónico/a", "anio": 18052.54 },
+      { "nivel": 8, "categoria": "Coordinador/a · Formador/a · Agente de Calidad (Quality) · Oficial/a Administrativo/a · Ayudante de Sistemas", "anio": 18707.27 },
+      { "nivel": 7, "categoria": "Supervisor/a B", "anio": 19689.43 },
+      { "nivel": 6, "categoria": "Supervisor/a A · Técnico/a Administrativo/a · Programador/a Junior", "anio": 20624.78 },
+      { "nivel": 5, "categoria": "Titulados/as Medios · Jefe/a de Administración · Responsable de Servicios · Analista-Programador/a · Programador/a Senior", "anio": 24179.17 },
+      { "nivel": 4, "categoria": "Titulados/as Superiores · Analistas · Técnicos de Sistemas A", "anio": 27443.59 },
+      { "nivel": 3, "categoria": "Jefes/as de Proyecto · Analistas Funcionales", "anio": 32662.92 },
+      { "nivel": 2, "categoria": "Jefes/as de Departamento o Áreas", "anio": 37882.25 },
+      { "nivel": 1, "categoria": "Directivos/as", "anio": 41801.45 }
+    ]
+  },
+  "ambitoFuncional": "empresas cuya actividad es la prestación de servicios de contact center a terceros: contacto (telefónico, telemático o por cualquier medio electrónico) con terceros en entornos multimedia, soporte técnico, gestión de cobros y pagos, back office y procesos administrativos mecanizados, información, promoción y venta de productos o servicios, encuestas, recepción y clasificación de llamadas, y actividades coadyuvantes o conexas (Art. 2)",
+  "firmantes": {
+    "patronales": ["CEX — Asociación de Compañías de Experiencia con Cliente"],
+    "sindicatos": ["CCOO", "FeSMC-UGT"]
+  },
+  "particularidades": [
+    "Es estatal: se aplica en toda España; no hay convenios de empresa o de ámbito inferior (Art. 4)",
+    "El Teleoperador/a (Nivel 10) cobra 17.139,58 €/año en 2026, a unos 46 € del SMI (17.094 €)",
+    "Jornada de 1.764 h/año y 39 h/semana; vacaciones de 32 días naturales (Arts. 22 y 29)",
+    "14 pagas: importe anual = 12 mensualidades + 2 extras (junio y navidad), incluidas en la tabla (Art. 47)",
+    "Tope de temporalidad: 80% de plantilla indefinida como mínimo desde 2024 (Art. 13)",
+    "Teletrabajo regulado: hasta 30% al 100% + sistema híbrido, con compensación de gastos (Art. 19)",
+    "Subrogación por fin de campaña vía art. 44 ET, con 6 meses de adscripción (Art. 20)",
+    "Plus de idiomas de 130,95 €/mes en 2026 (Art. 48); nocturnidad 1,96 €/h; transporte 6,56 €/día",
+    "IT por accidente de trabajo y hospitalización complementada al 100% desde el primer día (Art. 70)",
+    "Consolidación de jornada al alcanzar 110 días ampliados (Art. 27, modificado en 2025)",
+    "Pausa de 5 minutos por hora de trabajo en pantalla (PVD), como tiempo efectivo (Art. 57)",
+    "Vence el 31-dic-2026: después, prórroga tácita y ultraactividad hasta un nuevo convenio (Arts. 5-6)"
+  ],
+  "fuentes": [
+    "III Convenio Colectivo de ámbito estatal del sector de contact center (antes telemarketing), código 99012145012002 — Resolución de 30 de mayo de 2023 de la Dirección General de Trabajo, BOE núm. 137 de 9 de junio de 2023. Firmado el 14-mar-2023 por CEX (patronal) y CCOO y FeSMC-UGT (sindicatos). Fuente del articulado (arts. 1-95, disposiciones y anexos)",
+    "Tablas salariales 2026 (+3,4%) — Acta de la comisión paritaria de 19 de enero de 2026, BOE núm. 58 de 6 de marzo de 2026 (BOE-A-2026-5300). Fuente de los salarios base 2026 por nivel y de los pluses de idioma, nocturnidad y transporte de 2026",
+    "Acuerdo de modificación parcial del art. 27 (consolidación de jornada), de 2 de octubre de 2025, BOE de 5 de noviembre de 2025 (BOE-A-2025-22414)",
+    "Real Decreto 126/2026, SMI 2026 (1.221 €/mes, 17.094 € anuales) — referencia comparativa"
+  ]
+}

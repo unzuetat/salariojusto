@@ -34,7 +34,7 @@ const isNoindex = (f) => /noindex/i.test(read(f));
 const sectorOf = (f) => (f.match(/^convenio-([a-z]+)/) || [])[1] || '?';
 
 // Marco sectorial estatal = ficha SIN ámbito territorial (bare-sector).
-const MARCO_RE = /^convenio-(hosteleria|limpieza-edificios-locales|tecnicos-espectaculos|seguridad-privada)\.html$/;
+const MARCO_RE = /^convenio-(hosteleria|limpieza-edificios-locales|tecnicos-espectaculos|seguridad-privada|contact-center)\.html$/;
 const isMarco = (f) => MARCO_RE.test(f);
 
 const noindex = fichas.filter(isNoindex);
