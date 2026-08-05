@@ -34,7 +34,7 @@ const isNoindex = (f) => /noindex/i.test(read(f));
 const sectorOf = (f) => (f.match(/^convenio-([a-z]+)/) || [])[1] || '?';
 
 // Marco sectorial estatal = ficha SIN ámbito territorial (bare-sector).
-const MARCO_RE = /^convenio-(hosteleria|limpieza-edificios-locales|tecnicos-espectaculos)\.html$/;
+const MARCO_RE = /^convenio-(hosteleria|limpieza-edificios-locales|tecnicos-espectaculos|seguridad-privada)\.html$/;
 const isMarco = (f) => MARCO_RE.test(f);
 
 const noindex = fichas.filter(isNoindex);
@@ -111,6 +111,9 @@ const TOTAL_CHECKS = [
   ['convenios.html', /content="(\d+) convenios colectivos con tablas/, 'total', 'hub · meta description'],
   ['mapa-del-sitio.html', /(\d+) convenios colectivos auditados/, 'total', 'mapa · meta'],
   ['sobre.html', /(\d+) fichas de convenios provinciales/, 'total', 'sobre · autoría'],
+  ['sobre.html', /A las (\d+) fichas provinciales se suman/, 'provinciales', 'sobre · nota cobertura (provinciales)'],
+  ['sobre.html', /se suman (\d+) marcos sectoriales/, 'marcos', 'sobre · nota cobertura (marcos)'],
+  ['sobre.html', /(\d+) fichas en total/, 'total', 'sobre · nota cobertura (total)'],
   ['llms.txt', /(\d+) convenios indexables/, 'indexables', 'llms.txt · cobertura'],
 ];
 for (const [file, rx, kind, label] of TOTAL_CHECKS) {

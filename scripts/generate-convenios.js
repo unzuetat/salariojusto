@@ -774,6 +774,7 @@ function main() {
     { sector: 'Metal', provincia: 'Bizkaia', href: '/convenio-metal-bizkaia.html', nombreCorto: 'Metal — Bizkaia', vigencia: 'Tablas 2026 · Mínimo 22.034 €/año · Oficial 1ª 23.509 €' },
     { sector: 'Técnicos de Espectáculos', ambito: 'Sector sin convenio propio', provincia: null, href: '/convenio-tecnicos-espectaculos.html', nombreCorto: 'Técnicos de Espectáculos — sin regulación', vigencia: 'Sector sin convenio propio · huelga 2026' },
     { sector: 'Construcción', ambito: 'Estatal', provincia: null, href: '/construccion-estatal-suelo-salarial.html', nombreCorto: 'Construcción — Suelo salarial estatal', vigencia: '1 enero 2022 – 31 diciembre 2026' },
+    { sector: 'Seguridad Privada', ambito: 'Estatal', provincia: null, href: '/convenio-seguridad-privada.html', nombreCorto: 'Seguridad Privada — Estatal', vigencia: 'Convenio 2026-2030 (BOE núm. 95) · Vigilante 20.781 € · 15 pagas · +3% a +4,5%' },
   ];
   for (const m of MANUAL_CONVENIOS) generated.push(m);
 
