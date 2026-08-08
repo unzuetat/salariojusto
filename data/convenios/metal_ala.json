@@ -1,0 +1,124 @@
+{
+  "nombre": "Convenio Colectivo para la Industria Siderometalúrgica de Álava",
+  "botha": "BOTHA nº 147 · 23 de diciembre de 2022 (texto 2022-2025) · corrección de errores en BOTHA nº 13 · 1 de febrero de 2023 · tablas salariales 2026 en BOTHA nº 18 · 11 de febrero de 2026 (acta de la comisión paritaria de 26 de enero de 2026)",
+  "codigo": "01001185011981",
+  "skipHtmlGeneration": true,
+  "vigencia": "01/01/2022 – 31/12/2025, vencido y en ultraactividad; denunciado automáticamente el 1 de noviembre de 2025, con mantenimiento de todo su contenido normativo hasta la firma de un nuevo convenio (Art. 4)",
+  "regimenFiscal": "IRPF foral de Álava (Hacienda Foral de la Diputación Foral de Álava); País Vasco, NO régimen común",
+  "pagas": "12 mensualidades + 2 gratificaciones extraordinarias (julio y Navidad) sobre las cuantías de las tablas salariales anexas, incrementadas con la antigüedad de 30 días; prorrateables por semestres naturales (Art. 20)",
+  "jornadaAnual": 1727,
+  "urlBotha": "https://www.araba.eus/botha/Boletines/2026/018/2026_018_00315_C.pdf",
+  "notaEditorial": "<strong>Qué es.</strong> El convenio de la industria siderometalúrgica de Álava, código 01001185011981, con vigencia 2022-2025. Obliga a todas las empresas y personas trabajadoras del metal industrial del Territorio Histórico de Álava: siderurgia, metalurgia, fabricación, montaje, reparación y mantenimiento. No cubre el comercio del metal, que tiene convenio propio. Firmado por SEA Empresas Alavesas y los sindicatos UGT, CCOO y LAB; publicado en el BOTHA nº 147 (23-dic-2022).<br><br><strong>Estructura.</strong> Salario por categorías profesionales agrupadas en 8 grupos (personal titulado, técnico de taller, técnico de oficina, de organización, de laboratorio, administrativo, subalterno y grupo obrero). Cada categoría tiene un salario bruto anual que ya incluye salario base, plus de actividad, vacaciones y las dos pagas extraordinarias. De 20.551,17 € (peón/a y buena parte del personal subalterno) a 31.276,97 € (ingeniero/a-arquitecto/a) en 2026. Encima se suman quinquenios, nocturnidad y el plus de penosidad, toxicidad y peligrosidad.<br><br><strong>Actualización.</strong> El convenio venció el 31 de diciembre de 2025 y está en ultraactividad. Las tablas 2026 son el cierre del diferencial de IPC del art. 24: como la suma de los IPC de 2022-2025 (14,5%) superó en 0,5 puntos los incrementos fijos pactados (14%), las tablas de 2025 se han actualizado un +0,5% con efectos desde el 1 de enero de 2026. Verificado contra el BOTHA nº 18 (11-feb-2026).<br><br><strong>Lo singular.</strong> Convenio vencido en ultraactividad, a la espera de negociar uno nuevo; horas extraordinarias suprimidas salvo fuerza mayor; bolsín de 100 h/año de flexibilidad; 100% del salario en baja por accidente de trabajo; póliza obligatoria de 21.000 €/27.000 € por muerte o invalidez; premio de jubilación anticipada de hasta 8 mensualidades; y fomento del euskera. Régimen fiscal foral de Álava.",
+  "jornada": { "anual": 1727, "evolucion": "1.735 h en 2022; 1.731 h en 2023; 1.727 h en 2024, 2025 y (en ultraactividad) 2026", "articulo": "Art. 9", "flexibilidad": "Bolsín de hasta 100 horas al año por persona (Art. 10), con preaviso de 5 días, para picos o valles de producción; máximo 8 sábados al año, con plus del 60% del salario del día o descanso equivalente; compensable en tiempo libre dentro de los 12 meses siguientes." },
+  "vacaciones": { "diasNaturales": 30, "retribucion": "importes consignados para cada categoría en las tablas salariales anexas, incrementados en su caso con los pluses de antigüedad, toxicidad, penosidad y peligrosidad", "articulo": "Art. 11", "ampliacion": "2 días naturales más si la empresa cambia las fechas de julio/agosto con más de 30 días de aviso" },
+  "pagasExtras": { "numero": 2, "nombres": ["Julio", "Navidad"], "cuantia": "cuantías de las tablas salariales anexas, incrementadas con la antigüedad correspondiente a 30 días", "prorrateo": "se devengan por semestres naturales; el personal que ingresa o cesa la percibe en proporción al tiempo trabajado", "articulo": "Art. 20" },
+  "antiguedad": { "tipo": "quinquenios", "base": "cantidades brutas al día y con carácter fijo, consignadas en las tablas; de 1 a 9 quinquenios", "cuantia2026Dia": [1.30, 2.61, 3.91, 5.21, 6.52, 7.82, 9.13, 10.42, 11.72], "computo": "desde el mes de su vencimiento; se computa el período de aprendizaje y los contratos formativos/temporales si en los 6 meses siguientes se formaliza contrato indefinido; no computa la excedencia voluntaria", "articulo": "Art. 16" },
+  "nocturnidad": { "base": "bonificación fija por día, por categoría (cantidad bruta al día)", "cuantia2026Dia": { "Peón": 6.31, "Especialista": 6.31, "Oficial 3ª": 6.43, "Oficial 2ª": 6.50, "Oficial 1ª": 6.85 }, "articulo": "Art. 18" },
+  "toxicosPenososPeligrosos": { "base": "bonificación bruta al día por concurrencia de 1, 2 o las 3 circunstancias (penosidad, toxicidad, peligrosidad); se reduce a la mitad si el trabajo excepcional dura entre 60 minutos y media jornada", "cuantia2026Dia": { "Peón": [5.66, 7.10, 8.47], "Especialista": [5.70, 7.26, 8.62], "Oficial 3ª": [5.93, 7.30, 8.76], "Oficial 2ª": [5.98, 7.37, 8.90], "Oficial 1ª": [6.17, 7.57, 9.21] }, "articulo": "Art. 17" },
+  "horasExtras": { "regla": "suprimida la posibilidad de realizar horas extraordinarias, salvo fuerza mayor o necesidades imprevisibles imprescindibles para el normal funcionamiento de la empresa", "compensacion": "1 hora y 45 minutos de descanso por cada hora extraordinaria; solo compensación económica en fuerza mayor o cuando el descanso sea imposible, con recargo del 40% en día laborable y del 65% en domingo o festivo", "articulo": "Art. 12" },
+  "incrementos": { "2026": "+0,5% sobre las tablas salariales de 2025, con efectos desde el 1 de enero de 2026 (Art. 24): la suma de los IPC de 2022-2025 arrojó un diferencial de 0,5 puntos por encima del 14% de incrementos fijos pactados", "articulo": "Art. 24", "revisionIPC": "los incrementos pactados fueron +6,5% en 2022 (sobre 2017 actualizado), +3% en 2023, +2,5% en 2024 y +2% en 2025; la cláusula de garantía del art. 24 comparaba la suma de esos incrementos (14%) con la suma de los IPC (14,5%), aplicando el diferencial en 2026" },
+  "bolsinHoras": { "maximo": 100, "regla": "hasta 100 horas al año por persona dentro de la jornada ordinaria, con preaviso de 5 días; máximo 8 sábados al año; plus del 60% del salario del día trabajado en sábado o descanso equivalente; compensable en tiempo libre en los 12 meses siguientes; sin incrementar la jornada anual", "articulo": "Art. 10" },
+  "incapacidadTemporal": { "accidenteTrabajo": "la empresa garantiza el 100% de las retribuciones durante toda la incapacidad temporal por accidente de trabajo o enfermedad profesional (Art. 35)", "enfermedadComun": "complemento de hasta el 60% de la base reguladora durante los tres primeros días de cada año en situación de incapacidad temporal por enfermedad común o accidente no laboral (Art. 36)" },
+  "seguroAccidentes": { "muerteAT": 21000, "invalidezAT": 27000, "nota": "las empresas deben formalizar póliza de seguro que garantice 21.000 € por muerte y 27.000 € por incapacidad permanente total, absoluta o gran invalidez derivadas de accidente de trabajo o enfermedad profesional (Art. 34)" },
+  "premioJubilacion": { "regla": "premio de jubilación anticipada tras un mínimo de 15 años en la empresa: 8 mensualidades si se jubila 4 años antes, 6 si 3 años antes, 4 si 2 años antes y 2 si 1 año antes de la edad reglamentaria (Art. 32)" },
+  "otrosConceptos2026": { "plusDistanciaKm": 0.12, "usoVehiculoParticularKm": 0.39, "dietaCompleta": 61.73, "desayuno": 2.20, "comida": 20.61, "cena": 14.50, "pernoctacionSuplemento": 6.00, "articulo": "Arts. 22, 25 y 26", "nota": "viajes fuera del territorio nacional: +10% sobre las dietas" },
+  "subrogacion": { "aplica": true, "nota": "solo a la finalización de una contrata de mantenimiento general o de instalación y mantenimiento de fibra óptica y telefonía: el personal que realizaba esos trabajos de forma permanente, continuada y exclusiva para la principal pasa a la nueva adjudicataria, con un mínimo de 6 meses de adscripción (Art. 50). No es un convenio de servicios con subrogación general" },
+  "comisionParitaria": { "nombre": "Comisión Paritaria del Convenio", "composicion": "seis representantes de las organizaciones sindicales firmantes y seis de SEA Empresas Alavesas; sede en la delegación territorial de Álava del PRECO", "funciones": "interpretación, seguimiento del cumplimiento, mediación y resolución de solicitudes de inaplicación (Arts. 55 y 56)" },
+  "marcoSupletorio": "Acuerdo Interprofesional sobre la estructura de la negociación colectiva en el ámbito de la CAPV (BOPV 3 de marzo de 2017): el convenio provincial tiene prioridad aplicativa frente a convenios de ámbito estatal",
+  "rangoSalarial2026": { "min": 20551.17, "max": 31276.97, "unidad": "€/año (salario bruto anual de tablas: base + plus de actividad + vacaciones + 2 pagas extra)", "grupos": 8, "categorias": 54, "nota": "salario bruto de tablas; encima se suman quinquenios (Art. 16), nocturnidad (Art. 18) y plus de penosidad/toxicidad/peligrosidad (Art. 17) cuando corresponden. Todas las categorías superan el SMI 2026 (17.094 €)" },
+  "tablaSalarial2026": {
+    "grupo1": [
+      { "categoria": "Ingeniero/a-Arquitecto/a", "rba": 31276.97 },
+      { "categoria": "Perito/a-Aparejador/a", "rba": 29405.63 },
+      { "categoria": "Graduado/a Social", "rba": 26511.62 },
+      { "categoria": "Maestro/a industrial", "rba": 26464.29 },
+      { "categoria": "Asistente Social", "rba": 25251.79 },
+      { "categoria": "Practicante ATS", "rba": 25251.79 }
+    ],
+    "grupo2": [
+      { "categoria": "Jefe/a de taller", "rba": 26242.21 },
+      { "categoria": "Maestro/a de taller", "rba": 25753.54 },
+      { "categoria": "Contramaestre", "rba": 25357.12 },
+      { "categoria": "Encargado/a", "rba": 25141.51 },
+      { "categoria": "Capataz", "rba": 23331.09 }
+    ],
+    "grupo3": [
+      { "categoria": "Proyectista", "rba": 25330.60 },
+      { "categoria": "Dibujante", "rba": 25330.60 },
+      { "categoria": "Delineante 1ª", "rba": 24966.88 },
+      { "categoria": "Práctico/a-Fotógrafo/a", "rba": 24966.88 },
+      { "categoria": "Fotógrafo/a", "rba": 24735.79 },
+      { "categoria": "Delineante 2ª", "rba": 24535.42 },
+      { "categoria": "Calcador/a", "rba": 22221.23 },
+      { "categoria": "Auxiliar-Aspirante", "rba": 20551.17 }
+    ],
+    "grupo4": [
+      { "categoria": "Jefe/a de servicio organización 1ª", "rba": 26242.21 },
+      { "categoria": "Jefe/a de servicio organización 2ª", "rba": 25330.60 },
+      { "categoria": "Técnico/a organización 1ª", "rba": 24966.88 },
+      { "categoria": "Técnico/a organización 2ª", "rba": 24535.42 },
+      { "categoria": "Auxiliar/Aspirante (más de 18 años)", "rba": 20551.17 }
+    ],
+    "grupo5": [
+      { "categoria": "Jefe/a de laboratorio", "rba": 26242.21 },
+      { "categoria": "Jefe/a de sección", "rba": 25330.60 },
+      { "categoria": "Analista 1ª", "rba": 24966.88 },
+      { "categoria": "Analista 2ª", "rba": 24535.42 },
+      { "categoria": "Analista/Aspirante (más de 18 años)", "rba": 20551.17 }
+    ],
+    "grupo6": [
+      { "categoria": "Jefe/a administrativo/a de 1ª", "rba": 26242.21 },
+      { "categoria": "Jefe/a administrativo/a de 2ª", "rba": 25330.60 },
+      { "categoria": "Oficial administrativo/a de 1ª", "rba": 24876.98 },
+      { "categoria": "Oficial administrativo/a de 2ª", "rba": 22001.84 },
+      { "categoria": "Viajante (plena dedicación)", "rba": 21372.12 },
+      { "categoria": "Auxiliar/Aspirante (más de 18 años)", "rba": 20551.17 }
+    ],
+    "grupo7": [
+      { "categoria": "Cabo de guardas", "rba": 22330.58 },
+      { "categoria": "Chófer camión", "rba": 22327.21 },
+      { "categoria": "Chófer turismo", "rba": 22327.21 },
+      { "categoria": "Telefonista", "rba": 20551.17 },
+      { "categoria": "Listero/a", "rba": 20551.17 },
+      { "categoria": "Almacenero/a", "rba": 20551.17 },
+      { "categoria": "Pesador/a-Basculero/a", "rba": 20551.17 },
+      { "categoria": "Guarda jurado/a", "rba": 20551.17 },
+      { "categoria": "Vigilante", "rba": 20551.17 },
+      { "categoria": "Ordenanza-Enfermero/a", "rba": 20551.17 },
+      { "categoria": "Portero/a", "rba": 20551.17 }
+    ],
+    "grupo8": [
+      { "categoria": "Oficial 1ª", "rba": 24577.88 },
+      { "categoria": "Profesional siderúrgico/a 1ª", "rba": 22499.47 },
+      { "categoria": "Oficial 2ª", "rba": 22499.47 },
+      { "categoria": "Profesional siderúrgico/a 2ª", "rba": 20976.38 },
+      { "categoria": "Profesional siderúrgico/a 3ª", "rba": 20976.38 },
+      { "categoria": "Oficial 3ª", "rba": 20976.38 },
+      { "categoria": "Especialista", "rba": 20976.38 },
+      { "categoria": "Peón/a", "rba": 20551.17 }
+    ]
+  },
+  "ambitoFuncional": "todas las empresas y personas trabajadoras de la industria siderometalúrgica de Álava: siderurgia y metalurgia; fabricación, transformación y reparación de productos metálicos; talleres, calderería, montaje e instalación; mantenimiento industrial; y actividades de instalación y mantenimiento de fibra óptica y telefonía. Quedan exceptuadas las empresas con convenio propio de empresa o centro y las de actividades mixtas regidas por normas de otros sectores",
+  "firmantes": {
+    "patronales": ["SEA Empresas Alavesas — Arabako Enpresak"],
+    "sindicatos": ["UGT", "CCOO", "LAB"]
+  },
+  "particularidades": [
+    "Convenio 2022-2025 vencido el 31-dic-2025 y en ultraactividad: todo su contenido normativo se mantiene hasta firmar uno nuevo (Art. 4)",
+    "Tablas 2026 = cierre del +0,5% del art. 24 (diferencial IPC acumulado 14,5% frente a incrementos fijos 14%), con efectos desde 1-ene-2026",
+    "Salario por 8 grupos y 54 categorías, de 20.551,17 € (peón/a) a 31.276,97 € (ingeniero/a-arquitecto/a); el salario bruto de tablas ya incluye vacaciones y 2 pagas extra",
+    "Horas extraordinarias suprimidas salvo fuerza mayor; compensación 1 h 45 min por hora, o recargo 40%/65% (Art. 12)",
+    "Bolsín de hasta 100 h/año de flexibilidad, máx. 8 sábados, con plus del 60% (Art. 10)",
+    "Quinquenios de antigüedad (cantidad fija bruta al día, de 1 a 9 quinquenios); nocturnidad y plus tóxico/penoso/peligroso por día (Arts. 16, 17 y 18)",
+    "100% del salario en baja por accidente de trabajo (Art. 35) y complemento del 60% los 3 primeros días por enfermedad común (Art. 36)",
+    "Póliza obligatoria de 21.000 € por muerte y 27.000 € por invalidez por accidente laboral (Art. 34)",
+    "Premio de jubilación anticipada de hasta 8 mensualidades tras 15 años en la empresa (Art. 32) y fomento del euskera (Art. 59)",
+    "Subrogación solo en contratas de mantenimiento y de fibra óptica/telefonía, con 6 meses de adscripción (Art. 50)",
+    "Régimen fiscal foral de Álava (Hacienda Foral), no régimen común"
+  ],
+  "fuentes": [
+    "Convenio Colectivo para la Industria Siderometalúrgica de Álava 2022-2025, BOTHA nº 147 (23-dic-2022), código 01001185011981 — SEA Empresas Alavesas y los sindicatos UGT, CCOO y LAB. Corrección de errores en el BOTHA nº 13 (1-feb-2023). Fuente del articulado (ámbito, jornada, bolsín, vacaciones, licencias, pluses, antigüedad, horas extras, subrogación, prestaciones, comisión paritaria)",
+    "Tablas salariales 2026 (+0,5%), acta de la comisión paritaria de 26 de enero de 2026, Resolución de 28 de enero de 2026, publicadas en el BOTHA nº 18 (11-feb-2026) — 54 categorías por salario bruto anual, plus de antigüedad, nocturnidad, penosidad/toxicidad/peligrosidad, distancia (0,12 €/km), dietas (61,73 €) y uso de vehículo (0,39 €/km)",
+    "Real Decreto 126/2026, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia comparativa"
+  ]
+}
