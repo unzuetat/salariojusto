@@ -1,0 +1,153 @@
+{
+  "nombre": "Convenio Colectivo para las Industrias Siderometalúrgicas de la provincia de Sevilla",
+  "bop": "BOP Sevilla · texto articulado 2024-2026 (Resolución de 31-oct-2024, expte. 41/01/0292/2024, firmado el 21-oct-2024) · tablas salariales 2026 en BOP nº 26 · 9 de febrero de 2026 (acta de la comisión paritaria de 21-ene-2026, +3%)",
+  "codigo": "41002445011982",
+  "skipHtmlGeneration": true,
+  "vigencia": "01/01/2024 – 31/12/2026, vigente; prórroga tácita por años sucesivos si no media denuncia en los 90 días anteriores al vencimiento (Art. 2)",
+  "regimenFiscal": "IRPF de régimen común (Estado + tramo autonómico de Andalucía)",
+  "pagas": "12 mensualidades + 2 gratificaciones extraordinarias (julio y Navidad); cada paga = 30 × (columnas A+B+C del Anexo II) + antigüedad; prorrateables por semestres (Art. 14.4)",
+  "jornadaAnual": 1759,
+  "urlBop": "https://bopsevilla.dipusevilla.es/publica/buscador-anuncios/anuncio/Acuerdo-de-la-Comision-Paritaria-del-Convenio-Colectivo-del-sector-de-industrias-siderometalurgicas-de-Sevilla-actualizando-conceptos-salariales-para-2026/",
+  "notaEditorial": "<strong>Qué es.</strong> El convenio de las industrias siderometalúrgicas de la provincia de Sevilla, código 41002445011982, con vigencia 2024-2026. Firmado por la patronal FEDEME y los sindicatos CCOO y UGT. Cubre el corazón industrial de Sevilla: siderurgia, automoción, naval y, muy señaladamente, el <strong>polo aeroespacial</strong> (montaje del Airbus A400M en San Pablo, Aernnova, Alestis y la industria auxiliar), además de energías renovables, ferroviario, telecomunicaciones e ITV. No cubre la venta en proceso exclusivo de comercialización.<br><br><strong>Estructura.</strong> A diferencia de otros metales, aquí el salario se fija <strong>por día</strong>, no por mes ni por año, en tres columnas del Anexo II: <strong>A</strong> (salario base), <strong>B</strong> (plus de asistencia) y <strong>C</strong> (plus de productividad o carencia de incentivos). Cada categoría tiene su valor diario; el total por día trabajado va de <strong>52,86 €</strong> (personal de limpieza) a <strong>102,23 €</strong> (ingeniería). El personal obrero cobra por día y el técnico/administrativo por mes.<br><br><strong>Actualización.</strong> Subida del <strong>+3%</strong> en 2026 (art. 14.1), con efectos desde el 1 de enero, verificada contra las tablas del BOP nº 26 (9-feb-2026). Cláusula de garantía: si el IPC de 2026 supera el 3%, se aplicará un incremento adicional de hasta el 1,75% en 2027.<br><br><strong>Lo singular.</strong> Salario diario en columnas A/B/C sobre 1.759 h/año; 2 pagas extra de 30 días sobre A+B+C; horas extraordinarias habituales suprimidas (máx. 80/año); <strong>100% del salario en baja por accidente de trabajo desde el primer día</strong> (art. 26) y en hospitalización por cualquier causa; póliza de 15.000 €/7.500 €; plus de transporte de 4,69 €/día; y ascensos solo por concurso-oposición. IRPF común de Andalucía.",
+  "jornada": { "anual": 1759, "evolucion": "1.759 h en 2024, 2025 y 2026 (estable)", "articulo": "Art. 13", "diasLaborables": "229 días en empresas de lunes a viernes; 275 días en empresas de lunes a sábado (ambas, 1.759 h/año)", "flexibilidad": "Bolsa horaria de 220 horas anuales de distribución irregular a criterio de la empresa, con preaviso de 5 días y máximo de 10 horas diarias (Art. 13). Plus de bocadillo de 2,38 €/día en jornada continuada." },
+  "vacaciones": { "diasNaturales": 30, "diasLaborables": "21 laborables en empresas de lunes a viernes; 25 en empresas de lunes a sábado", "retribucion": "media de los conceptos salariales regulares de los 90 días trabajados anteriores, excluidas dietas, plus de transporte y horas extraordinarias", "articulo": "Art. 16", "periodo": "preferentemente entre junio y septiembre" },
+  "pagasExtras": { "numero": 2, "nombres": ["Julio", "Navidad"], "cuantia": "30 × (columnas A + B + C del Anexo II) cada una, más la antigüedad en su caso", "prorrateo": "se devengan por semestres naturales; el personal que ingresa o cesa la percibe en proporción", "articulo": "Art. 14.4" },
+  "estructuraColumnas": { "A": "Salario Base (salario mínimo de convenio; se devenga todos los días naturales del año, Art. 14.1)", "B": "Plus de Asistencia (se devenga todos los días excepto domingos y festivos, y también los sábados, Art. 14.2)", "C": "Plus de productividad o carencia de incentivos (por jornada prestada en trabajos no medidos; comprende el 25% de la columna A como mínimo garantizado, Art. 14.3)" },
+  "antiguedad": { "tipo": "quinquenios", "maximo": 2, "base": "importe del Anexo VI por cada quinquenio (en €/día para oficio y obrero; en €/mes para el resto), con tope de 2 quinquenios", "articulo": "Art. 14.5" },
+  "nocturnidad": { "porcentaje": 25, "base": "25% del salario base (columna A)", "articulo": "Art. 14.12" },
+  "toxicosPenososPeligrosos": { "base": "20% del salario base; 25% si concurren dos circunstancias y 30% si concurren las tres (penosidad, toxicidad, peligrosidad)", "articulo": "Art. 14.7" },
+  "turnicidad": { "tripleTurno2026": 3.28, "dobleTurno2026": 2.38, "base": "por día efectivamente trabajado", "articulo": "Art. 14.11" },
+  "horasExtras": { "regla": "las horas extraordinarias habituales quedan suprimidas; máximo 80 al año; compensables por descanso a razón de 1 hora y 30 minutos por cada hora extra", "tabla": "precio por categoría en el Anexo XI (de 14,63 € a 28,33 € en 2026)", "articulo": "Art. 14.6" },
+  "incrementos": { "2026": "+3% sobre las tablas de 2025, con efectos desde el 1 de enero de 2026 (art. 14.1)", "articulo": "Art. 14.1", "revisionIPC": "cláusula de garantía: si el IPC de 2026 supera el 3%, se aplicará un incremento adicional de hasta el 1,75% con efectos 1-ene-2027" },
+  "incapacidadTemporal": { "accidenteTrabajo": "complemento hasta el 100% de la base reguladora desde el primer día de baja por accidente de trabajo y enfermedad profesional (Art. 26)", "hospitalizacion": "complemento hasta el 100% de la base reguladora mientras dure la hospitalización, sea cual sea la causa (incluida enfermedad común)", "riesgoEmbarazo": "complemento hasta el 100% del salario mientras dure la suspensión por riesgo durante el embarazo" },
+  "seguroAccidentes": { "muerteInvalidezAT": 15000, "invalidezTotal": 7500, "muerteNatural": 7500, "nota": "póliza obligatoria: 15.000 € por muerte, gran invalidez o incapacidad permanente absoluta (accidente de trabajo, enfermedad profesional o accidente no laboral); 7.500 € por incapacidad permanente total; 7.500 € por muerte natural (Art. 19)" },
+  "otrosConceptos2026": { "plusTransporteDia": 4.69, "plusFestivosDomingos": 42.44, "plusDiscapacidadMes": 24.91, "plusHospital": 3.06, "plusBocadilloDia": 2.38, "premioAbsentismoMes": 32.31, "dietaCompleta": 59.67, "mediaDieta": 14.83, "dietaExtranjero": 68.62, "canasto": 9.76, "dietaMontajeCompleta": 56.47, "dietaMontajeMedia": 12.28, "articulo": "Arts. 14 y 15", "nota": "cuantías 2026; el plus de transporte y el de bocadillo se abonan por día efectivo de trabajo" },
+  "subrogacion": { "aplica": true, "nota": "solo a la finalización de una contrata de mantenimiento suscrita con la Administración Pública (12 meses prestando el servicio, 6 meses de adscripción), y de contratas de mantenimiento privadas en tendidos eléctricos y en instalaciones de telecomunicaciones y telefonía. En el resto de sectores, preferencia de ingreso del 50% de la plantilla (Art. 29). No es un convenio de servicios con subrogación general" },
+  "comisionParitaria": { "nombre": "Comisión Paritaria del Convenio", "composicion": "cuatro representantes de los sindicatos firmantes y cuatro de FEDEME; presidencia ofrecida a la Delegación Territorial de Empleo; se reúne al menos una vez al mes", "funciones": "interpretación, vigilancia, mediación y arbitraje; conflictos colectivos e individuales al SERCLA (Art. 27)" },
+  "marcoSupletorio": "IV Convenio Colectivo Estatal de la Industria, la Tecnología y los Servicios del Sector del Metal (CEM, BOE 12-ene-2022): materias reservadas al ámbito estatal (período de prueba, modalidades de contratación, clasificación profesional, jornada máxima, régimen disciplinario, movilidad geográfica y prevención de riesgos)",
+  "rangoSalarial2026": { "minDiaTotal": 52.86, "maxDiaTotal": 102.23, "unidad": "€/día (suma de columnas A+B+C del Anexo II; el salario anual depende del calendario de cada empresa)", "grupos": 8, "categorias": 76, "nota": "salario por día en 3 columnas; no hay una única cifra anual porque los días trabajados varían por calendario (L-V 229 / L-S 275, ambos 1.759 h). Referencias por día trabajado: peón/a 54,69 €, oficial/a de 1ª 59,75 €, ingeniería 102,23 €" },
+  "tablaSalarial2026": {
+    "profesionalesOficio": [
+      { "categoria": "Oficial/a de 1ª", "a": 40.27, "b": 7.86, "c": 11.62 },
+      { "categoria": "Oficial/a de 1ª Verificador/a", "a": 40.27, "b": 7.86, "c": 11.62 },
+      { "categoria": "Oficial/a de 2ª", "a": 39.71, "b": 7.79, "c": 11.20 },
+      { "categoria": "Oficial/a de 3ª", "a": 37.56, "b": 7.39, "c": 10.79 }
+    ],
+    "personalObrero": [
+      { "categoria": "Especialista", "a": 37.52, "b": 7.52, "c": 10.55 },
+      { "categoria": "Mozo/a especializado/a de almacén", "a": 36.19, "b": 7.27, "c": 10.18 },
+      { "categoria": "Peón/a Ordinario/a", "a": 36.81, "b": 7.35, "c": 10.53 }
+    ],
+    "personalSubalterno": [
+      { "categoria": "Chófer de camión", "a": 39.81, "b": 7.94, "c": 11.70 },
+      { "categoria": "Chófer de turismo", "a": 38.20, "b": 7.49, "c": 10.76 },
+      { "categoria": "Almacenero/a", "a": 38.20, "b": 7.39, "c": 10.87 },
+      { "categoria": "Chófer de motocicleta", "a": 36.95, "b": 7.15, "c": 10.52 },
+      { "categoria": "Cabo de guardas", "a": 38.95, "b": 7.77, "c": 11.47 },
+      { "categoria": "Conserje", "a": 38.20, "b": 7.49, "c": 10.76 },
+      { "categoria": "Pesador/a o Basculero/a", "a": 36.21, "b": 7.12, "c": 10.40 },
+      { "categoria": "Guarda Jurado/a", "a": 36.21, "b": 7.12, "c": 10.40 },
+      { "categoria": "Dependiente/a auxiliar de economato", "a": 36.21, "b": 7.12, "c": 10.40 },
+      { "categoria": "Ordenanza, Portero/a", "a": 36.19, "b": 7.18, "c": 10.18 },
+      { "categoria": "Enfermero/a, vigilante", "a": 36.19, "b": 7.18, "c": 10.18 },
+      { "categoria": "Operador/a de más de 50 teléfonos", "a": 36.21, "b": 7.12, "c": 10.40 },
+      { "categoria": "Listero/a", "a": 38.20, "b": 7.49, "c": 10.76 },
+      { "categoria": "Dependiente/a principal de economato", "a": 38.20, "b": 7.49, "c": 10.76 },
+      { "categoria": "Operador/a de hasta 50 teléfonos", "a": 36.19, "b": 7.18, "c": 10.18 },
+      { "categoria": "Personal de limpieza (jornada completa)", "a": 35.57, "b": 7.11, "c": 10.18 }
+    ],
+    "personalAdministrativo": [
+      { "categoria": "Jefe/a de 1ª", "a": 53.71, "b": 10.53, "c": 15.31 },
+      { "categoria": "Jefe/a de 2ª", "a": 49.62, "b": 9.75, "c": 14.12 },
+      { "categoria": "Viajante", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Oficial/a de 1ª", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Oficial/a de 2ª", "a": 41.18, "b": 8.23, "c": 12.02 },
+      { "categoria": "Auxiliar Administrativo/a", "a": 38.10, "b": 7.36, "c": 10.85 }
+    ],
+    "tecnicosTitulados": [
+      { "categoria": "Ingenieros/as, Arquitectos/as y Licenciados/as", "a": 69.07, "b": 13.64, "c": 19.52 },
+      { "categoria": "Peritos/as y Aparejadores/as con responsabilidad", "a": 67.32, "b": 13.13, "c": 19.23 },
+      { "categoria": "Ayudantes Técnicos/as Sanitarios/as", "a": 64.62, "b": 12.65, "c": 18.34 },
+      { "categoria": "Peritos/as y Aparejadores/as sin responsabilidad", "a": 64.62, "b": 12.65, "c": 18.34 },
+      { "categoria": "Capitanes/as y 1º Maquinistas de 400 T", "a": 60.01, "b": 11.82, "c": 17.06 },
+      { "categoria": "Capitanes/as y 1º Maquinistas de menos de 400 T", "a": 53.71, "b": 10.53, "c": 15.27 },
+      { "categoria": "Graduados/as Sociales", "a": 53.71, "b": 10.53, "c": 15.20 },
+      { "categoria": "Maestro/a Industrial", "a": 48.17, "b": 9.49, "c": 13.68 },
+      { "categoria": "Pilotos y 2º Maquinistas", "a": 45.28, "b": 8.89, "c": 12.93 },
+      { "categoria": "Maestro/a de Primera Enseñanza", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Practicantes", "a": 42.93, "b": 8.48, "c": 12.30 },
+      { "categoria": "Maestro/a de Enseñanza Elemental", "a": 41.06, "b": 8.21, "c": 11.98 }
+    ],
+    "tecnicosTaller": [
+      { "categoria": "Jefe/a de Taller", "a": 53.71, "b": 10.53, "c": 15.27 },
+      { "categoria": "Contramaestre", "a": 45.28, "b": 8.89, "c": 12.93 },
+      { "categoria": "Maestro/a de Taller", "a": 45.28, "b": 8.89, "c": 12.93 },
+      { "categoria": "Maestro/a 2º de Taller", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Encargado/a", "a": 41.46, "b": 8.27, "c": 12.10 },
+      { "categoria": "Capataz Especialista", "a": 39.22, "b": 7.77, "c": 11.17 },
+      { "categoria": "Capataz de Peones/as", "a": 36.95, "b": 7.15, "c": 10.52 }
+    ],
+    "tecnicosOficina": [
+      { "categoria": "Delineante Proyectista", "a": 50.93, "b": 10.03, "c": 14.40 },
+      { "categoria": "Dibujante Proyectista", "a": 50.93, "b": 10.03, "c": 14.40 },
+      { "categoria": "Delineante de 1ª", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Topógrafo/a", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Fotógrafo/a", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Delineante de 2ª", "a": 41.06, "b": 8.21, "c": 11.98 },
+      { "categoria": "Archivero/a-Bibliotecario/a", "a": 41.06, "b": 8.21, "c": 11.98 },
+      { "categoria": "Auxiliar de delineación", "a": 37.88, "b": 7.31, "c": 10.76 },
+      { "categoria": "Calcador/a", "a": 36.95, "b": 7.15, "c": 10.52 },
+      { "categoria": "Reproductor/a fotográfico/a", "a": 36.95, "b": 7.15, "c": 10.52 },
+      { "categoria": "Reproductor/a de planos", "a": 36.19, "b": 7.18, "c": 10.18 }
+    ],
+    "tecnicosLaboratorio": [
+      { "categoria": "Jefe/a de laboratorio", "a": 55.70, "b": 10.87, "c": 15.98 },
+      { "categoria": "Jefe/a de Sección", "a": 49.59, "b": 9.75, "c": 14.12 },
+      { "categoria": "Analista de 1ª", "a": 43.60, "b": 8.61, "c": 12.46 },
+      { "categoria": "Analista de 2ª", "a": 39.94, "b": 7.77, "c": 11.54 },
+      { "categoria": "Auxiliar de laboratorio", "a": 38.15, "b": 7.36, "c": 10.86 }
+    ],
+    "tecnicosDiquesMuelles": [
+      { "categoria": "Jefe/a de Diques", "a": 53.71, "b": 10.53, "c": 15.27 },
+      { "categoria": "Jefe/a de Muelles o Encargado/a General", "a": 45.28, "b": 8.89, "c": 12.93 },
+      { "categoria": "Buzos/as", "a": 50.92, "b": 10.03, "c": 14.40 }
+    ],
+    "organizacionTrabajo": [
+      { "categoria": "Jefe/a de Organización de 1ª", "a": 50.93, "b": 10.03, "c": 14.40 },
+      { "categoria": "Jefe/a de Organización de 2ª", "a": 49.59, "b": 9.75, "c": 14.12 },
+      { "categoria": "Técnico/a de Organización de 1ª", "a": 44.35, "b": 8.69, "c": 12.68 },
+      { "categoria": "Técnico/a de Organización de 2ª", "a": 41.06, "b": 8.21, "c": 11.98 },
+      { "categoria": "Auxiliar de Organización", "a": 36.95, "b": 7.15, "c": 10.52 }
+    ],
+    "medicos": [
+      { "categoria": "Médico/a de empresa con más de 500 personas trabajadoras", "a": 60.90, "b": 12.03, "c": 17.40 },
+      { "categoria": "Médico/a de empresa con más de 300 personas trabajadoras", "a": 54.47, "b": 10.85, "c": 15.52 },
+      { "categoria": "Médico/a de empresa con más de 100 personas trabajadoras", "a": 48.17, "b": 9.49, "c": 13.68 },
+      { "categoria": "Médico/a de empresa con menos de 100 personas trabajadoras", "a": 42.93, "b": 8.48, "c": 12.30 }
+    ]
+  },
+  "ambitoFuncional": "todas las empresas y personas trabajadoras del sector siderometalúrgico de la provincia de Sevilla: metalurgia y siderurgia; automoción y componentes; construcción naval; industria aeroespacial y sus componentes; material ferroviario; energías renovables; robótica, domótica y automatismos; ordenadores, telecomunicaciones y fibra óptica; drones; joyería y relojería; instalaciones de aire acondicionado, fontanería y calefacción; mantenimiento y reparación de vehículos e ITV; recuperación y reciclaje de metales. Excluye la venta en proceso exclusivo de comercialización",
+  "firmantes": {
+    "patronales": ["FEDEME — Federación de Empresarios del Metal de Sevilla"],
+    "sindicatos": ["CCOO de Industria", "UGT-FICA"]
+  },
+  "particularidades": [
+    "Convenio 2024-2026 vigente; salario por 8 grupos profesionales y ~78 categorías",
+    "Salario fijado POR DÍA en 3 columnas: A (salario base) + B (plus de asistencia) + C (plus de productividad); no por mes ni por año (Anexo II)",
+    "El salario base (A) se devenga los 365 días; B y C, por día trabajado; 2 pagas extra de 30 × (A+B+C) (Arts. 14.1-14.4)",
+    "Subida +3% en 2026 con cláusula de garantía IPC (adicional hasta +1,75% en 2027 si el IPC supera el 3%)",
+    "Polo aeroespacial de Sevilla: el ámbito incluye la construcción y el mantenimiento aeronáutico y espacial (Airbus A400M, Aernnova, Alestis)",
+    "Horas extraordinarias habituales suprimidas; máximo 80/año; compensación 1 h 30 min por hora (Art. 14.6)",
+    "100% del salario en baja por accidente de trabajo desde el primer día y en hospitalización por cualquier causa (Art. 26)",
+    "Póliza obligatoria de 15.000 € (muerte/invalidez por AT) y 7.500 € (IP total o muerte natural) (Art. 19)",
+    "Quinquenios de antigüedad con tope de 2 (Art. 14.5); nocturnidad 25%; plus de transporte 4,69 €/día",
+    "Ascensos solo por concurso-oposición, no por libre designación ni antigüedad (Art. 8.2)",
+    "Subrogación limitada a contratas de mantenimiento con la Administración Pública y tendidos eléctricos/telecom (Art. 29)",
+    "Régimen fiscal común (IRPF estatal + tramo autonómico de Andalucía)"
+  ],
+  "fuentes": [
+    "Convenio Colectivo para las Industrias Siderometalúrgicas de la provincia de Sevilla 2024-2026, código 41002445011982, texto articulado publicado en el BOP de Sevilla (Resolución de 31-oct-2024, expte. 41/01/0292/2024) — FEDEME, CCOO de Industria y UGT-FICA (firmado el 21-oct-2024). Fuente del articulado (jornada, pagas, vacaciones, pluses, antigüedad, horas extras, IT, subrogación, póliza, comisión paritaria y clasificación profesional)",
+    "Tablas salariales 2026 (+3%), acta de la comisión paritaria de 21 de enero de 2026, Resolución de 3-feb-2026, publicadas en el BOP de Sevilla nº 26 (9-feb-2026, CVE BOP-SE-2026-026040) — Anexo II (salarios diarios A/B/C), Anexo VI (quinquenios), Anexo XI (horas extraordinarias), pluses y dietas",
+    "Real Decreto 126/2026, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia comparativa"
+  ]
+}
