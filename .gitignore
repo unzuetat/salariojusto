@@ -55,3 +55,4 @@ paginas-publicadas-sheets.csv
 
 # Detector: cola de candidatos (estado runtime)
 data/detector/candidatos.json
+_preview-*.html
