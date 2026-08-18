@@ -1,0 +1,60 @@
+{
+  "nombre": "Convenio Colectivo del Comercio Vario de la Comunidad de Madrid",
+  "sector": "comercio",
+  "ambito": "Comunidad de Madrid",
+  "codigo": "28000805011982",
+  "skipHtmlGeneration": true,
+  "bocm": "BOCM Núm. 183, 02/08/2025 (texto íntegro 2025-2028 + tablas 4 años) · BOCM Núm. 151, 27/06/2026 (modificación art. 40 jornada)",
+  "urlBocm": "https://www.bocm.es/boletin/CM_Orden_BOCM/2025/08/02/BOCM-20250802.PDF",
+  "firmadoFecha": "18 de junio de 2025",
+  "vigencia": "1 enero 2025 – 31 diciembre 2028",
+  "pagas": 15,
+  "jornadaAnual": 1711,
+  "jornadaSemanal": "37,5 h/semana desde 1-ene-2026 (1.711 h/año). Empresas que mantengan la distribución de 38,53 h/semana del convenio anterior: 14 días adicionales de vacaciones.",
+  "incrementos": {
+    "regla": "IPC definitivo del año anterior (INE), con mínimo y máximo garantizado del 3% (art. 38), efecto retroactivo 1 de enero.",
+    "2026": "3% sobre 2025",
+    "2027": "3% sobre 2026",
+    "2028": "3% sobre 2027"
+  },
+  "notaEditorial": "Convenio del Sector Comercio Vario de la Comunidad de Madrid (código 28000805011982), suscrito el 18-jun-2025 por COPYME (patronal) y UGT (FeSMC UGT Madrid) + CCOO (Federación de Servicios). Publicado en BOCM Núm. 183 de 2-ago-2025 con las tablas de los cuatro años (2025-2028). Cubre el comercio mayorista y minorista de especialidades varias (bazares, plásticos, bisutería, fotografía, discos, loterías, estancos, arte y antigüedades, merchandising, suministros a industria/decoración/construcción) y todo comercio no encuadrado en otro convenio del sector.",
+  "vacaciones": "31 días naturales ininterrumpidos, entre el 20 de junio y el 30 de septiembre (art. 43).",
+  "nocturnidad": "Recargo del 25% sobre el salario base (art. 27).",
+  "antiguedad": "Cuatrienios: 5% por cada cuatrienio completo sobre salario base; tope 10% a los 5 años, 25% a los 15, 40% a los 20, 60% a los 25 (art. 26).",
+  "horasExtras": "Recargo +75% en días laborables y +150% en festivos/domingos, o compensación por 1h45 de descanso (art. 39).",
+  "incapacidadTemporal": "100% en AT/EP y en la primera IT por enfermedad común del año natural; en segundas y sucesivas bajas, 100% desde el 4º día (los 3 primeros sin complemento), salvo hospitalización (100% desde el 1er día) — art. 57.",
+  "descuentoCompras": "20% sobre PVP en compras para uso propio o familiar en la propia empresa (art. 32).",
+  "seguroVida": "Cobertura mínima 15.000 € por fallecimiento/incapacidad permanente absoluta/gran invalidez (art. 58).",
+  "jubilacionAnticipada": {
+    "64": 2200, "63": 2800, "62": 3400, "61": 4000, "60": 5200,
+    "nota": "Compensación económica por jubilación voluntaria anticipada (art. 61)."
+  },
+  "permisoClimatico": "Permiso retribuido y no recuperable por condiciones meteorológicas extraordinarias con alerta oficial AEMET nivel naranja o rojo (nevadas, lluvias torrenciales, inundaciones, olas de calor/frío, tormentas severas) que impidan el desplazamiento o pongan en riesgo la integridad; también por cierre de centros educativos para cuidado de menores/dependientes (art. 95).",
+  "permisoEspecialNoRetribuido": "Hasta 15 días al año, una vez, con preaviso de 2 semanas (art. 46).",
+  "ascensoAutomatico": "El Auxiliar de Caja y el Ayudante de Vendedor pasan a Cajero/a y Dependiente/a vendedor/a al cumplir 2 años de antigüedad (Disp. Adic. Cuarta).",
+  "comisionParitaria": "6 representantes sindicales (3 CCOO + 3 UGT) + 6 empresariales. Sometimiento al Instituto Laboral de la Comunidad de Madrid (IRMA).",
+  "firmantes": {
+    "patronal": ["COPYME"],
+    "sindicatos": ["UGT (FeSMC UGT Madrid)", "CCOO (Federación de Servicios de Madrid)"]
+  },
+  "grupos": [
+    { "id": "VI", "nombre": "Grupo VI — Titulados/as y Licenciados/as · Director/a General", "puestos": ["Director/a general", "Titulado/a y licenciado/a (grado superior)"], "salario": { "2025": { "mes": 1766.00, "sba": 26490.07 }, "2026": { "mes": 1818.98, "sba": 27284.77 }, "2027": { "mes": 1873.55, "sba": 28103.31 }, "2028": { "mes": 1929.76, "sba": 28946.41 } } },
+    { "id": "V", "nombre": "Grupo V — Jefatura de Administración/Personal/Ventas/Compras", "puestos": ["Jefe/a de administración", "Jefe/a de personal", "Jefe/a de ventas", "Jefe/a de compras"], "salario": { "2025": { "mes": 1701.73, "sba": 25525.94 }, "2026": { "mes": 1752.78, "sba": 26291.72 }, "2027": { "mes": 1805.36, "sba": 27080.47 }, "2028": { "mes": 1859.53, "sba": 27892.88 } } },
+    { "id": "IV", "nombre": "Grupo IV — Jefatura de Sucursal/Almacén · Titulado/a grado medio · Encargado/a general", "puestos": ["Jefe/a de sucursal", "Jefe/a de almacén", "Titulado/a de grado medio", "Encargado/a general"], "salario": { "2025": { "mes": 1605.48, "sba": 24082.13 }, "2026": { "mes": 1653.64, "sba": 24804.59 }, "2027": { "mes": 1703.25, "sba": 25548.73 }, "2028": { "mes": 1754.35, "sba": 26315.19 } } },
+    { "id": "III-A", "nombre": "Grupo III · Nivel A — Técnico/a informático/a · Jefe/a de grupo", "puestos": ["Técnico/a informático/a", "Jefe/a de grupo"], "salario": { "2025": { "mes": 1364.48, "sba": 20467.23 }, "2026": { "mes": 1405.42, "sba": 21081.25 }, "2027": { "mes": 1447.58, "sba": 21713.69 }, "2028": { "mes": 1491.01, "sba": 22365.10 } } },
+    { "id": "III-B", "nombre": "Grupo III · Nivel B — Dibujante · Responsable de Logística · Conductor/a especializado/a", "puestos": ["Dibujante", "Responsable de Logística", "Conductor/a especializado/a"], "salario": { "2025": { "mes": 1324.52, "sba": 19867.86 }, "2026": { "mes": 1364.26, "sba": 20463.90 }, "2027": { "mes": 1405.19, "sba": 21077.82 }, "2028": { "mes": 1447.34, "sba": 21710.15 } } },
+    { "id": "III-C", "nombre": "Grupo III · Nivel C — Escaparatista", "puestos": ["Escaparatista"], "salario": { "2025": { "mes": 1284.69, "sba": 19270.32 }, "2026": { "mes": 1323.23, "sba": 19848.43 }, "2027": { "mes": 1362.93, "sba": 20443.88 }, "2028": { "mes": 1403.81, "sba": 21057.20 } } },
+    { "id": "III-D", "nombre": "Grupo III · Nivel D — Jefe/a de sección", "puestos": ["Jefe/a de sección"], "salario": { "2025": { "mes": 1244.18, "sba": 18662.70 }, "2026": { "mes": 1281.51, "sba": 19222.58 }, "2027": { "mes": 1319.95, "sba": 19799.26 }, "2028": { "mes": 1359.55, "sba": 20393.24 } } },
+    { "id": "II-A", "nombre": "Grupo II · Nivel A — Conductor/a · Oficial/a de 1ª", "puestos": ["Conductor/a", "Oficial/a de primera"], "salario": { "2025": { "mes": 1204.12, "sba": 18061.79 }, "2026": { "mes": 1240.24, "sba": 18603.64 }, "2027": { "mes": 1277.45, "sba": 19161.75 }, "2028": { "mes": 1315.77, "sba": 19736.60 } } },
+    { "id": "II-B", "nombre": "Grupo II · Nivel B — Dependiente/a vendedor/a (+22) · Cajero/a · Oficial/a administrativo/a · Viajante · Mozo/a especializado/a · Corredor/a de plaza", "puestos": ["Dependiente/a vendedor/a (mayor de 22)", "Cajero/a", "Oficial/a administrativo/a", "Viajante", "Mozo/a especializado/a", "Corredor/a de plaza"], "salario": { "2025": { "mes": 1163.95, "sba": 17459.20 }, "2026": { "mes": 1198.87, "sba": 17982.98 }, "2027": { "mes": 1234.83, "sba": 18522.47 }, "2028": { "mes": 1271.88, "sba": 19078.14 } } },
+    { "id": "I", "nombre": "Grupo I — Ayudante de ventas · Aux. de caja · Aux. administrativo/a · Reponedor/a-merchandising · Telefonista · Recepcionista · Cobrador/a · Vigilante · Oficial/a de 2ª", "puestos": ["Ayudante de vendedor/a", "Auxiliar de caja", "Auxiliar administrativo/a", "Reponedor/a-merchandising", "Telefonista", "Recepcionista", "Cobrador/a", "Vigilante", "Oficial/a de segunda"], "salario": { "2025": { "mes": 1123.82, "sba": 16857.26 }, "2026": { "mes": 1157.53, "sba": 17362.98 }, "2027": { "mes": 1192.26, "sba": 17883.87 }, "2028": { "mes": 1228.03, "sba": 18420.39 } } }
+  ],
+  "complementos": {
+    "plusTransporte": { "nota": "Extrasalarial, 11 mensualidades (prorrateable en 12), art. 30", "2025": 93.75, "2026": 96.56, "2027": 99.46, "2028": 102.44 },
+    "dietaEntera": { "2025": 33.43, "2026": 34.43, "2027": 35.46, "2028": 36.52 },
+    "mediaDieta": { "2025": 13.77, "2026": 14.18, "2027": 14.61, "2028": 15.05 },
+    "kilometraje": { "2025": 0.30, "2026": 0.31, "2027": 0.32, "2028": 0.33 },
+    "plusPenosidad": { "nota": "Trabajo al aire libre con estrés térmico y/o manejo de cargas pesadas, art. 28", "2025": 100, "2026": 103, "2027": 106.09, "2028": 109.27 },
+    "plusPeligrosidad": { "nota": "Manejo habitual de máquinas pesadas o de elevado riesgo, art. 29", "2025": 100, "2026": 103, "2027": 106.09, "2028": 109.27 }
+  }
+}
