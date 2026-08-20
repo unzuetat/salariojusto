@@ -1,10 +1,10 @@
 {
   "_doc": "CENSO ÚNICO DE ESTADO DE CONVENIOS — fuente de verdad hand-curated. El nº de fichas y su estado (vigente/ultraactividad) se consultan AQUÍ, nunca grepeando el HTML (ver memoria feedback_estado_convenios_registro_no_grep). Lo consume scripts/audit/convenios-sync.js. Al añadir/actualizar un convenio: editar su fila aquí. Campo 'revisado:false' = estado propuesto por Claude, PENDIENTE de ratificación humana contra boletín. 'confianza:revisar' = caso jurídico dudoso (prórroga/tácita/pactada vs 86.3).",
-  "actualizado": "2026-08-19",
+  "actualizado": "2026-08-20",
   "canon": {
-    "provinciales": 49,
+    "provinciales": 50,
     "marcos": 5,
-    "total": 54,
+    "total": 55,
     "_nota": "marcos/sectoriales estatales (5): hostelería, limpieza-edificios-locales, técnicos-espectáculos, seguridad-privada y contact-center. Seguridad privada y contact center son sectoriales estatales con tablas propias, contados aparte de las 47 provinciales"
   },
   "estados": {
@@ -702,6 +702,19 @@
       "confianza": "alta",
       "revisado": true,
       "nota": "Comercio Vario CAM. 10 grupos, 15 pagas, jornada 37,5h desde 2026. Permiso climático (art.95). Dependiente II-B 1.198,87 €/mes (2026). Cifras cotejadas contra BOCM 183 pegado por el usuario."
+    },
+    {
+      "archivo": "convenio-comercio-metal-barcelona.html",
+      "sector": "comercio",
+      "ambito": "Barcelona",
+      "tipo": "provincial",
+      "indexable": true,
+      "vigenciaFin": "2027-12-31",
+      "estado": "vigente",
+      "fuenteEstado": "código 08000765011993 · convenio 2025-2027 suscrito 22-ene-2026 (BOPB 18-mar-2026, CVE 202610051357) · +3,25% / +3,25% / +3,5%",
+      "confianza": "alta",
+      "revisado": true,
+      "nota": "publicado 14 meses después de su entrada en vigor (efectos 1-ene-2025): arrastra atrasos, con plazo de liquidación de 1 mes desde la publicación (cl. adic. 3.ª). Ultraactividad PACTADA en art. 6.1: al vencer seguirá aplicándose hasta firmar el nuevo. No confundir con convenio-metal-barcelona.html (siderometalurgia)"
     },
     {
       "archivo": "convenio-comercio-metal-bizkaia.html",
