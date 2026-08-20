@@ -145,6 +145,7 @@ const SOBRE_SECTOR_MAP = [
   ['Metal', 'metal'],
   ['Oficinas y Despachos', 'oficinas'],
   ['Construcción', 'construccion'],
+  ['Comercio', 'comercio'],
 ];
 if (exists('sobre.html')) {
   const html = read('sobre.html');

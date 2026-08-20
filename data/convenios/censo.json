@@ -1,10 +1,10 @@
 {
   "_doc": "CENSO ÚNICO DE ESTADO DE CONVENIOS — fuente de verdad hand-curated. El nº de fichas y su estado (vigente/ultraactividad) se consultan AQUÍ, nunca grepeando el HTML (ver memoria feedback_estado_convenios_registro_no_grep). Lo consume scripts/audit/convenios-sync.js. Al añadir/actualizar un convenio: editar su fila aquí. Campo 'revisado:false' = estado propuesto por Claude, PENDIENTE de ratificación humana contra boletín. 'confianza:revisar' = caso jurídico dudoso (prórroga/tácita/pactada vs 86.3).",
-  "actualizado": "2026-08-15",
+  "actualizado": "2026-08-19",
   "canon": {
-    "provinciales": 48,
+    "provinciales": 49,
     "marcos": 5,
-    "total": 53,
+    "total": 54,
     "_nota": "marcos/sectoriales estatales (5): hostelería, limpieza-edificios-locales, técnicos-espectáculos, seguridad-privada y contact-center. Seguridad privada y contact center son sectoriales estatales con tablas propias, contados aparte de las 47 provinciales"
   },
   "estados": {
@@ -702,6 +702,19 @@
       "confianza": "alta",
       "revisado": true,
       "nota": "Comercio Vario CAM. 10 grupos, 15 pagas, jornada 37,5h desde 2026. Permiso climático (art.95). Dependiente II-B 1.198,87 €/mes (2026). Cifras cotejadas contra BOCM 183 pegado por el usuario."
+    },
+    {
+      "archivo": "convenio-comercio-metal-bizkaia.html",
+      "sector": "comercio-metal",
+      "ambito": "Bizkaia",
+      "tipo": "provincial",
+      "indexable": true,
+      "vigenciaFin": "2019-12-31",
+      "estado": "especial",
+      "fuenteEstado": "BOB nº 141 23-jul-2018 (convenio 2018-2019, código 48000575011981) + revisión salarial 2019 (BOB nº 38 22-feb-2019) · denunciado 1-oct-2019, vigencia hasta 31-dic-2019 · ultraactividad PACTADA por art. 2 bis (sigue vigente a falta de convenio de ámbito superior o nuevo) · tablas congeladas en 2019 · registro oficial Gobierno Vasco (act. 15-abr-2026) confirma última publicación 2018",
+      "confianza": "revisar",
+      "revisado": false,
+      "nota": "Comercio del Metal (comercio de productos metálicos: ferretería, joyería, automoción, material eléctrico/electrodomésticos, almacenes...), NO es Metal industrial. SECTOR NUEVO. Enfoque 'qué cobras hoy': tabla 2019 vigente como mínimo + suelo SMI 17.094 €. Dependiente/a 1.232,80 €/mes (19.724,83 €/año, 16 pagas). 7 categorías bajas caen bajo SMI. Gipuzkoa sí renovó (2024-2027), Bizkaia no. Cifras cotejadas contra BOB pegado por el usuario."
     }
   ]
 }
