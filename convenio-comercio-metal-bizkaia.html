@@ -329,6 +329,51 @@
     </div>
   </details>
 
+  <!-- Bloque · Alertas de convenio -->
+  <div class="sj-alerta" id="alertas">
+    <style>
+      .sj-alerta{background:var(--cream-100);border:1px solid var(--cream-200);border-left:3px solid var(--gold);padding:22px 24px;margin:26px 0;}
+      .sj-alerta h3{margin:0 0 6px;font-size:16px;color:var(--ink);}
+      .sj-alerta p{font-size:14px;margin-bottom:12px;}
+      .sj-alerta form{display:flex;gap:8px;flex-wrap:wrap;}
+      .sj-alerta input[type=email]{flex:1;min-width:220px;padding:10px 12px;border:1px solid var(--cream-200);background:#fff;font-family:inherit;font-size:14px;color:var(--ink);}
+      .sj-alerta button{background:var(--gold);color:#fff;border:none;padding:10px 20px;font-size:12px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:inherit;}
+      .sj-alerta button:hover{background:var(--gold-dark);}
+      .sj-alerta button:disabled{opacity:0.6;cursor:default;}
+      .sj-alerta .sj-alerta-legal{font-size:11.5px;color:var(--ink-lighter);margin:10px 0 0;}
+      .sj-alerta .sj-alerta-msg{font-size:13.5px;font-weight:600;margin:10px 0 0;}
+      .sj-alerta .sj-alerta-msg.ok{color:var(--green);}
+      .sj-alerta .sj-alerta-msg.err{color:var(--red);}
+      .sj-alerta .hp{position:absolute;left:-9999px;opacity:0;}
+    </style>
+    <h3>🔔 Te avisamos si este convenio cambia</h3>
+    <p>Este convenio lleva sin renovarse desde 2019. Déjanos tu email y te escribimos el día que el BOB publique una tabla nueva o un convenio que lo sustituya. Nada más.</p>
+    <form data-convenio="comercio-metal-bizkaia">
+      <input type="email" name="email" required placeholder="tu@email.com" autocomplete="email" aria-label="Tu email">
+      <input type="text" name="web" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit">Avisadme</button>
+    </form>
+    <p class="sj-alerta-msg" hidden></p>
+    <p class="sj-alerta-legal">Solo para avisarte de cambios de este convenio: sin newsletters ni cesión de datos, baja en un clic. Confirmación por email (doble opt-in), proveedor en la UE. <a href="/privacidad.html">Política de privacidad</a>.</p>
+  </div>
+  <script>
+  (function(){
+    var box=document.currentScript.previousElementSibling;
+    var form=box.querySelector('form'),msg=box.querySelector('.sj-alerta-msg'),btn=form.querySelector('button');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();btn.disabled=true;msg.hidden=true;
+      fetch('/api/subscribe',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:form.email.value,convenio:form.dataset.convenio,web:form.web.value})})
+        .then(function(r){return r.json().then(function(d){return{ok:r.ok,d:d};});})
+        .then(function(x){
+          msg.hidden=false;
+          if(x.ok){msg.textContent='✓ Casi está: revisa tu correo y confirma la suscripción.';msg.className='sj-alerta-msg ok';form.reset();}
+          else{msg.textContent=(x.d&&x.d.error)||'No se pudo completar el alta.';msg.className='sj-alerta-msg err';btn.disabled=false;}
+        })
+        .catch(function(){msg.hidden=false;msg.textContent='Error de conexión. Inténtalo de nuevo.';msg.className='sj-alerta-msg err';btn.disabled=false;});
+    });
+  })();
+  </script>
+
   <!-- Ejemplo real -->
   <h2 id="ejemplo">Ejemplo: Jon, dependiente en una ferretería de Bilbao</h2>
 
