@@ -1,0 +1,84 @@
+{
+  "nombre": "Convenio Colectivo del Sector de Comercio del Metal de la provincia de Barcelona",
+  "sector": "comercio",
+  "ambito": "Barcelona (provincia)",
+  "codigo": "08000765011993",
+  "skipHtmlGeneration": true,
+  "bop": "BOPB de 18 de marzo de 2026 (CVE 202610051357) — Resolució de 16 de març de 2026 de la Direcció dels Serveis Territorials a Barcelona del Departament d'Empresa i Treball. Texto íntegro 2025-2027 en castellano y catalán, 86 páginas, con las tablas de los tres años.",
+  "urlBop": "https://bop.diba.cat/anunci/3911974",
+  "urlBopPdf": "https://bop.diba.cat/anunci/descarrega-pdf/3911974",
+  "firmadoFecha": "22 de enero de 2026",
+  "publicadoFecha": "18 de marzo de 2026",
+  "vigencia": "1 enero 2025 – 31 diciembre 2027",
+  "pagas": 15,
+  "jornadaAnual": 1774,
+  "jornadaSerie": { "2025": 1780, "2026": 1774, "2027": 1768 },
+  "incrementos": {
+    "regla": "Incrementos fijos pactados sobre las tablas del año anterior, sin cláusula de revisión por IPC (art. 20 y anexos).",
+    "2025": "3,25% sobre 2024",
+    "2026": "3,25% sobre 2025",
+    "2027": "3,5% sobre 2026"
+  },
+  "notaEditorial": "Convenio del Sector de Comercio del Metal de la provincia de Barcelona (código 08000765011993), suscrito el 22-ene-2026 por la Unió Patronal Metal·lúrgica (UPM) y la Federació de Serveis de CCOO, y publicado en el BOPB del 18-mar-2026 con el texto íntegro y las tablas de los tres años (2025, 2026 y 2027). Cubre el comercio —no la industria— de productos que contengan total o parcialmente materiales metálicos: ferreterías, joyerías, automoción y repuestos, material eléctrico y electrodomésticos, informática, relojería, armerías, maquinaria y saneamiento, con establecimiento mercantil abierto en la provincia de Barcelona. No debe confundirse con el Convenio del Metal (siderometalurgia) de Barcelona, que es otro convenio distinto.",
+  "atrasos": "El convenio entró en vigor con efectos de 1 de enero de 2025 pero se publicó el 18 de marzo de 2026. La cláusula adicional tercera concedió a las empresas un plazo máximo de un mes desde la publicación en el BOPB para liquidar los atrasos por diferencias desde el 1-ene-2025 (plazo vencido a mediados de abril de 2026).",
+  "vacaciones": "30 días naturales al año, retribuidos a salario real (excepto horas extraordinarias), iniciándose en lunes no festivo salvo pacto o inicio en día 1 o 16. Si dentro del período coinciden 2 o más festivos oficiales, solo se pierde uno de los catorce (art. 28).",
+  "nocturnidad": "Plus de trabajo nocturno (22:00–06:00) de 1,09 €/hora en 2026, igual para todos los grupos profesionales (art. 21 y anexo 3).",
+  "antiguedad": "Complemento Ad Personam (antiguo complemento de antigüedad): no se generan nuevos tramos; los importes consolidados se revalorizan un 3,25% en 2025, un 3,25% en 2026 y un 3,5% en 2027 (art. 19).",
+  "horasExtras": "Valor por hora fijado por grupo profesional en el anexo 2 (2026: de 19,59 € en el grupo 1 a 12,93 € en el grupo 7). Carácter excepcional, tope de 80 horas/año, y posibilidad de compensarlas con descanso dentro de los cuatro meses siguientes (art. 26).",
+  "incapacidadTemporal": "La empresa complementa las prestaciones de la Seguridad Social hasta el 100% de la retribución íntegra durante un máximo de 12 meses, tanto en enfermedad como en accidente (art. 34).",
+  "permisoPrejubilacion": "El personal mayor de 57 años que cause baja voluntaria con más de 10 años de trabajo efectivo en la empresa disfruta de 2 meses de permiso retribuido; con más de 20 años, 3 meses. Requiere preaviso fehaciente de la fecha de baja con 6 meses de antelación y se disfruta inmediatamente antes de la baja (art. 30.h).",
+  "becaEscolar": "40 € por cada hijo/a de entre 3 y 16 años matriculado/a en enseñanza diurna, abonados con la primera retribución de septiembre. Solo puede percibirlo el padre o la madre (art. 23).",
+  "visitasMedicas": "Hasta 20 horas anuales retribuidas para acudir al médico (Institut Català de la Salut o sanidad privada) o acompañar a padres, madres e hijos/as menores de 16 años, con justificante (art. 44).",
+  "licenciaSinSueldo": "24 horas anuales de licencia sin sueldo con preaviso de 7 días naturales, manteniendo el alta en la Seguridad Social. Desde 2026 se amplía a 48 horas anuales; las 24 horas ampliadas no pueden coincidir con puentes, vacaciones colectivas ni con la aplicación de la flexibilidad horaria (art. 32).",
+  "permisoMatrimonio": "15 días naturales por matrimonio o constitución de pareja estable si la antigüedad es inferior a 5 años, y 20 días naturales si es superior (una sola vez cada 5 años). Las parejas estables acreditadas conforme a la Ley 25/2010 del Codi Civil de Catalunya tienen los mismos derechos que los matrimonios (art. 30.a).",
+  "permisoClimatico": "Hasta 4 días de permiso por imposibilidad de acceder al centro de trabajo por limitaciones o prohibiciones de desplazamiento de las autoridades, riesgo grave e inminente, catástrofe o fenómeno meteorológico adverso; transcurridos los 4 días el permiso se prolonga mientras duren las circunstancias (art. 30.f).",
+  "teletrabajo": "Compensación de gastos de 30,98 €/mes en 2026 por teletrabajo a jornada completa (proporcional en jornadas inferiores), revalorizable cada año con los incrementos del convenio (art. 40 y anexo 5).",
+  "flexibilidadHoraria": "La empresa puede prolongar o reducir la jornada diaria hasta 2 horas, con un máximo de 120 horas anuales y un tope de 60 días al año, con preaviso mínimo de 5 días naturales y retribución íntegra durante el período (art. 25).",
+  "jubilacionForzosa": "Extinción automática del contrato al cumplir 68 años o más, siempre que la persona tenga derecho al 100% de la pensión contributiva y la medida se vincule a objetivos de política de empleo (art. 29.2, Ley 21/2021).",
+  "fallecimiento": "En caso de fallecimiento de una persona con al menos un año en la empresa, sus derechohabientes perciben el importe de dos mensualidades (art. 35).",
+  "prendasTrabajo": "Dos prendas de trabajo al año, una cada seis meses (art. 45).",
+  "bilinguismo": "Todos los anuncios o avisos en las empresas deben redactarse en castellano y en catalán (art. 46).",
+  "aperturaDomingos": "Las empresas de la zona turística de Barcelona (Z1 y Z2) se rigen por el Acord social per a l'obertura dels establiments comercials en diumenge de 21-feb-2022 y la Resolución de calificación de Barcelona como Zona de Gran Afluencia Turística de 2-may-2022 (cláusula adicional quinta).",
+  "contratoFormacion": "En 2025, el contrato de formación en alternancia y el de formación y aprendizaje se retribuyen con 1.184 €/mes en 14 pagas (16.576 €/año). Para 2026 y 2027 el convenio NO fija importe: remite a la Comisión Paritaria, que lo establecerá cuando se publique el SMI en el BOE (art. 13.3 y 13.9). El contrato para la obtención de la práctica profesional se retribuye al 70% del salario base del anexo 1, con el SMI como suelo (art. 13.4).",
+  "periodoPrueba": "Grupos 1 y 2: seis meses · grupos 3 y 4: tres meses · grupos 5 y 6: un mes · grupo 7: dos semanas (art. 12).",
+  "comisionParitaria": "4 miembros de la Unió Patronal Metal·lúrgica + 4 de la Federació de Serveis de CCOO. Sede en Via Laietana 32 (UPM) y Via Laietana 16 (CCOO), Barcelona. Resuelve en plazo máximo de 15 días; las discrepancias se someten al Tribunal Laboral de Catalunya (art. 8 y cláusula adicional primera).",
+  "firmantes": {
+    "patronal": ["Unió Patronal Metal·lúrgica (UPM)"],
+    "sindicatos": ["CCOO (Federació de Serveis)"],
+    "nota": "El convenio fue negociado por la UPM y por las federaciones de servicios de CCOO y UGT, y finalmente suscrito por la UPM y CCOO (art. preliminar 1). Tiene eficacia general: obliga a todas las empresas y personas trabajadoras del ámbito (art. preliminar 2, Título III del Estatuto de los Trabajadores)."
+  },
+  "grupos": [
+    { "id": "1", "nombre": "Grupo 1 — Titulación universitaria superior · Dirección de área o servicio", "puestos": ["Ingenieros/as y licenciados/as", "Director/a (informática)"], "salario": { "2025": { "mes": 1910.68, "anual": 28660.25 }, "2026": { "mes": 1972.78, "anual": 29591.71 }, "2027": { "mes": 2041.83, "anual": 30627.42 } }, "horaExtra": { "2025": 18.97, "2026": 19.59, "2027": 20.27 } },
+    { "id": "2", "nombre": "Grupo 2 — Jefaturas de sucursal, personal, ventas, compras y taller · Encargado/a general", "puestos": ["Jefe/a de sucursal", "Jefe/a administrativo/a", "Jefe/a de personal", "Jefe/a de ventas", "Jefe/a de compras", "Jefe/a de taller", "Conceptor/a", "Ayudante técnico/a sanitario/a", "Encargado/a general"], "salario": { "2025": { "mes": 1856.16, "anual": 27842.42 }, "2026": { "mes": 1916.49, "anual": 28747.29 }, "2027": { "mes": 1983.56, "anual": 29753.45 } }, "horaExtra": { "2025": 18.70, "2026": 19.30, "2027": 19.98 } },
+    { "id": "3", "nombre": "Grupo 3 — Jefaturas de sección · Escaparatismo · Inspección de ventas · Analista", "puestos": ["Jefe/a de sección administrativa", "Jefe/a de sección mercantil", "Inspector/a de ventas", "Encargado/a de establecimiento", "Técnico/a de relojería titulado/a o asimilado/a", "Escaparatista", "Jefe/a de almacén", "Analista", "Jefe/a de grupo"], "salario": { "2025": { "mes": 1694.09, "anual": 25411.40 }, "2026": { "mes": 1749.15, "anual": 26237.28 }, "2027": { "mes": 1810.38, "anual": 27155.58 } }, "horaExtra": { "2025": 16.39, "2026": 16.93, "2027": 17.52 } },
+    { "id": "4", "nombre": "Grupo 4 — Dependiente/a mayor o con idiomas · Contabilidad · Delineación · Programación", "puestos": ["Rotulista", "Delineante de segunda", "Dependiente/a mayor", "Dependiente/a con idiomas", "Programador/a", "Operador/a", "Cortador/a", "Delineante de primera", "Dibujante", "Contable, cajero/a, taquimecanógrafo/a con idiomas"], "salario": { "2025": { "mes": 1583.80, "anual": 23757.02 }, "2026": { "mes": 1635.28, "anual": 24529.13 }, "2027": { "mes": 1692.50, "anual": 25387.65 } }, "horaExtra": { "2025": 15.03, "2026": 15.52, "2027": 16.07 } },
+    { "id": "5", "nombre": "Grupo 5 — Dependiente/a (22 años o más) · Oficial/a administrativo/a · Viajante · Profesional de oficio", "puestos": ["Dependiente/a de 25 o más años", "Dependiente/a de 22, 23 y 24 años", "Oficial/a administrativo/a de 1.ª", "Oficial/a administrativo/a de 2.ª", "Cobrador/a", "Capataz", "Viajante", "Corredor/a de plaza", "Autoventa", "Grabador/a", "Técnico/a postventa", "Profesional de oficio de 1.ª — conductor/a «C»", "Profesional de oficio de 2.ª — conductor/a «B»"], "salario": { "2025": { "mes": 1543.79, "anual": 23156.91 }, "2026": { "mes": 1593.97, "anual": 23909.51 }, "2027": { "mes": 1649.75, "anual": 24746.34 } }, "horaExtra": { "2025": 14.14, "2026": 14.60, "2027": 15.11 } },
+    { "id": "6", "nombre": "Grupo 6 — Auxiliar administrativo/a y de caja · Ayudante de dependiente/a · Mozo/a especializado/a", "puestos": ["Auxiliar administrativo/a", "Auxiliar administrativo/a de 18 y 19 años", "Telefonista", "Manipulador/a", "Profesional de oficio de 3.ª — conductor/a «A»", "Ayudante de oficio", "Mozo/a especializado/a", "Auxiliar de caja (18 a 25 o más años)", "Ayudante de cortador/a", "Ayudante de dependiente/a", "Demostrador/a"], "salario": { "2025": { "mes": 1449.67, "anual": 21744.98 }, "2026": { "mes": 1496.78, "anual": 22451.69 }, "2027": { "mes": 1549.16, "anual": 23237.50 } }, "horaExtra": { "2025": 12.78, "2026": 13.20, "2027": 13.66 } },
+    { "id": "7", "nombre": "Grupo 7 — Personal subalterno · Mozo/a · Personal de limpieza · Conserje", "puestos": ["Vigilante, sereno/a, ordenanza, portero/a", "Envasador/a, embalador/a", "Mozo/a", "Personal de limpieza", "Conserje", "Cosedor/a de sacos"], "salario": { "2025": { "mes": 1415.70, "anual": 21235.52 }, "2026": { "mes": 1461.71, "anual": 21925.68 }, "2027": { "mes": 1512.87, "anual": 22693.08 } }, "horaExtra": { "2025": 12.52, "2026": 12.93, "2027": 13.38 } }
+  ],
+  "complementos": {
+    "plusNocturno": { "nota": "Euros/hora, todos los grupos, trabajo entre 22:00 y 06:00 (art. 21, anexo 3)", "2025": 1.05, "2026": 1.09, "2027": 1.13 },
+    "dietaCompleta": { "nota": "Dos comidas principales fuera (art. 22, anexo 4)", "2025": 32.72, "2026": 33.78, "2027": 34.97 },
+    "mediaDieta": { "nota": "Una comida principal fuera (art. 22, anexo 4)", "2025": 18.61, "2026": 19.21, "2027": 19.88 },
+    "teletrabajo": { "nota": "Euros/mes por teletrabajo efectivo a jornada completa (art. 40, anexo 5)", "2025": 30.00, "2026": 30.98, "2027": 32.06 },
+    "becaEscolar": { "nota": "Euros por hijo/a de 3 a 16 años, abonados en septiembre (art. 23). Importe no revalorizado en el convenio.", "2025": 40, "2026": 40, "2027": 40 }
+  },
+  "complementoExCategoria": {
+    "nota": "Complemento «ex categoría» para el personal contratado hasta el 29-11-2005. Importe anual dividido por 15 mensualidades (anexo 4).",
+    "2026": {
+      "Jefe/a de personal, de ventas, de compras · Conceptor/a · Encargado/a general": 657.30,
+      "Persona analista": 292.84,
+      "Persona dibujante": 2000.86,
+      "Profesional de oficio de 3.ª — conductor/a «A»": 43.85,
+      "Auxiliar de caja de 25 o más años": 934.03,
+      "Ayudante de cortador/a": 673.79,
+      "Persona conserje": 487.36
+    }
+  },
+  "erratasBop": "En el texto publicado en el BOPB, las tablas de 2026 y 2027 conservan la cabecera «Total any 2025 / Total año 2025» en la tercera columna, aunque los importes corresponden a cada año. El art. 12 (período de prueba) menciona «Grupos Profesionales 7 y 8» pese a que la clasificación del art. 14 solo define siete grupos.",
+  "fuentes": [
+    "BOPB de 18 de marzo de 2026, CVE 202610051357 — Resolució de 16 de març de 2026 (texto íntegro 2025-2027, 86 páginas, castellano y catalán, anexos 1-5 de los tres años). Código 08000765011993.",
+    "Tablas salariales 2026 publicadas por el Centre Metal·lúrgic / Unió Patronal Metal·lúrgica (anexos 1-5), coincidentes dígito a dígito con el BOPB.",
+    "SMI 2026: Real Decreto 126/2026, de 18 de febrero (BOE de 18 de febrero de 2026): 1.221 €/mes × 14 pagas = 17.094 €/año."
+  ]
+}
