@@ -1,0 +1,140 @@
+{
+  "eje": "E1",
+  "slug": "convenio-limpieza-zaragoza",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Construye desde el REGCON un histórico de renovaciones que no está en ningún boletín y lo usa para pronosticar cuándo llegará el convenio siguiente, y separa cláusulas normativas de obligacionales para explicar qué sobrevive exactamente a la ultraactividad. Es análisis propio, con su método a la vista y su fuente declarada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 592,
+          "cita": "El convenio de Limpieza de Zaragoza tiene un patrón de renovación muy útil para anticipar cuándo aparecerá el próximo texto. Mirando el REGCON (código 50000755011981):"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 708,
+          "cita": "El Art. 39 del convenio provincial lista las divisiones funcionales <em>a título enunciativo</em> (Especialista, Peón Especializado Conductor/Limpiador, Limpiador/a), pero <strong>la Cláusula Adicional 5.ª remite la clasificación profesional al I Convenio Estatal de Limpieza de Edificios y Locales</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 3,
+      "razon": "No solo condiciona sus afirmaciones con artículo: dedica una sección entera al caso límite que más aparece en la práctica —el descuelgue del Art. 34, es decir cuándo una empresa puede legalmente no aplicar el convenio— y explica qué lo hace nulo. Es la advertencia que falta en el resto del piloto.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 573,
+          "cita": "Si tu empresa intenta aplicarte un descuelgue sin haber pasado este procedimiento completo, la inaplicación es <strong>nula</strong> y puedes exigir las diferencias retroactivas mediante reclamación."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 702,
+          "cita": "Si tu empresa pretende inaplicar alguna cláusula, debe seguir el procedimiento del Art. 34 (descuelgue) con periodo de consultas y autoridad laboral; cualquier rebaja unilateral es nula y reclamable."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 0,
+      "razon": "El JSON determinista da enlaces.externos_oficiales = [] y el HTML lo confirma: la sección 'Fuentes oficiales' identifica boletín, número, fecha, edicto y artículo, pero no hay ni un enlace clicable; incluso el dominio del BOPZ aparece como texto plano seguido de la promesa de 'verificación independiente' que el lector no puede ejecutar con un clic.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 657,
+          "cita": "<strong>Boletín Oficial de la Provincia de Zaragoza (BOPZ)</strong> — bop.dpz.es — para consulta y verificación independiente."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 648,
+          "cita": "<strong>BOPZ Núm. 71, miércoles 29 de marzo de 2023</strong> — Resolución del Director General de Trabajo del Gobierno de Aragón que dispone el registro, depósito y publicación del Convenio Colectivo del Sector de Limpieza de Edificios y Locales de Zaragoza para los años 2022-2025. Edicto 806228."
+        }
+      ],
+      "parche": "Enlazar lo que ya está escrito: BOPZ nº 71 de 29-III-2023, edicto 806228, al PDF del edicto en bop.dpz.es, y el código 50000755011981 a https://expinterweb.mites.gob.es/regcon/ — este segundo es especialmente necesario porque toda la sección 'Histórico de renovaciones' se presenta como resultado de consultar el REGCON y hoy el lector no puede repetir esa consulta.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 3,
+      "razon": "Distingue sin ambigüedad tres capas temporales: la tabla 2025 como vigente en 2026, las dos mejoras con efecto diferido a 2026 y el histórico de convenios anteriores con sus fechas. Además fecha también los pluses, que es donde las fichas hermanas de limpieza dejan las cuantías flotando.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 336,
+          "cita": "<h2 id=\"pluses\">Pluses y complementos extrasalariales (tabla 2025)</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 313,
+          "cita": "<h2 id=\"cláusulas-diferidas\">Cláusulas diferidas que entran en vigor en 2026</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 2,
+      "razon": "Fecha concreta y coherente: 3-jun-2026 es posterior al único boletín que la ficha cita (BOPZ 71 de 29-III-2023) y a la denuncia de 2-oct-2025 que determina su estado. No llega a 3 porque el bloque de autoría no dice qué se cotejó: repite el boilerplate genérico sin nombrar el BOPZ ni el edicto, a diferencia de Metal Sevilla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 215,
+          "cita": "<strong>✓ Verificado</strong> contra BOPZ Núm. 71/2023 por SalarioJusto · última revisión 3 de junio de 2026"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 721,
+          "cita": "Esta ficha de convenio ha sido cruzada manualmente contra el texto íntegro del boletín oficial por el equipo de SalarioJusto."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 3,
+      "razon": "Es la única ficha del piloto que convierte la caducidad en un pronóstico comprobable: dice qué pasará (nuevo convenio), cuándo es razonable esperarlo, con qué base histórica, y qué NO va a pasar mientras tanto (las tablas no se actualizan solas). El lector sabe cuándo debe volver a mirar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 603,
+          "cita": "<td class=\"cat\">Convenio 2026+ (en negociación)</td><td>Probable Q1-Q2 2027</td><td>A determinar</td><td>—</td><td>Si se repite el patrón: publicación entre <strong>febrero y abril de 2027</strong></td>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 609,
+          "cita": "Mientras tanto, las tablas salariales <strong>NO se actualizan automáticamente</strong> en ultraactividad: la tabla 2025 (Anexo I del convenio actual) sigue siendo la vigente hasta que se publique el nuevo convenio o se acuerden actualizaciones provisionales en la mesa de negociación."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "5.7",
+      "detalle": "La ficha usa 16.576 € como SMI 2026. El real es 17.094 € brutos/año (RD 126/2026), de modo que el titular del callout es falso y en la dirección peligrosa: con el SMI real, Limpiador/a y Peón (16.926,95 €) también quedan por debajo del mínimo legal, así que no es 1 de 19 categorías sino al menos 2, y el colchón declarado de +350,95 € se convierte en un déficit de −167,05 €. La afirmación se apoya en el art. 27.1 ET, que no da esa cifra.",
+      "evidencia": {
+        "linea": 260,
+        "cita": "<strong>Solo 1 de 19 categorías queda bajo el SMI 2026 (16.576 €/año).</strong> La práctica totalidad del convenio cumple holgadamente el SMI: la categoría más baja del Personal Operario (Limpiador/a y Peón) cobra 16.926,95 € de bruto anual, 350,95 € por encima del mínimo."
+      }
+    },
+    {
+      "codigo": "5.7",
+      "detalle": "Misma cifra falsa repetida en el hero de la página, donde funciona como reclamo de calidad del convenio y es lo primero que lee cualquiera: 'Solo 1 de 19 categorías queda bajo SMI 2026'. También aparece en la nota al pie de la tabla salarial (línea 311, «La categoría de Aprendiz queda bajo el SMI 2026 (16.576 €/año)»), lo que deja al lector creyendo que solo Aprendiz necesita el complemento del art. 27.1 ET.",
+      "evidencia": {
+        "linea": 207,
+        "cita": "Subrogación robusta Art. 29 con cláusula especial para limpieza de aviones del Aeropuerto. Solo 1 de 19 categorías queda bajo SMI 2026."
+      }
+    }
+  ],
+  "observacion_libre": "Sin ventana de medición abierta (ultimo_commit 2026-07-30, 21 días): los parches son aplicables ya. Ficha con la mejor arquitectura de verdad del piloto en todo lo que no toca al SMI —histórico predictivo, normativas vs obligacionales, descuelgue, pluses fechados— y con el error de SMI incrustado justamente en su afirmación más vendida, la del hero. Corregir 16.576 → 17.094 obliga a rehacer el recuento del titular (pasa de '1 de 19' a al menos '2 de 19'), a reescribir el callout de la línea 260 y la nota de la 311, y a revisar la comparación con Bizkaia (0/24) que se apoya en el mismo umbral. Fuera de mi eje: la afirmación 'Junto con Bizkaia, Zaragoza tiene uno de los mejores ratios cumplimiento-SMI' entra en riesgo de 12.1 (contradicción entre fichas) si Bizkaia se calculó con el SMI correcto."
+}

@@ -1,0 +1,142 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-bizkaia",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Aporta tres cosas que no están en ningún boletín y las justifica: la aritmética de por qué la cláusula del IPC no se activó, la comparación de la póliza con el convenio de Construcción de la misma provincia, y un seguimiento de la negociación abierta con la plataforma sindical citada y fechada. Además publica la fórmula de su bruto anual.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 284,
+          "cita": "Cálculo del bruto anual: salario base × 425 días (365 año + 60 pagas extras) + Carencia de Incentivo y Plus de Convenio × 299 días (365 - 52 domingos - 14 festivos) + complemento garantizado si procede."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 578,
+          "cita": "La cobertura de Metal Bizkaia (28.000 € única para todos los supuestos) es entre 2 y 3 veces inferior. Es una asimetría notable entre dos sectores con riesgos físicos comparables"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 609,
+          "cita": "la primera reunión efectiva tuvo lugar el <strong>15 de enero de 2026</strong>, según informó <a href=\"https://ugteuskadi.net/empieza-la-negociacion-del-convenio-del-metal-de-bizkaia/\" target=\"_blank\" rel=\"noopener\">UGT-Euskadi</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Lo que afirma sobre la aplicación del convenio va anclado al artículo y a la norma (Art. 2 del convenio y art. 86.3 ET) e incluso cita el texto literal; no sube a 3 porque las cuantías se presentan como lo que cobra la categoría sin decir que son a jornada completa y sin advertir de que el complemento de salario mínimo garantizado es lo que sostiene a las cinco categorías más bajas hasta que se toca el suelo legal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 218,
+          "cita": "Conforme al mismo artículo (literalmente: <em>\"en tanto no se logre acuerdo expreso, se mantendrá en vigor todo su contenido normativo\"</em>) y al Art. 86.3 del Estatuto de los Trabajadores, todo el clausulado normativo sigue aplicándose sin discontinuidad."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 284,
+          "cita": "Las cinco categorías más bajas … alcanzan el suelo de 22.034,57 €/año mediante el Complemento de Salario Mínimo Garantizado (Art. 3.3)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 2,
+      "razon": "Lleva al documento exacto —PDF del edicto del BOB con su cve escrito al lado— y añade la nota sindical fechada que sostiene la sección de negociación; no llega a 3 porque no señala dentro del PDF el anexo de tablas del que salen las cuantías y no enlaza el registro REGCON ni el RD del SMI.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 614,
+          "cita": "<strong>Convenio íntegro 2022-2025</strong>: <a href=\"https://www.bizkaia.eus/lehendakaritza/Bao_bob/2023/05/11/III-99_cas.pdf\" target=\"_blank\" rel=\"noopener\">BOB Núm. 90 del 11 de mayo de 2023</a> (cve BOB-2023a090-(III-99))."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 214,
+          "cita": "Publicado en el Boletín Oficial de Bizkaia Núm. 90 del 11 de mayo de 2023 (cve BOB-2023a090-(III-99)) por resolución de la Delegada Territorial de Trabajo y Seguridad Social de Bizkaia."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "Rotula cada tabla y cada tarjeta como «2025-2026» y explica en la nota editorial por qué las cifras de 2025 son las que rigen en 2026 —el caso más difícil de fechar del sector, y lo resuelve—; pero pierde el 3 porque la sección de reclamación manda comparar la nómina con «la tabla 2026 del Anexo I», una tabla que la propia ficha dice que no existe.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 225,
+          "cita": "<div class=\"card-title\">Personal obrero 2025-2026 · €/año brutos</div>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 218,
+          "cita": "<strong>Convenio en ultraactividad — tablas 2025 vigentes en 2026 sin actualización.</strong>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 603,
+          "cita": "Compara tres meses consecutivos de nómina con la tabla 2026 del Anexo I para tu categoría."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 1,
+      "razon": "Hay fecha, pero el sello no dice contra qué se cotejó: nombra «el BOPV de la provincia», que ni es el boletín donde se publica este convenio (es el BOB) ni lleva número ni fecha de edicto. Y el determinista sitúa el último commit el 30-jul-2026, dos meses después de la revisión declarada, de modo que el lector no puede saber qué se comprobó ni cuándo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 194,
+          "cita": "<strong>✓ Verificado</strong> contra el BOPV de la provincia por SalarioJusto · última revisión 28 de mayo de 2026"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 625,
+          "cita": "Esta ficha de convenio ha sido cruzada manualmente contra el texto íntegro del boletín oficial por el equipo de SalarioJusto."
+        }
+      ],
+      "parche": "Reescribir el sello (línea 194) con el boletín correcto y el documento exacto: «✓ Verificado contra el texto del convenio 2022-2025 de la Industria Siderometalúrgica de Bizkaia (BOB núm. 90, 11-may-2023, cve BOB-2023a090-(III-99), código REGCON 48001985011981) y contra el acta de la Comisión Mixta de enero de 2026 que mantuvo las tablas de 2025 sin actualizar, por SalarioJusto · última revisión [fecha del último cotejo real, no la del último commit].» Y en el bloque «Quién audita esto» (línea 625) sustituir «el texto íntegro del boletín oficial» por «el BOB núm. 90 de 11-may-2023» y declarar que la columna de bruto anual es cálculo propio con la fórmula del pie de tabla.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 3,
+      "razon": "Es la única ficha del sector con una sección dedicada al después: dice que el convenio está denunciado, quién negocia, qué pide cada parte, desde cuándo, y qué debe hacer el lector hoy por si hay efectos retroactivos. Convierte la caducidad en una instrucción concreta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 608,
+          "cita": "<h2>Estado de la negociación del nuevo convenio 2026-202X</h2>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 610,
+          "cita": "Si el nuevo convenio incluye incrementos con efectos retroactivos al 1 de enero de 2026, se generarán atrasos liquidables. Es recomendable conservar todas las nóminas de 2026 sin destruir hasta que el nuevo convenio se publique."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "4.5",
+      "detalle": "Dos códigos REGCON distintos para el mismo convenio en la misma página. La ficha da 48001985011981 en los datos clave, en el bloque de fuentes, en la meta description, en el og:description y en el JSON-LD, y coincide con data/convenios/censo.json; pero en el paso final de la sección de reclamación da 48004245011982. Un lector que use ese segundo código en el registro no encuentra este convenio: la cadena se rompe justo en el punto donde se le pide que actúe.",
+      "evidencia": {
+        "linea": 607,
+        "cita": "Código REGCON del convenio: <code style=\"font-family:monospace;font-size:13px;\">48004245011982</code>."
+      }
+    }
+  ],
+  "observacion_libre": "Ficha de análisis excelente y de trazabilidad descuidada: es la que más trabajo propio enseña (fórmula del anual, comparación con Construcción Bizkaia, dossier de negociación) y a la vez la única cuyo sello nombra mal el boletín. El contraste importa porque el lector desconfiado empieza por el sello. Dos apuntes que no puntúo: (a) el pie de la tabla de dietas dice «Los valores mostrados son las cuantías base pactadas en 2023» bajo un encabezado «Cuantía 2025-2026» — es honesto y está explicado por la suspensión de la Comisión Mixta, pero roza la ambigüedad de fechado; (b) el determinista marca boilerplate_ratio 0,182, el más alto del sector, cosa del eje de originalidad, no de este."
+}

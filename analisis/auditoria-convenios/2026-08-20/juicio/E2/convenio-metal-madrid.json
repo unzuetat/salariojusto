@@ -1,0 +1,137 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-madrid",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 2,
+      "razon": "boilerplate_ratio 0,072 con 8 frases compartidas: cuatro son cromo (metodología, SMI, plazo, nómina desglosada) y las otras cuatro son legítimas del sector, pero dos de ellas son sustancia clonada literal con la ficha de Valencia —el aviso de que en la provincia hay dos convenios de metal y la regla para distinguirlos—. Es un buen párrafo, pero es el mismo párrafo en dos provincias distintas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 261,
+          "cita": "Si en tu empresa se fabrica, instala o repara, es este; si solo se vende, es el otro."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 455,
+          "cita": "La papeleta de conciliación es gratuita e interrumpe la prescripción."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "2.808 palabras de prosa contra ratio_tabla 0,129, y la prosa hace algo que la tabla no puede hacer sola: acreditar cuál de las dos tablas 2026 que circulan es la buena. Sin ese párrafo, la tabla de la página es una cifra más entre dos versiones oficiales contradictorias; con él, es la única defendible. Además la nota de lectura avisa de que en los grupos 5 y 7 la base de cálculo de complementos es diaria y no mensual, matiz sin el cual el lector calcula mal sus pluses.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 242,
+          "cita": "Si has buscado las tablas 2026 del metal de Madrid, puede que te hayas topado con dos versiones distintas en el BOCM. Conviene saber cuál es la válida, porque las cifras no coinciden."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 286,
+          "cita": "Para los grupos 5 y 7 la base de cálculo de complementos es diaria (26,46 € y 25,28 €); para el resto es mensual."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "103 frases exclusivas y 2.098 palabras exclusivas, y la exclusividad principal es un hallazgo, no una redacción: que el BOCM nº 56 adjuntó por error el anexo del Comercio del Metal a la resolución de la Industria y que el nº 59 lo corrigió cuatro días después. Eso solo se sabe si se leen las dos publicaciones y se comparan sus anexos. Con ese dato la ficha cambia de categoría: deja de transcribir y empieza a arbitrar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 244,
+          "cita": "por un error material adjuntó el anexo equivocado: el del convenio del Comercio del Metal (grupos I-V, 15 pagas). El BOCM nº 59 (11 de marzo de 2026) publicó una corrección de errores con el anexo correcto"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 430,
+          "cita": "La subrogación en este convenio no es general: opera específicamente en los servicios de gestión integral y energética de instalaciones eléctricas en vías y espacios públicos adjudicados en concursos públicos municipales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "4 clonadas de 6, pero entre las propias hay una que no puede existir en ninguna otra provincia del corpus —por qué hay dos tablas 2026 en el BOCM— y las clonadas se responden con el matiz de aquí (la de pagas se contesta contrastando con Valencia, no repitiendo «catorce»). La FAQ deja de ser un formulario y pasa a resolver la duda concreta que trae el lector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 496,
+          "cita": "¿Por qué hay dos tablas 2026 en el BOCM?"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 494,
+          "cita": "A diferencia del metal de Valencia, el de Madrid no tiene paga de marzo."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "Recoge la particularidad principal: es la provincia donde el metal ya no es fábrica sino instalación y servicio, y la ficha lo enseña con el ámbito ampliado en 2024 (drones, data centers, robótica) y con la subrogación del alumbrado público municipal, que no existe en ninguna otra ficha del cluster. Pero esos dos hallazgos van sueltos: nada en el texto dice que eso ES el metal de Madrid, así que la particularidad está recogida pero no organiza la página.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 254,
+          "cita": "centros de procesamiento y gestión de datos (data centers)"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 435,
+          "cita": "Existe un régimen específico para municipios de más de 300.000 habitantes en la Disposición Transitoria 3.ª."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "El boletín oficial es aquí precisamente el problema: publica dos anexos incompatibles bajo el mismo convenio. La página hace lo único que el PDF no puede hacer —decir cuál vale y por qué—, y lo documenta con número y fecha de las dos publicaciones. No es el boletín en HTML: es el boletín arbitrado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 246,
+          "cita": "transcribimos la tabla del anexo corregido, no la del publicado por error"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 3,
+      "razon": "Un agregador de nóminas que hubiera copiado el BOCM nº 56 estaría publicando ahora mismo las cifras del Comercio del Metal como si fueran las de la Industria. Que esta página avise de eso en el segundo bloque de la ficha es una ventaja que el lector percibe sin que se la expliquen, y es intransferible: no se puede replicar sin volver al boletín.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 195,
+          "cita": "Cifras verificadas contra el BOCM corregido (nº 59, 11-mar-2026)"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 426,
+          "cita": "Otros convenios del corpus complementan también la enfermedad común: aquí no. Conviene tenerlo claro antes de una baja."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (último commit 2026-07-30, 20 días según el determinista): no aplicar parches todavía. Es, junto con Zaragoza y Asturias, una de las tres fichas que justifican por sí solas la existencia del sitio: la corrección de errores del BOCM es exactamente el tipo de dato que ni el boletín ni el agregador dan. El escalón que le falta en 8.4 no es de redacción sino de encuadre: Madrid es la única provincia del cluster donde el metal es mayoritariamente instalación, mantenimiento y servicios técnicos —no fabricación—, y eso explica a la vez el ámbito ampliado a data centers y drones y la subrogación del alumbrado público. Convertir esa observación en el hilo conductor del bloque «¿Este convenio te cubre?» (una frase que diga qué proporción del sector madrileño es instalación frente a fábrica, con fuente estadística citable) cambiaría la ficha de «bien hecha» a «solo puede haberla escrito quien conoce Madrid». Nota menor para otro eje: la ficha comparte con Valencia dos párrafos literales sobre los dos convenios del metal; conviene que cada una lo escriba con su propia patronal y su propio código."
+}

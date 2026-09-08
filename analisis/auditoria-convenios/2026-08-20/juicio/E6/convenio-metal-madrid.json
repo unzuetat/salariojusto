@@ -1,0 +1,186 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-madrid",
+  "metricas": [
+    {
+      "id": "7.8",
+      "nota": 3,
+      "razon": "Sigue el canon completo y hace algo que ninguna de las otras ocho fichas del metal hace: su contenido exclusivo -que el BOCM publicó por error el anexo del Comercio del Metal y que la tabla buena es la corrección del nº 59- no está pegado al final ni resumido en una viñeta, sino que es la PRIMERA sección del cuerpo, se sostiene con la fuente exacta en el bloque de fuentes y se cierra con una FAQ. Lo mismo con el otro rasgo propio, el ámbito modernizado de 2024 (drones, data centers, robótica), que se desarrolla dentro de «¿Este convenio te cubre?» en vez de quedar como adorno. Una normalización de formato no se llevaría por delante nada valioso de esta ficha porque nada valioso vive en el apéndice.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 241,
+          "cita": "La tabla 2026 corregida: por qué esta es la buena"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 244,
+          "cita": "Qué pasó. El BOCM nº 56 (7 de marzo de 2026) publicó la resolución de la revisión salarial 2026 del convenio de Industria del Metal (código 28003715011982), pero por un error material adjuntó el anexo equivocado"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 255,
+          "cita": "Electrónica, informática y telecomunicaciones: circuitos, ordenadores y periféricos, fibra, redes, y centros de procesamiento y gestión de datos (data centers)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Particularidades del convenio del metal de Madrid» (438-447): seis de sus ocho viñetas rehacen secciones desarrolladas arriba -tabla corregida (244), 14 pagas sin paga de marzo (310 y 325), productividad del 1,5% (387), sistema de incentivos (403-409), complemento de IT solo por accidente (412-421) y ámbito modernizado (250-258)-, y la séptima, el marco supletorio estatal, ya está en Recursos (479) y en Fuentes (512). Solo la octava aporta algo nuevo: la prórroga anual salvo denuncia. Quien llega a ese punto de la página ya lo ha leído todo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 444,
+          "cita": "Complemento de IT solo por accidente de trabajo y enfermedad profesional (15% desde el día 11); no cubre la enfermedad común (Art. 47)."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 421,
+          "cita": "Importante. El convenio del metal de Madrid solo complementa la baja por accidente de trabajo y enfermedad profesional (un 15% desde el día 11), y deja fuera la enfermedad común y el accidente in itinere."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 447,
+          "cita": "Vigencia hasta el 31 de diciembre de 2026: después entra en prórroga anual salvo denuncia."
+        }
+      ],
+      "parche": "Suprimir el h2 «Particularidades» y su lista (438-448), y antes trasladar el dato que solo vive ahí al card de datos clave (línea 230), cambiando «Vigencia 2024-2026 (Art. 4)» por «Vigencia 2024-2026 (Art. 4) · prórroga anual salvo denuncia». Actualizar el índice de la línea 229, que enlaza a #particularidades.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "Orden razonable: el h1 lleva la horquilla 20.687-35.379 €, el card de datos clave está inmediatamente debajo y el índice salta a las tablas; respuesta_directa.cifra_en_primeros_bloques viene en true. No es 3 porque la tabla es el tercer h2 (264) y por delante van dos secciones de contexto -la del error del BOCM y la de ámbito-, de modo que quien entra buscando su grupo tiene que usar el índice o hacer scroll.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 194,
+          "cita": "Convenio del Metal de Madrid: tablas 2026 de 20.687 € a 35.379 €"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 264,
+          "cita": "Tablas salariales 2026 — todos los grupos"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "Dos duplicaciones de cuerpo a cuerpo. La primera y más llamativa: la advertencia de que este convenio no cubre a las empresas que solo venden se da dos veces con cuatro líneas de separación, primero como última viñeta de la lista y acto seguido como callout completo. La segunda: el relato del error del BOCM se cuenta entero en la sección de apertura y se vuelve a contar en la viñeta 440, además de la FAQ.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 257,
+          "cita": "NO te cubre si tu empresa se dedica solo a la venta de artículos metálicos en proceso exclusivo de comercialización: eso es el Comercio del Metal, con convenio propio y distinto."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 261,
+          "cita": "Ojo: en Madrid hay dos convenios de metal. El que estás leyendo es el de Industria, Servicios e Instalaciones (fabricación, montaje, instalación, reparación). Existe otro para el Comercio del Metal (venta y distribución), con tablas y estructura distintas."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 440,
+          "cita": "Tabla 2026 corregida en el BOCM nº 59 (11-mar-2026) tras un error material del BOCM nº 56: esta ficha usa la versión buena."
+        }
+      ],
+      "parche": "Eliminar la viñeta de la línea 257 y dejar solo el callout de la 261, que ya dice lo mismo mejor y con la regla práctica («si se fabrica, instala o repara, es este; si solo se vende, es el otro»). La lista de la sección queda entonces con seis viñetas de actividades cubiertas, sin la excepción metida a mitad de enumeración.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "Los tecnicismos propios del metal industrial se explican en su primer uso y con la consecuencia en dinero: «carencia de incentivos» se define por quién la cobra y con su cuantía (399), y el sistema de rendimiento se traduce en porcentajes concretos (el rendimiento correcto es un +12,5% sobre el mínimo y da un incentivo mínimo del 25%). El «Ejemplo aterrizado» de Nerea lleva esos conceptos a una nómina real. No sube a 3 y no baja a 1 porque el único término clave sin definir -qué es exactamente el «salario convenio» sobre el que se calculan la nocturnidad y la productividad- lo puntúo en 12.6 para no penalizar dos veces el mismo defecto.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 407,
+          "cita": "El rendimiento correcto se define como un +12,5% sobre el mínimo; al alcanzarlo, la persona percibe un incentivo mínimo del 25% de la retribución de convenio (Art. 12)."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 297,
+          "cita": "Nerea es profesional de oficio (Grupo 5). Su salario de grupo es de 1.590,26 €/mes en 14 pagas, es decir 22.263,68 € brutos al año."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 4 · UGT 4 y dice_los_sindicatos 0: las cuatro apariciones de cada sigla son como firmantes del convenio (card de datos clave, cierre del bloque de reclamar y bloque de fuentes) o como sede de asesoría, que son los usos legítimos; la ficha no pone en boca de dos siglas la voz de toda la representación. No es 3 porque la tarjeta de «Recursos oficiales y sindicales» ofrece asesoría solo a las dos firmantes y no dice nada a quien no está afiliado a ninguna de ellas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 237,
+          "cita": "FirmantesAECIM · CCOO Industria · UGT-FICA"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 476,
+          "cita": "Sindicatos firmantes. Asesoría a personas afiliadas del sector del metal en la Comunidad de Madrid."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es el del corpus: 1 h1, 18 h2, 6 h3 de FAQ y saltos_jerarquia vacío. Comparada con convenio-metal-sevilla (23 encabezados, 16 h2, 6 h3) tiene tres h2 más -incentivos, baja médica y subrogación-, pero son bloques sustantivos con contenido propio, no relleno, y el orden canónico se respeta punto por punto. Como sus cuatro hermanas de esta tanda, no lleva el bloque «En 30 segundos» de alava/asturias/barcelona/sevilla: usa en su lugar un h2 gancho, igual que el canon convenio-hosteleria-madrid, que tampoco lo tiene.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 403,
+          "cita": "Sistema de rendimiento e incentivos"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 254,
+          "cita": "En 30 segundos · Qué es."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 1,
+      "razon": "La ficha usa cuatro rótulos distintos para la base sobre la que se calculan los complementos y nunca dice si son la misma cifra: «salario de grupo» en la tabla y en el ejemplo, «salario convenio» en productividad y nocturnidad, «salario de convenio» en vacaciones y rendimiento, y «salario base» en el plus de tóxicos. El efecto es concreto: quien lee «25% sobre el salario convenio» y «20% del salario base» a dos líneas de distancia no puede saber si ese 25% se aplica sobre los 1.590,26 € de su grupo o sobre otra cosa, que es justo el cálculo por el que ha entrado en la página. jerga confirma que «salario de convenio» aparece sin explicación cerca.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 267,
+          "cita": "el salario de grupo mensual se percibe en 14 pagas (12 mensualidades + 2 extras)"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 379,
+          "cita": "20% del salario base por una circunstancia; 25% por dos; 30% por las tres."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 383,
+          "cita": "25% sobre el salario convenio para el trabajo entre las 22:00 y las 6:00."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 349,
+          "cita": "Se retribuyen con el salario de convenio más antigüedad, productividad y los conceptos habituales"
+        }
+      ],
+      "parche": "Unificar el rótulo y anclarlo a la tabla. Añadir como primer elemento de «Pluses y complementos» (antes de la tarjeta de la línea 378) una tarjeta: «Sobre qué se calculan estos pluses — El convenio llama salario convenio (o salario base de convenio) a la cuantía de tu grupo en la tabla, la misma que ves en la columna «Mensual (14 pagas)». Todos los porcentajes de este bloque se aplican sobre ella, salvo la jefatura de equipo, que se calcula sobre el salario de grupo mensual.» Y sustituir «salario base» de la línea 379 y «salario de convenio» de las 349 y 406 por «salario convenio», dejando un solo nombre en toda la página. Si el articulado distinguiera de verdad dos bases distintas, decirlo expresamente con el artículo que lo diferencia, en lugar de dejarlo implícito.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Capa 0, no puntuado aquí: 5 tablas sin scope ni caption (11.1*), verde_en_tablas = 0 -la ficha cumple la norma de cifras en tinta neutra- y parrafos.largos_100 vacío. Nota para otros ejes: la ficha es la única del cluster que documenta un error de publicación del boletín y declara qué versión transcribe (líneas 244 y 511); si alguna vez se normaliza el formato del corpus, ese bloque es exactamente el tipo de contenido que no puede desaparecer. Ventana de medición abierta (último commit 30-jul, 20 días): los parches van marcados como aplazados."
+}

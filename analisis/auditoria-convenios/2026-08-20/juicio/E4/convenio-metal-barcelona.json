@@ -1,0 +1,124 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-barcelona",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Es el mejor construido del sector y aun así se queda en 2. Arranca por la cifra, y es la única del cluster que usa la unidad que el lector ve en su nómina: el salario mensual del Anexo 1 del BOPB, no un anual derivado. Tiene sector, provincia y año. Lo que le impide el 3 es medible: 82 caracteres, el title más largo del sector después de Valencia, así que el buscador recorta por el final y se lleva la marca y parte del año; y la cifra elegida es la horquilla, no la del puesto más buscado —el Oficial de 1ª, 2.063,39 €/mes, que la ficha tiene identificado en su propio bloque de salarios más buscados.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 6,
+          "cita": "<title>1.980–2.578 €/mes — Tablas salariales Convenio Metal Barcelona 2026 | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 253,
+          "cita": "<p class=\"source-footer\">Fuente: Anexo 1 del BOPB del 13-feb-2026 (páginas 79 y 82 del texto oficial). El \"Salario Convenio/mes\" se paga durante 12 mensualidades."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 277,
+          "cita": "<strong>Salarios más buscados (2026):</strong> Oficial de 1ª mecánico/a o electricista = Grupo 5 = <strong>2.063,39 €/mes</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Cifra y motivo: horquilla mensual con el número de pagas —que es lo que evita el malentendido clásico— más el porcentaje aplicado, la cláusula de garantía IPC y el tamaño del convenio. Es la meta más corta del sector (261 caracteres) y aun así se pasa: la cifra entra justo en el límite de lo que se muestra, precedida por 'XX Convenio Colectivo Industria Siderometalúrgica de la provincia de Barcelona', un nombre largo que consume casi todo el espacio útil. Con la cifra delante sería un 3.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 7,
+          "cita": "Tablas 2026 del XX Convenio Colectivo Industria Siderometalúrgica de la provincia de Barcelona: 7 grupos profesionales de 1.979,76 a 2.578,30 €/mes en 14 pagas. +3% aplicado enero 2026. Cláusula garantía IPC 10%. 200.000 personas trabajadoras. BOPB 13-feb-2026."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "El h1 se vale solo con cifra, unidad, ámbito, año y hasta el mecanismo de subida, y el bloque de salarios más buscados empareja puesto, grupo y cuantía mensual con el año en la etiqueta: eso es lo mejor de la ficha para un extractor. No llega a 3 porque en ese mismo bloque ninguna frase repite la provincia —'Oficial de 1ª mecánico/a o electricista = Grupo 5 = 2.063,39 €/mes' viaja sin territorio— y porque la FAQ, que es donde vive la respuesta corta, no contiene ni una sola pregunta de cuantía: cuatro de sus seis respuestas no llevan cifra, según el determinista, y ninguna pregunta es '¿cuánto cobra un oficial de 1ª del metal en Barcelona?'.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 168,
+          "cita": "<h1>Convenio Metal Barcelona 2026: <em>de 1.980 € a 2.578 € al mes</em> con +3% aplicado enero y garantía IPC</h1>"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 277,
+          "cita": "<strong>Salarios más buscados (2026):</strong> Oficial de 1ª mecánico/a o electricista = Grupo 5 = <strong>2.063,39 €/mes</strong>. Encargado/a de taller = Grupo 4 = <strong>2.141,52 €/mes</strong>."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 589,
+          "cita": "<summary>¿A qué empresas y personas trabajadoras aplica el convenio?</summary>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.2",
+      "nota": 3,
+      "razon": "Es la única de las nueve que expone el dato como dato y no obliga a ninguna operación mental. La tabla da a la vez el mensual y el anual, y el pie declara la relación entre ambos ('Total anual = Salario Convenio × 14') y aclara que las extras son de la misma cuantía que la mensualidad: así, cualquiera de las dos celdas extraída sola llega con unidad, periodo y régimen de pagas. Y hace lo que ninguna otra hace con el riesgo de confusión que aquí es real: la tabla de 2025 no se mezcla ni se borra, se aísla en un desplegable rotulado como vigente en 2025 y con el año dentro del propio encabezado de columna, con su pie de fuente separado. Un motor no puede confundir la tabla histórica con la vigente porque están etiquetadas una a una.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 240,
+          "cita": "<th style=\"text-align:right;\">Total Anual (14 pagas)</th>"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 253,
+          "cita": "Total anual = Salario Convenio × 14."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 256,
+          "cita": "<summary>Ver tabla vigente en 2025 (Anexo 1 BOPB, aplicada +4% sobre 2024)</summary>"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 260,
+          "cita": "<tr><th>Grupo</th><th style=\"text-align:right;\">Salario Conv./mes 2025</th><th style=\"text-align:right;\">Total Anual 2025</th></tr>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "pct_huerfanas 0,017 es el mejor del sector (3 cifras de 181) y el HTML acompaña: cuatro pies 'Fuente:' colgados de la tabla que documentan, con anexo, boletín, fecha y hasta página, y 79 referencias a artículo repartidas por el cuerpo. Aun así no la subo a 3 por una razón concreta: la traza no es pinchable en la fuente. El único enlace externo de la ficha es un espejo del PDF alojado en la web de un sindicato, no el BOPB, así que quien quiera comprobarlo tiene que rehacer la búsqueda o fiarse de un tercero.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 253,
+          "cita": "<p class=\"source-footer\">Fuente: Anexo 1 del BOPB del 13-feb-2026 (páginas 79 y 82 del texto oficial)."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 272,
+          "cita": "<p class=\"source-footer\">Fuente: Anexo 1 del BOPB del 13-feb-2026, tablas 2025."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 213,
+          "cita": "Espejo oficial: <a href=\"https://ugtficabcn.cat/calaix/conveni/Conveni_col-lectiu_de_treball_del_sector_de_la_industria_siderometal-lurgica_de_la_provincia_de_Barcelona_per_als_anys_2025_2027_BOPB.pdf\" target=\"_blank\" rel=\"noopener\">texto íntegro BOPB en la web de UGT FICA Barcelona</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana cerrada (21 días desde el último commit), así que los parches son ejecutables. Dos cosas para el sintetizador. Primera: hay una microdiscrepancia real —el bruto anual del Grupo 5 aparece como 28.887,38 € en la tabla (línea 248) y como 28.887,46 € en el ejemplo de Carla (línea 291), ocho céntimos de diferencia entre la cifra del anexo y el resultado de multiplicar por 14—. No la elevo a hard-fail 4.5 porque anular una ficha entera por ocho céntimos sería desproporcionado, pero conviene cuadrarla: son dos respuestas distintas a la misma pregunta y quien cite la ficha elegirá una. Segunda: esta es la ficha del convenio con más personas cubiertas del sector (200.000) y no tiene ni una pregunta de cuantía en la FAQ. Es el hueco de captación más caro del cluster y se arregla añadiendo dos preguntas con el texto que ya existe en el bloque de salarios más buscados."
+}

@@ -1,0 +1,129 @@
+{
+  "eje": "E4",
+  "slug": "convenio-hosteleria-valencia",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Cumple: cifra al frente, sector, provincia y año, y la horquilla evita prometer un salario único en un convenio con tres tablas distintas. No llega a 3 por dos motivos concretos: a 97 caracteres el paréntesis y la marca caen fuera del recorte, y la horquilla no es la cifra del puesto que más se busca —en hostelería la consulta es 'camarero', que en esta ficha cobra 1.214,84 € y no aparece ni en el title ni en la meta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 6,
+          "cita": "<title>1.100–1.415 €/mes — Tablas salariales Hostelería Valencia 2026 (en ultraactividad) | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 313,
+          "cita": "<td>Camarero/a · Cocinero/a · Barman/Barwoman · Sumiller · Recepcionista · Repostero/a</td>\n            <td class=\"num\">1.214,84 €</td>"
+        }
+      ],
+      "parche": {
+        "descripcion": "No es obligatorio (nota 2), pero si se toca, la vía es cambiar la horquilla por el puesto de más volumen y recuperar los caracteres del paréntesis: 'Camarero/a 1.214,84 €/mes — Hostelería Valencia 2026: tablas' (60 caracteres). Con 4.216 impresiones y 3,87% de CTR a posición 7,2, es una ficha que rinde razonablemente: probar, no reescribir por sistema."
+      },
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Cumple lo esperado: arranca con la cifra dentro del recorte, explica en una línea por qué unas tablas de 2025 valen en 2026 —que es la objeción que frena el clic en un convenio decaído— y deja dentro las 15 pagas y la jornada. No llega a 3 porque a 249 caracteres la traza final (BOP Valencia núm. 26) queda fuera del recorte, igual que en Comercio Madrid.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 7,
+          "cita": "<meta name=\"description\" content=\"1.100,46 € a 1.415,47 €/mes según categoría. Tablas salariales del convenio de hostelería de Valencia 2026 en ultraactividad (art. 86.3 ET): cifras 2025 aplicables mientras se negocia. 15 pagas, jornada 1.794 h/año. BOP Valencia núm. 26, 07/02/2023.\">"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "La FAQ principal sí es autocontenida —cifras, pagas, boletín y la razón de la vigencia en una sola respuesta—, pero la frase donde la cifra aparece por primera vez, la del hero, depende por completo del h1 que tiene encima: dice la horquilla y el número de pagas y no dice ni el sector, ni la provincia, ni el año. Arrancada de la página no significa nada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 224,
+          "cita": "De <strong>1.100,46 €/mes</strong> (ayudantes, riders) a <strong>1.415,47 €/mes</strong> (jefaturas en hoteles 4-5★) según categoría, en <strong>15 pagas</strong>."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 873,
+          "cita": "Las tablas 2025 siguen aplicándose en 2026 por ultraactividad (art. 86.3 ET). Según el texto publicado en BOP Valencia núm. 26 del 7 de febrero de 2023, el salario base mensual mínimo es de <strong>1.100,46 €</strong> (Nivel V de restauración) y puede llegar hasta <strong>1.415,47 €</strong> en las categorías superiores de hoteles 4-5 estrellas."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El dato es extraíble: cada fila da nivel, puestos típicos, salario mensual y bruto anual, con la unidad dentro de la celda y el periodo en el encabezado. No llega a 3 porque los encabezados no distinguen entre las tres tablas —'Salario mes' significa una cosa en restauración y otra en hoteles de 4-5★— y porque el número de pagas, que es lo que hace interpretable el mensual, vive en un párrafo por encima y no en la tabla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 292,
+          "cita": "<th>Nivel</th>\n            <th>Puesto típico</th>\n            <th style=\"text-align:right;\">Salario mes</th>\n            <th style=\"text-align:right;\">Bruto/año</th>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 284,
+          "cita": "Salario base mensual bruto en 15 pagas (12 mensualidades + 3 extras de junio, navidad y marzo). Cifras oficiales publicadas en BOP Valencia núm. 26 del 7 de febrero de 2023."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.3",
+      "nota": 1,
+      "razon": "Los tres están, pero uno solo y en el sitio equivocado: el bloque de tablas se identifica una vez, en un card-title que dice 'Tablas salariales 2025', y de él cuelgan tres tablas hermanas cuyos únicos encabezados son 'Tabla I — Restaurantes…', 'Tabla II — Hoteles de 4 y 5 estrellas' y 'Tabla III — Hoteles de 3 estrellas…', sin provincia, sin sector y sin año. A eso se suma un desajuste que es una invitación a la atribución errónea: la unidad citable dice 2025 y el title, el h1 y la meta dicen 2026. Un motor tiene que resolver por su cuenta si 1.214,84 € es la cifra de 2025 o la vigente en 2026, y en esta ficha la respuesta correcta es 'las dos', algo que ninguna tabla explica.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 333,
+          "cita": "<h3 style=\"margin-top:22px;\">Tabla II — Hoteles de 4 y 5 estrellas</h3>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 283,
+          "cita": "<div class=\"card-title\" id=\"tabla-salarial\">Tablas salariales 2025 — Hostelería Provincia de Valencia</div>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 223,
+          "cita": "<h1>Convenio de <em>Hostelería</em> en Valencia 2026</h1>"
+        }
+      ],
+      "parche": {
+        "descripcion": "Que cada tabla se identifique a sí misma. Dos cambios pequeños: territorializar los tres h3 y darle a cada table un caption con ámbito, año de la tabla, año de aplicación y traza. Aplica igual a Tabla I (línea 286) y Tabla III (línea 379).",
+        "linea_objetivo": 333,
+        "texto_propuesto": "<h3 style=\"margin-top:22px;\">Tabla II — Hoteles de 4 y 5 estrellas · Hostelería de Valencia · tabla 2025 aplicable en 2026</h3>\n    <div style=\"overflow-x:auto;\">\n      <table class=\"tabla-salarios\">\n        <caption>Salario base mensual y bruto anual en 15 pagas — hoteles de 4 y 5 estrellas, convenio de Hostelería de la provincia de Valencia. Tabla 2025, aplicable en 2026 por ultraactividad (art. 86.3 ET). BOP Valencia núm. 26, 7-feb-2023.</caption>"
+      },
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "La traza acompaña al bloque de tablas —el párrafo inmediatamente anterior cita boletín, número y fecha— y en el articulado casi cada apartado cierra con su artículo. Pero no baja al nivel de tabla: las tres tablas salariales quedan cubiertas por una sola referencia situada por encima de la primera, de modo que la Tabla II y la Tabla III, si se extraen sueltas, viajan sin fuente. El determinista las lista a las dos en cifras.secciones_sin_fuente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 284,
+          "cita": "Cifras oficiales publicadas en BOP Valencia núm. 26 del 7 de febrero de 2023. Siguen aplicándose en 2026 por ultraactividad (art. 86.3 ET)."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 280,
+          "cita": "<p class=\"nota-pie\">Base: Arts. 1 (ámbito territorial), 2 (ámbito funcional) y 3 (ámbito personal) del XVII Convenio Intersectorial de Hostelería de Valencia.</p>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana cerrada (ultimo_commit 2026-07-30, 21 días): los parches se pueden ejecutar. Es la ficha con más tablas del piloto (20 según el determinista) y eso convierte su defecto en el más caro: cada tabla es una oportunidad de cita y ninguna se identifica a sí misma. El parche de 4.3 es mecánico y escala — el mismo caption sirve para las veinte. Un detalle que el sintetizador debería cruzar con E2/E5: tres preguntas de la FAQ viven dentro de un <details class=\"acordeon\"> plegado (línea 890), incluidas la de 'qué hago si mi empresa paga menos' y la de dónde consultar el texto oficial. Están en el JSON-LD, así que para la máquina existen, pero para el lector están escondidas; no lo puntúo porque el contenido sí está y la citabilidad no se resiente. Fuera de mi eje: el determinista declara un hard-fail 5.1 (74 de 169 cifras, el 44%, en secciones sin referencia a artículo, anexo o boletín) — es la peor densidad de traza del piloto y explica por qué mi 4.4 se queda en 2 pese a que el bloque principal sí está bien citado."
+}

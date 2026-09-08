@@ -1,0 +1,79 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-gipuzkoa",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Cifra, año y fuente están arriba —H1 con el rango 2026 y sello contra el BOG núm. 30 del 16-feb-2026—, y el segundo bloque baja enseguida al caso concreto del Oficial de 1.ª. Pero lo primero que ve el lector es un rango anual de 28.256 a 48.323 €, que en un convenio que no fija salario mensual es la cifra menos reconocible de todas: nadie del taller se identifica con «48.323 €/año», que es la ingeniería.",
+      "evidencia": [
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 205, "cita": "Convenio del Metal de Gipuzkoa : tablas 2026 de 28.256 € a 48.323 €"},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 213, "cita": "✓ Verificado contra el texto del convenio (BOG núm. 110, 08-jun-2023, código REGCON 20001095011981) y la revisión salarial 2026 (BOG núm. 30, 16-feb-2026, republicada íntegra el 4-mar-2026)"},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 253, "cita": "Por ejemplo, un Oficial de 1.ª tiene un valor hora de 18,522 € , que sobre 1.695 horas da 31.395 € brutos al año ."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 1,
+      "razon": "Solo responde 4 de las 8. Bien: la cifra del oficial de 1.ª, el ámbito con su frontera, las dos pagas de 30 días y el 20% de nocturnidad. Sin responder, cuatro: (1) «¿y eso cuánto es al mes?» —la ficha lo declara imposible en vez de resolverlo—; (2) «soy soldador, ¿qué categoría soy?» —79 denominaciones del boletín sin puente—; (3) «llevo 6 años, ¿cuánto de antigüedad me toca?» —el quinquenio es el 5% de la columna A, y la columna A no está publicada en ninguna de las diez tablas: solo se publica el valor hora y la retribución anualizada, que es A+B+C, así que el cálculo es literalmente imposible con lo que hay en la página—; (4) «trabajo media jornada, ¿cuánto me corresponde?» —y es el caso más doloroso del corpus, porque este convenio es el único que da valor hora, la herramienta exacta para responder esa pregunta, y no la usa—.",
+      "evidencia": [
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 491, "cita": "5% sobre el salario de la columna A por cada 5 años de servicio."},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 255, "cita": "El convenio estructura cada retribución en tres columnas: A (salario base), B (plus de convenio) y C (plus de carencia de incentivo, para las empresas sin sistema de primas). La suma es la retribución anualizada que ves en las tablas."},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 279, "cita": "Peón y especialista 16,670 €/h 28.255,65 €"}
+      ],
+      "parche": "Dos añadidos. (a) Bajo la tabla, tras la línea 424: «Si trabajas a tiempo parcial. Como el convenio fija el salario por valor hora, tu suelo se calcula directamente: valor hora de tu categoría × las horas que figuren en tu contrato. Media jornada sobre las 1.695 horas del convenio son 847,5 horas al año; un peón o especialista a 16,670 €/h cobraría 14.128 € brutos anuales, y un oficial de 1.ª a 18,522 €/h, 15.697 €. Las dos pagas extraordinarias y los pluses se perciben también en proporción a la jornada.» (b) En el bloque de antigüedad (línea 491), declarar el hueco en lugar de darlo por resuelto: «El convenio calcula el quinquenio sobre la columna A (salario base), que las tablas publicadas en el BOG no desglosan: la revisión salarial solo publica el valor hora y la retribución anualizada, que ya suma A + B + C. Para saber el importe exacto de tu quinquenio necesitas el Anexo I completo del convenio o pedirlo a la Comisión Mixta Interpretativa; en tu nómina debe figurar como concepto separado.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Camino de cinco pasos con lo esencial: encuadrarse por funciones reales, calcular (valor hora × 1.695 más quinquenios y pluses), exigir la nómina desglosada, la vía vasca (PRECO) y el plazo del art. 59.2 ET. Se queda en 2 porque lo que entrega es la guía genérica del kit, sin documento de reclamación, y porque el paso de cálculo remite al quinquenio de la columna A que la propia ficha no publica: el lector no puede completar la suma que se le pide.",
+      "evidencia": [
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 549, "cita": "Compara tu retribución anual con la tabla 2026 . Multiplica tu valor hora por 1.695 y súmale los quinquenios (5% de la columna A por tramo) y los pluses que te correspondan."},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 552, "cita": "Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 2,
+      "razon": "El ámbito funcional está resuelto en llano —siderurgia, fabricación de productos metálicos, talleres de mecanizado, calderería y soldadura— y declara la frontera con el Comercio del Metal de Gipuzkoa con enlace al convenio distinto. Lo que no resuelve es la otra mitad: las 79 categorías van con la denominación del boletín, y algunas son directamente opacas hoy (Calcador/a, Reproductor/a de planos, Práctico/a de topografía). Quien suelda, mecaniza o monta no encuentra su oficio en ninguna fila.",
+      "evidencia": [
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 266, "cita": "Es un convenio de industria, no de comercio. [...] Las empresas dedicadas solo a la venta de artículos metálicos se rigen por el convenio del Comercio del Metal de Gipuzkoa , que es distinto y tiene sus propias tablas."},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 263, "cita": "Personal de oficio, subalterno, administrativo y técnico de estas empresas: la clasificación profesional del convenio recoge más de 70 categorías, desde el peón hasta la ingeniería."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 1,
+      "razon": "La ficha explica que el convenio no fija salario mensual y ahí se detiene: no tiende ningún puente entre esa estructura y la nómina que la persona tiene delante, que sí es mensual. El CTA le pregunta si su nómina «coincide con el valor hora de su categoría», y en una nómina del metal guipuzcoano no aparece ningún valor hora: aparecen salario base, plus de convenio y carencia de incentivo, que son las columnas A, B y C que la ficha nombra pero no publica. Tampoco dice si el bruto anualizado se reparte en 12 o en 14 recibos, ni advierte de prorrateo, absorción o complementos absorbibles.",
+      "evidencia": [
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 251, "cita": "aquí el convenio no fija un salario mensual . Fija, para cada categoría, un valor hora y una retribución anualizada calculada sobre las 1.695 horas de trabajo efectivo que tiene el año (Art. 42)."},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 427, "cita": "¿Tu nómina coincide con el valor hora de tu categoría? Verifícalo ahora."},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 447, "cita": "Salvo acuerdo en contrario, no pueden prorratearse en las doce mensualidades."}
+      ],
+      "parche": "Añadir tras la línea 255 un bloque «Cómo se ve esto en tu nómina»: «Tu nómina no trae un valor hora: trae conceptos. El salario base es la columna A, el plus de convenio la B y la carencia de incentivo la C —esta última solo si tu empresa no tiene sistema de primas; si lo tiene, en su lugar verás el incentivo o la prima—. La suma de las tres es la retribución anualizada de la tabla. Como las dos pagas extraordinarias de 30 días no pueden prorratearse salvo acuerdo (Art. 43), lo normal es que cobres esa retribución en 14 recibos: divide la cifra anual de tu categoría entre 14 para saber qué debería sumar tu nómina ordinaria. Un oficial de 1.ª con 31.395 € anuales cobra en torno a 2.242 € brutos al mes, más quinquenios y pluses, que deben figurar como líneas separadas. Si tu empresa sí prorratea las extras por acuerdo, el bruto mensual sube pero el total del año debe ser el mismo.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "No disimula: declara la anomalía de la fuente —que la primera publicación del BOG omitía el acta y hubo republicación íntegra el 4-mar-2026, precisando que las tablas no cambiaron—, avisa de que el convenio se denuncia el 1-nov-2026 y de la ultraactividad posterior, y da el suelo real con su norma (SMI 2026, RD 126/2026, enlace al BOE). No llega a 3 porque hay un dato que sí falta y ese no se declara: la columna A, de la que dependen la antigüedad y las pagas extra, no está publicada en ninguna tabla y la ficha la usa tres veces como si el lector pudiera consultarla.",
+      "evidencia": [
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 607, "cita": "Revisión salarial 2026 , BOG núm. 30 (16-feb-2026), Resolución de 27-ene-2026, republicada íntegra el 4-mar-2026 (la primera publicación omitía el acta; las tablas no cambiaron)."},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 576, "cita": "1.221 €/mes y 17.094 € anuales (RD 126/2026). Consulta el SMI 2026"},
+        {"archivo": "convenio-metal-gipuzkoa.html", "linea": 543, "cita": "Vigencia hasta el 31 de diciembre de 2026 , con denuncia automática desde el 1 de noviembre de 2026 y ultraactividad posterior."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA ALGUIEN DEL METAL EN GIPUZKOA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial del metal en Gipuzkoa en 2026?»; (2) «¿y eso cuánto es al mes?»; (3) «trabajo en un taller de mecanizado en el Goierri, ¿me cubre este convenio?»; (4) «soy soldador, ¿en qué categoría de las 79 estoy?»; (5) «¿cuántas pagas tengo?»; (6) «llevo 6 años, ¿cuánto me toca de antigüedad?»; (7) «hago noches, ¿cuánto me pagan de más?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO: (1) sí (253 y FAQ 587); (2) NO —la ficha declara que el convenio no fija mensual y no ofrece la equivalencia—; (3) sí (258-266); (4) NO; (5) sí (435-447); (6) NO, imposible con lo publicado; (7) sí, 20% (495); (8) NO. Cuatro de ocho. — El hallazgo específico de esta ficha es la columna A fantasma: el texto explica que la antigüedad y las dos pagas extra se calculan sobre la columna A, y ninguna de las diez tablas publica la columna A. El lector tiene el valor hora y el anual, y no puede calcular ni su quinquenio ni el importe de sus pagas. No es un error de dato, es un hueco no declarado, y se arregla con un párrafo. — La otra ironía: es el único convenio del cluster con valor hora publicado, es decir, el único donde «trabajo media jornada, ¿cuánto me corresponde?» tiene respuesta aritmética inmediata, y es de las que menos lo aprovecha. — FUERA DE MI EJE: el determinista marca 11 cifras huérfanas repartidas en cuatro secciones, entre ellas la FAQ del oficial y la de las pagas. — VENTANA ABIERTA: 15 días desde el último commit, así que los dos parches (1.2 y 1.6) van marcados como aplazados."
+}

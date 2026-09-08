@@ -1,0 +1,230 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-bizkaia",
+  "metricas": [
+    {
+      "id": "7.8",
+      "nota": 1,
+      "razon": "Contenido exclusivo tiene de sobra y bien colocado —los quinquenios del 5% sin tope con su comparación contra Construcción Bizkaia, el régimen foral del IRPF con lo que implica para el neto, el estado real de la negociación del nuevo convenio—, pero no sigue el canon: es la única ficha del cluster sin índice de navegación, sin sección de ámbito («¿Este convenio te cubre?»), sin nota editorial fragmentada en sub-párrafos etiquetados y sin FAQ visible. Es el 1 de manual: aporta lo suyo a costa de no seguir el patrón, y el lector paga el precio en navegación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 524,
+          "cita": "Antigüedad sin tope — quinquenios del 5% ilimitados"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 578,
+          "cita": "Cobertura significativamente inferior a Construcción Bizkaia. El convenio de Construcción Bizkaia 2025-2027 establece indemnizaciones de 90.000 € por muerte/IPA/Gran Invalidez y 65.000 € por IPT."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 219,
+          "cita": "Índice del convenio"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 268,
+          "cita": "¿Este convenio te cubre?"
+        }
+      ],
+      "parche": "Añadir las tres piezas del canon que faltan, clonando metal-alava: (1) el <nav> «Índice del convenio» tras el sello, con las entradas Datos clave · Ultraactividad · Tablas personal obrero · Tablas técnico y administrativo · Pluses · Antigüedad · IT e indemnizaciones · Jornada · IRPF foral · Verificar nómina · Reclamar · Negociación 2026 · Fuentes; (2) un h2 «¿Este convenio te cubre?» delante de la primera tabla, con las actividades del Art. 1 del convenio (siderurgia y metalurgia, fabricación de productos metálicos, talleres y mantenimiento industrial, trabajo portuario de diques y muelles) y la frase de deslinde «Es un convenio de industria, no de comercio»; y (3) un h2 «Preguntas frecuentes» al final, sacando a la superficie las siete preguntas que ya existen en el JSON-LD (ver observación libre).",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 2,
+      "razon": "No hay bloque prescindible: es la única ficha del cluster sin el cajón final de «Particularidades» que reasume lo ya contado, y las trece secciones responden a preguntas distintas —incluida «Régimen IRPF foral de Bizkaia», que a primera vista parece contexto pero es lo que convierte el bruto de la tabla en el neto de la nómina. No es 3 porque «Cómo verificar si tu nómina cumple el convenio» y «¿Tu nómina no encaja con el convenio?» son dos secciones consecutivas sobre lo mismo que deberían ser una; lo penalizo en 8.3, no aquí.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 586,
+          "cita": "Régimen IRPF foral de Bizkaia (no estatal)"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 588,
+          "cita": "Una persona con el mismo bruto anual en Bilbao y en Santander (ambas ciudades del norte peninsular) percibirá distinta cantidad neta por la diferencia entre la escala foral vasca y la escala común con tramo autonómico cántabro."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 552,
+          "cita": "Particularidades del convenio del metal de Sevilla"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.2",
+      "nota": 3,
+      "razon": "Es la ficha del cluster que mejor ordena por lo que se busca: el h1 lleva dos cifras concretas (el mínimo garantizado y el Oficial 1ª), el card de datos clave está inmediatamente debajo y la primera tabla salarial —la del personal obrero, que es la mayoría de la plantilla— es el primer h2 de la página, sin ninguna sección de contexto por delante. Además, el párrafo que precede a la tabla explica en cinco líneas los cinco grupos y el mecanismo del complemento de mínimo garantizado, de modo que la tabla se puede leer sin saltar a ninguna otra parte. Lo accesorio (IRPF, verificación, negociación en curso) queda detrás.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 185,
+          "cita": "Convenio Metal Bizkaia 2026: salario mínimo garantizado 22.034 €/año, Oficial 1ª 23.509 €/año"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 221,
+          "cita": "Tabla salarial 2025-2026 — Personal obrero"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 222,
+          "cita": "El convenio organiza al personal en cinco grandes grupos profesionales: personal obrero (mayoría de la plantilla en planta y taller), personal subalterno (vigilantes, ordenanzas, conserjes), personal administrativo, personal técnico"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "Dos duplicaciones de cuerpo a cuerpo. La primera: el subtítulo del hero y el callout de ultraactividad cuentan la misma cláusula del IPC con el mismo número y casi las mismas palabras, a treinta líneas de distancia. La segunda, más costosa para el lector: «Cómo verificar si tu nómina cumple el convenio» y el primer paso de «¿Tu nómina no encaja con el convenio?» son dos versiones consecutivas de la misma instrucción —coger la nómina, sumar los conceptos fijos, compararlos con la tabla—, y la segunda además menciona conceptos que este convenio no tiene.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 186,
+          "cita": "La cláusula de actualización por IPC no se activó (sumatorio 2022-2025 ~14,5% no supera el 15% pactado)."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 218,
+          "cita": "La cláusula del Art. 3.1 que habría actualizado las tablas con efectos 1-ene-2026 (si la suma del IPC estatal 2022-2025 hubiera superado el 15% pactado) no se activó : el IPC sumatorio fue ~14,5%, por debajo del umbral."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 596,
+          "cita": "Coge tu nómina mensual y suma los conceptos salariales fijos (salario base, Carencia de Incentivo y Plus de Convenio en los días efectivamente trabajados, antigüedad por quinquenios si aplica)."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 603,
+          "cita": "Documenta la diferencia . Compara tres meses consecutivos de nómina con la tabla 2026 del Anexo I para tu categoría. Anota diferencias por concepto (salario base, plus de transporte, plus festivo, nocturnidad, antigüedad si aplica)"
+        }
+      ],
+      "parche": "Fundir las dos secciones en una sola bajo el h2 «¿Tu nómina no encaja con el convenio?», dejando la comprobación como paso 1 y eliminando el h2 «Cómo verificar si tu nómina cumple el convenio». El paso 1 pasa a ser: «<strong>Documenta la diferencia.</strong> Coge tres nóminas consecutivas y suma los conceptos salariales fijos: salario base, Carencia de Incentivo y Plus de Convenio por los días efectivamente trabajados, y la antigüedad por quinquenios si te corresponde. Compáralos con la tabla 2025-2026 de tu categoría. Si tu categoría es de las cinco más bajas, el \"Complemento de Salario Mínimo Garantizado\" debe aparecer como concepto separado en 12 mensualidades de igual cuantía.» Ese texto corrige de paso la enumeración de conceptos ajenos al convenio (ver observación libre). Y recortar el subtítulo del hero a: «Tablas 2025 vigentes en 2026 por ultraactividad del Art. 86.3 ET. Antigüedad por quinquenios del 5% ilimitados, jornada 1.708 h partida o 1.688 h continuada, 14 pagas, IRPF foral.»",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.6",
+      "nota": 1,
+      "razon": "«Ultraactividad», el término que sostiene toda la ficha, sí está explicado y con su consecuencia práctica encadenada. Pero «Carencia de Incentivo» y «Plus de Convenio» aparecen cuatro veces cada uno como componentes del bruto anual de la tabla y como conceptos que el lector debe buscar en su nómina, y en ninguna de las cuatro se dice qué son, quién los cobra ni cuánto valen — y tampoco figuran en la tabla de pluses, que sí detalla los doce restantes. La ficha manda comprobar en la nómina dos conceptos que no ha definido ni cuantificado: eso es jerga sin explicar en el punto exacto donde más cuesta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 218,
+          "cita": "Conforme al mismo artículo (literalmente: \"en tanto no se logre acuerdo expreso, se mantendrá en vigor todo su contenido normativo\" ) y al Art. 86.3 del Estatuto de los Trabajadores, todo el clausulado normativo sigue aplicándose sin discontinuidad."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 415,
+          "cita": "Las cifras mensuales reflejan únicamente el salario base; el bruto anual incluye además Carencia de Incentivo, Plus de Convenio, antigüedad por quinquenios si aplica y, en su caso, el Complemento de Salario Mínimo Garantizado."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 596,
+          "cita": "suma los conceptos salariales fijos (salario base, Carencia de Incentivo y Plus de Convenio en los días efectivamente trabajados"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 284,
+          "cita": "Cálculo del bruto anual: salario base × 425 días (365 año + 60 pagas extras) + Carencia de Incentivo y Plus de Convenio × 299 días (365 - 52 domingos - 14 festivos)"
+        }
+      ],
+      "parche": "Añadir dos tarjetas al principio de la tabla «Pluses, complementos y conceptos extrasalariales», antes de la de tóxico/penoso/peligroso, con la cuantía verificada en el BOB: «<strong>Plus de Convenio</strong> — cantidad diaria que el convenio suma al salario base y que se devenga por los 299 días laborables del año (365 menos 52 domingos y 14 festivos). Es fijo por categoría y ya está incluido en la columna de bruto anual de las tablas.» y «<strong>Carencia de Incentivo</strong> — cantidad diaria que cobra quien trabaja en una empresa sin sistema de primas o incentivos implantado; sustituye a lo que en otras empresas se percibe como prima de producción. Se devenga también por los 299 días laborables y ya está incluido en el bruto anual.» Si las cuantías 2025-2026 de ambos conceptos no están verificadas contra el BOB, dejar la explicación sin cifra antes que estimarla.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "Plural correcto y bien repartido: la tarjeta de asesoría nombra a las cinco organizaciones del sector incluyendo a ELA y LAB, que son las combativas del territorio, y las menciones de UGT-Euskadi son de fuente («según informó», «según la plataforma sindical publicada»), que es el uso legítimo. No es 3 porque la ficha nunca dice quién firmó realmente el convenio —lo despacha con «la representación sindical del sector»—, de modo que el lector no puede saber qué siglas lo suscribieron ni cuáles quedaron fuera, y esa es justamente la información que da sentido al plural.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 607,
+          "cita": "Si necesitas apoyo, FVEM, CCOO Industria, ELA, LAB y UGT-FICA prestan asesoría gratuita a personas afiliadas."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 214,
+          "cita": "Firmado el 23 de marzo de 2023 entre la representación patronal ( FVEM · Federación Vizcaína de Empresas del Metal) y la representación sindical del sector."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 609,
+          "cita": "la primera reunión efectiva tuvo lugar el 15 de enero de 2026 , según informó UGT-Euskadi ."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 1,
+      "razon": "Es, con metal-barcelona, el esqueleto más alejado del cluster, pero por defecto en vez de por exceso: 14 encabezados y 0 h3, frente a los 23-25 encabezados y 6 h3 de FAQ que comparten convenio-metal-sevilla, alava, gipuzkoa, navarra, madrid, valencia, zaragoza y asturias. No tiene índice, no tiene sección de ámbito, no tiene nota editorial en sub-párrafos etiquetados y —lo más llamativo— no tiene FAQ visible pese a llevar un FAQPage con siete preguntas en el JSON-LD: las respuestas existen para los buscadores y no para quien abre la página. Tampoco lleva el callout «Comparación con otras provincias del sector» que sí tienen 7 de las 9 fichas de metal, aunque en la práctica lo suple comparándose con Construcción Bizkaia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 185,
+          "cita": "Convenio Metal Bizkaia 2026: salario mínimo garantizado 22.034 €/año, Oficial 1ª 23.509 €/año"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 53,
+          "cita": "\"text\": \"El Art. 3.2 del Convenio Colectivo Sectorial de la Industria Siderometalúrgica de Bizkaia (REGCON 48001985011981) establece un salario bruto anual mínimo garantizado de 22.034,57 €/año"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 603,
+          "cita": "Preguntas frecuentes"
+        }
+      ],
+      "parche": "Sacar a la superficie el FAQPage que ya existe: crear un h2 «Preguntas frecuentes» antes de «Fuentes oficiales», con las siete preguntas del JSON-LD como h3 y sus respuestas recortadas a 2-4 líneas cada una (las del schema tienen entre 400 y 970 caracteres y no están escritas para leerse en pantalla). Es el cambio con mejor relación coste/efecto de esta ficha: el contenido está escrito, solo hay que darle cuerpo visible y así dejar de exponer un schema sin correlato en la página.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 1,
+      "razon": "El sello de verificación dice que la ficha está cruzada contra «el BOPV de la provincia», y las fuentes dicen que la publicación oficial es el BOB. No son dos nombres del mismo boletín: el BOPV es el Boletín Oficial del País Vasco y el BOB el Boletín Oficial de Bizkaia, que es donde efectivamente se publicó el convenio, como confirman el card de datos clave y el enlace de fuentes. La norma de casa es precisamente esa —forales BOB/BOG, provinciales BOP— y aquí la línea más visible de la ficha la incumple. Además el sello dice «de la provincia» donde el resto del cluster nombra el boletín y su número.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 194,
+          "cita": "✓ Verificado contra el BOPV de la provincia por SalarioJusto · última revisión 28 de mayo de 2026"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 212,
+          "cita": "Publicación oficial BOB 90, 11 may 2023"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 614,
+          "cita": "Convenio íntegro 2022-2025 : BOB Núm. 90 del 11 de mayo de 2023 (cve BOB-2023a090-(III-99))"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 215,
+          "cita": "✓ Verificado contra el texto del convenio (BOTHA núm. 147, 23-dic-2022, código 01001185011981; corrección de errores en BOTHA núm. 13, 1-feb-2023) y las tablas salariales 2026 (BOTHA núm. 18, 11-feb-2026), por SalarioJusto"
+        }
+      ],
+      "parche": "Sustituir la línea del sello por: «<strong>✓ Verificado</strong> contra el texto del convenio (BOB núm. 90, 11-may-2023, cve BOB-2023a090-(III-99), código REGCON 48001985011981) por SalarioJusto · última revisión 28 de mayo de 2026». Y revisar el resto de la página para que «BOPV» solo aparezca donde de verdad se cita el Boletín Oficial del País Vasco (el acuerdo PRECO del 4-abr-2000, línea 618).",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "4.5",
+      "detalle": "Dos códigos REGCON distintos para el mismo convenio en la misma página. El card de datos clave, el JSON-LD y el bloque de fuentes dan 48001985011981; el pie del bloque de reclamar da 48004245011982. Quien copie el código del bloque de reclamar —que es justamente el punto donde la ficha le pide que lo use para reclamar— busca en REGCON un convenio distinto del que acaba de leer.",
+      "evidencia": {
+        "linea": 607,
+        "cita": "Código REGCON del convenio: 48004245011982 ."
+      }
+    }
+  ],
+  "observacion_libre": "Capa 0 (no puntuado aquí): 84 celdas de tabla en verde —es la ficha del corpus que más incumple la norma de cifras en tinta neutra, junto con metal-barcelona—, 4 tablas sin scope ni caption y 2 bloques de más de 100 palabras (líneas 217 y 584). Fuera de mi eje, dos avisos para quien audite verdad y cifras: (1) el paso 1 del bloque de reclamar (línea 603) manda comparar «plus de transporte, plus festivo» y remite a «la tabla 2026 del Anexo I», y ninguna de las tres cosas existe en este convenio —ni hay plus de transporte ni plus festivo en la tabla de pluses, ni la ficha titula sus tablas como «2026» sino como «2025-2026»—: parece texto arrastrado de la plantilla de otro sector, y el parche de 8.3 lo corrige de paso; (2) el sello es también el más pobre del cluster en trazabilidad (sin número de boletín ni fecha de publicación). La ficha no está en ventana de medición (último commit del 30-jul), así que sus parches son aplicables ya."
+}

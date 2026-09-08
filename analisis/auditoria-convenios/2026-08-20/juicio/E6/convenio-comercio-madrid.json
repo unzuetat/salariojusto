@@ -1,0 +1,252 @@
+{
+  "eje": "E6",
+  "slug": "convenio-comercio-madrid",
+  "metricas": [
+    {
+      "id": "7.2",
+      "nota": 2,
+      "razon": "tablas.verde_en_tablas = 0 en las cuatro tablas salariales y la ficha ni siquiera define la regla td.sal en verde que arrastran limpieza-asturias y limpieza-zaragoza: las cifras van en tinta neutra. No es 3 porque el verde no queda reservado al sello — las etiquetas de la nota editorial también lo llevan.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 94,
+          "cita": ".nota-editorial strong{color:var(--green);}"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 173,
+          "cita": "<strong>✓ Verificado</strong> contra BOCM Núm. 183/2025 por SalarioJusto · última revisión 13 de agosto de 2026"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.4",
+      "nota": 1,
+      "razon": "La nota editorial tiene las cuatro etiquetas temáticas correctas (Qué es · Estructura · Novedades · Futuro) pero va en un único bloque de texto corrido: los <strong> están incrustados en la misma línea, no abren sub-párrafo. Comparada con la de metal-sevilla, que usa cuatro <p>, esta es exactamente el ladrillo que la norma de casa quiere evitar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 196,
+          "cita": "<div class=\"nota-editorial\">"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 197,
+          "cita": "<strong>En 30 segundos. Qué es.</strong> El Convenio del Comercio Vario de la Comunidad de Madrid (código 28000805011982) regula el comercio mayorista y minorista de especialidades varias que no encajan en otro convenio del sector. <strong>Estructura.</strong> 10 grupos profesionales"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 254,
+          "cita": "<p style=\"margin-bottom:10px;\"><strong>En 30 segundos · Qué es.</strong>"
+        }
+      ],
+      "parche": "Envolver cada etiqueta en su propio párrafo, como en metal-sevilla, sin tocar el texto: <div class=\"nota-editorial\"><p style=\"margin-bottom:10px;\"><strong>En 30 segundos · Qué es.</strong> El Convenio del Comercio Vario de la Comunidad de Madrid (código 28000805011982) regula el comercio mayorista y minorista de especialidades varias que no encajan en otro convenio del sector.</p><p style=\"margin-bottom:10px;\"><strong>Estructura.</strong> 10 grupos profesionales (del I al VI, con el III subdividido en niveles A-D), en 15 pagas; el/la dependiente/a queda en el Grupo II-B.</p><p style=\"margin-bottom:10px;\"><strong>Novedades.</strong> Jornada reducida a 37,5 h/semana (1.711 h/año) desde el 1 de enero de 2026, y un <strong>permiso climático retribuido</strong> por alertas AEMET naranja o roja — poco habitual en la negociación colectiva.</p><p style=\"margin:0;\"><strong>Futuro.</strong> Subidas del IPC del año anterior con mínimo y máximo garantizado del 3% cada año hasta 2028.</p></div>",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "7.5",
+      "nota": 3,
+      "razon": "Un solo h1, saltos_jerarquia = [] y —esto es lo que ninguna otra ficha del piloto consigue— los encabezados llevan la cifra dentro: el h1 arranca con el salario y los siete h3 de pluses son literalmente el ejemplo que pide la norma («Plus de transporte — 96,56 €/mes»). Leídos en fila, los encabezados ya son un resumen del convenio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 165,
+          "cita": "<h1>Convenio Comercio Madrid 2026: un/a dependiente cobra <em>1.198,87 €/mes</em> en 15 pagas</h1>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 316,
+          "cita": "Plus de transporte — 96,56 €/mes"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 336,
+          "cita": "Antigüedad — 5% por cuatrienio"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.8",
+      "nota": 2,
+      "razon": "Sigue el canon de Madrid en lo esencial (sello, datos clave, ámbito, tabla, pluses, FAQ, marco legal, quién audita) y su contenido exclusivo —el permiso climático del Art. 95 y los ascensos automáticos de la Disp. Ad. 4ª— está integrado como sección propia en la primera mitad, no pegado al final. No llega a 3 porque le faltan dos piezas que el canon sí tiene: índice de navegación y bloque comparativo con otras provincias del sector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 302,
+          "cita": "Permiso climático retribuido — Art. 95"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 813,
+          "cita": "<h2>Valencia frente a otras provincias del sector</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 2,
+      "razon": "No hay bloque prescindible: las 10 secciones h2 responden a preguntas distintas y ninguna es relleno de contexto. No es 3 porque «Solución de conflictos» y «Comisión Paritaria» dicen casi lo mismo (a dónde acudir) en dos h3 consecutivos dentro de «Marco legal y contactos» y podrían fundirse en uno.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 429,
+          "cita": "Comisión Paritaria"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 432,
+          "cita": "Solución de conflictos"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.2",
+      "nota": 3,
+      "razon": "Es el mejor orden del piloto: la cifra está en el h1, se repite completa en el párrafo de respuesta directa antes de cualquier contexto, y la tabla salarial es el segundo h2 de la página (línea 213 de un documento que termina en la 444). Lo accesorio —marco legal, partes firmantes, paritaria— va al final. Ninguna sección de contexto se interpone entre el lector y su cifra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 179,
+          "cita": "Un/a dependiente/a del convenio de Comercio Vario de la Comunidad de Madrid (Grupo II, Nivel B) cobra en 2026 un salario base de <strong>1.198,87 €/mes</strong>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 213,
+          "cita": "<h2 id=\"tablas\">Tabla salarial — 10 grupos × 15 pagas</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "La primera FAQ reproduce casi palabra por palabra el párrafo de respuesta directa, incluida la enumeración de categorías equivalentes. Es la redundancia menos justificable porque las dos versiones están en la misma página y ninguna añade nada sobre la otra. El ascenso automático de la Disp. Ad. 4ª también se cuenta dos veces, en el cuerpo y en la FAQ.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 179,
+          "cita": "La misma cifra corresponde a cajero/a, oficial/a administrativo/a, viajante y mozo/a especializado/a."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 396,
+          "cita": "Un/a dependiente/a (Grupo II, Nivel B) cobra <strong>1.198,87 €/mes</strong> de salario base, es decir <strong>17.982,98 € brutos al año</strong> en 15 pagas. La misma cifra corresponde a cajero/a, oficial/a administrativo/a, viajante y mozo/a especializado/a."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 362,
+          "cita": "Además, el auxiliar de caja y el ayudante de vendedor pasan automáticamente a cajero/a y dependiente/a vendedor/a al cumplir <strong>2 años de antigüedad</strong>"
+        }
+      ],
+      "parche": "Dejar la FAQ como respuesta corta que no reproduzca el párrafo de arriba, y aprovecharla para lo que el cuerpo no dice: «Un/a dependiente/a está en el Grupo II, Nivel B: <strong>1.198,87 €/mes</strong> en 15 pagas (<strong>17.982,98 € brutos al año</strong>). Sobre esa base se suman el plus de transporte (96,56 €/mes, que se cobra 12 meses) y la antigüedad consolidada, si la tienes. → <a href=\"#tablas\">Ver la escala completa por grupo</a>.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "jerga solo detecta «comisión paritaria», con explicacion_cerca = true, y en el HTML la explicación explica de verdad: dice quién la compone, dónde está y para qué sirve. No es 3 porque no traduce a bolsillo qué gano yo acudiendo a ella frente a ir al juzgado. La ficha tampoco necesita glosar ultraactividad ni subrogación: el convenio está vigente hasta 2028 y no las menciona.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 430,
+          "cita": "Composición: 6 representantes sindicales (3 CCOO + 3 UGT) y 6 empresariales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 5 · UGT 6 y norma.dice_los_sindicatos = 1: las menciones son de firmantes y de composición de la paritaria, es decir uso como fuente de un dato, que la norma admite. No es 3 porque cuando el texto habla de la representación en abstracto —a quién acudir— vuelve a nombrar solo esas dos siglas, sin abrir a la representación real del comercio madrileño.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 193,
+          "cita": "Suscrito el 18 de junio de 2025 por COPYME, UGT y CCOO."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 430,
+          "cita": "Composición: 6 representantes sindicales (3 CCOO + 3 UGT) y 6 empresariales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "11.1",
+      "nota": 1,
+      "razon": "tablas.sin_th = 0 (las cuatro tablas tienen encabezado) pero sin_scope = 4 y sin_caption = 4: un lector de pantalla anuncia las celdas sin saber a qué columna pertenecen y llega a la tabla sin saber de qué año es. En una ficha cuyas cuatro tablas son la misma escala repetida para 2025, 2026, 2027 y 2028, el caption no es un adorno: es lo único que las distingue al oído.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 224,
+          "cita": "<table"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 236,
+          "cita": "<tr><td>I — Ayudante ventas · Aux. caja · Reponedor/a</td><td class=\"num\">1.123,82</td><td class=\"num\">16.857,26</td></tr>"
+        }
+      ],
+      "parche": "Añadir a cada una de las cuatro tablas un caption que la identifique y scope en los th: «<caption style=\"caption-side:top;text-align:left;font-size:13px;color:var(--ink-light);padding-bottom:8px;\">Tabla salarial 2026 del Comercio Vario de Madrid: salario base mensual y bruto anual en 15 pagas, por grupo profesional (BOCM Núm. 183/2025).</caption>» y «<th scope=\"col\">Grupo profesional</th><th scope=\"col\">Salario base (€/mes)</th><th scope=\"col\">Bruto anual 15 pagas (€)</th>», cambiando el año en cada una.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es el del corpus: hero con badge, sello eeat, card de datos clave, nota editorial, ámbito, tabla, pluses, FAQ, marco legal, quién audita y bloque de enlaces. La única desviación estructural es que sus tablas no van en contenedor de scroll (tablas.sin_contenedor_scroll = 4), pero eso es coherente porque su estrategia móvil es reflow-a-tarjetas, igual que hosteleria-madrid.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 437,
+          "cita": "Quién audita esto"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 186,
+          "cita": "<div class=\"card-title\">Datos clave</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 1,
+      "razon": "La misma categoría del Grupo I aparece con tres nombres distintos en tres sitios de la página —«ayudante de ventas» en la respuesta directa, «Ayudante ventas» en las cuatro tablas y «ayudante de vendedor» / «Ayudante de Vendedor» en el cuerpo y la FAQ—, y el último rompe además la norma de inclusivo que el resto de la ficha cumple escrupulosamente («dependiente/a vendedor/a», «cajero/a», «Reponedor/a»). Quien busque su categoría en la tabla no sabrá si es la misma que la de la FAQ.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 179,
+          "cita": "(Grupo I: ayudante de ventas, auxiliar de caja, reponedor/a) … una etiqueta heredada que la distingue del ayudante de vendedor del Grupo I."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 236,
+          "cita": "I — Ayudante ventas · Aux. caja · Reponedor/a"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 415,
+          "cita": "<h3>Soy Auxiliar de Caja / Ayudante de Vendedor, ¿asciendo?</h3>"
+        }
+      ],
+      "parche": "Unificar en la forma inclusiva del boletín, «ayudante de vendedor/a», en los tres sitios: en la tabla «I — Ayudante de vendedor/a · Auxiliar de caja · Reponedor/a», en la respuesta directa «(Grupo I: ayudante de vendedor/a, auxiliar de caja, reponedor/a)» y en la FAQ «<h3>Soy auxiliar de caja o ayudante de vendedor/a, ¿asciendo?</h3>».",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Es la ficha mejor construida del piloto en lo formal: encabezados con cifra, respuesta directa arriba, cero verde en tablas. Su único defecto de forma serio es la nota editorial sin fragmentar, que llama la atención porque es la ficha más nueva del piloto (operacion.dias_desde_commit = 1) y porque metal-sevilla, del mismo mes, ya la trae troceada: el patrón bueno existe y no se ha aplicado aquí. Todos los parches quedan aplazados por ventana de medición abierta. Fuera de mi eje: la ficha publica cuatro tablas anuales (2025-2028) y solo la de 2026 se etiqueta en el h2, lo que puede confundir sobre qué año está vigente — es un asunto de verdad, no de forma."
+}

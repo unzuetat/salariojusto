@@ -1,0 +1,186 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-valencia",
+  "metricas": [
+    {
+      "id": "7.8",
+      "nota": 2,
+      "razon": "Sigue el canon entero y su contenido exclusivo -la paga de marzo de 17 días- está integrado en el cuerpo de la mejor manera posible: da título a la ficha, abre el cuerpo con sección propia, aparece en la tabla de pagas, se compara con otras provincias y se convierte en euros dentro del ejemplo aterrizado. No llega a 3 por dos rasgos propios mal colocados: el complemento «ex categoría profesional», que es una singularidad valenciana con efecto directo en la nómina de quien lleva años en la empresa, sobrevive como coletilla suelta al pie de la tabla y no tiene tarjeta en Pluses; y el único dato de contacto de la Comisión Paritaria (sede, dirección y correo) vive en el cajón final, a treinta líneas del paso de reclamación donde se le dice al lector que acuda a ella.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 240,
+          "cita": "La paga de marzo: una tercera gratificación de 17 días"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 321,
+          "cita": "Existe un complemento \"ex categoría profesional\" para quienes a 31-12-2000 cobraban un salario superior al del grupo al que quedaron adscritos: es una garantía personal no absorbible, que sube cada año como el convenio."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 479,
+          "cita": "Comisión Paritaria con sede en FEMEVAL (Avda. Blasco Ibáñez 127, Valencia · cpmetalindustria@femeval.es), reuniones mensuales y acuerdos por unanimidad (Arts. 77-83)."
+        }
+      ],
+      "parche": "Dos movimientos. (1) Convertir el «ex categoría» en tarjeta dentro de «Pluses y complementos» (junto a la tarjeta de turnicidad de las líneas 417-418): «Complemento ex categoría profesional — Si a 31-12-2000 cobrabas más que el salario grupo al que te adscribieron, la diferencia se conserva como complemento personal: no es absorbible ni compensable y sube cada año como el convenio. Comprueba que sigue apareciendo como concepto propio en tu nómina.» (2) Llevar la sede y el correo de la Comisión Paritaria al paso 4 de «¿Cobras menos de lo que fija tu grupo?» (línea 487), que es donde se usan.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Particularidades del convenio del metal de Valencia» (471-479): seis de sus siete viñetas rehacen lo ya desarrollado arriba -paga de marzo (240-248), plus de formación (421-422 y FAQ 531), sistema de incentivos (434-441), plus de tóxicos con opción de reducir jornada (410), jornada flexible de 135 h (366) y marco estatal supletorio, que además ya está en Recursos (511) y en Fuentes (544)-. La única viñeta con información propia es la de la Comisión Paritaria, y su sitio natural es el paso de reclamación, no un cajón al final.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 474,
+          "cita": "Plus compensatorio de formación de 30 €/mes si la empresa no acredita plan formativo (Art. 71)."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 422,
+          "cita": "La empresa que no acredite la participación de su plantilla en un plan de formación debe abonar 30 €/mes de naturaleza salarial. O forma, o paga."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 479,
+          "cita": "Comisión Paritaria con sede en FEMEVAL (Avda. Blasco Ibáñez 127, Valencia · cpmetalindustria@femeval.es)"
+        }
+      ],
+      "parche": "Suprimir el h2 «Particularidades» y su lista (471-480) tras reescribir el paso 4 de la línea 487 así: «Acude a la Comisión Paritaria o a la vía extrajudicial. La Comisión Paritaria del convenio tiene su sede en FEMEVAL (Avda. Blasco Ibáñez 127, Valencia · cpmetalindustria@femeval.es), se reúne mensualmente y sus acuerdos se adoptan por unanimidad (Arts. 77-83). El convenio se adhiere además al VII Acuerdo de Solución Autónoma de Conflictos Laborales de la Comunitat Valenciana (ASAC-CV). La papeleta de conciliación ante el SMAC es gratuita e interrumpe la prescripción.» Actualizar el índice de la línea 219.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "Orden razonable pero con una decisión discutible: es la única ficha del cluster cuyo h1 no lleva la cifra -apuesta por el gancho editorial, «la paga de marzo que casi nadie conoce»-, de modo que la horquilla 22.462-36.615 € queda relegada al subtítulo. El card de datos clave y el índice compensan (respuesta_directa.cifra_en_primeros_bloques viene en true) y la tabla es el tercer h2, como en las hermanas. No baja de 2 porque nadie queda atrapado en el contexto, pero tampoco sube: quien llega buscando «cuánto cobra un peón del metal en Valencia» no ve la cifra en el titular.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 194,
+          "cita": "Convenio del Metal de Valencia: la paga de marzo que casi nadie conoce"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 195,
+          "cita": "Tablas 2026 (+2,5%) de 22.462 € (Peón) a 36.615 € (Ingeniería), jornada de 1.752 h"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "Duplicación de cuerpo a cuerpo dentro de la misma sección: la advertencia de que el convenio no cubre a las empresas que solo venden se da como última viñeta de la lista y se repite completa cuatro líneas después en un callout. Además, la paga de marzo se narra entera en la sección de apertura y se vuelve a narrar en la viñeta del cajón (473) y en la FAQ (526), siempre con el mismo artículo y los mismos 17 días.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 260,
+          "cita": "NO te cubre si tu empresa se dedica solo a la venta de artículos metálicos: eso es el Comercio del Metal, que tiene convenio provincial propio y distinto."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 264,
+          "cita": "Ojo: en Valencia hay dos convenios de metal. El que estás leyendo es el de Industria (fabricación, instalación, reparación). Existe otro para el Comercio del Metal (venta y distribución de artículos metálicos), con tablas y condiciones distintas."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 473,
+          "cita": "Paga de marzo de 17 días (Art. 16), además de las dos extras: la condición más singular."
+        }
+      ],
+      "parche": "Eliminar la viñeta de la línea 260 y dejar solo el callout de la 264, que dice lo mismo y añade la regla práctica («si se fabrica, instala o repara, es este; si solo se vende, es el otro»). La lista queda con seis viñetas de actividades cubiertas, sin la excepción intercalada.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "Los términos que mueven la nómina se explican al primer uso y se traducen a dinero: el plus de formación se resume en «o forma, o paga» con sus 30 €/mes, la paga de marzo se explica con su base de cálculo y su prorrateo, y el ejemplo de Marcos convierte turnicidad y penosidad en porcentajes sobre un bruto concreto. No es 3 porque el bloque de incentivos suelta «sistema centesimal» y «Bedaux» sin explicar qué son ni qué suponen en euros -y son justo los sistemas que deciden cuánto cobra de prima el personal de oficio-, y porque «plus convenio» aparece una única vez, como componente de la paga de vacaciones, sin figurar en la lista de pluses ni definirse en ningún sitio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 437,
+          "cita": "El rendimiento normal se fija en 100 (sistema centesimal) o 60 (Bedaux); el óptimo teórico en 133 (centesimal) u 80 (Bedaux)."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 383,
+          "cita": "Se retribuyen conforme a la media de las 14 últimas semanas (salario, primas, antigüedad, tóxicos/penosos/peligrosos y plus convenio)."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 422,
+          "cita": "O forma, o paga."
+        }
+      ],
+      "parche": "Añadir una frase al final del bloque de incentivos (tras la línea 440): «Qué significa en euros: el rendimiento normal se paga con tu salario grupo y el óptimo llega a multiplicarlo por 1,20. Para un Oficial/a de 1.ª de oficio (49,55 €/día), trabajar al óptimo supone unos 9,91 € más por día trabajado. Centesimal y Bedaux son solo dos formas de medir esa actividad: en el primero el rendimiento normal es 100 y en el segundo, 60.» Y en la línea 383, sustituir «plus convenio» por el nombre que el propio convenio use en el Art. 51, o suprimirlo si es el mismo salario grupo ya citado al inicio de la enumeración.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 4 · UGT 4 y todos los usos son legítimos: firmantes del convenio en el card de datos clave, en el cierre del bloque de reclamar y en fuentes, más la tarjeta de asesoría. En ningún punto se le atribuye a las dos siglas la representación del conjunto. No es 3 porque la tarjeta de recursos sindicales solo ofrece salida a quien está afiliado a una de las dos firmantes.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 236,
+          "cita": "FirmantesFEMEVAL · CCOO Industria · UGT-FICA"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 490,
+          "cita": "Firmantes: FEMEVAL, CCOO Industria PV y UGT-FICA PV, con asesoría en la provincia."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto coincide con el de su hermana más parecida, convenio-metal-madrid (25 encabezados, 1 h1, 18 h2, 6 h3 de FAQ, saltos_jerarquia vacío en ambas), con la misma secuencia sello → índice → datos clave → gancho → ámbito → tablas → ejemplo aterrizado → pagas → jornada → vacaciones → licencias → pluses → incentivos → baja → subrogación → cajón → reclamar → recursos → FAQ → fuentes → quién audita. No se aleja del corpus. Como las otras cuatro de esta tanda, no lleva el bloque «En 30 segundos» de alava/asturias/barcelona/sevilla: son dos sub-plantillas conviviendo en el mismo sector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 434,
+          "cita": "Sistema de productividad e incentivos"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 403,
+          "cita": "Sistema de rendimiento e incentivos"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 2,
+      "razon": "Es la ficha más disciplinada del cluster en el nombre de la magnitud principal: «salario grupo» aparece igual en la tabla, en el ejemplo, en las tres tarjetas de pluses, en el bloque de incentivos y en la FAQ, sin variantes tipo «salario base» o «salario de convenio» que sí contaminan a metal-madrid. No es 3 por dos grietas: el «plus convenio» de la línea 383, que es un nombre que no vuelve a aparecer en toda la página, y la atribución del Art. 16 a dos conceptos distintos -la paga de marzo y la antigüedad consolidada- a pocas líneas de distancia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 354,
+          "cita": "Paga de marzo15 de marzo17 días de salario grupo (Art. 16)"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 359,
+          "cita": "La antigüedad consolidada (Art. 16) no es absorbible ni compensable y se revaloriza con el convenio."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 383,
+          "cita": "tóxicos/penosos/peligrosos y plus convenio"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Capa 0, no puntuado aquí pero relevante para quien mantenga la plantilla: es la ficha con 17 celdas de tabla en verde (aviso 7.2*), el outlier del corpus frente a las ocho hermanas del metal, que tienen verde_en_tablas = 0; la norma de casa reserva el verde para el sello de verificado y aquí pinta cifras salariales. También 7 tablas sin scope ni caption (11.1*). Para otros ejes: el Art. 16 se cita como fuente de la paga de marzo (líneas 241, 354, 526) y también de la antigüedad consolidada (línea 359); una de las dos atribuciones tiene que estar mal y conviene que lo revise quien audita fuentes. La ventana de medición está cerrada (último commit 30-jul, 21 días), así que los parches son aplicables ya."
+}

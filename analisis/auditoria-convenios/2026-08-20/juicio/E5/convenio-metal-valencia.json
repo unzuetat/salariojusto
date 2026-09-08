@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-valencia",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 2,
+      "razon": "17 entrantes desde 10 páginas, por encima de la mediana del corpus (10): seis hermanas, la ficha marco de seguridad privada, hub, home y mapa. No es 3 porque la variedad real es pequeña —fichas del propio sector y directorios— y varios de esos enlaces caen en el bloque clonado de relacionados de las hermanas, no en su prosa.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-valencia.json",
+          "linea": null,
+          "cita": "\"entrantes_n\": 17, \"entrantes_desde\": [\"convenio-metal-asturias.html\",\"convenio-metal-gipuzkoa.html\",\"convenio-metal-madrid.html\",\"convenio-metal-navarra.html\",\"convenio-metal-sevilla.html\",\"convenio-metal-zaragoza.html\",\"convenio-seguridad-privada.html\",\"convenios.html\",\"index.html\",\"mapa-del-sitio.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 643,
+          "cita": "<a href=\"/convenio-metal-valencia.html\">Convenio del Metal — Valencia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 2,
+      "razon": "El enlace sale justo donde nace la duda: en el párrafo que explica la paga de marzo de 17 días, comparándola con las provincias que sólo tienen 14 pagas. No es 3 porque es la única salida contextual del cuerpo y porque enlaza a dos hermanas cuando el clúster tiene nueve.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 244,
+          "cita": "17 días extra el 15 de marzo. La paga de marzo se calcula sobre el salario grupo"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 248,
+          "cita": "el <a href=\"/convenio-metal-barcelona.html\">metal de Barcelona</a> y el <a href=\"/convenio-metal-bizkaia.html\">metal de Bizkaia</a> tienen <strong>dos pagas extra (14 pagas)</strong>. Valencia añade la paga de marzo de 17 días"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 2,
+      "razon": "Es la que mejor cubre la dirección difícil: enlaza a las tres fichas valencianas de otros sectores (oficinas, hostelería, limpieza), algo que sólo Bizkaia iguala. Se queda en 2 porque en la dirección de hermanas se conforma con dos de nueve y porque los tres cruces de sector están en la lista final, sin decir cuándo conviene irse allí.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-valencia.json",
+          "linea": null,
+          "cita": "\"a_hermanas_mismo_sector\": 2, \"a_otro_sector_misma_provincia\": [\"/convenio-hosteleria-valencia.html\",\"/convenio-limpieza-valencia.html\",\"/convenio-oficinas-valencia.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 561,
+          "cita": "<a href=\"/convenio-oficinas-valencia.html\">Convenio de Oficinas y Despachos — Valencia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "Sin anchors genéricos y los dos de prosa dicen sector y provincia. No es 3 porque los cinco del bloque final son el rótulo clonado del clúster ('Convenio del Metal — X', 'Convenio de Limpieza — Valencia') y ninguno está redactado para esta ficha.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-valencia.json",
+          "linea": null,
+          "cita": "\"anchors_genericos\": []"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 248,
+          "cita": "el <a href=\"/convenio-metal-bizkaia.html\">metal de Bizkaia</a>"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 563,
+          "cita": "<a href=\"/convenio-limpieza-valencia.html\">Convenio de Limpieza — Valencia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "El puente está en la sección correcta pero no en el punto de la necesidad: el enlace cierra la sección colgado del párrafo de código REGCON y firmantes, no del paso que lo pide. El paso que manda pedir la nómina detallada por escrito no enlaza plantilla-solicitar-nominas.html y el que fija el plazo de un año por mensualidad no enlaza plantilla-reclamar-atrasos-convenio-salarial.html. Es el mismo patrón que este eje puntuó 1 en convenio-metal-sevilla, con el mismo bloque y el mismo anchor.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 482,
+          "cita": "<h2 id=\"reclamar\">¿Cobras menos de lo que fija tu grupo?</h2>"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 490,
+          "cita": "Firmantes: <strong>FEMEVAL, CCOO Industria PV y UGT-FICA PV</strong>, con asesoría en la provincia. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+        }
+      ],
+      "parche": "Dos enlaces, cada uno en su paso. En la línea 486, donde se pide la nómina detallada: '…si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores). <a href=\"/plantilla-solicitar-nominas.html\">Usa esta plantilla para pedírselas a tu empresa por escrito</a>.' En el paso del plazo, antes de la línea 490: 'Plazo: un año por cada mensualidad (art. 59.2 ET), así que <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">reclama por escrito la diferencia de las últimas 12 mensualidades</a> antes de que prescriban.' Ahí y no al cerrar la sección porque cada plantilla resuelve exactamente la acción que el paso acaba de exigir; el enlace genérico a la guía puede quedarse donde está.",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Valencia y Bizkaia son las dos únicas fichas del metal que agotan la dirección 'otro sector, misma provincia'. Valencia es además la única que la combina con enlaces a hermanas: sirve de patrón para Zaragoza y Madrid, que tienen fichas vecinas publicadas y no las usan. Calibración de 6.3 en esta tanda: el párrafo 'Comparación con otras provincias del sector' lo llevan 8 de las 9 fichas del metal (11 en todo el corpus), así que dentro de este sector es la norma y vale 2; el 3 se reserva a las que reparten los enlaces por varios momentos del cuerpo (Asturias, Zaragoza). Si el sintetizador compara con el 3 que se dio a convenio-metal-sevilla por ese mismo párrafo, conviene normalizar en una dirección u otra."
+}

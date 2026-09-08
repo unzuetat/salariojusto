@@ -1,0 +1,135 @@
+{
+  "eje": "E1",
+  "slug": "convenio-limpieza-asturias",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 2,
+      "razon": "Hay trabajo propio visible en varias secciones —el rastreo de la corrección de errores del BOPA 200 sobre el BOPA 146, la columna de prorrateo a 12 pagas y el desmontaje de las búsquedas «35 horas» y «12 pagas»—, pero no llega a 3 porque su análisis estrella, el protocolo A+B, produce un resultado falso (ver hardfail 5.7): lo que el boletín no contiene resulta ser justamente lo que no se sostiene.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 454,
+          "cita": "<strong>BOPA Núm. 200, viernes 17 de octubre de 2025</strong> — Resolución de 3 de octubre de 2025 que rectifica el error material del convenio publicado el 30 de julio, corrigiendo los importes mensuales del Grupo IV de la tabla salarial. Disposición 2025-08297. <strong>Esta es la tabla salarial vigente.</strong>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 215,
+          "cita": "<strong>Tabla 2025 vigente en 2026</strong> por ultraactividad indefinida (Art. 4): de <strong>1.105 €/mes</strong> (categorías ancladas al SMI) a <strong>1.730 €/mes</strong> en 15 pagas"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Las afirmaciones de derecho van ancladas a su artículo y citan literalmente el convenio (Art. 21, Art. 27, Art. 4), y el callout de apertura advierte de las dos confusiones más frecuentes del sector. No llega a 3 porque la advertencia que más importaría —que la garantía del Art. 21 se activa hoy en más categorías de las que la ficha admite— no está, y esa parte va como hardfail.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 313,
+          "cita": "La cláusula expresa de garantía SMI del Art. 21 protege estas categorías frente a cualquier desfase: <em>\"Si en algún momento los importes reflejados en las referidas tablas salariales para determinadas categorías profesionales quedasen por debajo de SMI, las empresas quedan obligadas a abonar como mínimo, en cómputo anual el SMI a las categorías afectadas\"</em>."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 214,
+          "cita": "<strong>«12 pagas»:</strong> en realidad son <strong>15</strong> — 12 mensualidades + 3 pagas extras (Verano, Navidad y Beneficios, Art. 27; el Art. 29 habla literalmente de \"15 nóminas anuales\")."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 0,
+      "razon": "El JSON determinista da enlaces.externos_oficiales = [] y el HTML lo confirma. La sección 'Fuentes oficiales' es de las más detalladas del corpus —número de BOPA, fecha, número de disposición, artículo y cita literal— pero ni una sola de esas referencias es clicable: hasta el dominio del boletín aparece como texto plano.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 461,
+          "cita": "<strong>Boletín Oficial del Principado de Asturias (BOPA)</strong> — sede.asturias.es/bopa — para consulta y verificación independiente."
+        }
+      ],
+      "parche": "Convertir en enlaces las tres referencias que ya están escritas: BOPA nº 146 de 30-VII-2025 (disp. 2025-06251) y BOPA nº 200 de 17-X-2025 (disp. 2025-08297) al PDF de cada disposición en sede.asturias.es/bopa, y el código 33000735011979 a https://expinterweb.mites.gob.es/regcon/. Prioridad alta en la segunda: la ficha declara que el BOPA 200 es 'la tabla salarial vigente' y hoy el lector no tiene forma de llegar a ella con un clic.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "Cada tabla dice su año y la ficha aclara desde el primer bloque que la tabla 2025 es la que rige en 2026 por ultraactividad, lo que resuelve la ambigüedad principal. No llega a 3 porque el epígrafe de pluses y complementos no lleva año (JSON: 'Pluses y complementos (Arts. 23-26)' entre las secciones_sin_anio) y sus cuantías se leen como atemporales.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 243,
+          "cita": "<h2 id=\"tabla-salarial\">Tabla salarial 2025 — categoría a categoría</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 224,
+          "cita": "<div class=\"stat-label\">Tabla salarial vigente en 2026</div><div class=\"stat-value\">Tabla 2025 prorrogada por ultraactividad (corregida 17-X-2025)</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 1,
+      "razon": "La fecha existe y es concreta, pero el sello no cumple su función: certifica contra el BOPA 146/2025, que la propia ficha declara superado por la corrección de errores del BOPA 200. Quien siga el sello aterriza en la tabla equivocada. Y el bloque de autoría es boilerplate: dice 'el boletín oficial' sin nombrarlo, a diferencia de Comercio Madrid y Metal Sevilla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 207,
+          "cita": "<strong>✓ Verificado</strong> contra BOPA Núm. 146/2025 por SalarioJusto · última revisión 28 de mayo de 2026"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 526,
+          "cita": "Esta ficha de convenio ha sido cruzada manualmente contra el texto íntegro del boletín oficial por el equipo de SalarioJusto."
+        }
+      ],
+      "parche": "Reescribir el sello para que apunte a la publicación que realmente sostiene la tabla: «✓ Verificado contra el BOPA nº 146 de 30-VII-2025 (texto íntegro, disp. 2025-06251) y la corrección de errores del BOPA nº 200 de 17-X-2025 (disp. 2025-08297, tabla salarial vigente), por SalarioJusto · última revisión [fecha]». Y sustituir el boilerplate de 'Quién audita esto' por la misma mención explícita a las dos disposiciones.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "9.2",
+      "nota": 1,
+      "razon": "Menciona la vigencia y hasta apunta una fecha de negociación, pero la pista está caducada: anuncia como futuro un hito de febrero de 2026 en una ficha revisada el 28 de mayo de 2026 y nunca dice qué pasó ni qué debe vigilar el lector. La caducidad está mencionada, no anunciada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 236,
+          "cita": "La negociación del nuevo convenio está prevista para iniciarse la primera semana de febrero de 2026."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 495,
+          "cita": "La negociación del nuevo convenio está prevista para iniciarse la primera semana de febrero de 2026."
+        }
+      ],
+      "parche": "Sustituir las dos apariciones por un estado en presente con consecuencia: «La mesa negociadora del convenio 2026 se abrió en febrero de 2026 y a fecha de esta revisión no ha publicado acuerdo. Mientras tanto, la ultraactividad indefinida del Art. 4 mantiene íntegra la tabla 2025 — no hay subida automática. Cuando el nuevo convenio se inscriba en el REGCON (código 33000735011979) y se publique en el BOPA, estas tablas dejarán de ser las vigentes: es la señal a vigilar.»",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "5.7",
+      "detalle": "La ficha usa 16.576 € como SMI 2026 y construye sobre esa cifra su sección de verificación. El SMI 2026 real es 17.094 € brutos anuales (14 pagas, RD 126/2026), de modo que el titular de la sección es falso: con el SMI real, Aspirante Administrativo/a y Botones (16.576,05 €) quedan 517,95 € POR DEBAJO del mínimo legal, no cinco céntimos por encima, y el diferencial de +789,50 € de Limpiador/a se reduce a +271,50 €. No es una nota baja de 5.8: es una afirmación fáctica sin correlato en la fuente que la propia ficha invoca (art. 27.1 ET / SMI vigente).",
+      "evidencia": {
+        "linea": 315,
+        "cita": "<h2>Verificación A+B — todas las categorías cumplen el SMI 2026</h2>"
+      }
+    },
+    {
+      "codigo": "5.7",
+      "detalle": "Segunda aparición de la misma invención, esta vez presentando el importe como el resultado de un protocolo de verificación propio, lo que agrava el daño reputacional: la página exhibe su método y el método arroja un número que no está en la fuente.",
+      "evidencia": {
+        "linea": 316,
+        "cita": "SalarioJusto verifica las tablas con un protocolo A+B: A) replicar la fórmula del propio convenio (SB × 15 pagas), B) cruzar el resultado con el SMI 2026 (16.576 € anuales, art. 27.1 ET)."
+      }
+    }
+  ],
+  "observacion_libre": "Ficha en ventana de medición abierta (ultimo_commit 2026-08-04, 16 días), por lo que los parches de forma quedan aplazados — pero el hardfail 5.7 no debería acogerse a ese freno: una cifra falsa de SMI no es una prueba de tracción, y aquí no está en una nota al pie sino en el titular de una sección entera y en la respuesta de una FAQ indexada (línea 492: «Está 789,50 € por encima del SMI 2026 (16.576 €)»), además de en el schema FAQPage. Corregir 16.576 → 17.094 obliga a recalcular los cuatro diferenciales de la tabla de verificación, a cambiar el titular por uno veraz («Tres de cuatro grupos superan el SMI 2026; Aspirante y Botones quedan por debajo y activan la garantía del Art. 21») y a mover el estilo verde de esa columna, porque dejaría de ser un cumplimiento holgado. Al margen de mi eje: el error convierte además la comparativa con otras provincias en no comparable."
+}

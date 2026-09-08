@@ -1,0 +1,124 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-bizkaia",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 3,
+      "razon": "El nodo mejor irrigado del clúster: 25 entrantes desde 14 páginas (mediana del corpus 10), y no sólo de hermanas: la enlaza salarios.html dos veces desde el cuerpo, convenio-hosteleria-gipuzkoa.html y convenio-comercio-metal-bizkaia.html. Ocho hermanas la citan, seis de ellas desde la prosa y con anclas descriptivas.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-bizkaia.json",
+          "linea": null,
+          "cita": "\"entrantes_n\": 25, \"entrantes_desde\": [\"convenio-comercio-metal-bizkaia.html\",\"convenio-hosteleria-gipuzkoa.html\",\"convenio-metal-alava.html\",\"convenio-metal-asturias.html\",\"convenio-metal-barcelona.html\",\"convenio-metal-gipuzkoa.html\",\"convenio-metal-madrid.html\",\"convenio-metal-navarra.html\",\"convenio-metal-valencia.html\",\"convenio-metal-zaragoza.html\",\"convenios.html\",\"index.html\",\"mapa-del-sitio.html\",\"salarios.html\"]"
+        },
+        {
+          "archivo": "salarios.html",
+          "linea": 573,
+          "cita": "<a href=\"/convenio-metal-bizkaia.html\">Metal22.034 – 23.509 €/año</a>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 528,
+          "cita": "<a href=\"/convenio-metal-bizkaia.html\">Metal de Bizkaia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 1,
+      "razon": "Todos los enlaces a otros convenios están agrupados en la lista final 'Otros convenios y guías' (línea 631 de 664). El cuerpo, que sí abre comparaciones explícitas ('un sistema único en el corpus de convenios provinciales del sector'), no enlaza a ninguna de ellas. Salva el 0 el puente al kit, que sí está en su sección.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-bizkaia.json",
+          "linea": null,
+          "cita": "\"internos_en_cuerpo\": 16, \"a_convenios\": 3"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 525,
+          "cita": "El Art. 12 establece un sistema único en el corpus de convenios provinciales del sector: aumentos periódicos por años de servicio en quinquenios del 5%"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 631,
+          "cita": "<h2 style=\"font-size:18px;\">Otros convenios y guías</h2>"
+        }
+      ],
+      "parche": "Enlazar donde la frase ya está comparando. En la línea 525, donde se afirma que la antigüedad sin tope es única en el corpus, cerrar así: '…a diferencia del <a href=\"/convenio-metal-zaragoza.html\">metal de Zaragoza</a> y del <a href=\"/convenio-metal-barcelona.html\">de Barcelona</a>, que congelaron la antigüedad en un complemento ad personam y no reconocen tramos nuevos.' Y en la sección de régimen IRPF foral (línea 586) añadir: 'Los otros dos convenios forales del metal, el <a href=\"/convenio-metal-gipuzkoa.html\">de Gipuzkoa</a> y el <a href=\"/convenio-metal-alava.html\">de Álava</a>, tributan igual pero fijan el salario de otra forma.' Ahí porque el lector vasco que compara ofertas entre las tres provincias está leyendo exactamente ese párrafo.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "El determinista marca 0 hermanas del mismo sector: la ficha más enlazada del clúster no enlaza a ninguna de las nueve provincias del metal. No es un 0 porque cubre entera y con criterio la dirección que casi nadie cubre —construcción, hostelería y limpieza de Bizkaia—, que es la de más valor; pero el clúster sectorial está roto desde su nodo central. Tampoco enlaza a su gemela confundible, el comercio del metal de Bizkaia, que sí la enlaza a ella.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-bizkaia.json",
+          "linea": null,
+          "cita": "\"a_hermanas_mismo_sector\": 0, \"a_otro_sector_misma_provincia\": [\"/convenio-construccion-bizkaia.html\",\"/convenio-hosteleria-bizkaia.html\",\"/convenio-limpieza-bizkaia.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 634,
+          "cita": "<li><a href=\"/convenio-construccion-bizkaia.html\">Convenio Construcción en Bizkaia (sector hermano · 2025-2027 vigente)</a></li>"
+        }
+      ],
+      "parche": "Añadir a la lista de la línea 634, antes de los sectores vecinos, las tres hermanas forales y la referencia estatal, cada una con su motivo: '<li><a href=\"/convenio-metal-gipuzkoa.html\">Convenio del Metal de Gipuzkoa (misma industria, salario por valor hora sobre 1.695 h)</a></li>' y '<li><a href=\"/convenio-metal-alava.html\">Convenio del Metal de Álava (el tercer convenio foral, por salario bruto anual)</a></li>'. Ahí porque es la única salida hacia otros convenios que hoy tiene la ficha; el enlace en prosa va en la línea 525 según el parche de 6.3. Falta además su gemela confundible: convenio-comercio-metal-bizkaia.html existe y enlaza a esta ficha, y esta no le devuelve nada ni advierte de la diferencia. Añadir en la sección 'Cómo verificar si tu nómina cumple el convenio' (línea 595): '<p>Antes de comparar, confirma que tu empresa <strong>fabrica, monta o repara</strong> metal. Si sólo lo <strong>vende</strong> —ferretería, recambios, electrodomésticos— te aplica el <a href=\"/convenio-comercio-metal-bizkaia.html\">convenio del comercio del metal de Bizkaia</a>, con tablas distintas.</p>' Ahí porque es el punto donde el lector va a cotejar cifras y donde una comparación contra la tabla equivocada le costaría el caso.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.5",
+      "nota": 3,
+      "razon": "Es la única ficha del corpus cuyos anchors llevan dentro la relación y el estado de vigencia del destino, en vez del rótulo clonado 'Convenio del Metal — X' que repiten las otras ocho: '(sector hermano · 2025-2027 vigente)' está escrito para este lector concreto y no aparece en ninguna otra ficha.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-bizkaia.json",
+          "linea": null,
+          "cita": "\"anchors_genericos\": []"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 634,
+          "cita": "<a href=\"/convenio-construccion-bizkaia.html\">Convenio Construcción en Bizkaia (sector hermano · 2025-2027 vigente)</a>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 636,
+          "cita": "<a href=\"/convenio-limpieza-bizkaia.html\">Convenio Limpieza de Edificios y Locales en Bizkaia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "Es el mejor 1 del clúster —dos destinos del kit y un procedimiento por pasos— pero el puente sigue sin estar en el punto de la necesidad: el paso que manda documentar tres nóminas no enlaza plantilla-solicitar-nominas.html, el que fija el plazo no enlaza plantilla-reclamar-atrasos-convenio-salarial.html, y el enlace real cuelga del párrafo de siglas sindicales que cierra la sección. El segundo destino del kit, las plantillas, está en la lista final. Mismo criterio aplicado a convenio-metal-sevilla en este eje.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-bizkaia.json",
+          "linea": null,
+          "cita": "\"al_kit\": [\"/plantillas-transparencia-retributiva-2026.html\",\"/reclamar-diferencias-salariales-convenio.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 605,
+          "cita": "Tienes 1 año por mensualidad desde que debió pagarse: actúa por las más antiguas primero para no perderlas."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 607,
+          "cita": "Código REGCON del convenio: <code>48004245011982</code>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+        }
+      ],
+      "parche": "Dos enlaces, cada uno en su paso. En la línea 603, donde se pide la nómina detallada: '…si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores). <a href=\"/plantilla-solicitar-nominas.html\">Usa esta plantilla para pedírselas a tu empresa por escrito</a>.' En el paso del plazo, antes de la línea 607: 'Plazo: un año por cada mensualidad (art. 59.2 ET), así que <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">reclama por escrito la diferencia de las últimas 12 mensualidades</a> antes de que prescriban.' Ahí y no al cerrar la sección porque cada plantilla resuelve exactamente la acción que el paso acaba de exigir; el enlace genérico a la guía puede quedarse donde está.",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Bizkaia es el centro de gravedad del clúster por entrada (25 enlaces, 14 fuentes) y su punto ciego por salida (0 hermanas). El grafo del metal es una estrella que apunta a Bizkaia y Barcelona y no vuelve: las dos fichas más citadas son justo las dos que no citan al sector."
+}

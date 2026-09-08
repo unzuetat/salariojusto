@@ -1,0 +1,151 @@
+{
+  "eje": "E2",
+  "slug": "convenio-limpieza-zaragoza",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 1,
+      "razon": "boilerplate_ratio 0.067 sobre 253 frases es poco en volumen, pero las 8 frases_compartidas_top son las mismas que en Asturias y Valencia y no son cromo: son el bloque '¿Cobras menos?' marcado como <!-- bp-rotado -->, contenido jurídico de sustancia con el número de artículo de descuelgue plantillado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 711,
+          "cita": "Las cláusulas normativas — la tabla salarial, los complementos de puesto, las pagas extras, la subrogación, la jornada, las vacaciones, las protecciones por IT e invalidez — siguen plenamente vigentes y son de obligado cumplimiento."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 575,
+          "cita": "Qué es exactamente la \"ultraactividad\" — y qué cobras durante ella"
+        }
+      ],
+      "parche": "El bloque clonado de las líneas 710-717 sobra entero en esta ficha: dice peor lo que la propia página ya explica mejor en dos sitios propios (el h2 'Qué es exactamente la ultraactividad' de la línea 575 y la FAQ 'Si el convenio está en ultraactividad, ¿mi empresa puede pagarme menos?' de la línea 701, que sí desarrolla el Art. 34 con periodo de consultas y autoridad laboral). Sustituir el párrafo plantillado por un enlace interno a #ultraactividad y dejar en '¿Cobras menos?' solo los tres pasos accionables, que ya están redactados. Ganancia doble: baja el boilerplate y desaparece la repetición interna.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "palabras_prosa 6567, la mayor del piloto, con ratio_tabla 0.094: la prosa no rodea la tabla sino que explica por qué la tabla de 2025 sigue siendo la de 2026, cómo conviven 19 categorías con las 3 del articulado y qué cifras se mueven en enero; sin ella la tabla se leería como caducada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 708,
+          "cita": "El Art. 39 del convenio provincial lista las divisiones funcionales <em>a título enunciativo</em> (Especialista, Peón Especializado Conductor/Limpiador, Limpiador/a), pero <strong>la Cláusula Adicional 5.ª remite la clasificación profesional al I Convenio Estatal</strong>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 609,
+          "cita": "las tablas salariales <strong>NO se actualizan automáticamente</strong> en ultraactividad: la tabla 2025 (Anexo I del convenio actual) sigue siendo la vigente"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "frases_exclusivas 236 de 253 y hay hechos que costaron trabajo: los coeficientes de ponderación de aviones, el ejemplo trabajado de subrogación parcial y el histórico de denuncias con los meses transcurridos no se obtienen cambiando el topónimo, se obtienen leyendo el Art. 29 completo y el REGCON del convenio anterior.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 472,
+          "cita": "Los aviones se ponderan por tamaño con una tabla de coeficientes (un avión clase 4A pesa 0,32; uno clase 91 pesa 2,65) para que un Boeing 747 no cuente lo mismo que una avioneta pequeña."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 602,
+          "cita": "<td>29 marzo 2023</td><td>1-I-2022 → 31-XII-2025</td><td>2 octubre 2025 (CCOO)</td><td><strong>17 meses</strong> tras la denuncia del anterior</td>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "faq_clonadas 4 de faq_total 7: tres preguntas son propias y una de ellas no puede existir en ninguna otra ficha porque nace de una contradicción interna del texto zaragozano entre el Anexo I y el Art. 39.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 707,
+          "cita": "¿Por qué hay 19 categorías en tabla y solo 3 en el Art. 39?"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 704,
+          "cita": "¿Cuándo se publicará el nuevo convenio de Limpieza de Zaragoza?"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 3,
+      "razon": "la particularidad provincial (el Aeropuerto de Zaragoza y la rotación de contratas de limpieza de aviones) no se menciona: se explica con la fórmula del convenio, se ilustra con un caso resuelto y se declara excepcional en el sector, ocupando una sección propia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 472,
+          "cita": "<strong>Cláusula especial — Limpieza de aviones en el Aeropuerto de Zaragoza:</strong> dado el carácter rotatorio de las contratas con compañías aéreas y operadores de handling en el aeropuerto, el Art. 29 establece una fórmula específica de subrogación basada en el porcentaje de actividad perdida"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 479,
+          "cita": "Aproximadamente <strong>8 de los 20 limpiadores/as pasan a empresa B</strong> con todas sus condiciones intactas (antigüedad, categoría, horario, vacaciones devengadas)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "el BOPZ 71/2023 no dice qué pasa hoy con ese texto; la ficha añade dos cosas que ningún boletín tiene: qué cláusulas sobreviven a la ultraactividad y una previsión de calendario del próximo convenio construida sobre el historial de denuncias.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 603,
+          "cita": "Si se repite el patrón: publicación entre <strong>febrero y abril de 2027</strong>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 314,
+          "cita": "estas dos mejoras eran cláusulas normativas con efecto diferido pactado en el propio texto del convenio. Por tanto se aplican plenamente en 2026 pese a la denuncia"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "hay ventaja identificable sobre la cifra pelada —el ratio de cumplimiento del mínimo legal y la previsión honesta de cuándo llegará el nuevo texto—, pero lo mejor de la ficha (aeropuerto, histórico) queda muy por debajo del pliegue; el hero solo promete tabla y estado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 705,
+          "cita": "No hay fecha cierta. Lo que sabemos es que la mesa negociadora está abierta desde la denuncia del 2-oct-2025 y que <strong>el patrón histórico apunta a entre 12 y 24 meses</strong>."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 207,
+          "cita": "Subrogación robusta Art. 29 con cláusula especial para limpieza de aviones del Aeropuerto. Solo 1 de 19 categorías queda bajo SMI 2026."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "12.1",
+      "detalle": "La ficha fija el SMI 2026 en 16.576 €/año y sobre esa cifra construye tres afirmaciones estructurales (solo 1 de 19 categorías bajo el mínimo, el margen de +350,95 € del Limpiador/a y el titular de la comparativa provincial). convenio-metal-sevilla.html, línea 627, cita el RD 126/2026 con 17.094 € anuales. Con 17.094 €, el Limpiador/a (16.926,95 €) pasa a quedar por debajo del mínimo legal y el recuento '1 de 19' deja de ser cierto.",
+      "evidencia": {
+        "linea": 260,
+        "cita": "<strong>Solo 1 de 19 categorías queda bajo el SMI 2026 (16.576 €/año).</strong>"
+      }
+    }
+  ],
+  "observacion_libre": "Ventana cerrada (ultimo_commit 2026-07-30, 21 días): los parches son aplicables. Dos apuntes. El primero, de contenido: la ficha explota el aeropuerto y deja fuera la otra particularidad económica de la provincia, la plataforma logística PLAZA —el mayor recinto logístico del sur de Europa, con naves de gran superficie cuya limpieza se contrata y recontrata con la misma rotación que las aéreas—. Si el Art. 29 no la contempla expresamente, decirlo también vale: el lector que limpia en PLAZA necesita saber si su caso cae en la regla general de los 4 meses o en la fórmula proporcional. El segundo, para otro eje: la respuesta de la FAQ '¿Está vigente el convenio de Zaragoza en 2026?' (línea 690) termina truncada a mitad de frase, '...el nuevo convenio se publicó el 2', y esa FAQ está en el schema."
+}

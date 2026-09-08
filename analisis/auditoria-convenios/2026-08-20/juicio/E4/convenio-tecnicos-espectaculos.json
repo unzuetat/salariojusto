@@ -1,0 +1,99 @@
+{
+  "eje": "E4",
+  "slug": "convenio-tecnicos-espectaculos",
+  "metricas": [
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "La respuesta de FAQ empaqueta el suelo legal en una frase que se sostiene sola (norma + cuantías + condición), pero las mismas cifras en el cuerpo viven en items de lista que dependen del encabezado de la sección.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 280,
+          "cita": "El Estatuto de los Trabajadores como suelo: jornada máxima de 40 horas semanales de promedio anual, registro diario de jornada (art. 34.9), 12 horas mínimas de descanso entre jornadas, horas extraordinarias limitadas a 80 al año y retribuidas o compensadas, y el SMI vigente como retribución mínima."
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 217,
+          "cita": "<li><strong>Jornada:</strong> máximo de 40 horas semanales de promedio en cómputo anual. Cualquier exceso es hora extraordinaria.</li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.2",
+      "nota": 1,
+      "razon": "La rejilla de datos clave es formalmente atómica (etiqueta + valor), pero el dato que la página promete —el suelo retributivo— no es un dato: es un puntero a otra página. Un motor que extraiga la fila «Suelo retributivo» se lleva una etiqueta sin cifra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 184,
+          "cita": "<div class=\"stat-item\"><div class=\"stat-label\">Suelo retributivo</div><div class=\"stat-value\">Salario Mínimo Interprofesional vigente</div></div>"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 221,
+          "cita": "<strong>Salario Mínimo Interprofesional:</strong> actúa como retribución mínima irrenunciable. Consulta el <a href=\"/salario-minimo-interprofesional-2026.html\">SMI vigente</a> para conocer el suelo exacto."
+        }
+      ],
+      "parche": {
+        "descripcion": "Sustituir el puntero por el dato con su unidad y su periodo. La ficha no tiene tabla salarial porque no hay convenio: el SMI ES su única cuantía citable, y ahora mismo es la única que no aparece.",
+        "linea_objetivo": 184,
+        "texto_propuesto": "<div class=\"stat-item\"><div class=\"stat-label\">Suelo retributivo 2026</div><div class=\"stat-value\">SMI 2026: <a href=\"/salario-minimo-interprofesional-2026.html\">[CIFRA €/año en 14 pagas — copiar literal de la ficha del SMI del propio sitio]</a>, irrenunciable exista o no convenio sectorial</div></div>",
+        "aviso": "NO relleno la cifra: el corpus auditado presenta dos valores de SMI 2026 en circulación (16.576 € en las fichas de Asturias y Zaragoza; 17.094 € según el propio recolector determinista, que marca el primero como obsoleto). E4 no arbitra ese conflicto — la cifra debe copiarse de /salario-minimo-interprofesional-2026.html una vez resuelto."
+      },
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.3",
+      "nota": 2,
+      "razon": "El ámbito está bien acotado donde importa: el bloque del conflicto fecha, territorializa y nombra a los convocantes, y el h1 y el hero distinguen el marco estatal (sin convenio) del conflicto vasco, que es el único riesgo real de confusión de esta ficha.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 191,
+          "cita": "<strong>Primera huelga del sector en Euskadi — 15 de mayo de 2026.</strong> El personal técnico de eventos y espectáculos protagonizó su <strong>primera huelga histórica</strong> en Álava, Bizkaia y Gipuzkoa"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 171,
+          "cita": "No existe un convenio sectorial específico que regule la jornada, las horas extra o la disponibilidad del personal técnico de espectáculos."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "La traza acompaña al dato en los sitios de riesgo (el registro de jornada lleva su artículo inline; las reivindicaciones citan el manifiesto y los medios en el párrafo que las introduce), pero las cuantías del suelo legal —40 h/semana, 80 horas extra al año, 12 h de descanso— viajan sin el artículo del ET que las fija.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 230,
+          "cita": "<p>Según el manifiesto sindical leído ante el Teatro Arriaga, recogido por El Correo y RTVE, el sector reclama medidas concretas —no abstractas—:</p>"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 220,
+          "cita": "<li><strong>Horas extraordinarias:</strong> limitadas a 80 al año, y obligatoriamente retribuidas o compensadas con descanso. No son gratis ni ilimitadas aunque no haya convenio.</li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [
+    {
+      "id": "2.4",
+      "motivo": "noindex deliberado, no defecto. El JSON determinista trae seo.noindex=true con robots 'noindex, nofollow' y el censo lo confirma (censo.indexable=false, censo.tipo='marco', fuenteEstado='explainer sin convenio sectorial propio', confianza 'alta'). La ficha tampoco está en el sitemap (seo.en_sitemap=false). No se optimiza para SERP lo que se ha decidido no indexar."
+    },
+    {
+      "id": "2.5",
+      "motivo": "Mismo motivo que 2.4: noindex deliberado confirmado por el censo. La meta existe y es coherente (260 caracteres, con cifra y año), pero no compite en ningún resultado de búsqueda, así que puntuarla sería puntuar humo."
+    }
+  ],
+  "hardfails": [],
+  "observacion_libre": "Es la única ficha del piloto sin ninguna tabla (tablas.n=0) y, por tanto, la única cuya citabilidad depende por entero de la prosa. Eso la deja en una posición rara: es la mejor escrita del grupo en frases autocontenidas y a la vez la que menos tiene que citar. Vale la pena notar que, aunque 2.4 y 2.5 no se evalúan por noindex, la ficha SÍ registra tráfico en el determinista (operacion.gsc_28d: 151 impresiones, CTR 2,65%, posición 8,02) — es decir, Google la está sirviendo pese al noindex, probablemente por latencia de rastreo tras el commit del 30-jul. Si esas impresiones persisten dentro de un mes, la decisión de noindex merece revisarse como decisión de negocio (no como defecto de eje): con 2,65% de CTR ya rinde por encima de Asturias. Fuera de mi eje: el determinista declara dos hard-fails propios (5.2 sin sello 'Verificado contra…' y 2.2 sin bloque 'Quién audita esto'), que son de E1/E5 y no puntúo aquí."
+}

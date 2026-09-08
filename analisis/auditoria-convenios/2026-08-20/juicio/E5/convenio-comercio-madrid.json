@@ -1,0 +1,104 @@
+{
+  "eje": "E5",
+  "slug": "convenio-comercio-madrid",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 1,
+      "razon": "entrantes_n=3 desde solo dos páginas: index.html y convenio-comercio-metal-bizkaia.html. Puesto 44 de 54. El hub convenios.html todavía no la enlaza (grep sin resultados) pese a que el breadcrumb la cuelga de Convenios: hoy la ficha vive del enlace de la home. Es 1 y no 0 porque al menos una ficha hermana ya la enlaza con ancla descriptiva ('→ Convenio de Comercio de Madrid 2026').",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-comercio-madrid.json",
+          "linea": 315,
+          "cita": "\"entrantes_desde\": ["
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 161,
+          "cita": "<div class=\"breadcrumb\"><a href=\"/\">SalarioJusto</a> › <a href=\"/convenios.html\">Convenios</a> › Comercio Vario Madrid 2026</div>"
+        }
+      ],
+      "parche": "En convenios.html, abrir el sector Comercio y añadir la tarjeta: <a href=\"/convenio-comercio-madrid.html\">Comercio Vario — Madrid (BOCM 183, vigente 2025-2028 · 15 pagas · 37,5 h)</a>. Va en el hub porque es la página que reparte autoridad a las 54 fichas y la única que un lector recorre buscando su sector.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.3",
+      "nota": 1,
+      "razon": "internos_en_cuerpo=15, pero en la prosa solo hay un enlace de orientación — el de la guía de reclamación, ya cerrada la sección — y los tres enlaces de la misma provincia están apilados en el bloque final 'Otros convenios y guías'. Ningún párrafo del cuerpo abre una duda y la resuelve con un enlace.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 389,
+          "cita": "<p>Los sindicatos firmantes — <strong>UGT (FeSMC Madrid)</strong> y <strong>CCOO (Federación de Servicios de Madrid)</strong> — ofrecen asistencia jurídica gratuita a personas afiliadas. Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">28000805011982</code>. <a href=\"/reclamar-dife…"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 447,
+          "cita": "<li><a href=\"/convenio-oficinas-madrid.html\">Convenio de Oficinas y Despachos de Madrid</a></li>"
+        }
+      ],
+      "parche": "Subir la desambiguación de sector al arranque: en la línea 161, tras el breadcrumb, añadir el párrafo «Este convenio cubre el comercio vario de Madrid; si tu tienda está dentro de un hotel te aplica <a href=\"/convenio-hosteleria-madrid.html\">Hostelería de Madrid</a> y si tu puesto es administrativo puro, <a href=\"/convenio-oficinas-madrid.html\">Oficinas y Despachos de Madrid</a>», y dejar en la lista final solo lo que no cabe en el cuerpo. Va ahí porque los tres enlaces de la línea 447 responden a una duda que el lector tiene al entrar, no al salir.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "Cubre una sola dirección: a_otro_sector_misma_provincia trae Oficinas, Hostelería y Limpieza de Madrid — la dirección que casi nunca se cubre en el corpus — pero los tres están en la lista final sin decir cuándo el lector debería irse a ellos, y a_hermanas_mismo_sector=0: no devuelve el enlace a convenio-comercio-metal-bizkaia.html, que sí la enlaza a ella.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-comercio-madrid.json",
+          "linea": 298,
+          "cita": "\"a_otro_sector_misma_provincia\": ["
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 448,
+          "cita": "<li><a href=\"/convenio-hosteleria-madrid.html\">Convenio de Hostelería de Madrid</a></li>"
+        }
+      ],
+      "parche": "Convertir los tres enlaces de la lista en una frase de desambiguación al principio de la ficha, justo después del breadcrumb (línea 161): «Este convenio cubre el comercio vario de la Comunidad de Madrid. Si trabajas en una tienda dentro de un hotel o un bar, te aplica <a href=\"/convenio-hosteleria-madrid.html\">Hostelería de Madrid</a>; si tu empresa es una contrata de limpieza, <a href=\"/convenio-limpieza-madrid.html\">Limpieza de Edificios y Locales de Madrid</a>; si tu puesto es administrativo puro, <a href=\"/convenio-oficinas-madrid.html\">Oficinas y Despachos de Madrid</a>.» Va ahí porque el error de sector se comete al entrar, no al final.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "anchors_genericos=[]: todas las anclas nombran sector y provincia ('Convenio de Oficinas y Despachos de Madrid'). No es 3 porque están redactadas como entradas de catálogo, intercambiables con las de cualquier otra ficha de Madrid; ninguna dice para qué querría el lector ir allí.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 447,
+          "cita": "<li><a href=\"/convenio-oficinas-madrid.html\">Convenio de Oficinas y Despachos de Madrid</a></li>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 449,
+          "cita": "<li><a href=\"/convenio-limpieza-madrid.html\">Convenio de Limpieza de Edificios y Locales de Madrid</a></li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "al_kit=1 y es la guía, no una plantilla. El paso 2 del procedimiento dice literalmente que reclames por escrito indicando conceptos, importe y período — que es exactamente lo que hace la plantilla de atrasos — y no la enlaza; el único puente aparece dos párrafos después, cuando el procedimiento ya ha terminado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 386,
+          "cita": "<li><strong>Reclama por escrito a tu empresa</strong> indicando los conceptos no abonados, el importe estimado y el período. Envíalo por burofax con acuse de recibo o email con confirmación de lectura.</li>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 389,
+          "cita": "<p>Los sindicatos firmantes — <strong>UGT (FeSMC Madrid)</strong> y <strong>CCOO (Federación de Servicios de Madrid)</strong> — ofrecen asistencia jurídica gratuita a personas afiliadas. Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">28000805011982</code>. <a href=\"/reclamar-dife…"
+        }
+      ],
+      "parche": "En la línea 386, cerrar el paso 2 con: «Usa la <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">plantilla de reclamación de atrasos de convenio</a>: reclama la diferencia de los últimos 12 meses, mes a mes, porque cada mensualidad prescribe por separado al año.» Va en ese paso y no en la lista final porque es la única línea de la ficha en la que el lector tiene que escribir algo.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "ventana_medicion_abierta=true (commit de ayer): los parches quedan aplazados, pero el enlace desde convenios.html es de otra página y no toca la ficha — se puede hacer sin contaminar la medición, y es el que más falta. Ojo también a la reciprocidad: convenio-comercio-metal-bizkaia.html es hoy la única ficha del corpus que la enlaza, y Madrid no le devuelve el enlace; el sector Comercio está abriéndose con dos fichas que no se conocen entre sí."
+}

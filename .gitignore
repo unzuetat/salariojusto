@@ -56,3 +56,26 @@ paginas-publicadas-sheets.csv
 # Detector: cola de candidatos (estado runtime)
 data/detector/candidatos.json
 _preview-*.html
+
+# Auditoría de convenios (/sj-auditoria)
+# La capa 0 se regenera en ~3 s con scripts/audit/convenios-recolector.py, no se versiona.
+# Sí se versionan los informes, los juicios de los agentes y las verificaciones: no son
+# reproducibles (cada pasada cuesta agentes) y son la memoria del sistema.
+analisis/auditoria-convenios/*/deterministas/
+
+# Datos de analítica descargados (regenerables desde GA4/GSC)
+analisis/ga4/*.csv
+analisis/gsc-paginas*.csv
+analisis/gsc-dashboard.html
+
+# Outputs efímeros de los comandos /sj-*
+alcance.md
+comparativas.md
+kit-inventario.md
+patron-convenios.md
+singularidad.md
+discrepancias-titles.md
+
+# Python
+__pycache__/
+*.pyc

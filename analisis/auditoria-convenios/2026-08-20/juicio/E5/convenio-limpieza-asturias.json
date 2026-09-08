@@ -1,0 +1,99 @@
+{
+  "eje": "E5",
+  "slug": "convenio-limpieza-asturias",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 2,
+      "razon": "entrantes_n=10, justo en la mediana del corpus (10,5), y con variedad real de origen: el pilar estatal, dos fichas hermanas y — lo raro — convenio-metal-asturias.html, es decir otro sector de su misma provincia. Las anclas entrantes son descriptivas ('Convenio Limpieza Asturias (3 pagas extras)'). No es 3 porque ninguna guía la enlaza: guias.html no aparece entre los entrantes.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-limpieza-asturias.json",
+          "linea": 275,
+          "cita": "\"entrantes_desde\": ["
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 1,
+      "razon": "Las nueve hermanas están agrupadas en el bloque final 'Convenios de limpieza en otras provincias'; en toda la prosa solo hay un enlace de orientación, el de la guía de reclamación, y llega cuando la sección ya ha terminado. Es el patrón 'lista al final' puro.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 534,
+          "cita": "<li><a href=\"/convenio-limpieza-edificios-locales.html\">← Pilar estatal: Convenio de Limpieza de Edificios y Locales</a></li>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 522,
+          "cita": "<p>Los sindicatos firmantes — CCOO y UGT-FeSMC — siguen siendo válidos para asesoría durante la ultraactividad. Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">33000635011982</code>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →…"
+        }
+      ],
+      "parche": "Llevar dos de los nueve enlaces de la lista al cuerpo: en la línea 313, donde se explica que Aspirante y Botones quedan a cinco céntimos del mínimo legal, contrastar con «en <a href=\"/convenio-limpieza-bizkaia.html\">Bizkaia</a> ninguna categoría se acerca tanto al suelo porque la jornada es de 35 h»; y en la línea 518, donde se pide verificar la tabla 2025 durante la ultraactividad, remitir a <a href=\"/convenio-limpieza-madrid.html\">Limpieza de Madrid</a>, que está en la misma situación. Van ahí porque son los dos puntos en que el texto ya compara y el lector no tiene adónde ir.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "Nueve hermanas del mismo sector (a_hermanas_mismo_sector=9, sexta del corpus) pero a_otro_sector_misma_provincia=[]: no enlaza a convenio-metal-asturias.html, que sí la enlaza a ella. Cubre una sola de las dos direcciones y la que falta es la que resuelve el error de sector.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-limpieza-asturias.json",
+          "linea": 261,
+          "cita": "\"a_otro_sector_misma_provincia\": [],"
+        },
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-limpieza-asturias.json",
+          "linea": 275,
+          "cita": "\"entrantes_desde\": ["
+        }
+      ],
+      "parche": "Añadir en el bloque de la línea 534, como primer ítem y con contexto: <li>¿Limpias en una fábrica o en un taller? Si tu empresa no es una contrata de limpieza sino industrial, mira el <a href=\"/convenio-metal-asturias.html\">Convenio del Metal de Asturias</a>, que ya enlaza a esta ficha.</li>. Va ahí porque es donde el lector busca 'y si no es el mío'; mejor aún sería subirlo junto al encabezado de la tabla, donde se decide si esta ficha le aplica.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "anchors_genericos=[] y cada ancla añade un dato que distingue la ficha destino ('(en ultraactividad)', '(jornada 35 h)', '2026-2030'). No es 3 porque el bloque entero está clonado: la misma lista, en el mismo orden, aparece en cinco fichas de limpieza (Asturias, Murcia, Las Palmas, Zaragoza, Bizkaia); ninguna ancla está escrita para el lector asturiano.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 535,
+          "cita": "<li><a href=\"/convenio-limpieza-madrid.html\">Convenio Limpieza Madrid (en ultraactividad)</a></li>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 541,
+          "cita": "<li><a href=\"/convenio-limpieza-bizkaia.html\">Convenio Limpieza Bizkaia (jornada 35 h)</a></li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "al_kit=1 y es la guía genérica, colocada al cierre de la sección de reclamación. El paso 2 pide la nómina detallada por escrito — que es literalmente lo que hace plantilla-solicitar-nominas.html — y no la enlaza; ninguna plantilla del kit aparece en la ficha.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 519,
+          "cita": "<li><strong>Pide nómina detallada por escrito</strong> si los conceptos no aparecen separados. Tu empresa está obligada a entregarla por imperativo del art. 29.1 del Estatuto de los Trabajadores. Aprovecha para mencionar la discrepancia con la tabla del convenio.</li>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 522,
+          "cita": "<p>Los sindicatos firmantes — CCOO y UGT-FeSMC — siguen siendo válidos para asesoría durante la ultraactividad. Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">33000635011982</code>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →…"
+        }
+      ],
+      "parche": "En la línea 519, cerrar el paso con: «Pídela con la <a href=\"/plantilla-solicitar-nominas.html\">plantilla para solicitar copia de nóminas</a> y, si al compararlas aparece diferencia, reclama con la <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">plantilla de atrasos</a> los últimos 12 meses.» Va en ese paso porque es la única frase de la ficha que le pide al lector redactar un escrito.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Asturias emite bien hacia su sector y recibe bien, pero es un nodo de una sola dimensión: todo su tejido es limpieza. La reciprocidad con metal-asturias existe en un sentido y no en el otro, y eso se repite en Zaragoza y Sevilla — es un defecto de sistema, no de esta ficha. Fuera de mi eje: el determinista ya marca 12.2 (SMI obsoleto 16.576 € presentado como el de 2026); si se corrige esa cifra, la frase del aviso bajo la tabla pasa a ser el mejor sitio del corpus para enlazar plantilla-reclamar-absorcion-complementos-smi.html."
+}

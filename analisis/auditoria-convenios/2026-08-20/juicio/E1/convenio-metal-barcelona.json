@@ -1,0 +1,138 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-barcelona",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Publica la aritmética de su columna anual, localiza la tabla en las páginas concretas del texto oficial, monta un caso trabajado con nombre y desglose, y aporta un dato de contexto que no está en el boletín: que la tabla de 2025 se aplicó con retroactividad porque el convenio se publicó en febrero de 2026.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 253,
+          "cita": "Fuente: Anexo 1 del BOPB del 13-feb-2026 (páginas 79 y 82 del texto oficial). … Total anual = Salario Convenio × 14."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 272,
+          "cita": "Fuente: Anexo 1 del BOPB del 13-feb-2026, tablas 2025. Se aplicó a las nóminas desde enero de 2025 con carácter retroactivo tras la publicación del convenio en febrero de 2026."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 291,
+          "cita": "<p class=\"ejemplo-total\">Bruto anual 2026: 28.887,46 €</p>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Las obligaciones que enuncia llevan artículo y condición, incluida la del contrato a tiempo parcial; no llega a 3 porque el bloque de tabla invita a «cruzar tu puesto con el grupo» sin advertir del caso límite más frecuente en este convenio: que el salario de tabla es de grupo y no incorpora antigüedad (que el convenio no reconoce) ni complementos ad personam.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 422,
+          "cita": "<strong>Libre disposición:</strong> <strong>12 horas anuales</strong> preaviso 7 días naturales, por horas o jornada completa (Art. 65.i). Empresa debe motivar denegación en 2 días laborables."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 512,
+          "cita": "Horas complementarias máximo <strong>40%</strong> de las horas ordinarias. Formalizables por escrito. Personas a tiempo parcial tienen <strong>preferencia para cubrir vacantes a jornada completa</strong> y viceversa."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 3,
+      "razon": "Es la única ficha del sector que lleva al documento exacto y además al anexo y a la página: enlaza el texto íntegro del BOPB con su CVE escrito al lado y, aparte, el PDF de las tablas 2026. El lector no repite ninguna búsqueda.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 644,
+          "cita": "<strong>BOPB · 13-feb-2026 · CVE 202610028848</strong></a> — Resolución de 11 de febrero de 2026 por la que se dispone la inscripción y la publicación del XX Convenio Colectivo … (177 páginas · castellano + catalán)"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 253,
+          "cita": "Fuente: Anexo 1 del BOPB del 13-feb-2026 (páginas 79 y 82 del texto oficial)."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 645,
+          "cita": "<strong>CCOO Indústria Catalunya · dic-2025</strong></a> — Tablas salariales 2026 publicadas por la representación sindical firmante para difusión sectorial."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 3,
+      "razon": "Fecha la tabla vigente en el h2 y en su pie de fuente, guarda la de 2025 en un desplegable rotulado como tal, y en los complementos da las dos cuantías emparejadas —2026 y 2025— para que el lector sepa cuál le toca. Ninguna otra ficha del sector, salvo Asturias, separa así vigente e histórico.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 256,
+          "cita": "<summary>Ver tabla vigente en 2025 (Anexo 1 BOPB, aplicada +4% sobre 2024)</summary>"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 302,
+          "cita": "Jornada que supere media jornada: <span class=\"plus-cifra\">7,91 €/día</span> (2026) — 7,68 €/día en 2025."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 313,
+          "cita": "<h3>Uso de coche particular — Art. 53</h3>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 2,
+      "razon": "La fecha de verificación es concreta (11-jul-2026) y posterior al BOPB del 13-feb-2026, y se repite en el pie; se queda en 2 porque el cuerpo contiene una frase que contradice esa frescura: da por no publicado el SMI de 2026 cuando el RD 126/2026 ya estaba en vigor meses antes de la revisión declarada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 176,
+          "cita": "<strong>✓ Verificado</strong> contra BOPB del 13 de febrero de 2026 (Resolución de 11 de febrero de 2026, Directora Territorial Barcelona Lídia Frias Forcada) por SalarioJusto · última revisión 11 de julio de 2026"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 507,
+          "cita": "Para 2026 y 2027 se ajustará por la Comisión Paritaria cuando el BOE publique el SMI vigente."
+        }
+      ],
+      "parche": "Reescribir la línea 507 para que refleje el estado real a la fecha del sello: «Personas contratadas para formación y aprendizaje o formación en alternancia (1.º, 2.º y 3.º año) percibían en 2025 1.184,00 €/mes en 14 pagas = 16.576,00 €/año, importe idéntico al SMI de 2025. Para 2026 el suelo aplicable es el SMI vigente (RD 126/2026: 1.221 €/mes, 17.094 €/año en 14 pagas); a la fecha de esta revisión la Comisión Paritaria no ha publicado tabla propia de formación para 2026, de modo que rige el SMI.» Añadir en la lista de fuentes el enlace https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 3,
+      "razon": "No solo dice hasta cuándo dura el convenio: publica el calendario de la subida pendiente de 2027 con efectos, la jornada pactada para ese año y el mecanismo, el umbral y la fecha de la cláusula de garantía (revisión sobre tablas 2027, aplicable el 1-ene-2028, sin retroactividad). El lector sabe qué vigilar y cuándo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 345,
+          "cita": "<strong>2027</strong>: +3% sobre las tablas de 2026 · efectos 1 de enero de 2027"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 350,
+          "cita": "Si el Instituto Nacional de Estadística (INE) constata oficialmente que, al 31 de diciembre de 2027, <strong>la suma de las inflaciones de los años 2025, 2026 y 2027 fuese superior al 10,00%</strong>, se efectuará una revisión técnica sobre las tablas de 2027, <strong>sin efectos retroactivos y aplicable a partir del 1 de enero de 2028</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Es la mejor ficha del sector en trazabilidad: enlaza documento, anexo y página. Dos reservas que no bajan la nota pero convienen al sintetizador. (1) Los dos enlaces al «texto íntegro» y a las tablas 2026 están alojados en webs sindicales (ugtficabcn.cat y ccoo.cat), no en la sede del BOPB; la ficha lo rotula honestamente como «Espejo oficial», pero si el sindicato rota el archivo la cadena se rompe entera, así que debería añadirse la URL del CVE en la sede. (2) El determinista marca como hardfail 2.2 la ausencia del bloque «Quién audita esto»: no lo puntúo aquí para no penalizarlo dos veces, pero es justo el bloque donde el resto del sector separa por escrito lo transcrito de lo calculado, y esta ficha calcula (×14, ejemplo Carla) sin esa declaración. El SMI de 16.576 €/1.184 € que detecta el determinista es referencia legítima a 2025, no una cifra de 2026 mal puesta: no hay 5.7."
+}

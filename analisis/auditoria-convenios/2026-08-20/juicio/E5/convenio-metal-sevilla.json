@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-sevilla",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 0,
+      "razon": "entrantes_n=3 y los tres son índices: convenios.html, index.html y mapa-del-sitio.html. Ninguna ficha ni ninguna guía la enlaza, que es exactamente la definición de 0. La asimetría es total: emite a seis hermanas del metal y a Hostelería Sevilla, y no recibe ni uno de vuelta, ni siquiera de convenio-metal-madrid.html o convenio-metal-zaragoza.html, a las que enlaza dos veces.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-sevilla.json",
+          "linea": 313,
+          "cita": "\"entrantes_desde\": ["
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 641,
+          "cita": "<li><a href=\"/convenio-metal-madrid.html\">Convenio del Metal — Madrid</a></li>"
+        }
+      ],
+      "parche": "Añadir el enlace recíproco en las fichas que Sevilla ya enlaza: en convenio-metal-zaragoza.html y convenio-metal-madrid.html, dentro de su callout 'Comparación con otras provincias del sector' (el mismo patrón que Sevilla usa en su línea 445), citar «el <a href=\"/convenio-metal-sevilla.html\">metal de Sevilla</a>, que fija el salario por día en tres columnas». Va en ese callout porque es donde esas fichas ya están enumerando estructuras salariales distintas y Sevilla es la más atípica de todas.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.3",
+      "nota": 3,
+      "razon": "Es la única del piloto en la que los enlaces a fichas hermanas viven dentro de la prosa y resuelven la duda que el párrafo acaba de abrir: el callout explica que Sevilla paga por día y enlaza, uno a uno, a las provincias que lo hacen de otra manera. El de la guía de reclamación llega al cerrar el procedimiento y el del SMI está dentro de la tarjeta que da la cifra. Es el nivel al que deberían subir las otras cinco.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 445,
+          "cita": "<strong>Comparación con otras provincias del sector.</strong> El metal de Sevilla fija el salario <strong>por día</strong> en tres columnas, algo poco habitual: el <a href=\"/convenio-metal-gipuzkoa.html\">metal de Gipuzkoa</a> lo hace por <strong>valor hora</strong>, el <a href=\"/convenio-metal-zaragoza.html\">de Zaragoza</a> y el <a href=\"/convenio-metal-navarra.html\">de Navarra</a> por <strong>grupos con retribución anual</strong>, y el <a href=\"/convenio-metal-madrid.html\">d…"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 573,
+          "cita": "<p>Código convenio: <code style=\"font-family:monospace;font-size:13px;\">41002445011982</code>. Firmantes: <strong>FEDEME</strong> (patronal) y los sindicatos <strong>CCOO y UGT</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a></p>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 595,
+          "cita": "<div class=\"pill-card-body\">1.221 €/mes y 17.094 € anuales (RD 126/2026). <a href=\"/salario-minimo-interprofesional-2026.html\">Consulta el SMI 2026</a></div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 2,
+      "razon": "Cubre las dos direcciones: seis hermanas del metal y convenio-hosteleria-sevilla.html. No llega a 3 porque la dirección cross-sector está resuelta con una línea de lista, sin explicar cuándo el lector debería irse allí, y falta convenio-limpieza-sevilla.html, que existe en el corpus.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-sevilla.json",
+          "linea": 292,
+          "cita": "\"a_otro_sector_misma_provincia\": ["
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 645,
+          "cita": "<li><a href=\"/convenio-hosteleria-sevilla.html\">Convenio de Hostelería — Sevilla</a></li>"
+        }
+      ],
+      "parche": "Sustituir el ítem de la línea 645 por una frase de desambiguación en el arranque de la ficha: «Este convenio cubre la industria siderometalúrgica de Sevilla. Si tu empresa es una contrata de limpieza o de hostelería dentro de una planta industrial, no te aplica: mira <a href=\"/convenio-limpieza-sevilla.html\">Limpieza de Sevilla</a> o <a href=\"/convenio-hosteleria-sevilla.html\">Hostelería de Sevilla</a>.» Va arriba porque el error de sector se comete al entrar en la ficha, no al terminarla.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.5",
+      "nota": 3,
+      "razon": "Las anclas del callout no son etiquetas de catálogo sino sintagmas escritos para esa frase concreta — 'metal de Gipuzkoa' cuando dice que allí se paga por valor hora, 'de Zaragoza' y 'de Navarra' cuando habla de grupos con retribución anual. anchors_genericos=[]. Eso es lo que ninguna otra ficha del piloto hace.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 445,
+          "cita": "<strong>Comparación con otras provincias del sector.</strong> El metal de Sevilla fija el salario <strong>por día</strong> en tres columnas, algo poco habitual: el <a href=\"/convenio-metal-gipuzkoa.html\">metal de Gipuzkoa</a> lo hace por <strong>valor hora</strong>, el <a href=\"/convenio-metal-zaragoza.html\">de Zaragoza</a> y el <a href=\"/convenio-metal-navarra.html\">de Navarra</a> por <strong>grupos con retribución anual</strong>, y el <a href=\"/convenio-metal-madrid.html\">d…"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "al_kit=1 y es la guía, colocada al cerrar el procedimiento. El paso que pide la nómina detallada por escrito no enlaza plantilla-solicitar-nominas.html, y el paso siguiente, que da el plazo de un año por mensualidad ante el SERCLA, no enlaza la plantilla de atrasos: el puente al kit existe, pero no en el punto de la necesidad ni con la acción concreta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 570,
+          "cita": "<li><strong>Pide la nómina detallada por escrito</strong> si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores).</li>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 571,
+          "cita": "<li><strong>Acude a la Comisión Paritaria</strong> del convenio o al SERCLA (vía extrajudicial de Andalucía). Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET).</li>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 573,
+          "cita": "<p>Código convenio: <code style=\"font-family:monospace;font-size:13px;\">41002445011982</code>. Firmantes: <strong>FEDEME</strong> (patronal) y los sindicatos <strong>CCOO y UGT</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a></p>"
+        }
+      ],
+      "parche": "En la línea 571, tras «Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)», añadir: «Reclama por escrito con la <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">plantilla de atrasos de convenio</a> la diferencia de los últimos 12 meses antes de que prescriba la primera mensualidad.» Va exactamente ahí porque es la frase que pone el reloj en marcha.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Sevilla es el caso más claro del corpus de ficha bien tejida hacia fuera y huérfana hacia dentro: 26 enlaces internos en el cuerpo y 3 entrantes, todos de índices. El callout de la línea 445 es el patrón que la auditoría debería propagar — ya existe en 11 fichas (todo el metal y tres de limpieza) y en ninguna de hostelería. Fuera de mi eje: es la única de las seis que cita el SMI 2026 correcto (17.094 €), mientras Asturias y Zaragoza siguen con 16.576 €."
+}

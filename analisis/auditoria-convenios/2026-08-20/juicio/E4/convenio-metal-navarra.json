@@ -1,0 +1,119 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-navarra",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Cuatro elementos en 71 caracteres y una cifra que sí publica el boletín: el Salario Garantizado anual del BON es una magnitud del propio convenio, no un derivado nuestro. No llega a 3 porque la horquilla se expresa por grupos, y el que busca no sabe si es el 5 o el 7; el title no da ni el puesto ni el equivalente mensual, que la ficha sí tiene calculado al lado (unos 1.865 € en 14 pagas en el grupo de entrada). A 71 caracteres, además, el recorte se come la marca y roza el segundo importe.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Navarra 2026: tablas de 26.112 a 31.750 € | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 271,
+          "cita": "Cuantías oficiales de la <strong>revisión salarial 2026</strong> (BON núm. 31, 12-feb-2026, Resolución 9C/2026), resultado de aplicar el <strong>+2%</strong> sobre las tablas vigentes a 31 de diciembre de 2025."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 205,
+          "cita": "<h1>Convenio del <em>Metal de Navarra</em>: tablas 2026 de 26.112 € a 31.750 €</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Cifra visible dentro del recorte, con el grupo al que corresponde cada extremo, y motivos concretos para entrar: la paga de 400 €, los trienios en euros en vez de quinquenios porcentuales. Se queda en 2 por longitud —279 caracteres, casi el doble de lo que se muestra— y porque el remate con la verificación del BON y el código REGCON, que es lo que sostiene la confianza, cae fuera de lo visible.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 7,
+          "cita": "Convenio de la Industria Siderometalúrgica de Navarra 2026 (+2%): Salario Garantizado por 7 grupos, de 26.112 € (Grupo 7) a 31.750 € (Grupo 1), 2 pagas extra, paga de 400 € en marzo y antigüedad por trienios. Verificado contra el BON núm. 31 (12-feb-2026). REGCON 31006805011981."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "Las frases con la cifra principal se sostienen y encima resuelven un problema que el resto ignora: la respuesta avisa de que el convenio fija el salario por grupo y no por categoría, así que quien busque 'oficial' no se lleve una cifra que el convenio no reconoce con ese nombre. El h1 y la entradilla llevan cifra, ámbito, año y boletín. No sube a 3 porque la respuesta no repite provincia ni sector, y porque los pies de tabla que explican prorrateos y devengos son fragmentos que empiezan por 'Las dos extraordinarias se devengan...' sin decir de qué convenio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 479,
+          "cita": "El convenio fija un <strong>Salario Garantizado por grupo</strong>, no por categoría suelta. Un oficial de oficio se encuadra habitualmente en el <strong>Grupo 5</strong> (28.195,04 €/año, unos 2.014 € en 14 pagas)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 478,
+          "cita": "<h3>¿Cuánto cobra un oficial del metal en Navarra en 2026?</h3>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 205,
+          "cita": "<h1>Convenio del <em>Metal de Navarra</em>: tablas 2026 de 26.112 € a 31.750 €</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El encabezado lleva año y periodo ('Garantizado 2026 (año)' y 'Mensual (14 pagas)'), la fila da las dos magnitudes y el párrafo de lectura declara qué incluye el Salario Garantizado y qué no. Y hace algo que ninguna otra ficha del sector hace: marca la columna mensual como derivada y orientativa, que es exactamente la salvaguarda que faltó en el caso del piloto. No la subo a 3 porque esa advertencia vive en el párrafo y no en el encabezado —la celda '1.865,11 €' extraída sola sigue pareciendo una cuantía de convenio— y porque las cuatro tablas van sin caption.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 276,
+          "cita": "<thead><tr><th>Grupo profesional</th><th>Categorías orientativas</th><th class=\"num\">Garantizado 2026 (año)</th><th class=\"num\">Mensual (14 pagas)</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 271,
+          "cita": "Para cada grupo se indica el <strong>Salario Garantizado anual</strong> y su equivalente <strong>mensual en 14 pagas</strong> (el anual dividido entre 14, solo orientativo)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 272,
+          "cita": "<strong>Cómo leer la tabla:</strong> el Salario Garantizado es el bruto anual antes de IRPF y Seguridad Social e incluye ya las dos pagas extra. No incluye la antigüedad ni los pluses"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "pct_huerfanas 0,035 (4 de 113) fija el 2 y el HTML lo sostiene: el párrafo que abre la tabla cita boletín, número, fecha y hasta la resolución, y prácticamente cada cuantía de plus o de trienio lleva su artículo entre paréntesis. No sube porque la única sección huérfana es la FAQ del oficial, y porque el enlace externo es al buscador del BON, no a la resolución concreta que sostiene la tabla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 271,
+          "cita": "Cuantías oficiales de la <strong>revisión salarial 2026</strong> (BON núm. 31, 12-feb-2026, Resolución 9C/2026)"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 366,
+          "cita": "Valores 2026: 1.º <strong>177,53 €</strong>, 2.º 355,09 €, 3.º 621,34 €, 4.º 798,73 €, 5.º 887,24 €, 6.º 1.154,41 €, 7.º 1.242,64 €, 8.º 1.331,42 € y <strong>90,99 €</strong> por cada trienio sucesivo. Se prorratea en las 14 pagas (Art. 46)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 506,
+          "cita": "verificadas por partida doble (tabla 2025 × 1,02 = tabla 2026)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana abierta (ultimo_commit 2026-08-04, 15 días): parches aplazados. Navarra es la ficha que mejor resuelve el riesgo que motivó reescribir este eje. Es la única de las nueve que publica una columna derivada y la etiqueta como tal en el mismo sitio donde la publica: 'el anual dividido entre 14, solo orientativo'. Si el sector adopta una sola norma de este eje, propongo que sea esa frase, aplicada a toda columna que no venga literal del boletín — empezando por Asturias, donde falta, y por Gipuzkoa, donde está pero lejos de la tabla."
+}

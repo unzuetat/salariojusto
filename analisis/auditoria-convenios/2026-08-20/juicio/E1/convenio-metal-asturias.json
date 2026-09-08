@@ -1,0 +1,133 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-asturias",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Publica una columna que el boletín no trae («Mínimo anual 2026»), la declara como cálculo propio, da la fórmula y dice qué deja fuera; además contrasta el complemento de IT con otras dos fichas del cluster. Es el estándar que fijó Sevilla, aplicado aquí sin copiarlo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 563,
+          "cita": "El «mínimo anual» es un cálculo propio con fórmula declarada — (salario convenio + plus convenio) × 365 + 2 pagas — para poder comparar entre provincias; lo señalamos para no inducir a error."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 283,
+          "cita": "El mínimo anual estimado suma salario convenio, plus convenio y las dos pagas extras"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 460,
+          "cita": "El complemento por Fondo hasta el 100% del líquido desde el 8.º día cubre <strong>enfermedad común y accidente</strong> por igual, mientras que la mayoría de los convenios del metal solo complementan el accidente de trabajo"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Las afirmaciones van con artículo y condición (art. 22, art. 23, DT 1.ª) y la frase más asertiva de la ficha se sostiene en el boletín que cita; no llega a 3 porque no advierte del caso límite —la tabla es un mínimo de convenio a jornada completa— en el punto donde el lector compara su nómina.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 265,
+          "cita": "Que lo que te corresponde en 2026 no está pendiente de nadie: <strong>+2%</strong> sobre 2025, cifra a cifra, nivel a nivel, en un boletín oficial firmado hace dos años."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 477,
+          "cita": "La revisión solo opera si el <strong>sumatorio del IPC interanual de 2024, 2025 y 2026 supera el 7,5%</strong>; en ese caso, la diferencia se consolidaría en las <strong>tablas iniciales de 2027</strong> — nunca con retroactividad sobre 2026."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 2,
+      "razon": "Enlaza el PDF del anuncio exacto del BOPA que contiene el articulado y las tres tablas anexas, con resolución, código y CVE escritos al lado; no llega a 3 porque dentro de ese PDF no señala el anexo ni la página de la tabla que transcribe.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 554,
+          "cita": "BOPA núm. 191 (1-oct-2024), Resolución de 18-9-2024, cód. 2024-08143, código de convenio 33000695011979 … <a href=\"https://miprincipado.asturias.es/bopa/2024/10/01/2024-08143.pdf\" target=\"_blank\" rel=\"noopener\">PDF oficial del BOPA</a>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 556,
+          "cita": "<strong>UGT FICA Asturias</strong>, PDF del convenio Metal 2024-2026, y <strong>FEMETAL</strong>, anuncio de la publicación en el BOPA — fuentes de contraste."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 3,
+      "razon": "No solo fecha la tabla vigente en su propio encabezado: guarda las de 2024 y 2025 en un desplegable rotulado como histórico y publica una tabla de subidas año a año. Es, con Barcelona, la única del sector donde el lector no puede confundir la tabla que se le aplica con la que ya no.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 287,
+          "cita": "<thead><tr><th>Nivel · categorías orientativas (Anexo 2)</th><th class=\"num\">Salario €/día</th><th class=\"num\">Paga extra (×2)</th><th class=\"num\">Mínimo anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 330,
+          "cita": "<summary>Tablas 2025 y 2024 (histórico del convenio) <span class=\"fam-meta\">salario/día y paga extra</span></summary>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 467,
+          "cita": "<thead><tr><th>Año</th><th class=\"num\">Subida</th><th>Base de cálculo</th></tr></thead>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "Fecha concreta (6-ago-2026), posterior al único boletín del que dependen sus cifras (BOPA 191 de 1-oct-2024, que ya trae la tabla de 2026), y el bloque de autoría dice exactamente qué se cotejó y contra qué se validó (los incrementos pactados).",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 215,
+          "cita": "<strong>✓ Verificado</strong> contra el texto íntegro del convenio y sus tablas 2024-2026 (BOPA núm. 191, 1-oct-2024, Resolución de 18-9-2024, código 33000695011979), por SalarioJusto · última revisión 6 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 563,
+          "cita": "Las cuantías están transcritas de la publicación oficial y validadas contra los incrementos pactados (2,5%, 3% y 2%)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 3,
+      "razon": "Dice hasta cuándo valen las tablas, con qué mecanismo se denuncia el convenio, qué umbral concreto activaría la revisión, dónde se consolidaría (tablas iniciales de 2027, sin retroactividad) y cuándo empieza la negociación siguiente. Es caducidad anunciada con instrucciones, no una fecha suelta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 550,
+          "cita": "Hasta el <strong>31 de diciembre de 2026</strong>, con denuncia automática un mes antes, <strong>ultraactividad normativa</strong> pactada y compromiso de iniciar la negociación del nuevo convenio en <strong>enero de 2027</strong> (art. 2)."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 257,
+          "cita": "Vigente hasta el 31-12-2026, con denuncia automática y negociación del nuevo convenio comprometida para <strong>enero de 2027</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Es la ficha del sector con la cadena cifra→origen más corta: un solo PDF oficial enlazado contiene el articulado y las tres tablas, y lo que no sale de ahí se declara como cálculo propio con fórmula. Un detalle que envejece solo: la línea 265 dice «en un boletín oficial firmado hace dos años», expresión relativa que dejará de ser cierta sin que nadie toque la página; convendría dejarla como «firmado en septiembre de 2024». La ficha usa además la fórmula ×365 días en su columna estimada mientras Bizkaia usa ×425 y Sevilla ×425/×359 sobre bases distintas: no es contradicción (los convenios devengan distinto), pero el sintetizador debería comprobar que cada fórmula corresponde al devengo de su convenio."
+}

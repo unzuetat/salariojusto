@@ -1,0 +1,137 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-navarra",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 2,
+      "razon": "boilerplate_ratio 0,058 con 6 frases compartidas: cuatro de cromo inevitable y dos del explainer sectorial que nueve fichas hermanas comparten con razón. Lo compartido no es el contenido de sustancia. No sube a 3 porque el cromo sigue siendo genérico donde podría no serlo: el bloque de reclamación sí nombra el Tribunal Laboral de Navarra, pero las frases de plazo y de nómina son idénticas a las del resto del corpus.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 443,
+          "cita": "Acude a la Comisión Paritaria del convenio o al Tribunal Laboral de Navarra (conciliación y mediación previas, Art. 68)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 267,
+          "cita": "Es un convenio de industria, no de comercio. Cubre la fabricación, transformación, montaje y reparación del metal."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 2,
+      "razon": "2.676 palabras de prosa con ratio_tabla 0,119, y la prosa explica correctamente esta tabla —qué incluye el Salario Garantizado, qué se suma aparte, que la columna mensual es orientativa— pero no va más allá del molde de lectura que llevan las nueve fichas. Con siete filas y una sola cifra por grupo, la tabla se entendería casi igual sin ella: es prosa que explica, no prosa sin la cual se entendería mal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 272,
+          "cita": "el Salario Garantizado es el bruto anual antes de IRPF y Seguridad Social e incluye ya las dos pagas extra. No incluye la antigüedad ni los pluses de toxicidad/penosidad/peligrosidad, que se suman aparte"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 253,
+          "cita": "El Salario Garantizado ya incluye el Salario Base, el Plus de Convenio y el Plus de Carencia de Incentivos, y se abona en 14 pagas."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 2,
+      "razon": "97 frases exclusivas y 1.915 palabras exclusivas con hechos propios reales —trienios en euros con sus ocho valores, paga no consolidable de 400 €, compensación de teletrabajo de 50 €/mes, plus de centros sanitarios por radiaciones ionizantes—, pero todos salen de leer bien un articulado. No hay aquí el trabajo de cruce que sí hay en Madrid (dos publicaciones contradictorias), Bizkaia (dos convenios y un comunicado sindical) o Álava (reconstrucción de una aritmética). Hechos propios sí; investigación, no.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 366,
+          "cita": "Trienios en euros, no un porcentaje, e ilimitados. Valores 2026: 1.º 177,53 €, 2.º 355,09 €, 3.º 621,34 €"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 378,
+          "cita": "Para el personal expuesto a radiaciones ionizantes, agentes biológicos de grupos 3-4 o sustancias tóxicas. Fórmula Salario Garantizado × 0,0381 / 100."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 2,
+      "razon": "5 preguntas clonadas de 6: la peor proporción de las nueve fichas del metal. Se salva del 1 porque las respuestas sí son de aquí —los trienios en euros, el +2 % sin actualización previa— y porque la única pregunta propia, la de los 400 € de marzo, responde a algo que existe solo en esta provincia y en Zaragoza. Pero el bloque, como conjunto, es el más intercambiable del sector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 484,
+          "cita": "¿Qué es la paga de 400 € de marzo?"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 491,
+          "cita": "Trienios (no quinquenios) sobre valores fijos en euros, ilimitados: de 177,53 € el primero a 1.331,42 € el octavo"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "Recoge la particularidad principal y la recoge con cifras: que Navarra tiene el segundo suelo de entrada más alto del corpus, y lo demuestra comparándose con cuatro provincias. Suma el régimen foral y la revisión por IPC prevista para enero de 2027. Lo que no dice es por qué ese suelo es tan alto: la Comunidad Foral es el caso más nítido del cluster de metal organizado alrededor de una gran factoría de automoción y de un cluster eólico, y de eso solo queda un guiño en la lista de ámbito.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 295,
+          "cita": "el Grupo 7 gana 26.112 €/año, frente a los ~20.687 € de la Operaria/o Auxiliar de Madrid, los 22.462 € del Peón de Valencia o los 22.035 € del mínimo de Bizkaia"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 261,
+          "cita": "Fabricación de productos metálicos, maquinaria, componentes y fabricantes de componentes de energía renovable."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 2,
+      "razon": "El BON publica el Salario Garantizado por grupo ya listo para leer, así que aquí el boletín es más usable de partida que en Asturias o Gipuzkoa. La ficha aporta ordenación, la equivalencia mensual orientativa, la verificación aritmética de la revisión y el aviso de calendario para 2027. Es ventaja real, pero es de ordenación y contexto, no de cálculo que el boletín no dé.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 422,
+          "cita": "En enero de 2027 hay prevista una actualización adicional por IPC si el acumulado 2024-2025 supera el 4,04% (Art. 72.F), antes de negociar el nuevo convenio."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 499,
+          "cita": "Verificado por partida doble (tabla 2025 × 1,02 = tabla 2026, coincidente al céntimo en los 7 grupos)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "Ventaja identificable frente al agregador: el párrafo comparativo sitúa el suelo navarro entre cinco provincias con cifra y fuente, algo que ninguna calculadora de nóminas ofrece, y el IRPF foral queda advertido. Pero es una ventaja que hay que explicar para que se vea —está en un párrafo gris bajo la tabla— y no hay declaración propia de límites ni de qué se desconoce.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 434,
+          "cita": "Régimen fiscal foral de Navarra: el IRPF que se te retiene es el foral navarro, no el común estatal."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (último commit 2026-08-04, 15 días): no aplicar parches todavía. Es la ficha correcta del cluster: sin ningún fallo y sin ningún hallazgo. Tiene la peor proporción de FAQ clonada de las nueve (5 de 6) y es, junto con Valencia, la que menos investigación propia acumula. El parche más valioso es un hecho que investigar, no un párrafo que rellenar: Navarra es la provincia del metal español con mayor concentración de empleo industrial en una sola planta de automoción y en un cluster eólico, y la pregunta que trae el lector navarro es si ese convenio le aplica o si su planta tiene convenio de empresa por encima. Comprobar en REGCON los códigos de convenio de empresa de la factoría de automoción de la comarca de Pamplona y de los dos grandes fabricantes de aerogeneradores implantados en la Comunidad Foral, y decir en dos frases —dentro de «¿Este convenio te cubre?»— a quién aplica el provincial y a quién no. Ese dato explicaría además, sin adjetivos, por qué el suelo navarro es el segundo más alto del corpus, que ahora la ficha constata sin explicar."
+}

@@ -1,0 +1,252 @@
+{
+  "eje": "E6",
+  "slug": "convenio-hosteleria-valencia",
+  "metricas": [
+    {
+      "id": "7.2",
+      "nota": 1,
+      "razon": "En escritorio cumple: tablas.verde_en_tablas = 0 y la clase td.sal no llega a usarse, así que las cifras salen en tinta neutra. Pero la regla del bloque móvil pinta en verde todas las celdas numéricas de .tabla-salarios, que son precisamente las tres tablas de salario base y bruto anual de la ficha. Por debajo de 720 px —donde está la mayor parte del tráfico— cada cifra salarial es verde. El defecto viene heredado del canon, que trae la misma regla, así que corregirlo aquí obliga a decidirlo también allí.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 147,
+          "cita": ".tabla-salarios td.sal,.tabla-salarios td.num{font-size:15px;color:var(--green);}"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 302,
+          "cita": "<td class=\"num\">1.337,87 €</td>"
+        },
+        {
+          "archivo": "convenio-hosteleria-madrid.html",
+          "linea": 189,
+          "cita": ".tabla-salarios td.sal,.tabla-salarios td.num{font-size:15px;color:var(--green);}"
+        }
+      ],
+      "parche": "Cambiar la línea 147 a «.tabla-salarios td.sal,.tabla-salarios td.num{font-size:15px;color:var(--ink);font-weight:700;}» y, si hace falta destacar la cifra en la tarjeta móvil, hacerlo con peso tipográfico, no con color. Cambiar además td.sal de la línea 137 a var(--ink) para que la regla no pueda reaparecer. Conviene aplicar el mismo cambio en convenio-hosteleria-madrid.html (línea 189), porque es de donde viene.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.4",
+      "nota": 2,
+      "razon": "De 61 párrafos, parrafos.largos_100 solo detecta dos, y los dos rondan justo el umbral: no hay ladrillos. La entrada a la ficha está troceada en hero, aviso de ultraactividad, card de datos clave e índice, cada pieza con una sola idea. No llega a 3 porque no tiene nota editorial con etiquetas temáticas: el lector que quiera el resumen de treinta segundos tiene que armárselo leyendo cuatro bloques distintos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 226,
+          "cita": "El convenio expiró el 31/12/2025 pero las tablas siguen aplicándose por ultraactividad (art. 86.3 ET) mientras se negocia un nuevo texto. No hay incremento automático."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 666,
+          "cita": "Esto sorprende: <strong>los complementos de antigüedad están congelados</strong> desde los convenios de 1995-1997"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.5",
+      "nota": 3,
+      "razon": "headings.h1 = 1, saltos_jerarquia = [] pese a bajar hasta h4, y —esto es lo que la separa— los encabezados por sí solos ya cuentan la ficha: dicen la cifra, el artículo y a veces la advertencia. «Plus Compensatorio de Formación: 240 €/año si la empresa no te forma», «La trampa: el certificado debe ser de formación real y efectiva», «Pagas extras: por qué Valencia tiene 3 y no 2», «Si te cambian de jefe: el convenio Valencia SÍ tiene subrogación (Art. 41)». Leídos en fila son un índice narrado, no una lista de etiquetas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 634,
+          "cita": "Plus Compensatorio de Formación: 240 €/año si la empresa no te forma"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 644,
+          "cita": "La trampa: el certificado debe ser de formación \"real y efectiva\""
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 747,
+          "cita": "Si te cambian de jefe: el convenio Valencia SÍ tiene subrogación (Art. 41)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.8",
+      "nota": 3,
+      "razon": "Es la ficha que mejor demuestra que el canon y lo exclusivo no se estorban. Reproduce el esqueleto de hosteleria-madrid sección por sección —hasta el «Si te cambian de jefe», que en Madrid encabeza la negativa y aquí la afirmativa— y encima mete tres bloques que no existen en el canon y que son puro Valencia: la Tabla II BIS de salario sin experiencia, la paga única de la cláusula IPC activada en 2024 y el Plus Funcional de Restauración Moderna. Ninguno está pegado al final: los tres van en el cuerpo, antes de la comparativa.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 774,
+          "cita": "Salario sin experiencia: la Tabla II BIS (Art. 5.E)"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 698,
+          "cita": "La paga única IPC: cláusula de garantía activada en 2024"
+        },
+        {
+          "archivo": "convenio-hosteleria-madrid.html",
+          "linea": 753,
+          "cita": "Si te cambian de jefe: el convenio Madrid NO tiene subrogación"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 2,
+      "razon": "No hay bloque prescindible: las trece secciones h2 responden a preguntas distintas y las que podrían parecer relleno —fijo-discontinuo, Tabla II BIS— son justo las que cubren las situaciones más frecuentes del sector. No es 3 porque «Registro diario de jornada (obligatorio)» y «Pausa dentro de la jornada» son dos h3 de dos y tres líneas que caben en el bloque «Lo básico» sin perder nada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 479,
+          "cita": "Registro diario de jornada (obligatorio)"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 482,
+          "cita": "Pausa dentro de la jornada"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "El hero da el rango salarial completo con las dos puntas y el número de pagas antes de cualquier contexto, y el índice deja saltar a las tablas. No es 3 porque entre esa promesa y las tablas se interpone la sección de ámbito funcional, que son nueve viñetas largas: quien ya sabe que trabaja en hostelería en Valencia tiene que atravesarlas o usar el índice para llegar a su cifra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 224,
+          "cita": "De <strong>1.100,46 €/mes</strong> (ayudantes, riders) a <strong>1.415,47 €/mes</strong> (jefaturas en hoteles 4-5★) según categoría, en <strong>15 pagas</strong>."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 267,
+          "cita": "<h2 id=\"ambito\">Antes de seguir: ¿este convenio te cubre?</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 2,
+      "razon": "No encuentro ninguna idea desarrollada dos veces en secciones distintas del cuerpo: la ultraactividad se enuncia en el hero y se remata en marco legal, pero con función distinta (aviso y fuente), y el Plus de Formación se explica una sola vez. Las FAQ repiten lo del cuerpo, que es la redundancia esperada del formato. No es 3 porque el aviso de ultraactividad aparece tres veces en la primera pantalla —badge, párrafo bajo el badge y hero-sub— diciendo lo mismo con distinta tipografía.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 224,
+          "cita": "Vigencia 2022–2025 (en ultraactividad)."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 226,
+          "cita": "El convenio expiró el 31/12/2025 pero las tablas siguen aplicándose por ultraactividad (art. 86.3 ET) mientras se negocia un nuevo texto."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "jerga detecta seis términos y todos con explicacion_cerca = true; en el HTML la explicación explica de verdad y a veces con consecuencia práctica («No hay incremento automático» tras ultraactividad, o el aviso de que un prorrateo de 2/12 delata que te aplican otro convenio). No es 3 porque la explicación del término más caro para el bolsillo —qué implica exactamente que el convenio esté en ultraactividad respecto a la subida que no llega— se queda en una línea y no se traduce a euros, como sí hace limpieza-zaragoza.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 695,
+          "cita": "Si solo ves 2 pagas extras o el prorrateo de 2/12, te están aplicando un convenio que NO es el tuyo."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 226,
+          "cita": "las tablas siguen aplicándose por ultraactividad (art. 86.3 ET) mientras se negocia un nuevo texto. No hay incremento automático."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 4 · UGT 4 y norma.dice_los_sindicatos = 2. Las menciones son de firmantes, con la denominación federal completa y sin protagonismo de una sigla sobre la otra: uso como fuente del dato, legítimo. No es 3 porque la ficha nunca habla de la representación del sector más allá de quién firmó, ni da un porcentaje que sitúe a nadie.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 916,
+          "cita": "<strong>FeSMC-PV UGT</strong> (Federación de Servicios, Movilidad y Consumo del País Valenciano) · <strong>CCOO Servicios País Valenciano</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "11.1",
+      "nota": 1,
+      "razon": "sin_scope = 20 y sin_caption = 20 en las veinte tablas, y una de ellas no tiene ni th: la de «Lo básico» de jornada es una tabla de datos de dos columnas cuya primera columna es el nombre del dato, y sin encabezado un lector de pantalla oye pares sueltos sin saber qué está enumerando. Es el mismo defecto que arrastra el canon en su tabla equivalente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 443,
+          "cita": "<table>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 445,
+          "cita": "<tr><td>Jornada máxima anual</td><td><strong>1.794 horas</strong> efectivas</td></tr>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 292,
+          "cita": "<th>Nivel</th>"
+        }
+      ],
+      "parche": "Dar cabecera a la tabla de jornada: «<thead><tr><th scope=\"col\">Límite de jornada</th><th scope=\"col\">Lo que fija el convenio</th></tr></thead>», y convertir la primera celda de cada fila en th scope=\"row\". En las tres tablas salariales, añadir scope=\"col\" a los cuatro th y un caption que las distinga entre sí, que es lo que hoy solo dice el h3: «<caption style=\"caption-side:top;text-align:left;font-size:13px;color:var(--ink-light);padding-bottom:8px;\">Tabla I — restaurantes, cafeterías, bares y colectividades: salario base mensual y bruto anual en 15 pagas por nivel profesional (BOP Valencia núm. 26, 7-II-2023).</caption>», adaptando el rótulo a las Tablas II y III.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es prácticamente el del canon, sección por sección y en el mismo orden, incluida la comparativa provincial y el bloque de firma. No hay desviación estructural que señalar; lo que se aparta son adiciones de contenido propio, no cambios de armazón.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 717,
+          "cita": "Contrato fijo-discontinuo: el más usado en hostelería"
+        },
+        {
+          "archivo": "convenio-hosteleria-madrid.html",
+          "linea": 727,
+          "cita": "Contrato fijo discontinuo: el que más se usa en hostelería"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 2,
+      "razon": "El desdoblamiento inclusivo es consistente en las tres tablas de niveles («Camarero/a», «Jefe/a de Cocina», «Repartidor/a (rider)», «Gobernante/a») y los candidatos masculinos que marca norma —Auxiliar, Ayudante, Recepcionista— son epicenos. La única grieta: la misma categoría se escribe «Barman/Barwoman» en la Tabla I y «Barman» a secas en la Tabla II, cuarenta y seis líneas después.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 313,
+          "cita": "<td>Camarero/a · Cocinero/a · Barman/Barwoman · Sumiller · Recepcionista · Repostero/a</td>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 359,
+          "cita": "<td>Camarero/a · Cocinero/a · Recepcionista · Barman · Camarero/a de Pisos</td>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "En forma es la mejor de las cinco fichas con tablas: encabezados narrados, cero ladrillos, contenido exclusivo integrado sin romper el canon. Su único defecto serio es que hereda del canon el verde sobre las cifras en móvil, lo que convierte la corrección en una decisión de plantilla y no de ficha: si se toca aquí hay que tocar hosteleria-madrid, y con él todas las que copien esa hoja de estilo. Fuera de mi eje: el recolector marca hard-fail 5.1 porque el 44% de las cifras (74 de 169) están en secciones sin referencia a artículo, anexo o boletín — no es un problema de forma sino de trazabilidad, pero conviene decir que la ficha tiene el hábito contrario en sus mejores secciones (cada plus lleva su artículo en el encabezado), así que el arreglo es extender un patrón que ya existe, no inventarlo."
+}

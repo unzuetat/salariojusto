@@ -1,0 +1,261 @@
+{
+  "eje": "E6",
+  "slug": "convenio-limpieza-asturias",
+  "metricas": [
+    {
+      "id": "7.2",
+      "nota": 0,
+      "razon": "Es la peor de las seis en esta norma: tablas.verde_en_tablas = 3 y, además, la hoja de estilo pinta en verde la columna de bruto anual de la tabla salarial grande (td.sal), que es exactamente la cifra que la norma manda dejar en tinta neutra. El verde deja así de significar «verificado» y pasa a significar «dinero», que es el uso que metal-barcelona y metal-bizkaia evitan.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 149,
+          "cita": "td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;}"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 323,
+          "cita": "<tr><td class=\"cat\">Limpiador/a · Peón/a (Grupo V/VI)</td><td class=\"num\">17.365,50 €</td><td class=\"num\" style=\"color:var(--green);font-weight:700;\">+789,50 €</td></tr>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 150,
+          "cita": "td.sal{font-weight:700;color:var(--ink);text-align:right;white-space:nowrap;}"
+        }
+      ],
+      "parche": "Cambiar la regla de la línea 149 a «td.sal{font-weight:700;color:var(--ink);text-align:right;white-space:nowrap;}», copiando la de metal-sevilla, y quitar el style=\"color:var(--green);font-weight:700;\" de las tres celdas de la columna «vs SMI 2026» (líneas 323-325), dejando solo font-weight:700. El sello de la línea 207 se queda como está: es el único sitio donde el verde debe leerse.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "7.4",
+      "nota": 1,
+      "razon": "No hay nota editorial fragmentada, y su lugar lo ocupan tres callout-info verdes seguidos que el lector encuentra antes de la tabla; los dos últimos son párrafos macizos de más de cien palabras cada uno sobre un solo asunto. A eso se suman los cinco párrafos que parrafos.largos_100 sí detecta (líneas 244, 313, 391, 492 y 513). No es 0 porque el primer callout sí está troceado en tres viñetas con etiqueta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 236,
+          "cita": "<strong>Convenio plenamente vigente en 2026 por ultraactividad indefinida pactada en el Art. 4.</strong> El periodo formal del convenio fue del 1 de enero al 31 de diciembre de 2025, con denuncia automática prevista para el 30 de septiembre de 2025."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 240,
+          "cita": "<strong>Tres pagas extras anuales — el más generoso del sector.</strong> Mientras la mayoría de convenios provinciales de Limpieza en España tienen 2 pagas extras (14 pagas anuales), el convenio asturiano regula <strong>tres pagas extras</strong> en el Art. 27"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 214,
+          "cita": "<li><strong>«12 pagas»:</strong> en realidad son <strong>15</strong>"
+        }
+      ],
+      "parche": "Sustituir los dos callout-info de las líneas 235-241 por una única nota editorial fragmentada, al modo de metal-sevilla: «<div class=\"nota-editorial\"><p style=\"margin-bottom:10px;\"><strong>En 30 segundos · Qué es.</strong> El convenio de Limpieza de Edificios y Locales del Principado de Asturias (código 33000735011979), firmado el 14 de julio de 2025 por ASPEL y UDELIMPA con CCOO Hábitat, UGT-FeSMC y USO.</p><p style=\"margin-bottom:10px;\"><strong>Estructura.</strong> 27 categorías en seis grupos, 15 pagas (12 mensualidades + 3 extras del Art. 27: Verano, Navidad y Beneficios) y jornada de 1.758 h/año.</p><p style=\"margin-bottom:10px;\"><strong>Vigencia.</strong> El periodo formal terminó el 31-XII-2025, pero el Art. 4 pacta una ultraactividad de duración indefinida: la tabla 2025 sigue aplicándose entera hasta que se firme el nuevo convenio.</p><p style=\"margin:0;\"><strong>Futuro.</strong> La negociación del nuevo texto estaba prevista para la primera semana de febrero de 2026.</p></div>». El detalle largo del Art. 4 ya está en su h3 de la línea 387 y el de las tres pagas puede ir en la sección de pagas.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "7.5",
+      "nota": 1,
+      "razon": "La jerarquía es formalmente correcta (headings.h1 = 1, saltos_jerarquia = []), pero dos h2 de la misma página se llaman casi igual y el segundo es justo el encabezado vacío que la norma señala: «Particularidades adicionales del convenio» no dice nada que oriente, y quien haya leído «Particularidades únicas del convenio asturiano» ochenta líneas antes no puede saber qué esperar debajo. El resto de encabezados sí funciona.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 369,
+          "cita": "<h2>Particularidades únicas del convenio asturiano</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 417,
+          "cita": "<h2>Particularidades adicionales del convenio</h2>"
+        }
+      ],
+      "parche": "Renombrar el h2 de la línea 417 por lo que realmente contiene —jornada, permisos y garantías de cobro— y moverlo junto al bloque de pluses: «<h2>Bocadillo, permisos y garantía de cobro: el detalle que no está en la tabla</h2>». Así «Particularidades únicas del convenio asturiano» se queda como único bloque con ese rótulo.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "7.8",
+      "nota": 2,
+      "razon": "Sigue el canon (sello, datos clave, tabla, pluses, subrogación, comparativa, FAQ, quién audita) y su contenido exclusivo —la equiparación con el SESPA, la indemnización por cese 60-63 y el pacto anti-dumping— está en un bloque propio a mitad de página, no al final. No llega a 3 por dos cosas: no tiene el índice de navegación que sí trae hosteleria-madrid, y una parte de lo exclusivo se desangra en el cajón de sastre de la línea 417.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 371,
+          "cita": "Equiparación salarial con SESPA en centros sanitarios (Art. 30)"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 372,
+          "cita": "Es una cláusula única del convenio asturiano: limpiar un hospital del SESPA bajo este convenio equivale económicamente a estar en plantilla pública."
+        },
+        {
+          "archivo": "convenio-hosteleria-madrid.html",
+          "linea": 180,
+          "cita": "td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;}"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra el bloque «Particularidades adicionales del convenio»: es una lista de ocho viñetas heterogéneas —bocadillo, vacaciones, excedencias, permisos, intereses de demora, atrasos, tiempo parcial y remisión al estatal— colocada después de la subrogación, sin criterio que la una salvo «lo que no cupo antes». Sus contenidos tienen sitio natural en secciones ya existentes.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 417,
+          "cita": "<h2>Particularidades adicionales del convenio</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 419,
+          "cita": "<li><strong>Bocadillo dentro de jornada efectiva:</strong> en jornadas continuas, el descanso de 20 minutos para el bocadillo computa como tiempo de trabajo efectivo."
+        }
+      ],
+      "parche": "Disolver el bloque: llevar bocadillo, vacaciones y jornada limitada a una sección «Jornada, descansos y vacaciones» junto a los pluses; excedencias y permisos a «Permisos y excedencias»; el pago garantizado y los atrasos al final de la sección de tabla salarial (donde el lector ya está mirando dinero); y la remisión al convenio estatal a «Fuentes oficiales».",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "El orden es razonable: el callout de la línea 210 responde en la primera pantalla a las dos búsquedas reales («35 horas» y «12 pagas») con la cifra dentro, y la tabla es el primer h2. No es 3 porque entre esa respuesta y la tabla se cuelan dos callouts largos de vigencia y de pagas, es decir contexto jurídico antes de la escala salarial completa.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 214,
+          "cita": "Si cobras con las extras <strong>prorrateadas en 12 mensualidades</strong>, una <strong>Limpiador/a percibe 1.447 €/mes</strong> (mismo bruto anual: 17.365,50 €)."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 243,
+          "cita": "<h2 id=\"tabla-salarial\">Tabla salarial 2025 — categoría a categoría</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 0,
+      "razon": "La misma cita literal del Art. 4 aparece dos veces en la página, en el callout de apertura y en el h3 de particularidades, con el mismo remate («blinda al personal frente al decaimiento del Art. 86.3»). Y las tres pagas extras se explican enteras dos veces, en la viñeta de la línea 214 y en el callout de la línea 240. No es un eco: son dos redacciones completas del mismo contenido separadas por 150 líneas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 236,
+          "cita": "el propio Art. 4 establece una ultraactividad de duración indefinida: <em>\"una vez denunciado el convenio, y en tanto no se llegue a un acuerdo sobre el nuevo, se entenderá que el contenido íntegro normativo del presente convenio mantiene su vigencia hasta la fecha de la firma del nuevo convenio colectivo\"</em>. Esto blinda al personal frente al decaimiento del Art. 86.3 ET."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 388,
+          "cita": "El texto del Art. 4 establece que <em>\"una vez denunciado el convenio, y en tanto no se llegue a un acuerdo sobre el nuevo, se entenderá que el contenido íntegro normativo del presente convenio mantiene su vigencia hasta la fecha de la firma del nuevo convenio colectivo\"</em>."
+        }
+      ],
+      "parche": "Dejar la cita literal del Art. 4 en un solo sitio, el h3 de la línea 387, y reducir el callout de apertura a la consecuencia práctica sin volver a citar: «<strong>Vigente en 2026.</strong> El convenio terminó su periodo formal el 31 de diciembre de 2025, pero el Art. 4 pacta ultraactividad indefinida: la tabla 2025 y el resto de condiciones siguen aplicándose íntegras hasta que se firme el nuevo convenio. → <a href=\"#ultraactividad\">Por qué esto te protege más que la ultraactividad legal ↓</a>». Y suprimir el callout de la línea 239, cuyo contenido ya está entero en la viñeta de la línea 214.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.6",
+      "nota": 1,
+      "razon": "jerga marca «comisión paritaria» con explicacion_cerca = false, y en el HTML se confirma: la primera vez que aparece es dentro del pacto anti-dumping, dando por sabido qué es y qué puede hacer; la explicación llega ochenta líneas más tarde, en una pill-card de recursos. Las otras dos —ultraactividad y subrogación— sí están explicadas al primer uso, y por eso no es 0.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 391,
+          "cita": "La Comisión Paritaria fija anualmente los costes mínimos repercutibles para las categorías de Limpiador/a y Especialista en los servicios concertados con administraciones públicas"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 439,
+          "cita": "Para dudas interpretativas o aplicación de cláusulas, la Comisión Paritaria está integrada por representantes de ASPEL+UDELIMPA y CCOO+UGT+USO."
+        }
+      ],
+      "parche": "Glosar el término la primera vez que se usa, en la línea 391: «La <strong>Comisión Paritaria</strong> —el órgano mixto de empresas y sindicatos firmantes que interpreta el convenio y cuyos acuerdos obligan a las dos partes— fija anualmente los costes mínimos repercutibles para las categorías de Limpiador/a y Especialista…». Con eso, la pill-card de la línea 439 puede quedarse solo con el «dónde acudir».",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.8",
+      "nota": 3,
+      "razon": "Es la única ficha del piloto que trata la representación como un dato con nombre y porcentaje en vez de como un par de siglas de adorno: norma.sindicatos reparte CCOO 8 · UGT 7 · USO 8, y el texto dedica un h3 a explicar que hay un tercer sindicato firmante y cuánto pesa cada uno. Eso es exactamente «plural correcto y con las siglas realmente mayoritarias en ese territorio».",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 384,
+          "cita": "<h3>Tres sindicatos firmantes incluyendo USO</h3>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 385,
+          "cita": "El convenio fue suscrito por <strong>tres sindicatos</strong>: CCOO Hábitat de Asturias (40,00% de representación social), UGT-FeSMC (43,22%) y <strong>USO Federación de Servicios (14,19%)</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "11.1",
+      "nota": 1,
+      "razon": "tablas.sin_th = 0 pero sin_scope = 3 y sin_caption = 3. La tabla salarial es de 43 filas por 5 columnas: sin scope, un lector de pantalla que baje por ella pierde la referencia de columna a las pocas filas y no sabe si el número que oye es el mensual, el anual, el prorrateado o el trienio. En una ficha cuyo activo es esa tabla, es un defecto de producto, no de accesibilidad formal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 248,
+          "cita": "<table>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 301,
+          "cita": "Limpiador/a38,59 €/día17.365,50 €1.447,13 €/mes10,90 €"
+        }
+      ],
+      "parche": "Poner scope=\"col\" en los cinco th de la tabla salarial y scope=\"row\" en las celdas de categoría (cambiando td class=\"cat\" por th scope=\"row\" class=\"cat\"), y abrir la tabla con un caption: «<caption style=\"caption-side:top;text-align:left;font-size:13px;color:var(--ink-light);padding-bottom:8px;\">Tabla salarial 2025 del convenio de Limpieza de Asturias, vigente en 2026 por ultraactividad: salario base, bruto anual en 15 pagas, equivalente mensual prorrateado en 12 y trienio, por categoría (BOPA 146/2025 con la corrección del BOPA 200).</caption>». Repetir el patrón en las tablas de las líneas 320 y 469.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es el del corpus y coincide con el de limpieza-zaragoza, la otra ficha del mismo sector: datos clave, tabla, pluses, subrogación, comparativa provincial, recursos, FAQ y firma. La única desviación real frente al canon es la ausencia de índice de navegación, que hosteleria-madrid y las dos fichas más nuevas del piloto sí traen.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 464,
+          "cita": "<h2>Comparativa con otros convenios provinciales de Limpieza</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 219,
+          "cita": "<div style=\"font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-light);margin-bottom:10px;\">Índice del convenio</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 1,
+      "razon": "La ficha aplica el inclusivo con cuidado en casi todas sus 27 categorías, pero se le escapa dentro de la misma tabla: «Peón Especialista» en masculino literal siete filas antes de «Peón/a». Quien lea la tabla no puede saber si son dos categorías distintas o la misma escrita de dos maneras — que es justo lo que la coherencia terminológica debe evitar en una tabla salarial.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 300,
+          "cita": "Peón Especialista41,75 €/día18.787,50 €1.565,63 €/mes11,68 €"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 307,
+          "cita": "Peón/a38,59 €/día17.365,50 €1.447,13 €/mes10,90 €"
+        }
+      ],
+      "parche": "Escribir «Peón/a Especialista» en la línea 300, igual que «Peón/a» en la 307 y «Limpiador/a» en la 301.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "12.1",
+      "detalle": "La tabla comparativa de esta ficha describe a Zaragoza como «Prorrogado Art. 5 + cláusulas diferidas» con «~14*» pagas, y el párrafo de cierre afirma que Asturias y Bizkaia son «los únicos convenios provinciales analizados» con 15 pagas. La ficha de Zaragoza del propio corpus dice lo contrario en las dos cosas: que la prórroga del Art. 5 NO operó porque CCOO denunció el convenio el 2-oct-2025 y está en ultraactividad, y que tiene tres pagas extras al año, es decir 15 pagas. Un lector que siga el enlace entre las dos fichas encuentra dos verdades incompatibles sobre la misma provincia.",
+      "evidencia": {
+        "linea": 481,
+        "cita": "<tr><td class=\"cat\">Zaragoza</td><td>Prorrogado Art. 5 + cláusulas diferidas</td><td class=\"num\">~14*</td><td class=\"num\">1.766 h</td><td>1 de 19 (Aprendiz)</td></tr>"
+      }
+    }
+  ],
+  "observacion_libre": "El defecto de forma que más pesa aquí no es ninguna de las doce métricas por separado, sino su suma en la primera pantalla: cuatro cajas verdes seguidas (sello + tres callout-info) antes de llegar a la tabla. El verde deja de destacar nada porque lo destaca todo, y por eso el 7.2 y el 7.4 se refuerzan mutuamente. Fuera de mi eje: el recolector ya marca hard-fail 12.2 por presentar 16.576 € como SMI de 2026 (el real es 17.094 €) en tres sitios, y eso invalida el argumento entero de la sección «Verificación A+B — todas las categorías cumplen el SMI 2026», incluidas las tres celdas verdes que propongo despintar. Conviene que el eje de verdad lo resuelva antes de aplicar mis parches de forma."
+}

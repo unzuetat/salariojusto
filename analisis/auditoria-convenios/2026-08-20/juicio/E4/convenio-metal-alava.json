@@ -1,0 +1,124 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-alava",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Los cuatro elementos están (cifra, sector, provincia, año) en 69 caracteres, y la cifra sale de la tabla oficial del BOTHA, no de un cálculo. No sube a 3 por dos motivos: es una horquilla anual, no la cuantía del puesto que más se busca —el oficial de 1.ª, 24.577,88 €, que la ficha sí tiene—, y el bruto anual es la magnitud que menos se reconoce en una nómina, sin que el title dé ningún equivalente mensual ni diga cuántas pagas incluye.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Álava 2026: tablas de 20.551 a 31.277 € | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 282,
+          "cita": "Cuantías oficiales de las <strong>tablas salariales 2026</strong> (BOTHA núm. 18, 11-feb-2026), resultado de aplicar el <strong>+0,5%</strong> del cierre del art. 24 sobre las tablas de 2025."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 594,
+          "cita": "un <strong>oficial u oficiala de 1.ª</strong> cobra <strong>24.577,88 €</strong> brutos al año, la cuantía más alta del grupo de oficios"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Tiene cifra y tiene motivo: la horquilla con quién cobra cada extremo, la verificación contra boletín con fecha y el aviso de que el convenio está vencido —eso último es un motivo real para entrar, porque nadie sabe qué se cobra en 2026 con un convenio caducado—. Se queda en 2 porque con 293 caracteres solo se muestra la primera mitad: la cifra entra por los pelos y el remate ('Régimen foral. Código 01001185011981') no lo lee nadie, ocupando el sitio donde cabría el dato del oficial de 1.ª.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 7,
+          "cita": "Las 54 categorías del convenio de la Industria Siderometalúrgica de Álava, tabla 2026 verificada contra el BOTHA núm. 18 (11-feb-2026): de 20.551 € (peón/a) a 31.277 € (ingeniería). Convenio vencido en ultraactividad, tablas 2026 con el +0,5% del art. 24. Régimen foral. Código 01001185011981."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "Las frases principales se sostienen solas: el h1 lleva cifra, ámbito y año, y la entradilla añade el boletín. La FAQ del peón también, porque el encabezado aporta provincia y año. No llega a 3 porque la otra pregunta de cuantía —la del oficial de 1.ª, la más buscada— es el ejemplo de libro de frase inextraíble: ni el h3 ni la respuesta dicen metal, ni Álava, ni 2026. Quien se lleve ese par se lleva '24.577,88 €' sin dueño. El determinista lo confirma listando esa sección en secciones_sin_anio y en secciones_sin_fuente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 593,
+          "cita": "<h3>¿Cuánto cobra un oficial de 1.ª?</h3>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 594,
+          "cita": "En el grupo obrero, un <strong>oficial u oficiala de 1.ª</strong> cobra <strong>24.577,88 €</strong> brutos al año, la cuantía más alta del grupo de oficios."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 585,
+          "cita": "Un <strong>peón o peona</strong> tiene un salario bruto anual de <strong>20.551,17 €</strong>, el suelo que comparten también buena parte del personal subalterno y auxiliar."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 208,
+          "cita": "La tabla salarial completa de la Industria Siderometalúrgica de Álava, <strong>verificada contra el BOTHA núm. 18</strong> (11-feb-2026)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El dato es extraíble sin reconstruirlo: la celda lleva su encabezado con magnitud, unidad y año ('Salario bruto anual 2026') y el párrafo de encima aclara qué incluye esa cifra y qué no. No sube a 3 porque las once tablas van sin caption —dato del determinista— y viven dentro de <details> plegados por familia, así que la unidad extraíble depende de que el motor la ate a un h2 que queda lejos; y porque junto a la cifra nada distingue el ámbito foral alavés del convenio estatal del metal, que es donde esta ficha tiene riesgo real de confusión.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 289,
+          "cita": "<thead><tr><th>Categoría profesional</th><th class=\"num\">Salario bruto anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 283,
+          "cita": "<strong>Cómo leer la tabla:</strong> agrupamos las 54 categorías por los 8 grupos profesionales del convenio. Despliega cada grupo para ver sus cuantías. El salario bruto anual es antes de IRPF y Seguridad Social."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 287,
+          "cita": "<summary>Grupo 1 · Personal titulado <span class=\"fam-meta\">6 categorías · 25.252–31.277 €/año</span></summary>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "El ancla manda: pct_huerfanas 0,03 (5 cifras de 168) cae en el tramo de 2. El HTML lo confirma y no da motivo para moverla: la traza acompaña a la tabla salarial y al bloque de pluses en el párrafo inmediatamente anterior, con boletín, número y fecha, y cada complemento lleva su artículo en el título de la tarjeta. Lo que impide subir es que las dos secciones huérfanas son precisamente las dos FAQ de cuantía, que es donde una IA busca la respuesta corta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 465,
+          "cita": "Sobre el salario bruto de las tablas se suman, cuando corresponden, los siguientes conceptos. Sus cuantías 2026 salen del BOTHA núm. 18 (11-feb-2026)."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 468,
+          "cita": "<div class=\"pill-card-title\">Antigüedad — quinquenios (Art. 16)</div>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 594,
+          "cita": "En el grupo obrero, un <strong>oficial u oficiala de 1.ª</strong> cobra <strong>24.577,88 €</strong> brutos al año"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana abierta (ultimo_commit 2026-08-08, 12 días): no propongo parches ejecutables, solo dejo descrito el defecto. El hallazgo transversal de esta ficha es la divergencia entre schema y HTML visible: el JSON-LD pregunta '¿Cuánto cobra un oficial de 1.ª del metal en Álava?' y el h3 que ve el lector dice solo '¿Cuánto cobra un oficial de 1.ª?'. La versión bien desambiguada ya está escrita; basta copiarla al encabezado visible. Es el mismo patrón que el piloto encontró en Sevilla y en Comercio Madrid, así que no es un desliz de esta ficha sino de la plantilla. Fuera de mi eje: once tablas sin caption y accordion por familias son estructura, no captación."
+}

@@ -1,0 +1,132 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-alava",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 2,
+      "razon": "boilerplate_ratio 0,052 y solo 7 frases compartidas: cuatro son cromo puro (metodología, SMI, plazo del art. 59.2, pedir la nómina) y las otras tres son el explainer sectorial del metal, legítimo entre nueve fichas hermanas. No llega a 3 porque el bloque «¿Este convenio te cubre?» está redactado con el mismo molde literal que Gipuzkoa y Navarra, y ahí sí hay sustancia clonada, no cromo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 278,
+          "cita": "Es un convenio de industria, no de comercio. Cubre la fabricación, transformación y reparación del metal."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 272,
+          "cita": "Fabricación de productos metálicos, maquinaria, bienes de equipo y componentes."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "3.323 palabras de prosa contra ratio_tabla 0,126: la prosa no rodea la tabla, la hace legible. Sin el aviso de que el bruto anual ya incluye vacaciones y las dos extras, el lector multiplicaría por 14 una cifra que ya es anual; y la lectura de la tabla señala una anomalía real del escalafón alavés que ninguna hoja de cálculo ve.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 283,
+          "cita": "El salario bruto anual es antes de IRPF y Seguridad Social. No incluye los quinquenios de antigüedad, la nocturnidad ni el plus de penosidad/toxicidad/peligrosidad, que se suman aparte cuando corresponden"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 397,
+          "cita": "Curiosamente, el oficial/a de 1.ª del grupo obrero (24.577,88 €) cobra más que varias categorías técnicas."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "127 frases exclusivas y 2.505 palabras exclusivas que no son «mismo molde, otro topónimo»: la ficha reconstruye una aritmética que el BOTHA no publica como tal (suma de IPC 2022-2025 = 14,5 % frente al 14 % de incrementos fijos, de ahí el +0,5 % del art. 24) cruzando el convenio de 2022, su corrección de errores de 2023 y el acta de paritaria de enero de 2026. Eso es investigación, no reescritura.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 266,
+          "cita": "El artículo 24 preveía que, si la suma de los IPC de 2022, 2023, 2024 y 2025 superaba el 14% de incrementos fijos que se habían pactado, el diferencial se aplicaría sobre las tablas de 2025 en 2026."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 541,
+          "cita": "Fomento del euskera (Art. 59) y régimen fiscal foral de Álava, no régimen común."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 2,
+      "razon": "4 de 6 preguntas repiten el molde del corpus (cuánto cobra un peón, cuánto sube, cuánto cobra un oficial, tiene subrogación), pero las respuestas son intransferibles: la de subrogación no dice «sí/no», dice en qué dos contratas concretas opera. Las dos preguntas propias (vigencia en ultraactividad y supresión de horas extras) evitan el 1 pero no bastan para el 3.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 600,
+          "cita": "Solo en un supuesto: el artículo 50 obliga a subrogar al personal cuando finaliza una contrata de mantenimiento, o de instalación y mantenimiento de fibra óptica y telefonía"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "Recoge la particularidad principal —convenio vencido en ultraactividad, régimen foral, fomento del euskera, y una comparación explícita con el trío vasco— pero nunca dice qué es industrialmente Álava. La provincia del metal más concentrada de España en una sola factoría (automoción en Vitoria) resuelve el ámbito con la fórmula genérica «empresas con convenio propio de empresa o centro», que es justo la pregunta que se hace quien trabaja allí.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 405,
+          "cita": "El metal de Álava completa el trío vasco junto al metal de Bizkaia y el de Gipuzkoa, los tres de régimen foral."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 278,
+          "cita": "Quedan fuera las empresas con convenio propio de empresa o centro y las de actividades mixtas regidas por normas de otros sectores."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "El BOTHA núm. 18 publica unas tablas; no explica que sean el cierre de una cláusula de garantía ni de dónde sale el porcentaje. La ficha lo dice, lo data (acta de 26-ene-2026) y añade que cualquier subida posterior depende de un convenio que aún no existe. Eso el PDF no lo da ni puede darlo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 508,
+          "cita": "Es un ajuste de cierre: cualquier subida adicional dependerá del próximo convenio, que está por negociar."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "Frente al agregador hay ventaja identificable —traza al boletín con número y fecha, aviso de que la cifra procede de un convenio vencido, IRPF foral— y el lector la percibe ya en el subtítulo. No llega a 3 porque esa misma ventaja la ofrece igual o mejor la ficha de Bizkaia: dentro del sector no es lo que distingue a esta página.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 208,
+          "cita": "el convenio venció el 31-dic-2025 y está en ultraactividad; las tablas 2026 son el cierre del +0,5% del art. 24."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 612,
+          "cita": "Las 54 cuantías están transcritas de la publicación oficial; los ejemplos y comparaciones son elaboración propia y se identifican como tales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (último commit 2026-08-08, 12 días): ningún parche de esta ficha debería aplicarse todavía. El escalón que le falta no es de redacción sino de investigación, y es el mismo que el del resto del cluster vasco: nombrar el mercado dominante. Álava es la provincia del metal donde una sola planta (automoción en Vitoria-Gasteiz) concentra más plantilla, y esa planta se rige por convenio de empresa, no por este. La ficha lo despacha con la fórmula genérica «empresas con convenio propio de empresa o centro» (línea 278). Parche de investigación, no de relleno: buscar en REGCON los códigos de convenio de empresa de las grandes factorías alavesas (automoción y neumático en Vitoria) y decir en dos frases, dentro de «¿Este convenio te cubre?», si el provincial les aplica y qué pasa con sus auxiliares —que sí lo tienen—. Segunda observación, para otro eje: la comparación de la línea 405 y las cifras que cita de Zaragoza (21.274 €), Bizkaia y Gipuzkoa coinciden al céntimo con lo que publican esas fichas, así que el corpus está internamente coherente; no hay 12.1."
+}

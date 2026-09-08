@@ -1,0 +1,219 @@
+{
+  "slug": "convenio-metal-barcelona",
+  "fecha_verificacion": "2026-08-24",
+  "alcance": "17 hallazgos revisados: las 10 metricas con nota 0-1 (E3 1.3, E3 1.9, E5 6.3, E5 6.4, E5 6.6, E6 7.8, E6 8.1, E6 8.3, E6 12.3, E6 12.6) y 7 de los treses (E1 2.1, E1 5.10, E2 3.1, E2 3.4, E2 3.5, E3 1.6, E5 6.2). Ningun eje declaro hard-fails de juicio; el determinista si trae dos (2.2 sin bloque de responsable, 7.1 dos tablas que desbordan en movil), que no son hallazgos de agente y no me tocan.",
+  "contexto": {
+    "determinista_usado": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-barcelona.json",
+    "deriva_20ago_vs_24ago": "DERIVA RELEVANTE. entrantes_n baja de 22 a 17 porque desaparece convenio-comercio-metal-barcelona.html de la lista de entrantes. Comprobado con git: esa ficha solo existe en la rama feat/convenio-comercio-metal-barcelona (commit d25cc78, 20-ago 18:19), NO esta en origin/main ni en el arbol de trabajo actual, y el fichero de comercio del metal que si esta commiteado es convenio-comercio-metal-bizkaia.html (c0e3bc3), que no enlaza a metal-barcelona. Manda el determinista del 24-ago: 17 entrantes desde 11 paginas.",
+    "ventana_medicion_abierta": false,
+    "ultimo_commit": "2026-07-30",
+    "nota_freno_9_7": "Ventana cerrada (25 dias a 24-ago): los parches son aplicables ya."
+  },
+  "veredictos": [
+    {
+      "eje": "E3",
+      "id": "1.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Lo busque por tres vias antes de darlo por bueno, porque 'no hay' es la afirmacion mas facil de tumbar. (1) Listado completo de los <h2>: 17 encabezados y ninguno de reclamacion. (2) grep -c 'reclamar' = 0, grep de 'prescripci' y '59.2' = 0: el plazo del art. 59.2 ET no aparece en ninguna parte. (3) enlaces.al_kit = [] en los deterministas del 20 y del 24 de agosto. Lo unico proximo es la linea 553, que describe el sometimiento al TLC como clausula del convenio, no como instruccion. Comprobe ademas que las citas cruzadas de otros ejes a lineas 494/504/565/575 estan correctamente atribuidas a metal-asturias y metal-sevilla, no a esta ficha: no hay confusion de fichero.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 553,
+        "cita": "Sometimiento expreso a los procedimientos de Conciliación y Mediación del TLC como trámite previo obligatorio a la vía judicial"
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.9",
+      "veredicto": "MATIZADO",
+      "motivo": "El nucleo es cierto y esta triplemente comprobado: cita_17094 = false, smi_obsoleto_citado = [16.576, 1.184] y grep propio -en toda la ficha no aparecen ni 17.094 ni 1.221-. Pero la exclusividad es falsa: convenio-metal-bizkaia tampoco cita el SMI 2026, y va mas lejos, no menciona el SMI ni una sola vez (menciona_smi = false, grep -c 'SMI' = 0). Y la consecuencia esta algo forzada: la ficha no presenta 16.576 EUR como suelo vigente, lo fecha como 2025, lo circunscribe a los contratos formativos y anade 'Nunca inferior al SMI ni a lo que corresponderia por el ET' (509).",
+      "enunciado_corregido": "1.9 = 0: la ficha no da en ningun punto el suelo legal de 2026 (17.094 EUR / 1.221 EUR, RD 126/2026) y deja el unico anclaje al SMI en una cifra de 2025 'pendiente de que el BOE publique el SMI vigente', cuando ya estaba publicado. No es la unica del metal sin SMI 2026: metal-bizkaia no lo menciona en absoluto.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-bizkaia.json",
+        "linea": 0,
+        "cita": "\"smi\": {\"menciona_smi\": false, \"cita_17094\": false, \"smi_obsoleto_citado\": []}"
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.6",
+      "veredicto": "MATIZADO",
+      "motivo": "La traduccion a nomina es real y verifique el desglose (253: el salario convenio se paga en 12 mensualidades y las dos extras son de la misma cuantia; 288 y 291: 24.760,68 EUR x 12 + extras = 28.887,46 EUR; 595: un complemento en 12 mensualidades y otro en 14). Cae la frase de exclusividad: 'Ninguna otra ficha del corpus metal nombra la absorcion' es falsa. grep -i 'absorbi|absorci' en las diez fichas del metal devuelve metal-zaragoza 3, metal-valencia 2 y metal-gipuzkoa 1.",
+      "enunciado_corregido": "1.6 = 3: es la del cluster que mejor traduce a nomina -mensual, numero de mensualidades por concepto y un caso desglosado hasta el bruto anual-. La mencion a la no absorbibilidad de los complementos ad personam no es exclusiva: tambien la nombran Zaragoza, Valencia y Gipuzkoa.",
+      "prueba": {
+        "archivo": "convenio-metal-zaragoza.html",
+        "linea": 0,
+        "cita": "grep -c -i 'absorbi|absorci' convenio-metal-zaragoza.html = 3"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado con el listado de todos los href internos entre las lineas 210 y 660: solo hay dos enlaces a '/' (cabecera de ejemplo y CTA) y el bloque 632-637, que es la lista 'Convenios relacionados' posterior a la FAQ. Ni un enlace a otra ficha dentro de un parrafo de prosa. Los numeros tambien cuadran: internos_en_cuerpo = 12, el minimo de las diez fichas del metal, y la mediana del corpus es 21 exactamente.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 630,
+        "cita": "<h2>Convenios relacionados</h2>"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.4",
+      "veredicto": "MATIZADO",
+      "motivo": "El argumento central se apoya en una pagina que no existe en el corpus publicado: 'convenio-comercio-metal-barcelona.html existe, la enlaza a ella cuatro veces desde el cuerpo'. Ese fichero vive solo en la rama sin mergear feat/convenio-comercio-metal-barcelona (d25cc78, creada el mismo 20-ago a las 18:19) y ya no aparece en entrantes_desde del determinista del 24-ago. Ademas, el ancla del 1 en el brief es 'solo a hermanas del mismo sector', y esta ficha SI cubre las dos direcciones: a_otro_sector_misma_provincia = [construccion-bizkaia, hosteleria-barcelona, limpieza-barcelona], lo que corresponde al ancla del 2. Queda en pie lo demas: una sola hermana enlazada (Bizkaia) de nueve disponibles y un convenio de Construccion de Bizkaia colado como 'relacionado' en una ficha de Barcelona.",
+      "enunciado_corregido": "6.4 = 2 flojo: cubre las dos direcciones (hosteleria y limpieza de Barcelona) pero enlaza a una sola hermana del sector de las nueve, y mete Construccion de Bizkaia como relacionado desde una ficha de Barcelona. No procede reprocharle que no enlace al Comercio del Metal de Barcelona: esa ficha no esta publicada.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 633,
+        "cita": "<li><a href=\"/convenio-construccion-bizkaia.html\">→ Convenio Construcción Bizkaia 2026</a> (sector industrial vasco)</li>"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Es el hallazgo mejor sostenido de los tres ficheros que he verificado. al_kit = [] en los deterministas del 20 y del 24 de agosto, y es el unico vacio de las diez fichas del metal: las otras nueve enlazan /reclamar-diferencias-salariales-convenio.html y metal-bizkaia enlaza ademas el kit de plantillas. grep -c 'reclamar' = 0 en toda la ficha. Unica precision al enunciado: el eje dice 'las otras ocho fichas del metal tienen seccion ¿Cobras menos...?'; son nueve las hermanas y ocho llevan ese rotulo literal -metal-bizkaia tiene el bloque equivalente con otro titulo, 'Cómo verificar si tu nómina cumple el convenio'-, lo que refuerza el hallazgo en vez de debilitarlo: Barcelona es la unica sin ninguna via.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-barcelona.json",
+        "linea": 0,
+        "cita": "\"al_kit\": []"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.2",
+      "veredicto": "MATIZADO",
+      "motivo": "Las dos cifras que sostienen el 3 estan mal. (1) 'cuarto valor del corpus': con los 22 entrantes del 20-ago era el 7.o valor (por detras de hosteleria-barcelona 60, limpieza-edificios 53, hosteleria 31, limpieza-madrid 27, limpieza-barcelona 27 y metal-bizkaia 25), y con el determinista refrescado del 24-ago son 17 entrantes, puesto 13 aproximado. (2) Lo que el eje senala como rasgo distintivo -'cuatro veces desde el cuerpo de convenio-comercio-metal-barcelona.html'- procede de una ficha que no esta publicada. Tampoco la enlaza ninguna guia, y el ancla del 3 pide 'hermanas y guias'. Lo que si resiste: ocho hermanas del metal la enlazan con anclas que dicen sector y provincia, muy por encima de la mediana (10).",
+      "enunciado_corregido": "6.2 = 2: 17 entrantes desde 11 paginas, muy por encima de la mediana del corpus (10) y la mejor tejida del metal despues de Bizkaia (25) y Madrid (20). La enlazan ocho hermanas con anclas descriptivas, pero ninguna guia.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-barcelona.json",
+        "linea": 0,
+        "cita": "\"entrantes_n\": 17, \"entrantes_desde\": [\"convenio-metal-alava.html\", ... \"convenios.html\",\"index.html\",\"mapa-del-sitio.html\"]"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "7.8",
+      "veredicto": "MATIZADO",
+      "motivo": "La desviacion del canon es real y las tres piezas faltan de verdad (grep: 'Recursos oficiales' 0, 'Cobras menos' 0, callout comparativo 0). Lo que no aguanta es el 'que las ocho hermanas si tienen': el cluster del metal son DIEZ fichas, no nueve, y metal-bizkaia tampoco tiene la tarjeta de 'Recursos oficiales y sindicales' ni el callout comparativo con otras provincias. De las tres piezas, la unica que tienen las nueve hermanas es el bloque de reclamacion, y en Bizkaia con otro rotulo.",
+      "enunciado_corregido": "7.8 = 1: aporta contenido propio (reten y guardia, bilinguismo del Art. 84, oncologico, TLC) a costa de no seguir el canon. Le faltan el bloque de reclamacion -que tienen las nueve hermanas, en Bizkaia con otro rotulo-, la tarjeta de recursos oficiales y el callout comparativo, estos dos ultimos presentes en ocho de las nueve.",
+      "prueba": {
+        "archivo": "convenio-metal-bizkaia.html",
+        "linea": 595,
+        "cita": "Cómo verificar si tu nómina cumple el convenio"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobacion vinieta a vinieta, que es lo que el brief exige antes de proponer borrar, y el recuento del eje es exacto: la lista 'Novedades destacables sobre el ET' tiene 12 items y 11 estan desarrollados mas arriba (IPC 350, AT dia 1, bolsa 80 h, oncologico y libre disposicion, reten 428, excedencia 526, TLC 553, 0,19 EUR/km 314, teletrabajo 1,69 EUR 326, ad personam 293). El unico sin desarrollo previo es 'Suplencias ... Art. 55', cuya unica aparicion en toda la ficha es la linea 572. Rotulo enganoso confirmado: promete contraste con el ET y entrega resumen de la propia ficha.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 572,
+        "cita": "<li><strong>Suplencias por causas internas o sobrevenidas</strong> reguladas: hasta 90 días laborables por persona trabajadora/año (Art. 55).</li>"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Las tres duplicaciones estan citadas por pares, como pide el brief, y las tres se sostienen al abrir las lineas: clausula IPC en 221 (nota editorial), 350 (seccion propia) y 566 (cajon final); reten/guardia en 428-440 y otra vez completo en la FAQ 605; ad personam en 293 (pie del ejemplo), 595 (FAQ de antiguedad) y 620 (FAQ dedicada). El dato de apoyo tambien cuadra: 4.511 palabras de prosa es el maximo de las diez fichas del metal.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 620,
+        "cita": "Son las condiciones económicas <strong>superiores a las del convenio</strong> que respeta el propio convenio a título individual"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "12.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Los numeros son exactos en el determinista del 24-ago: barcelona n=41 h2=17 h3=23; sevilla n=23 h2=16 h3=6 (identico a asturias). La secuencia tambien: verificado el listado de h2, no hay encabezado de ambito, ni de reclamar, ni de recursos, y si hay cuatro secciones que ninguna hermana tiene. Precision menor que no cambia la nota: el callout comparativo lo llevan ocho de las nueve hermanas, no siete.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-barcelona.json",
+        "linea": 0,
+        "cita": "\"headings\": {\"n\": 41, \"h2\": 17, \"h3\": 23}"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "12.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Norma comprobada primero: el brief de E6 define 12.6 como coherencia intrafichero ('¿Llama a un mismo concepto de dos maneras?'), asi que no es una convencion importada. Y las cuatro lineas dicen lo que el eje transcribe: 'Vigencia 2025-2027 (3 anios)' en 206, 'Subida cuatrienal' en el h2 338, 'transitoria para el cuatrienio 2025-2027' en 350 y '+10% acumulado pactado en tres anios' en 221. Un periodo de tres anios llamado cuatrienio dos veces.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 350,
+        "cita": "Esta cláusula es de naturaleza transitoria para el cuatrienio 2025-2027."
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "5.10",
+      "veredicto": "MATIZADO",
+      "motivo": "El ancla del 3 es 'al documento y al articulo/anexo concreto, con su referencia escrita al lado', y eso se cumple (Anexo 1, paginas 79 y 82, CVE 202610028848). Lo que no se sostiene es llamarlo enlace a la fuente oficial: el href de la linea 644, rotulado 'BOPB · 13-feb-2026 · CVE 202610028848', apunta a ugtficabcn.cat, un espejo sindical, no al BOPB. La ficha lo declara honestamente como espejo en la linea 213, pero el anclaje del bloque de fuentes no lo dice, y externos_oficiales del determinista no contiene ninguna URL del boletin. Comparacion que descoloca la escala: metal-asturias, que si enlaza el PDF oficial del BOPA, saco un 2 en esta misma metrica.",
+      "enunciado_corregido": "5.10 = 2: lleva al documento exacto con anexo, paginas y CVE escritos al lado, pero el destino es un espejo sindical (ugtficabcn.cat), no el BOPB, y el texto del enlace no lo advierte. El BOPB no se enlaza en ningun punto de la ficha.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 644,
+        "cita": "<a href=\"https://ugtficabcn.cat/calaix/conveni/Conveni_col-lectiu_...BOPB.pdf\"><strong>BOPB · 13-feb-2026 · CVE 202610028848</strong></a>"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "2.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Las tres evidencias existen literalmente y el ancla del 3 -analisis que el boletin no contiene- se cumple con un dato que solo sale de cruzar fechas: que la tabla de 2025 se aplico con retroactividad porque el convenio no se publico hasta febrero de 2026. Verificado en la linea 272, que es el pie de la tabla historica.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 272,
+        "cita": "Fuente: Anexo 1 del BOPB del 13-feb-2026, tablas 2025. Se aplicó a las nóminas desde enero de 2025 con carácter retroactivo tras la publicación del convenio en febrero de 2026."
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "boilerplate_ratio 0,015 verificado en el determinista del 24-ago y contrastado con las 54: es el mas bajo de las diez fichas del metal y solo cinco fichas del corpus bajan de ahi (cuatro con 0,0 y una con 0,005), lo que hace exacta la formula 'el mas bajo de las nueve y de casi todo el corpus'. Comprobe tambien lo que afirma del cromo: esta ficha NO lleva el bloque 'Quien audita esto' que llevan 45 fichas -por eso el determinista le marca el hard-fail 2.2-, de modo que el cierre es efectivamente propio. Que la ausencia de ese bloque sea a la vez un bloqueo y la razon de un elogio es una tension que debe resolver el sintetizador, no yo.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-barcelona.json",
+        "linea": 0,
+        "cita": "\"boilerplate_ratio\": 0.015, \"frases_compartidas_n\": 3"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "195 frases exclusivas y 3.448 palabras exclusivas son, en efecto, los valores mas altos del cluster del metal (siguiente: asturias 120/2.595). Y la sustancia esta: verifique el bilinguismo del Art. 84 (625) y la distincion reten/guardia (429), hechos que no salen de cambiar un toponimo. En el corpus completo no son el maximo -oficinas-madrid 263/5.149, hosteleria-valladolid 205/3.981-, pero el eje acota su afirmacion a las fichas del metal, y ahi es correcta.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 625,
+        "cita": "El Art. 84 del Capítulo XI establece que todos los anuncios o avisos en las empresas deberán redactarse en castellano y en catalán"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.5",
+      "veredicto": "CONFIRMADO",
+      "motivo": "La explicacion del eje es verificable y la comprobe por mi cuenta: la FAQ visible tiene 8 preguntas (8 encabezados en el bloque 586-640) y el bloque JSON-LD solo declara 6 Question, que son otras. Por eso el determinista dice 3 clonadas sobre 6 midiendo un juego de preguntas distinto del que ve el lector. Las cuatro preguntas propias que cita (reten/guardia, complementos ex, bilinguismo, ETT) existen y no son transferibles a otra provincia.",
+      "prueba": {
+        "archivo": "convenio-metal-barcelona.html",
+        "linea": 604,
+        "cita": "¿Qué diferencia hay entre servicio de retén y servicio de guardia?"
+      }
+    }
+  ],
+  "resumen": {
+    "confirmados": 11,
+    "matizados": 6,
+    "refutados": 0,
+    "notas": [
+      "El encargo daba por cierto que esta ficha no tiene ningun enlace al kit ni seccion de reclamacion. Lo confirmo por partida triple (al_kit = [] en los dos deterministas, grep -c 'reclamar' = 0, ningun h2 de reclamacion entre los 17) y anado que es unica en el corpus del metal: las otras nueve tienen bloque de reclamacion, y en ocho el rotulo es literalmente '¿Cobras menos...?'.",
+      "Deriva de datos que el sintetizador debe recoger: los ejes E5 y E6 razonaron con un corpus que incluia convenio-comercio-metal-barcelona.html. Esa ficha no esta publicada -vive en la rama feat/convenio-comercio-metal-barcelona, sin mergear-, asi que caen dos apoyos: los 22 entrantes (ahora 17) y el reproche de no enlazar a su gemela provincial.",
+      "Los ejes cuentan 'las nueve fichas del metal' de forma sistematica. Son diez (alava, asturias, barcelona, bizkaia, gipuzkoa, madrid, navarra, sevilla, valencia, zaragoza). La omitida es siempre metal-bizkaia, y eso es lo que rompe tres afirmaciones de exclusividad: SMI ausente (E3 1.9), piezas de canon ausentes (E6 7.8) y el recuento del callout comparativo (E6 12.3).",
+      "Contexto de plantilla que NO he contado contra la ficha: 28 celdas verdes en tabla (32 de 54 fichas pintan salarios en verde), 2 tablas sin scope ni caption (54 de 54) y 4 bloques de mas de 100 palabras (37 de 54). Los dos hard-fails deterministas (2.2 y 7.1) no son hallazgos de agente y no entran en mi recuento.",
+      "Ningun eje declaro hard-fail de juicio en esta ficha."
+    ]
+  }
+}

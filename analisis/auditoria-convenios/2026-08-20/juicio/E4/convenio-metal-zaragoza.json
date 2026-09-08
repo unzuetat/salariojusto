@@ -1,0 +1,119 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-zaragoza",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Cuatro elementos en 72 caracteres y cifra de procedencia limpia: el anexo I del convenio publica retribución bruta anual, así que la horquilla es literal y no un cálculo. No sube a 3 porque no lleva el puesto que se busca ni el equivalente mensual, y sobre todo porque el propio cuerpo de la ficha advierte de que esas tablas son un suelo que en automoción se queda corto: el title anuncia una cifra que la página misma matiza dos pantallas después, sin llevarse ese matiz al escaparate.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Zaragoza 2026: tablas de 21.274 a 30.469 € | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 251,
+          "cita": "Para cada uno, el anexo I publica una <strong>retribución bruta anual</strong> de convenio."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 253,
+          "cita": "<strong>Importante: las tablas son mínimos, no el salario real.</strong> Las cifras del convenio (de <strong>21.274 €</strong> en el grupo 7 a <strong>30.469 €</strong> en el grupo 1) son el suelo garantizado."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Cifra dentro del recorte, con quién cobra cada extremo, y motivos concretos: las primas de productividad, el complemento ex categoría y la paga de 400 € en enero. Se queda en 2 por longitud (291 caracteres) y porque la verificación se queda en 'Verificado contra el BOPZ', sin número ni fecha, justo en la ficha cuya tabla 2026 depende de un acta de paritaria publicada en febrero: la fecha es aquí parte del argumento de confianza, no un adorno.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 7,
+          "cita": "Convenio de la Industria, Tecnología y Servicios del Metal de Zaragoza 2026 (+2,5%): tablas por 7 grupos de 21.274 € (peón) a 30.469 € (titulado/a superior), más primas de productividad y ex categoría, 2 pagas extra y paga de 400 € en enero. Verificado contra el BOPZ. Código 50000675011982."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "Las frases con la cifra principal se sostienen solas y una de ellas hace algo poco frecuente: mete la horquilla dentro de una oración que explica qué es esa cifra ('son el suelo garantizado') y por qué el salario real es más alto. La FAQ del oficial da grupo, cuantía, matiz de automoción y contraste con el SMI del año. No llega a 3 porque ninguna de esas frases repite la provincia ni el año —'Un/a Oficial/a de 1.ª (Grupo 5) tiene una retribución bruta anual de convenio de 22.443,49 €' viaja sin territorio— y porque los resúmenes de familia de las nueve tablas son fragmentos sin verbo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 253,
+          "cita": "Las cifras del convenio (de <strong>21.274 €</strong> en el grupo 7 a <strong>30.469 €</strong> en el grupo 1) son el suelo garantizado. En la práctica, sobre todo en <strong>automoción</strong> (Stellantis y su industria auxiliar), el salario real es más alto"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 523,
+          "cita": "Un/a <strong>Oficial/a de 1.ª</strong> (Grupo 5) tiene una retribución bruta anual de convenio de <strong>22.443,49 €</strong>, y en el <strong>Grupo 7</strong> (peón) se parte de <strong>21.274,38 €</strong>."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 205,
+          "cita": "<h1>Convenio del <em>Metal de Zaragoza</em>: tablas 2026 de 21.274 € a 30.469 €</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El encabezado de columna es de los más completos del sector —magnitud, carácter bruto, periodo y año en cuatro palabras— y se repite idéntico en las nueve tablas, así que cualquier fila extraída llega con su unidad. Lo que impide el 3 es que ninguna tabla tiene caption y todas viven dentro de <details> plegados, y que la desambiguación que aquí importa —tabla de convenio frente a salario real de automoción, y convenio provincial frente al marco autonómico AMIMA— está solo en prosa, lejos de las celdas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 277,
+          "cita": "<thead><tr><th>Categoría asimilable</th><th class=\"num\">Retribución bruta anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 345,
+          "cita": "<tr><td>Peón/a <span style=\"color:var(--ink-lighter);\">(Operarios)</span></td><td class=\"sal\">21.274,38 €</td></tr>"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 252,
+          "cita": "Y el marco autonómico <strong>AMIMA</strong> (Acuerdo Marco de la Industria del Metal de Aragón) ordena las materias comunes del sector en las tres provincias."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "pct_huerfanas 0,026 (3 de 115) da un 2 y el HTML lo sostiene: el párrafo que abre la tabla cita el BOPZ con fecha, y los pluses, la bolsa de horas y la paga de 400 € llevan su artículo pegado. No sube a 3 porque la referencia al boletín se queda en 'BOPZ de 21-feb-2026' sin número de edición, porque el enlace externo va al buscador del BOPZ y no al anuncio, y porque la sección huérfana es, otra vez, la FAQ de la cuantía del oficial.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 271,
+          "cita": "Retribución bruta anual de convenio para 2026 (BOPZ de 21-feb-2026), resultado de aplicar el <strong>+2,5%</strong> sobre las tablas definitivas de 2025."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 390,
+          "cita": "La <strong>paga de 400 €</strong> exige jornada completa (o reducida por conciliación) y permanencia del 1-ene-2023 al 31-dic-2025"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 523,
+          "cita": "Un/a <strong>Oficial/a de 1.ª</strong> (Grupo 5) tiene una retribución bruta anual de convenio de <strong>22.443,49 €</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana abierta (ultimo_commit 2026-08-04, 15 días): parches aplazados. Zaragoza tiene el mejor encabezado de tabla del sector y lo repite sin fallar en nueve tablas; si hubiera que normalizar una etiqueta para todo el cluster, 'Retribución bruta anual 2026' es la candidata. Su tensión propia es otra y es interesante para el eje: la ficha sabe que su tabla es un suelo poco representativo del salario real en el polo de automoción, lo dice con claridad en el cuerpo y aun así vende la horquilla en el title y en la meta. No es un error de dato, es un desajuste entre lo que promete el escaparate y lo que matiza la tienda: quien llegue buscando cuánto se cobra en Stellantis y su industria auxiliar encontrará una cifra que la propia página le dice que no se crea del todo."
+}

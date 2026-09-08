@@ -1,0 +1,172 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-navarra",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "El H1 abre con el rango 2026 del Salario Garantizado, el sumario nombra el boletín y el sello con el BON y la fecha de revisión va inmediatamente debajo: cifra, año y fuente están arriba sin scroll. No es 3 porque lo que se ve primero es un rango de grupos, no la cifra del puesto más buscado del metal navarro: el oficial de oficio (Grupo 5, 28.195,04 €) no aparece hasta la tabla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 205,
+          "cita": "Convenio del Metal de Navarra : tablas 2026 de 26.112 € a 31.750 €"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 213,
+          "cita": "✓ Verificado contra el texto del convenio (BON núm. 31, 14-feb-2023, código REGCON 31006805011981) y la revisión salarial 2026 (BON núm. 31, 12-feb-2026, Resolución 9C/2026), por SalarioJusto · última revisión 4 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 282,
+          "cita": "Grupo 5 Empleados: oficial administrativo/a de 1.ª y 2.ª, delineante de 2.ª, comercial. Operarios: chófer de camión, coordinador/a de grupo, profesional de oficio y siderúrgico/a de 1.ª y 2.ª, personal de diques y buques. 28.195,04 € 2.013,93 €"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 2,
+      "razon": "Responde 5 de las 8 preguntas del listado: la cifra del oficial, su equivalente mensual (columna propia, y advierte de que es el anual entre 14 y solo orientativo), la frontera con el Comercio del Metal, el importe exacto de los trienios y el complemento de baja, que aquí sí cubre la enfermedad común. Falla en tres: (a) «soy soldador / chapista, ¿en qué grupo estoy?» — las categorías orientativas van con la nomenclatura del convenio («profesional de oficio y siderúrgico/a de 1.ª y 2.ª») y no hay puente desde el oficio real, así que quien no sepa su categoría no sabe su grupo; (b) «hago noches, ¿cuánto es el plus?» — el bloque de nocturnidad no da ninguna cuantía ni porcentaje general, solo una fórmula para empresas de nueva creación; (c) «trabajo media jornada, ¿cuánto me corresponde?» — no hay regla de proporcionalidad salvo la de la paga de 400 €.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 271,
+          "cita": "Para cada grupo se indica el Salario Garantizado anual y su equivalente mensual en 14 pagas (el anual dividido entre 14, solo orientativo)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 366,
+          "cita": "Trienios en euros , no un porcentaje, e ilimitados. Valores 2026: 1.º 177,53 € , 2.º 355,09 €, 3.º 621,34 €, 4.º 798,73 €, 5.º 887,24 €, 6.º 1.154,41 €, 7.º 1.242,64 €, 8.º 1.331,42 € y 90,99 € por cada trienio sucesivo. Se prorratea en las 14 pagas (Art. 46)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 370,
+          "cita": "Plus de nocturnidad por el trabajo en horario nocturno, actualizado un +2% en 2026. En empresas de nueva creación, fórmula Salario Garantizado × 0,0476 / 100."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 394,
+          "cita": "La empresa abona el 50% del salario real durante los tres primeros días de la primera baja de enfermedad del año, un tramo que la Seguridad Social no cubre."
+        }
+      ],
+      "parche": "Tres piezas, todas al pie de la tabla o en su bloque de pluses. (1) NOCTURNIDAD, sustituir la línea 370 por la cuantía real del Art. 48 del convenio (importe €/hora o €/día de la tabla 2026 del BON núm. 31); si el convenio solo la fija por fórmula, escribirlo así: «El convenio no publica un importe cerrado de nocturnidad: lo calcula como Salario Garantizado × 0,0476 / 100 por hora nocturna. Sobre el Grupo 5 (28.195,04 €) eso son X € por hora trabajada entre las 22:00 y las 6:00.» (2) OFICIO A GRUPO, añadir tras la línea 287: «¿No sabes tu grupo? Si eres soldador/a, tornero/a, fresador/a, chapista, montador/a o electricista con categoría de oficial de 1.ª o 2.ª, tu grupo es el 5; con categoría de 3.ª o de especialista, el 6; peón especialista y personal aprendiz, el 7.» —transcribiendo la equivalencia del Art. 70, no inventándola—. (3) JORNADA PARCIAL, frase fija: «Las cuantías de la tabla son de jornada completa. A tiempo parcial te corresponde el Salario Garantizado en la proporción de tu jornada; míralo en el porcentaje que figura en tu contrato.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Hay camino y está bien ordenado: identificar el grupo por funciones reales, comparar el bruto anual con el Garantizado avisando de que la cifra ya incluye las extras (detalle que evita el error de sumarlas dos veces), pedir la nómina desglosada con su artículo del ET, acudir a la Comisión Paritaria o al Tribunal Laboral de Navarra —con dirección física en el bloque de recursos— y el plazo de prescripción. No es 3 porque el único destino documental es el enlace genérico al kit que registra el determinista; no hay plantilla ni ejemplo numérico de la diferencia reclamable.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 441,
+          "cita": "Compara tu bruto anual con el Salario Garantizado 2026 de tu grupo. Súmale la antigüedad (trienios) y los pluses que te correspondan; la cifra de la tabla ya incluye las dos extras."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 443,
+          "cita": "Acude a la Comisión Paritaria del convenio o al Tribunal Laboral de Navarra (conciliación y mediación previas, Art. 68). La reclamación previa interrumpe la prescripción."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 444,
+          "cita": "Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 2,
+      "razon": "La primera mitad está resuelta: cuatro bloques de actividades reconocibles y la frontera con el Comercio del Metal dicha en llano. La segunda no: la columna «Categorías orientativas» reproduce la nomenclatura del Art. 70 («profesional de oficio y siderúrgico/a de 1.ª y 2.ª», «peón especialista»), de modo que saber que el convenio te cubre no te da todavía tu cifra si no conoces tu categoría contractual. Posible con esfuerzo, no resuelto.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 267,
+          "cita": "Es un convenio de industria, no de comercio. Cubre la fabricación, transformación, montaje y reparación del metal. Las empresas dedicadas solo a la venta de artículos metálicos (en proceso exclusivo de comercialización) quedan fuera y se rigen por el convenio del Comercio del Metal de Navarra , que es distinto y tiene sus propias tablas."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 284,
+          "cita": "Grupo 7 Empleados: ordenanza, portero/a. Operarios: peón especialista, personal aprendiz (16, 17 y mayor de 18 años). 26.111,60 € 1.865,11 €"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 264,
+          "cita": "Personal de oficio, subalterno, administrativo y técnico de estas empresas, encuadrado en 7 grupos profesionales del peón a la ingeniería."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 3,
+      "razon": "Es la mejor traducción a nómina de las cuatro fichas del metal auditadas, y por una razón concreta: no se limita a decir que la cifra es bruta, dice con qué nombre va a aparecer en el papel. Avisa de que Salario Base, Plus de Convenio y Plus de Carencia de Incentivos pueden venir agrupados en un solo concepto llamado «Salario Garantizado», de que ese Garantizado ya lleva dentro las dos extras y la carencia de incentivos —el error clásico de sumarlos dos veces—, de que quien lo cobre aparte percibe 111,96 €/mes, y de que las extras pueden estar prorrateadas en las doce mensualidades por acuerdo, que es justo lo que descuadra la comparación mes a mes. Ninguna otra de las cuatro nombra los conceptos tal y como los verá la persona.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 255,
+          "cita": "La estructura interna de nómina (Salario Base + Plus Convenio + Plus Carencia de Incentivos) puede agruparse en un único concepto de «Salario Garantizado» (Art. 42)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 272,
+          "cita": "Cómo leer la tabla: el Salario Garantizado es el bruto anual antes de IRPF y Seguridad Social e incluye ya las dos pagas extra. No incluye la antigüedad ni los pluses de toxicidad/penosidad/peligrosidad, que se suman aparte."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 311,
+          "cita": "Las dos extraordinarias se devengan por semestres naturales, en proporción al tiempo trabajado, y pueden prorratearse en las doce mensualidades por acuerdo (Art. 44)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 382,
+          "cita": "Para el personal de empresas sin sistema de primas . Ya está incluido en el Salario Garantizado; quien lo cobre aparte percibe 111,96 €/mes en 2026."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "No hay hueco mayor que gestionar —convenio vigente, revisión 2026 publicada en el BON y verificada por partida doble— y aun así la ficha da el suelo con su fuente (SMI 2026 con el RD 126/2026) y declara el horizonte: convenio denunciado, último año, revisión por IPC prevista para enero de 2027. Lo que impide el 3 es el único dato que de verdad le falta: la cuantía del plus de nocturnidad no está, y en lugar de declararlo como hueco se redacta como si estuviera («actualizado un +2% en 2026», sin base ni importe). Decir «no publicamos esta cuantía porque X» vale más que una frase que parece una respuesta y no lo es.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 472,
+          "cita": "1.221 €/mes y 17.094 € anuales (RD 126/2026). Consulta el SMI 2026"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 422,
+          "cita": "Pero 2026 es el último año de vigencia : el convenio está denunciado con efectos 31 de diciembre de 2026. En enero de 2027 hay prevista una actualización adicional por IPC si el acumulado 2024-2025 supera el 4,04% (Art. 72.F), antes de negociar el nuevo convenio."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 370,
+          "cita": "Plus de nocturnidad por el trabajo en horario nocturno, actualizado un +2% en 2026."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "12.1",
+      "detalle": "La ficha afirma que el metal de Madrid tiene la antigüedad congelada, pero la ficha del metal de Madrid del propio corpus publica una columna de quinquenio con valor propio para cada uno de sus siete grupos (de 30,82 € a 42,72 €/mes) y un máximo de cinco quinquenios al amparo del Art. 41. Las dos afirmaciones no pueden ser ciertas a la vez, y la contradicción cae justo sobre una de las ocho preguntas del lector («llevo 6 años, ¿me toca antigüedad?»). La misma afirmación aparece en la ficha del metal de Zaragoza. Indicio de por dónde está el error: una antigüedad congelada no se publicaría como columna con cuantía distinta por grupo en la tabla 2026 del BOCM.",
+      "evidencia": {
+        "linea": 295,
+        "cita": "Además, Navarra suma una paga de 400 € en marzo y mantiene la antigüedad por trienios , que Madrid tiene congelada."
+      }
+    }
+  ],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UN TRABAJADOR DEL METAL DE NAVARRA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial del metal en Navarra en 2026?»; (2) «¿y eso cuánto es al mes?»; (3) «soy soldador / chapista en un auxiliar de automoción, ¿en qué grupo estoy?»; (4) «mi empresa monta e instala, ¿me cubre este convenio o el del Comercio del Metal?»; (5) «llevo 6 años, ¿me toca antigüedad y cuánto?»; (6) «estoy de baja por enfermedad común, ¿me complementa la empresa?»; (7) «hago noches, ¿cuánto es el plus?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO, UNA A UNA: (1) sí, línea 282 y FAQ 479; (2) sí, líneas 271 y 276-284, con columna mensual etiquetada como orientativa —de las cuatro fichas auditadas, es la que mejor resuelve el «¿y eso cuánto es al mes?» del encargo, porque además dice de dónde sale la división—; (3) NO; (4) sí, línea 267; (5) sí, líneas 366 y 491, con importe por trienio y prorrateo en 14 pagas; (6) sí, líneas 394 y 398; (7) NO, sin cuantía; (8) NO. Una novena pregunta muy navarra —«¿qué es la paga de 400 € de marzo y me toca a mí?»— sí está respondida, y bien, en las líneas 306, 311 y 485, incluida la única mención a tiempo parcial de toda la ficha («quien haya trabajado a tiempo parcial o menos del período la cobra de forma proporcional»): la regla existe para una paga de 400 € y no para el salario, que es lo que la persona necesita. — LOS DOS HUECOS DEL ENCARGO: «al mes» resuelto; «media jornada» no. FUERA DE MI EJE: el determinista marca conceptos_ausentes: ['ambito_funcional'], pero el ámbito sí está en el HTML bajo el H2 «¿Este convenio te cubre?» (líneas 258-267); parece un falso negativo léxico del detector, no un hueco de contenido, y no lo he penalizado. VENTANA ABIERTA: 15 días desde el último commit, el parche de 1.2 va marcado como aplazado."
+}

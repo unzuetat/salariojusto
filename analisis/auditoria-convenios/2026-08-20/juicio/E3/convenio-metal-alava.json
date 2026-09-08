@@ -1,0 +1,79 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-alava",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Cifra, año y fuente están en el primer bloque —el H1 lleva el rango y el año, y el sello inmediato cita el BOTHA núm. 18 del 11-feb-2026—, pero lo que se ofrece de entrada es el rango de las 54 categorías, no la cifra de un puesto. Quien teclea «cuánto cobra un oficial de 1ª del metal en Álava» tiene que bajar hasta el Grupo 8 para encontrar sus 24.577,88 €.",
+      "evidencia": [
+        {"archivo": "convenio-metal-alava.html", "linea": 207, "cita": "Convenio del Metal de Álava : las 54 categorías, de 20.551 € a 31.277 € en 2026"},
+        {"archivo": "convenio-metal-alava.html", "linea": 215, "cita": "✓ Verificado contra el texto del convenio (BOTHA núm. 147, 23-dic-2022, código 01001185011981; corrección de errores en BOTHA núm. 13, 1-feb-2023) y las tablas salariales 2026 (BOTHA núm. 18, 11-feb-2026), por SalarioJusto"},
+        {"archivo": "convenio-metal-alava.html", "linea": 386, "cita": "Oficial 1ª 24.577,88 €"}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 2,
+      "razon": "Responde 5 de las 8: la cifra de la categoría, si el convenio cubre tu empresa, cuántas pagas hay, cuánto suma un quinquenio y cuánto la nocturnidad, y qué hacer si cobras de menos. Falla en tres: (1) «¿y eso cuánto es al mes?» —toda la ficha está en bruto anual y nunca dice entre cuántas mensualidades se reparte—; (2) «soy soldador o calderero, ¿qué categoría soy?» —la soldadura y la calderería aparecen como actividades de la empresa, nunca como puesto asociado a una fila de la tabla—; (3) «trabajo media jornada, ¿cuánto me corresponde?» —no hay una sola línea sobre proporcionalidad—.",
+      "evidencia": [
+        {"archivo": "convenio-metal-alava.html", "linea": 469, "cita": "Cantidad fija bruta al día , por tramos de cinco años, de 1,30 €/día (1 quinquenio) a 11,72 €/día (9 quinquenios)."},
+        {"archivo": "convenio-metal-alava.html", "linea": 473, "cita": "Bonificación fija bruta al día, por categoría: 6,31 €/día para peón/a y especialista, 6,43 € oficial/a 3.ª, 6,50 € oficial/a 2.ª y 6,85 € oficial/a 1.ª."},
+        {"archivo": "convenio-metal-alava.html", "linea": 273, "cita": "Talleres de mecanizado, calderería, soldadura, montaje, reparación y mantenimiento industrial."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Camino de cinco pasos con lo importante: identificar el grupo por funciones reales, comparar, exigir la nómina desglosada por el art. 29.1 ET, la vía vasca (PRECO) y el plazo del art. 59.2. No llega a 3 porque lo que entrega al final es una guía genérica, no un documento con el que reclamar: el determinista solo registra el enlace al kit /reclamar-diferencias-salariales-convenio.html.",
+      "evidencia": [
+        {"archivo": "convenio-metal-alava.html", "linea": 549, "cita": "Acude a la Comisión Paritaria del convenio o a la vía extrajudicial (PRECO, en el País Vasco). La reclamación previa interrumpe la prescripción."},
+        {"archivo": "convenio-metal-alava.html", "linea": 550, "cita": "Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 2,
+      "razon": "La mitad del problema está resuelta: el ámbito funcional se explica en llano (siderurgia, talleres, fibra óptica) y declara la frontera que más pleitea en Álava, la del Comercio del Metal, con enlace al convenio hermano. La otra mitad no: las 54 categorías van con la denominación del boletín (Oficial 1ª, Especialista, Peón, Calcador/a) y no hay ningún puente desde el oficio real —quien suelda o monta no sabe si es Oficial de 1.ª, de 3.ª o Especialista—, que es justo lo que separa saber que te cubre de saber tu cifra.",
+      "evidencia": [
+        {"archivo": "convenio-metal-alava.html", "linea": 278, "cita": "Es un convenio de industria, no de comercio. Cubre la fabricación, transformación y reparación del metal. [...] La venta de artículos metálicos se rige por el convenio del Comercio del Metal de Álava , que es distinto."},
+        {"archivo": "convenio-metal-alava.html", "linea": 275, "cita": "Personal de oficio, subalterno, administrativo y técnico de estas empresas: la clasificación recoge 54 categorías en 8 grupos, desde el peón/a hasta la ingeniería."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 1,
+      "razon": "Nombra la nómina tres veces pero nunca la traduce. La ficha publica bruto anual y la persona tiene delante una nómina mensual: se le pide que compare dos cosas que no están en la misma unidad, y en ningún sitio se le dice entre cuánto dividir. Los datos clave dicen «2 extras» y el cuerpo dice que el anual «ya incluye» vacaciones y las dos pagas, de donde no se deduce si el divisor son 12 o 14. Tampoco advierte de ningún error típico de lectura (prorrateo de extras, absorción, complementos absorbibles).",
+      "evidencia": [
+        {"archivo": "convenio-metal-alava.html", "linea": 400, "cita": "¿Tu nómina coincide con el salario bruto de tu categoría? Verifícalo ahora."},
+        {"archivo": "convenio-metal-alava.html", "linea": 547, "cita": "Compara tu salario bruto anual con la tabla 2026 . Súmale los quinquenios (cantidad fija al día por tramo), la nocturnidad y el plus de penosidad/toxicidad/peligrosidad que te correspondan."},
+        {"archivo": "convenio-metal-alava.html", "linea": 283, "cita": "El salario bruto anual es antes de IRPF y Seguridad Social."}
+      ],
+      "parche": "Añadir bajo la tabla (tras la línea 397) un párrafo de conversión: «Cómo se ve esto en tu nómina. El convenio de Álava fija el salario en bruto anual, pero tú cobras al mes. El importe de las tablas ya incluye las dos pagas extraordinarias de julio y Navidad, así que para saber lo que debería figurar en una nómina ordinaria divide entre 14: un peón/a de 20.551,17 € cobra unos 1.468 € brutos al mes en 12 mensualidades más dos pagas de la misma cuantía; un oficial/a de 1.ª de 24.577,88 €, unos 1.756 €. Si tu empresa prorratea las extras (las reparte en las doce nóminas), el bruto mensual sube pero no cobras nada extra en julio ni en diciembre: el total del año debe ser el mismo. Los quinquenios, la nocturnidad y el plus de penosidad/toxicidad/peligrosidad se suman aparte y deben aparecer como conceptos separados; ningún complemento del convenio puede absorberse contra el salario de tabla.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "Gestiona bien el problema que tiene —un convenio vencido el 31-dic-2025— y no lo disimula: lo dice en el subtítulo, le dedica una sección propia, explica por qué existen tablas 2026 pese al vencimiento (el cierre del art. 24) y da el suelo del SMI 2026 con su norma y su enlace al BOE. No llega a 3 porque en esta ficha no falta ningún dato: las tablas 2026 existen, están publicadas y transcritas, así que no hay hueco material que declarar ni estimación propia que marcar.",
+      "evidencia": [
+        {"archivo": "convenio-metal-alava.html", "linea": 264, "cita": "Pero eso no significa que no te cubra. El propio artículo 4 establece que, mientras no se firme un convenio nuevo que lo sustituya, se mantiene en vigor todo su contenido normativo ."},
+        {"archivo": "convenio-metal-alava.html", "linea": 606, "cita": "Real Decreto 126/2026 , SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparación. BOE-A-2026-3815 ."},
+        {"archivo": "convenio-metal-alava.html", "linea": 397, "cita": "Las 54 categorías superan el SMI 2026 (17.094 € anuales)."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA ALGUIEN DEL METAL EN ÁLAVA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial de 1ª del metal en Álava en 2026?»; (2) «¿y eso cuánto es al mes?»; (3) «trabajo en un taller de mecanizado en Júndiz, ¿me cubre este convenio o el del comercio del metal?»; (4) «soy soldador, ¿en qué categoría de la tabla estoy?»; (5) «¿cuántas pagas extra tengo?»; (6) «llevo 6 años, ¿me toca antigüedad y cuánto?»; (7) «hago turno de noche, ¿cuánto me tienen que pagar de más?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO: (1) sí, tabla del Grupo 8 (línea 386) y FAQ (594); (2) NO, en ninguna parte; (3) sí, «¿Este convenio te cubre?» (269-278); (4) NO; (5) sí, datos clave (245) y sección de pagas (408-420); (6) sí, con cifra (469); (7) sí, con cifra por categoría (473); (8) NO. Cinco de ocho. — El patrón de los tres fallos es el mismo y es el de todo el cluster vasco: la ficha se detiene justo donde empieza la vida del lector. Tiene el dato oficial impecable y no da el último paso (dividir entre 14, nombrar el oficio, decir qué pasa a media jornada). Ninguno de los tres exige tocar la verificación. — Sobre media jornada: he comprobado el HTML entero y la única aparición de «media jornada» es como umbral del plus de penosidad (línea 477), no como situación contractual. Es un hueco compartido por las nueve fichas del metal. — FUERA DE MI EJE: el determinista marca 5 cifras huérfanas en las dos FAQ de salario («¿Cuánto cobra un peón…?» y «¿Cuánto cobra un oficial de 1.ª?»), sin fuente en la propia sección; son justo las respuestas que un asistente de IA cita literalmente. — VENTANA ABIERTA: 12 días desde el último commit, así que el único parche redactado (1.6) va marcado como aplazado."
+}

@@ -1,0 +1,127 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-asturias",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 3,
+      "razon": "boilerplate_ratio 0,032 y solo 4 frases compartidas, las cuatro cromo inevitable (metodología, SMI, plazo del art. 59.2, pedir la nómina desglosada). Y el bloque que en el resto del corpus es el más clonado —«cómo reclamar»— aquí está reescrito con las instituciones asturianas: la Comisión Mixta con su domicilio en Gijón y el SASEC en vez de la vía extrajudicial genérica. Eso es lo que separa el 3 del 2.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 499,
+          "cita": "Acude a la Comisión Mixta de Interpretación (domicilio en FEMETAL, c/ Marqués de San Esteban 1, Gijón — debe reunirse en 15 días) o a la vía extrajudicial del SASEC"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "3.418 palabras de prosa contra ratio_tabla 0,121, y la prosa es condición de legibilidad: la columna «Mínimo anual» no está en el BOPA, es un cálculo propio sobre salario por día natural, y sin el párrafo que declara la fórmula la tabla induciría a error en cualquiera de los 15 niveles.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 353,
+          "cita": "Mínimo anual 2026 = (salario convenio + plus convenio de 2,86 €) × 365 días naturales + 2 pagas extras. No incluye el plus de asistencia (~9 €/día trabajado), la carencia de incentivo ni la antigüedad"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 267,
+          "cita": "El salario se estructura por día natural: el salario convenio y el plus convenio se devengan los 365 días del año (art. 24)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "120 frases exclusivas y 2.595 palabras exclusivas, y la exclusividad no viene del topónimo: viene de haber leído las otras ocho fichas del sector y haber situado a Asturias en ellas con cifras. Es la única del cluster que compara la cobertura de baja provincia por provincia y la única que explica el origen histórico de una institución del convenio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 460,
+          "cita": "Zaragoza paga el 25% de la base y solo en AT con hospitalización, Madrid el 15% desde el día 11 y solo en AT/enfermedad profesional, y Valencia no llega al 100% en enfermedad común hasta el día 75. El fondo paritario asturiano es una fórmula heredada de la vieja mutualidad del sector."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 435,
+          "cita": "17 semanas por nacimiento, adopción o acogimiento — una semana más que las 16 del Estatuto de los Trabajadores (art. 12). Es una mejora que ningún otro convenio del cluster del metal recoge."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "3 de 6 clonadas, pero las tres propias no son transferibles a ninguna otra provincia: «¿Las tablas 2026 son definitivas o provisionales?» solo tiene sentido donde las tablas se publicaron dos años antes, y «¿Qué cobro si estoy de baja?» solo donde existe el fondo asistencial paritario. Y las clonadas se responden con comparación, no con relleno.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 541,
+          "cita": "Definitivas. La única salvedad es la cláusula del art. 23: si el IPC acumulado 2024-2026 superase el 7,5%, la diferencia se consolidaría en las tablas iniciales de 2027 — nunca con retroactividad sobre lo cobrado en 2026."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 544,
+          "cita": "Es una de las grandes diferencias con Zaragoza, Madrid o Barcelona, donde la antigüedad está congelada y quien entra hoy no genera tramos."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 3,
+      "razon": "La particularidad organiza la ficha: el segundo H2 y el índice no son «tablas salariales» sino «Tablas blindadas», y de ahí cuelgan la certeza de 2026, la antigüedad viva y el fondo asistencial. Además atiende la trampa específica de esta provincia —el convenio hermano de Montajes y Empresas Auxiliares, en el que caen precisamente quienes trabajan para las grandes factorías— y liga la estructura salarial a la Ordenanza Siderometalúrgica. Ninguna otra ficha del sector explica de dónde viene su propia estructura.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 279,
+          "cita": "No lo confundas con el de Montajes. En Asturias existe otro convenio autonómico distinto, el de Montajes y Empresas Auxiliares del Metal, con código y tablas propios."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 491,
+          "cita": "estructura heredada de la Ordenanza Siderometalúrgica, que el convenio asume como norma complementaria (DF 2.ª)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "El BOPA da tres tablas en euros por día y una paga extra por nivel; no da un salario anual, que es la única cifra con la que el lector puede compararse. La ficha lo calcula, declara la fórmula, avisa de lo que no incluye y añade el marco temporal (qué pasa con el art. 23 y con 2027) que el boletín no puede tener.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 265,
+          "cita": "En el cluster del metal es una rareza: en Zaragoza la tabla 2026 exigió un acta de paritaria publicada en febrero de 2026, y en Bizkaia el convenio está en ultraactividad y 2026 se cobra con las tablas de 2025 congeladas."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 3,
+      "razon": "El agregador da la cifra pelada; aquí la cifra viene con su etiqueta de fabricación. La ficha separa explícitamente lo transcrito de lo calculado y dice por qué lo señala, que es exactamente la honestidad que un comparador de nóminas nunca ofrece. El lector lo percibe sin que se lo expliquen: la tabla lleva la palabra «estimado» y la nota al pie con la fórmula.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 563,
+          "cita": "El «mínimo anual» es un cálculo propio con fórmula declarada — (salario convenio + plus convenio) × 365 + 2 pagas — para poder comparar entre provincias; lo señalamos para no inducir a error."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (último commit 2026-08-07, 12 días). Es la ficha de referencia del sector en singularidad: la única que compara sistemáticamente con las otras ocho dentro del cuerpo (líneas 265, 361, 369, 460, 483, 544) en vez de en un único párrafo de cortesía. Dos avisos. Primero, para el eje que corresponda: la línea 460 atribuye al metal de Zaragoza un complemento de IT del 25 % de la base solo en accidente con hospitalización, y la ficha de Zaragoza no tiene sección de baja médica ni menciona ese complemento en ninguna parte — o falta una sección en Zaragoza o esa cifra no está verificada; conviene resolverlo antes de que se convierta en un 12.1. Segundo, el parche de investigación que le queda: Asturias es la única provincia del cluster cuyo metal nace de la gran siderurgia integral, y la ficha lo insinúa («una de las regiones industriales históricas») sin aterrizarlo. Comprobar en REGCON qué convenios de empresa tienen las grandes plantas siderúrgicas y navales asturianas y decir en una frase si su plantilla se rige por este convenio o por el propio: sería el dato que separa a quien busca «convenio metal Asturias» desde una auxiliar de quien lo busca desde la factoría."
+}

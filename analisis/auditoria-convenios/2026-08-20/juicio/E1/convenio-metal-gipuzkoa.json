@@ -1,0 +1,133 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-gipuzkoa",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Hay trabajo bibliográfico y aritmético declarado: explica que la primera publicación del BOG omitía el acta y que la republicación íntegra no cambió las tablas —un dato que solo se sabe cotejando las dos— y declara la comprobación por partida doble del anualizado (valor hora × 1.695).",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 607,
+          "cita": "<strong>Revisión salarial 2026</strong>, BOG núm. 30 (16-feb-2026), Resolución de 27-ene-2026, republicada íntegra el 4-mar-2026 (la primera publicación omitía el acta; las tablas no cambiaron)."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 614,
+          "cita": "Las cuantías están transcritas de la publicación oficial y verificadas por partida doble (valor hora × 1.695 = retribución anualizada); los ejemplos son elaboración propia y se identifican como tales."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 270,
+          "cita": "Para cada categoría se indica el <strong>valor hora</strong> y la <strong>retribución anualizada</strong> (valor hora × 1.695 horas), con carencia de incentivo incluida."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Las afirmaciones llevan su condición y se remiten al convenio o al ET (vacaciones con el promedio de actividad y el art. 38 ET; horas extras suprimidas «salvo supuestos excepcionales, Art. 24»), pero no advierte del caso límite que su propia tabla contiene: hay categorías de aspirante por debajo del SMI y la ficha lo esquiva diciendo «de oficio pleno» en vez de explicarlo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 463,
+          "cita": "El personal tiene derecho a <strong>30 días naturales</strong> de vacaciones reglamentarias, de los que deben disfrutarse <strong>26 días laborables</strong>."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 424,
+          "cita": "Todas las categorías de oficio pleno superan el SMI 2026 (17.094 € anuales)."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 310,
+          "cita": "<tr><td>Aspirante 1.er año economato</td><td>9,792 €/h</td><td>16.597,44 €</td></tr>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 1,
+      "razon": "Los dos documentos que sostienen todas las cifras (BOG 110 y BOG 30, con su republicación) se citan con número y fecha, pero el único enlace es la portada de la sede del BOG: el lector tiene que repetir la búsqueda que ya hicimos nosotros.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 560,
+          "cita": "Texto en el BOG núm. 110 (08-jun-2023); revisión salarial 2026 en el BOG núm. 30 (16-feb-2026). Sede: <a href=\"https://egoitza.gipuzkoa.eus/es/bog\" target=\"_blank\" rel=\"noopener\">egoitza.gipuzkoa.eus</a>"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 606,
+          "cita": "Sede: <a href=\"https://egoitza.gipuzkoa.eus/es/bog\" target=\"_blank\" rel=\"noopener\">egoitza.gipuzkoa.eus</a>."
+        }
+      ],
+      "parche": "Enlazar el anuncio, no la sede. En la línea 606: «BOG núm. 110 de 08-jun-2023, anuncio de la Resolución de inscripción — PDF: egoitza.gipuzkoa.eus/gao-bog/castellano/bog/2023/06/08/ (anuncio del convenio)». En la línea 607, junto a la revisión salarial: «PDF del BOG núm. 30 de 16-feb-2026 y de la republicación íntegra del 4-mar-2026 (Anexo I retribuciones mínimas y Anexo II valor hora)». Si el visor no da URL permanente por anuncio, escribir al lado la ruta de búsqueda exacta (sede → año → boletín → número de anuncio) para que el lector no tenga que adivinarla.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "El año está en el h2 y en la entradilla que cita el BOG, de modo que no se deduce solo del título de la página; pero ninguno de los diez encabezados de las tablas plegables repite «2026», y quien despliega «Personal subalterno» ve una tabla de cifras sin fecha. El determinista cuenta ocho secciones con cuantías sin año.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 269,
+          "cita": "<h2 id=\"tabla-salarial\">Tablas salariales 2026 — las 79 categorías</h2>"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 277,
+          "cita": "<thead><tr><th>Categoría profesional</th><th>Valor hora</th><th>Retribución anual</th></tr></thead>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "Fecha concreta (4-ago-2026), posterior al boletín más reciente que ella misma cita (BOG 30 de 16-feb-2026 y su republicación de 4-mar-2026), y dice qué se cotejó hasta el detalle de distinguir las dos publicaciones y de declarar el método de comprobación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 213,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BOG núm. 110, 08-jun-2023, código REGCON 20001095011981) y la <strong>revisión salarial 2026</strong> (BOG núm. 30, 16-feb-2026, republicada íntegra el 4-mar-2026), por SalarioJusto · última revisión 4 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 614,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto del convenio (BOG núm. 110, 08-jun-2023) y contra la revisión salarial 2026 (BOG núm. 30, 16-feb-2026, republicada íntegra el 4-mar-2026)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 2,
+      "razon": "Dice hasta cuándo valen las tablas y qué mecanismo se activa después (denuncia el 1-nov-2026 y ultraactividad), pero lo deja en una viñeta de la lista de particularidades y remata con un genérico «conviene vigilar»: no dice qué se negocia, ni con qué umbral, ni qué haría el lector si hubiera atrasos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 543,
+          "cita": "<strong>Vigencia hasta el 31 de diciembre de 2026</strong>, con denuncia automática desde el 1 de noviembre de 2026 y ultraactividad posterior. Conviene vigilar la negociación del próximo convenio."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 239,
+          "cita": "<div class=\"stat-label\">Vigencia</div><div class=\"stat-value\">2023-2026 · denuncia 1-nov-2026</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "El asunto serio de esta ficha para el eje de verdad no es una nota sino un hueco: la tabla publica veinte categorías de personal subalterno desde 16.597 €/año, por debajo del SMI 2026 (17.094 €), y la ficha nunca dice que en esos casos rige el SMI. La frase de la línea 424 se protege con «de oficio pleno» en lugar de explicarlo. No lo declaro hard-fail porque las cifras sí están en el boletín —no hay invención—, pero es el punto donde un lector de esas categorías se lleva una idea falsa de lo que puede cobrar, y merece un párrafo explícito. Recomiendo al sintetizador cruzarlo con el determinista (smi.bajo_smi_mencionado = false) y con la norma de la casa sobre paradoja SMI."
+}

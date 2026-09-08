@@ -1,0 +1,44 @@
+[
+ {
+  "title": "Sistema de auditoría de convenios · 4 capas construido",
+  "body": "Ejercicio completo: 119 métricas candidatas generadas desde 13 lentes (trabajador, Google, AdSense, motor de IA, jurista, arquitectura, diseño, edición, mantenimiento, competencia, accesibilidad, corpus, negocio), filtradas con 5 criterios (decide algo · medible sin inventar · estable · independiente · discriminante) → 76 núcleo: 48 puntuables + 28 hard-fails.\n\nRúbrica v1 en analisis/auditoria-convenios/RUBRICA-V1.md: 6 ejes (E1 verdad 22 · E2 singularidad 22 · E3 respuesta 20 · E4 captación 14 · E5 enlazado 12 · E6 forma 10).\n\nConstruido: scripts/audit/convenios-recolector.py (capa 0, 54 fichas en 3 s), 6 agentes en .claude/agents/sj-eje-e*.md (capa 1), sj-verificador.md adversarial (capa 2), convenios-sintetizador.py (capa 3), comando /sj-auditoria. Extras: convenios-patrones.py y gsc-dia.py.\n\nCobertura: 16 de 54 fichas con ciclo completo (piloto de 6 + metal de 10). Pendientes: hostelería 17, grupo suelto 9, limpieza 16.",
+  "source": "claude-code",
+  "timestamp": "2026-08-20T12:00:00Z"
+ },
+ {
+  "title": "Calibración: el score compuesto no sirve para ordenar",
+  "body": "El piloto de 6 fichas respondió lo que tenía que responder. Cada eje por separado abre 25-44 puntos de rango, pero el score compuesto solo 17,5, porque los ejes se compensan entre sí al promediar.\n\nCasos donde el número miente: tecnicos-espectaculos quedaba ÚLTIMA siendo la ficha más singular del corpus (boilerplate 0, 76/76 frases exclusivas) porque se la penalizaba en ejes que no le aplican (es tipo marco, noindex deliberado); metal-sevilla quedaba PRIMERA siendo de las peores en citabilidad.\n\nDecisión: el score se queda pero deja de ordenar. Para comparar fichas → hard-fails y eje más débil. Para seguir una ficha entre pasadas → el score sirve. El sintetizador ya redistribuye peso según el tipo de ficha.\n\nEfecto secundario del piloto: los agentes encontraron 8 fallos en mi propia capa 0 (verde vía CSS no detectado, bloques densos solo en <p>, corpus medido contra el subconjunto, campo truncado que indujo a error a un agente...). Todos corregidos.",
+  "source": "claude-code",
+  "timestamp": "2026-08-20T18:00:00Z"
+ },
+ {
+  "title": "Cola de correcciones · 14 hallazgos verificados a mano",
+  "body": "analisis/auditoria-convenios/COLA-CORRECCIONES.md. Solo entra lo comprobado contra el archivo real, no lo que dice un agente.\n\nLos gordos: (1) SMI 2026 mal en 9 fichas — YA CORREGIDO en PR #100; (2) tres fichas del metal afirmaban que Madrid tiene la antigüedad congelada cuando publica quinquenios vivos con Art. 41 y cuantías, respaldado por su propio dataset; (3) hosteleria-valencia afirmaba una denuncia del convenio que no consta en censo ni JSON, con la fecha de Zaragoza; (4) cuatro fichas de Bizkaia citaban BOPV o BOE en el sello donde toca BOB; (5) limpieza-asturias con dos códigos REGCON distintos, uno cableado en scripts/audit/aplicar-boilerplate.py:296; (6) metal-gipuzkoa con dos categorías bajo SMI y una frase que lo esquiva ('todas las categorías de oficio pleno'), y sin mencionar su régimen foral; (7) 58 enlaces que faltan entre fichas de la misma provincia (Madrid 20, Bizkaia 19).\n\nAplicados ya en la rama fix/lote-verdad-auditoria (sin commit): los puntos 2, 3 y 4.",
+  "source": "claude-code",
+  "timestamp": "2026-08-24T18:00:00Z"
+ },
+ {
+  "title": "Patrones transversales: lo que afecta a media web es plantilla",
+  "body": "analisis/auditoria-convenios/2026-08-24/PATRONES-CORPUS.md, medido sobre las 54-55 fichas con scripts/audit/convenios-patrones.py.\n\nTablas sin scope ni caption: 54 de 55 (98%) — en un sitio cuyo activo son tablas salariales, no son audibles con lector de pantalla. Bloques de más de 100 palabras: 37 (67%). Salarios en verde: 32 (58%). Hermana de la misma provincia sin enlazar: 28 (51%). Registro pobre en censo.json: 22 (40%). Islas con ≤3 páginas que las enlazan: 12.\n\nRegla que sale sola: un defecto que afecta a más de la mitad del corpus no se arregla ficha a ficha.\n\nCorrección de una creencia previa: metal-barcelona y metal-bizkaia estaban anotados como modelos 'a cero verde' y es falso (28 y 84 celdas). El verde viaja en el CSS del canon (td.sal y, en móvil, .num), no inline.",
+  "source": "claude-code",
+  "timestamp": "2026-08-24T19:00:00Z"
+ },
+ {
+  "title": "GSC: la caída de posición del 5-6 sep es probablemente ruido",
+  "body": "Consulta del usuario: '¿por qué he bajado tanto en posición?'.\n\nVentana 28d hasta el 6-sep: 7.001 clics (+49%), 318.031 impresiones (+78%), CTR 2,20% (-0,43), posición 5,73 (+0,05).\n\nDiario: 6,13 el viernes 4 → 7,15 el sábado 5 → 8,77 el domingo 6. No es efecto fin de semana (los domingos previos: 5,89 y 5,54).\n\nPero: cero commits entre el 2 y el 6; en las consultas de siempre la caída es solo de 9,29 a 10,90 (domingo contra domingo); y lo que se dispara son consultas NUEVAS que durante seis días entraban en posición 6,6-8,5 y el 5-6 entran en 17,4 y 23,1, pasando del 9% al 23% de las impresiones del día. Es el patrón de datos frescos incompletos de GSC. RE-MEDIR el 10-11 de septiembre con scripts/audit/gsc-dia.py.\n\nHipótesis refutada por el camino: las anclas # NO hunden la posición (r=-0,15; las fichas con más anclas cayeron MENOS). Iba a proponer tocar el nav.toc de 41 fichas sin base. Lo que sí hacen: son el 37% de las apariciones con CTR 0,03%, así que rompen cualquier métrica agregada que no las excluya (CTR real 2,27% vs 1,55% mezclado).\n\nLo real que queda: deterioro suave del 16-ago al 4-sep (5,72 → 6,13) en las mismas 70 páginas, con limpieza-madrid (6,34 → 8,06 en sus consultas de siempre) y limpieza-zaragoza (3,73 → 5,35) a la cabeza.",
+  "source": "claude-code",
+  "timestamp": "2026-09-08T13:00:00Z"
+ },
+ {
+  "title": "Siguiente análisis: los dos pilotos §6 divergen",
+  "body": "Pendiente y con decisión asociada: hosteleria-baleares (PR #91) y limpieza-madrid (PR #93) recibieron el mismo cambio el 13-ago (frase-respuesta extraíble con cifra del puesto en primera pantalla).\n\nResultados opuestos en 28 días: Baleares 318 → 504 clics y posición 5,54 → 4,44. Limpieza Madrid 406 → 341 clics y posición 4,72 → 5,37, con sus cuatro consultas principales cayendo entre 2,5 y 3,1 puestos.\n\nEsa comparación decide si el piloto se propaga a las 44 fichas restantes o no. Hacerla antes de propagar nada.",
+  "source": "claude-code",
+  "timestamp": "2026-09-08T13:30:00Z"
+ },
+ {
+  "title": "Export con MC caído y git pendiente",
+  "body": "El /export-mc del 8-sep no pudo subir nada: mc_list_projects devolvió 504 FUNCTION_INVOCATION_TIMEOUT tres veces seguidas (backend Vercel de Mission Control). CONTEXT.md y estos crumbs quedan en analisis/export-mc-pendiente/ para subirlos cuando responda.\n\nEstado git en ese momento: rama fix/lote-verdad-auditoria, sincronizada con origin/main (0 ahead, 0 behind), pero con 7 fichas modificadas sin commit (correcciones de la cola ya aplicadas) y 104 untracked, de los cuales lo relevante es analisis/auditoria-convenios/, scripts/audit/*.py y .claude/agents/ — el resto son 76 CSVs de GA4.\n\nAviso para la siguiente máquina: si haces import-mc + git pull NO verás nada de esto hasta que se commitee.",
+  "source": "claude-code",
+  "timestamp": "2026-09-08T14:00:00Z"
+ }
+]

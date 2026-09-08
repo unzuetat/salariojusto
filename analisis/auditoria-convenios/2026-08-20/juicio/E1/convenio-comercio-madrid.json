@@ -1,0 +1,118 @@
+{
+  "eje": "E1",
+  "slug": "convenio-comercio-madrid",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 2,
+      "razon": "Hay trabajo propio visible en varias secciones —la aclaración de que la tabla oficial usa una etiqueta heredada, el checklist de verificación de nómina, el ángulo del permiso climático— pero no hay ningún cálculo propio explicado ni histórico de negociación: el resto es transcripción ordenada del BOCM.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 179,
+          "cita": "La tabla oficial nombra esta categoría como «dependiente/a vendedor/a (mayor de 22)», una etiqueta heredada que la distingue del ayudante de vendedor del Grupo I."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 370,
+          "cita": "Si te corresponde, figuran los pluses de penosidad o peligrosidad (103 €/mes cada uno)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Las afirmaciones llevan su condición y su artículo (nocturnidad con su excepción, peligrosidad con su incompatibilidad), pero el bloque de reclamación afirma que ninguna cláusula depende de la voluntad de la empresa sin mencionar el descuelgue del art. 82.3 ET, que es precisamente el caso límite frecuente. Por eso no llega a 3.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 332,
+          "cita": "Recargo del 25% para el trabajo nocturno, salvo que el salario ya se establezca atendiendo a que el trabajo sea nocturno por su naturaleza (Art. 27)."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 383,
+          "cita": "El convenio está plenamente vigente y eres titular de derechos exigibles: la tabla salarial, los pluses regulados, la jornada máxima, las pagas extras y las protecciones por incapacidad. Ninguna de esas cláusulas depende de la voluntad de la empresa."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 0,
+      "razon": "El JSON determinista da enlaces.externos_oficiales = [] y el HTML lo confirma: no hay un solo enlace externo en el cuerpo. La referencia escrita es de las mejores del piloto (número de BOCM, fecha, código REGCON, incluso la modificación posterior), pero el lector no puede pinchar en ninguna parte para llegar al documento.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 420,
+          "cita": "fue suscrito el <strong>18 de junio de 2025</strong> y publicado en el <strong>BOCM Núm. 183 del 2 de agosto de 2025</strong> con las tablas salariales de los cuatro años (2025-2028)."
+        }
+      ],
+      "parche": "Enlazar las dos publicaciones que la ficha ya cita por número y fecha, en 'Marco legal y contactos' y en el source-footer de Datos clave: BOCM nº 183 de 2-ago-2025 (texto íntegro y tablas 2025-2028) y BOCM nº 151 de 27-jun-2026 (modificación del art. 40), ambas al PDF/edicto concreto de la sede del BOCM, y el código 28000805011982 al registro REGCON (https://expinterweb.mites.gob.es/regcon/). Con eso pasa de 0 a 3 sin tocar una sola cifra.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "5.11",
+      "nota": 3,
+      "razon": "Es la única ficha del piloto que publica las cuatro tablas del convenio en pestañas y marca explícitamente cuál es la vigente, de modo que histórica, actual y futura quedan separadas sin ambigüedad; además el epígrafe de pluses fecha sus cuantías, así que las cifras que el determinista marca sin año heredan el año del encabezado padre.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 218,
+          "cita": "<button class=\"year-tab active\" data-year=\"2026\" role=\"tab\" aria-selected=\"true\">2026 (vigente)</button>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 313,
+          "cita": "<h2>Pluses y complementos (cuantías 2026)</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 2,
+      "razon": "Fecha de verificación concreta y posterior al último boletín que la propia ficha cita (13-ago-2026 > 27-jun-2026), y el bloque de autoría dice qué se cotejó. No llega a 3 porque tanto el sello como ese bloque certifican solo contra el BOCM 183/2025, mientras el contenido de jornada descansa en el BOCM 151 de 27-jun-2026 que aparece en el cuerpo: el sello no cubre todo lo que la página afirma.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 174,
+          "cita": "<strong>✓ Verificado</strong> contra BOCM Núm. 183/2025 por SalarioJusto · última revisión 13 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 299,
+          "cita": "La modificación del BOCM Núm. 151 (27-jun-2026) aclaró la redacción de este artículo."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 2,
+      "razon": "Dice hasta cuándo valen estas tablas y ya publica las de 2027 y 2028, que es más que anunciar la caducidad. No llega a 3 porque no dice qué vigilar: la propia ficha demuestra en el cuerpo que el convenio se modifica a mitad de vigencia (BOCM 151/2026 sobre el art. 40) y nunca advierte al lector de que eso puede repetirse.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 197,
+          "cita": "<strong>Futuro.</strong> Subidas del IPC del año anterior con mínimo y máximo garantizado del 3% cada año hasta 2028."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 420,
+          "cita": "Vigencia: 1 de enero de 2025 a 31 de diciembre de 2028."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ficha en ventana de medición abierta (operacion.ultimo_commit 2026-08-18, 1 día): el único parche propuesto —enlazar las fuentes— queda aplazado. Es el mejor ejemplo del piloto de la paradoja transversal: la traza escrita hacia el BOCM es impecable (número, fecha, código, incluso la modificación posterior) y la traza clicable es inexistente. Si se enlazan las dos publicaciones que ya cita, esta ficha se convierte en la referencia de E1 para el resto del corpus. No es SMI: menciona el SMI pero no lo cifra (JSON: smi.smi_obsoleto_citado = []), así que se libra del error de 16.576 € que sí arrastran las dos fichas de limpieza del piloto."
+}

@@ -1,0 +1,123 @@
+{
+  "eje": "E1",
+  "slug": "convenio-hosteleria-valencia",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 2,
+      "razon": "Hay trabajo propio en varias secciones —la reconstrucción de cómo se calculó la paga de garantía IPC con su base y sus beneficiarios, el ámbito ampliado a riders y dark kitchens, la Tabla II BIS— pero convive con mucha transcripción sin anclar: el determinista cuenta 74 de 169 cifras en secciones sin referencia a artículo, anexo o boletín (43,8% de cifras huérfanas, la peor del piloto).",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 714,
+          "cita": "<strong>El IPC interanual de diciembre 2024 cerró cerca del 2,8%</strong>, claramente superior al 1,62% pactado — habría que verificar con la empresa o el sindicato si la nueva paga de garantía se ha aplicado."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 276,
+          "cita": "<li class=\"no\"><strong>NO te cubre</strong> si tu empresa solo prepara y reparte productos cocinados a domicilio sin tener establecimiento presencial (dark kitchens puras pueden quedar fuera, se interpreta caso por caso).</li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 1,
+      "razon": "Las afirmaciones de derecho llevan condición y artículo, pero la afirmación central de la página —cuál es el salario mínimo del convenio en 2026— se enuncia sin el único matiz que la hace legalmente utilizable: 1.100,46 €/mes en 15 pagas son 16.506,90 € al año, por debajo del SMI 2026 (17.094 €), de modo que esa cifra no puede pagarse hoy. Y la Tabla II BIS reproduce importes de 853,87 € a 1.038,09 € como lo que cobra quien entra sin experiencia, sin advertir que el SMI actúa igualmente como suelo. La ficha no menciona el SMI ni una sola vez en el cuerpo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 873,
+          "cita": "Según el texto publicado en BOP Valencia núm. 26 del 7 de febrero de 2023, el salario base mensual mínimo es de <strong>1.100,46 €</strong> (Nivel V de restauración) y puede llegar hasta <strong>1.415,47 €</strong> en las categorías superiores de hoteles 4-5 estrellas."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 795,
+          "cita": "Si has <strong>trabajado 9 meses o más</strong> en el área funcional para la que te contratan, no eres \"sin experiencia\" y debes cobrar la tabla normal desde el primer día."
+        }
+      ],
+      "parche": "Añadir un callout inmediatamente bajo las tablas y repetir el matiz en la FAQ de la línea 873: «Ojo con el suelo legal. El Nivel V de la Tabla I (1.100,46 €/mes × 15 pagas = 16.506,90 €/año) queda por debajo del SMI 2026, fijado en 17.094 € brutos anuales por el RD 126/2026. Como el SMI se compara en cómputo anual y es irrenunciable (art. 27 ET), tu empresa debe complementar la diferencia: en 2026 nadie puede cobrar menos de 17.094 € al año a jornada completa, aunque la tabla del convenio en ultraactividad diga otra cosa. Lo mismo se aplica a la tabla rebajada del Anexo II BIS.» Sin este bloque la página publica cifras que hoy son ilegales como si fueran exigibles.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 1,
+      "razon": "Hay un enlace oficial, pero lleva a la portada del buscador del BOP y la propia ficha reconoce que el lector tendrá que repetir la búsqueda con el CSV; el otro enlace no es oficial sino a un repositorio jurídico privado. Además todo ello está sepultado dentro de un <details> plegado al final de la FAQ, no en una sección de fuentes visible.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 897,
+          "cita": "Ambas publicaciones son verificables en <a href=\"https://bop.dival.es/bop\" target=\"_blank\" rel=\"noopener\">bop.dival.es</a> buscando por el CSV o por el código de convenio."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 891,
+          "cita": "<summary><span class=\"acordeon-chevron\">▸</span>Otras preguntas frecuentes<span class=\"summary-hint\">Pulsa para ver 3 preguntas más (fijo-discontinuo, plus formación, fuentes oficiales)</span></summary>"
+        }
+      ],
+      "parche": "Sacar las fuentes del acordeón a una sección propia «Fuentes oficiales» con el patrón de Metal Sevilla, y sustituir el enlace al buscador por los enlaces directos al documento: BOP Valencia nº 26 de 7-II-2023 (CSV BOPV-2023/01380, texto íntegro y Anexo II) y BOP Valencia nº 87 de 7-V-2024 (acta paritaria 1/2024, cláusula de garantía IPC), más el código 46001285011982 enlazado a https://expinterweb.mites.gob.es/regcon/. Degradar el enlace a noticias.juridicas.com a mención secundaria: no es fuente oficial y hoy compite visualmente con la que sí lo es.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "El bloque principal de tablas dice su año y explica por qué una tabla de 2025 rige en 2026, lo que resuelve la duda temporal más importante. No llega a 3 porque 500 líneas más abajo aparece una segunda tabla de 2023 cuyo encabezado de columna dice solo «Tabla normal» y da 1.178,28 € para Nivel III donde la tabla vigente da 1.214,84 €: dos cifras para el mismo puesto, separadas únicamente por un año escrito en el h3.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 283,
+          "cita": "<div class=\"card-title\" id=\"tabla-salarial\">Tablas salariales 2025 — Hostelería Provincia de Valencia</div>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 777,
+          "cita": "<h3>Tabla rebajada vs tabla normal (Tabla I — restauración, 2023)</h3>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 2,
+      "razon": "Fecha concreta y posterior a los boletines citados (28-may-2026 > 7-may-2024). No llega a 3 porque el sello certifica solo contra el BOP 26/2023 mientras una sección entera de la ficha —la paga de garantía IPC— descansa en el acta paritaria del BOP 87 de 7-may-2024, que el sello no menciona; y el bloque de autoría es el boilerplate genérico, sin nombrar el boletín.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 234,
+          "cita": "<strong>✓ Verificado</strong> contra BOP Valencia Núm. 26/2023 por SalarioJusto · última revisión 28 de mayo de 2026"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 945,
+          "cita": "Esta ficha de convenio ha sido cruzada manualmente contra el texto íntegro del boletín oficial por el equipo de SalarioJusto."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 2,
+      "razon": "Dice desde el hero hasta cuándo valen estas tablas y saca la consecuencia práctica de la ultraactividad —que no hay subida automática—, y deja abierta una revisión pendiente concreta (la garantía IPC de 2024-2025). No llega a 3 porque no dice qué vigilar ni cuándo: no hay ninguna pista sobre el calendario del nuevo convenio, algo que Limpieza Zaragoza sí resuelve con su histórico de renovaciones.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 226,
+          "cita": "El convenio expiró el 31/12/2025 pero las tablas siguen aplicándose por ultraactividad (art. 86.3 ET) mientras se negocia un nuevo texto. No hay incremento automático."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 714,
+          "cita": "Si el IPC de cualquiera de esos años supera el pactado, debería abonarse de nuevo la paga única adicional."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Sin ventana de medición abierta (ultimo_commit 2026-07-30, 21 días): los parches son aplicables ya. No arrastra el error de los 16.576 € porque sencillamente no menciona el SMI en ningún punto del cuerpo (el JSON determinista lo confirma: smi.smi_obsoleto_citado = [], y el grep solo lo encuentra en un enlace del pie), y ese silencio es aquí más grave que el error ajeno: publica como salario mínimo del convenio para 2026 una cifra anual que está por debajo del SMI vigente. No lo declaro 5.7 —la cifra existe en el BOP y está bien transcrita— ni 4.5 por el choque entre la tabla 2025 y la tabla 2023, porque el año consta en ambos encabezados de sección; pero el verificador adversarial debería mirar las dos cosas. Fuera de mi eje: hardfail determinista 5.1 (43,8% de cifras en secciones sin referencia), que es la causa material de que esta ficha no se deje verificar pese a tener el contenido más rico del piloto."
+}

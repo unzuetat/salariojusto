@@ -1,0 +1,175 @@
+{
+  "slug": "convenio-limpieza-zaragoza",
+  "veredictos": [
+    {
+      "eje": "E1",
+      "id": "5.7",
+      "nota_o_hardfail": "hardfail",
+      "veredicto": "MATIZADO",
+      "motivo": "El error de SMI es real y está donde dice (línea 260 literal). Pero el recuento del enunciado se queda corto: dice «no es 1 de 19 sino al menos 2». Con el SMI real (17.094 €) son 3 filas de 19 las que quedan por debajo — Aprendiz (15.621,19 €), Limpiador/a (16.926,95 €) y Peón (16.926,95 €), que es una fila distinta de la de Limpiador/a en la tabla. Enunciado corregido: «la ficha calcula el cumplimiento del SMI contra 16.576 € en vez de 17.094 €; con la cifra real son 3 de 19 categorías bajo el mínimo y el colchón declarado de +350,95 € del Limpiador/a es en realidad un déficit de −167,05 €».",
+      "prueba": {"linea": 304, "cita": "<tr><td class=\"cat\">Peón</td><td class=\"num\">37,20 €/día</td><td class=\"sal\">16.926,95 €</td><td class=\"num\">1,49 €/día</td></tr>"}
+    },
+    {
+      "eje": "E1",
+      "id": "5.7 (2.ª declaración · hero)",
+      "nota_o_hardfail": "hardfail",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado literal en la línea 207 (hero) y en la línea 311 (pie de la tabla salarial): ambas repiten el SMI falso. Comprobado además que no hay ninguna corrección en otro punto de la página: grep de «16.576» devuelve 6 apariciones (líneas 7, 207, 260, 311, 621, 682) y grep de «17.094» devuelve 0. Es el mismo defecto raíz que el hallazgo anterior, así que no debe contarse como dos hardfails distintos, sino como uno con cinco superficies.",
+      "prueba": {"linea": 621, "cita": "<li><strong>Solo 1 categoría bajo SMI 2026:</strong> únicamente Aprendiz queda por debajo del SMI 2026 (15.621,19 € frente a 16.576 €). El resto del convenio cumple holgadamente.</li>"}
+    },
+    {
+      "eje": "E1",
+      "id": "5.10",
+      "nota_o_hardfail": "nota 0",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado contra el HTML y contra el determinista. `enlaces.externos_oficiales` = [] y `externos_total` = 0; el único grep de href=\"http\" devuelve fuentes de Google Fonts, GTM y el canonical propio. La sección «Fuentes oficiales» (líneas 646-659) escribe BOPZ nº 71, edicto 806228 y el código REGCON, pero ninguno es clicable. El ancla de la rúbrica E1 para nota 0 es literalmente «sin enlaces oficiales», así que la nota es la que marca el propio baremo del proyecto.",
+      "prueba": {"linea": 657, "cita": "<strong>Boletín Oficial de la Provincia de Zaragoza (BOPZ)</strong> — bop.dpz.es — para consulta y verificación independiente."}
+    },
+    {
+      "eje": "E2",
+      "id": "12.1",
+      "nota_o_hardfail": "hardfail",
+      "veredicto": "MATIZADO",
+      "motivo": "La contraprueba que aporta es exacta: convenio-metal-sevilla.html línea 627 cita el RD 126/2026 con 17.094 € anuales y enlace al BOE-A-2026-3815. Pero el enunciado se queda corto igual que E1: dice que «el Limpiador/a pasa a quedar por debajo», y son tres filas (Aprendiz, Limpiador/a y Peón). Enunciado corregido: «con el SMI real de 17.094 €, 3 de las 19 filas de la tabla quedan bajo el mínimo legal, no 1».",
+      "prueba": {"linea": 627, "cita": "<strong>Real Decreto 126/2026</strong>, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparación. (convenio-metal-sevilla.html)"}
+    },
+    {
+      "eje": "E2",
+      "id": "3.1",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "REFUTADO",
+      "motivo": "El hallazgo afirma que «las 8 frases_compartidas_top … no son cromo: son el bloque ¿Cobras menos?». Falso por dos vías. (1) Tres de esas ocho frases no pertenecen a ese bloque sino a la firma E-E-A-T («no somos un bufete…», «verificamos cifra a cifra…», «esta ficha ha sido cruzada manualmente…»), que es exactamente la metodología que la rúbrica llama cromo legítimo. (2) La propia rúbrica de E2 clasifica «cómo reclamar» como cromo inevitable y advierte de no penalizarlo. Además el ratio es 0,067, de los más bajos del piloto, y el párrafo plantillado va localizado (CCOO 2-oct-2025, SAMA, Art. 34). Lo único real que queda —que ese bloque repite lo que la ficha ya explica mejor en §ultraactividad— ya lo cubre E6 en 8.3 como redundancia interna, no como boilerplate.",
+      "prueba": {"linea": 18, "cita": "¿es cromo inevitable (avisos legales, metodología, cómo reclamar) o es contenido de sustancia clonado …? … Un ratio alto por boilerplate legítimo no merece un 0 (.claude/agents/sj-eje-e2-*.md)"}
+    },
+    {
+      "eje": "E3",
+      "id": "5.7",
+      "nota_o_hardfail": "hardfail",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Es la versión aritméticamente correcta del hardfail del SMI: dice «al menos 3 de 19» y calcula el déficit del Limpiador/a en −167,05 €, que es exactamente 17.094 − 16.926,95. Comprobadas las cinco superficies que enumera (hero 207, callout 260, pie de tabla 311, particularidades 621, comparativa 677/682) más la meta description de la línea 7 y el JSON-LD de la línea 60. Ninguna otra parte de la ficha corrige la cifra.",
+      "prueba": {"linea": 260, "cita": "<strong>Solo 1 de 19 categorías queda bajo el SMI 2026 (16.576 €/año).</strong> … cobra 16.926,95 € de bruto anual, 350,95 € por encima del mínimo."}
+    },
+    {
+      "eje": "E3",
+      "id": "1.1",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "MATIZADO",
+      "motivo": "Real que la entradilla (línea 207) abre con estado jurídico, denuncia y REGCON sin ninguna cantidad en euros, y que el h1 tampoco la lleva. Pero dos partes del enunciado no se sostienen: (a) «la cifra del puesto que trae al 90% del tráfico (Limpiador/a) exige bajar hasta la tabla» es falso, porque los 16.926,95 € del Limpiador/a aparecen en el callout de la línea 260, tres líneas antes del h2 de la tabla; (b) la nota 1 tiene por ancla en la rúbrica «hay cifra pero sin año ni fuente», y el determinista da `respuesta_directa` con cifra, año y fuente en los primeros bloques, que es el ancla del 2. Enunciado corregido: «la entradilla antepone el estado jurídico a la cifra; la primera cantidad en euros no llega hasta el callout del SMI (línea 260) y allí aparece como término de comparación con el mínimo legal, no como respuesta a cuánto se cobra».",
+      "prueba": {"linea": 260, "cita": "la categoría más baja del Personal Operario (Limpiador/a y Peón) cobra 16.926,95 € de bruto anual"}
+    },
+    {
+      "eje": "E3",
+      "id": "1.6",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "REFUTADO",
+      "motivo": "El hallazgo dice que la nómina «se nombra mucho pero nunca se explica la correspondencia» y que «no se ofrece la cifra en el formato en el que la nómina llega». Está en otra sección: las líneas 418-428 hacen exactamente esa traducción para el puesto principal (bruto anual ÷ 15 pagas = 1.128,46 € por paga, con el desglose de las 12 mensualidades y las 3 extras y el aviso de prorrateo). La línea 385 explica además qué conceptos van separados en el recibo y cuáles no cotizan, y la 432 avisa del error de categoría en nómina. Eso es al menos el ancla 2 de la rúbrica («se explica la correspondencia»), con el aviso de prorrateo del ancla 3. Agravante: el parche propuesto es incorrecto y metería un dato falso en la ficha — propone una columna «€/mes = bruto anual ÷ 12 = 1.410,58 €» cuando el bruto anual de este convenio se compone de 15 pagas (Art. 17, tres extras), de modo que la nómina mensual real es 1.128,46 €. Es justo el fallo contra el que existe la norma de casa de contar las pagas antes de dividir.",
+      "prueba": {"linea": 428, "cita": "Si tu nómina mensual es de 1.128,46 €, ese es el reflejo correcto de la tabla. Si es menor, calcula la diferencia × 12 + comprueba que las extras de junio, diciembre y marzo no falten"}
+    },
+    {
+      "eje": "E4",
+      "id": "4.5",
+      "nota_o_hardfail": "hardfail",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobadas las cuatro líneas una a una. Línea 60 (JSON-LD FAQPage): «plus festivo (27,50 € si más de 4 horas, 15,47 € si menos)». Cuerpo visible: línea 344 tarjeta de pluses «Menos de 4 horas: 16,49 €/día», línea 378 tabla de complementos «Plus domingo/festivo < 4 h · 16,49 €/día», línea 687 respuesta visible de esa misma pregunta «16,49 € si menos de 4 horas». El determinista lo respalda de forma independiente en `schema_vs_cuerpo.importes_solo_en_schema`. Verificada también la segunda divergencia que apunta: el schema fecha la antigüedad «antes del 31 de diciembre de 1994» y el cuerpo «antes del 1 de enero de 1995» (líneas 311 y 687), lo que confirma que el bloque JSON-LD quedó congelado en una versión anterior.",
+      "prueba": {"linea": 344, "cita": "<div class=\"pill-card-body\">Más de 4 horas trabajadas: <strong>27,50 €/día</strong>. Menos de 4 horas: <strong>16,49 €/día</strong>.</div>"}
+    },
+    {
+      "eje": "E4",
+      "id": "2.4",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "MATIZADO",
+      "motivo": "Verificado que el title mide 106 caracteres y que no lleva importe en euros. Pero la nota 1 tiene por ancla «completo pero sin cifra» y el title sí lleva cifra —«tabla 2025» y «jornada 1.766 h»—, tal como recoge el determinista (`title_tiene_cifra`: true). La fórmula validada en este proyecto es «tablas salariales + provincia + año, idealmente con cifra arrancando», no «con euros obligatorios»; y esta ficha rinde 4,4% de CTR a posición 6,4, el mejor del piloto. Enunciado corregido: «el title cabe mal (106 caracteres, se corta hacia el carácter 60 dejando fuera la parte informativa) y la cifra que lleva es de jornada, no de salario; hay margen para probar una variante con euros, pero es una hipótesis a testar, no un defecto: el CTR actual es el más alto del corpus». El aviso de no aplicar el rewrite a ciegas que el propio E4 incluye se mantiene y es lo más importante del hallazgo.",
+      "prueba": {"linea": 6, "cita": "<title>Convenio Limpieza Zaragoza 2026 (denunciado · ultraactividad): tabla 2025 + jornada 1.766 h | SalarioJusto</title>"}
+    },
+    {
+      "eje": "E4",
+      "id": "2.5",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificada la meta en la línea 7: 377 caracteres (coincide con `seo.meta_len` del determinista), la más larga del piloto. Reconstruido el recorte a ~160 caracteres: lo que sobrevive termina en «(REGCON 50000755011981); en ultraactividad desde 1-ene-2026 con…», es decir un código de registro ocupando el espacio del gancho. Confirmado también que no hay ningún importe en euros en toda la meta.",
+      "prueba": {"linea": 7, "cita": "Convenio de Limpieza de Edificios y Locales de Zaragoza: denunciado por CCOO el 2-oct-2025 (REGCON 50000755011981); en ultraactividad desde 1-ene-2026 con tabla salarial 2025 vigente…"}
+    },
+    {
+      "eje": "E5",
+      "id": "6.3",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "MATIZADO",
+      "motivo": "El núcleo se sostiene: los ocho enlaces a fichas hermanas están apilados en el bloque final (líneas 729-740) y ninguno aparece dentro de la prosa, que es exactamente el ancla 1 de la rúbrica («los hay pero agrupados al final»). Pero el enunciado «el único enlace de orientación dentro de la prosa es el de la guía de reclamación» es impreciso: hay al menos otros dos enlaces en cuerpo, el de la calculadora en la línea 311 (dentro del párrafo del SMI) y el CTA «Verificar mi salario» de la línea 487. Enunciado corregido: «ningún enlace a fichas hermanas vive dentro de la prosa; los tres enlaces de cuerpo que hay apuntan a la calculadora (311, 487) y a la guía de reclamación (717), y este último llega cuando el procedimiento ya está contado».",
+      "prueba": {"linea": 311, "cita": "Para convertir el bruto anual de tabla en <strong>salario neto en Zaragoza</strong>, usa la <a href=\"/\">calculadora con escala IRPF nacional 2026</a>."}
+    },
+    {
+      "eje": "E5",
+      "id": "6.4",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado en el determinista (`a_otro_sector_misma_provincia`: [], `a_hermanas_mismo_sector`: 8) y en el HTML: el grep de href internos no devuelve ninguna llamada a convenio-hosteleria-zaragoza.html ni a convenio-metal-zaragoza.html, y ambos archivos existen en la raíz del repositorio. La dirección inversa sí existe: hosteleria-zaragoza figura en `entrantes_desde`. Es el ancla 1 exacta de la rúbrica («solo a hermanas del mismo sector»).",
+      "prueba": {"linea": 737, "cita": "<li><a href=\"/convenios.html\">Ver todos los convenios colectivos</a></li> — cierre del bloque de 8 hermanas de limpieza, sin ninguna entrada de otro sector de Zaragoza"}
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado: `enlaces.al_kit` trae un único destino y está en la línea 717, al cierre del bloque de recursos, que es el ancla 1 («puente al final, fuera de contexto»). Verificado también el momento perdido que señala: la línea 311 dice que la empresa debe abonar el complemento a cuenta del SMI y no enlaza nada. Y comprobado el dato de infrautilización: plantilla-reclamar-absorcion-complementos-smi.html existe en la raíz y el grep en todo el corpus HTML solo la encuentra enlazada desde una ficha de convenio (convenio-comercio-metal-bizkaia.html, aún sin mergear), además de hubs y guías.",
+      "prueba": {"linea": 717, "cita": "Código REGCON: <code>50000755011981</code>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"}
+    },
+    {
+      "eje": "E6",
+      "id": "7.2",
+      "nota_o_hardfail": "nota 0",
+      "veredicto": "MATIZADO",
+      "motivo": "El defecto es real y está verificado: la línea 157 define td.sal con color:var(--green) y esa clase pinta las 19 celdas de la columna «Bruto anual 2025»; metal-sevilla usa var(--ink) en la misma regla (línea 150) y metal-barcelona y metal-bizkaia no tienen siquiera regla de color en la celda salarial. Pero la explicación que da del determinista es falsa: el recolector SÍ lo detectó. `tablas.verde_en_tablas` vale 19, no 0, y `clases_verdes_css` lista explícitamente «sal». Enunciado corregido: quítese la frase sobre el fallo del recolector y déjese el hallazgo en el hecho verificable — la regla de la línea 157 pinta en verde las 19 cifras salariales, contra la norma de casa de salarios en tinta neutra, y el determinista ya lo contabiliza.",
+      "prueba": {"linea": 0, "cita": "\"verde_en_tablas\": 19 … \"clases_verdes_css\": [\"callout-info\", \"sal\"] (deterministas/convenio-limpieza-zaragoza.json)"}
+    },
+    {
+      "eje": "E6",
+      "id": "7.4",
+      "nota_o_hardfail": "nota 0",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado punto por punto. `parrafos.largos_100` trae 11 entradas, incluida la de 189 palabras de la línea 690. Verificado que el bloque de apertura (líneas 255-257) es un div.callout-info y por tanto escapa al contador de párrafos, y que mete en una sola masa la denuncia, el Art. 5, la distinción normativas/obligacionales, las dos mejoras diferidas, la ausencia de subida y el histórico. Verificado que la ficha no tiene ningún bloque nota-editorial (grep = 0 ocurrencias) mientras metal-sevilla tiene 3, que es la referencia que invoca. La rúbrica de E6 fija el ancla 0 en «nota editorial en un solo bloque denso», y la norma de casa de la nota editorial fragmentada en 3-4 sub-párrafos con etiqueta en negrita existe.",
+      "prueba": {"linea": 256, "cita": "<strong>Convenio denunciado por CCOO el 2-oct-2025; en ultraactividad desde el 1 de enero de 2026.</strong> El periodo formal 2022-2025 finalizó… (párrafo único de ~230 palabras)"}
+    },
+    {
+      "eje": "E6",
+      "id": "8.1",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "MATIZADO",
+      "motivo": "El hallazgo se sostiene: cotejadas las nueve viñetas de «Particularidades» (líneas 612-621) una a una contra el resto de la ficha, siete repiten literalmente secciones anteriores (denuncia/Art. 5 → 256 y 575; mejoras diferidas → 313-325; transporte indexado → 340; subrogación 4 meses → 457 y 699; cláusula aeropuerto → 472; antigüedad pre-1995 → 311; bocadillo → 329; SMI → 260). Pero el parche parte de un hecho falso: dice que lo único no desarrollado arriba es la indexación del plus de transporte desde 5,60 € en 2022, y eso ya está textualmente en la línea 340. Enunciado corregido: lo único que no aparece en ninguna otra parte de la ficha es la cadena de incrementos +2% (2023) / +3% (2024) / +3,5% (2025) sobre la base 2022 y el código OACI/IATA del aeropuerto (LEZG/ZAZ); es eso lo que hay que rescatar antes de suprimir la sección, no el plus de transporte.",
+      "prueba": {"linea": 340, "cita": "Jornada completa: <strong>6,09 €/día</strong> efectivo trabajado. … Indexado a los incrementos del convenio (era 5,60 € en 2022, 5,77 € en 2023, 5,91 € en 2024)."}
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "nota_o_hardfail": "nota 0",
+      "veredicto": "CONFIRMADO",
+      "motivo": "La rúbrica exige dos citas para que sea hallazgo y aporta tres, las tres verificadas literalmente (256, 690, 613), más la sección propia de la línea 575 que cuenta lo mismo por cuarta vez. Comprobado que las cuatro versiones repiten el mismo bloque conceptual —denuncia de CCOO, Art. 5 que no opera, normativas que siguen y obligacionales que decaen, 1.766 h y 23 días— sin que ninguna añada nada sobre la anterior.",
+      "prueba": {"linea": 690, "cita": "Desde el 1 de enero de 2026 el convenio está en <strong>ultraactividad</strong>: siguen plenamente vigentes las cláusulas normativas… mientras que las cláusulas obligacionales (paz social, comisión paritaria, prórroga del Art. 5) decaen."}
+    },
+    {
+      "eje": "E6",
+      "id": "11.1",
+      "nota_o_hardfail": "nota 1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "La norma existe y es del propio proyecto: la rúbrica de E6 define el ancla 1 como «con th pero sin scope ni caption», que es exactamente lo que da el determinista (`sin_th`: 0, `sin_scope`: 7, `sin_caption`: 7). Verificada además la observación sobre las filas de grupo con colspan en la línea 279. Contexto que conviene anotar sin que anule el hallazgo: ninguna ficha del corpus usa scope ni caption (grep de scope=\"col\" y de <caption> sobre convenio-*.html devuelve cero archivos), así que es una carencia sistémica del generador, no un descuido de Zaragoza.",
+      "prueba": {"linea": 279, "cita": "<tr class=\"group-header\"><td colspan=\"4\">Grupo I · Personal Directivo</td></tr>"}
+    },
+    {
+      "eje": "E6",
+      "id": "12.6",
+      "nota_o_hardfail": "nota 0",
+      "veredicto": "MATIZADO",
+      "motivo": "La incoherencia existe y la norma de casa también (inclusivo en categorías desde el borrador, con «Oficial/a» y «Peón/a» citados expresamente). Verificadas las líneas 285, 286, 300, 302, 303 y 304. Pero el enunciado mete en el saco dos categorías que no están en masculino: «Ayudante» y «Aprendiz» son epicenas (el/la ayudante, el/la aprendiz) y no admiten desdoblamiento — el propio parche del hallazgo lo reconoce para Aprendiz y luego no lo aplica a Ayudante. Enunciado corregido: «conviven formas desdobladas (Limpiador/a, Jefe/a Administrativo/a, Encargado/a) con cinco entradas en masculino literal del boletín: Oficial de 1.ª (285), Oficial de 2.ª (286), Peón Especialista (300), Oficial (302) y Peón (304). El caso más visible es Peón, que comparte fila salarial exacta con Limpiador/a (37,20 €/día · 16.926,95 €) y se escribe de otra manera».",
+      "prueba": {"linea": 303, "cita": "<tr><td class=\"cat\">Ayudante</td><td class=\"num\">39,40 €/día</td><td class=\"sal\">17.934,24 €</td><td class=\"num\">1,58 €/día</td></tr> — «Ayudante» es epiceno, no masculino literal"}
+    }
+  ],
+  "resumen": {
+    "confirmados": 10,
+    "matizados": 8,
+    "refutados": 2,
+    "notas": [
+      "Los cuatro hardfails de SMI (E1 ×2, E2 12.1, E3 5.7) son el mismo defecto raíz con seis superficies (líneas 7, 60, 207, 260, 311, 621, 677, 682). Debe contarse como UN hardfail, no como cuatro, o la ficha sale penalizada cuatro veces por el mismo error. La formulación más precisa de las cuatro es la de E3: 3 de 19 filas bajo el SMI real y déficit de −167,05 € en Limpiador/a y Peón.",
+      "No he añadido hallazgos nuevos. Sí dejo constancia de dos hechos que aparecieron al verificar y que otro agente debería decidir si son hallazgo: (a) el error de SMI está también en la meta description (línea 7) y en el JSON-LD (línea 60), superficies que ningún eje citó; (b) la carencia de scope/caption de 11.1 es sistémica del corpus entero, no de esta ficha.",
+      "Aviso sobre parches: dos parches propuestos introducirían errores si se aplican tal cual. El de E3 1.6 (columna €/mes = anual ÷ 12 = 1.410,58 €) contradice el Art. 17 de este convenio, que tiene 15 pagas y da 1.128,46 €/mes. El de E6 8.1 propone rescatar un dato que ya está en la línea 340."
+    ]
+  }
+}

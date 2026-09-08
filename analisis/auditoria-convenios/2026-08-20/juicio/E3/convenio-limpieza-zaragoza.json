@@ -1,0 +1,162 @@
+{
+  "eje": "E3",
+  "slug": "convenio-limpieza-zaragoza",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 1,
+      "razon": "Lo primero que ve el lector es un preámbulo jurídico: quién denunció el convenio, en qué fecha, qué número de registro tiene y cuántas horas de jornada quedan. Hay cifras arriba —el determinista las detecta con año y fuente— pero ninguna es un salario. La primera cantidad de dinero aparece muy por debajo, y la cifra del puesto que trae al 90% del tráfico (Limpiador/a) exige bajar hasta la tabla. Es exactamente el defecto que la métrica castiga: la ficha antepone su propia complejidad a la pregunta del lector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 206,
+          "cita": "Convenio de Limpieza de Edificios y Locales — Zaragoza"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 207,
+          "cita": "Convenio 2022-2025 denunciado por CCOO el 2-oct-2025 (REGCON 50000755011981); desde el 1 de enero de 2026 está en ultraactividad ."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 301,
+          "cita": "Limpiador/a 37,20 €/día 16.926,95 € 1,49 €/día"
+        }
+      ],
+      "parche": "Reescribir la entradilla (línea 207) anteponiendo la cifra al estado jurídico: «Una limpiadora en Zaragoza cobra 37,20 €/día de salario base — 16.926,95 € brutos al año, unos 1.410 €/mes si se prorratean las pagas extras (tabla 2025, Anexo I del convenio, BOPZ núm. 71 de 29-III-2023). Esa tabla sigue siendo la vigente en 2026: el convenio 2022-2025 fue denunciado por CCOO el 2-oct-2025 y está en ultraactividad, lo que significa que tu empresa no puede pagarte menos mientras no se firme uno nuevo.» El detalle registral (REGCON, cláusulas diferidas, comparativa) baja al bloque de datos clave, donde ya está.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 2,
+      "razon": "Responde 6 de las 8 preguntas de una limpiadora zaragozana: si el convenio sigue vigente y si le pueden bajar el sueldo, cuánto se paga el festivo (27,50 € / 16,49 €), si le toca antigüedad a los 6 años —y la respuesta dura y bien dada es que no, si entró después de 1995—, si la subrogan al cambiar la contrata, si está bajo el SMI y qué hacer si cobra de menos. Dos sin responder: (1) «¿cuánto es al mes?» — el Grupo IV va en €/día y en bruto anual, y no hay ninguna cifra mensual para la categoría más buscada, al contrario que en la ficha hermana de Asturias, que sí publica la columna de 12 pagas prorrateadas; (2) «trabajo 4 horas al día, ¿cuánto me corresponde?» — la tabla es de jornada completa y lo único que se prorratea explícitamente es el plus de transporte. Aviso: la respuesta sobre el SMI está dada pero contra una cifra equivocada (ver hardfails).",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 344,
+          "cita": "Más de 4 horas trabajadas: 27,50 €/día . Menos de 4 horas: 16,49 €/día ."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 696,
+          "cita": "Personal contratado a partir de esa fecha no devenga ningún tipo de antigüedad: el complemento fue desactivado para nuevos contratos."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 340,
+          "cita": "Jornada completa: 6,09 €/día efectivo trabajado. Jornada parcial: 2,96 €/día con cuantía mínima."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 3,
+      "razon": "Es el mejor camino de salida del piloto y por un motivo concreto: además de los pasos habituales (verificar la tabla, exigir la nómina desglosada por el art. 29.1 ET, papeleta ante el SAMA, un año por mensualidad, paritaria, Inspección y sindicatos), dedica una sección entera al descuelgue del Art. 34 —que aquí sí es el artículo real del convenio de Zaragoza— y le da al lector el criterio para saber si el intento de su empresa es válido o nulo: qué materias se pueden inaplicar, los 15 días de consultas, los 7 días de la paritaria, el arbitraje del SAMA y la conclusión de que sin ese procedimiento la rebaja es nula y las diferencias son reclamables con retroactividad. Ninguna otra ficha convierte la amenaza real —que la empresa te baje el sueldo alegando la crisis— en una lista de comprobación. Le falta solo la plantilla: el determinista registra un único enlace al kit.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 573,
+          "cita": "Si tu empresa intenta aplicarte un descuelgue sin haber pasado este procedimiento completo, la inaplicación es nula y puedes exigir las diferencias retroactivas mediante reclamación."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 567,
+          "cita": "Periodo de consultas con la representación durante un máximo de 15 días , con entrega de la documentación que justifica las causas."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 625,
+          "cita": "Tienes 1 año por mensualidad de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación interrumpe el plazo y es gratuito."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 3,
+      "razon": "Resuelve la autoubicación mejor que ninguna otra ficha del corpus en el eje que más cuesta: no se limita a listar los grupos, sino que explica para qué sirve saber el tuyo, señala que Limpiador/a y Peón comparten fila salarial pero no clasificación, y —esto es lo que no hace nadie más— pone precio a la reclasificación: si haces funciones de Especialista y te pagan de Limpiador/a, son 2,20 €/día, 1.007,29 € al año. Convierte una duda administrativa en una cantidad reclamable. Se queda sin ámbito funcional escrito (no dice qué actividades cubre), pero lo compensa remitiendo la definición jurídica de cada categoría al convenio estatal por la Cláusula Adicional 5.ª.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 432,
+          "cita": "Si tu nómina pone una categoría inferior a las funciones que realmente desempeñas, puedes reclamar la diferencia y la reclasificación."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 453,
+          "cita": "Si te contratan como Limpiador/a pero llevas funciones de Especialista (manejo de equipos de mayor potencia, peligrosidad, conducción), puedes reclamar la subida a Especialista (+ 2,20 €/día = + 1.007,29 €/año)."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 449,
+          "cita": "8 categorías en €/día con 3 niveles funcionales: Nivel I (Limpiador/a, Peón, Ayudante — tareas básicas), Nivel II (Especialista, Peón Especialista, Conductor/Limpiador — especialización o peligrosidad)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 1,
+      "razon": "La nómina se nombra mucho —«tu nómina tiene que seguir reflejándolas exactamente igual», «pide nómina detallada», «verifica que tu nómina aplica la tabla 2025»— pero nunca se explica la correspondencia: no se dice qué concepto del convenio aparece en el recibo con qué nombre, ni se ofrece la cifra en el formato en el que la nómina llega. Ese es el fallo de fondo: el Grupo IV se publica en €/día y en bruto anual y no hay ninguna columna mensual, así que una limpiadora con un recibo de 1.410 € no tiene forma directa de contrastarlo con los 37,20 €/día de la tabla. La ficha hermana de Asturias sí publica esa columna. Sí avisa de que la cifra es bruta y deriva el neto a la calculadora, pero eso solo no es traducción.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 311,
+          "cita": "Para convertir el bruto anual de tabla en salario neto en Zaragoza , usa la calculadora con escala IRPF nacional 2026 ."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 589,
+          "cita": "Lo que esto significa en tu nómina hoy: mientras dure la ultraactividad, tu salario, jornada, vacaciones, pluses y subrogación se rigen por las cláusulas del convenio 2022-2025 como si éste siguiera vigente."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 713,
+          "cita": "Verifica que tu nómina aplica la tabla 2025 (la última pactada antes de la denuncia, vigente hasta que se publique el convenio nuevo). Multiplica salario base × días o meses, suma los pluses regulados que te corresponden y compara con lo cobrado."
+        }
+      ],
+      "parche": "Dos cambios. (1) Añadir a la tabla salarial una columna «€/mes (extras prorrateadas)» = bruto anual ÷ 12, replicando la de Asturias, con la nota al pie: «La columna €/mes es el bruto anual dividido entre 12: lo que ves en la nómina si tu empresa te reparte las tres pagas extras en las doce mensualidades. Si te las paga aparte, tu nómina ordinaria será menor y cobrarás las extras en junio, diciembre y marzo — el bruto anual es el mismo.» Para Limpiador/a y Peón la cifra es 16.926,95 ÷ 12 = 1.410,58 €/mes. (2) Añadir tras la línea 311 un bloque «Cómo se ve esto en tu nómina»: «En el recibo, el salario de tabla aparece como “salario base” o “salario convenio”; el plus de transporte va aparte y es extrasalarial (no cotiza igual, y por eso no puede usarse para completar el salario base); el plus de festivo y el de nocturnidad aparecen como líneas propias solo los meses en que los generas; y si tu empresa prorratea las pagas extras verás una línea de “prorrata de pagas extras” — súmala al base antes de comparar con la tabla, o estarás comparando peras con manzanas.»",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "Gestiona el hueco con más ambición que nadie: explica qué es la ultraactividad, separa cláusulas normativas de obligacionales, dice qué se cobra mientras dura, publica el histórico de renovaciones del convenio y hasta se moja con una ventana de publicación probable para el nuevo texto. Todo eso es camino de salida de primera. No llega a 3 por el mismo motivo que Asturias: el suelo que ofrece no es el real. Presenta 16.576 €/año como SMI 2026 cuando el vigente es 17.094 € (1.221 €/mes en 14 pagas), y sobre esa cifra construye la conclusión tranquilizadora de que solo una categoría queda por debajo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 589,
+          "cita": "Lo que esto significa en tu nómina hoy: mientras dure la ultraactividad, tu salario, jornada, vacaciones, pluses y subrogación se rigen por las cláusulas del convenio 2022-2025 como si éste siguiera vigente."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 705,
+          "cita": "No hay fecha cierta. Lo que sabemos es que la mesa negociadora está abierta desde la denuncia del 2-oct-2025 y que el patrón histórico apunta a entre 12 y 24 meses ."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 311,
+          "cita": "La categoría de Aprendiz queda bajo el SMI 2026 (16.576 €/año)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "5.7",
+      "detalle": "La ficha afirma cuatro veces que solo 1 de las 19 categorías (Aprendiz) queda bajo el SMI 2026 y que «la práctica totalidad del convenio cumple holgadamente», pero lo calcula contra 16.576 € cuando el SMI 2026 es de 17.094 € brutos anuales (1.221 €/mes en 14 pagas, RD 126/2026). Con la cifra real son al menos 3 de 19, y entre ellas la categoría central del convenio: Limpiador/a y Peón, a 16.926,95 €/año, quedan 167,05 € POR DEBAJO del mínimo legal, no «350,95 € por encima» como dice la FAQ. Es el peor sitio posible para equivocarse: la limpiadora que entra preguntando si le pagan bajo el SMI recibe un no tranquilizador cuando la respuesta es sí, y con ella se pierde una reclamación viva. Arrastra la entradilla, el callout, la lista de particularidades, la comparativa provincial y la FAQ. El determinista ya lo marcó como 12.2; se declara aquí como 5.7 porque la conclusión derivada —«1 de 19»— es una afirmación fáctica sin correlato en la fuente.",
+      "evidencia": {
+        "linea": 260,
+        "cita": "Solo 1 de 19 categorías queda bajo el SMI 2026 (16.576 €/año). La práctica totalidad del convenio cumple holgadamente el SMI: la categoría más baja del Personal Operario (Limpiador/a y Peón) cobra 16.926,95 € de bruto anual, 350,95 € por encima del mínimo."
+      }
+    }
+  ],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UNA LIMPIADORA ZARAGOZANA ANTES DE LLEGAR AQUÍ (mismo juego que en Asturias, para que las dos fichas del sector sean comparables): (1) «¿cuánto cobra una limpiadora en Zaragoza al mes en 2026?»; (2) «el convenio está caducado, ¿me pueden bajar el sueldo?»; (3) «he trabajado el festivo, ¿cuánto me tienen que pagar?»; (4) «llevo 6 años, ¿me toca antigüedad?»; (5) «cambia la empresa de la contrata, ¿me quedo sin trabajo?»; (6) «trabajo 4 horas al día, ¿cuánto me corresponde?»; (7) «¿estoy cobrando por debajo del SMI?»; (8) «cobro menos que la tabla, ¿qué hago y hasta cuándo puedo reclamar?». RECORRIDO: responde 2, 3, 4, 5, 7 y 8; falla en 1 y 6. — Zaragoza es la ficha más desequilibrada del piloto: tiene los dos mejores bloques del corpus en su eje (el descuelgue del Art. 34 y la clasificación con el precio de la reclasificación puesto en euros) y a la vez es la única en la que la limpiadora no encuentra su sueldo mensual en ninguna parte. Todo el trabajo está hecho para un lector que ya sabe leer un convenio; para el que llega con la nómina, la puerta de entrada es un párrafo sobre quién presentó la denuncia y con qué número de registro. Anoto un detalle ajeno a mi eje: en la línea 453 hay un anglicismo colado en el texto publicado («lo cual matters cuando reclamas»). VENTANA CERRADA: 21 días desde el último commit, así que los dos parches (entradilla con la cifra y columna €/mes + bloque de nómina) son aplicables ya, igual que la corrección del SMI."
+}

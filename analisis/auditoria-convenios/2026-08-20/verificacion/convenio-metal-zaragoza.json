@@ -1,0 +1,56 @@
+{
+  "slug": "convenio-metal-zaragoza",
+  "contexto": {
+    "determinista_usado": "2026-08-24 (refrescado; solo cambian dias_desde_commit 15->19 y el orden de dos frases de corpus)",
+    "ultimo_commit": "2026-08-04",
+    "dias_desde_commit": 19,
+    "ventana_medicion_abierta": true,
+    "aviso_ventana": "Sigue abierta, pero se cierra el 26-ago (umbral dias<21).",
+    "hardfails_declarados_en_esta_ficha": 1,
+    "hardfails_deterministas": 0,
+    "plantilla_no_penalizada": "9 tablas sin scope ni caption (11.1*) es patron de las 54; ningun eje lo ha usado para bajar nota"
+  },
+  "veredictos": [
+    {
+      "eje": "E3", "id": "12.1", "veredicto": "CONFIRMADO",
+      "motivo": "La cita existe literal en la linea 449 y la contradiccion con convenio-metal-madrid.html es real (columna Quinquenio con siete cuantias 30,82-42,72 EUR/mes, maximo 5 quinquenios, Art. 41, en 267/272-280/302). Comprobado el respaldo documental de cada extremo de la frase, que es lo decisivo: Zaragoza cita el Art. 16 para SU propio modelo, y la mitad relativa a Barcelona es verificable dentro del corpus (convenio-metal-barcelona.html:595 «El convenio NO reconoce antigüedad para personas contratadas hoy», Arts. 38.1 y 38.3); pero para Madrid no aporta ni articulo, ni boletin, ni tabla. Madrid si: Art. 41 citado dos veces, BOCM n 59 declarado fuente de los quinquenios (511) y cuantia por grupo revalorizada con el +2%; el dataset propio lo respalda (data/convenios/metal_mad.json:23, tipo 'quinquenios'). A eso se suma un argumento estructural que sale de las propias fichas: el ad personam congelado es individual y consolidado en fecha pasada -asi lo describen Zaragoza (31-12-1996, linea 449) y Barcelona (595)- y por eso no puede publicarse como columna con cuantia distinta por grupo. La norma existe: RUBRICA-V1 lista 12.1 entre los 28 hard-fails, 'dos fichas se contradicen'. CAUTELA: esto decide que la frase a corregir es la extension a Madrid, no que el Art. 41 de Madrid quede verificado; la verdad material sigue exigiendo cotejar el Art. 41 en el BOCM y hasta entonces no debe tocarse la columna de Madrid.",
+      "prueba": {"archivo": "convenio-metal-zaragoza.html", "linea": 449, "cita": "Solo mantiene un <strong>complemento ad personam</strong> sustitutivo para quienes lo consolidaron a 31 de diciembre de 1996 (Art. 16), no compensable ni absorbible y revalorizado como el salario. Es el mismo modelo que el metal de Barcelona y el de Madrid. | Art. 16 respalda lo de Zaragoza; para Madrid no hay ninguna fuente"}
+    },
+    {
+      "eje": "E3", "id": "1.2", "veredicto": "CONFIRMADO",
+      "motivo": "Comprobados los dos huecos graves que sostienen la nota. (a) EL MES: grep de 'mensual', '€/mes' y 'al mes' sobre toda la ficha devuelve seis coincidencias y ninguna es un salario -62 EUR/mes de transporte (429), 60 EUR/mes de garantia de kilometraje (433), 50 EUR/mes de plus de formacion (441), 1.221 EUR/mes del SMI (512 y 544) y 'mensualidades' en el prorrateo de extras (390) y en el plazo de prescripcion (488)-. Las nueve tablas dan solo bruto anual y el card de datos clave dice 'Pagas 14' (242) sin autorizar la division. (b) LA BAJA: la lista de h2 no tiene ninguna seccion de incapacidad temporal, y grep de 'incapacidad temporal', 'IT', 'baja medica' y 'enfermedad comun' devuelve solo las menciones de pasada que cita el eje (418 vacaciones, 441 plus de formacion) mas el seguro de invalidez o muerte de la 445, que no es IT. El recuento '4 de 8' encaja con el listado de su observacion_libre. Coincide ademas con lo ya registrado en COLA-CORRECCIONES.md apartado 11.",
+      "prueba": {"archivo": "convenio-metal-zaragoza.html", "linea": 242, "cita": "<div class=\"stat-label\">Pagas</div><div class=\"stat-value\">14 (2 extras + 400 € en enero)</div> | y linea 271: «Retribución bruta anual de convenio para 2026 (BOPZ de 21-feb-2026)» — ninguna cifra mensual de salario en toda la pagina, ningun h2 de baja medica"}
+    },
+    {
+      "eje": "E5", "id": "6.4", "veredicto": "CONFIRMADO",
+      "motivo": "Determinista 24-ago: a_hermanas_mismo_sector = 6 y a_otro_sector_misma_provincia = []. grep de enlaces salientes sobre la ficha: todos los /convenio-*.html son del metal. Y el punto que hace que el 1 sea justo aqui y no en Navarra: los dos destinos existen en el repo, los he comprobado con ls (convenio-hosteleria-zaragoza.html y convenio-limpieza-zaragoza.html). El hueco es por descuido, no estructural, tal como dice el eje.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-zaragoza.json", "linea": null, "cita": "\"a_hermanas_mismo_sector\": 6, \"a_otro_sector_misma_provincia\": []"}
+    },
+    {
+      "eje": "E5", "id": "6.6", "veredicto": "CONFIRMADO",
+      "motivo": "grep 'plantilla-' sobre la ficha: 0 coincidencias. Determinista: al_kit con un solo destino, la guia generica. Leida la seccion 482-490: los cinco pasos van sin enlace y el puente cuelga del parrafo de codigo de convenio y firmantes. Las dos plantillas del parche existen en el repo. Tercera ficha del metal con el mismo patron y la misma nota: la calibracion es consistente con metal-sevilla y metal-madrid.",
+      "prueba": {"archivo": "convenio-metal-zaragoza.html", "linea": 490, "cita": "Código de convenio: 50000675011982. Firmantes: <strong>FEMZ</strong> (patronal) y los sindicatos <strong>CCOO de Industria de Aragón y UGT-FICA Aragón</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa…</a>"}
+    },
+    {
+      "eje": "E6", "id": "8.1", "veredicto": "MATIZADO",
+      "motivo": "La redundancia es real y la he recorrido vineta a vineta: 7 grupos y horquilla -> 251 y 253; tablas como minimos -> 253; paga de 400 EUR -> 385; sin antiguedad activa -> 449; bolsa de horas y reten -> 396-404; transporte y distancia -> 429 y 433; AMIMA -> 255. Lo que falla es el inventario de rescate: el eje dice que solo dos vinetas aportan algo nuevo (subrogacion del Art. 7 y regimen fiscal comun) y son tres. La vineta de vigencia (479) es el unico sitio donde aparecen '31 de diciembre de 2026', 'negociacion del nuevo convenio en enero de 2027' y 'ultraactividad' (grep: una sola ocurrencia de cada); el card de datos clave (239) solo dice '2023-2026 · denunciado (ultimo ano)'. Ejecutado tal cual, el parche pierde ese dato. Ademas, el propio recuento del eje descuadra: enumera siete vinetas repetidas y dos nuevas sobre un total de nueve, pero una de ellas -la 478- la cuenta en los dos grupos (AMIMA repetido, regimen fiscal nuevo) y deja la de vigencia sin clasificar.",
+      "enunciado_corregido": "8.1 = 1: siete de las nueve vinetas de «Particularidades» (469-480) rehacen secciones ya desarrolladas (251, 253, 385, 449, 396-404, 429-433, 255). Antes de suprimir el h2 y la lista hay que rescatar TRES cosas, no una: la subrogacion amplia del Art. 7 (477), el regimen fiscal comun (478, del que la vineta AMIMA si esta repetida en 255) y el cierre de vigencia de la 479 -fecha de fin, negociacion de enero de 2027 y ultraactividad-, que no esta en ninguna otra parte de la ficha.",
+      "prueba": {"archivo": "convenio-metal-zaragoza.html", "linea": 239, "cita": "<div class=\"stat-label\">Vigencia</div><div class=\"stat-value\">2023-2026 · denunciado (último año)</div> | unico antecedente de la vineta 479, que anade «hasta el 31 de diciembre de 2026 … con negociación del nuevo convenio en enero de 2027 y ultraactividad»"}
+    },
+    {
+      "eje": "E6", "id": "8.3", "veredicto": "CONFIRMADO",
+      "motivo": "Contadas las seis apariciones de cuerpo a cuerpo, una a una: subtitulo del hero (206, «Ojo: las tablas son mínimos»), h2 y callout de la seccion de apertura (250 y 253), entradilla de la tabla (271, «Recuerda: son mínimos de convenio»), pie de la tabla (349, «Estas cifras son mínimos de convenio»), cola del callout comparativo (357, «descansa más en las primas … que no salen en la tabla base») y entradilla de la seccion de primas (361, «por qué el salario real supera la tabla»). A eso se suman, como dice el eje, la FAQ (526) y el CTA de la 352. La idea es buena y por eso el defecto se ve mas: el 1 esta justificado sin necesidad de contar la FAQ.",
+      "prueba": {"archivo": "convenio-metal-zaragoza.html", "linea": 206, "cita": "Ojo: las tablas son <strong>mínimos</strong> — en automoción el sueldo real sube por <strong>primas de productividad</strong> y el complemento ex categoría. | repetido en 250, 253, 271, 349, 357 y 361"}
+    }
+  ],
+  "resumen": {
+    "confirmados": 5,
+    "matizados": 1,
+    "refutados": 0,
+    "notas": [
+      "NO ES HALLAZGO MIO, ES AMPLIACION DEL 12.1: la afirmacion sobre la antiguedad congelada de Madrid la hace tambien convenio-metal-asturias.html:483, que ningun eje cito. Son cuatro fichas implicadas, no tres.",
+      "La mitad de la frase de la 449 que se refiere a Barcelona SI es correcta y esta verificada dentro del corpus (convenio-metal-barcelona.html:595). La correccion debe recortar solo la extension a Madrid, no la comparacion entera.",
+      "Observacion de escala para el sintetizador, sin veredicto: esta ficha recibe 1 en 6.4 teniendo dos destinos publicados, y Navarra recibe tambien 1 no teniendo ninguno. Conviene normalizar antes de componer la matriz."
+    ]
+  }
+}

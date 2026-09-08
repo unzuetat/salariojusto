@@ -1,0 +1,172 @@
+{
+  "eje": "E4",
+  "slug": "convenio-limpieza-asturias",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 1,
+      "razon": "El title tiene los cuatro ingredientes de la fórmula (cifra + sector + provincia + año) y cabe sin cortarse, pero no cumple su función: la cifra viaja huérfana de puesto —desde el rewrite del 4-ago se eliminó 'Limpiador/a', que llevaban las tres versiones anteriores— y además es un prorrateo en 12 pagas de un convenio que paga en 15, de modo que la persona que busca no reconoce ese número en su nómina (su base es 38,59 €/día). Con 7.511 impresiones y CTR 1,73% a posición media 6,33, y un histórico de 1,23% a posición 6,16 en el corte de junio, es el peor rendimiento del piloto con la mejor posición: presencia sin función.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 6,
+          "cita": "<title>1.447 €/mes: tablas salariales Limpieza Asturias 2026</title>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 244,
+          "cita": "La columna <strong>«12 pagas (€/mes prorrateado)»</strong> es el bruto anual ÷ 12: lo que cobra quien tiene las pagas extras repartidas en 12 mensualidades iguales (mismo bruto anual, distinta forma de cobrarlo) — la cifra que mucha gente busca como \"sueldo al mes\"."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 197,
+          "cita": "<div class=\"hero-badge\">Vigente en 2026 · Tabla 2025 prorrogada por ultraactividad · 15 pagas</div>"
+        }
+      ],
+      "parche": {
+        "descripcion": "Devolver el puesto al title y desactivar la trampa del prorrateo. Todas las cifras propuestas están publicadas en la propia ficha (línea 244 y tabla salarial: Limpiador/a 38,59 €/día · 17.365,50 €/año · 1.447,13 €/mes prorrateado en 12). Tres alternativas, en orden de recomendación:",
+        "alternativas": [
+          {
+            "id": "A",
+            "title": "Limpiadora Asturias 2026: 1.447 €/mes (extras prorrateadas)",
+            "longitud": 59,
+            "por_que": "Restaura el sujeto —'limpiadora' es el término de búsqueda real del sector, no 'Limpieza'— y desarma en el propio title la objeción que hoy mata el clic: quien cobra 1.157 €/mes al mes entiende de dónde sale el 1.447 antes de entrar. Mantiene la cifra al frente, que es la parte del title actual que sí funciona."
+          },
+          {
+            "id": "B",
+            "title": "Limpieza Asturias 2026: limpiadora 17.365 €/año en 15 pagas",
+            "longitud": 59,
+            "por_que": "Ancla en la única cifra que no admite discusión en un convenio de 15 pagas: el bruto anual. Elimina de raíz el desajuste con la nómina y captura la consulta de quien compara con el SMI. Es la variante más segura si se quiere dejar de apostar por el €/mes."
+          },
+          {
+            "id": "C",
+            "title": "Limpieza Asturias 2026: 15 pagas y 1.447 €/mes — tablas",
+            "longitud": 55,
+            "por_que": "Pone delante la singularidad que la ficha posee y ninguna competidora tiene (tres pagas extras, 15 anuales; solo Bizkaia comparte estructura según la comparativa de la línea 464). Es la variante de mayor techo y mayor riesgo: gana clic por curiosidad, no por coincidencia literal con la consulta."
+          }
+        ],
+        "meta_propuesta": "Limpiador/a: 17.365,50 € brutos al año en 15 pagas — 1.447 €/mes si te prorratean las extras. Tabla 2025 vigente en 2026. Ojo: 38,5 h/sem, no 35. BOPA 146/2025.",
+        "nota_de_ejecucion": "Probar una sola variante por vez y esperar recrawl completo antes de juzgar. El rewrite del 4-ago (PR #78) ya movió el CTR de 1,23% a 1,73%: la dirección es correcta, el problema es que se soltó el puesto por el camino."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 1,
+      "razon": "Tiene cifra, pero no da motivo para entrar y encima exporta la ambigüedad: dice 'Limpiador/a 1.447 €/mes (17.365 €/año)' sin el matiz 'con las pagas prorrateadas en 12' que sí llevaban las versiones de junio y julio, en una ficha cuyo propio badge anuncia 15 pagas. Las dos cosas que la página tiene y la competencia no —tres pagas extras y el desmontaje del bulo de las 35 horas— quedaron fuera del recorte del 4-ago.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 7,
+          "cita": "<meta name=\"description\" content=\"Limpiador/a 1.447 €/mes (17.365 €/año) según el convenio de Limpieza de Asturias. Tablas 2025 vigentes en 2026 por ultraactividad. Jornada 38,5 h/sem.\">"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 211,
+          "cita": "<strong>¿Buscabas «35 horas» o «12 pagas»? Esto es lo que dice el convenio realmente vigente — y por qué hay confusión.</strong>"
+        }
+      ],
+      "parche": {
+        "descripcion": "Recuperar el gancho que la propia página desarrolla en su primer callout y devolver el matiz del prorrateo. 158 caracteres.",
+        "texto_propuesto": "Limpiador/a: 17.365,50 € brutos al año en 15 pagas — 1.447 €/mes si te prorratean las extras. Tabla 2025 vigente en 2026. Ojo: 38,5 h/sem, no 35. BOPA 146/2025."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "La frase principal de la FAQ es extraíble y trae sujeto, cifra, año, fórmula y contraste con el SMI, aunque la palabra 'Asturias' vive en el h3 y no en la frase; y la frase del callout donde la cifra del title aparece por primera vez sí nombra al puesto pero no al territorio ni al año.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 492,
+          "cita": "Según la tabla salarial 2025 del convenio (vigente en 2026 por ultraactividad pactada de duración indefinida del Art. 4), la categoría de Limpiador/a percibe <strong>38,59 €/día de salario base</strong>. El bruto anual asciende a <strong>17.365,50 €</strong>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 214,
+          "cita": "Si cobras con las extras <strong>prorrateadas en 12 mensualidades</strong>, una <strong>Limpiador/a percibe 1.447 €/mes</strong> (mismo bruto anual: 17.365,50 €)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 3,
+      "razon": "Ejemplar: es la única ficha del piloto cuyos encabezados de tabla llevan la fórmula de conversión y el periodo dentro del propio th ('×15 pagas', '€/mes prorrateado', '€/trienio/paga'), de modo que una fila extraída sola sigue siendo interpretable sin leer el párrafo de arriba. Las demás fichas dejan columnas con números desnudos (Sevilla: 'A · base') o sin periodo (Zaragoza: 'SB 2025').",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 254,
+          "cita": "<th class=\"num\">12 pagas (€/mes prorrateado)</th>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 253,
+          "cita": "<th class=\"num\">Bruto anual 2025 (×15 pagas)</th>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 301,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">Limpiador/a</td><td class=\"num\">38,59 €/día</td><td class=\"sal\">17.365,50 €</td><td class=\"num\">1.447,13 €/mes</td><td class=\"num\">10,90 €</td></tr>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.3",
+      "nota": 2,
+      "razon": "Dentro del cuerpo la desambiguación es de las mejores del corpus —separa convenio de SMI, salario de jornada y equiparación SESPA de convenio general—, pero la capa que un motor lee primero contradice ese trabajo: la meta saca '1.447 €/mes' del sitio sin el 'prorrateado en 12', y la ficha anuncia 15 pagas. Un extractor puede concluir 'un limpiador en Asturias cobra 1.447 €/mes en 15 pagas', que es falso.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 215,
+          "cita": "<strong>Tabla 2025 vigente en 2026</strong> por ultraactividad indefinida (Art. 4): de <strong>1.105 €/mes</strong> (categorías ancladas al SMI) a <strong>1.730 €/mes</strong> en 15 pagas — equivalente a <strong>1.381 €/mes a 2.163 €/mes</strong> si se prorratea en 12."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 213,
+          "cita": "el personal de limpieza de centros sanitarios está equiparado a <strong>SESPA en salario</strong>, y en el sector público asturiano se trabajan 35 h/semana — de ahí la confusión. Pero la <strong>jornada del convenio de Limpieza es 38,5 h/semana · 1.758 h/año</strong> para toda la plantilla (la equiparación con SESPA es salarial, no de jornada)."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 7,
+          "cita": "content=\"Limpiador/a 1.447 €/mes (17.365 €/año) según el convenio de Limpieza de Asturias."
+        }
+      ],
+      "parche": {
+        "descripcion": "Se resuelve con el mismo cambio de meta propuesto en 2.5: basta con que el '€/mes' nunca salga de la página sin el calificador 'prorrateado' al lado. Aplica también al og:description, que hoy hereda el mismo texto."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 3,
+      "razon": "Ejemplar: la traza no está en un bloque final sino pegada a cada cuantía. El párrafo que precede a la tabla cita la corrección de errores con boletín, número y fecha; cada tarjeta de plus lleva su artículo en el título; y el pie de tabla reproduce literalmente el texto del Art. 21 junto a las dos categorías en riesgo. Ninguna otra ficha del piloto lleva el artículo dentro del título de cada complemento.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 244,
+          "cita": "publicada en el BOPA Núm. 200 del 17 de octubre de 2025 (corrige los importes mensuales del Grupo IV de la publicación original del 30-VII-2025)"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 336,
+          "cita": "<div class=\"pill-card-title\">Plus de transporte (Art. 23)</div>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 313,
+          "cita": "La cláusula expresa de garantía SMI del Art. 21 protege estas categorías frente a cualquier desfase: <em>\"Si en algún momento los importes reflejados en las referidas tablas salariales para determinadas categorías profesionales quedasen por debajo de SMI, las empresas quedan obligadas a abonar como mínimo, en cómputo anual el SMI a las categorías afectadas\"</em>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ficha con ventana de medición abierta (operacion.ultimo_commit 2026-08-04, ventana_medicion_abierta=true): todos los parches quedan aplazados, pero el diagnóstico es firme y conviene tenerlo listo para cuando la ventana cierre. Mi lectura del bajo CTR: no es un problema de posición ni de contenido, es que el title vende una cifra que la persona no puede reconocer. Un convenio de 15 pagas con salario diario produce tres números legítimos para 'lo que cobra una limpiadora' —38,59 €/día, 1.157,70 €/mes de nómina y 1.447 €/mes prorrateado— y el title eligió el tercero, el único que no aparece en ninguna nómina, y encima le quitó el nombre del puesto en el rewrite del 4-ago. Contraste útil dentro del propio piloto: Zaragoza, misma provincia-tipo, mismo sector, posición casi idéntica (6,40) y un title de 106 caracteres SIN cifra en euros, rinde 4,4% de CTR. Es decir, la fórmula 'cifra primero' no es lo que separa a estas dos fichas; lo que las separa es que el número de Asturias no le pertenece a nadie. Fuera de mi eje: el determinista declara un hard-fail 12.2 (presenta 16.576 € como SMI 2026 cuando el real sería 17.094 €); afecta a toda la aritmética de la sección 'Verificación A+B' y al pie de tabla, y si se corrige puede cambiar el marco editorial de la ficha ('todas cumplen el SMI' podría dejar de ser cierto). Lo señalo porque un cambio de ese calado debería resolverse ANTES de tocar el title, no después."
+}

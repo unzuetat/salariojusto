@@ -1,0 +1,257 @@
+{
+  "eje": "E6",
+  "slug": "convenio-limpieza-zaragoza",
+  "metricas": [
+    {
+      "id": "7.2",
+      "nota": 0,
+      "razon": "La hoja de estilo pinta en verde la columna «Bruto anual 2025», que es la cifra salarial principal de la ficha, en las diecinueve filas de la tabla. Es la misma regla que arrastra limpieza-asturias y la contraria a la de metal-sevilla, metal-barcelona y metal-bizkaia. tablas.verde_en_tablas viene en 0 porque el recolector busca el color en el atributo style de la celda y aquí va en la clase, pero el resultado en pantalla es el mismo: el verde señala dinero en vez de señalar verificación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 157,
+          "cita": "td.sal{font-weight:700;color:var(--green);text-align:right;white-space:nowrap;}"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 301,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">Limpiador/a</td><td class=\"num\">37,20 €/día</td><td class=\"sal\">16.926,95 €</td>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 150,
+          "cita": "td.sal{font-weight:700;color:var(--ink);text-align:right;white-space:nowrap;}"
+        }
+      ],
+      "parche": "Cambiar la regla de la línea 157 a «td.sal{font-weight:700;color:var(--ink);text-align:right;white-space:nowrap;}», idéntica a la de metal-sevilla. La fila destacada (tr.highlight) ya distingue a Limpiador/a sin necesidad de color, y el sello de la línea 214 se queda como único verde con significado.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.4",
+      "nota": 0,
+      "razon": "Es la ficha más densa del piloto: parrafos.largos_100 lista once párrafos de más de cien palabras, incluido uno de 189 en las FAQ, y ese recuento ni siquiera incluye el bloque de apertura, que es un <div> y por tanto escapa al contador. Ese callout inicial mete en una sola masa la denuncia, el Art. 5, la distinción normativas/obligacionales, las dos mejoras diferidas, por qué no hay subida y el histórico de la negociación anterior. No hay nota editorial fragmentada ni ninguna otra puerta de entrada troceada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 256,
+          "cita": "<strong>Convenio denunciado por CCOO el 2-oct-2025; en ultraactividad desde el 1 de enero de 2026.</strong> El periodo formal 2022-2025 finalizó el 31 de diciembre de 2025. El Art. 5 establecía prórroga anual automática si ninguna parte lo denunciaba en la última semana de septiembre"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 690,
+          "cita": "El convenio firmado el 15 de febrero de 2023 entre ASPEL, ASOAL, CCOO, UGT y OSTA tenía periodo formal del 1 de enero de 2022 al 31 de diciembre de 2025."
+        }
+      ],
+      "parche": "Sustituir el callout de las líneas 255-257 por una nota editorial fragmentada al modo de metal-sevilla, dejando el desarrollo largo en la sección de ultraactividad que ya existe: «<div class=\"nota-editorial\"><p style=\"margin-bottom:10px;\"><strong>En 30 segundos · Qué es.</strong> El convenio de Limpieza de Edificios y Locales de la provincia de Zaragoza (REGCON 50000755011981), firmado el 15 de febrero de 2023 por ASPEL y ASOAL con CCOO, UGT y OSTA.</p><p style=\"margin-bottom:10px;\"><strong>Estructura.</strong> 19 categorías, tres pagas extras al año (Art. 17) y jornada que baja a 1.766 h en 2026 por una mejora pactada con efecto diferido.</p><p style=\"margin-bottom:10px;\"><strong>Vigencia.</strong> CCOO denunció el convenio el 2 de octubre de 2025, así que la prórroga automática del Art. 5 no operó: desde el 1 de enero de 2026 está en ultraactividad y la tabla 2025 sigue siendo la que te tienen que pagar. → <a href=\"#ultraactividad\">Qué significa eso en tu nómina ↓</a></p><p style=\"margin:0;\"><strong>Futuro.</strong> La mesa está abierta. El convenio anterior tardó unos 17 meses desde la denuncia hasta publicarse el nuevo.</p></div>». Y recortar la FAQ de la línea 690 a tres frases, remitiendo a esa sección.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.5",
+      "nota": 2,
+      "razon": "headings.h1 = 1 y saltos_jerarquia = [], y la mayoría de encabezados dicen algo concreto: «Tres pagas extras al año: el detalle del Art. 17», «Subrogación robusta — Artículo 29», «Descuelgue del convenio: la cláusula de inaplicación (Art. 34)». No llega a 3 porque el h2 de la línea 611 es el rótulo vacío que la norma señala —«Particularidades del convenio» no orienta a nadie— y porque ningún encabezado lleva una cifra en euros, que es lo que se busca.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 400,
+          "cita": "<h2 id=\"pagas-extras\">Tres pagas extras al año: el detalle del Art. 17</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 611,
+          "cita": "<h2 id=\"particularidades\">Particularidades del convenio</h2>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 316,
+          "cita": "Plus de transporte — 96,56 €/mes"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.8",
+      "nota": 2,
+      "razon": "Sigue el canon (sello, índice, datos clave, tabla, pluses, subrogación, comparativa provincial, FAQ, quién audita) y tiene contenido exclusivo de verdad: la cláusula de limpieza de aviones del Aeropuerto de Zaragoza y el histórico de renovaciones como método para anticipar el próximo convenio. No llega a 3 porque ese contenido exclusivo está en la segunda mitad —el histórico en la línea 591 y la cláusula del aeropuerto sepultada dentro de la sección de subrogación—, es decir, después de todo el desarrollo genérico del sector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 591,
+          "cita": "<h2 id=\"historico\">Histórico de renovaciones del convenio (1.ª pista del calendario)</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 472,
+          "cita": "Cláusula especial — Limpieza de aviones en el Aeropuerto de Zaragoza: dado el carácter rotatorio de las contratas"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Particularidades del convenio»: sus nueve viñetas son un tercer resumen de cosas ya contadas —la denuncia y el Art. 5, las mejoras diferidas, el plus de transporte, la subrogación, la cláusula del aeropuerto, la antigüedad y el Aprendiz bajo SMI—, todas con su sección propia más arriba. Es el cajón de sastre que la ficha no necesita porque ya tiene índice de navegación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 611,
+          "cita": "<h2 id=\"particularidades\">Particularidades del convenio</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 618,
+          "cita": "<li><strong>Cláusula especial Aeropuerto:</strong> uno de los pocos convenios provinciales que regulan expresamente la subrogación en limpieza de aviones"
+        }
+      ],
+      "parche": "Suprimir el h2 y su lista y la entrada correspondiente del índice. Lo único que no está desarrollado arriba —que el plus de transporte está indexado y escalado año a año desde los 5,60 € de 2022— cabe como una frase al pie de la tabla de pluses de la línea 369: «El plus de transporte está indexado y ha escalado año a año: 5,60 €/día en 2022 y 6,09 €/día en 2025.»",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "La tabla salarial es el primer h2 de la página y el hero da el estado del convenio antes que nada. No es 3 porque entre el sello y la tabla se interponen dos callouts largos de vigencia y de cumplimiento del SMI, y porque el hero no da ninguna cifra salarial: quien entra buscando cuánto cobra una limpiadora tiene que llegar a la fila destacada de la tabla para encontrarla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 207,
+          "cita": "<p class=\"hero-sub\">Convenio 2022-2025 <strong>denunciado por CCOO el 2-oct-2025</strong> (REGCON 50000755011981); desde el 1 de enero de 2026 está en <strong>ultraactividad</strong>."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 263,
+          "cita": "<h2 id=\"tabla-salarial\">Tabla salarial 2025 — categoría a categoría</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 0,
+      "razon": "La misma explicación —denuncia de CCOO, Art. 5 que no opera, cláusulas normativas que siguen y obligacionales que decaen, mejoras diferidas de 1.766 h y 23 días— se cuenta entera tres veces en la misma página: en el callout de apertura, en la sección dedicada a la ultraactividad y en la FAQ. Y una cuarta, resumida, en la lista de particularidades. Ninguna de las cuatro añade nada a la anterior.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 256,
+          "cita": "Desde el 1 de enero de 2026 el convenio está en ultraactividad: las cláusulas normativas siguen vigentes (tabla salarial 2025, pluses, subrogación, jornada y vacaciones por cláusulas diferidas normativas), mientras que las cláusulas obligacionales (paz social, comisión paritaria, la propia prórroga del Art. 5) decaen."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 690,
+          "cita": "Desde el 1 de enero de 2026 el convenio está en <strong>ultraactividad</strong>: siguen plenamente vigentes las cláusulas normativas — tabla salarial 2025, jornada 1.774 h que baja a 1.766 h por cláusula diferida del Art. 18 … mientras que las cláusulas obligacionales (paz social, comisión paritaria, prórroga del Art. 5) decaen."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 613,
+          "cita": "<li><strong>Prórroga anual automática (Art. 5) — activada en sentido inverso:</strong> el convenio se prorrogaba anualmente mientras ninguna parte lo denunciase en la última semana de septiembre. CCOO presentó denuncia formal el 2-oct-2025"
+        }
+      ],
+      "parche": "Dejar el desarrollo completo solo en la sección «Qué es exactamente la ultraactividad» (línea 575), que es la mejor escrita de las tres. El callout de apertura pasa a la nota editorial fragmentada descrita en el parche de 7.4, con enlace a esa sección. Y la FAQ se recorta a: «Sí, pero en ultraactividad. El convenio 2022-2025 fue denunciado por CCOO el 2 de octubre de 2025, así que la prórroga automática del Art. 5 no llegó a operar. Desde el 1 de enero de 2026 te siguen aplicando la tabla salarial 2025 y el resto de condiciones de trabajo; lo que decae son los pactos entre las partes firmantes. → <a href=\"#ultraactividad\">Qué sobrevive y qué decae, en detalle</a>.»",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.6",
+      "nota": 3,
+      "razon": "Es la mejor explicación de jerga del piloto y la única que dedica una sección entera a un término: distingue prórroga de ultraactividad, separa cláusulas normativas de obligacionales en dos tarjetas enfrentadas y remata con un párrafo titulado «Lo que esto significa en tu nómina hoy», que es exactamente traducir el tecnicismo a bolsillo. jerga da explicacion_cerca = true en los cinco términos detectados.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 576,
+          "cita": "La <strong>ultraactividad</strong> es la situación jurídica en la que entra un convenio colectivo cuando termina su vigencia formal sin que se haya firmado uno nuevo. … No es lo mismo que la <em>prórroga</em>: en la prórroga el convenio entero sigue vigente; en la ultraactividad <strong>solo sobreviven las cláusulas normativas</strong>, no las obligacionales."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 589,
+          "cita": "<p><strong>Lo que esto significa en tu nómina hoy:</strong> mientras dure la ultraactividad, tu salario, jornada, vacaciones, pluses y subrogación se rigen por las cláusulas del convenio 2022-2025 como si éste siguiera vigente."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 20 · UGT 7, un desequilibrio llamativo, pero al leerlo en el HTML se ve que casi todas las menciones de CCOO son del hecho de que fue quien denunció el convenio: uso como fuente del dato, que la norma admite. El plural está bien construido cuando toca —se nombra siempre a los tres firmantes, incluido OSTA, que es el sindicato aragonesista y el que otras fichas se saltarían—. No es 3 porque no se dice qué representación tiene cada uno en el sector en Zaragoza, como sí hace limpieza-asturias.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 256,
+          "cita": "La negociación de un nuevo convenio entre patronal (ASPEL, ASOAL) y sindicatos (CCOO, UGT, OSTA) está abierta"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 251,
+          "cita": "<div class=\"stat-value\" style=\"font-size:13px;\">Patronal: ASPEL + ASOAL · Sindical: CCOO + UGT + OSTA</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "11.1",
+      "nota": 1,
+      "razon": "tablas.sin_th = 0 en las siete tablas, pero sin_scope = 7 y sin_caption = 7. La tabla salarial usa además filas de grupo con colspan («Grupo I · Personal Directivo») que un lector de pantalla anuncia como una celda suelta sin relación con lo que viene debajo: sin scope ni caption, la estructura de grupos profesionales —que es lo que da sentido a la tabla— desaparece al oído.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 271,
+          "cita": "<th>Categoría</th>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 279,
+          "cita": "<tr class=\"group-header\"><td colspan=\"4\">Grupo I · Personal Directivo</td></tr>"
+        }
+      ],
+      "parche": "Poner scope=\"col\" en los cuatro th (líneas 271-274), convertir las celdas de categoría en th scope=\"row\", marcar las filas de grupo como th scope=\"rowgroup\" colspan=\"4\", y abrir la tabla con caption: «<caption style=\"caption-side:top;text-align:left;font-size:13px;color:var(--ink-light);padding-bottom:8px;\">Tabla salarial 2025 del convenio de Limpieza de Zaragoza, vigente en 2026 por ultraactividad: salario base, bruto anual y trienio, agrupados por grupo profesional (Anexo I, BOPZ Núm. 71 de 29-III-2023).</caption>». Repetir el patrón en las seis tablas restantes.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es el mismo que el de limpieza-asturias, la ficha hermana de sector, y el del canon: sello, índice, datos clave, tabla, pluses, pagas, subrogación, comparativa provincial, recursos, FAQ y firma. La única pieza que no tiene ninguna otra ficha del piloto es el histórico de renovaciones, y no es una desviación del esqueleto sino una sección añadida en su sitio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 660,
+          "cita": "<h2 id=\"comparativa\">Comparativa con otros convenios provinciales de Limpieza</h2>"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 464,
+          "cita": "<h2>Comparativa con otros convenios provinciales de Limpieza</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 0,
+      "razon": "Dentro de una misma tabla, la misma familia de categorías se escribe de dos maneras: «Limpiador/a» y «Conductor/a-Limpiador/a» en inclusivo y, cuatro filas más abajo, «Peón», «Oficial», «Ayudante» y «Aprendiz» copiados en masculino literal del boletín — con el agravante de que «Peón» y «Limpiador/a» comparten exactamente la misma fila salarial, de modo que el lector ve dos escrituras distintas para dos categorías que cobran igual. En el grupo administrativo pasa lo mismo: «Jefe/a Administrativo/a 1.ª» convive con «Oficial de 1.ª». Es incoherencia terminológica y, a la vez, incumplimiento de la norma de inclusivo en categorías.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 301,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">Limpiador/a</td><td class=\"num\">37,20 €/día</td><td class=\"sal\">16.926,95 €</td>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 304,
+          "cita": "<tr><td class=\"cat\">Peón</td><td class=\"num\">37,20 €/día</td><td class=\"sal\">16.926,95 €</td>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 285,
+          "cita": "<tr><td class=\"cat\">Oficial de 1.ª</td><td class=\"num\">1.404,05 €/mes</td>"
+        }
+      ],
+      "parche": "Desdoblar las seis categorías que quedan en masculino, dejando la tabla coherente consigo misma: «Oficial/a de 1.ª» y «Oficial/a de 2.ª» (líneas 285-286), «Peón/a Especialista» (300), «Oficial/a» (302), «Peón/a» (304) y «Aprendiz» se queda como está por ser epiceno. Con eso, las diecinueve filas siguen el mismo criterio que «Limpiador/a», «Jefe/a Administrativo/a» y «Encargado/a», que ya lo cumplen.",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Zaragoza es la ficha más lejos del canon del piloto, y no por lo que le falta sino por lo que le sobra: es la que más veces repite lo mismo (la ultraactividad, cuatro veces), la que más párrafos-ladrillo acumula (once por encima de cien palabras) y la única que pinta en verde las diecinueve cifras de bruto anual. Tiene, a la vez, la mejor explicación de jerga del corpus. Si se recorta la repetición y se despinta la tabla, la ficha sube sin escribir una línea nueva. Fuera de mi eje: el recolector marca hard-fail 12.2 por usar 16.576 € como SMI 2026 (el real es 17.094 €), lo que afecta al callout de apertura, a la fila del Aprendiz y a la FAQ; y la comparativa de limpieza-asturias describe a Zaragoza como «Prorrogado Art. 5» con «~14» pagas, en contradicción directa con lo que esta ficha afirma. Lo he declarado como hard-fail 12.1 en el juicio de Asturias, donde está la afirmación errónea."
+}

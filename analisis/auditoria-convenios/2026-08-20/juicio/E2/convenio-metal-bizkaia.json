@@ -1,0 +1,141 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-bizkaia",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 1,
+      "razon": "boilerplate_ratio 0,182, entre tres y doce veces el de sus ocho hermanas (Barcelona 0,015, Asturias 0,032, Zaragoza 0,041), y 16 frases compartidas concentradas en el bloque de reclamación. El problema no es que ese bloque sea cromo —lo es—, sino que está pegado sin adaptar: manda comprobar en la nómina un «plus de transporte» que este convenio no tiene, cuando sus pluses son el tóxico/penoso/peligroso, la nocturnidad, el sábado, el domingo y el retén. El cromo que contradice la propia tabla deja de ser cromo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 603,
+          "cita": "Anota diferencias por concepto (salario base, plus de transporte, plus festivo, nocturnidad, antigüedad si aplica) y guarda copias de las nóminas."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 598,
+          "cita": "comprueba el plus de nocturnidad de 9,08 €/día o 1,17 €/hora"
+        }
+      ],
+      "parche": "Sustituir la enumeración genérica de la línea 603 por los conceptos que este convenio sí regula, que además ya están tabulados más arriba en la propia ficha: «Anota diferencias por concepto —salario base, Carencia de Incentivo, Plus de Convenio, Complemento de Salario Mínimo Garantizado, nocturnidad (9,08 €/día), plus tóxico/penoso/peligroso, complemento de sábado (44,04 €) o de domingo y festivo (55,09 €), complemento de retén (27,56 €) y quinquenios de antigüedad si aplican— y guarda copias de las nóminas.» El mismo bloque, con los pluses de Bizkaia en vez de los de otra provincia.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "2.339 palabras de prosa —la cifra más baja del sector— con ratio_tabla 0,189, y aun así la prosa es imprescindible: la tabla muestra cinco salarios base distintos que dan todos el mismo bruto anual de 22.034,57 €, y eso solo se entiende con el párrafo del Complemento de Salario Mínimo Garantizado y con la fórmula de 425 y 299 días. Sin esa prosa la tabla parece un error de transcripción.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 284,
+          "cita": "Cálculo del bruto anual: salario base × 425 días (365 año + 60 pagas extras) + Carencia de Incentivo y Plus de Convenio × 299 días (365 - 52 domingos - 14 festivos) + complemento garantizado si procede."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 222,
+          "cita": "las categorías cuyo salario base teórico no llega a esa cifra reciben automáticamente el \"Complemento de Salario Mínimo Garantizado\" en 12 mensualidades para alcanzarla"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "Solo 72 frases exclusivas y 1.712 palabras exclusivas —los mínimos del sector—, pero la masa exclusiva es de la buena: comparar la indemnización por accidente con la del convenio de Construcción de la misma provincia y ligar esa asimetría a una demanda concreta de la plataforma sindical de enero de 2026 exige cruzar dos convenios y un comunicado, no reescribir el articulado. Poca cantidad, alta sustancia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 578,
+          "cita": "La cobertura de Metal Bizkaia (28.000 € única para todos los supuestos) es entre 2 y 3 veces inferior. Es una asimetría notable entre dos sectores con riesgos físicos comparables y un punto de tensión potencial en la negociación del nuevo convenio iniciada en enero de 2026"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 609,
+          "cita": "La plataforma sindical conjunta plantea como demandas prioritarias: incremento del IPC más 3% anual hasta 2028, aumento sustancial de los pluses de peligrosidad"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 2,
+      "razon": "Por contenido sería la mejor FAQ del sector: 1 clonada de 7, y preguntas que no caben en ninguna otra provincia («¿Por qué no se activó la cláusula de actualización de tablas para 2026?»). Pero no puedo puntuarla de ejemplar porque esas siete preguntas viven solo en el JSON-LD: la página no tiene sección de preguntas frecuentes visible, así que como singularidad ofrecida al lector no llega. La invisibilidad en sí la dejo para el eje de estructura.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 66,
+          "cita": "¿Por qué no se activó la cláusula de actualización de tablas para 2026?"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 69,
+          "cita": "Como el IPC sumatorio (14,5%) no superó el incremento pactado (15%), la cláusula no se activó y la Comisión Mixta del Convenio decidió en enero de 2026 mantener las tablas 2025 sin modificación durante la ultraactividad."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "Recoge la particularidad principal y la recoge bien —el conflicto de negociación abierto, con fecha de constitución de la mesa, plataforma sindical y silencio patronal, más el régimen foral—, pero se deja el rastro industrial que su propia tabla enseña: buzos, hombres y mujeres rana, capitanes de más de 400 toneladas y jefaturas de diques y muelles son el legado de la ría y los astilleros, y la ficha los menciona como categorías sueltas sin decir qué provincia los explica.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 415,
+          "cita": "Las categorías de Buzo/Buza (Personal Técnico de Diques y Muelles) y Capitán/Capitana de más de 400 toneladas son específicas del trabajo portuario regulado por el Art. 1 del convenio."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 609,
+          "cita": "la primera reunión efectiva tuvo lugar el 15 de enero de 2026, según informó UGT-Euskadi"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "El BOB de 2023 publica un convenio 2022-2025; por sí solo no dice nada sobre 2026. La página responde la pregunta que el boletín no puede responder —qué tablas rigen hoy y por qué no se movieron— con la aritmética del art. 3.1, y añade el estado de la negociación en curso. Eso es actualidad y cálculo, no HTML del PDF.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 218,
+          "cita": "La cláusula del Art. 3.1 que habría actualizado las tablas con efectos 1-ene-2026 (si la suma del IPC estatal 2022-2025 hubiera superado el 15% pactado) no se activó: el IPC sumatorio fue ~14,5%, por debajo del umbral."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 3,
+      "razon": "Ninguna calculadora de nóminas le dice a nadie que guarde las nóminas de 2026 porque puede haber atrasos retroactivos si el convenio se firma con efectos de enero. Esa es una ventaja que el lector percibe sin que se la expliquen y que solo puede dar quien sigue la negociación, no quien copia una tabla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 610,
+          "cita": "Si el nuevo convenio incluye incrementos con efectos retroactivos al 1 de enero de 2026, se generarán atrasos liquidables. Es recomendable conservar todas las nóminas de 2026 sin destruir hasta que el nuevo convenio se publique."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "4.5",
+      "detalle": "La página da dos códigos de convenio distintos para el mismo convenio. En Datos clave (línea 200), en la meta description, en el JSON-LD y en Fuentes oficiales (línea 615) el código es 48001985011981; en el bloque de reclamación (línea 607) es 48004245011982. Quien siga la instrucción de la ficha y busque ese segundo código en REGCON no encontrará el convenio del que trata la página. Es el mismo bloque pegado sin adaptar que provoca el fallo de 3.1, y la contradicción cae justo donde se le pide al lector que actúe.",
+      "evidencia": {
+        "linea": 607,
+        "cita": "Si necesitas apoyo, FVEM, CCOO Industria, ELA, LAB y UGT-FICA prestan asesoría gratuita a personas afiliadas. Código REGCON del convenio: 48004245011982."
+      }
+    }
+  ],
+  "observacion_libre": "Ventana cerrada (último commit 2026-07-30, 21 días) y es la única de las nueve con datos GSC en el determinista (58 clics, 1.238 impresiones, CTR 4,68 %, posición 8,34): tiene tracción, así que los parches deberían priorizarse aquí. Diagnóstico de eje: esta ficha tiene la mejor materia prima singular del cluster —negociación viva, asimetría con Construcción, complemento de mínimo garantizado— y el peor acabado de corpus: boilerplate 0,182, un código de convenio equivocado y siete preguntas frecuentes que solo existen para las máquinas. La singularidad no se le arregla añadiendo texto, se le arregla quitando el bloque prestado de otra provincia. Dos avisos para otros ejes: (1) el sello de la línea 194 dice «Verificado contra el BOPV de la provincia» cuando la fuente real es el BOB (Boletín Oficial de Bizkaia), que es lo que cita correctamente el resto de la página; (2) el bloque de negociación está fechado «a fecha de mayo de 2026» y el sello dice «última revisión 28 de mayo de 2026»: en agosto ese estado de la negociación necesita recomprobación, y si la mesa ha avanzado, la ventaja de actualidad que ahora vale un 3 en 10.2 se convierte en un pasivo."
+}

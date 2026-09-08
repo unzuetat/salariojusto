@@ -1,0 +1,152 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-bizkaia",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 3,
+      "razon": "Es la única ficha del metal cuyo H1 lleva la cifra de un puesto concreto y no un rango: «Oficial 1ª 23.509 €/año», junto al mínimo garantizado, con el año en el propio título y la publicación oficial (BOB 90, 11-may-2023) en los datos clave del primer bloque. Quien busca «cuánto cobra un oficial de 1ª del metal en Bizkaia» tiene su respuesta antes de hacer scroll, sin pasar por la tabla. Ninguna otra del cluster lo hace: las demás abren con el rango de todas las categorías.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 185,
+          "cita": "Convenio Metal Bizkaia 2026: salario mínimo garantizado 22.034 €/año, Oficial 1ª 23.509 €/año"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 212,
+          "cita": "Publicación oficial BOB 90, 11 may 2023"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 186,
+          "cita": "Tablas 2025 vigentes en 2026 por ultraactividad del Art. 86.3 ET tras la denuncia automática del 1 de noviembre de 2025."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 1,
+      "razon": "Solo responde 4 de las 8. Bien: la cifra del oficial de 1.ª y del suelo garantizado, las 14 pagas y sus fechas, los pluses de noche, sábado y domingo/festivo con importe diario, y qué hacer si cobras de menos. Sin responder, cuatro: (1) «¿me cubre este convenio?» —no hay ámbito funcional en toda la página; el determinista lo confirma y ni siquiera se nombra la frontera con el Comercio del Metal de Bizkaia, que tiene ficha propia en el sitio—; (2) «soy soldador, ¿qué categoría soy?» —solo denominaciones del boletín—; (3) «llevo 6 años, ¿cuánto de antigüedad?» —se explica el 5% ilimitado y hasta que se calcula sobre el salario base de 1993, pero el importe se remite a una columna de las tablas anexas que la ficha no transcribe, así que no hay cifra ni forma de obtenerla—; (4) «trabajo media jornada, ¿cuánto me corresponde?» —cero menciones, pese a que la tabla incluye una fila «Personal de Limpieza (jornada completa)» que abre justamente esa duda—.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 528,
+          "cita": "Las cuantías concretas figuran en la columna \"Valor Quinquenio Antigüedad\" de las tablas anexas al convenio."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 277,
+          "cita": "Personal de Limpieza (jornada completa)"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 222,
+          "cita": "El convenio organiza al personal en cinco grandes grupos profesionales: personal obrero (mayoría de la plantilla en planta y taller), personal subalterno (vigilantes, ordenanzas, conserjes), personal administrativo, personal técnico [...] y personal titulado."
+        }
+      ],
+      "parche": "Transcribir el valor del quinquenio para las categorías más consultadas, sustituyendo la remisión de la línea 528 por: «Valor del quinquenio 2025-2026 según la columna \"Valor Quinquenio Antigüedad\" de las tablas anexas al BOB: [importe] € para Peón/Peona Ordinario/a, [importe] € para Oficial de 3.ª, [importe] € para Oficial de 2.ª y [importe] € para Oficial de 1.ª. Con 6 años en la empresa te corresponde un quinquenio; con 11 años, dos.» —los importes deben leerse del anexo del BOB antes de publicarlos, no estimarse—. Y añadir antes de las tablas una sección «¿Este convenio te cubre?» con las actividades del ámbito funcional del Art. 1 en lenguaje llano (siderurgia y fundición, fabricación de productos metálicos y maquinaria, talleres de mecanizado, calderería y soldadura, montaje y mantenimiento industrial, astilleros y trabajo portuario de diques y muelles) y la frontera explícita: «Es un convenio de industria, no de comercio: si tu empresa solo vende artículos metálicos, te aplica el convenio del Comercio del Metal de Bizkaia, que es distinto y tiene sus propias tablas», con enlace a /convenio-comercio-metal-bizkaia.html.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 3,
+      "razon": "Es el mejor camino de salida del corpus del metal y el único que llega a documento. Tres pasos ordenados por lógica de prescripción, no por burocracia: documentar comparando tres meses consecutivos de nómina, comunicar por escrito con prueba (burofax o email con acuse) citando los artículos, y PRECO con papeleta gratuita que interrumpe el plazo. Da el plazo del art. 59.2 con la consecuencia práctica —«actúa por las más antiguas primero para no perderlas»— y el determinista registra dos enlaces al kit, incluidas las plantillas, no solo la guía genérica.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 601,
+          "cita": "La clave es documentar bien y actuar antes del año de prescripción que marca el art. 59.2 ET — cada mes que pasa sin reclamar es un mes que pierdes."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 605,
+          "cita": "ve a PRECO (Servicio Vasco de Resolución de Conflictos) a presentar papeleta de conciliación. Interrumpe el plazo, es gratuita y abre la vía al juzgado de lo social [...] Tienes 1 año por mensualidad desde que debió pagarse: actúa por las más antiguas primero para no perderlas."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 610,
+          "cita": "Si el nuevo convenio incluye incrementos con efectos retroactivos al 1 de enero de 2026, se generarán atrasos liquidables. Es recomendable conservar todas las nóminas de 2026 sin destruir hasta que el nuevo convenio se publique."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 0,
+      "razon": "No hay forma de saber si el convenio te cubre sin leer el convenio. La ficha no tiene ámbito funcional: no enumera ni una actividad, no nombra ningún CNAE y no declara ninguna frontera; el determinista lo confirma en conceptos_ausentes. Lo único territorial es una línea de la tabla de datos clave. Y en la segunda mitad, la del grupo profesional, las categorías son las del boletín (Profesional Siderúrgico/a de 2.ª, Capataz/a Especialista, Práctico/a Fotógrafo/a) sin ningún puente desde el oficio real. Es tanto más grave cuanto que el sitio publica la ficha hermana del Comercio del Metal de Bizkaia y esta página no la menciona: quien trabaja en un almacén de suministro industrial no tiene manera de saber que está en la ficha equivocada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 201,
+          "cita": "Ámbito territorial Territorio Histórico de Bizkaia"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 415,
+          "cita": "Las categorías de Buzo/Buza (Personal Técnico de Diques y Muelles) y Capitán/Capitana de más de 400 toneladas son específicas del trabajo portuario regulado por el Art. 1 del convenio."
+        }
+      ],
+      "parche": "Añadir una sección «¿Este convenio te cubre?» entre el bloque de ultraactividad (línea 218) y la primera tabla, con el ámbito funcional del Art. 1 en lenguaje llano y una lista de puestos reales por grupo: «Personal obrero: quien trabaja en planta y taller — soldadores/as, chapistas, calderos/as, torneros/as y fresadores/as (Oficial de 1.ª, 2.ª o 3.ª según la cualificación y la autonomía del puesto), personal de línea siderúrgica (Profesional Siderúrgico/a de 1.ª a 3.ª), peones/as ordinarios/as y especialistas. Personal subalterno: vigilantes, ordenanzas, conserjes, porteros/as. Personal técnico de diques y muelles: buzos/as y personal de astillero, específico del trabajo portuario de la ría.» Y cerrar con la frontera: «Es un convenio de industria, no de comercio. Si tu empresa se dedica a la venta y distribución de artículos metálicos, te aplica el convenio del Comercio del Metal de Bizkaia, con tablas distintas», enlazando a /convenio-comercio-metal-bizkaia.html.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 2,
+      "razon": "Tiene la mejor sección de correspondencia del cluster —«Coge tu nómina mensual y suma los conceptos salariales fijos…»— y hace lo que casi nadie: nombra un concepto por su nombre de nómina y dice cómo debe figurar, en 12 mensualidades de igual cuantía y como línea separada. También avisa de que los complementos no son consolidables y de que las extras no incluyen Carencia de Incentivo ni Plus de Convenio. No llega a 3 por dos motivos concretos: el personal obrero, que es la mayoría de la plantilla, solo tiene salario base diario y bruto anual, nunca una cifra mensual con la que comparar; y la lista de comprobación de la reclamación manda buscar en la nómina un «plus de transporte» y un «plus festivo» que este convenio no tiene —el complemento de domingo o festivo solo existe en sistema de turnos—, lo que envía al lector a buscar conceptos inexistentes.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 596,
+          "cita": "Coge tu nómina mensual y suma los conceptos salariales fijos (salario base, Carencia de Incentivo y Plus de Convenio en los días efectivamente trabajados, antigüedad por quinquenios si aplica). El \"Complemento de Salario Mínimo Garantizado\" debe aparecer como concepto separado en 12 mensualidades de igual cuantía"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 603,
+          "cita": "Anota diferencias por concepto (salario base, plus de transporte, plus festivo, nocturnidad, antigüedad si aplica)"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 419,
+          "cita": "Los complementos del convenio se devengan únicamente cuando se realizan los trabajos que los originan y no tienen carácter consolidable: si desaparece la causa, dejan de abonarse."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "Declara el hueco con una claridad que no tiene ninguna otra: dice que las tablas de 2026 no existen, que se cobra con las de 2025, y explica por qué —la cláusula del Art. 3.1 no se activó porque el IPC sumatorio (14,5%) no superó el 15% pactado—, con los IPC año a año. Añade el estado de la negociación y el consejo de guardar las nóminas por si hay atrasos retroactivos. No llega a 3 porque no da el suelo: es la única ficha del metal que no menciona el SMI 2026 en ninguna parte, según confirma el determinista (menciona_smi: false). En un convenio congelado desde 2025, el SMI es exactamente la referencia que el lector necesita para saber si su cifra sigue siendo legal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 218,
+          "cita": "La cláusula del Art. 3.1 que habría actualizado las tablas con efectos 1-ene-2026 [...] no se activó : el IPC sumatorio fue ~14,5%, por debajo del umbral. Por tanto, las cifras 2025 son las cifras de referencia para nóminas de 2026"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 521,
+          "cita": "La Comisión Mixta del Convenio se reunía cada enero para actualizarlas — esta función queda suspendida en la ultraactividad hasta que se firme un nuevo convenio. Los valores mostrados son las cuantías base pactadas en 2023."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "4.5",
+      "detalle": "Dos códigos REGCON distintos para el mismo convenio en la misma página. El título, los datos clave, el schema y el bloque de fuentes dan 48001985011981; el cierre de la sección de reclamación da 48004245011982, un código que no aparece en ninguna otra ficha ni en el censo del sitio y cuyo único rastro está en scripts/audit/aplicar-boilerplate.py, es decir, es un valor inyectado por plantilla. Es el número que el lector copia para localizar su convenio en REGCON y para citarlo en una reclamación.",
+      "evidencia": {
+        "linea": 607,
+        "cita": "Si necesitas apoyo, FVEM, CCOO Industria, ELA, LAB y UGT-FICA prestan asesoría gratuita a personas afiliadas. Código REGCON del convenio: 48004245011982 ."
+      }
+    }
+  ],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA ALGUIEN DEL METAL EN BIZKAIA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial de 1ª del metal en Bizkaia en 2026?»; (2) «¿y eso cuánto es al mes?»; (3) «trabajo en un taller de la margen izquierda, ¿me cubre este convenio o el del comercio del metal?»; (4) «soy soldador / chapista, ¿en qué categoría estoy?»; (5) «¿cuántas pagas tengo y cuándo se cobran?»; (6) «llevo 6 años, ¿cuánto me toca de antigüedad?»; (7) «trabajo a turnos y me toca domingo, ¿cuánto me tienen que pagar?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO: (1) sí, en el propio H1 (185); (2) NO para el personal obrero —solo salario base diario y bruto anual; el mensual solo existe para administrativos y técnicos (297)—; (3) NO, no hay ámbito funcional; (4) NO; (5) sí (208, 474-476); (6) NO, el importe se remite a una columna no transcrita (528); (7) sí, 55,09 €/día (459-461); (8) NO. Cuatro de ocho. — Esta ficha es un contraste extremo: el mejor titular del cluster (la cifra del puesto, no el rango) y el mejor camino de reclamación del corpus, sobre una base que no dice a quién se aplica el convenio. La persona que llega sabe cuánto debería cobrar un oficial de 1.ª y sabe cómo reclamar, pero no puede saber si ella es esa oficial de 1.ª ni si su empresa está dentro. — El hard-fail 4.5 (dos códigos REGCON) no lo he penalizado además en las métricas, conforme al protocolo. — FUERA DE MI EJE, pero conviene que E2 lo mire: el sello dice «Verificado contra el BOPV de la provincia» (línea 194) cuando la fuente citada en todo el cuerpo es el BOB, el boletín foral de Bizkaia, y el BOPV es el del País Vasco; y la fecha de revisión visible es de 28-mayo-2026, coherente con frases del cuerpo que dicen «a fecha de mayo de 2026». — VENTANA CERRADA: 21 días desde el último commit, así que los dos parches (1.2 y 1.4) no van aplazados."
+}

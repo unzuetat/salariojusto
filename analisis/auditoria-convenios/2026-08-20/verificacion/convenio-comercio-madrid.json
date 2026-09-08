@@ -1,0 +1,124 @@
+{
+  "slug": "convenio-comercio-madrid",
+  "contexto": {
+    "ventana_medicion_abierta": true,
+    "ultimo_commit": "2026-08-18",
+    "dias_desde_commit": 1,
+    "parches_aplazados_correctamente": true,
+    "hardfails_declarados": 0,
+    "hardfails_deterministas": 0,
+    "nota_freno_9_7": "Verificado uno a uno: los once parches propuestos por los seis ejes llevan aplazado_por_ventana = true. Ningún eje propone tocar la ficha ahora. La única excepción legítima es el parche de E5 6.2, que toca convenios.html y no la ficha: el freno 9.7 no lo alcanza y el propio eje lo dice."
+  },
+  "veredictos": [
+    {
+      "eje": "E1", "id": "5.10", "veredicto": "CONFIRMADO",
+      "motivo": "Triple comprobación: determinista (enlaces.externos_total = 0, externos_oficiales = []), grep propio sobre el HTML (las ocho ocurrencias de href=\"http\" son el canonical, los dos hreflang y un dns-prefetch de googletagmanager; ninguna es una fuente) y lectura del bloque de fuentes, donde el BOCM se cita por número y fecha pero sin enlace. Busqué en 'Marco legal y contactos' y en el pie por si el enlace estaba en otra sección: no está en ninguna.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 420, "cita": "fue suscrito el <strong>18 de junio de 2025</strong> y publicado en el <strong>BOCM Núm. 183 del 2 de agosto de 2025</strong> con las tablas salariales de los cuatro años (2025-2028)."}
+    },
+    {
+      "eje": "E5", "id": "6.2", "veredicto": "MATIZADO",
+      "motivo": "El núcleo del hallazgo es cierto y lo he verificado por mi cuenta: convenios.html no la enlaza (grep -c convenio-comercio-madrid convenios.html = 0) pese a que el breadcrumb la cuelga de Convenios. Pero las cifras están mal y el determinista las desmiente en la línea inmediatamente anterior a la que el propio eje cita: entrantes_n = 6, no 3, y desde tres páginas, no dos (index.html ×2, convenio-comercio-metal-barcelona.html ×3, convenio-comercio-metal-bizkaia.html ×1, comprobado con grep -c). El puesto tampoco es 44 de 54: con 6 entrantes queda en la posición 39-40 de 54.",
+      "enunciado_corregido": "6.2 = 1: 6 entrantes desde 3 páginas (home y dos fichas de Comercio del Metal), posición 39-40 de 54. El hub convenios.html todavía no la enlaza, que es el hueco real: la ficha vive de la home.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-comercio-madrid.json", "linea": 314, "cita": "\"entrantes_n\": 6, \"entrantes_desde\": [ \"convenio-comercio-metal-barcelona.html\", \"convenio-comercio-metal-bizkaia.html\", \"index.html\" ]"}
+    },
+    {
+      "eje": "E5", "id": "6.3", "veredicto": "CONFIRMADO",
+      "motivo": "Verificado con el listado completo de href de la ficha: de los 15 enlaces internos del cuerpo, el único que vive dentro de un párrafo de prosa es el de la guía de reclamación (389), y llega cuando el procedimiento ya ha terminado; los tres enlaces provinciales están apilados en la lista final (447-449) y el resto son cabecera, CTA a la calculadora, footer y legales. Busqué en las secciones de ámbito, tabla y pluses por si algún párrafo abría una duda y la cerraba con un enlace: ninguno.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 389, "cita": "Código REGCON: 28000805011982. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"}
+    },
+    {
+      "eje": "E5", "id": "6.4", "veredicto": "CONFIRMADO",
+      "motivo": "Determinista y grep coinciden: a_hermanas_mismo_sector = 0, y las dos fichas de Comercio del Metal que sí la enlazan (bizkaia y barcelona) no reciben enlace de vuelta. La otra dirección, la cross-sector de la misma provincia, sí está cubierta con los tres enlaces de Madrid, tal como dice el eje.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-comercio-madrid.json", "linea": 297, "cita": "\"a_hermanas_mismo_sector\": 0"}
+    },
+    {
+      "eje": "E5", "id": "6.6", "veredicto": "CONFIRMADO",
+      "motivo": "al_kit = 1 y es la guía, no una plantilla: verificado en el determinista y en el HTML. El paso 2 (386) pide exactamente lo que resuelve la plantilla de atrasos y no la enlaza. Comprobé además que plantilla-reclamar-atrasos-convenio-salarial.html existe en el repo, así que el parche apunta a una página real.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 386, "cita": "<strong>Reclama por escrito a tu empresa</strong> indicando los conceptos no abonados, el importe estimado y el período. Envíalo por burofax con acuse de recibo o email con confirmación de lectura."}
+    },
+    {
+      "eje": "E6", "id": "7.4", "veredicto": "CONFIRMADO",
+      "motivo": "Leído el bloque completo (196-198): el div.nota-editorial contiene un único bloque de texto corrido con las cuatro etiquetas en negrita incrustadas en la misma línea, sin <p> que abran sub-párrafo. La norma existe en este proyecto (nota editorial fragmentada en 3-4 sub-párrafos etiquetados, métrica 7.4) y la ficha del mismo mes, metal-sevilla, la cumple con cuatro <p> (254-257), así que no es una convención importada de fuera.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 197, "cita": "<strong>En 30 segundos. Qué es.</strong> El Convenio del Comercio Vario … <strong>Estructura.</strong> 10 grupos profesionales … <strong>Novedades.</strong> Jornada reducida a 37,5 h/semana … <strong>Futuro.</strong> Subidas del IPC del año anterior…"}
+    },
+    {
+      "eje": "E6", "id": "8.3", "veredicto": "MATIZADO",
+      "motivo": "La duplicación es real y la he cotejado palabra por palabra: la FAQ (396) repite el párrafo de respuesta directa (179), incluida la enumeración 'cajero/a, oficial/a administrativo/a, viajante y mozo/a especializado/a'. Lo que matizo es el calificativo 'la redundancia menos justificable': el texto visible de esa FAQ es el par del FAQPage del JSON-LD (línea 48), de modo que no es un bloque suelto que sobre, sino la capa visible de un schema. El parche de reescritura sigue siendo válido pero no es de coste cero: obliga a tocar también el JSON-LD para no abrir una divergencia HTML↔schema.",
+      "enunciado_corregido": "8.3 = 1: la primera FAQ (396) reproduce el párrafo de respuesta directa (179) sin añadir nada. Al reescribirla hay que actualizar en el mismo cambio el acceptedAnswer del JSON-LD (línea 48), que es su par.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 48, "cita": "{\"@type\":\"Question\",\"name\":\"¿Cuánto cobra un dependiente en el comercio de Madrid en 2026?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Un dependiente/a vendedor/a mayor de 22 años del conven…"}
+    },
+    {
+      "eje": "E6", "id": "11.1", "veredicto": "CONFIRMADO",
+      "motivo": "Determinista (sin_scope = 4, sin_caption = 4, sin_th = 0) y grep propio (cero 'scope=' y cero '<caption' en toda la ficha) coinciden. Y el agravante que alega el eje es cierto: las cuatro tablas (216-292) son la misma escala de 10 grupos repetida para 2025, 2026, 2027 y 2028, con el año solo en el botón de la pestaña, de modo que sin caption nada las distingue al oído.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 243, "cita": "<thead><tr><th>Grupo · categorías</th><th style=\"text-align:right\">€/mes</th><th style=\"text-align:right\">€/año</th></tr></thead>"}
+    },
+    {
+      "eje": "E6", "id": "12.6", "veredicto": "CONFIRMADO",
+      "motivo": "Comprobadas las cuatro ubicaciones: la respuesta directa (179) usa 'ayudante de ventas' y 'ayudante de vendedor' en el mismo párrafo, las cuatro tablas usan 'Ayudante ventas' (236, 254, 272, 290) y la FAQ 'Ayudante de Vendedor' (415). Es la misma categoría del Grupo I con tres denominaciones. Único matiz sobre el parche, no sobre el hallazgo: afirma que 'ayudante de vendedor/a' es la forma del boletín, y el BOCM no está en el repo, así que la denominación oficial habría que confirmarla antes de unificar.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 179, "cita": "La escala completa del convenio va de <strong>1.157,53 €/mes</strong> (Grupo I: ayudante de ventas, auxiliar de caja, reponedor/a) … La tabla oficial nombra esta categoría como «dependiente/a vendedor/a (mayor de 22)», una etiqueta heredada que la distingue del ayudante de vendedor del Grupo I."}
+    },
+    {
+      "eje": "E2", "id": "3.1", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado en el determinista (boilerplate_ratio 0.022, solo 2 frases compartidas, ambas del bloque E-E-A-T) y en el HTML: el bloque '¿Cobras menos?' existe pero está reescrito con la vía de conflicto propia de Madrid (Instituto Laboral de la CAM, Disp. Transitoria Primera), no con el molde del corpus.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 387, "cita": "presenta papeleta de conciliación ante el <strong>Instituto Laboral de la Comunidad de Madrid</strong> (al que el convenio somete expresamente sus conflictos, Disp. Transitoria Primera)"}
+    },
+    {
+      "eje": "E2", "id": "3.5", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado: faq_clonadas = 0 de 4 en el determinista, y en el HTML dos de las preguntas solo caben en este convenio (permiso climático y ascenso automático de la Disp. Ad. 4ª). La salvedad que el propio eje anota también es exacta: hay 5 h3 de FAQ visibles (396-415) y solo 4 preguntas en el JSON-LD (48-51).",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 410, "cita": "<h3>¿Qué es el permiso climático?</h3>"}
+    },
+    {
+      "eje": "E2", "id": "10.1", "veredicto": "MATIZADO",
+      "motivo": "La ventaja principal está verificada y basta para sostener una nota alta: cuatro tablas en pestañas con el año vigente marcado (216-292) y un checklist de seis puntos para cotejar la nómina (366-374). Lo que no se sostiene es la mitad de la razón —'una columna €/año en 15 pagas que el boletín no da'—: no hay evidencia de lo que publica el BOCM, la aritmética apunta a lo contrario (1.198,87 × 15 = 17.983,05 y la ficha publica 17.982,98; lo mismo en las otras filas y años), y la propia ficha dice que las tablas de los cuatro años están publicadas en el convenio. Si el anual fuera cálculo nuestro sería exactamente 15 veces el mensual.",
+      "enunciado_corregido": "10.1 = 3 por lo comprobable: el BOCM publica el convenio en PDF corrido y aquí las cuatro tablas anuales están en pestañas con la vigente marcada, más un checklist de seis puntos para cotejar la nómina. La afirmación de que la columna €/año no está en el boletín debe caer del enunciado mientras no se compruebe.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 294, "cita": "Las tablas de los cuatro años están publicadas en el propio convenio (BOCM 183/2025)."}
+    },
+    {
+      "eje": "E3", "id": "1.1", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado: la cifra del puesto más buscado viaja dentro del H1, con el año, y la línea siguiente trae el sello con boletín y fecha de revisión; el párrafo de respuesta directa la repite en mensual y anual con el número de pagas y nombra las categorías equivalentes. Determinista: respuesta_directa.cifra / anio / fuente_en_primeros_bloques = true.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 165, "cita": "<h1>Convenio Comercio Madrid 2026: un/a dependiente cobra <em>1.198,87 €/mes</em> en 15 pagas</h1>"}
+    },
+    {
+      "eje": "E3", "id": "1.4", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado: el ámbito funcional se traduce a comercios reconocibles (bazares, fotografía, estancos, merchandising) y la frontera se declara explícitamente en un callout, con la etiqueta 'cajón de sastre' que es exactamente lo que un lector necesita para autoubicarse. Cada fila de la tabla lleva las categorías del grupo, así que el segundo eje —en qué grupo estoy— también se resuelve.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 210, "cita": "Si tu comercio es de <strong>alimentación</strong>, <strong>textil</strong>, <strong>del metal</strong> o de otra rama con convenio propio en Madrid, tu tabla puede ser distinta. Este convenio es el \"cajón de sastre\" del comercio madrileño para las actividades sin convenio específico."}
+    },
+    {
+      "eje": "E4", "id": "2.4", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado contra el determinista: title_len 57 (no se corta), title_tiene_cifra, title_tiene_euro y title_tiene_anio todos true, y la cifra es la del puesto que se busca en comercio, en su unidad real de nómina. Cumple la fórmula de casa entera, que es lo que 2.4 mide.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 6, "cita": "<title>Convenio Comercio Madrid 2026: Dependiente 1.198,87 €/mes</title>"}
+    },
+    {
+      "eje": "E4", "id": "4.1", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado leyendo el párrafo entero: la frase se sostiene sola con sujeto, grupo, ámbito completo, año, cifra, unidad, anual y pagas, y la fuente va dentro del mismo párrafo ('Cifras verificadas por SalarioJusto contra el BOCM Núm. 183 del 2 de agosto de 2025'), que es lo que 4.1 exige y lo que casi nunca se cumple.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 179, "cita": "Un/a dependiente/a del convenio de Comercio Vario de la Comunidad de Madrid (Grupo II, Nivel B) cobra en 2026 un salario base de <strong>1.198,87 €/mes</strong>, es decir <strong>17.982,98 € brutos al año</strong> en <strong>15 pagas</strong>."}
+    },
+    {
+      "eje": "E4", "id": "4.4", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado: hay pie de fuente justo debajo del bloque de respuesta directa (193) y otro justo debajo de la tabla salarial (294), los dos con boletín, número y fecha, y cada complemento cierra con su artículo en el mismo párrafo de la cuantía. La traza está en la misma pantalla que la cifra, que es lo que mide 4.4 (cosa distinta de 5.10, que mide si esa traza es clicable, y ahí la ficha tiene un 0 bien puesto).",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 193, "cita": "Fuente: <strong>BOCM Núm. 183 (2-ago-2025)</strong> — texto íntegro del convenio 2025-2028 con las tablas de los cuatro años. <strong>BOCM Núm. 151 (27-jun-2026)</strong> — modificación aclaratoria del art. 40 (jornada)."}
+    },
+    {
+      "eje": "E6", "id": "7.5", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado contra el determinista (headings.h1 = 1, saltos_jerarquia = []) y contra el HTML: los siete h3 de pluses llevan la cuantía dentro del propio encabezado, que es literalmente el ejemplo que la métrica pide.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 316, "cita": "<h3>Plus de transporte — <span class=\"plus-cifra\">96,56 €/mes</span></h3>"}
+    },
+    {
+      "eje": "E6", "id": "8.2", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado por posición: la cifra está en el h1 (165), se repite completa en la respuesta directa (179) antes de cualquier contexto y la tabla salarial es el segundo h2 de la página (213) en un documento de 494 líneas. Lo accesorio —marco legal, partes firmantes, paritaria— queda al final (419-436). Es el orden que pide 8.2.",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 213, "cita": "<h2 id=\"tablas\">Tabla salarial — 10 grupos × 15 pagas</h2>"}
+    }
+  ],
+  "resumen": {
+    "confirmados": 16,
+    "matizados": 3,
+    "refutados": 0,
+    "notas": [
+      "Ningún eje declaró hard-fails y el determinista tampoco. No había hard-fail que verificar.",
+      "Freno 9.7 respetado: los once parches de los seis ejes llevan aplazado_por_ventana = true. Ninguno propone tocar la ficha ahora (ultimo_commit 2026-08-18, 1 día).",
+      "Confirmado el dato de contexto: la ficha es indexable (censo.indexable = true, seo.noindex = false, en_sitemap = true) y está enlazada desde la home, pero convenios.html no la enlaza (grep -c = 0). El eje que lo señaló (E5, 6.2) acertó en el fondo y falló en las cifras.",
+      "Único error de dato encontrado en los seis ejes: E5 leyó entrantes_n = 3 desde dos páginas cuando el determinista dice 6 desde tres, en la línea inmediatamente anterior a la que cita. El resto de números que cita cada eje coincide con el JSON.",
+      "Dos cosas que vi al verificar y que NO convierto en hallazgo, para que decida el sintetizador: (1) hay 5 preguntas visibles en la FAQ y solo 4 en el FAQPage del JSON-LD —la quinta, 'Soy Auxiliar de Caja / Ayudante de Vendedor, ¿asciendo?' (415), no está en el schema—; (2) esa misma pregunta y el title usan la categoría en masculino ('Ayudante de Vendedor', 'Dependiente'), lo que roza la norma de categorías inclusivas; E6 lo trató dentro de 12.6 y ningún eje lo elevó a hard-fail 8.7."
+    ]
+  }
+}

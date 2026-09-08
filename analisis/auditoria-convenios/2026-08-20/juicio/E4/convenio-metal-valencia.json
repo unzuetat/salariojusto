@@ -1,0 +1,123 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-valencia",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Cumple los cuatro elementos y por eso no baja, pero es el 2 más flojo del sector. Con 91 caracteres es el title más largo de las nueve fichas, y lo que el buscador enseña antes de recortar es el gancho editorial ('la paga de marzo'), no el salario: la cifra va en cuarta posición y se juega el corte. A eso se suma que el h1 es el único del cluster sin ninguna cifra, así que ni el resultado de búsqueda ni el titular de la página ofrecen un número que reconocer. La paga de marzo es un hallazgo real y merece estar; el problema es el orden.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Valencia 2026: la paga de marzo y tablas de 22.462 a 36.615 € | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 194,
+          "cita": "<h1>Convenio del <em>Metal de Valencia</em>: la paga de marzo que casi nadie conoce</h1>"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 278,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">Peón/a</td><td class=\"num\">7</td><td class=\"num\">45,80 €/día</td><td class=\"sal\">22.462,18 €</td></tr>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "2.5",
+      "nota": 1,
+      "razon": "Es la meta que peor coloca su cifra de las nueve: con 303 caracteres, el primer importe salarial aparece pasado el carácter 168, o sea fuera de lo que se muestra. Lo que llega al lector son la paga de marzo, la jornada de 1.752 h y el plus de formación de 30 €/mes: hay gancho, pero no hay salario, que es lo que se está buscando. Motivo sin cifra es exactamente el 1 de esta métrica.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 7,
+          "cita": "El convenio de la Industria del Metal de Valencia 2026 (+2,5%) tiene una paga de marzo de 17 días además de las dos extras, jornada de 1.752 h, plus de formación de 30 €/mes y salarios de 22.462 € (Peón) a 36.615 € (Ingeniería). Cubre a 85.000 personas. Fuente: BOP Valencia 203 · REGCON 46000105011981."
+        }
+      ],
+      "parche": {
+        "descripcion": "Mismo contenido, otro orden: el salario delante y la paga de marzo como remate diferencial, todo dentro de lo que se muestra. 178 caracteres, todavía largo pero con lo esencial en los primeros 155.",
+        "texto_propuesto": "Peón 45,80 €/día (22.462 € al año) y hasta 36.615 €: tablas 2026 del metal de Valencia, +2,5%. Y una tercera paga de 17 días cada 15 de marzo que casi nadie reclama. BOP Valencia 203.",
+        "nota": "Si se prefiere no tocar el title, este cambio basta por sí solo: la meta puede llevar la cifra que al title le falta al principio."
+      },
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "La entradilla es autocontenida de manual —dice quién paga, cuánto, cuándo y con qué tablas— y la FAQ del peón encadena categoría, grupo, cuantía diaria, cómputo anual y comparación con el SMI del año. Se queda en 2 y no sube porque el h1 no lleva cifra y porque la frase de la FAQ no repite provincia ni sector: 'El Peón/a (Grupo 7) tiene un salario grupo de 45,80 € al día' es igual de válida en Sevilla, donde el peón cobra 54,69 €/día. En una página que compara convenios por provincia, esa es la frase que más fácil se atribuye mal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 195,
+          "cita": "Además de las dos pagas extra de junio y diciembre, el metal de Valencia abona <strong>17 días de salario el 15 de marzo</strong>. Tablas 2026 (+2,5%) de 22.462 € (Peón) a 36.615 € (Ingeniería)"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 523,
+          "cita": "El <strong>Peón/a</strong> (Grupo 7) tiene un salario grupo de <strong>45,80 € al día</strong>, que en cómputo anual con las pagas del convenio suma <strong>22.462,18 € brutos</strong>."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 194,
+          "cita": "<h1>Convenio del <em>Metal de Valencia</em>: la paga de marzo que casi nadie conoce</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "Resuelve bien un caso difícil: este convenio paga por día al personal de oficio y por mes al técnico, y la ficha mete la unidad dentro de cada celda ('45,80 €/día' junto a '1.712,48 €/mes') en lugar de homogeneizar y perder la información. El encabezado del anual lleva año. No sube a 3 porque las siete tablas van sin caption, porque la columna 'Salario grupo' mezcla dos unidades sin decirlo en el encabezado, y porque la advertencia de que existe otro convenio del Comercio del Metal en Valencia —el riesgo real de confusión— queda lejos de las cifras.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 276,
+          "cita": "<thead><tr><th>Categoría</th><th class=\"num\">Grupo</th><th class=\"num\">Salario grupo</th><th class=\"num\">Salario anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 270,
+          "cita": "<strong>Cómo leer la tabla:</strong> el <strong>personal de operaciones</strong> (oficio) cobra el salario grupo <strong>por día</strong>; el personal técnico y de empleados/as lo cobra <strong>por mes</strong>."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 264,
+          "cita": "<strong>Ojo: en Valencia hay dos convenios de metal.</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "El ancla da 2 (pct_huerfanas 0,024, 3 de 123) y lo respeto, pero con una reserva que conviene leer: es la única de las nueve cuya tabla salarial no tiene ningún boletín al lado. El párrafo que la abre cita el artículo del incremento y nada más; el BOP aparece en el sello de arriba y en el bloque de fuentes del final, es decir, lejos. Que el determinista no la penalice se explica porque la referencia a artículo cuenta como fuente, pero para citar una cuantía el artículo del convenio no sustituye a la publicación. Además, las tablas 2026 están 'registradas', no publicadas en ese BOP nº 203, que es de 2023: quien quiera comprobarlas no sabe dónde mirar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 268,
+          "cita": "Cuantías brutas oficiales de las <strong>tablas 2026</strong>, resultado de aplicar el <strong>+2,5%</strong> pactado (Art. 13) sobre las tablas de 2025, con efectos desde el 1 de enero de 2026."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 202,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BOP Valencia nº 203, código REGCON 46000105011981) y las tablas salariales 2026 registradas el 19 de enero de 2026"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 496,
+          "cita": "Texto del convenio en el BOP nº 203 (20-oct-2023); tablas 2026 registradas el 19-ene-2026."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana cerrada (21 días): parches ejecutables. Valencia es el caso más claro del cluster de una buena ficha mal expuesta: tiene el mejor hallazgo editorial del sector —una tercera paga de 17 días que ni Barcelona ni Bizkaia tienen— y lo ha puesto en los tres sitios donde compite por el clic (title, h1 y meta), desplazando al salario de todos ellos. No hay que elegir entre las dos cosas: la cifra capta y la paga de marzo retiene, en ese orden. Aparte, y esto es traza más que captación, la ficha debería resolver dónde se publican las tablas 2026: 'registradas el 19 de enero de 2026' no es una referencia que un lector pueda seguir."
+}

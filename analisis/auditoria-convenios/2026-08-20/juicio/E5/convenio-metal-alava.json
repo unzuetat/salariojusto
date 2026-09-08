@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-alava",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 0,
+      "razon": "Es el caso literal del 0 de la escala: los 3 enlaces entrantes vienen del hub, la home y el mapa del sitio; ninguna de las 9 hermanas del metal la enlaza, pese a que ella sí enlaza a cinco. Con la mediana del corpus en 10 entrantes, es el suelo (empatada con Asturias y Sevilla, las otras dos fichas recientes).",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-alava.json",
+          "linea": null,
+          "cita": "\"entrantes_n\": 3, \"entrantes_desde\": [\"convenios.html\",\"index.html\",\"mapa-del-sitio.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 634,
+          "cita": "<li><a href=\"/convenio-construccion-bizkaia.html\">Convenio Construcción en Bizkaia (sector hermano · 2025-2027 vigente)</a></li>"
+        }
+      ],
+      "parche": "El arreglo no está en esta ficha sino en las hermanas, que no devuelven el enlace. (1) En convenio-metal-bizkaia.html, dentro de la lista 'Otros convenios y guías' (tras la línea 634), añadir: '<li><a href=\"/convenio-metal-alava.html\">Convenio del Metal de Álava (el tercer convenio foral: BOTHA 18 de 2026, salario bruto anual por categoría)</a></li>' — ahí porque esa lista ya agrupa los convenios vascos vecinos y es la única salida de Bizkaia hacia el clúster. (2) En convenio-metal-gipuzkoa.html línea 432, donde el párrafo enumera cómo fija el salario cada provincia, sustituir el final por '…y el <a href=\"/convenio-metal-alava.html\">metal de Álava</a>, el tercer convenio foral, por salario bruto anual de categoría.' — ahí porque es la frase que ya está contrastando estructuras salariales forales y Álava es la que falta.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.3",
+      "nota": 2,
+      "razon": "Los enlaces a hermanas nacen dentro de la prosa (párrafo de comparación tras las tablas), no en una lista final: cumple. No llega a 3 porque toda la salida contextual se concentra en un único párrafo y el resto del cuerpo (pluses, jornada, IT) no abre ninguna puerta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 405,
+          "cita": "<strong>Comparación con otras provincias del sector.</strong> El metal de Álava completa el trío vasco junto al <a href=\"/convenio-metal-bizkaia.html\">metal de Bizkaia</a> y el <a href=\"/convenio-metal-gipuzkoa.html\">de Gipuzkoa</a>, los tres de régimen foral."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 578,
+          "cita": "Los otros dos convenios del metal vasco, de régimen foral. <a href=\"/convenio-metal-bizkaia.html\">Ver Bizkaia</a> · <a href=\"/convenio-metal-gipuzkoa.html\">Ver Gipuzkoa</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 2,
+      "razon": "Cubre la dirección de hermanas con 5 destinos y explica el criterio (el trío foral y cómo fija el salario cada uno). La segunda dirección no existe en el corpus: Álava no tiene ninguna otra ficha sectorial, y la ficha lo resuelve enlazando al sector vecino del mismo régimen foral con la etiqueta que lo justifica.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-alava.json",
+          "linea": null,
+          "cita": "\"a_hermanas_mismo_sector\": 5, \"a_otro_sector_misma_provincia\": [\"/convenio-hosteleria-bizkaia.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 624,
+          "cita": "<a href=\"/convenio-hosteleria-bizkaia.html\">Convenio de Hostelería — Bizkaia (régimen foral)</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "Cero anchors genéricos en el determinista y los de prosa dicen sector y provincia ('metal de Bizkaia', 'metal de Zaragoza'). No es 3 porque los del bloque final son la plantilla 'Convenio del Metal — X' repetida en las nueve fichas y la píldora usa 'Ver Bizkaia · Ver Gipuzkoa', que no dice sector.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-alava.json",
+          "linea": null,
+          "cita": "\"anchors_genericos\": []"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 578,
+          "cita": "<a href=\"/convenio-metal-bizkaia.html\">Ver Bizkaia</a> · <a href=\"/convenio-metal-gipuzkoa.html\">Ver Gipuzkoa</a>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 620,
+          "cita": "<a href=\"/convenio-metal-bizkaia.html\">Convenio del Metal — Bizkaia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "El puente está en la sección correcta pero no en el punto de la necesidad: el enlace cierra la sección colgado del párrafo de código REGCON y firmantes, no del paso que lo pide. El paso que manda pedir la nómina detallada por escrito no enlaza plantilla-solicitar-nominas.html y el que fija el plazo de un año por mensualidad no enlaza plantilla-reclamar-atrasos-convenio-salarial.html. Es el mismo patrón que este eje puntuó 1 en convenio-metal-sevilla, con el mismo bloque y el mismo anchor.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 544,
+          "cita": "<h2 id=\"reclamar\">¿Cobras menos de lo que fija tu categoría?</h2>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 552,
+          "cita": "Firmantes: <strong>SEA Empresas Alavesas</strong> (patronal) y los sindicatos <strong>UGT, CCOO y LAB</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+        }
+      ],
+      "parche": "Dos enlaces, cada uno en su paso. En la línea 548, donde se pide la nómina detallada: '…si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores). <a href=\"/plantilla-solicitar-nominas.html\">Usa esta plantilla para pedírselas a tu empresa por escrito</a>.' En el paso del plazo, antes de la línea 552: 'Plazo: un año por cada mensualidad (art. 59.2 ET), así que <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">reclama por escrito la diferencia de las últimas 12 mensualidades</a> antes de que prescriban.' Ahí y no al cerrar la sección porque cada plantilla resuelve exactamente la acción que el paso acaba de exigir; el enlace genérico a la guía puede quedarse donde está.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Álava, Asturias y Sevilla —las tres fichas más recientes del metal— comparten exactamente el mismo perfil: entrantes_n 3 desde hub, home y mapa. El clúster se teje sólo hacia atrás: la ficha nueva enlaza a las viejas y ninguna vieja se actualiza para devolver el enlace. Es un fallo de proceso de publicación, no de redacción, y se repara editando las hermanas. Calibración de 6.3 en esta tanda: el párrafo 'Comparación con otras provincias del sector' lo llevan 8 de las 9 fichas del metal (11 en todo el corpus), así que dentro de este sector es la norma y vale 2; el 3 se reserva a las que reparten los enlaces por varios momentos del cuerpo (Asturias, Zaragoza). Si el sintetizador compara con el 3 que se dio a convenio-metal-sevilla por ese mismo párrafo, conviene normalizar en una dirección u otra."
+}

@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-madrid",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 2,
+      "razon": "20 entrantes desde 9 páginas, el doble de la mediana del corpus, con seis hermanas que la citan casi siempre desde el cuerpo y una ficha marco (seguridad privada) que la usa como referencia salarial. No es 3 porque, salvo ese enlace suelto, todo lo que la alcanza son fichas del propio sector y directorios: ninguna guía la enlaza.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-madrid.json",
+          "linea": null,
+          "cita": "\"entrantes_n\": 20, \"entrantes_desde\": [\"convenio-metal-alava.html\",\"convenio-metal-asturias.html\",\"convenio-metal-gipuzkoa.html\",\"convenio-metal-navarra.html\",\"convenio-metal-sevilla.html\",\"convenio-metal-zaragoza.html\",\"convenio-seguridad-privada.html\",\"convenios.html\",\"index.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 357,
+          "cita": "cerca de la <a href=\"/convenio-metal-madrid.html\">Operaria/o Auxiliar de Madrid</a> (20.687 €)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 2,
+      "razon": "El enlace nace donde toca: en la sección de pagas, justo después de decir que son 14 al año, para contrastar con la provincia que añade una tercera. Se queda en 2 porque es el único momento del cuerpo con salida contextual; la ficha es la más corta del clúster en enlaces útiles y no aprovecha ni la jornada de 1.756 h ni los pluses para comparar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 322,
+          "cita": "Las dos pagas extra se devengan por semestres naturales y en proporción al tiempo trabajado. Si son festivas, se abonan el día laborable anterior. En total, 14 pagas al año."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 325,
+          "cita": "El metal de Madrid tiene <strong>14 pagas</strong>, como el <a href=\"/convenio-metal-barcelona.html\">metal de Barcelona</a> y el <a href=\"/convenio-metal-bizkaia.html\">metal de Bizkaia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 2,
+      "razon": "Están las dos direcciones: 3 hermanas y dos sectores madrileños (hostelería y limpieza). No es 3 porque en Madrid el corpus tiene además oficinas, comercio y construcción y ninguna de las tres aparece, y porque los cruces de sector se listan al final sin explicar cuándo el lector debería irse allí.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-madrid.json",
+          "linea": null,
+          "cita": "\"a_hermanas_mismo_sector\": 3, \"a_otro_sector_misma_provincia\": [\"/convenio-hosteleria-madrid.html\",\"/convenio-limpieza-madrid.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 530,
+          "cita": "<a href=\"/convenio-hosteleria-madrid.html\">Convenio de Hostelería — Madrid</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "Sin genéricos y los tres de prosa dicen sector y provincia ('metal de Valencia'). No es 3 porque el bloque final repite el mismo rótulo 'Convenio del Metal — X' que las otras ocho fichas: es descriptivo, pero mecánico.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-madrid.json",
+          "linea": null,
+          "cita": "\"anchors_genericos\": []"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 325,
+          "cita": "El <a href=\"/convenio-metal-valencia.html\">metal de Valencia</a>, en cambio, añade una tercera gratificación"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 527,
+          "cita": "<a href=\"/convenio-metal-barcelona.html\">Convenio del Metal — Barcelona</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "El puente está en la sección correcta pero no en el punto de la necesidad: el enlace cierra la sección colgado del párrafo de código REGCON y firmantes, no del paso que lo pide. El paso que manda pedir la nómina detallada por escrito no enlaza plantilla-solicitar-nominas.html y el que fija el plazo de un año por mensualidad no enlaza plantilla-reclamar-atrasos-convenio-salarial.html. Es el mismo patrón que este eje puntuó 1 en convenio-metal-sevilla, con el mismo bloque y el mismo anchor.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 450,
+          "cita": "<h2 id=\"reclamar\">¿Cobras menos de lo que fija tu grupo?</h2>"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 458,
+          "cita": "Firmantes: <strong>AECIM, CCOO de Industria de Madrid y UGT-FICA Madrid</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+        }
+      ],
+      "parche": "Dos enlaces, cada uno en su paso. En la línea 454, donde se pide la nómina detallada: '…si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores). <a href=\"/plantilla-solicitar-nominas.html\">Usa esta plantilla para pedírselas a tu empresa por escrito</a>.' En el paso del plazo, antes de la línea 458: 'Plazo: un año por cada mensualidad (art. 59.2 ET), así que <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">reclama por escrito la diferencia de las últimas 12 mensualidades</a> antes de que prescriban.' Ahí y no al cerrar la sección porque cada plantilla resuelve exactamente la acción que el paso acaba de exigir; el enlace genérico a la guía puede quedarse donde está.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Madrid es la provincia con más fichas del corpus (metal, hostelería, limpieza, oficinas, comercio, construcción) y la ficha del metal sólo reconoce dos. Es el mejor sitio del sitio para demostrar la dirección 'otro sector, misma provincia' y está a medio hacer. Detalle transversal del clúster: Madrid, Zaragoza y Navarra advierten en prosa de que existe un convenio distinto de Comercio del Metal, pero ninguna puede enlazarlo porque el corpus sólo tiene esa ficha para Barcelona y Bizkaia; y Barcelona y Bizkaia, que sí tienen destino, no traen la advertencia. La desambiguación está escrita justo donde no hay adónde ir. Calibración de 6.3 en esta tanda: el párrafo 'Comparación con otras provincias del sector' lo llevan 8 de las 9 fichas del metal (11 en todo el corpus), así que dentro de este sector es la norma y vale 2; el 3 se reserva a las que reparten los enlaces por varios momentos del cuerpo (Asturias, Zaragoza). Si el sintetizador compara con el 3 que se dio a convenio-metal-sevilla por ese mismo párrafo, conviene normalizar en una dirección u otra."
+}

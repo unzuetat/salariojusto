@@ -1,0 +1,185 @@
+{
+  "slug": "convenio-limpieza-asturias",
+  "veredictos": [
+    {
+      "eje": "E1",
+      "id": "5.7",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Abierto el HTML en las lineas citadas: el h2 existe literalmente y la seccion entera se construye sobre 16.576 EUR. Contrastado con convenio-metal-sevilla.html linea 627, que cita el RD 126/2026 con 17.094 EUR anuales, y con el determinista (smi.cita_17094=false, smi_obsoleto_citado=[16.576], hardfail 12.2 ya marcado). Aritmetica verificada en la tabla de la linea 326: 16.576,05 EUR quedan 517,95 EUR por debajo de 17.094 EUR, no cinco centimos por encima.",
+      "prueba": {"linea": 315, "cita": "<h2>Verificacion A+B - todas las categorias cumplen el SMI 2026</h2>"}
+    },
+    {
+      "eje": "E1",
+      "id": "5.7",
+      "veredicto": "MATIZADO",
+      "motivo": "El hecho es cierto y la cita es literal (linea 316), pero no es un hardfail distinto del anterior: es la segunda aparicion del mismo SMI erroneo dentro de la misma seccion. Declararlo dos veces infla el recuento de hardfails de la ficha. Enunciado corregido: 'El SMI obsoleto se enuncia dos veces en la misma seccion -titular (315) y protocolo A+B (316)-, ademas de la linea 313 y la 331; es una sola no conformidad con cuatro puntos de reparacion.'",
+      "prueba": {"linea": 316, "cita": "B) cruzar el resultado con el SMI 2026 (16.576 € anuales, art. 27.1 ET)"}
+    },
+    {
+      "eje": "E1",
+      "id": "5.10",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Buscada la refutacion en toda la pagina: grep de href=\"http en el cuerpo (lineas >190) devuelve cero resultados, y el determinista da enlaces.externos_total=0 y externos_oficiales=[]. La linea 461 escribe el dominio del BOPA como texto plano. La escala del eje fija 0 = sin enlaces oficiales, que es exactamente el caso.",
+      "prueba": {"linea": 461, "cita": "<strong>Boletin Oficial del Principado de Asturias (BOPA)</strong> - sede.asturias.es/bopa - para consulta y verificacion independiente."}
+    },
+    {
+      "eje": "E1",
+      "id": "9.1",
+      "veredicto": "MATIZADO",
+      "motivo": "Las dos observaciones son ciertas y verificadas (el sello nombra solo el BOPA 146 mientras la linea 454 declara vigente la tabla del BOPA 200; y el bloque de autoria dice 'el boletin oficial' sin nombrarlo, frente a convenio-comercio-madrid.html:438 'BOCM Num. 183 de 2-ago-2025' y convenio-metal-sevilla.html:633 'BOP de Sevilla num. 26, 9-feb-2026'). Pero la nota 1 no encaja con la escala del propio eje: 1 es 'fecha vaga' y el sello lleva fecha concreta y coherente -28 de mayo de 2026, posterior al ultimo boletin que la ficha cita (17-X-2025)-, lo que corresponde a 2. Ademas 'quien siga el sello aterriza en la tabla equivocada' es excesivo: el sello no enlaza a ningun sitio (externos_total=0) y la vigencia de la correccion se afirma en el hero, en datos clave y en fuentes. Enunciado corregido: 'Nota 2. El sello tiene fecha concreta y coherente pero solo acredita el BOPA 146/2025, omitiendo la correccion del BOPA 200 que sostiene la tabla publicada; y la firma de autoria no nombra el boletin, a diferencia de comercio-madrid y metal-sevilla. Le falta el escalon 3 (decir que se cotejo exactamente), no el 1.'",
+      "prueba": {"linea": 207, "cita": "<strong>✓ Verificado</strong> contra BOPA Num. 146/2025 por SalarioJusto · ultima revision 28 de mayo de 2026"}
+    },
+    {
+      "eje": "E1",
+      "id": "9.2",
+      "veredicto": "MATIZADO",
+      "motivo": "La parte solida y verificada es la caducidad de la pista: 'prevista para iniciarse la primera semana de febrero de 2026' se enuncia en futuro en las lineas 236 y 495 de una ficha cuya revision visible es del 28-may-2026. Pero la razon invocada -'menciona la vigencia sin consecuencia para el lector', que es el escalon 1- se refuta en la propia pagina: el hero dice hasta cuando valen las tablas y la linea 516 le dice al lector que la ultraactividad no autoriza a bajarle el sueldo. Segun la escala eso es 2 ('dice hasta cuando valen estas tablas'), y lo que falta es el 3 (que pasara despues y que vigilar). Enunciado corregido: 'Nota 2. Dice hasta cuando valen las tablas, pero el unico hito futuro que ofrece -la apertura de la mesa en febrero de 2026- esta caducado en una ficha revisada en mayo de 2026 y no se sustituye por ninguna senal que vigilar.'",
+      "prueba": {"linea": 198, "cita": "la tabla 2025 sigue plenamente aplicable en 2026 hasta la firma del nuevo convenio (negociacion prevista primera semana de febrero 2026)"}
+    },
+    {
+      "eje": "E2",
+      "id": "3.1",
+      "veredicto": "MATIZADO",
+      "motivo": "El recuento no cuadra: de las 8 frases de corpus.frases_compartidas_top no son seis sino CINCO las del bloque '¿Cobras menos?' (lineas 516, 519 x3 y 520); las otras tres son del bloque 'Quien audita esto' (526-527). Ademas la propia escala del eje E2 clasifica 'como reclamar' como cromo inevitable junto a avisos legales y metodologia, y advierte que un ratio alto por boilerplate legitimo no merece castigo. Lo que si se sostiene, y es el hallazgo util, es la pieza especifica: verificado con grep que 'descuelgue (Art. 34)' aparece identico en 11 fichas de sectores y provincias distintos (hosteleria Cadiz, Malaga, Granada, Madrid, Valencia; limpieza Asturias, Malaga, Madrid, Valencia, Zaragoza; oficinas Valencia), sin constancia de que ese sea el articulo de inaplicacion de ESTE convenio. Enunciado corregido: 'El boilerplate compartido es cromo legitimo (como reclamar y metodologia), pero arrastra un dato de derecho sin verificar: el (Art. 34) del descuelgue esta plantillado identico en 11 fichas de sectores distintos.'",
+      "prueba": {"linea": 520, "cita": "debe seguir el procedimiento de descuelgue (Art. 34) con periodo de consultas y comunicacion a SASEC"}
+    },
+    {
+      "eje": "E2",
+      "id": "4.5",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificados los dos codigos en el HTML: 33000735011979 en datos clave (linea 230) y en fuentes oficiales (linea 460); 33000635011982 en el bloque de reclamacion (linea 522). Son la misma pagina y ambos se presentan como 'Codigo REGCON' de este convenio. Buscada refutacion en toda la ficha: no hay ninguna nota que explique la discrepancia ni que atribuya el segundo codigo a otro convenio.",
+      "prueba": {"linea": 522, "cita": "Codigo REGCON: <code style=\"font-family:monospace;font-size:13px;\">33000635011982</code>"}
+    },
+    {
+      "eje": "E2",
+      "id": "12.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Abierta la ficha de contraste: convenio-metal-sevilla.html linea 627 cita el RD 126/2026 con 17.094 EUR anuales y enlace al BOE-A-2026-3815, frente a los 16.576 EUR de la linea 316 de Asturias. La contradiccion entre fichas del mismo corpus es real. Nota de consolidacion: es el mismo defecto que E1 5.7, E3 5.7 y el determinista 12.2; debe contarse una sola vez al agregar.",
+      "prueba": {"linea": 627, "cita": "<strong>Real Decreto 126/2026</strong>, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparacion."}
+    },
+    {
+      "eje": "E3",
+      "id": "5.7",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Cita literal verificada en la linea 331. Comprobado tambien el arrastre que denuncia: la fila de la comparativa (linea 482) dice '0 de 27 - 2 al limite (+5 cents)' y el cierre (linea 487) repite 'ninguna categoria queda formalmente bajo el SMI 2026'. Con 17.094 EUR las dos afirmaciones se invierten. Mismo defecto que E1 5.7 y E2 12.1: consolidar.",
+      "prueba": {"linea": 331, "cita": "Las 27 categorias del convenio cumplen formalmente el SMI 2026 gracias a la combinacion de tres pagas extras (15 pagas anuales) y la clausula expresa de garantia."}
+    },
+    {
+      "eje": "E3",
+      "id": "4.5",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Misma comprobacion que en E2 4.5: los dos codigos existen y conviven en la pagina (230 y 460 frente a 522). Duplicado con E2 4.5; contar una sola vez.",
+      "prueba": {"linea": 460, "cita": "<strong>REGCON</strong> (Registro Central de Convenios y Acuerdos Colectivos del Ministerio de Trabajo) - Codigo de convenio: 33000735011979 (tambien identificado como 3300735)."}
+    },
+    {
+      "eje": "E4",
+      "id": "2.4",
+      "veredicto": "MATIZADO",
+      "motivo": "Los hechos se sostienen todos y son comprobables: el title perdio 'Limpiador/a' en el rewrite del 4-ago (819c724) tras llevarlo en las tres versiones anteriores -verificado con git show sobre fa6413f, 0c453e1 y c1b0591-; el dato historico es exacto (analisis/gsc-export-2026-06-28/paginas.csv da 205 clics, 16.651 impresiones, 1,23%, pos 6,16) y el actual coincide con el determinista (130 / 7.511 / 1,73% / 6,33); y 1.447 EUR es el anual entre 12 en un convenio de 15 pagas. Lo que no encaja es la nota: la escala del propio eje reserva el 1 para 'completo pero sin cifra' y este title tiene cifra, sector, provincia y ano y cabe en 53 caracteres, lo que es un 2. Le falta el 3 ('la cifra es la del puesto que mas se busca'), justo por lo que el eje describe. Enunciado corregido: 'Nota 2. El title cumple la formula pero la cifra viaja sin puesto desde el 4-ago y es un prorrateo a 12 en un convenio de 15 pagas; se queda en 2 por no ser la cifra reconocible del puesto.'",
+      "prueba": {"linea": 6, "cita": "<title>1.447 €/mes: tablas salariales Limpieza Asturias 2026</title>"}
+    },
+    {
+      "eje": "E4",
+      "id": "2.5",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado con git show: la meta de junio y julio (fa6413f, 0c453e1, c1b0591, 3e5165e) decia 'Limpiador/a 1.447 €/mes con las pagas prorrateadas en 12 (17.365 €/ano)' y advertia 'el convenio fija 15 pagas (3 extras, Art. 27)'; el recorte del 4-ago elimino las dos cosas. El badge del hero (linea 196) anuncia 15 pagas, de modo que la contradiccion con la meta es real. Buscada refutacion: ni las 35 horas ni las tres pagas extras aparecen en la meta actual.",
+      "prueba": {"linea": 7, "cita": "<meta name=\"description\" content=\"Limpiador/a 1.447 €/mes (17.365 €/ano) segun el convenio de Limpieza de Asturias. Tablas 2025 vigentes en 2026 por ultraactividad. Jornada 38,5 h/sem.\">"}
+    },
+    {
+      "eje": "E5",
+      "id": "6.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Enumerados uno a uno los href del cuerpo entre las lineas 190 y 531: solo hay tres (313 a la calculadora, 398 el CTA a /#verifica-convenio y 522 la guia de reclamacion); los nueve enlaces a fichas hermanas estan todos en el bloque final 531-548. La escala fija 1 = 'los hay pero agrupados al final', que es literalmente el caso.",
+      "prueba": {"linea": 534, "cita": "<li><a href=\"/convenio-limpieza-edificios-locales.html\">← Pilar estatal: Convenio de Limpieza de Edificios y Locales</a></li>"}
+    },
+    {
+      "eje": "E5",
+      "id": "6.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Buscada la refutacion en toda la ficha: grep -c 'metal-asturias' sobre convenio-limpieza-asturias.html devuelve 0, y la lista final (531-548) solo tiene hermanas de limpieza mas guias transversales. La direccion inversa si existe: convenio-metal-asturias.html linea 578 enlaza a esta ficha. Coincide con el determinista (a_otro_sector_misma_provincia=[]). Escala: 1 = solo hermanas del mismo sector.",
+      "prueba": {"linea": 578, "cita": "<li><a href=\"/convenio-limpieza-asturias.html\">Convenio de Limpieza — Asturias</a></li>"}
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado que las dos plantillas existen en el repo (plantilla-solicitar-nominas.html y plantilla-reclamar-atrasos-convenio-salarial.html) y que la ficha no enlaza a ninguna: las cinco ocurrencias de 'plantilla' en el HTML son 'ampliacion de plantilla' o texto del schema, ninguna es un enlace al kit. El unico puente es la guia generica de la linea 522, al cierre. Escala: 1 = puente al final, fuera de contexto.",
+      "prueba": {"linea": 519, "cita": "<strong>Pide nomina detallada por escrito</strong> si los conceptos no aparecen separados."}
+    },
+    {
+      "eje": "E6",
+      "id": "7.2",
+      "veredicto": "MATIZADO",
+      "motivo": "La nota 0 se sostiene: la regla td.sal de la linea 149 pinta en verde la columna de bruto anual (35 celdas) y las lineas 323-325 anaden verde en linea a la columna 'vs SMI', que es cifra salarial. Y 'la peor de las seis' tambien: verde_en_tablas es 38 frente a 19 de Zaragoza y 0 en comercio-madrid, hosteleria-valencia, metal-sevilla y tecnicos-espectaculos. Caen dos cosas del enunciado. Primera: 'tablas.verde_en_tablas = 3' es falso, el determinista da 38 (la lista interna: 35 + 3 + 0). Segunda, y mas grave, el contraste invocado: metal-barcelona y metal-bizkaia NO evitan ese uso, ambas pintan td.num en verde (linea 93 y linea 143 respectivamente) y suman 28 y 84 celdas verdes en tabla. La unica ficha que sirve de contraste es metal-sevilla, que es la que el propio parche copia.",
+      "prueba": {"linea": 143, "cita": "convenio-metal-bizkaia.html: td.num{font-weight:600;color:var(--green);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;} (verde_en_tablas=84)"}
+    },
+    {
+      "eje": "E6",
+      "id": "7.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Buscada la refutacion: grep -c 'nota-editorial' sobre la ficha devuelve 0, mientras convenio-metal-sevilla.html tiene 3. Contados los dos callouts que ocupan su lugar: linea 236 = 119 palabras y linea 240 = 112 palabras, ambos por encima de cien y sobre un solo asunto cada uno. Los cinco parrafos de parrafos.largos_100 (244, 313, 391, 492, 513) coinciden con el determinista.",
+      "prueba": {"linea": 240, "cita": "<strong>Tres pagas extras anuales - el mas generoso del sector.</strong> (112 palabras en un solo bloque; la ficha no tiene ningun div nota-editorial)"}
+    },
+    {
+      "eje": "E6",
+      "id": "7.5",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Los dos h2 existen en las lineas citadas y estan a 48 lineas uno de otro. Comprobado el contenido de la linea 417: ocho vinetas de bocadillo, vacaciones, excedencias, permisos, pago garantizado, atrasos, tiempo parcial y remision al estatal, ninguna anticipada por el rotulo. El determinista confirma que la jerarquia formal esta bien (h1=1, saltos_jerarquia=[]), que es justo lo que el eje concede.",
+      "prueba": {"linea": 417, "cita": "<h2>Particularidades adicionales del convenio</h2>"}
+    },
+    {
+      "eje": "E6",
+      "id": "8.1",
+      "veredicto": "MATIZADO",
+      "motivo": "La heterogeneidad del bloque es real y esta verificada (ocho vinetas sin criterio comun, colocadas tras la subrogacion). Pero la frase que sostiene el hallazgo -'sus contenidos tienen sitio natural en secciones ya existentes'- no se sostiene: en headings.lista no hay ninguna seccion de jornada, descansos, vacaciones ni permisos, y el propio parche tiene que inventarlas ('Jornada, descansos y vacaciones', 'Permisos y excedencias'). El contenido no sobra, sobra el contenedor, y reubicarlo exige crear secciones nuevas. Enunciado corregido: 'El h2 Particularidades adicionales es un cajon de sastre de ocho vinetas heterogeneas; su contenido es util (permisos, vacaciones, interes de demora del Art. 29) pero no tiene seccion propia donde ir: reubicarlo obliga a crear dos secciones que la ficha hoy no tiene.'",
+      "prueba": {"linea": 419, "cita": "<li><strong>Bocadillo dentro de jornada efectiva:</strong> ... </li> (primera de ocho vinetas; la ficha no tiene h2 de jornada ni de permisos donde reubicarla)"}
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "La metrica exige las dos citas y las dos estan y son literales: la cita del Art. 4 aparece palabra por palabra en la linea 236 y en la 388, y el remate del decaimiento del Art. 86.3 ET en ambas. Verificada tambien la segunda duplicacion que alega: las tres pagas extras se explican enteras en la vineta de la linea 214 y otra vez en el callout de la 240. No hay contexto alrededor que las diferencie: son dos redacciones completas del mismo contenido.",
+      "prueba": {"linea": 388, "cita": "El texto del Art. 4 establece que \"una vez denunciado el convenio, y en tanto no se llegue a un acuerdo sobre el nuevo, se entendera que el contenido integro normativo del presente convenio mantiene su vigencia hasta la fecha de la firma del nuevo convenio colectivo\"."}
+    },
+    {
+      "eje": "E6",
+      "id": "8.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Buscada la refutacion en toda la pagina con grep -i 'paritaria': solo tres ocurrencias (391, 438 y 439) mas una mencion incidental en la 516. La primera, la de la linea 391, usa el termino dando por sabido que es y que puede hacer; la explicacion de que es y de que sus acuerdos vinculan llega en la pill-card de la 439, 48 lineas despues. Coincide con jerga.comision paritaria.explicacion_cerca=false del determinista. Las otras dos jergas si tienen explicacion_cerca=true, como el eje reconoce.",
+      "prueba": {"linea": 391, "cita": "La Comision Paritaria fija anualmente los costes minimos repercutibles para las categorias de Limpiador/a y Especialista"}
+    },
+    {
+      "eje": "E6",
+      "id": "11.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Los numeros coinciden con el determinista (sin_th=0, sin_scope=3, sin_caption=3; tabla de 43 filas x 5 columnas en la linea 248) y la escala del eje define el 1 exactamente asi: 'con th pero sin scope ni caption'. Comprobada ademas la norma invocada: 11.1 esta escrita en .claude/agents/sj-eje-e6-forma.md lineas 49-51, no es una convencion importada de fuera. Nota: ninguna ficha del repo usa scope ni caption, de modo que el defecto es del corpus entero, no de esta ficha en particular.",
+      "prueba": {"linea": 51, "cita": ".claude/agents/sj-eje-e6-forma.md: \"0 sin th · 1 con th pero sin scope ni caption · 2 con th y scope · 3 completa y con caption que describe la tabla\""}
+    },
+    {
+      "eje": "E6",
+      "id": "12.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Extraidas las 35 categorias de la tabla salarial: todas las declinables llevan forma inclusiva (Director/a, Jefe/a, Oficial/a, Limpiador/a, Ayudante/a, Peon/a, Conductor/a-Limpiador/a...) salvo una, 'Peon Especialista' en la linea 300, seis filas antes de 'Peon/a' en la 307. Las demas que el determinista marca como candidatas (Botones, Ordenanza, Telefonista, Especialista) son epicenas o invariables, no son fallos. El hallazgo es exacto y unico. La norma existe en el proyecto (inclusivo en categorias desde el borrador).",
+      "prueba": {"linea": 300, "cita": "<tr><td class=\"cat\">Peon Especialista</td><td class=\"num\">41,75 €/dia</td>...</tr> frente a la linea 307 <td class=\"cat\">Peon/a</td>"}
+    },
+    {
+      "eje": "E6",
+      "id": "12.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Abierta convenio-limpieza-zaragoza.html y comprobadas las dos afirmaciones, que caen del lado del eje. Primera: la ficha de Zaragoza dice cinco veces (lineas 7, 68, 256, 585 y 650) que la prorroga del Art. 5 NO opero porque CCOO denuncio el convenio el 2-oct-2025 y que esta en ultraactividad desde el 1-ene-2026; el censo determinista de Zaragoza lo respalda ('ultraactividad', fuenteEstado 'denunciado por CCOO el 2-oct-2025'). Segunda: Zaragoza tiene TRES gratificaciones extraordinarias (Art. 17) y su ficha dice literalmente 'Son 15 pagas en total' en la linea 360 y lo repite en la 418, no 14. Buscada la refutacion: el asterisco de '~14*' no tiene nota al pie en ninguna parte de la ficha de Asturias (unica ocurrencia de asterisco fuera del CSS). Y no hay excusa temporal: la ficha de Zaragoza ya decia esto en su commit del 30-jul-2026, anterior al ultimo commit de Asturias (4-ago-2026). Como consecuencia, tambien es falso el cierre de la linea 487 que hace de Asturias y Bizkaia 'los unicos convenios provinciales analizados' con 15 pagas: Zaragoza es un tercero dentro del mismo corpus.",
+      "prueba": {"linea": 360, "cita": "convenio-limpieza-zaragoza.html: \"<strong>3 gratificaciones extraordinarias</strong> ... Son <strong>15 pagas en total</strong> al ano (12 mensuales + 3 extras).\""}
+    }
+  ],
+  "resumen": {
+    "confirmados": 17,
+    "matizados": 7,
+    "refutados": 0,
+    "notas": [
+      "Cero refutados. Los seis ejes citaron lineas que existen y dicen lo que dicen; el desgaste se concentro en dos patrones: notas que no encajan con la escala del propio eje (E1 9.1, E1 9.2, E4 2.4) y contrastes con otras fichas que no aguantan la comprobacion (E6 7.2 sobre metal-barcelona y metal-bizkaia).",
+      "Consolidacion obligatoria antes de agregar: el SMI erroneo se declara CUATRO veces (E1 5.7 x2, E2 12.1, E3 5.7) y el determinista ya lo tenia como 12.2; es UNA no conformidad. El REGCON doble se declara dos veces (E2 4.5, E3 4.5); es UNA. Hardfails reales distintos en esta ficha: 3 (SMI 2026 falso, REGCON doble, contradiccion con la ficha de Zaragoza).",
+      "El hardfail 12.1 de E6 es el hallazgo mas limpio del lote: verificado contra el HTML de Zaragoza, contra su censo determinista y contra las fechas de commit, y sin nota al pie que rescate el asterisco de '~14*'.",
+      "Observacion que NO convierto en hallazgo por no ser mi papel: el asterisco de la linea 481 no tiene nota al pie en ninguna parte de la pagina, con independencia de que el dato fuese correcto.",
+      "Comprobacion de norma: 7.2, 7.4, 7.5, 8.1, 8.3, 8.6, 11.1 y 12.6 estan escritas en .claude/agents/sj-eje-e6-forma.md; 5.10, 9.1 y 9.2 en sj-eje-e1-verdad.md; 2.4 y 2.5 en sj-eje-e4-captacion.md; 3.1 en sj-eje-e2-singularidad.md; 6.3, 6.4 y 6.6 en sj-eje-e5-enlazado.md. Ninguna es una convencion importada de fuera del proyecto."
+    ]
+  }
+}

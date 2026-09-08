@@ -1,0 +1,183 @@
+{
+  "slug": "convenio-metal-valencia",
+  "fecha_verificacion": "2026-08-24",
+  "alcance": "14 hallazgos revisados: las 7 metricas con nota 0-1 (E1 5.10, E1 9.2, E3 1.2, E4 2.5, E5 6.6, E6 8.1, E6 8.3), las 2 afirmaciones de la observacion libre de E6 que el encargo pedia elevar (Art. 16 como posible hard-fail 4.5 y el verde en tablas) y 5 treses (E1 9.1, E2 3.2/3.3, E2 3.5, E2 8.4, E2 10.2). Ningun eje declaro hard-fails y hardfails_deterministas = [] en el JSON del 24-ago.",
+  "contexto": {
+    "determinista_usado": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-valencia.json",
+    "deriva_20ago_vs_24ago": "Sin deriva: solo cambia dias_desde_commit (21 -> 25) y el orden de frases_compartidas_top. Las cifras citadas por los ejes (ratio_tabla 0,141 · 2.677 palabras de prosa · 3/6 FAQ clonadas · meta_len 303 · 17 entrantes · al_kit con un solo destino) siguen igual.",
+    "ventana_medicion_abierta": false,
+    "ultimo_commit": "2026-07-30",
+    "nota_freno_9_7": "Ventana cerrada (25 dias a 24-ago): los parches son aplicables ya, como dicen E1, E2, E4 y E6."
+  },
+  "veredictos": [
+    {
+      "eje": "E6",
+      "id": "obs · Art. 16 (elevado a hard-fail 4.5)",
+      "veredicto": "REFUTADO",
+      "motivo": "La observacion literal es correcta: el Art. 16 se cita como fuente de la paga de marzo en 241, 338, 354, 473, 526 y en el schema (68), y como fuente de la antiguedad consolidada en 359. Pero la conclusion no se sigue, ni como hard-fail ni como afirmacion. (1) El codigo 4.5 esta definido en la rubrica y en el protocolo como 'dos CIFRAS distintas para lo mismo en la misma pagina'; aqui no hay dos cifras en conflicto, hay un numero de articulo citado para dos conceptos distintos, que es otra cosa y no tiene codigo de bloqueo. (2) 'Una de las dos atribuciones tiene que estar mal' es falso de partida: un articulo puede tener apartados que regulen materias distintas, y el dataset del propio proyecto sostiene las DOS a la vez, con el apartado incluido en un caso. Sin el texto del BOP delante no hay forma de declarar erronea ninguna de las dos, y la regla de casa es no afirmar derecho sin fuente.",
+      "enunciado_corregido": "No es hard-fail 4.5 ni contradiccion demostrada. Queda una observacion menor de coherencia de citas, a siete lineas de distancia y dentro del mismo bloque de pagas: la antiguedad consolidada aparece como '(Art. 15)' en 352 y 353 y como '(Art. 16)' en 359. Lo minimo y exacto seria unificar la cita a Art. 16.1, que es la del dataset, o precisar el apartado en cada punto.",
+      "prueba": {
+        "archivo": "data/convenios/metal_val.json",
+        "linea": 30,
+        "cita": "\"antiguedad\": { \"tipo\": \"consolidada\", \"articulo\": \"Art. 16.1\", ... }  ·  linea 36: \"pagasExtras\": { ... \"pagaMarzo\": \"17 días de salario grupo el 15 de marzo (Art. 16)\", \"articulo\": \"Arts. 15-16\" }"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "obs · verde en tablas",
+      "veredicto": "REFUTADO",
+      "motivo": "El dato propio es correcto (17 celdas verdes, clases callout-info y sal, y td.sal lleva color:var(--green) en la linea 147), pero la comparacion es falsa: no es el outlier del corpus ni las ocho hermanas tienen verde_en_tablas = 0. En el determinista del 24-ago, convenio-metal-bizkaia tiene 84 celdas verdes y convenio-metal-barcelona 28 -en Barcelona el verde lo pinta td.num, la columna de importes, comprobado en su CSS-. En el corpus, 32 de las 54 fichas pintan salarios en verde. Valencia es la tercera del cluster del metal, no la excepcion.",
+      "enunciado_corregido": "Capa 0: 17 celdas de tabla en verde (clase sal), contra la norma de casa de salarios en tinta neutra. Es la tercera del cluster del metal por detras de Bizkaia (84) y Barcelona (28), y una de las 32 fichas del corpus con el mismo defecto de plantilla.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-bizkaia.json",
+        "linea": 0,
+        "cita": "\"verde_en_tablas\": 84"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "5.10",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Es exactamente el ancla del 1 ('solo al buscador o a la portada del boletin'). Verificado en el determinista -externos_oficiales contiene bop.dival.es dos veces (la portada del buscador), la ficha del convenio estatal en el BOE y el RD del SMI- y en el HTML: la unica traza de las tablas 2026 es 'registradas el 19-ene-2026', sin numero de boletin, sin fecha de publicacion y sin enlace. Busque por toda la ficha una referencia alternativa a esas tablas (bloque de fuentes 542-546, recursos 505-515, sello 202) y no hay ninguna.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 496,
+        "cita": "Texto del convenio en el BOP nº 203 (20-oct-2023); tablas 2026 registradas el 19-ene-2026. Buscador: <a href=\"https://bop.dival.es/\" target=\"_blank\" rel=\"noopener\">bop.dival.es</a>"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "9.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado con grep antes de aceptar el 'no aparece': '2027' aparece cero veces en toda la ficha, 'denunci' cero, 'ultraactividad' cero e 'IPC' cero. La unica ocurrencia de 'vigencia' con contenido es la parrilla de datos clave (229). Precision menor que no cambia la nota: el rango 2023-2026 tambien aparece en el titulo del convenio dentro del bloque de fuentes (542), pero sigue siendo un dato suelto sin consecuencia para el lector, que es el ancla del 1.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 229,
+        "cita": "<div class=\"stat-item\"><div class=\"stat-label\">Vigencia</div><div class=\"stat-value\">2023-2026 (Art. 4)</div></div>"
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Recorri las ocho preguntas una a una contra el HTML y el recuento del eje es correcto: responde 4 (cifra del oficial, frontera con el Comercio del Metal, festivo, complemento de baja) y deja 4 sin respuesta, lo que cae en el ancla del 1 ('de 3 a 4'). Los tres huecos concretos se sostienen: (a) los grupos 5, 6 y 7 -los del oficio- solo tienen EUR/dia y anual, sin mensual ni numero de pagas por el que dividir, mientras que en la misma tabla los grupos 3 y 4 si llevan EUR/mes; (b) 'antiguedad' aparece cinco veces en la ficha y ninguna dice si hoy se genera tramo nuevo -el dato existe en el dataset ('No hay sistema de trienios activo') y no llego al HTML-; (c) el listado de oficios (286) cuelga del bloque entero de operaciones, no de cada grupo, asi que un soldador no puede saber si es Oficial de 1.a, de 3.a o Especialista. 'Tiempo parcial' y 'media jornada': cero apariciones.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 286,
+        "cita": "Incluye electricistas, soldadores/as, montadores/as, mecánicos/as, instaladores/as de climatización y fontanería, chapistas y operarios/as de máquina."
+      }
+    },
+    {
+      "eje": "E4",
+      "id": "2.5",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Doble ancla y las dos se cumplen. Longitud: meta_len 303 en el determinista, casi el doble del rango util. Colocacion: conte los caracteres de la meta y el primer importe salarial ('22.462') empieza en la posicion 188 -el eje dice 'pasado el 168', que es cierto aunque se quede corto-, con lo que en el fragmento visible solo llegan la paga de marzo, las 1.752 h (pos. 135) y los 30 EUR/mes (pos. 165). Motivo sin cifra de salario es el ancla del 1.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-valencia.json",
+        "linea": 0,
+        "cita": "\"meta_len\": 303"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Mismo patron que Asturias y verificado igual: al_kit tiene un solo destino (/reclamar-diferencias-salariales-convenio.html) y en el HTML cuelga del parrafo de codigo REGCON y firmantes que cierra la seccion (490), no del paso que lo necesita. El paso 3 ('Pide la nomina detallada por escrito', 486) y el paso 5 (plazo del art. 59.2, 488) van sin enlace, y las dos plantillas que propone existen en el repo. 'plantilla' no aparece en toda la ficha.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 486,
+        "cita": "<li><strong>Pide la nómina detallada por escrito</strong> si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores).</li>"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado vinieta a vinieta, como exige el brief antes de decir 'sobra'. Las siete vinietas del cajon estan y seis tienen desarrollo previo: paga de marzo (241-248), plus de formacion (420-422 y FAQ 531), sistema de incentivos (434-441, con capitulo propio Arts. 29-39), plus de toxicos con la opcion de reducir jornada (407-409), jornada flexible de 135 h (366) y convenio estatal supletorio (511 en Recursos y 542-546 en Fuentes). La unica con informacion propia es la Comision Paritaria con su domicilio, y la sugerencia de reubicarla en el paso de reclamacion es viable porque esa seccion existe (482).",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 479,
+        "cita": "<strong>Comisión Paritaria</strong> con sede en FEMEVAL (Avda. Blasco Ibáñez 127, Valencia · cpmetalindustria@femeval.es), reuniones mensuales y acuerdos por unanimidad (Arts. 77-83)."
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Las dos duplicaciones estan citadas por pares y las dos se abren en el HTML. La primera es llamativa por la distancia: la advertencia de que el convenio no cubre a quien solo vende es la ultima vinieta de la lista de ambito (260) y reaparece completa en un callout cuatro lineas despues (264), dentro de la misma seccion. La segunda -paga de marzo narrada en 241-248, en la vinieta 473 y en la FAQ 526, siempre con el Art. 16 y los mismos 17 dias- tambien se sostiene.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 264,
+        "cita": "<strong>Ojo: en Valencia hay dos convenios de metal.</strong> El que estás leyendo es el de <strong>Industria</strong> (fabricación, instalación, reparación). Existe otro para el <strong>Comercio del Metal</strong>"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "9.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Cumple el ancla literal del 3 ('ademas dice que se cotejo exactamente'): el sello nombra el texto cotejado, el boletin del articulado, el codigo REGCON y las tablas, y el bloque de autoria separa por escrito lo transcrito de la elaboracion propia. La fecha (26-jul-2026) es posterior al ultimo hito que la propia ficha cita (tablas de 19-ene-2026). El eje ademas hace lo correcto al no contar dos veces la pega de la trazabilidad, que ya penaliza en 5.10. Aviso de calibracion, no refutacion: 49 de 54 fichas llevan fecha de revision y 45 el bloque de autoria, asi que el 3 no discrimina.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 202,
+        "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BOP Valencia nº 203, código REGCON 46000105011981) y las tablas salariales 2026 registradas el 19 de enero de 2026, por SalarioJusto"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.2/3.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Numeros exactos contra el determinista del 24-ago (2.677 palabras de prosa, ratio_tabla 0,141) y el ancla del 3 -'prosa sin la cual la tabla se entenderia mal'- se cumple de forma verificable: en el mismo cuadro conviven EUR/dia (grupos 5, 6 y 7) y EUR/mes (grupos 3 y 4), asi que sin el parrafo 'Como leer la tabla' el lector compara magnitudes distintas dentro de una misma columna. Lo comprobe abriendo la tabla: la mezcla es real, no una licencia del eje.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 270,
+        "cita": "<strong>Cómo leer la tabla:</strong> el <strong>personal de operaciones</strong> (oficio) cobra el salario grupo <strong>por día</strong>; el personal técnico y de empleados/as lo cobra por mes."
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.5",
+      "veredicto": "MATIZADO",
+      "motivo": "Mismo caso que Asturias y que metal-sevilla en la pasada anterior: el ancla del 3 es 'preguntas que solo tienen sentido en esta provincia' y faq_clonadas = 3 sobre 6, es decir, la mitad de la FAQ son formulaciones que se repiten en el corpus con el toponimo cambiado. Las tres propias que cita el eje existen y son buenas, pero eso describe el ancla del 2 ('preguntas comunes con respuestas propias').",
+      "enunciado_corregido": "3.5 = 2: tres preguntas propias intransferibles (paga de marzo, plus de formacion de 30 EUR, dia 6 / dia 75 del complemento de baja) conviviendo con tres formulaciones clonadas de seis.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-valencia.json",
+        "linea": 0,
+        "cita": "\"faq_clonadas\": 3, \"faq_total\": 6"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "8.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "El ancla del 3 es 'la particularidad organiza la ficha' y aqui se ve sin interpretacion: el H1 (194) y el title arrancan por la paga de marzo, no por el rango salarial, y de ahi cuelgan la primera seccion, el ejemplo de Marcos, una FAQ propia, una vinieta del cajon y la comparacion con las hermanas. Contrastado con los titles de las diez fichas del metal: es la unica cuyo title vende un derecho concreto; las demas venden rango de cifras y solo Sevilla anade un contexto ('polo aeronautico'), que no es un derecho.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 194,
+        "cita": "Convenio del Metal de Valencia: la paga de marzo que casi nadie conoce"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "10.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "La ventaja frente al agregador es comprobable y esta donde el eje dice: la paga de marzo es un concepto que la cifra pelada de un comparador se deja fuera, la ficha lo abre en la primera pantalla (194 y 241) y lo cuantifica frente a otras provincias (248: 'algo mas de media paga extra adicional al ano'). Ademas lo devuelve en el paso de reclamacion (485), que es donde el lector lo necesita.",
+      "prueba": {
+        "archivo": "convenio-metal-valencia.html",
+        "linea": 248,
+        "cita": "Valencia añade la paga de marzo de 17 días, lo que en la práctica supone algo más de media paga extra adicional al año respecto a esas provincias."
+      }
+    }
+  ],
+  "resumen": {
+    "confirmados": 11,
+    "matizados": 1,
+    "refutados": 2,
+    "notas": [
+      "Veredicto sobre el Art. 16, que era el encargo principal: NO es hard-fail 4.5. El codigo esta definido como 'dos cifras distintas para lo mismo en la misma pagina' y aqui no hay cifras en conflicto, sino un numero de articulo citado para dos conceptos; ademas el dataset del propio proyecto (data/convenios/metal_val.json) sostiene las dos atribuciones -antiguedad 'Art. 16.1' y paga de marzo dentro de 'Arts. 15-16'-, asi que el HTML no contradice a su fuente interna. Lo unico accionable es de forma: unificar la cita de la antiguedad consolidada, que aparece como Art. 15 en 352-353 y como Art. 16 en 359.",
+      "Ningun eje declaro hard-fail y hardfails_deterministas = [] tambien en el JSON del 24-ago.",
+      "Contexto de plantilla que NO he contado contra la ficha: 7 tablas sin scope ni caption (54 de 54) y 17 celdas verdes (32 de 54 fichas). El verde si es un defecto real de esta ficha, pero no es su outlier: Bizkaia (84) y Barcelona (28) van por delante en el mismo cluster.",
+      "Observacion fuera de mi papel, para el sintetizador: el determinista dice 'ficha sin JSON asociado (metrica 9.4)' pero data/convenios/metal_val.json existe. Parece un fallo de emparejamiento de slug del script (metal_val vs convenio-metal-valencia), no un defecto de la ficha, y afecta a la metrica 5.3 (HTML vs JSON), que aqui no se ha podido comprobar.",
+      "E5 senala en su observacion libre una descalibracion de 6.3 entre esta tanda y el 3 que se dio a metal-sevilla por el mismo parrafo comparativo. No es un hallazgo sobre la ficha y no lo puntuo: es trabajo del sintetizador."
+    ]
+  }
+}

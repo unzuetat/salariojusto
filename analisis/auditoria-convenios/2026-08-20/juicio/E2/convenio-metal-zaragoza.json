@@ -1,0 +1,137 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-zaragoza",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 3,
+      "razon": "boilerplate_ratio 0,041 y solo 4 frases compartidas, las cuatro cromo inevitable (metodología, SMI, plazo del art. 59.2, pedir la nómina desglosada): ni una sola frase de sustancia compartida con las otras ocho fichas del sector. Y el bloque de reclamación, que en el corpus es el más clonado, aquí está localizado en la vía extrajudicial aragonesa en vez de remitir a un genérico.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 487,
+          "cita": "Acude a la Comisión Paritaria del convenio o a la vía extrajudicial ASECLA (Servicio Aragonés de Mediación y Arbitraje)."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 255,
+          "cita": "el marco autonómico AMIMA (Acuerdo Marco de la Industria del Metal de Aragón) ordena las materias comunes del sector en las tres provincias"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "2.489 palabras de prosa con ratio_tabla 0,111, y la prosa desmiente a la tabla, que es el trabajo más difícil que puede hacer un texto: dice explícitamente que esas cifras son un suelo y que en automoción el salario real va por encima gracias a primas y ex categoría. Sin ese párrafo, la tabla induce a creer que 21.274 € es lo que cobra un peón en Figueruelas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 253,
+          "cita": "Importante: las tablas son mínimos, no el salario real."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 349,
+          "cita": "Estas cifras son mínimos de convenio: consulta tu nómina para ver primas y ex categoría."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "93 frases exclusivas y 1.783 palabras exclusivas, y la pieza central no es transcripción: es una tesis comprobable —por qué las tablas zaragozanas parecen bajas frente a las de las otras ocho provincias— construida cruzando el art. 17 de primas, el art. 22 de ex categoría y las cifras de las fichas hermanas. Es el único sitio del cluster donde alguien explica una anomalía comparativa en vez de limitarse a exhibirla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 357,
+          "cita": "La diferencia es que Zaragoza descansa más en las primas de productividad y el ex categoría, que no salen en la tabla base pero sí en la nómina real de automoción."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 369,
+          "cita": "Complemento personal para quien, en la adaptación a grupos de 2017, venía de una categoría con salario superior al del grupo. Se trata como salario base y computa para todos los pluses."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 2,
+      "razon": "4 clonadas de 6, con el juego más genérico del sector (cuánto cobra un oficial, cuánto sube, qué antigüedad, tiene subrogación). Se sostiene en 2 porque las respuestas son propias y porque hay dos preguntas que solo caben aquí —por qué las tablas parecen bajas y qué es la paga de 400 € de enero—, pero como bloque sigue siendo más molde que hallazgo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 525,
+          "cita": "¿Por qué las tablas parecen bajas?"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 535,
+          "cita": "Ninguna activa. Solo un complemento ad personam para quienes lo consolidaron a 31 de diciembre de 1996 (Art. 16). Quien entra hoy no genera nuevos tramos."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 3,
+      "razon": "Es la única de las nueve donde la particularidad provincial organiza literalmente la ficha: el subtítulo la anuncia, el segundo H2 la desarrolla, el párrafo comparativo la usa para explicar las cifras, la FAQ la repite y el listado de particularidades la remata. Y no es un rasgo de convenio, es un rasgo de mercado: nombra la planta de automoción y su industria auxiliar como la razón por la que la tabla y la nómina no coinciden. Ninguna otra ficha del cluster nombra a su empresa dominante.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 253,
+          "cita": "En la práctica, sobre todo en automoción (Stellantis y su industria auxiliar), el salario real es más alto porque se suman las primas de productividad (Art. 17) y el complemento personal ex categoría (Art. 22)."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 206,
+          "cita": "El convenio del gran polo industrial y de automoción aragonés."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "El BOPZ publica el anexo I y nada más; nunca dirá que ese anexo es un suelo del que la nómina real de la mayor parte del sector se separa hacia arriba. Que la página lo diga —y diga en qué artículos está la diferencia— es exactamente lo que el boletín no puede dar y lo que el lector necesita antes de reclamar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 550,
+          "cita": "señalamos de forma explícita que las tablas son mínimos de convenio y que el salario real incorpora primas y ex categoría, para no inducir a error"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 3,
+      "razon": "El agregador publica justo el número que esta ficha desmiente. Quien llega buscando «cuánto se cobra en el metal de Zaragoza» y lee en el subtítulo que la tabla es un mínimo y que su nómina real lleva primas percibe la ventaja sin que nadie se la explique: se le está diciendo que la cifra que circula por ahí no es su sueldo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 206,
+          "cita": "Ojo: las tablas son mínimos — en automoción el sueldo real sube por primas de productividad y el complemento ex categoría."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 485,
+          "cita": "La tabla es el suelo, no el techo."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (último commit 2026-08-04, 15 días): no aplicar parches todavía. Es la ficha que mejor responde la pregunta rectora del eje: si desapareciera, se perdería la única explicación pública de por qué las tablas del metal de Zaragoza parecen bajas y no lo son. Un hueco relevante que no puntúo aquí porque es de completitud y no de singularidad, pero que conviene trasladar al eje que corresponda: esta ficha no tiene sección de baja médica ni menciona en ningún punto el complemento de incapacidad temporal, cuando siete de las nueve hermanas sí la tienen; y la ficha de Asturias afirma en su línea 460 que «Zaragoza paga el 25% de la base y solo en AT con hospitalización». O falta esa sección aquí, o esa afirmación de Asturias no está verificada: en cualquiera de los dos casos, dos fichas del mismo corpus no cuentan lo mismo sobre el mismo convenio y conviene resolverlo antes de que se convierta en un 12.1. Parche de investigación pendiente: la ficha nombra la planta de automoción pero no cierra el círculo; comprobar en REGCON si esa factoría tiene convenio de empresa propio y decirlo, porque de ello depende que el lector sepa si el anexo I le aplica o no."
+}
