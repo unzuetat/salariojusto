@@ -1,0 +1,78 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-asturias",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Cifra, año y fuente están arriba —H1 con el rango 2026 y sello contra el BOPA núm. 191—, pero lo primero que se ofrece es el rango de los 15 niveles y, sobre todo, un gancho editorial sobre la certeza de las tablas. La cifra del puesto más buscado, el Oficial/a de 1.ª de oficio, no aparece hasta la fila 7 de la tabla y hasta la FAQ.",
+      "evidencia": [
+        {"archivo": "convenio-metal-asturias.html", "linea": 207, "cita": "Convenio del Metal de Asturias : tablas 2026 de 19.937 € a 31.384 €"},
+        {"archivo": "convenio-metal-asturias.html", "linea": 215, "cita": "✓ Verificado contra el texto íntegro del convenio y sus tablas 2024-2026 (BOPA núm. 191, 1-oct-2024, Resolución de 18-9-2024, código 33000695011979)"},
+        {"archivo": "convenio-metal-asturias.html", "linea": 295, "cita": "7 · Oficial/a de 1.ª de oficio · Chófer de camión o grúa 48,17 1.884,02 22.394 €"}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 2,
+      "razon": "Responde 6 de las 8, y dos de ellas mejor que ninguna otra ficha del metal: el festivo trabajado tiene tarifa propia por nivel (127,48 a 202,20 €) y el domingo también (44,86 €), y la antigüedad se responde con regla y ejemplo (5% por quinquenio sin tope, 15% a los 15 años). Fallan dos: «¿y eso cuánto es al mes?» —todo está en €/día natural y en un mínimo anual, y la ficha reconoce que el salario se abona por mensualidades sin dar nunca la cifra mensual— y «trabajo media jornada, ¿cuánto me corresponde?», que no se menciona en toda la página.",
+      "evidencia": [
+        {"archivo": "convenio-metal-asturias.html", "linea": 389, "cita": "Plus por domingo trabajado de 44,86 € en 2026 (art. 7) y por festivo trabajado de 127,48 a 202,20 € según nivel."},
+        {"archivo": "convenio-metal-asturias.html", "linea": 369, "cita": "5% del salario convenio por cada quinquenio, sin límite máximo , desde la fecha de cumplimiento. Con 15 años de empresa, un/a Oficial/a de 1.ª suma un 15% sobre su salario convenio."},
+        {"archivo": "convenio-metal-asturias.html", "linea": 409, "cita": "El salario ordinario se abona por mensualidades dentro de los 10 primeros días del mes siguiente (art. 30)."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Camino de cinco pasos y con el detalle más útil del corpus en este punto: da la dirección física de la Comisión Mixta y su plazo de 15 días para reunirse, nombra la vía extrajudicial asturiana (SASEC) y el plazo del art. 59.2. Se queda en 2 porque el destino final es la guía genérica del kit, no un documento de reclamación que se pueda rellenar.",
+      "evidencia": [
+        {"archivo": "convenio-metal-asturias.html", "linea": 499, "cita": "Acude a la Comisión Mixta de Interpretación (domicilio en FEMETAL, c/ Marqués de San Esteban 1, Gijón — debe reunirse en 15 días) o a la vía extrajudicial del SASEC"},
+        {"archivo": "convenio-metal-asturias.html", "linea": 500, "cita": "Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 2,
+      "razon": "Resuelve el caso frontera mejor que ninguna otra ficha del metal —avisa de que en Asturias existe además el convenio de Montajes y manda comprobar el código de convenio en la nómina o el contrato, que es el método verificable— y la tabla lleva las categorías orientativas dentro de la propia fila del nivel. No llega a 3 porque esas categorías siguen siendo las denominaciones del boletín (Oficial/a de 1.ª de oficio, Especialista, Profesional Siderúrgico/a): un soldador o un calderero no encuentra su oficio escrito en ninguna parte de la tabla.",
+      "evidencia": [
+        {"archivo": "convenio-metal-asturias.html", "linea": 279, "cita": "No lo confundas con el de Montajes. [...] Si tu empresa es de montajes industriales o auxiliar de las grandes factorías, comprueba en tu nómina o contrato qué código de convenio se te aplica antes de comparar tablas."},
+        {"archivo": "convenio-metal-asturias.html", "linea": 301, "cita": "13 · Vigilante · Personal de limpieza · Aprendiz 18+ 42,48 1.694,17 19.937 €"}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 2,
+      "razon": "Explica la correspondencia conceptual con precisión: qué se devenga por día natural (los 365) y qué por día trabajado (asistencia, carencia de incentivo, jefatura), que es exactamente la distinción que aparece desglosada en una nómina del metal asturiano; declara el bruto antes de IRPF y avisa de que la tabla es el suelo, no el techo. No llega a 3 porque nunca aterriza en una cifra mensual pese a reconocer que el salario se paga por mensualidades, y porque no advierte de ningún error típico de lectura (prorrateo de extras, absorción, complemento absorbible).",
+      "evidencia": [
+        {"archivo": "convenio-metal-asturias.html", "linea": 267, "cita": "El salario se estructura por día natural : el salario convenio y el plus convenio se devengan los 365 días del año (art. 24) [...] Los pluses de asistencia, carencia de incentivo y jefatura de equipo se devengan por día trabajado ."},
+        {"archivo": "convenio-metal-asturias.html", "linea": 497, "cita": "Compara tu nómina con la tabla 2026 : salario convenio × días naturales, plus convenio, pagas extras — y añade asistencia, carencia de incentivo (si no hay primas), antigüedad y los pluses de tu puesto. La tabla es el suelo, no el techo."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 3,
+      "razon": "Es de las pocas que gestiona un dato que el convenio no publica en lugar de fabricarlo. El convenio fija salario por día natural y no un anual; la ficha calcula el «mínimo anual», publica la fórmula al pie de la tabla, la repite en el bloque de auditoría diciendo expresamente que es cálculo propio «para no inducir a error», y da el suelo real con su norma (SMI 2026, RD 126/2026, con enlace al BOE). Además declara el otro hueco posible —la cláusula de revisión del art. 23— y precisa que solo afectaría a 2027, nunca a lo cobrado en 2026.",
+      "evidencia": [
+        {"archivo": "convenio-metal-asturias.html", "linea": 563, "cita": "El «mínimo anual» es un cálculo propio con fórmula declarada — (salario convenio + plus convenio) × 365 + 2 pagas — para poder comparar entre provincias; lo señalamos para no inducir a error."},
+        {"archivo": "convenio-metal-asturias.html", "linea": 353, "cita": "Mínimo anual 2026 = (salario convenio + plus convenio de 2,86 €) × 365 días naturales + 2 pagas extras. No incluye el plus de asistencia (~9 €/día trabajado), la carencia de incentivo ni la antigüedad"},
+        {"archivo": "convenio-metal-asturias.html", "linea": 557, "cita": "Real Decreto 126/2026 , SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparación. BOE-A-2026-3815 ."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA ALGUIEN DEL METAL EN ASTURIAS ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial del metal en Asturias en 2026?»; (2) «¿y eso cuánto es al mes?»; (3) «trabajo en una auxiliar de Arcelor en Avilés, ¿me cubre este convenio o el de montajes?»; (4) «soy soldador, ¿en qué nivel de la tabla estoy?»; (5) «llevo 6 años, ¿me toca antigüedad?»; (6) «trabajé el festivo, ¿me lo tienen que pagar aparte?»; (7) «cobro menos que la tabla, ¿qué hago y hasta cuándo puedo reclamar?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO: (1) sí, tabla nivel 7 (295) y FAQ (535); (2) NO; (3) sí, y es lo mejor de la ficha (279); (4) NO —la tabla da «Oficial/a de 1.ª de oficio», no «soldador»—; (5) sí, con regla y ejemplo (369); (6) sí, con tarifa por nivel (389 y tabla de la línea 310); (7) sí (494-502); (8) NO. Seis de ocho. — Esta ficha es la que mejor responde a la pregunta que casi ninguna responde en el sector: el festivo y el domingo trabajados tienen importe propio y tabulado por nivel. Es material que debería replicarse. — El hueco de la conversión a mes duele más aquí que en Álava porque la propia ficha reconoce que el salario se paga por mensualidades (409) y aun así deja al lector con €/día natural y un mínimo anual. La conversión existe y es sencilla: mínimo anual dividido entre 14 pagas. — Sobre media jornada: cero apariciones de «tiempo parcial» o «media jornada» en todo el HTML. — FUERA DE MI EJE: el determinista marca 5 cifras huérfanas en la FAQ «¿Cuánto cobra un oficial del metal en Asturias en 2026?», sin fuente en la propia sección. — VENTANA ABIERTA: 12 días desde el último commit; no he redactado parches en este eje, así que no hay nada que aplazar."
+}

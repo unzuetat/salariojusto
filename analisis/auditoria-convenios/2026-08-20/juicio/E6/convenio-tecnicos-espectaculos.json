@@ -1,0 +1,221 @@
+{
+  "eje": "E6",
+  "slug": "convenio-tecnicos-espectaculos",
+  "metricas": [
+    {
+      "id": "7.2",
+      "nota": 2,
+      "razon": "verde_total_pagina = 4 y todos los usos son de decoración (fondo de callout, negritas de callout, cuadraditos de la check-list): no hay ninguna cifra salarial en verde porque la ficha no tiene tablas. No llega a 3 porque el verde no está reservado al sello — de hecho no hay sello.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 125,
+          "cita": ".callout-info strong{color:var(--green);}"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 139,
+          "cita": ".check-list li::before{content:'';position:absolute;left:4px;top:14px;width:12px;height:12px;background:var(--green);border-radius:2px;}"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.4",
+      "nota": 1,
+      "razon": "parrafos.largos_100 viene vacío, pero el contador solo mira <p>: el bloque de apertura es un <div class=\"callout-red\"> que funciona como ladrillo — una sola masa de texto que mete la huelga, el número de asistentes, la patronal, los dos años de bloqueo y cinco quejas distintas sin un solo respiro. La ficha no tiene nota editorial fragmentada; su sustituto (el card «Situación de un vistazo») sí está bien troceado, y por eso no es un 0.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 190,
+          "cita": "<div class=\"callout-red\">"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 191,
+          "cita": "El personal técnico de eventos y espectáculos protagonizó su <strong>primera huelga histórica</strong> en Álava, Bizkaia y Gipuzkoa, con concentración frente al Teatro Arriaga de Bilbao (más de 150 personas, según El Correo), dentro de una jornada convocada por Teknikariok, UGT, ESK, LAB, ELA y CCOO."
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 179,
+          "cita": "<div class=\"card-title\">Situación de un vistazo</div>"
+        }
+      ],
+      "parche": "Partir el callout-red en tres sub-párrafos con etiqueta en negrita, al modo de la nota editorial de metal-sevilla: «<strong>Qué pasó.</strong> El 15 de mayo de 2026 el personal técnico de eventos hizo la primera huelga del sector en Álava, Bizkaia y Gipuzkoa, con concentración ante el Teatro Arriaga de Bilbao (más de 150 personas, según El Correo).» / «<strong>Por qué.</strong> El paro llega tras dos años de bloqueo negociador con la patronal EUKI: la mesa del primer convenio del sector arrancó en enero de 2024 y no ha movido ficha.» / «<strong>Qué denuncian.</strong> Jornadas que exceden con mucho las ocho horas, descansos no respetados, trabajo nocturno y festivo sin reconocimiento y disponibilidad permanente. Confirmado por RTVE País Vasco, orain.eus/EITB, Naiz y El Correo, todos del 15-V-2026.»",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.5",
+      "nota": 2,
+      "razon": "headings.h1 = 1, saltos_jerarquia = [] y los 12 encabezados son preguntas o promesas concretas, no etiquetas huecas. No es 3 porque los encabezados no llevan ninguna cifra ni dato que oriente por sí solo: leídos en fila cuentan el problema, no el contenido.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 214,
+          "cita": "<h2>Qué te ampara mientras no hay convenio</h2>"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 244,
+          "cita": "<h2>Qué puedes hacer si trabajas en el sector</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.8",
+      "nota": 1,
+      "razon": "Es la ficha más lejos del canon de Madrid del piloto: no tiene sello «✓ Verificado contra …», no tiene bloque «Quién audita esto» y no tiene fecha de revisión visible (sello.presente = false, norma.quien_audita = false, norma.fecha_actualizacion_visible = false), mientras las otras cinco los llevan. No es 0 porque su contenido es 100% propio (corpus.boilerplate_ratio = 0.0, 76 de 76 frases exclusivas) y está bien estructurado. La ausencia de tablas sí está justificada: no hay convenio que tabular.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 176,
+          "cita": "En SalarioJusto documentamos lo que te corresponde según tu convenio. A veces, lo que te corresponde saber es que <strong>tu sector no tiene convenio propio</strong>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 173,
+          "cita": "<strong>✓ Verificado</strong> contra BOCM Núm. 183/2025 por SalarioJusto · última revisión 13 de agosto de 2026"
+        }
+      ],
+      "parche": "Añadir, justo tras <main>, el bloque canónico de sello adaptado a una ficha sin boletín propio: «<div class=\"callout-info eeat-sello\" style=\"margin:24px 0 0;border-left:4px solid var(--green);font-size:13.5px;\"><strong>✓ Verificado</strong> contra el RD 1435/1985 y el RDL 2/2015 (textos consolidados del BOE) y la cobertura del conflicto del 15-V-2026 en RTVE País Vasco, EITB, Naiz y El Correo · última revisión 30 de julio de 2026</div>». Y clonar de convenio-hosteleria-valencia.html el bloque «Quién audita esto» antes del footer.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 2,
+      "razon": "No sobra ningún bloque: las cinco secciones (por qué no hay convenio · qué te ampara · reivindicaciones · qué hacer · FAQ) responden a preguntas distintas y ninguna es relleno. No es 3 porque el segundo callout de esquirolaje, siendo cierto e interesante, se desvía del propósito de la página (qué cobro y qué me ampara) hacia crónica de conflicto.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 241,
+          "cita": "<strong>El esquirolaje externo es ilegal — incluso sin convenio.</strong> El Correo relató un episodio revelador: en el palacio de congresos Euskalduna"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "El orden es el correcto para una página cuya respuesta es «no existe convenio»: se dice en el h1, se resume en el card «Situación de un vistazo» y solo después se explica el porqué. respuesta_directa.cifra_en_primeros_bloques = false, pero aquí no hay cifra que dar salvo el SMI, y el card la señala como «Suelo retributivo».",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 184,
+          "cita": "<div class=\"stat-label\">Suelo retributivo</div><div class=\"stat-value\">Salario Mínimo Interprofesional vigente</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 2,
+      "razon": "Las FAQ repiten lo ya dicho en el cuerpo, pero es la redundancia esperada del formato (schema FAQPage) y ninguna sección del cuerpo duplica a otra sección del cuerpo. No llega a 3 porque el listado de sindicatos convocantes aparece tres veces casi idéntico.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 186,
+          "cita": "<div class=\"stat-value\">UGT, Teknikariok, ESK, LAB, ELA y CCOO</div>"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 283,
+          "cita": "Convocada por UGT, Teknikariok, ESK, LAB, ELA y CCOO, afectó a eventos culturales en Bilbao, Vitoria, San Sebastián y Leioa."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "El diccionario jerga viene vacío (ningún término del listado aparece), pero la ficha introduce por su cuenta un tecnicismo —esquirolaje externo— y lo explica en la misma frase en que lo usa, con la consecuencia jurídica incluida. No es 3 porque no traduce nada a dinero: «relación laboral especial» vs «común» decide qué convenio te aplica y nunca se dice qué diferencia supone en la nómina.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 241,
+          "cita": "Sustituir preventivamente a personal en huelga por trabajadores externos —el llamado <strong>esquirolaje externo</strong>— vulnera el derecho fundamental de huelga"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 3,
+      "razon": "norma.sindicatos reparte por igual (CCOO 4 · UGT 4 · ELA 4 · LAB 4) y el texto encabeza siempre por el sindicato asambleario del sector, Teknikariok, con ELA y LAB integrados sin nota a pie. Es lo que ninguna otra ficha del piloto hace: nombrar a los combativos del territorio como sujeto y no como apéndice.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 191,
+          "cita": "dentro de una jornada convocada por Teknikariok, UGT, ESK, LAB, ELA y CCOO"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 238,
+          "cita": "El sindicato asambleario Teknikariok —nacido en Bilbao en 2020— ha sido el motor que ha articulado por primera vez a un colectivo atomizado"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "11.1",
+      "nota": null,
+      "razon": "no_evaluada",
+      "evidencia": [],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 1,
+      "razon": "El esqueleto se aleja del corpus por partida doble: sin sello, sin bloque de autoría y sin card «Datos clave del convenio» (usa «Situación de un vistazo», con otro rótulo y otra semántica). Parte de la desviación es inevitable —es un explicador de un sector sin convenio, noindex y fuera del sitemap—, pero el sello y la firma no dependen del tipo de página: son norma de casa para toda landing.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 179,
+          "cita": "<div class=\"card-title\">Situación de un vistazo</div>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 242,
+          "cita": "<div class=\"card-title\">Datos clave del convenio</div>"
+        }
+      ],
+      "parche": "Renombrar el card a «Datos clave del sector» manteniendo sus seis stat-items, y añadir los bloques eeat-sello y eeat-firma descritos en el parche de 7.8, para que el esqueleto sea reconocible como ficha del corpus aunque el contenido sea un explicador.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 2,
+      "razon": "Un mismo concepto se llama siempre igual: «relación laboral especial» y «relación laboral común» se mantienen en los tres sitios donde aparecen (pill-cards, cuerpo y FAQ), y «personal técnico» no alterna con «técnicos» en masculino dentro del texto. norma.categorias_masc_total = 1 (un único «Oficial», y es cita del Estatuto, no categoría de tabla).",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 203,
+          "cita": "<div class=\"pill-card-title\">Relación laboral común</div>"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 277,
+          "cita": "Queda fuera de esa relación especial el personal técnico cuyas funciones son estructurales o permanentes en la empresa: ahí rige la relación común del Estatuto de los Trabajadores."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [
+    {
+      "id": "11.1",
+      "motivo": "tablas.n = 0 — la ficha no tiene ninguna tabla, y la ausencia está justificada porque el sector no tiene tablas salariales de convenio que publicar"
+    }
+  ],
+  "hardfails": [],
+  "observacion_libre": "Es la única ficha del piloto que no tiene sello ni firma, y los dos hard-fails deterministas (5.2 y 2.2) apuntan justo ahí. Merece decirse que el defecto es de plantilla, no de contenido: la pieza es la más original del piloto (boilerplate_ratio 0.0) y la mejor en tratamiento sindical. Fuera de mi eje: el título ocupa 95 caracteres y la meta 260, ambos por encima de lo que renderiza Google (eje SEO), y la ficha está en noindex + fuera del sitemap con 151 impresiones en 28 días, lo que sugiere revisar si el noindex sigue siendo deliberado."
+}

@@ -1,0 +1,160 @@
+{
+  "slug": "convenio-metal-sevilla",
+  "contexto": {
+    "ventana_medicion_abierta": true,
+    "ultimo_commit": "2026-08-10",
+    "dias_desde_commit": 9,
+    "parches_aplazados_correctamente": true,
+    "hardfails_declarados": 0,
+    "hardfails_deterministas": 0
+  },
+  "veredictos": [
+    {
+      "eje": "E4", "id": "2.4", "veredicto": "MATIZADO",
+      "motivo": "El hecho es cierto y coincide con el determinista (seo.title_tiene_euro = false), pero el enunciado es excesivo: el title SÍ cumple la fórmula de casa validada en GSC —'tablas salariales + provincia + año'— donde la cifra en euros es el ideal, no el requisito (feedback_formula_titles_convenios), y sí lleva cifra (+3%; determinista seo.title_tiene_cifra = true). Además, 'no responde a ninguna consulta' no es comprobable: el propio eje anota que operacion.gsc_28d viene vacío.",
+      "enunciado_corregido": "El title cumple la fórmula de casa (tablas + Sevilla + 2026) pero su única cifra es el porcentaje de subida; falta la cifra en euros del puesto, que la ficha ya publica (59,75 €/día oficial de 1ª, 54,69 €/día peón).",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 6, "cita": "<title>Convenio Metal Sevilla 2026: tablas del +3% (polo aeronáutico) | SalarioJusto</title>"}
+    },
+    {
+      "eje": "E4", "id": "2.5", "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado contra el determinista (seo.meta_len = 326) y recontado sobre el HTML: la meta tiene 326 caracteres y la cadena '52,86' empieza en el carácter 159, es decir fuera del recorte habitual (~155). El corte se lleva efectivamente la horquilla en euros, el ángulo aeronáutico y la traza al BOP.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 7, "cita": "Convenio de las Industrias Siderometalúrgicas de Sevilla 2024-2026 (+3% en 2026): salario fijado por día en 3 columnas (base + asistencia + productividad), | corte ~155 | de 52,86 € a 102,23 €/día trabajado, 76 categorías…"}
+    },
+    {
+      "eje": "E4", "id": "4.3", "veredicto": "CONFIRMADO",
+      "motivo": "Leído el bloque FAQ entero (líneas 603-621): el h3 visible y también su respuesta carecen de provincia, sector y año, mientras el name del JSON-LD sí los lleva. El determinista lo respalda: cifras.secciones_sin_anio incluye '¿Cuánto cobra un oficial de 1.ª?' y secciones_sin_fuente también. Busqué la desambiguación en el resto de la sección y no aparece hasta el h3 siguiente.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 615, "cita": "En el grupo de oficio, un <strong>oficial u oficiala de 1.ª</strong> suma <strong>59,75 € por día trabajado</strong> (40,27 € de base + 7,86 € de asistencia + 11,62 € de productividad). El de 2.ª, 58,70 €, y el de 3.ª, 55,74 €."}
+    },
+    {
+      "eje": "E5", "id": "6.2", "veredicto": "MATIZADO",
+      "motivo": "El hecho está verificado con grep propio sobre el repo: los únicos archivos que enlazan la ficha son convenios.html, index.html y mapa-del-sitio.html; ninguna ficha hermana ni guía la enlaza. Pero el 0 es excesivo. La escala define 0 como 'ausente o mal' y la ficha SÍ está enlazada desde el hub y desde la home —que es precisamente lo que mide el hard-fail 6.1 'huérfana o enterrada', no declarado por ningún eje—. Además el mismo eje puntúa con 1 a convenio-comercio-madrid, que NO está en el hub: dos situaciones equivalentes con notas distintas rompen la escala.",
+      "enunciado_corregido": "6.2 = 1: los 3 entrantes son índices (hub, home, mapa del sitio). Ninguna ficha hermana del metal ni ninguna guía la enlaza, pese a que ella enlaza a seis hermanas.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-sevilla.json", "linea": 313, "cita": "\"entrantes_desde\": [ \"convenios.html\", \"index.html\", \"mapa-del-sitio.html\" ]"}
+    },
+    {
+      "eje": "E5", "id": "6.6", "veredicto": "CONFIRMADO",
+      "motivo": "Verificado por grep: la ficha no contiene ni una sola ocurrencia de 'plantilla-'; su único puente al Kit es /reclamar-diferencias-salariales-convenio.html (determinista al_kit, 1 destino), colocado tras cerrar el procedimiento. Comprobé además que los dos recursos que propone el parche existen en el repo (plantilla-solicitar-nominas.html y plantilla-reclamar-atrasos-convenio-salarial.html), así que el parche no inventa páginas.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 573, "cita": "Código convenio: 41002445011982. Firmantes: FEDEME (patronal) y los sindicatos CCOO y UGT. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"}
+    },
+    {
+      "eje": "E6", "id": "8.1", "veredicto": "MATIZADO",
+      "motivo": "El hallazgo se sostiene: comprobé las nueve viñetas de «Particularidades» (552-562) una a una y todas tienen correlato previo en la misma página. Lo que cae es el parche: los tres elementos que propone 'salvar' porque 'no están dichos arriba' ya están arriba, y en la sección exacta a la que el parche los quiere llevar. Un parche que reubica lo que ya está en su sitio genera trabajo inútil y riesgo de duplicar.",
+      "enunciado_corregido": "8.1 = 1: la lista «Particularidades» (552-562) es un resumen colocado después del desarrollo; ninguna de sus nueve viñetas aporta información nueva. El parche correcto es suprimir el h2, la lista y su entrada del índice: no hay nada que reubicar.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 477, "cita": "Bolsa horaria (Art. 13) … las empresas disponen de 220 horas anuales de distribución irregular … | línea 479: «Las habituales quedan suprimidas; máximo 80 al año» | línea 437: «el convenio fija el 85% de la retribución durante el período de adaptación (Anexo VII)» | línea 528: «El convenio vence el 31 de diciembre de 2026: conviene vigilar la negociación del siguiente»"}
+    },
+    {
+      "eje": "E6", "id": "8.3", "veredicto": "CONFIRMADO",
+      "motivo": "Cotejadas ambas ubicaciones. El cuarto sub-párrafo de la nota editorial (257) y la lista de particularidades (555-559) enumeran los mismos cuatro hechos con los mismos artículos: pagas de 30 días sobre A+B+C, horas extra habituales suprimidas con máximo de 80/año, 100% del salario en baja por accidente (art. 26) y ascensos por concurso-oposición (art. 8.2).",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 257, "cita": "<strong>Particularidades.</strong> 2 pagas extra de 30 días sobre A+B+C; <strong>horas extraordinarias habituales suprimidas</strong> (máx. 80/año); <strong>100% del salario en baja por accidente</strong> desde el primer día (art. 26)…"}
+    },
+    {
+      "eje": "E6", "id": "11.1", "veredicto": "CONFIRMADO",
+      "motivo": "Triple comprobación: determinista (tablas.sin_scope = 12, tablas.sin_caption = 12, sin_th = 0), grep propio sobre el HTML (cero ocurrencias de 'scope=' y de '<caption') y recuento de estructura (10 <details class=\"fam\"> y 12 <table>). La norma invocada existe en este proyecto: métrica 11.1 de CANDIDATAS.md, asignada a E6 por la rúbrica v1.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 292, "cita": "<thead><tr><th>Categoría profesional</th><th class=\"num\">A · base</th><th class=\"num\">B · asist.</th><th class=\"num\">C · prod.</th><th class=\"num\">Total €/día</th><th class=\"num\">≈ bruto/año*</th></tr></thead>"}
+    },
+    {
+      "eje": "E1", "id": "2.1", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado. La cita de la línea 436 existe literal y publica la fórmula completa con sus artículos, marca la columna como estimación y acota el error (±3-5%); la línea 633 separa por escrito lo transcrito de lo calculado. Busqué en el resto del piloto y ninguna otra ficha separa transcripción de cálculo. El 3 se lo merece.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 436, "cita": "* <strong>≈ bruto/año — estimación orientativa, no cifra oficial.</strong> … Es decir, <strong>A × 425 + (B+C) × 359</strong>."}
+    },
+    {
+      "eje": "E1", "id": "5.8", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado en las tres citas: la subrogación va acotada a dos supuestos con su artículo (621), la nocturnidad lleva su excepción (línea 497: 'salvo que el puesto sea nocturno por su naturaleza o se compense con descanso') y la estimación anual lleva horquilla de error (436). No he encontrado ninguna afirmación tajante sin condición en el cuerpo.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 621, "cita": "Solo en supuestos concretos (Art. 29): contratas de <strong>mantenimiento con la Administración Pública</strong> y contratas privadas de mantenimiento de <strong>tendidos eléctricos y telecomunicaciones</strong>. En el resto de sectores hay una preferencia de ingreso del 50% de la plantilla, no una subrogación general."}
+    },
+    {
+      "eje": "E1", "id": "9.1", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado. El sello lleva fecha concreta (10-ago-2026), posterior al último boletín citado (BOP núm. 26 de 9-feb-2026), y el bloque de autoría dice qué se cotejó y contra qué documento, distinguiendo articulado de tablas. Cumple además la norma T10 del sello con el boletín correcto (BOP provincial, no BOE).",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 215, "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (Industrias Siderometalúrgicas de Sevilla 2024-2026, código 41002445011982, BOP de Sevilla) y las <strong>tablas salariales 2026</strong> (BOP núm. 26, 9-feb-2026, +3%), por SalarioJusto · última revisión 10 de agosto de 2026"}
+    },
+    {
+      "eje": "E1", "id": "9.2", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado: la caducidad está anunciada dos veces y en las dos se dice qué vigilar, no solo cuándo caduca. Comprobé que no hay contradicción con el censo (vigenciaFin 2026-12-31, estado vigente).",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 528, "cita": "El convenio vence el 31 de diciembre de 2026: conviene vigilar la negociación del siguiente."}
+    },
+    {
+      "eje": "E2", "id": "3.2/3.3", "veredicto": "MATIZADO",
+      "motivo": "El juicio de fondo (la prosa no es relleno: sin la explicación de A/B/C las cuantías no se entienden) tiene evidencia en las líneas 277 y 281 y lo sostengo. Lo que corrijo es el dato: 0.237 es el ratio de Sevilla, no un empate con Valencia; Valencia es 0.246 y es el más alto del piloto, Sevilla el segundo.",
+      "enunciado_corregido": "ratio_tabla 0.237, el segundo más alto del piloto tras hostelería-valencia (0.246), y aun así la prosa (3.212 palabras) es imprescindible para leer la tabla.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-hosteleria-valencia.json", "linea": 0, "cita": "texto.ratio_tabla = 0.246 (hosteleria-valencia) vs 0.237 (metal-sevilla)"}
+    },
+    {
+      "eje": "E2", "id": "3.4", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado contra el determinista (corpus.frases_exclusivas 116 de 122, palabras_exclusivas 2.427) y contra el HTML: lo exclusivo no es el topónimo sino los CNAE 30.30 y 33.16 que meten al aeroespacial en el ámbito funcional, y la columna anual con fórmula declarada. Ambos hechos solo tienen sentido en esta provincia.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 262, "cita": "incluye expresamente la <strong>industria aeroespacial y sus componentes</strong> (CNAE 30.30 «construcción aeronáutica y espacial» y 33.16 «reparación y mantenimiento aeronáutico»)"}
+    },
+    {
+      "eje": "E2", "id": "3.5", "veredicto": "MATIZADO",
+      "motivo": "Elogio inflado. Es cierto que las dos preguntas no clonadas solo caben aquí (608 y 617, comprobadas), pero 3.5 es una métrica determinista y el determinista da faq_clonadas = 4 de 6: dos tercios de las preguntas son el molde con el topónimo cambiado. 'Ejemplar' no se sostiene, y menos cuando el mismo eje otorga también un 3 a convenio-comercio-madrid con faq_clonadas = 0 de 4: con esa asignación la métrica deja de discriminar.",
+      "enunciado_corregido": "3.5 = 2: 4 de las 6 FAQ son formulaciones clonadas del molde; las dos exclusivas ('¿Por qué el salario se fija por día?' y '¿El convenio cubre el sector aeronáutico?') son genuinamente locales y se responden con las tres columnas.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-sevilla.json", "linea": 0, "cita": "corpus.faq_clonadas = 4 · faq_total = 6 · faq_clonadas_lista incluye '¿Cuánto cobra un peón del metal en Sevilla en 2026?', '¿Cuánto suben los salarios del metal de Sevilla en 2026?', '¿Cuánto cobra un oficial de 1.ª del metal en Sevilla?', '¿El convenio del metal de Sevilla tiene subrogación?'"}
+    },
+    {
+      "eje": "E2", "id": "8.4", "veredicto": "MATIZADO",
+      "motivo": "Elogio inflado y desalineado con la métrica. 8.4 mide 'lo que falta y en esta provincia debería estar'; la razón dada puntúa lo contrario —lo bien explotada que está la particularidad del censo— y su evidencia (H1, hero, h2, FAQ) demuestra presencia, no ausencia de huecos. Además el propio eje documenta el hueco en su observación libre: la ficha nombra el polo aeronáutico y no dice si Airbus Operations, Aernnova o Alestis tienen convenio de empresa por encima del provincial, que es la pregunta que ese polo genera. Con un hueco identificado por el propio auditor, el 3 no procede.",
+      "enunciado_corregido": "8.4 = 2: la particularidad del censo (polo aeronáutico) organiza la ficha entera, pero falta lo que en esta provincia y en ninguna otra debería estar: si las plantas del polo tienen convenio de empresa por encima de este provincial.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/juicio/E2/convenio-metal-sevilla.json", "linea": 0, "cita": "observacion_libre del propio E2: «nombra el polo aeronáutico y no responde la pregunta que ese polo genera … si el convenio provincial es realmente el suyo o si su planta tiene convenio de empresa por encima»"}
+    },
+    {
+      "eje": "E2", "id": "10.1", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado. La ventaja sobre el PDF está declarada y es comprobable en la página (familias plegables, total A+B+C por fila, estimación anual), y la afirmación de que el boletín no da los totales tiene respaldo interno: la propia ficha documenta en el bloque de autoría que 'los totales por día (A+B+C) son suma directa'. No es una afirmación sobre un documento que no puedo ver: es la metodología declarada.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 633, "cita": "Las cuantías diarias de las 76 categorías están transcritas de la publicación oficial; los totales por día (A+B+C) son suma directa."}
+    },
+    {
+      "eje": "E2", "id": "10.2", "veredicto": "MATIZADO",
+      "motivo": "La ventaja que la ficha declara es real y está en las líneas citadas (208 y 445). Lo que no se sostiene es la premisa con la que se justifica el 3 —'el agregador de nóminas publica un €/mes inventado para el metal de Sevilla'—: no hay ni una evidencia citada del agregador, y la rúbrica v1 exige evidencia para toda puntuación ('ninguna puntuación es válida sin evidencia citada'). El 3 puede sostenerse por lo que hace la ficha, no por lo que se supone que hace el competidor.",
+      "enunciado_corregido": "10.2 = 3 por lo comprobable: la ficha dice en la primera pantalla que el convenio no fija cifra mensual y explica por qué, y sitúa esa estructura frente a la de otras cinco provincias del metal. La comparación con el agregador queda sin evidencia y debe caer del enunciado.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 208, "cita": "el salario se fija <strong>por día</strong> en tres columnas (base + asistencia + productividad), con una subida del <strong>+3%</strong> en 2026."}
+    },
+    {
+      "eje": "E3", "id": "1.9", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado en las tres capas que cita: cuerpo (281), pie de tabla (436) y bloque de autoría (633). El dato que no existe —el anual— se declara como inexistente, se sustituye por una estimación marcada y se publica la fórmula. Es exactamente lo que pide 1.9.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 281, "cita": "El convenio no fija un salario anual, sino diario. En la tabla añadimos una columna <strong>«≈ bruto/año»</strong> como <strong>estimación orientativa</strong>"}
+    },
+    {
+      "eje": "E4", "id": "4.4", "veredicto": "MATIZADO",
+      "motivo": "La traza junto a la cifra existe y es buena en el hero, la tabla y el pie de estimación (285, 436). Pero 'ejemplar' sin excepciones choca con el determinista de la propia ficha: 13 cifras huérfanas (4,8%) y dos secciones con cifra y sin fuente en la sección, las dos FAQ de salario. Ahí la cifra sí viaja sin traza en la misma pantalla.",
+      "enunciado_corregido": "4.4 = 3 en el cuerpo y la tabla —la columna más frágil lleva su fórmula y su boletín pegados—, con la excepción de las dos FAQ de salario (606 y 615), que dan cuantías sin boletín en la sección (determinista: cifras.secciones_sin_fuente).",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-sevilla.json", "linea": 0, "cita": "cifras.secciones_sin_fuente = ['¿Cuánto cobra un oficial de 1.ª?', '¿Cuánto cobra un peón del metal en Sevilla en 2026?'] · cifras.huerfanas = 13"}
+    },
+    {
+      "eje": "E5", "id": "6.3", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado: el callout de la línea 445 vive dentro de la prosa, abre una duda (por qué aquí se paga por día) y la resuelve con cuatro enlaces a fichas hermanas, cada uno pegado al rasgo que lo justifica. Determinista: internos_en_cuerpo = 26, salida_del_cuerpo = true, enlaces.rotos = [].",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 445, "cita": "<strong>Comparación con otras provincias del sector.</strong> El metal de Sevilla fija el salario <strong>por día</strong> en tres columnas, algo poco habitual: el <a href=\"/convenio-metal-gipuzkoa.html\">metal de Gipuzkoa</a> lo hace por <strong>valor hora</strong>…"}
+    },
+    {
+      "eje": "E5", "id": "6.5", "veredicto": "MATIZADO",
+      "motivo": "Elogio parcialmente inflado. Es cierto que anchors_genericos = [] y que las anclas del callout 445 están escritas para su frase. Pero busqué el resto de la página y en la línea 599 hay dos anclas de catálogo sin sector, 'Ver Madrid' y 'Ver Zaragoza', que es justo el patrón que 6.5 penaliza ('sin aquí ni repetición mecánica'). Con dos anclas así en la ficha, 'ejemplar' no se sostiene.",
+      "enunciado_corregido": "6.5 = 2: las anclas del callout de la línea 445 son sintagmas contextuales ejemplares, pero la tarjeta de recursos (599) usa 'Ver Madrid · Ver Zaragoza', anclas de catálogo sin sector.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 599, "cita": "Compara con otras provincias del sector. <a href=\"/convenio-metal-madrid.html\">Ver Madrid</a> · <a href=\"/convenio-metal-zaragoza.html\">Ver Zaragoza</a>"}
+    },
+    {
+      "eje": "E6", "id": "7.4", "veredicto": "MATIZADO",
+      "motivo": "La mitad del elogio es cierta y la he verificado línea a línea: la nota editorial va en cuatro <p> con etiqueta en negrita (254-257), cumpliendo la norma de casa de la nota fragmentada. Pero 7.4 mide también los párrafos de más de 100 palabras, y el determinista marca uno: el pie de la estimación anual, con 119 palabras. 'Cumple la norma entera' es inexacto.",
+      "enunciado_corregido": "7.4 = 3 en la mitad que importa (nota editorial en 4 sub-párrafos etiquetados, única del piloto), con un párrafo de 119 palabras en el pie de la tabla (línea 436) que el determinista marca como largo.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-sevilla.json", "linea": 0, "cita": "parrafos.largos_100 = [{'linea': 436, 'palabras': 119, 'inicio': '* ≈ bruto/año — estimación orientativa, no cifra oficial…'}]"}
+    },
+    {
+      "eje": "E6", "id": "7.8", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado: el esqueleto es el canon (sello, índice, datos clave, nota editorial, tabla, pagas, jornada, vacaciones, pluses, FAQ, fuentes, quién audita) y el contenido exclusivo no está pegado al final —el h2 aeronáutico es el primero del cuerpo y el del salario diario el segundo—. El determinista no registra desviación estructural ni saltos de jerarquía.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 260, "cita": "<h2 id=\"aeronautico\">Sevilla, capital aeronáutica: a quién cubre el convenio</h2>"}
+    },
+    {
+      "eje": "E6", "id": "8.6", "veredicto": "CONFIRMADO",
+      "motivo": "Elogio verificado contra el determinista: los cuatro términos de jerga (subrogación, ámbito funcional, comisión paritaria, devengo) tienen explicacion_cerca = true, y en el HTML la explicación se cierra con un ejemplo en euros para una categoría concreta, que es lo que distingue explicar de enunciar.",
+      "prueba": {"archivo": "convenio-metal-sevilla.html", "linea": 279, "cita": "Por ejemplo, un <strong>oficial u oficiala de 1.ª</strong> tiene un salario base (A) de <strong>40,27 €/día</strong>, un plus de asistencia (B) de <strong>7,86 €</strong>…"}
+    }
+  ],
+  "resumen": {
+    "confirmados": 15,
+    "matizados": 10,
+    "refutados": 0,
+    "notas": [
+      "Ningún eje declaró hard-fails y el determinista tampoco (hardfails_deterministas = []). No había hard-fail que verificar.",
+      "Los diez parches propuestos van marcados aplazado_por_ventana = true: el freno 9.7 se respetó (ultimo_commit 2026-08-10, 9 días).",
+      "Los tres 3 que no se sostienen tal como están redactados son 3.5 (E2), 8.4 (E2) y, en parte, 4.4 (E4), 6.5 (E5), 7.4 (E6) y 10.2 (E2). Ninguno cae del todo: en todos hay una parte comprobada y una parte excesiva.",
+      "Patrón detectado entre ejes, no hallazgo nuevo: E2 puntúa 3.5 con un 3 tanto aquí (4 de 6 clonadas) como en comercio-madrid (0 de 4). Esa métrica es determinista y no debería admitir la misma nota con datos opuestos. Conviene que el sintetizador la recalcule desde el JSON.",
+      "Observación fuera de mi papel, para el sintetizador y no para el informe: el elogio transversal de que esta ficha es la única del piloto que cita el SMI 2026 correcto (17.094 €, RD 126/2026, línea 627) sí está verificado en el determinista (smi.cita_17094 = true, smi.smi_obsoleto_citado = [])."
+    ]
+  }
+}

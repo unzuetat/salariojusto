@@ -1,0 +1,129 @@
+{
+  "eje": "E3",
+  "slug": "convenio-comercio-madrid",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 3,
+      "razon": "La cifra viaja dentro del propio H1, es la del puesto más buscado del sector (dependiente/a) y viene con año y boletín en la línea siguiente; el párrafo de respuesta directa la repite en mensual y en anual y nombra las categorías equivalentes. Es lo que ninguna otra de las seis hace: no se lee un preámbulo, se lee la cifra. El determinista confirma cifra+año+fuente en los primeros bloques.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 165,
+          "cita": "Convenio Comercio Madrid 2026: un/a dependiente cobra 1.198,87 €/mes en 15 pagas"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 179,
+          "cita": "cobra en 2026 un salario base de 1.198,87 €/mes , es decir 17.982,98 € brutos al año en 15 pagas . La misma cifra corresponde a cajero/a, oficial/a administrativo/a, viajante y mozo/a especializado/a."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 174,
+          "cita": "✓ Verificado contra BOCM Núm. 183/2025 por SalarioJusto · última revisión 13 de agosto de 2026"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 2,
+      "razon": "Responde 6 de las 8 preguntas de una dependienta madrileña (cuánto cobro, si me aplica este convenio y no el de textil o alimentación, cuántas pagas, qué jornada tengo desde 2026, si me toca antigüedad a los 6 años y qué hago si cobro menos). Quedan sin responder dos muy frecuentes en comercio: (1) «¿me tienen que pagar el domingo o el festivo trabajado?» — la ficha no menciona ni una sola vez las palabras festivo, domingo ni hora extraordinaria, en un sector con apertura dominical en Madrid; (2) «trabajo 20 horas a la semana, ¿cuánto me corresponde?» — la tabla es de jornada completa y en ningún sitio se dice que el salario base se prorratea a la jornada (solo se aclara para el plus de transporte).",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 317,
+          "cita": "Se abona íntegro también a quienes trabajan a tiempo parcial (Art. 30)."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 214,
+          "cita": "Las cifras son brutas y de mínimos: tu empresa puede pagar más, nunca menos."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 351,
+          "cita": "31 días naturales ininterrumpidos al año, a disfrutar entre el 20 de junio y el 30 de septiembre (Art. 43)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Camino de tres pasos, con órgano nombrado a partir del propio convenio (Instituto Laboral de la CAM, Disp. Transitoria Primera), plazo del art. 59.2 ET, forma de envío con prueba y sindicatos con asistencia jurídica. No llega a 3 porque no entrega documento: el determinista solo registra un enlace al kit (la guía genérica) y no la plantilla de reclamación de atrasos, así que el lector sabe qué tiene que hacer pero no tiene con qué hacerlo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 386,
+          "cita": "Reclama por escrito a tu empresa indicando los conceptos no abonados, el importe estimado y el período. Envíalo por burofax con acuse de recibo o email con confirmación de lectura."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 387,
+          "cita": "presenta papeleta de conciliación ante el Instituto Laboral de la Comunidad de Madrid (al que el convenio somete expresamente sus conflictos, Disp. Transitoria Primera). Es gratuita, interrumpe la prescripción y es paso previo a la demanda. Plazo legal: 1 año por mensualidad desde que debió pagarse (art. 59.2 ET)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 3,
+      "razon": "Resuelve la autoubicación en los dos ejes a la vez y en lenguaje llano: el ámbito funcional se traduce a comercios reconocibles (bazares, fotografía, estancos, merchandising), la frontera se declara explícitamente («si tu comercio es de alimentación, textil, del metal…»), y cada fila de la tabla lleva los puestos reales pegados al grupo, no el código del boletín. Encima cierra el caso frontera más doloroso del sector —el ascenso automático de auxiliar a cajero/a— con artículo. Es el nivel al que deberían subir las fichas de limpieza, que no tienen ni una línea de ámbito funcional.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 210,
+          "cita": "Si tu comercio es de alimentación , textil , del metal o de otra rama con convenio propio en Madrid, tu tabla puede ser distinta. Este convenio es el \"cajón de sastre\" del comercio madrileño para las actividades sin convenio específico."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 253,
+          "cita": "II-B — Dependiente/a · Cajero/a · Oficial/a admin. 1.198,87 17.982,98"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 362,
+          "cita": "el auxiliar de caja y el ayudante de vendedor pasan automáticamente a cajero/a y dependiente/a vendedor/a al cumplir 2 años de antigüedad , con todos los efectos legales (Disposición Adicional Cuarta)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 2,
+      "razon": "Tiene una sección explícita de traducción a nómina, avisa de que las cifras son brutas, separa el neto (IRPF estatal + autonómico de Madrid) y recorre concepto a concepto qué debe aparecer y cómo (el plus de transporte «como concepto separado», las extras equivalentes a una mensualidad más antigüedad). Se queda en 2 porque no advierte de ningún error típico: el prorrateo se menciona como posibilidad neutra en tres sitios, nunca como trampa a verificar, y no aparece la compensación y absorción, que es exactamente el mecanismo por el que una empresa de comercio te sube el base y te come el plus.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 366,
+          "cita": "Las cifras del convenio son brutas . La Comunidad de Madrid aplica IRPF de régimen común, así que tu neto dependerá del IRPF estatal + autonómico, las cotizaciones y tus deducciones personales."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 369,
+          "cita": "El plus de transporte aparece como concepto separado (96,56 €/mes en 2026)"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 356,
+          "cita": "3 gratificaciones extraordinarias en marzo, julio y diciembre (Art. 34), prorrateables por acuerdo."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [
+    {
+      "id": "1.9",
+      "motivo": "No aplica: el convenio está vigente hasta el 31-dic-2028 y la ficha publica las cuatro tablas anuales (2025, 2026, 2027 y 2028) del propio BOCM 183/2025, más la modificación del art. 40 del BOCM 151/2026. No hay dato ausente, año sin revisar ni convenio decaído sobre el que juzgar si la ficha disimula un hueco."
+    }
+  ],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UNA DEPENDIENTA DE UN BAZAR O UNA TIENDA DE REGALOS EN MADRID: (1) «¿cuánto tengo que cobrar de dependienta en Madrid en 2026?»; (2) «trabajo en una tienda de regalos / de ropa, ¿me aplica este convenio?»; (3) «¿cuántas pagas me corresponden al año?»; (4) «¿cuántas horas tengo que hacer a la semana desde 2026?»; (5) «llevo 6 años en la tienda, ¿me toca antigüedad?»; (6) «trabajo los domingos, ¿me lo tienen que pagar aparte?»; (7) «hago 20 horas a la semana, ¿cuánto me corresponde de esa tabla?»; (8) «cobro menos que la tabla, ¿qué hago y hasta cuándo puedo reclamar?». RECORRIDO: responde 1, 2, 3, 4, 5 y 8; falla en 6 y 7. — Es la ficha mejor resuelta del piloto en respuesta directa y en autoubicación: la cifra del puesto más buscado está en el H1 y el ámbito funcional está escrito para alguien que no sabe qué es un ámbito funcional. Su agujero es específico y reparable: comercio es el sector con más apertura dominical y más contratación a tiempo parcial de los seis, y la ficha no dice nada de festivos, domingos ni horas extraordinarias (el determinista lo confirma en conceptos_ausentes: horas_extra), ni aclara que la tabla es de jornada completa. Dos bloques cortos la dejarían sin huecos. Fuera de mi eje: la ficha no compara ninguna categoría con el SMI 2026 (17.094 €); el Grupo I queda en 17.362,98 €/año, apenas 269 € por encima, y ese margen mínimo es información útil que aquí no se da. VENTANA ABIERTA: 1 día desde el último commit, así que todos los parches quedan aplazados."
+}

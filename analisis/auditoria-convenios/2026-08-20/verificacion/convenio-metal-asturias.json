@@ -1,0 +1,242 @@
+{
+  "slug": "convenio-metal-asturias",
+  "fecha_verificacion": "2026-08-24",
+  "alcance": "19 hallazgos revisados: las 5 metricas con nota 0-1 (E4 2.4, E5 6.2, E5 6.6, E6 8.1, E6 8.3) y los 14 treses de los seis ejes (E1 2.1/5.11/9.1/9.2, E2 3.1/3.2-3.3/3.4/3.5/8.4/10.1/10.2, E3 1.9, E5 6.3, E6 7.8). Ningun eje declaro hard-fails y hardfails_deterministas = [] en el JSON del 24-ago: no habia bloqueo que verificar.",
+  "contexto": {
+    "determinista_usado": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-asturias.json",
+    "deriva_20ago_vs_24ago": "Sin deriva relevante: solo cambia dias_desde_commit (13 -> 17) y el orden de frases_compartidas_top. Todas las cifras que citan los ejes (boilerplate 0,032 · 4 frases compartidas · 120 frases exclusivas · 2.595 palabras exclusivas · ratio_tabla 0,121 · 3/6 FAQ clonadas · 3 entrantes · 35 internos en cuerpo) siguen vigentes en el determinista nuevo.",
+    "ventana_medicion_abierta": true,
+    "ultimo_commit": "2026-08-07",
+    "nota_freno_9_7": "La ventana sigue abierta a 24-ago (17 dias). E5 y E6 redactan parches sin marcar aplazado_por_ventana; E3 declara expresamente que no redacta parches. El freno lo aplica el sintetizador, no lo puntuo yo."
+  },
+  "veredictos": [
+    {
+      "eje": "E4",
+      "id": "2.4",
+      "veredicto": "MATIZADO",
+      "motivo": "La norma invocada existe y esta bien citada: el brief de E4 fija '1 = completo pero sin cifra, o con una cifra que no corresponde a ninguna nomina real', con el precedente del 1.447 EUR/mes. Y se aplica de forma consistente en el cluster (metal-sevilla, la otra ficha con columna anual derivada, tambien saco 1; las ocho con anual publicada en boletin sacaron 2). Pero el enunciado se pasa en dos puntos. Primero, el precedente del piloto era una cifra ERRONEA (anual/12 en un convenio de 15 pagas); aqui la cifra es una derivacion aritmeticamente correcta y declarada tres veces en la pagina (283, 353, 563). Segundo, la atribucion falsa que describe no esta en el title -que no nombra al BOPA- sino en la meta, y la meta se puntua en 2.5, donde este mismo eje puso un 2. El determinista confirma que el title cumple los cuatro elementos: title_tiene_cifra, title_tiene_euro y title_tiene_anio = true, title_len 72.",
+      "enunciado_corregido": "2.4: el title cumple la formula validada (cifra + sector + provincia + anio, 72 caracteres) y su cifra es una derivacion declarada, no una cifra erronea. Lo que si es inexacto -y pertenece a 2.5- es la meta: 'tablas por 15 niveles de 19.937 EUR a 31.384 EUR, firmadas y publicadas desde 2024 en el BOPA' atribuye al boletin un rango anual que el boletin no publica, porque el BOPA da euros por dia natural.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 6,
+        "cita": "<title>Convenio Metal Asturias 2026: tablas de 19.937 a 31.384 € | SalarioJusto</title>"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado contra el determinista refrescado (24-ago), que mantiene entrantes_n = 3 y entrantes_desde = [convenios.html, index.html, mapa-del-sitio.html]: son exactamente los tres directorios. Es literalmente el ancla del 0 en el brief de E5 ('0 solo la alcanza el hub o el mapa del sitio'). Verifique tambien la asimetria que alega: 35 internos en cuerpo es el maximo de las diez fichas del metal (siguiente, metal-zaragoza con 27). Y 3 entrantes es el suelo del corpus, compartido con otras siete fichas.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-asturias.json",
+        "linea": 0,
+        "cita": "\"entrantes_n\": 3, \"entrantes_desde\": [\"convenios.html\",\"index.html\",\"mapa-del-sitio.html\"]"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Busque el kit por toda la ficha antes de dar el hallazgo por bueno: 'plantilla' no aparece ni una vez en el HTML y el unico enlace del kit es /reclamar-diferencias-salariales-convenio.html, que sale dos veces (502, dentro del parrafo de codigo REGCON y firmantes que cierra la seccion, y 579, en la lista final de guias). Los pasos 3 y 5 de la lista -pedir la nomina por escrito, plazo de un anio por mensualidad- van sin enlace, y las dos plantillas que propone existen en el repo (plantilla-solicitar-nominas.html, plantilla-reclamar-atrasos-convenio-salarial.html), asi que el parche es ejecutable.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 502,
+        "cita": "Código de convenio: 33000695011979. Firmantes: FEMETAL (patronal) y los sindicatos CC.OO. de Industria y UGT FICA. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.1",
+      "veredicto": "MATIZADO",
+      "motivo": "El nucleo es cierto y lo comprobe vinieta a vinieta, que es justo lo que el brief exige antes de decir 'sobra'. Pero el recuento falla y eso cambia el parche: el eje dice que solo dos vinietas no tienen desarrollo previo (el 12% del art. 31 y la jubilacion a los 68), y son TRES. La subrogacion de la DA 6.a -mantenimiento de instalaciones publicas al 100% y redes de telefonia, electricas y gas al 50%- aparece unicamente en la linea 489: no hay ninguna otra ocurrencia de 'subrogaci' en toda la ficha. Ademas 'duplican literalmente el cuarto sub-parrafo de la nota editorial' es excesivo: cinco de las diez vinietas coinciden en CONTENIDO con ese parrafo (antiguedad, fondo, 17 semanas, 12%, 24 y 31 de diciembre), pero ninguna esta copiada palabra por palabra.",
+      "enunciado_corregido": "8.1 = 1: el cajon 'Particularidades' repite arriba siete de sus diez vinietas y solapa en contenido con el cuarto sub-parrafo de la nota editorial. Antes de borrarlo hay que rescatar TRES vinietas sin desarrollo previo: indemnizacion del 12% por fin de contrato eventual (art. 31), jubilacion a los 68 con relevo (art. 18.3) y subrogacion de la DA 6.a.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 489,
+        "cita": "<strong>Subrogación</strong> en mantenimiento de instalaciones públicas (100%) y en redes de telefonía, eléctricas y gas (≥50%) (DA 6.ª)."
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Las cuatro repeticiones existen y las localice una a una, incluida la cuarta que el eje describe pero no cita por linea: hero-sub (208), seccion 'Tablas firmadas hasta 2026' (262 y su callout 265), cajon de particularidades (482) y FAQ '¿Cuánto sube el convenio en 2026?' (538). No es redundancia de cuerpo a FAQ unicamente: 208, 262 y 482 son las tres de cuerpo a cuerpo que el eje penaliza.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 538,
+        "cita": "Sin esperas: las tablas de 2024, 2025 y 2026 se publicaron <strong>ya calculadas</strong> en el BOPA núm. 191 de octubre de 2024, anexas al propio convenio."
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "2.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "El ancla del 3 en el brief de E1 es 'la ficha aporta un analisis que el boletin no contiene y lo justifica', y aqui hay dos: la columna anual calculada con formula declarada y la comparacion de la cobertura de baja provincia por provincia. Verifique que esa comparacion es realmente propia: grepeando el cluster, metal-asturias es la UNICA de las diez fichas del metal cuyo bloque de baja/IT enlaza y contrasta con otras provincias (Zaragoza 25%, Madrid 15% desde el dia 11, Valencia dia 75). Las tres citas existen en sus lineas.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 460,
+        "cita": "El complemento por Fondo hasta el 100% del líquido desde el 8.º día cubre <strong>enfermedad común y accidente</strong> por igual, mientras que la mayoría de los convenios del metal solo complementan el accidente de trabajo"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "5.11",
+      "veredicto": "CONFIRMADO",
+      "motivo": "El ancla del 3 es 'ademas distingue tablas vigentes de historicas sin ambiguedad', y la afirmacion de exclusividad tambien resiste: recorri los <summary> de las diez fichas del metal y solo dos guardan tablas de anios anteriores en un desplegable rotulado -asturias (330, 'Tablas 2025 y 2024 (historico del convenio)') y barcelona (256, 'Ver tabla vigente en 2025')-. Las otras ocho o no tienen details o los usan para agrupar categorias.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 330,
+        "cita": "<summary>Tablas 2025 y 2024 (histórico del convenio) <span class=\"fam-meta\">salario/día y paga extra</span></summary>"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "9.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Cumple el ancla literal del 3 ('ademas dice que se cotejo exactamente'): el sello fecha la revision el 6-ago-2026, posterior al unico boletin del que dependen las cifras (BOPA 191 de 1-oct-2024, que ya trae la tabla de 2026), y el bloque de autoria detalla el cotejo y la validacion contra los incrementos. Aviso de calibracion, no de refutacion: 49 de las 54 fichas llevan 'ultima revision' y 45 llevan el bloque 'Quien audita esto', asi que el rasgo que justifica el 3 no discrimina; lo que si es escaso es la frescura, 6-ago-2026 esta entre las diez fechas mas recientes del corpus.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 215,
+        "cita": "<strong>✓ Verificado</strong> contra el texto íntegro del convenio y sus tablas 2024-2026 (BOPA núm. 191, 1-oct-2024, Resolución de 18-9-2024, código 33000695011979), por SalarioJusto · última revisión 6 de agosto de 2026"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "9.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Ancla del 3: 'dice ademas que pasara despues y que vigilar'. Se cumple y es exclusivo dentro del sector: es la unica de las diez fichas del metal con una pregunta '¿Hasta cuando esta vigente?' en la FAQ, y combina fin de vigencia, denuncia automatica, ultraactividad pactada, umbral del art. 23 y fecha de inicio de la negociacion. Contrastado con el cluster: metal-sevilla y metal-valencia no dicen 'denuncia' ni una sola vez.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 550,
+        "cita": "Hasta el <strong>31 de diciembre de 2026</strong>, con denuncia automática un mes antes, <strong>ultraactividad normativa</strong> pactada y compromiso de iniciar la negociación del nuevo convenio en <strong>enero de 2027</strong> (art. 2)."
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.1",
+      "veredicto": "MATIZADO",
+      "motivo": "Los numeros son correctos (boilerplate_ratio 0,032 y 4 frases compartidas, identicos en el determinista del 24-ago), pero el argumento que separa el 3 del 2 no aguanta. El ancla del 3 es 'incluso el cromo esta redactado con la particularidad de esta provincia', y el cromo NO esta reescrito: de las cuatro frases compartidas que quedan, DOS estan dentro del propio bloque 'como reclamar' que el eje da por reescrito (el paso de pedir la nomina por escrito y el plazo del art. 59.2). Ademas la localizacion de la via extrajudicial no distingue a esta ficha: ocho de las diez del metal nombran su organo autonomico (PRECO en Alava, Bizkaia y Gipuzkoa; SERCLA en Sevilla; TLC en Barcelona y Navarra; SMAC en Valencia). Y 0,032 es el 12.º valor mas bajo de 54, no el extremo.",
+      "enunciado_corregido": "3.1 = 2: boilerplate 0,032 (12.º mas bajo de 54) y lo compartido es cromo legitimo, pero dos de las cuatro frases clonadas viven dentro del bloque de reclamacion, y nombrar el organo extrajudicial propio es la norma del sector (8 de 10), no la excepcion. Lo que si es propio del bloque es el domicilio de la Comision Mixta en Gijon.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-asturias.json",
+        "linea": 0,
+        "cita": "\"frases_compartidas_top\": [... \"plazo  un ano por cada mensualidad para reclamar diferencias  art\", \"pide la nomina detallada por escrito si los conceptos no aparecen separados  art\"]"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.2/3.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Cifras exactas contra el determinista del 24-ago (palabras_prosa 3.418, ratio_tabla 0,121) y el ancla del 3 -'prosa sin la cual la tabla se entenderia mal'- se cumple de forma literal: la columna 'Minimo anual 2026' no existe en el BOPA y sin el parrafo de la linea 353 el lector no puede saber que sale de multiplicar por 365 dias naturales ni que excluye asistencia, carencia de incentivo y antiguedad.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 353,
+        "cita": "Mínimo anual 2026 = (salario convenio + plus convenio de 2,86 €) × 365 días naturales + 2 pagas extras. No incluye el plus de asistencia (~9 €/día trabajado), la carencia de incentivo ni la antigüedad"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.4",
+      "veredicto": "MATIZADO",
+      "motivo": "La parte cualitativa resiste y la verifique: la comparacion de la cobertura de baja provincia por provincia es unica en el cluster (ninguna otra de las diez fichas del metal contrasta su complemento de IT con otras provincias) y la Ordenanza Siderometalurgica como origen de la estructura tambien lo es (en las otras nueve fichas 'Ordenanza' aparece solo como categoria laboral de portero/ordenanza en una fila de tabla). Lo que sobra es la envoltura numerica: 120 frases exclusivas y 2.595 palabras exclusivas se presentan como masa excepcional y son medianas del corpus -25 de las 54 fichas superan esas 2.595 palabras-.",
+      "enunciado_corregido": "3.4 = 3 por los hechos, no por la masa: la masa exclusiva (2.595 palabras, puesto 26 de 54) es del monton; lo que sostiene el 3 son dos hechos que exigieron investigacion y que ninguna hermana tiene: la comparacion de la cobertura de baja entre Zaragoza, Madrid y Valencia, y el origen de la estructura en la Ordenanza Siderometalurgica.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-asturias.json",
+        "linea": 0,
+        "cita": "\"palabras_exclusivas\": 2595, \"frases_exclusivas\": 120"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.5",
+      "veredicto": "MATIZADO",
+      "motivo": "El ancla del 3 es 'preguntas que solo tienen sentido en esta provincia', y la mitad de la FAQ no lo es: faq_clonadas = 3 sobre 6 en el determinista del 24-ago, con las tres formulaciones repetidas identificadas por nombre (cuanto cobra un oficial, cuanto sube en 2026, que antiguedad reconoce). La propia razon del eje describe el ancla del 2: 'las clonadas se responden con comparacion, no con relleno' es exactamente 'preguntas comunes con respuestas propias'. Mismo patron que ya se marco en la verificacion de metal-sevilla.",
+      "enunciado_corregido": "3.5 = 2: preguntas comunes con respuestas propias. Tres de las seis son formulaciones clonadas del corpus; las tres propias (tablas definitivas o provisionales, baja, antiguedad viva) sostienen la nota pero no llegan al ancla del 3.",
+      "prueba": {
+        "archivo": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-asturias.json",
+        "linea": 0,
+        "cita": "\"faq_clonadas\": 3, \"faq_clonadas_lista\": [\"¿Cuánto cobra un oficial del metal en Asturias en 2026?\", \"¿Cuánto sube el convenio del metal de Asturias en 2026?\", \"¿Qué antigüedad reconoce el convenio del metal de Asturias?\"], \"faq_total\": 6"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "8.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Intente refutar las dos afirmaciones de exclusividad y ninguna cae. (1) 'Ninguna otra ficha del sector explica de donde viene su propia estructura': grepe 'Ordenanza' en las diez fichas del metal; en las otras nueve las ocurrencias son la categoria 'Ordenanza, Portero/a' dentro de una fila de tabla, nunca la Ordenanza Siderometalurgica como norma complementaria. (2) El aviso del convenio hermano confundible: seis fichas del metal avisan de alguno, pero solo Asturias avisa del de Montajes y Empresas Auxiliares, que es la trampa real de las auxiliares de las grandes factorias. Y el ancla del 3 -'la particularidad organiza la ficha'- se ve en el indice: el segundo H2 es 'Tablas blindadas', no 'tablas salariales'.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 491,
+        "cita": "estructura heredada de la Ordenanza Siderometalúrgica, que el convenio asume como norma complementaria (DF 2.ª)"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "10.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "La ventaja frente al boletin es comprobable y no retorica: el BOPA publica euros por dia natural y una paga extra por nivel, y la ficha construye el anual, declara la formula, dice que deja fuera y anade el marco temporal (art. 23 y 2027) que el PDF no puede tener. Verifique que el BOPA no trae anual leyendo la propia estructura de la tabla (columnas 'Salario €/día' y 'Paga extra (×2)' transcritas, y la tercera calculada).",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 287,
+        "cita": "<thead><tr><th>Nivel · categorías orientativas (Anexo 2)</th><th class=\"num\">Salario €/día</th><th class=\"num\">Paga extra (×2)</th><th class=\"num\">Mínimo anual 2026</th></tr></thead>"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "10.2",
+      "veredicto": "MATIZADO",
+      "motivo": "La ventaja existe y esta declarada (563 y 353), pero la prueba que el eje da del 3 -'el lector lo percibe sin que se lo expliquen: la tabla lleva la palabra estimado'- es falsa. 'Estimad' aparece tres veces en la ficha (63 en el schema, 283 en el parrafo que precede a la tabla y 535 en la FAQ) y NINGUNA dentro de la tabla: el encabezado de la columna dice 'Minimo anual 2026' a secas y la tarjeta de Datos clave tambien. El marcado de la estimacion vive en la prosa de alrededor, no en el dato extraible.",
+      "enunciado_corregido": "10.2 = 3 con matiz: la ventaja frente al agregador (separar lo transcrito de lo calculado) esta declarada en el parrafo previo a la tabla (283), en la nota al pie (353) y en el bloque de autoria (563), pero no dentro de la tabla ni en la tarjeta de Datos clave, que es donde el dato se lee y se extrae.",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 247,
+        "cita": "<div class=\"stat-label\">Mínimo anual 2026</div><div class=\"stat-value\">19.937 € – 31.384 €</div>"
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.9",
+      "veredicto": "MATIZADO",
+      "motivo": "La norma invocada dice lo contrario de lo que el eje hizo. El brief de E3 cierra 1.9 con: 'Si no aplica (ficha con datos completos), marcala no_evaluada con ese motivo'. Esta ficha tiene las tablas de su anio publicadas y verificadas: no hay dato que falte. El eje reinterpreto la metrica como 'gestionar un dato que el convenio no publica', que es 2.1/10.2 en E1 y E2 -y de hecho las tres notas se apoyan en la MISMA frase (linea 563)-. Ademas, el propio eje enumera en su observacion libre tres huecos que la ficha NO declara (la conversion a mes, el encaje de un oficio concreto en el nivel y el tiempo parcial: 'cero apariciones de tiempo parcial o media jornada en todo el HTML'), que es justo lo que 1.9 penalizaria.",
+      "enunciado_corregido": "1.9 = no_evaluada (ficha con datos completos, segun el propio brief). Si el sintetizador prefiere puntuarla, no puede pasar de 2: el hueco que la ficha declara es la naturaleza calculada del anual, y deja sin declarar la conversion a mes y el tiempo parcial.",
+      "prueba": {
+        "archivo": ".claude/agents/sj-eje-e3-respuesta.md",
+        "linea": 42,
+        "cita": "Si no aplica (ficha con datos completos), márcala `no_evaluada` con ese motivo."
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Ancla del 3: 'cada uno resuelve una duda que el parrafo acaba de abrir'. Los tres momentos existen y estan en secciones distintas (265 certeza de las tablas, 361 comparacion de suelos, 460 cobertura de la baja), cada uno con anchor de sector y provincia. Comprobado ademas que no es un parrafo de enlaces disfrazado: los tres viven dentro de callouts pegados a su seccion, no en la lista final, y la lista final existe aparte (579).",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 361,
+        "cita": "El mínimo del <strong>Oficial/a de 1.ª asturiano (22.394 €)</strong> queda prácticamente a la par del de <a href=\"/convenio-metal-zaragoza.html\">Zaragoza</a> (22.443 €) y del de <a href=\"/convenio-metal-bizkaia.html\">Bizkaia</a> (23.510 €)"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "7.8",
+      "veredicto": "CONFIRMADO",
+      "motivo": "El hallazgo -lo exclusivo cosido al desarrollo en vez de colgado al final- es cierto y las tres citas estan donde dice. Es coherente con lo que verifique en 2.1 y 6.3: los tres callouts comparativos son unicos en el cluster. Un matiz que no cambia la nota: la propia ficha conserva ademas un cajon final de 'Particularidades', que es lo que E6 penaliza en 8.1; el 3 de 7.8 y el 1 de 8.1 conviven porque miden cosas distintas (seguir el canon sin perder lo propio vs. secciones que no aportan).",
+      "prueba": {
+        "archivo": "convenio-metal-asturias.html",
+        "linea": 265,
+        "cita": "En el cluster del metal es una rareza: en <a href=\"/convenio-metal-zaragoza.html\">Zaragoza</a> la tabla 2026 exigió un acta de paritaria publicada en febrero de 2026, y en <a href=\"/convenio-metal-bizkaia.html\">Bizkaia</a> el convenio está en ultraactividad"
+      }
+    }
+  ],
+  "resumen": {
+    "confirmados": 12,
+    "matizados": 7,
+    "refutados": 0,
+    "notas": [
+      "Ningun eje declaro hard-fail y hardfails_deterministas = [] tambien en el JSON del 24-ago. No habia bloqueo que verificar.",
+      "Sobre el encargo de auditar los elogios: de los 14 treses, 8 sobreviven intactos y 6 quedan matizados (E2 3.1, E2 3.4, E2 3.5, E2 10.2, E3 1.9 y, entre ellos, el unico que cae de metrica es 1.9, que segun su propio brief deberia ser no_evaluada). Ninguno se refuta del todo: en todos hay una parte comprobada.",
+      "Patron entre ejes, no hallazgo nuevo: tres ejes distintos (E1 2.1, E2 10.2, E3 1.9) apoyan su 3 en la MISMA frase, la linea 563. Un solo acierto editorial esta pagando tres treses en tres ejes con peso 22+22+20. Es cosa del sintetizador decidir si eso se descuenta.",
+      "Contexto de plantilla que NO he contado contra la ficha, como se me indico: 5 tablas sin scope ni caption (54 de 54 fichas igual) y 2 bloques de mas de 100 palabras (37 de 54). verde_en_tablas = 0 aqui, asi que la norma del verde no le afecta.",
+      "Anotacion que no puntuo por no ser mi papel y que ya vieron E3 y el determinista: cifras.huerfanas = 5, las cinco en la FAQ '¿Cuanto cobra un oficial del metal en Asturias en 2026?' (linea 535), que no repite la fuente en su propia seccion."
+    ]
+  }
+}

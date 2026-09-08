@@ -1,0 +1,76 @@
+{
+  "slug": "convenio-metal-alava",
+  "determinista_usado": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-alava.json",
+  "veredictos": [
+    {
+      "eje": "E1",
+      "id": "5.10",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Abierta la ficha en las dos líneas citadas y barridos todos los enlaces externos: solo hay 4 (araba.eus/botha dos veces, REGCON y el BOE del SMI). Ni el BOTHA 147 ni el BOTHA 18 tienen enlace al anuncio; en ambos casos el destino es la portada de la sede. El determinista del 24-ago da la misma lista en enlaces.externos_oficiales, así que no hay refutación posible en otro punto de la página.",
+      "prueba": {
+        "linea": 604,
+        "cita": "Sede: <a href=\"https://www.araba.eus/botha/\" target=\"_blank\" rel=\"noopener\">araba.eus/botha</a>."
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Busqué la refutación por toda la ficha: grep de «al mes», «mensual», «entre 14», «dividir», «prorrat», «absorci». Cero conversiones a mensual. Las tres únicas apariciones de «mensual*» son ajenas (premio de jubilación en línea 528, plazo de prescripción en 550 y la comparación con Madrid/Barcelona en 405). «Prorrateo», «absorción» y «complemento absorbible» no aparecen ni una vez en el HTML. La sección de pagas (408-420) tampoco da el divisor: dice que el anual «ya incorpora estas dos pagas» y ahí se detiene.",
+      "prueba": {
+        "linea": 420,
+        "cita": "El salario bruto anual de las tablas ya incorpora estas dos pagas."
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.2",
+      "veredicto": "MATIZADO",
+      "motivo": "El núcleo se sostiene y lo verifiqué dos veces: grep -l de «convenio-metal-alava.html» sobre las 54 fichas devuelve solo convenios.html, index.html y mapa-del-sitio.html, y ninguna de las 9 hermanas del metal; el determinista del 24-ago mantiene entrantes_n = 3 (idéntico al del 20-ago). Cae la parte comparativa: la mediana del corpus recalculada sobre los 54 deterministas del 24-ago es 10,5, no 10, y 3 no es «el suelo» del corpus (convenio-comercio-metal-bizkaia tiene 1; contact-center y tecnicos-espectaculos, 2), ni el empate es solo con Asturias y Sevilla (también comercio-madrid, construccion-madrid, limpieza-catalunya y limpieza-pontevedra tienen 3). Enunciado exacto: «3 enlaces entrantes, todos de plantilla (hub, home, mapa del sitio); ninguna de las 9 fichas hermanas del metal la enlaza, pese a que ella enlaza a cinco. Es el suelo del sector metal, empatada con Asturias y Sevilla; la mediana del corpus es 10,5.»",
+      "prueba": {
+        "linea": null,
+        "cita": "24-ago/deterministas: entrantes_n = 3 · mediana del corpus = 10,5 · mínimos del corpus: convenio-comercio-metal-bizkaia 1, convenio-contact-center 2, convenio-tecnicos-espectaculos 2"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado el listado completo de enlaces internos de la ficha: no hay ni un solo href a /plantilla-*.html. El único destino del Kit es /reclamar-diferencias-salariales-convenio.html y cuelga, tal como dice el hallazgo, del párrafo de código REGCON y firmantes que cierra la sección (línea 552), no de los pasos 3 y 5. Comprobada también la norma invocada: plantilla-solicitar-nominas.html y plantilla-reclamar-atrasos-convenio-salarial.html existen en el repo, así que el parche es ejecutable.",
+      "prueba": {
+        "linea": 548,
+        "cita": "<li><strong>Pide la nómina detallada por escrito</strong> si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores).</li>"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.1",
+      "veredicto": "MATIZADO",
+      "motivo": "La redundancia de la sección «Particularidades» (532-542) es real y de hecho mayor que la descrita: el hallazgo la contrasta contra el cuerpo pero no vio que el propio bloque de datos clave de la línea 258 ya se titula «Particularidades.» y enumera los mismos ítems. Cae la salvedad del euskera: el hallazgo dice que es «la única viñeta con información no desarrollada arriba» y que «hay que rescatar ese dato antes» de borrar la sección, pero «fomento del euskera (Art. 59)» y «régimen fiscal foral de Álava» ya están en la línea 258 con el mismo nivel de detalle. Enunciado exacto: «La sección Particularidades (532-542) repite el bloque de datos clave de la línea 258, que ya se titula igual y enumera los mismos ítems, incluido el euskera. Borrarla no pierde ningún dato exclusivo.»",
+      "prueba": {
+        "linea": 258,
+        "cita": "<strong>Particularidades.</strong> [...] y <strong>fomento del euskera</strong> (Art. 59). Régimen fiscal <strong>foral de Álava</strong>."
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificadas las tres líneas citadas (266, 508, 535) y son literales. Busqué la refutación —un cambio de enfoque que justificase repetir— y no la hay: los dos párrafos usan los mismos tres números (14%, 14,5%, +0,5%) y la misma fecha de acta. Al leer alrededor encontré que el hallazgo se queda corto, no largo: el mecanismo aparece además en el hero-sub (208), en la nota editorial (257) y en la FAQ (596), seis veces en total. Único apunte: el parche propone «remitir a #subida» y esa remisión ya existe al final de la línea 266.",
+      "prueba": {
+        "linea": 257,
+        "cita": "<strong>Ultraactividad · subida 2026.</strong> [...] la suma de los IPC de 2022-2025 (14,5%) superó en <strong>0,5 puntos</strong> los incrementos fijos pactados (14%)"
+      }
+    }
+  ],
+  "resumen": {
+    "confirmados": 4,
+    "matizados": 2,
+    "refutados": 0,
+    "notas": [
+      "Ninguna cifra del juicio del 20-ago se ha desfasado con el determinista del 24-ago: entrantes_n (3), verde_en_tablas (0), tablas (11), párrafos >100 palabras (1, línea 266) y ultimo_commit (2026-08-08) son idénticos. Lo único que cambia es dias_desde_commit (12 → 16); la ventana de medición sigue abierta, así que el freno 9.7 se mantiene.",
+      "Nota, sin convertirla en hallazgo: al comprobar 8.3 vi que la ficha repite el mecanismo del +0,5% seis veces (208, 257, 266, 508, 535, 596), no tres. Es un refuerzo del hallazgo existente, no uno nuevo.",
+      "Nota de calibración: dos ejes distintos (E5 en Álava y E5 en Gipuzkoa) escriben que el callout «Comparación con otras provincias del sector» lo llevan 8 de las 9 fichas del metal; el recuento real por grep es 8 de las 9 hermanas (todas menos Barcelona), así que ese dato es correcto y es el de E6-Bizkaia («7 de las 9») el que está mal."
+    ]
+  }
+}

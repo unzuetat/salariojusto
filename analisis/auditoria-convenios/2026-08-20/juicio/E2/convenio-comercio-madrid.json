@@ -1,0 +1,142 @@
+{
+  "eje": "E2",
+  "slug": "convenio-comercio-madrid",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 3,
+      "razon": "boilerplate_ratio 0.022 y solo 2 frases compartidas, ambas del bloque E-E-A-T (cromo legítimo); es la única de las seis fichas que no arrastra el bloque plantillado '¿Cobras menos?' —aquí está reescrito con la vía de conflicto propia de Madrid.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 387,
+          "cita": "presenta papeleta de conciliación ante el <strong>Instituto Laboral de la Comunidad de Madrid</strong> (al que el convenio somete expresamente sus conflictos, Disp. Transitoria Primera)"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 439,
+          "cita": "No somos un bufete: somos una herramienta gratuita de transparencia salarial, sin empresas detrás."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 2,
+      "razon": "palabras_prosa 2274 con ratio_tabla 0.137: la prosa explica bien qué tabla te toca y desactiva una trampa de la tabla oficial, pero el grueso de las secciones (pluses, vacaciones, pagas, IT) describe articulado en vez de explicar las cuatro tablas por año.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 179,
+          "cita": "La tabla oficial nombra esta categoría como «dependiente/a vendedor/a (mayor de 22)», una etiqueta heredada que la distingue del ayudante de vendedor del Grupo I."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 210,
+          "cita": "Este convenio es el \"cajón de sastre\" del comercio madrileño para las actividades sin convenio específico."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.4",
+      "nota": 2,
+      "razon": "frases_exclusivas 89 de 91: hay hechos propios reales (permiso climático, ascenso automático, compensación por jubilación anticipada), pero salen de leer el BOCM, no de investigar; nada dice cuán raros son esos hechos fuera de Madrid.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 362,
+          "cita": "el auxiliar de caja y el ayudante de vendedor pasan automáticamente a cajero/a y dependiente/a vendedor/a al cumplir <strong>2 años de antigüedad</strong>, con todos los efectos legales (Disposición Adicional Cuarta) — un ascenso de grupo garantizado sin depender de la voluntad de la empresa."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 361,
+          "cita": "<strong>5.200 €</strong> a los 60 años, 4.000 € a los 61, 3.400 € a los 62, 2.800 € a los 63 y 2.200 € a los 64."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "faq_clonadas 0 de faq_total 4 (el determinista no cuenta la quinta pregunta del bloque) y dos preguntas solo tienen sentido en este convenio: nadie puede preguntar por el permiso climático o por la DA Cuarta en otra provincia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 415,
+          "cita": "Soy Auxiliar de Caja / Ayudante de Vendedor, ¿asciendo?"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 410,
+          "cita": "¿Qué es el permiso climático?"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "la particularidad que el censo registra ('Permiso climático (art.95)') está recogida con h2 propio, mención en el hero y FAQ, pero no organiza la ficha ni se contextualiza: se afirma que es 'poco habitual' sin decir frente a qué ni de dónde viene.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 302,
+          "cita": "Permiso climático retribuido — Art. 95"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 197,
+          "cita": "un <strong>permiso climático retribuido</strong> por alertas AEMET naranja o roja — poco habitual en la negociación colectiva."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "el BOCM 183/2025 publica las cuatro tablas en PDF corrido; aquí están en pestañas por año y con una columna €/año en 15 pagas que el boletín no da, más un checklist de seis puntos para cotejar la nómina.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 368,
+          "cita": "Tu salario base coincide con la tabla 2026 de tu grupo profesional (p. ej. dependiente/a = Grupo II-B = 1.198,87 €/mes)"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 253,
+          "cita": "<td>II-B — Dependiente/a · Cajero/a · Oficial/a admin.</td><td class=\"num\">1.198,87</td><td class=\"num\">17.982,98</td>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "hay una ventaja identificable sobre la cifra pelada del agregador —traza al edicto con fecha de revisión y una corrección de la nomenclatura oficial—, pero se percibe leyendo, no de un vistazo: el sello es idéntico en todo el corpus.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 174,
+          "cita": "<strong>✓ Verificado</strong> contra BOCM Núm. 183/2025 por SalarioJusto · última revisión 13 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 299,
+          "cita": "La modificación del BOCM Núm. 151 (27-jun-2026) aclaró la redacción de este artículo."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (ultimo_commit 2026-08-18, 1 día): todo parche queda marcado como aplazado. Dos apuntes para cuando cierre. Primero, el parche de 8.4 que más rendiría no es escribir más sino contar: el permiso climático del art. 95 se afirma 'poco habitual' sin apoyo — si al revisar el corpus resulta ser el único convenio provincial de comercio con permiso climático, esa frase deja de ser un adjetivo y pasa a ser el titular de la ficha (y una nota de prensa). Convendría además comprobar si la cláusula entra en el convenio firmado en junio de 2025 como reacción a la DANA de octubre de 2024; si es así, es una historia, no un artículo. Segundo, esta ficha es el modelo a copiar en el punto donde las otras cinco fallan: su sección '¿Cobras menos?' está escrita para un convenio vigente y con la vía de conciliación real de la comunidad, en vez del bloque plantillado marcado <!-- bp-rotado --> que llevan 29 fichas del corpus."
+}

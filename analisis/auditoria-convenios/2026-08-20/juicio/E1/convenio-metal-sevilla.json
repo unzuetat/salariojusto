@@ -1,0 +1,123 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-sevilla",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Aporta un dato que el boletín no contiene —el bruto anual, que este convenio no fija— y en lugar de presentarlo como oficial publica la fórmula completa con sus artículos de devengo, marca la columna como estimación y acota el margen de error. Ninguna otra ficha del piloto separa así lo transcrito de lo calculado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 436,
+          "cita": "* <strong>≈ bruto/año — estimación orientativa, no cifra oficial.</strong> El convenio fija el salario <strong>por día</strong>, no un anual. Esta columna aplica las reglas de devengo del propio convenio: <strong>salario base (A) × 365 días</strong> (art. 14.1) + <strong>(asistencia B + productividad C) × 299 días</strong> —todos los días salvo los 52 domingos y los 14 festivos— (arts. 14.2 y 14.3) + <strong>2 pagas extraordinarias de 30 × (A+B+C)</strong> (art. 14.4). Es decir, <strong>A × 425 + (B+C) × 359</strong>."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 633,
+          "cita": "Las cuantías diarias de las 76 categorías están transcritas de la publicación oficial; los totales por día (A+B+C) son suma directa. La columna «≈ bruto/año» es una <strong>estimación orientativa</strong> —no una cifra oficial— calculada con las reglas de devengo del propio convenio."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 3,
+      "razon": "Las afirmaciones llevan artículo y condición, y además advierte de los casos límite exactos: la nocturnidad con su excepción de puesto nocturno por naturaleza, la subrogación acotada a dos supuestos frente a la creencia general de que el metal subroga, y la propia estimación anual con su horquilla de error.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 621,
+          "cita": "Solo en supuestos concretos (Art. 29): contratas de <strong>mantenimiento con la Administración Pública</strong> y contratas privadas de mantenimiento de <strong>tendidos eléctricos y telecomunicaciones</strong>. En el resto de sectores hay una preferencia de ingreso del 50% de la plantilla, no una subrogación general."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 436,
+          "cita": "La cifra real de cada persona varía (±3-5%) según los festivos locales, el calendario de la empresa (lunes a viernes o a sábado) y el cómputo de las vacaciones."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 2,
+      "razon": "Es la única ficha del piloto con enlaces externos útiles y con la referencia escrita al lado (BOP nº 26, 9-feb-2026, CVE BOP-SE-2026-026040, Anexo II), y uno de ellos lleva al documento exacto en el BOE. No llega a 3 porque la fuente principal —el propio convenio y sus tablas— solo se enlaza a la sede del BOP, es decir al buscador: el lector tiene que repetir la búsqueda con el CVE que la ficha le da.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 627,
+          "cita": "<strong>Real Decreto 126/2026</strong>, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparación. <a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815\" target=\"_blank\" rel=\"noopener\">BOE-A-2026-3815</a>."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 625,
+          "cita": "<strong>Tablas salariales 2026</strong> (+3%), acta de la comisión paritaria de 21 de enero de 2026, publicadas en el BOP de Sevilla núm. 26 (9-feb-2026, CVE BOP-SE-2026-026040)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "Cada bloque de cuantías dice su año y de dónde sale, incluidos los pluses, que es donde el resto del piloto falla. No llega a 3 porque no hay tablas históricas que distinguir: solo publica 2026, así que la exigencia de separar vigente de histórica no se pone a prueba (la tabla de subidas 2024-2026 es de porcentajes, no de cuantías).",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 284,
+          "cita": "<h2 id=\"tabla-salarial\">Tablas salariales 2026 — las 76 categorías (por día)</h2>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 485,
+          "cita": "Sobre el salario diario de las tablas se suman, cuando corresponden, estos conceptos. Sus cuantías 2026 salen del BOP núm. 26 (9-feb-2026)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "El sello no solo da fecha concreta y posterior al último boletín citado (10-ago-2026 > 9-feb-2026): dice qué se cotejó y contra qué, distinguiendo el articulado de las tablas y nombrando ambas publicaciones. Es el modelo que las otras cinco fichas deberían copiar, frente al boilerplate 'contra el texto íntegro del boletín oficial' sin nombrarlo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 215,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (Industrias Siderometalúrgicas de Sevilla 2024-2026, código 41002445011982, BOP de Sevilla) y las <strong>tablas salariales 2026</strong> (BOP núm. 26, 9-feb-2026, +3%), por SalarioJusto · última revisión 10 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 633,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto articulado del convenio 2024-2026 y contra las tablas salariales 2026 (BOP de Sevilla núm. 26, 9-feb-2026)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 3,
+      "razon": "Dice hasta cuándo valen las tablas, qué pasará después y qué vigilar, y lo repite en el resumen de particularidades para que no dependa de haber leído la sección. Además explica el mecanismo que puede mover las cifras ya publicadas (garantía IPC con efecto en 2027), no solo la fecha de vencimiento.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 528,
+          "cita": "Si la inflación de 2026 termina por encima del 3%, la diferencia —hasta un tope del 1,75%— se aplicará sobre las tablas de 2026 con efectos en 2027. El convenio vence el 31 de diciembre de 2026: conviene vigilar la negociación del siguiente."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 562,
+          "cita": "<strong>Régimen fiscal común</strong> (IRPF estatal + tramo autonómico de Andalucía). Vence el 31-dic-2026: vigilar la renegociación."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "La mejor ficha del piloto en este eje, y por una razón concreta: es la única que distingue por escrito entre lo que transcribe y lo que calcula, y publica la fórmula para que el lector rehaga el cálculo. También es la única que cita el SMI 2026 correcto —17.094 € y RD 126/2026, con enlace al BOE— justo donde las dos fichas de limpieza del piloto arrastran los 16.576 € obsoletos: la comparación sugiere que el error no es de plantilla sino de fecha de redacción, y que Sevilla ya tiene el patrón bueno. Ficha en ventana de medición abierta (ultimo_commit 2026-08-10, 9 días), aunque no hay parches que aplazar. Único margen de mejora en E1: los enlaces del BOP van a la sede y no al edicto, pese a que la ficha ya conoce el CVE exacto."
+}

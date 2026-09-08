@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-barcelona",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 3,
+      "razon": "22 entrantes desde 12 páginas, cuarto valor del corpus (mediana 10): la enlazan ocho hermanas del metal, el hub, la home, el mapa y —esto es lo que la distingue— cuatro veces desde el cuerpo de convenio-comercio-metal-barcelona.html, con anclas que dicen sector y provincia.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-barcelona.json",
+          "linea": null,
+          "cita": "\"entrantes_n\": 22, \"entrantes_desde\": [\"convenio-comercio-metal-barcelona.html\",\"convenio-metal-alava.html\",\"convenio-metal-asturias.html\",\"convenio-metal-gipuzkoa.html\",\"convenio-metal-madrid.html\",\"convenio-metal-navarra.html\",\"convenio-metal-sevilla.html\",\"convenio-metal-valencia.html\",\"convenio-metal-zaragoza.html\",\"convenios.html\",\"index.html\",\"mapa-del-sitio.html\"]"
+        },
+        {
+          "archivo": "convenio-comercio-metal-barcelona.html",
+          "linea": 369,
+          "cita": "<a href=\"/convenio-metal-barcelona.html\">Metal industrial de Barcelona</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 1,
+      "razon": "Es el caso del 1: hay enlaces, pero todos agrupados al final, en la lista 'Convenios relacionados' que abre en la línea 630 de 669, después de la FAQ. En el cuerpo —tablas, complementos, cláusula de garantía, grupos profesionales— no hay ni un enlace interno a otra ficha, y sus 12 internos en cuerpo son el mínimo de las nueve del metal (mediana del corpus 21).",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-barcelona.json",
+          "linea": null,
+          "cita": "\"internos_en_cuerpo\": 12, \"a_hermanas_mismo_sector\": 1"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 630,
+          "cita": "<h2>Convenios relacionados</h2>"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 632,
+          "cita": "<li><a href=\"/convenio-metal-bizkaia.html\">→ Convenio Metal Bizkaia 2026</a> (otro polo industrial con antigüedad activa y IRPF foral)</li>"
+        }
+      ],
+      "parche": "Insertar tras la línea 280 (final del bloque de tablas, justo antes del ejemplo de Carla) el párrafo comparativo que ya llevan las otras ocho fichas del metal, ahí porque es el punto donde el lector acaba de ver su cifra y quiere saber si es alta o baja: '<p><strong>Comparación con otras provincias del sector.</strong> El metal de Barcelona publica salario de grupo mensual, como el <a href=\"/convenio-metal-madrid.html\">metal de Madrid</a>; el <a href=\"/convenio-metal-gipuzkoa.html\">de Gipuzkoa</a> lo fija por valor hora y el <a href=\"/convenio-metal-valencia.html\">de Valencia</a> añade una tercera paga en marzo, de 17 días, que no existe aquí.</p>'. Segundo enlace, en la línea 449 del bloque de complementos ad personam (Art. 38): '…el mismo modelo de antigüedad congelada que el <a href=\"/convenio-metal-zaragoza.html\">metal de Zaragoza</a>, frente al <a href=\"/convenio-metal-bizkaia.html\">de Bizkaia</a>, que mantiene quinquenios sin tope.'",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "Enlaza a una sola hermana (Bizkaia) de las nueve disponibles, y la dirección de misma provincia deja fuera a su gemela confundible: convenio-comercio-metal-barcelona.html existe, la enlaza a ella cuatro veces desde el cuerpo, y no recibe nada a cambio. Además cuela como 'relacionado' un convenio de otra provincia (Construcción Bizkaia) desde una ficha de Barcelona. Madrid, Zaragoza y Navarra sí advierten en prosa de esa confusión aunque no tengan a quién enlazar; Barcelona, que sí lo tiene, ni advierte ni enlaza.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-barcelona.json",
+          "linea": null,
+          "cita": "\"a_hermanas_mismo_sector\": 1, \"a_otro_sector_misma_provincia\": [\"/convenio-construccion-bizkaia.html\",\"/convenio-hosteleria-barcelona.html\",\"/convenio-limpieza-barcelona.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 633,
+          "cita": "<li><a href=\"/convenio-construccion-bizkaia.html\">→ Convenio Construcción Bizkaia 2026</a> (sector industrial vasco)</li>"
+        }
+      ],
+      "parche": "Añadir en la sección de ámbito, y no en la lista final, la desambiguación que hoy falta —ahí porque es donde el lector que se ha equivocado de convenio todavía está leyendo—: '<p>Si tu empresa <strong>vende</strong> material metálico al público (ferretería, tienda de recambios, joyería) y no lo fabrica ni lo repara, no te aplica este convenio sino el <a href=\"/convenio-comercio-metal-barcelona.html\">convenio del comercio del metal de Barcelona</a>.</p>'. Y en la lista de la línea 636 sustituir el enlace a Construcción Bizkaia por hermanas reales del sector: '<li><a href=\"/convenio-metal-valencia.html\">→ Convenio Metal Valencia 2026</a> (misma estructura de grupos, con paga de marzo)</li>'.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 0,
+      "razon": "No hay puente: al_kit está vacío, el único del clúster del metal, y en toda la ficha no aparece la palabra reclamar ni una sección de qué hacer si tu nómina no llega. Las otras ocho fichas del metal tienen sección '¿Cobras menos…?' con enlace a la guía de diferencias.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-barcelona.json",
+          "linea": null,
+          "cita": "\"al_kit\": []"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 344,
+          "cita": "<strong>2026</strong>: +3% sobre las tablas de 2025 · efectos 1 de enero de 2026"
+        }
+      ],
+      "parche": "Añadir tras la línea 345, dentro del cronograma de subidas, el puente en el punto exacto de la necesidad —el párrafo acaba de decir que el +3% tiene efectos desde el 1 de enero de 2026 aunque el convenio se publicó en febrero, que es cuando nacen los atrasos—: '<p>Las tablas de 2025 se publicaron en febrero de 2026 con efectos retroactivos a enero de 2025: si tus nóminas de ese periodo se pagaron con las tablas viejas, la diferencia es tuya. Compara mes a mes y <a href=\"/reclamar-diferencias-salariales-convenio.html\">reclama la diferencia de las mensualidades no prescritas</a> — el art. 59.2 ET te da un año por cada mensualidad.</p>'",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "Sin anchors genéricos: los seis dicen sector, provincia y año ('→ Convenio Metal Bizkaia 2026') y el paréntesis que los sigue explica la relación. No es 3 porque la explicación queda fuera del anchor y porque el propio anchor no está redactado para ningún contexto: es el rótulo de una lista.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-barcelona.json",
+          "linea": null,
+          "cita": "\"anchors_genericos\": []"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 635,
+          "cita": "<li><a href=\"/convenio-hosteleria-barcelona.html\">→ Convenio Hostelería Barcelona 2026</a> (misma provincia, otro sector)</li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Barcelona es el nodo más citado del clúster y a la vez el que menos devuelve: recibe 22 enlaces y reparte 12 internos en cuerpo, todos desde una lista final. Es la ficha del metal que más se aleja del patrón del sector (le faltan el párrafo comparativo y la sección de reclamación que llevan las otras ocho), probablemente porque se redactó con otra plantilla."
+}

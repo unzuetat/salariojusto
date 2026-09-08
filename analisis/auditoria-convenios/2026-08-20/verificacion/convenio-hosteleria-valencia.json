@@ -1,0 +1,147 @@
+{
+  "slug": "convenio-hosteleria-valencia",
+  "fecha_verificacion": "2026-08-20",
+  "alcance": "11 hallazgos revisados: 9 métricas con nota 0-1 (E1 5.8, E1 5.10, E2 3.1, E2 8.4, E4 4.3, E5 6.4, E5 6.6, E6 7.2, E6 11.1) + 2 hard-fails declarados (E2 5.7, E3 5.7). E3 y E4 no tienen métricas con nota 0; E3 aporta solo hard-fail.",
+  "veredictos": [
+    {
+      "eje": "E1",
+      "id": "5.8",
+      "veredicto": "MATIZADO",
+      "motivo": "El núcleo aguanta y es el defecto más caro de la ficha: 1.100,46 € x 15 pagas = 16.506,90 €/año, 587,10 € por debajo del SMI 2026 (17.094 €, el mismo que fija la rúbrica en A5), y ni el hero (línea 224) ni la FAQ (línea 873) ni la Tabla II BIS (líneas 784-788, de 853,87 € a 1.038,09 €) advierten del suelo legal. Determinista: smi.cita_17094=false y smi.bajo_smi_mencionado=false, ambos coherentes con el hallazgo. Cae solo la subordinada: la ficha SÍ menciona el SMI en el cuerpo, como enlace en «Guías y herramientas» (línea 966) y como keyword del schema (línea 36) — el propio determinista da smi.menciona_smi=true, y la regla del proyecto es que el agente no contradice lo que el script ya sabe. La nota 1 no cambia.",
+      "enunciado_reescrito": "La cifra central de la página se publica sin el único matiz que la hace utilizable: 1.100,46 €/mes en 15 pagas son 16.506,90 €/año, por debajo del SMI 2026 (17.094 €). La ficha no cita en ningún punto la cuantía del SMI ni advierte de que actúa como suelo irrenunciable, ni bajo las tablas ni en la FAQ del salario mínimo ni sobre la Tabla II BIS (853,87 €-1.038,09 €); su única referencia al SMI es un enlace de navegación al final (línea 966).",
+      "prueba": {
+        "linea": 966,
+        "cita": "<li><a href=\"/salario-minimo-interprofesional-2026.html\">Salario Mínimo Interprofesional 2026</a></li>"
+      },
+      "comprobado": "Aritmética recalculada; 15 pagas confirmadas en hero (línea 224), stat-item (línea 264) y FAQ (línea 873); grep -i 'SMI|salario mínimo interprofesional' sobre la ficha = 2 aciertos (líneas 36 y 966); campos smi.* del determinista; SMI 2026 = 17.094 € contrastado con RUBRICA-V1.md §A5."
+    },
+    {
+      "eje": "E1",
+      "id": "5.10",
+      "veredicto": "MATIZADO",
+      "motivo": "El núcleo de la métrica 5.10 («al documento exacto, no al buscador del boletín», CANDIDATAS.md:117) se sostiene: el único enlace oficial es https://bop.dival.es/bop, la portada del buscador, y la propia frase pide al lector que repita la búsqueda por CSV; el segundo enlace es a noticias.juridicas.com, repositorio privado. Ambos responden 200, así que la mitad «vivos» sí se cumple. Cae la agravante: es falso que no haya sección de fuentes visible. La línea 939, en «Marco legal y partes firmantes» y fuera de todo <details>, es una nota-pie «Fuentes:» que identifica las dos publicaciones con sus CSV exactos (BOPV-2023/01380 y BOPV-2024/05525).",
+      "enunciado_reescrito": "Los dos enlaces externos están vivos, pero ninguno lleva al documento: el oficial apunta a la portada del buscador del BOP (la propia frase pide repetir la búsqueda por CSV) y el otro es un repositorio jurídico privado. La traza documental completa existe y es visible (nota-pie de fuentes con ambos CSV, línea 939), pero no está enlazada.",
+      "prueba": {
+        "linea": 939,
+        "cita": "Fuentes: texto íntegro Convenio Colectivo Intersectorial de Hostelería de la Provincia de Valencia (BOP Valencia núm. 26, 7 de febrero de 2023, CSV BOPV-2023/01380, código de convenio 46001285011982) y Acta 1/2024 de la Comisión Paritaria del 23 de enero de 2024 (BOP Valencia núm. 87, 7 de mayo de 2024, CSV BOPV-2024/05525)."
+      },
+      "comprobado": "Estructura HTML entre líneas 891-945: el <details> cierra en la línea 899 y la línea 939 queda fuera; curl -L a los dos enlaces externos → 200 y 200; enlaces.externos_oficiales del determinista = solo bop.dival.es."
+    },
+    {
+      "eje": "E2",
+      "id": "3.1",
+      "veredicto": "MATIZADO",
+      "motivo": "Todo lo verificable se confirma salvo un número. boilerplate_ratio 0,123 es efectivamente el más alto del piloto (espectáculos 0,0 · comercio-madrid 0,022 · metal-sevilla 0,049 · limpieza-zaragoza 0,067 · limpieza-asturias 0,099). El bloque llegó roto: «desde tras el fin de la vigencia formal», «los sindicatos la presentó», «comunicación a el TAL», y el HTML lleva el marcador <!-- bp-rotado -->. El «(Art. 34)» aparece idéntico en 11 fichas (grep -l 'descuelgue (Art. 34)' = 11) y la propia página atribuye el descuelgue a otro artículo. Cae la cifra: no son 8 frases compartidas sino 23 (187 frases − 164 exclusivas = 23; 187 × 0,123 = 23). frases_compartidas_top es una muestra truncada a 8 por el recolector (convenios-recolector.py:643, `[:8]`).",
+      "enunciado_reescrito": "boilerplate_ratio 0,123, el más alto del piloto: 23 de 187 frases del cuerpo se repiten en otras fichas, y el molde compartido no es cromo sino el bloque jurídico «¿Cobras menos?», que además llegó roto (placeholder sin sustituir, concordancia y preposición fallidas, marcador <!-- bp-rotado --> en el HTML). Arrastra un «descuelgue (Art. 34)» idéntico en 11 fichas del corpus.",
+      "prueba": {
+        "linea": 927,
+        "cita": "<tr><td><strong>Tribunal de Arbitraje Laboral de la Comunidad Valenciana (TAL)</strong></td><td>Mediación y arbitraje en descuelgues (Art. 47.7) y conflictos colectivos."
+      },
+      "comprobado": "boilerplate_ratio de las 6 fichas del piloto leído de los deterministas; corpus.frases_cuerpo=187 y frases_exclusivas=164; línea 643 del recolector (truncado a 8); grep de 'descuelgue (Art. N)' en las 54 fichas = 11 coincidencias, todas '(Art. 34)'. La cita de prueba refuerza el hallazgo: dentro de la misma página el descuelgue es Art. 47.7, no Art. 34."
+    },
+    {
+      "eje": "E2",
+      "id": "8.4",
+      "veredicto": "MATIZADO",
+      "motivo": "La ausencia es real y comprobada: grep -i 'dana|fallas|fallero|19 de marzo|horta' sobre la ficha = 0 coincidencias, y censo.json trae nota vacía para convenio-hosteleria-valencia.html. Pero el enunciado es excesivo. Es falso que «nada de lo que hace singular a la hostelería de esta provincia aparezca en ninguna línea»: la ficha reconstruye la paga de garantía IPC del Acta 1/2024 con base de cálculo y beneficiarios (líneas 700-715), documenta la interpretación paritaria del corte de nocturnidad a las 00:30 frente a la consulta del ocio nocturno (línea 885), explica el Plus de Formación limitado al CNAE 56 no vinculado a hotel (línea 895) y el umbral de subrogación del 85% en 4 meses (línea 887), y el determinista le cuenta 3.309 palabras exclusivas, el segundo valor del piloto. Lo cierto es la omisión de los dos hechos locales de más demanda, no la falta de singularidad.",
+      "enunciado_reescrito": "La ficha tiene singularidad provincial (paga de garantía IPC del Acta 1/2024, nocturnidad desde las 00:30, plus de formación CNAE 56, subrogación al 85%), pero le faltan los dos hechos locales que hoy más se buscan en la hostelería de Valencia y que ninguna otra provincia comparte: la DANA del 29-oct-2024 en l'Horta Sud y el tratamiento de las Fallas como pico de contratación y festivo trabajado. Cero menciones de ambos, y el campo nota del censo está vacío.",
+      "prueba": {
+        "linea": 706,
+        "cita": "<li><strong>Base de cálculo</strong>: salario base + pagas extras + manutención + plus de transporte de las tablas de 2023 (Anexo II).</li>"
+      },
+      "comprobado": "grep -i sobre DANA/Fallas/Horta/19 de marzo = 0; censo.json nota=\"\"; corpus.palabras_exclusivas=3309 frente a 5456 (zaragoza), 3192 (asturias), 2427 (sevilla), 1767 (comercio-madrid), 1516 (espectáculos). El parche propuesto por E2 está bien construido: manda investigar antes de escribir, no rellenar."
+    },
+    {
+      "eje": "E2",
+      "id": "5.7",
+      "veredicto": "CONFIRMADO",
+      "motivo": "No he podido refutarlo por ninguna vía. Ni censo.json (entrada convenio-hosteleria-valencia.html: fuenteEstado «art. 86.3 ET · tablas vigentes en 2026 por ultraactividad», nota vacía) ni data/convenios/hosteleria_vlc.json (grep de 'denunci|octubre|2025-10' = 0) registran denuncia alguna. El resto de la página nunca la menciona: el hero, el bloque de ultraactividad y el marco legal solo dicen que el convenio expiró el 31/12/2025. El origen que señala E2 se verifica exactamente: 'CCOO la presentó el 2 de octubre de 2025' vive en convenio-limpieza-zaragoza.html, cuya entrada de censo sí dice «denunciado por CCOO el 2-oct-2025 (REGCON 50000755011981)», y la variante degradada 'CCOO la presentó el octubre de 2025' en convenio-limpieza-asturias.html. La frase con sujeto genérico ('los sindicatos la presentó el octubre de 2025') aparece en 5 fichas; otras 4 conservan el placeholder 'fecha pendiente de verificación'. Es 5.7 de manual: afirmación fáctica sin correlato en la fuente, en el párrafo que se lee justo antes de reclamar.",
+      "prueba": {
+        "linea": 863,
+        "cita": "Lo que decae con la denuncia (los sindicatos la presentó el octubre de 2025) son las cláusulas obligacionales (paz social, comisión paritaria, prórroga automática)"
+      },
+      "comprobado": "censo.json y hosteleria_vlc.json leídos íntegros en lo relativo a Valencia; grep del molde en las 54 fichas con recuento de variantes; entrada de censo de limpieza-zaragoza que documenta la denuncia real."
+    },
+    {
+      "eje": "E3",
+      "id": "5.7",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Mismo hard-fail que E2 y mismas comprobaciones, todas superadas: la fecha no consta en las fuentes citadas por la ficha (BOP 26/2023 y Acta 1/2024, BOP 87/2024), ni en el censo, ni en el JSON. La rotura sintáctica que E3 usa como indicio está en el HTML y el propio archivo la delata con el comentario <!-- bp-rotado --> al abrir el párrafo. Una precisión sobre la coletilla final del detalle: la afirmación de que el «Art. 34» no consta en el articulado del convenio de Valencia no es verificable desde aquí (no tenemos el texto del BOP), pero sí lo es la contradicción interna que la sostiene: la tabla de órganos de la línea 927 atribuye el descuelgue al Art. 47.7. Conviene reportarlo así y no como lectura del boletín.",
+      "prueba": {
+        "linea": 863,
+        "cita": "<p><!-- bp-rotado --> El convenio está en ultraactividad desde tras el fin de la vigencia formal del convenio"
+      },
+      "comprobado": "Idéntico a E2 5.7, más la lectura de las líneas 920-930 (órganos de aplicación) para calibrar el sub-argumento del Art. 34."
+    },
+    {
+      "eje": "E4",
+      "id": "4.3",
+      "veredicto": "REFUTADO",
+      "motivo": "El hallazgo se apoya en una cita recortada y en una ambigüedad que la ficha resuelve dos veces. (1) El card-title no dice «Tablas salariales 2025»: dice «Tablas salariales 2025 — Hostelería Provincia de Valencia», es decir, contiene sector, provincia y año, que es literalmente lo que exige la métrica 4.3 («la ficha dice explícitamente provincia, sector y año junto a la cifra», CANDIDATAS.md:97). E4 lo transcribe entero en su evidencia y lo trunca en la razón. (2) «Un motor tiene que resolver por su cuenta si 1.214,84 € es la cifra de 2025 o la vigente en 2026 [...] algo que ninguna tabla explica» es falso: el párrafo inmediatamente anterior a Tabla I lo explica, y el badge del hero (línea 221, «Tablas salariales 2025 · vigentes en 2026») lo repite antes del primer scroll. El residuo que queda —h3 sin territorializar y tablas sin caption— no pertenece a 4.3 sino a 11.1, donde E6 ya lo puntúa con sin_caption=20. No debe contarse dos veces.",
+      "prueba": {
+        "linea": 284,
+        "cita": "Salario base mensual bruto en 15 pagas (12 mensualidades + 3 extras de junio, navidad y marzo). Cifras oficiales publicadas en BOP Valencia núm. 26 del 7 de febrero de 2023. Siguen aplicándose en 2026 por ultraactividad (art. 86.3 ET)."
+      },
+      "prueba_secundaria": {
+        "linea": 283,
+        "cita": "<div class=\"card-title\" id=\"tabla-salarial\">Tablas salariales 2025 — Hostelería Provincia de Valencia</div>"
+      },
+      "comprobado": "Líneas 221-224 (badge, h1, hero-sub), 283-286 (card-title e intro del bloque de tablas), 314 y 622 (dónde vive 1.214,84 €), seo.title/meta del determinista (ambos con provincia, sector, año y cifra). El parche de captions que propone E4 sigue siendo útil, pero como refuerzo de 11.1."
+    },
+    {
+      "eje": "E5",
+      "id": "6.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado enlace a enlace, no solo por el determinista. Los únicos href a fichas de convenio del cuerpo son /convenio-hosteleria.html (x2, el pilar estatal), /convenio-limpieza-valencia.html y /convenio-oficinas-valencia.html: cero provincias hermanas de hostelería, coherente con a_hermanas_mismo_sector=1 (línea 522 del determinista, comprobada). Las ocho provincias que la propia ficha nombra en la fuente de su comparativa siguen en texto plano. Y la reciprocidad falla en la dirección que E5 señala: convenio-metal-valencia.html sí enlaza a esta ficha, y el bloque «Más recursos para Valencia» (líneas 951-957) no le devuelve el enlace.",
+      "prueba": {
+        "linea": 854,
+        "cita": "Comparado con: Barcelona, Bizkaia, Cantabria, Cádiz, Granada, Madrid, Málaga, Sevilla."
+      },
+      "comprobado": "grep -o 'href=\"/convenio[^\"]*\"' con recuento; línea 522 del JSON determinista; grep de convenio-hosteleria-valencia.html en convenio-metal-valencia.html = 1; lectura de las líneas 948-970."
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "REFUTADO",
+      "motivo": "La métrica 6.6 es «Puente al Kit en el punto donde nace la necesidad, no al final» (CANDIDATAS.md:131) y la ficha tiene ese puente. El bloque «¿Cobras menos de lo que fija el convenio?» cierra, tras los tres pasos, con un enlace a la guía de reclamación — que el recolector cuenta como Kit por su propia regla (convenios-recolector.py:398: `kit = {h for h in destinos if \"plantilla\" in h or \"reclamar\" in h ...}`). Es decir, de los tres enlaces al Kit uno está exactamente donde el lector acaba de descubrir que cobra de menos, no en la lista final. «Cantidad sin colocación» no se sostiene. Lo único cierto es que las dos plantillas concretas no se citan en el paso 2, y eso es una mejora de colocación, no una insuficiencia de nota 1 sobre una ficha con al_kit=3, el máximo del piloto y el percentil 75 del corpus, como el propio E5 reconoce.",
+      "prueba": {
+        "linea": 869,
+        "cita": "Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">46001285011982</code>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+      },
+      "comprobado": "Lectura de las líneas 862-869 completas; regla de clasificación del Kit en el recolector (línea 398); enlaces.al_kit = 3 destinos, de los cuales uno vive dentro del bloque de reclamación y dos en «Guías y herramientas». La sugerencia de sembrar las plantillas en el paso 2 puede pasar al informe como mejora, sin nota."
+    },
+    {
+      "eje": "E6",
+      "id": "7.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Reproducido en el CSS. La regla de la línea 147 vive dentro de @media (max-width:720px) abierto en la línea 139 y pinta .tabla-salarios td.num en var(--green) (#2E7D52): son las 41 celdas numéricas de las tres tablas class=\"tabla-salarios\". En escritorio no se aplica y por eso el determinista da verde_en_tablas=0 sin contradicción — el script mide el render base, no el bloque móvil, y E6 lo reconcilia bien. td.sal no se usa (0 ocurrencias), como dice. La norma existe y es de casa: métrica 7.2 «Verde al mínimo: valores salariales en tinta neutra; verde solo para el sello» (CANDIDATAS.md:143). La herencia del canon también: convenio-hosteleria-madrid.html línea 189 trae la regla idéntica. Única salvedad para el informe: la coletilla «donde está la mayor parte del tráfico» no está respaldada por ningún dato del determinista (no hay corte por dispositivo); conviene suprimirla y dejar el defecto, que se sostiene solo.",
+      "prueba": {
+        "linea": 147,
+        "cita": ".tabla-salarios td.sal,.tabla-salarios td.num{font-size:15px;color:var(--green);}"
+      },
+      "comprobado": "Líneas 104 (token --green), 135-148 (bloque móvil completo, apertura en 139 y cierre en 148); recuento de td class=\"num\" = 41 y de tablas class=\"tabla-salarios\" = 3; class=\"sal\" = 0; línea 189 de convenio-hosteleria-madrid.html."
+    },
+    {
+      "eje": "E6",
+      "id": "11.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Los tres números salen del determinista y coinciden: tablas.n=20, sin_scope=20, sin_caption=20, sin_th=1. La tabla sin th es la que E6 identifica, «Lo básico» de jornada: se abre en la línea 442 con <table> seguido directamente de <tbody>, sin thead, y cada fila es un par nombre-valor. La norma existe en el proyecto y con este alcance exacto: métrica 11.1 «Tablas con <th>, scope y <caption>: audibles con lector de pantalla» (CANDIDATAS.md:201), destacada además en la lista de prioridades (línea 257: «En un sitio cuyo activo son tablas salariales, que no sean audibles es un defecto de producto»).",
+      "prueba": {
+        "linea": 442,
+        "cita": "<table>\n      <tbody>\n        <tr><td>Jornada máxima anual</td><td><strong>1.794 horas</strong> efectivas</td></tr>"
+      },
+      "comprobado": "Lectura de las líneas 438-450; campos tablas.* del determinista; definición de la métrica en CANDIDATAS.md:201 y 257. Nota menor de numeración: el <table> está en la línea 442, no en la 443 que cita E6 (la 443 es <tbody>); no afecta al fondo."
+    }
+  ],
+  "resumen": {
+    "confirmados": 5,
+    "matizados": 4,
+    "refutados": 2,
+    "hardfails_que_sobreviven": ["5.7 (denuncia de octubre de 2025 sin correlato en fuente, línea 863) — declarado por E2 y E3, confirmado por ambas vías", "5.1 determinista (74 de 169 cifras en secciones sin referencia, 43,8%) — no era objeto de esta verificación, no revisado"],
+    "notas": [
+      "No he añadido hallazgos. Dejo constancia de tres cosas vistas de paso, para que decida el sintetizador, no yo: (1) la línea 869 llama «sindicatos firmantes» a CONHOSTUR, CCOO de Servicios y UGT-FeSMC, mientras la tabla de partes firmantes de las líneas 910-916 sitúa en la representación sindical solo a FeSMC-PV UGT y CCOO Servicios País Valenciano y no incluye a CONHOSTUR en ninguna de las 13 patronales que enumera; (2) html_vs_json da cobertura 0,273 con 25 importes del JSON ausentes del HTML y 20 importes del HTML ausentes del JSON; (3) la nota-pie de la línea 939 fecha la pieza editorial el 27 de mayo de 2026 y el sello de la línea 234 dice «última revisión 28 de mayo de 2026». Ninguna de las tres formaba parte de los hallazgos que me tocaba verificar.",
+      "Sobre el freno 9.7: operacion.ventana_medicion_abierta=false (último commit 2026-07-30, 21 días). Los seis ejes lo declaran igual. Correcto, no bloquea los parches.",
+      "Coincidencia entre ejes: E2 y E3 llegaron por separado al mismo hard-fail 5.7 con la misma línea. Al no verse entre sí, la convergencia es señal, no duplicado; en el informe debe contar como un solo defecto."
+    ]
+  }
+}

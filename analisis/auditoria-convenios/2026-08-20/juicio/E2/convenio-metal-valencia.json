@@ -1,0 +1,137 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-valencia",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 2,
+      "razon": "boilerplate_ratio 0,070 con 8 frases compartidas: cuatro son cromo inevitable y una es la declaración de metodología, correcta. Pero dos de las ocho son sustancia clonada palabra por palabra con la ficha de Madrid —el aviso de los dos convenios de metal y la regla para elegir—, y ese párrafo es contenido, no cromo: debería estar escrito con la patronal y el código de cada provincia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 264,
+          "cita": "Si en tu empresa se fabrica, instala o repara, es este; si solo se vende, es el otro."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 551,
+          "cita": "Las cuantías están transcritas de la publicación oficial; los ejemplos y el cálculo de neto son elaboración propia y se identifican como tales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "2.677 palabras de prosa contra ratio_tabla 0,141, y la prosa resuelve una trampa que la tabla esconde: en el mismo cuadro conviven salarios por día (personal de oficio) y por mes (técnicos y empleados), y la columna anual ya incorpora la tercera paga. Sin el párrafo de lectura y sin el ejemplo de Marcos, el lector compararía peras con manzanas dentro de la misma tabla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 270,
+          "cita": "el personal de operaciones (oficio) cobra el salario grupo por día; el personal técnico y de empleados/as lo cobra por mes"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 338,
+          "cita": "Paga de marzo (17 días de salario grupo, Art. 16) incluida en el cómputo anual"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 2,
+      "razon": "106 frases exclusivas y 1.969 palabras exclusivas con hechos propios de verdad: la paga de marzo, el plus de formación de 30 €/mes cuando la empresa no forma, la opción de cobrar menos penosidad a cambio de dos horas menos de jornada. Pero todos son lectura atenta del articulado, no cruce de fuentes; la única pieza que exigió trabajo de corpus es la comparación de pagas con Barcelona y Bizkaia. Hechos propios sí, investigación aún no.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 422,
+          "cita": "La empresa que no acredite la participación de su plantilla en un plan de formación debe abonar 30 €/mes de naturaleza salarial. O forma, o paga."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 410,
+          "cita": "Alternativa: cobrar menos porcentaje con reducción de 2 horas semanales de jornada."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "3 clonadas de 6, y las tres propias no son transferibles: qué es la paga de marzo, qué es el plus de formación de 30 euros y desde cuándo complementa la empresa la baja (día 6 en accidente, día 75 en enfermedad común). Son preguntas que solo tienen sentido leyendo este convenio, no un formulario con el topónimo cambiado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 531,
+          "cita": "¿Qué es el plus de formación de 30 euros?"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 535,
+          "cita": "En enfermedad común, el 100% a partir del día 75 de la baja (Art. 68)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 3,
+      "razon": "La particularidad organiza la ficha entera: el H1 no es «tablas salariales de Valencia», es la paga de marzo, y de ahí cuelgan el primer H2, el ejemplo, una FAQ, el listado de particularidades y la comparación con las hermanas. Es la única de las nueve donde el título vende un derecho concreto en vez de un rango de cifras, y encima uno que el propio sector desconoce. Ninguna otra ficha del cluster hace eso.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 194,
+          "cita": "Convenio del Metal de Valencia: la paga de marzo que casi nadie conoce"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 248,
+          "cita": "Valencia añade la paga de marzo de 17 días, lo que en la práctica supone algo más de media paga extra adicional al año respecto a esas provincias."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 2,
+      "razon": "Frente al BOP hay ordenación buena, ejemplo trabajado y traducción a nómina, pero todo lo que dice está en el boletín: no resuelve ningún conflicto de publicaciones, no reconstruye ninguna aritmética que el texto deje implícita ni aporta actualidad de negociación. El rescate de la paga de marzo es mérito editorial —elegir qué destacar— más que ventaja informativa sobre el PDF.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 359,
+          "cita": "La paga de marzo se prorratea sobre los 12 meses anteriores a su devengo."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 3,
+      "razon": "El agregador da la cifra pelada, y en Valencia la cifra pelada se deja fuera 17 días de salario al año. Que la página abra con eso y lo cuantifique frente a otras provincias es una ventaja que el lector percibe en la primera línea, sin que nadie se la explique: sabe inmediatamente que aquí hay algo que en su nómina puede faltar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 241,
+          "cita": "Es la particularidad más tangible del convenio del metal de Valencia, y mucha gente del sector ni la conoce"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 485,
+          "cita": "Recuerda sumar la paga de marzo, los pluses de turno/nocturnidad/penosidad si te corresponden y el plus de formación si tu empresa no forma."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana cerrada (último commit 2026-07-30, 21 días): los parches se pueden aplicar. Es el mejor ejemplo del sector de que la singularidad no se consigue añadiendo palabras: con 2.677 palabras de prosa —menos que Álava, Asturias o Barcelona— consigue la ficha más reconocible del cluster porque eligió un hecho y lo puso en el título. El escalón que le falta es de investigación: Valencia es la provincia del metal español más dependiente de una única factoría de automoción y de su corona de proveedores, y la ficha no dice si el convenio provincial les aplica. Parche concreto: comprobar en REGCON el convenio de empresa de la gran planta de vehículos de la Ribera Baixa y decir en dos frases, dentro de «¿Este convenio te cubre?», que la factoría se rige por su propio convenio pero que las auxiliares de su cadena —donde está la mayoría de esas 85.000 personas— se rigen por este. Ese dato, más el dato del párrafo de la línea 343 (la horquilla de neto 19.700-20.200 €), convertiría la ventaja frente al agregador en ventaja frente a cualquiera. Detalle menor para otro eje: la ficha comparte con Madrid dos párrafos literales sobre los dos convenios del metal de la provincia."
+}

@@ -1,0 +1,186 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-zaragoza",
+  "metricas": [
+    {
+      "id": "7.8",
+      "nota": 3,
+      "razon": "Sigue el canon y hace con su contenido exclusivo algo que ninguna otra ficha del cluster hace: en vez de exhibirlo, lo usa para corregir la lectura de sus propias tablas. La primera sección del cuerpo no habla del convenio sino de por qué las cifras que el lector está a punto de ver no son su sueldo, y ese hilo se desarrolla luego en una sección entera dedicada a las dos piezas que lo explican (primas del Art. 17 y ex categoría del Art. 22), colocada justo detrás de la tabla. La ficha lo asume además como compromiso editorial en «Quién audita esto». Nada de lo propio está pegado al final: el polo de automoción, el marco autonómico AMIMA y el modelo sin antigüedad activa viven dentro de las secciones donde importan.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 250,
+          "cita": "Tablas de convenio y salario real: por qué no son lo mismo"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 361,
+          "cita": "Son las dos piezas que explican por qué el salario real supera la tabla. Conviene mirar la nómina detallada para verlas."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 550,
+          "cita": "señalamos de forma explícita que las tablas son mínimos de convenio y que el salario real incorpora primas y ex categoría, para no inducir a error"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Particularidades del convenio del metal de Zaragoza» (469-479): siete de sus nueve viñetas rehacen lo desarrollado arriba -los 7 grupos y su horquilla (251 y tabla), las tablas como mínimos (253 y 361), la paga de 400 € (385), la antigüedad sin devengo activo (449), las bolsas de horas y el retén (396-404), el plus de transporte y el de distancia (428-433) y el AMIMA (255)-. Solo dos viñetas dicen algo que no está en ninguna sección del cuerpo: la subrogación amplia del Art. 7, que además solo reaparece en la FAQ 538, y el régimen fiscal común. Verificado viñeta a viñeta antes de proponer el borrado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 474,
+          "cita": "Sin antigüedad activa: solo complemento ad personam para quienes la consolidaron antes de 1997 (Art. 16)."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 449,
+          "cita": "Antigüedad: sin devengo activo. El metal de Zaragoza no reconoce nuevos tramos de antigüedad. Solo mantiene un complemento ad personam sustitutivo para quienes lo consolidaron a 31 de diciembre de 1996 (Art. 16)"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 477,
+          "cita": "Subrogación amplia en contratas de mantenimiento con administraciones y empresas privadas (Art. 7)."
+        }
+      ],
+      "parche": "Suprimir el h2 «Particularidades» y su lista (469-480) tras rescatar la subrogación, que hoy no tiene sitio en el cuerpo, como párrafo final de «¿Este convenio te cubre?» (después del callout de la línea 267): «Si trabajas en una contrata. A diferencia de la mayoría de convenios de industria, el Art. 7 sí obliga a subrogar: cuando cambia la adjudicataria de un servicio de montaje, instalación o mantenimiento para una administración o una empresa privada, la nueva se queda al menos con el 60% de la plantilla, siempre que lleves seis meses adscrito al servicio.» Actualizar el índice de la línea 229.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "Orden razonable: el h1 lleva la horquilla 21.274-30.469 €, el card de datos clave la repite y la tabla es el tercer h2 (270), con las primas y el ex categoría colocados justo detrás (360), que es el orden correcto -primero la cifra, luego lo que la corrige-. No es 3 porque por delante de la tabla van dos secciones de contexto y porque el dato que la ficha considera decisivo para la nómina real (las primas del Art. 17) queda a más de cien líneas del titular.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 205,
+          "cita": "Convenio del Metal de Zaragoza: tablas 2026 de 21.274 € a 30.469 €"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 360,
+          "cita": "Primas de productividad y complemento ex categoría"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "El acierto editorial de la ficha es también su repetición: la advertencia de que las tablas son mínimos y no el salario real se cuenta seis veces de cuerpo a cuerpo -subtítulo del hero, callout de la sección de apertura, entradilla de la tabla, pie de la tabla, callout comparativo y entradilla de la sección de primas-, más la FAQ y el bloque de quién audita. A partir de la tercera, el lector ya no recibe información: recibe insistencia, y las líneas que se gastan en repetir son líneas que no se gastan en explicar cuánto suma la prima en euros.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 253,
+          "cita": "Importante: las tablas son mínimos, no el salario real. Las cifras del convenio (de 21.274 € en el grupo 7 a 30.469 € en el grupo 1) son el suelo garantizado."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 349,
+          "cita": "Estas cifras son mínimos de convenio: consulta tu nómina para ver primas y ex categoría."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 361,
+          "cita": "Son las dos piezas que explican por qué el salario real supera la tabla."
+        }
+      ],
+      "parche": "Conservar dos apariciones y solo dos: el callout de la línea 253 (la advertencia) y la sección de la 360 (la explicación). Recortar la entradilla de la tabla (271) quitándole «Recuerda: son mínimos de convenio — sobre ellos se suman, según empresa, el complemento ex categoría y las primas de productividad» y dejar en su lugar un enlace: «Estas cifras son el mínimo de convenio → ver primas y ex categoría». Suprimir la frase de la línea 349 y la coletilla final del callout comparativo (357), que vuelven a decir lo mismo con otras palabras.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "Los tecnicismos propios están explicados en su primer uso y con cifras: el sistema de primas se traduce en porcentajes y puntos de actividad concretos (25% a 110 puntos, 50% a 133,33), el «ex categoría» se define por quién lo cobra y por su efecto -se trata como salario base y computa para todos los pluses-, y el «ad personam» se explica con su fecha de corte. No es 3 porque falta el paso final, el de euros: la ficha insiste seis veces en que el salario real supera la tabla pero nunca dice cuánto sería esa prima del 25% sobre un grupo concreto. Y «ultraactividad» aparece una sola vez, en una viñeta del cajón, sin explicación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 369,
+          "cita": "Complemento personal para quien, en la adaptación a grupos de 2017, venía de una categoría con salario superior al del grupo. Se trata como salario base y computa para todos los pluses. No es compensable ni absorbible."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 365,
+          "cita": "En empresas con sistemas de incentivos, la prima mínima es del 25% de la tabla «cálculo prima» a 110 puntos de actividad y del 50% a 133,33 puntos (óptimo)."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 479,
+          "cita": "Vigencia hasta el 31 de diciembre de 2026, denunciado, con negociación del nuevo convenio en enero de 2027 y ultraactividad."
+        }
+      ],
+      "parche": "Cerrar el círculo en la sección de primas, añadiendo tras la línea 365: «Qué significa en tu nómina: la prima se calcula sobre la tabla “cálculo prima” del anexo, no sobre la retribución anual, así que pide a tu empresa el valor de esa tabla para tu grupo antes de dar por buena la cuantía. Sin sistema de incentivos implantado no hay prima que reclamar: la tabla del anexo I es entonces todo tu salario de convenio.» Y explicar el término al reubicar la vigencia: «…entra en ultraactividad, es decir, el convenio vencido se sigue aplicando mientras se negocia el siguiente.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 5 · UGT 5 y dice_los_sindicatos 1: todas las menciones son de firmantes del convenio -card de datos clave, cierre del bloque de reclamar, fuentes- o de sede de asesoría, que son los usos legítimos, y en ningún punto se les atribuye la voz del conjunto de la representación. No es 3 porque la tarjeta de recursos sindicales se limita a las dos firmantes y no ofrece salida a quien no está afiliado a ninguna de ellas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 490,
+          "cita": "Firmantes: FEMZ (patronal) y los sindicatos CCOO de Industria de Aragón y UGT-FICA Aragón."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 508,
+          "cita": "CCOO de Industria de Aragón y UGT-FICA Aragón, sindicatos firmantes. Asesoría a personas afiliadas del metal."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es exactamente el del cluster: 23 encabezados, 1 h1, 16 h2, 6 h3 de FAQ y saltos_jerarquia vacío, la misma silueta que convenio-metal-sevilla (23/16/6) y que convenio-metal-gipuzkoa, con la misma secuencia canónica. La única desviación es una mejora: intercala un h2 propio, «Primas de productividad y complemento ex categoría», entre la tabla y las pagas, que es donde hace falta. Como el resto de esta tanda, sustituye el bloque «En 30 segundos» de alava/asturias/barcelona/sevilla por un h2 gancho, igual que el canon convenio-hosteleria-madrid.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 360,
+          "cita": "Primas de productividad y complemento ex categoría"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 254,
+          "cita": "En 30 segundos · Qué es."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 2,
+      "razon": "Los conceptos propios mantienen un solo nombre en todas sus apariciones: «ex categoría», «ad personam», «prima de rendimiento» y «paga compensatoria» se llaman igual en la sección, en el cajón y en la FAQ. No es 3 porque la magnitud de la tabla se rotula de tres maneras -«Tabla de convenio» en el card, «Retribución bruta anual de convenio» en la entradilla y «Salario convenio del anexo I» en la tabla de pagas- y el plus de nocturnidad se calcula sobre «el salario convenio» sin que se diga si es esa misma cifra anual o su equivalente mensual, que es lo que el lector necesita para comprobar el 20%.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 271,
+          "cita": "Retribución bruta anual de convenio para 2026 (BOPZ de 21-feb-2026)"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 383,
+          "cita": "Extra de veranoJunio (semestral)Salario convenio del anexo I + ad personam, en su caso"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 425,
+          "cita": "20% del salario convenio y 20% del ex categoría por el trabajo entre las 22:00 y las 06:00."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Capa 0, no puntuado aquí: 9 tablas sin scope ni caption (11.1*), verde_en_tablas = 0 (cumple la norma de cifras en tinta neutra) y parrafos.largos_100 vacío. Es, con diferencia, la ficha del corpus con menos boilerplate del sector metal (boilerplate_ratio 0,041 frente a 0,07-0,075 de sus hermanas), lo que encaja con la impresión de lectura: casi todo lo que hay es suyo. Su defecto de forma dominante no es la falta de material sino el exceso de insistencia en un mismo aviso (ver 8.3). Ventana de medición abierta (último commit 4-ago, 15 días): los parches van marcados como aplazados."
+}

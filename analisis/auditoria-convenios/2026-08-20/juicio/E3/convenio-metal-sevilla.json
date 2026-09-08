@@ -1,0 +1,148 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-sevilla",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Cifra, año y fuente están arriba y verificables (el determinista lo confirma y el sello cita el BOP núm. 26 del 9-feb-2026), pero lo que se ofrece de entrada es un rango de 52,86 a 102,23 €/día, no la cifra de un puesto. Quien busca «cuánto cobra un oficial de 1ª del metal en Sevilla» tiene que bajar hasta el ejemplo del cuerpo o hasta la tabla para encontrar sus 59,75 €/día.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 246,
+          "cita": "Retribución 52,86 € – 102,23 €/día trabajado"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 215,
+          "cita": "✓ Verificado contra el texto del convenio (Industrias Siderometalúrgicas de Sevilla 2024-2026, código 41002445011982, BOP de Sevilla) y las tablas salariales 2026 (BOP núm. 26, 9-feb-2026, +3%)"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 279,
+          "cita": "un oficial u oficiala de 1.ª tiene un salario base (A) de 40,27 €/día , un plus de asistencia (B) de 7,86 € y un plus de productividad (C) de 11,62 € : 59,75 € por día trabajado ."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 2,
+      "razon": "Responde 5 de las 8 preguntas de un trabajador del metal sevillano (cuánto cobra su categoría al día, si el convenio cubre el taller auxiliar de Airbus, cuántas pagas y cómo se calculan, cuánto le corresponde por nocturnidad y turnicidad, y qué hacer si cobra de menos). Tres sin responder: (1) «¿cuánto es eso al mes?» — la ficha da €/día y un ≈bruto/año, nunca una cifra mensual, que es la que trae la nómina; (2) «soy soldador / calderero / montador, ¿en qué categoría estoy?» — hay 76 categorías con los nombres del boletín (Oficial de 1ª, Especialista, Peón) y ningún puente desde el oficio real; (3) «llevo 6 años, ¿cuánto de antigüedad me toca?» — se dice que son quinquenios con tope de dos, pero el importe se remite al Anexo VI sin transcribirlo, así que no hay cifra ni forma de calcularla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 489,
+          "cita": "Por años de servicio, con un tope de 2 quinquenios . El importe figura en el Anexo VI (en €/día para oficio y obrero; en €/mes para el resto) y sube el mismo porcentaje que los salarios."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 294,
+          "cita": "Oficial/a de 1ª 40,27 7,86 11,62 59,75 € 24.108 €"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 497,
+          "cita": "3,28 €/día en triple turno y 2,38 €/día en doble turno, por día efectivamente trabajado (cuantías 2026)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Camino de cinco pasos, bien ordenado y con el detalle que más importa en el metal: te dice que la categoría se determina por las funciones reales y no por el nombre del puesto, te hace sumar A+B+C y comprobar las extras, te recuerda el derecho a la nómina desglosada, y nombra la vía andaluza (SERCLA) con el plazo del art. 59.2. No llega a 3 porque no entrega documento: el determinista solo registra un enlace al kit, la guía genérica, sin plantilla de reclamación de atrasos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 567,
+          "cita": "Identifica tu categoría en la tabla del Anexo II según tus funciones reales, no según el nombre del puesto."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 571,
+          "cita": "Acude a la Comisión Paritaria del convenio o al SERCLA (vía extrajudicial de Andalucía). Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 2,
+      "razon": "El ámbito funcional está resuelto con nota: traduce el CNAE a empresas reconocibles, enumera las ramas (aeroespacial, automoción, naval, siderurgia, renovables, ITV) y declara la frontera más litigiosa del sector —en un taller que vende y repara, el convenio solo cubre al personal de reparación—. Lo que no resuelve es la otra mitad de la autoubicación: las 76 categorías van con la denominación del boletín, y un soldador, un chapista o un montador de estructuras no tiene forma de saber si es Oficial de 1ª, de 2ª o Especialista. Sin eso, saber que el convenio te cubre no te da tu cifra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 271,
+          "cita": "Quedan fuera las empresas dedicadas a la venta en proceso exclusivo de comercialización . En los talleres donde concurren venta y reparación de vehículos, el convenio se aplica solo al personal de reparación y mantenimiento."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 290,
+          "cita": "Profesionales de oficio y personal obrero 7 categorías · 52,86–59,75 €/día"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 268,
+          "cita": "Personal de oficio, obrero, subalterno, administrativo y técnico : la clasificación recoge 76 categorías en 8 grupos profesionales, del peón/a a la ingeniería."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 2,
+      "razon": "Explica la correspondencia que hace falta aquí: qué son las tres columnas A, B y C, cuál se devenga los 365 días y cuál solo por día trabajado, y manda comparar esa suma con la nómina; avisa de que las cifras son brutas y deriva el neto a la calculadora. Se queda en 2 por dos motivos: nunca aterriza en una cifra mensual, que es el formato en el que llega la nómina de una empresa del metal, y no advierte de ningún error típico (prorrateo, absorción, complemento absorbible) pese a que el plus de productividad de la columna C es exactamente el tipo de concepto que se absorbe.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 440,
+          "cita": "¿Tu nómina coincide con las tres columnas de tu categoría? Verifícalo ahora."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 568,
+          "cita": "Suma las tres columnas (A + B + C) de tu categoría y compáralas con tu nómina diaria; añade la antigüedad y los pluses que te correspondan."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 277,
+          "cita": "C · Plus de productividad (o de carencia de incentivos): por jornada prestada en trabajos no medidos; comprende el 25% de la columna A como mínimo garantizado (art. 14.3)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 3,
+      "razon": "Es la única de las seis que gestiona bien un dato que no existe. El convenio no fija salario anual, y en lugar de inventarlo la ficha lo declara en el cuerpo, marca la columna como estimación orientativa, publica la fórmula de devengo con la que la calcula, repite la advertencia en el bloque de auditoría y remite a la calculadora para el caso concreto. Y da el suelo real con su fuente: el SMI 2026 correcto (1.221 €/mes, 17.094 €/año) citando el RD 126/2026 y el BOE. Ninguna otra ficha del piloto cita el SMI vigente con su norma; dos citan uno obsoleto como si fuera el de 2026.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 281,
+          "cita": "El convenio no fija un salario anual, sino diario. En la tabla añadimos una columna «≈ bruto/año» como estimación orientativa (con la fórmula exacta explicada al pie de la tabla)"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 595,
+          "cita": "1.221 €/mes y 17.094 € anuales (RD 126/2026). Consulta el SMI 2026"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 633,
+          "cita": "La columna «≈ bruto/año» es una estimación orientativa —no una cifra oficial— calculada con las reglas de devengo del propio convenio (fórmula detallada al pie de la tabla), y se identifica como tal."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UN TRABAJADOR DEL METAL EN SEVILLA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial de 1ª del metal en Sevilla en 2026?»; (2) «¿y eso cuánto es al mes?»; (3) «trabajo en un taller que hace piezas para Airbus, ¿me cubre este convenio?»; (4) «soy soldador, ¿en qué categoría de la tabla estoy?»; (5) «¿cuántas pagas extra y cómo se calculan?»; (6) «llevo 6 años, ¿cuánto me toca de antigüedad?»; (7) «hago turnos de noche, ¿cuánto me corresponde?»; (8) «cobro menos que mi categoría, ¿qué hago y hasta cuándo?». RECORRIDO: responde 1, 3, 5, 7 y 8; falla en 2, 4 y 6. — La ficha es honesta hasta el detalle raro de marcar su propia estimación como estimación, y esa honestidad es su mejor activo (1.9 = 3). Pero paga cara la estructura del convenio: al fijarse el salario por día, todo el material está en €/día y el lector llega con una nómina mensual. Los tres fallos son del mismo tipo —el último tramo entre el dato oficial y la vida del lector: falta la conversión a mes, falta el puente del oficio real a la categoría del boletín, y falta transcribir el importe del quinquenio del Anexo VI—. Los tres son reparables sin tocar la verificación. Fuera de mi eje: el determinista marca dos FAQ («¿Cuánto cobra un peón…?» y «¿Cuánto cobra un oficial de 1.ª?») con 13 cifras huérfanas, sin fuente en la sección; son justo las respuestas que un asistente de IA cita textualmente, así que ahí la fuente pesa doble. VENTANA ABIERTA: 9 días desde el último commit; en este eje no he redactado parches, así que no hay nada que aplazar."
+}

@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-navarra",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 2,
+      "razon": "9 entrantes desde 5 páginas, justo por debajo de la mediana del corpus (10): tres hermanas la citan, dos de ellas desde la prosa comparativa, más hub y home. No baja a 1 porque los enlaces de Zaragoza y Sevilla nacen en el cuerpo y con contexto, pero no sube a 2 alto: seis de las nueve hermanas la ignoran.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-navarra.json",
+          "linea": null,
+          "cita": "\"entrantes_n\": 9, \"entrantes_desde\": [\"convenio-metal-asturias.html\",\"convenio-metal-sevilla.html\",\"convenio-metal-zaragoza.html\",\"convenios.html\",\"index.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 357,
+          "cita": "por debajo del <a href=\"/convenio-metal-valencia.html\">Peón/a de Valencia</a> (22.462 €), la <a href=\"/convenio-metal-navarra.html\">Navarra</a> (26.112 €)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 2,
+      "razon": "El párrafo comparativo tras las tablas enlaza a cuatro hermanas en el punto donde el lector se pregunta si 26.112 € es mucho o poco, y lo justifica con cifras. No es 3 porque es la única salida contextual de toda la ficha: las secciones de paga de marzo, jornada de 1.695 h o antigüedad no enlazan a las provincias con las que se están comparando implícitamente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 295,
+          "cita": "El metal de Navarra fija un <strong>Salario Garantizado por grupo</strong>, como el <a href=\"/convenio-metal-madrid.html\">metal de Madrid</a> (también 7 grupos y +2% en 2026). Pero su suelo de entrada es de los más altos del corpus"
+        },
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-navarra.json",
+          "linea": null,
+          "cita": "\"internos_en_cuerpo\": 22"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "Sólo una dirección: 5 hermanas del metal y cero enlaces a otro sector. El hueco es en parte estructural —Navarra no tiene ninguna otra ficha sectorial en el corpus— y la ficha ya tiene redactada la puerta de salida hacia el Comercio del Metal de Navarra, pero sin enlace, porque esa ficha no existe. Queda en 1 porque tampoco ofrece la salida genérica al directorio para el lector que se ha equivocado de sector.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-navarra.json",
+          "linea": null,
+          "cita": "\"a_hermanas_mismo_sector\": 5, \"a_otro_sector_misma_provincia\": []"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 267,
+          "cita": "<strong>Es un convenio de industria, no de comercio.</strong> Cubre la fabricación, transformación, montaje y reparación del metal. Las empresas dedicadas solo a la <strong>venta</strong> de artículos metálicos (en proceso exclusivo de comercialización) quedan fuera y se rigen por el convenio del <strong>Comercio del Metal de Navarra</strong>, que es distinto y tiene sus propias tablas."
+        }
+      ],
+      "parche": "El párrafo de la línea 267 ya dice al lector que se ha equivocado de convenio y lo deja sin ningún sitio al que ir. Cerrarlo con la salida que sí existe: '…que es distinto y tiene sus propias tablas: búscalo en el <a href=\"/convenios.html\">directorio de convenios provinciales</a>.' Ahí y no en el bloque final porque es la frase que produce la duda. El corpus no tiene ninguna otra ficha navarra que enlazar; cuando exista (comercio del metal, hostelería), sustituir el enlace al directorio por el directo.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "Sin genéricos; los anchors de prosa se apoyan en la frase que compara suelos salariales. No es 3 porque dos de los cuatro son sólo el topónimo ('Valencia', 'Bizkaia') y el bloque final repite el rótulo clonado del clúster.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-navarra.json",
+          "linea": null,
+          "cita": "\"anchors_genericos\": []"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 295,
+          "cita": "como el <a href=\"/convenio-metal-madrid.html\">metal de Madrid</a> (también 7 grupos y +2% en 2026)"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 514,
+          "cita": "<a href=\"/convenio-metal-bizkaia.html\">Convenio del Metal — Bizkaia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "El puente está en la sección correcta pero no en el punto de la necesidad: el enlace cierra la sección colgado del párrafo de código REGCON y firmantes, no del paso que lo pide. El paso que manda pedir la nómina detallada por escrito no enlaza plantilla-solicitar-nominas.html y el que fija el plazo de un año por mensualidad no enlaza plantilla-reclamar-atrasos-convenio-salarial.html. Es el mismo patrón que este eje puntuó 1 en convenio-metal-sevilla, con el mismo bloque y el mismo anchor.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 438,
+          "cita": "<h2 id=\"reclamar\">¿Cobras menos de lo que fija tu grupo?</h2>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 446,
+          "cita": "Código REGCON: <code>31006805011981</code>. Firmantes: <strong>ANEM y APMEN</strong> (patronales) y los sindicatos <strong>FICA-UGT y CCOO</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+        }
+      ],
+      "parche": "Dos enlaces, cada uno en su paso. En la línea 442, donde se pide la nómina detallada: '…si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores). <a href=\"/plantilla-solicitar-nominas.html\">Usa esta plantilla para pedírselas a tu empresa por escrito</a>.' En el paso del plazo, antes de la línea 446: 'Plazo: un año por cada mensualidad (art. 59.2 ET), así que <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">reclama por escrito la diferencia de las últimas 12 mensualidades</a> antes de que prescriban.' Ahí y no al cerrar la sección porque cada plantilla resuelve exactamente la acción que el paso acaba de exigir; el enlace genérico a la guía puede quedarse donde está.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Navarra es el único caso del clúster donde la dirección 'otro sector, misma provincia' es imposible por falta de fichas, no por descuido. Conviene distinguirlo de Zaragoza, que sí tiene hostelería y limpieza publicadas y no las enlaza. Calibración de 6.3 en esta tanda: el párrafo 'Comparación con otras provincias del sector' lo llevan 8 de las 9 fichas del metal (11 en todo el corpus), así que dentro de este sector es la norma y vale 2; el 3 se reserva a las que reparten los enlaces por varios momentos del cuerpo (Asturias, Zaragoza). Si el sintetizador compara con el 3 que se dio a convenio-metal-sevilla por ese mismo párrafo, conviene normalizar en una dirección u otra."
+}

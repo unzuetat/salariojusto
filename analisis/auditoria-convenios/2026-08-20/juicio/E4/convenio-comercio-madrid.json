@@ -1,0 +1,136 @@
+{
+  "eje": "E4",
+  "slug": "convenio-comercio-madrid",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 3,
+      "razon": "Ejemplar y el único del piloto que cumple la fórmula entera sin pagar peaje: 57 caracteres —cabe sin cortarse—, con sector, provincia, año y la cifra del puesto que efectivamente se busca en comercio (dependiente/a), y con la cifra en su unidad real de nómina, no un derivado. Lo que hace y las demás no: nombra el puesto junto al número, de modo que el número tiene dueño ya en el resultado de búsqueda.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 6,
+          "cita": "<title>Convenio Comercio Madrid 2026: Dependiente 1.198,87 €/mes</title>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 253,
+          "cita": "<tr><td>II-B — Dependiente/a · Cajero/a · Oficial/a admin.</td><td class=\"num\">1.198,87</td><td class=\"num\">17.982,98</td></tr>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Cumple: trae la cifra con su puesto, su anual y su número de pagas, y deja dentro tres razones para entrar (10 grupos, jornada 37,5 h, permiso climático). No llega a 3 porque a 175 caracteres el cierre —que es justo donde está la traza, 'BOCM 183/2025'— cae fuera del recorte habitual del SERP, y la traza es precisamente lo que diferencia a esta ficha de los agregadores.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 7,
+          "cita": "<meta name=\"description\" content=\"Tablas 2026 del convenio de Comercio Vario de Madrid: dependiente/a 1.198,87 €/mes (17.982,98 €/año) en 15 pagas. 10 grupos, jornada 37,5 h y permiso climático. BOCM 183/2025.\">"
+        }
+      ],
+      "parche": {
+        "descripcion": "Adelantar la traza por delante del recorte, sin perder la cifra. 152 caracteres.",
+        "texto_propuesto": "Dependiente/a 1.198,87 €/mes (17.982,98 €/año) en 15 pagas — tablas 2026 del Comercio Vario de Madrid verificadas contra el BOCM 183. Jornada 37,5 h."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 3,
+      "razon": "Ejemplar, y es el patrón que las otras cinco fichas del piloto deberían copiar: hay un bloque de respuesta directa cuya primera frase se sostiene sola con sujeto, grupo, ámbito completo, año, cifra, unidad, anual y número de pagas, y el h1 repite la misma frase en forma de titular. Se puede arrancar de la página y sigue siendo verdadera y atribuible.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 179,
+          "cita": "Un/a dependiente/a del convenio de Comercio Vario de la Comunidad de Madrid (Grupo II, Nivel B) cobra en 2026 un salario base de <strong>1.198,87 €/mes</strong>, es decir <strong>17.982,98 € brutos al año</strong> en <strong>15 pagas</strong>."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 165,
+          "cita": "<h1>Convenio Comercio Madrid 2026: un/a dependiente cobra <em>1.198,87 €/mes</em> en 15 pagas</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El dato es extraíble sin reconstruirlo: la unidad vive en el encabezado ('€/mes', '€/año') y los complementos exponen la cuantía dentro del propio h3, que es la forma más atómica del corpus. Se queda en 2 porque las celdas llevan el número desnudo, sin unidad ni periodo, y la tabla no se identifica a sí misma con ningún caption.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 316,
+          "cita": "<h3>Plus de transporte — <span class=\"plus-cifra\">96,56 €/mes</span></h3>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 243,
+          "cita": "<thead><tr><th>Grupo · categorías</th><th style=\"text-align:right\">€/mes</th><th style=\"text-align:right\">€/año</th></tr></thead>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.3",
+      "nota": 2,
+      "razon": "En el bloque de respuesta directa los tres —provincia, sector y año— están explícitos, y la ficha además distingue convenio de SMI y grupo profesional de etiqueta heredada del BOP. Pero en las tablas la cifra sí viaja sola: los cuatro años del convenio conviven en el DOM como cuatro tablas idénticas sin año dentro, separadas solo por un data-year en el div contenedor y por display:none. Un extractor que no ejecute el CSS ve cuatro cifras distintas para 'Dependiente/a' (1.163,95 / 1.198,87 / 1.234,83 / 1.271,88) sin nada en la tabla que le diga cuál rige hoy.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 241,
+          "cita": "<div class=\"year-panel active\" data-year=\"2026\">"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 289,
+          "cita": "<tr><td>II-B — Dependiente/a · Cajero/a · Oficial/a admin.</td><td class=\"num\">1.271,88</td><td class=\"num\">19.078,14</td></tr>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 133,
+          "cita": ".year-panel{display:none;}"
+        }
+      ],
+      "parche": {
+        "descripcion": "Dar identidad propia a cada tabla de año. No es un problema de verdad —las cuatro cifras son correctas y el convenio publica los cuatro años— sino de extracción: la desambiguación está en el CSS, no en el marcado. Añadir un caption por panel y marcar los inactivos con el atributo hidden.",
+        "linea_objetivo": "223, 241, 259, 277 (una por year-panel)",
+        "texto_propuesto": "<table class=\"tabla-salarios\"><caption>Tabla salarial 2026 (vigente) — Comercio Vario de la Comunidad de Madrid, salario base en 15 pagas · BOCM 183/2025</caption>",
+        "nota_de_ejecucion": "Repetir el caption con el año que corresponda en los paneles 2025, 2027 y 2028, sustituyendo '(vigente)' por '(ya aplicada)' / '(futura)'. Añadir hidden a los tres paneles no activos para que ningún extractor los lea como vigentes."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 3,
+      "razon": "Ejemplar: hay pie de fuente inmediatamente debajo del bloque de respuesta directa y otro inmediatamente debajo de la tabla salarial, ambos con boletín, número y fecha, y además cada complemento cierra con su artículo dentro del mismo párrafo de la cuantía. La traza no está al final: está donde está el número.",
+      "evidencia": [
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 193,
+          "cita": "<p class=\"source-footer\">Fuente: <strong>BOCM Núm. 183 (2-ago-2025)</strong> — texto íntegro del convenio 2025-2028 con las tablas de los cuatro años. <strong>BOCM Núm. 151 (27-jun-2026)</strong> — modificación aclaratoria del art. 40 (jornada)."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 294,
+          "cita": "<p class=\"source-footer\">Las tablas de los cuatro años están publicadas en el propio convenio (BOCM 183/2025). Subida anual = IPC definitivo del año anterior (INE), con mínimo y máximo garantizado del 3% (Art. 38), con efecto retroactivo al 1 de enero.</p>"
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 317,
+          "cita": "Se abona íntegro también a quienes trabajan a tiempo parcial (Art. 30)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición recién abierta (ultimo_commit 2026-08-18, un día): todos los parches van aplazados y ninguno es urgente. Esta es la ficha de referencia del eje E4 en el piloto y conviene tratarla como plantilla: el bloque 'respuesta-directa' de la línea 178 —una sola frase con sujeto, ámbito, año, cifra, unidad, anual y pagas, seguida de su pie de fuente— es exactamente lo que a las otras cinco les falta, y es barato de replicar. La única grieta seria es de marcado, no de redacción: cuatro tablas de años distintos conviviendo sin caption ni atributo hidden. Como el convenio llega a 2028, esa grieta se agrava sola cada 1 de enero. No detecto 4.5: las cuatro cifras de dependiente son correctas para su año respectivo y la ficha nunca afirma dos cosas distintas; es un problema de extracción, no de contradicción, y por eso lo puntúo en 4.3 en vez de anular la nota."
+}

@@ -1,0 +1,129 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-gipuzkoa",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Los cuatro elementos están en 72 caracteres y la cifra baja del boletín, pero con dos matices que le cierran el 3. El primero: 28.256 € no es una cuantía publicada tal cual, es una anualización nuestra (valor hora × 1.695), aunque la ficha declara la fórmula abiertamente y no la disfraza de cifra oficial —por eso no cae a 1 como Asturias—. El segundo es más serio para quien lee sin entrar: el title dice que las tablas van 'de 28.256 a 48.323 €' y la tabla real empieza en 16.597,44 € (aspirante de economato). El suelo anunciado no es el suelo de la tabla, es el del personal obrero.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Gipuzkoa 2026: tablas de 28.256 a 48.323 € | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 253,
+          "cita": "<strong>La fórmula.</strong> Retribución anual = valor hora × 1.695. Por ejemplo, un <strong>Oficial de 1.ª</strong> tiene un valor hora de <strong>18,522 €</strong>, que sobre 1.695 horas da <strong>31.395 € brutos al año</strong>."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 310,
+          "cita": "<tr><td>Aspirante 1.er año economato</td><td>9,792 €/h</td><td>16.597,44 €</td></tr>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Cifra dentro del recorte, y con una virtud que no tiene el title: dice de entrada que en Gipuzkoa el salario se fija por valor hora sobre 1.695 h/año, que es la clave para entender la cuantía anual y para no confundirla con una tabla mensual. Motivo para entrar hay (subida del 2,9%, quinquenios, dos extras). No sube a 3 porque a 266 caracteres la mitad no se muestra y porque arrastra el mismo suelo discutible del title, 28.256 € como si fuera el mínimo de la tabla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 7,
+          "cita": "Convenio de la Industria Siderometalúrgica de Gipuzkoa 2026 (+2,9%): salarios fijados por valor hora (1.695 h/año), de 28.256 € (peón) a 48.323 € (ingeniería), 2 pagas extra y quinquenios del 5%. Verificado contra el BOG núm. 30 (16-feb-2026). REGCON 20001095011981."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "Las frases donde vive la cifra se sostienen: el bloque de la fórmula da puesto, valor hora, horas de referencia y resultado anual en una sola oración, y la FAQ del oficial hace lo mismo con la provincia y el año en el encabezado. No llega a 3 porque ni esa frase ni la de la FAQ repiten el ámbito —'Un Oficial de 1.ª tiene un valor hora de 18,522 €, que sobre las 1.695 horas del convenio equivale a 31.395 € brutos al año' no dice de qué convenio— y porque los resúmenes de familia, que son lo más citable de la tabla, son fragmentos sin verbo ('8 categorías · 28.256–31.395 €/año').",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 587,
+          "cita": "Un <strong>Oficial de 1.ª</strong> tiene un valor hora de <strong>18,522 €</strong>, que sobre las 1.695 horas del convenio equivale a <strong>31.395 € brutos al año</strong>."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 253,
+          "cita": "Retribución anual = valor hora × 1.695."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 275,
+          "cita": "<summary>Personal obrero <span class=\"fam-meta\">8 categorías · 28.256–31.395 €/año</span></summary>"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 205,
+          "cita": "<h1>Convenio del <em>Metal de Gipuzkoa</em>: tablas 2026 de 28.256 € a 48.323 €</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 1,
+      "razon": "Es la ficha con más cifras del sector (249, según el determinista) y la que peor las etiqueta. Sus trece tablas —todas sin caption y todas dentro de <details> plegados— repiten un encabezado que no lleva periodo: 'Retribución anual', a secas. La celda extraíble queda en 'Oficial de 1.ª | 18,522 €/h | 31.394,79 €', sin año, sin provincia y sin decir que ese anual no es una cuantía publicada sino el producto de multiplicar por 1.695 horas. Todo eso está explicado, pero dos pantallas más arriba: hay que reconstruir el sentido del dato con contexto que no viaja con él. Comparada con Álava ('Salario bruto anual 2026'), Zaragoza ('Retribución bruta anual 2026') o Navarra ('Garantizado 2026 (año)'), es la única del cluster que deja el año fuera del encabezado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 277,
+          "cita": "<thead><tr><th>Categoría profesional</th><th>Valor hora</th><th>Retribución anual</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 284,
+          "cita": "<tr><td>Oficial de 1.ª</td><td>18,522 €/h</td><td>31.394,79 €</td></tr>"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 270,
+          "cita": "Para cada categoría se indica el <strong>valor hora</strong> y la <strong>retribución anualizada</strong> (valor hora × 1.695 horas), con carencia de incentivo incluida."
+        }
+      ],
+      "parche": {
+        "descripcion": "Dos cambios de una línea cada uno que arreglan las trece tablas. Primero, meter periodo y naturaleza del dato en el encabezado de columna, que es lo que el extractor lee pegado al número. Segundo, poner caption a cada tabla de familia con el ámbito completo, que es lo que hoy obliga a inferir de qué convenio es la cifra.",
+        "linea_objetivo": "277, 292, 319, 332, 351, 365, 383, 393, 405, 417 y demás thead de tabla-salarial",
+        "texto_propuesto": "<caption>Convenio del Metal de Gipuzkoa · tablas 2026 (BOG núm. 30, 16-feb-2026) · personal obrero</caption>\n<thead><tr><th>Categoría profesional</th><th>Valor hora 2026</th><th>Retribución anualizada 2026 (valor hora × 1.695 h)</th></tr></thead>",
+        "por_que": "Con eso, la fila 'Oficial de 1.ª | 18,522 €/h | 31.394,79 €' pasa a llegar con año, provincia, sector y método de cálculo sin depender de ningún párrafo anterior."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "pct_huerfanas 0,044 (11 de 249) manda un 2 y el HTML no justifica moverlo. La traza está donde tiene que estar en la tabla salarial —el párrafo inmediatamente anterior cita boletín, número y fecha— y hay enlace pinchable al BOG y al REGCON. Lo que impide subir es la extensión de las secciones sin fuente: cuatro, y entre ellas las pagas extraordinarias y dos FAQ de cuantía, que son unidades pensadas justamente para ser citadas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 270,
+          "cita": "Cuantías oficiales de la <strong>revisión salarial 2026</strong> (BOG núm. 30, 16-feb-2026), resultado de aplicar el <strong>+2,9%</strong> del IPC de 2025 sobre las tablas de 2025."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 614,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto del convenio (BOG núm. 110, 08-jun-2023) y contra la revisión salarial 2026 (BOG núm. 30, 16-feb-2026, republicada íntegra el 4-mar-2026)."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 587,
+          "cita": "Un <strong>Oficial de 1.ª</strong> tiene un valor hora de <strong>18,522 €</strong>, que sobre las 1.695 horas del convenio equivale a <strong>31.395 € brutos al año</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana abierta (ultimo_commit 2026-08-04, 15 días): parches aplazados. El caso de Gipuzkoa es el reverso del de Asturias y merece leerse junto a él. Aquí el convenio también fija el salario en una unidad que no es el mes (el valor hora), y la ficha también publica un anual derivado; la diferencia es que Gipuzkoa enseña la fórmula en la primera pantalla y mantiene la columna oficial (valor hora) al lado de la calculada, mientras Asturias solo deja la calculada visible en el title y en la meta. Ese es el patrón que conviene fijar como norma del sector: si el convenio no publica anual, la columna oficial va delante y la derivada al lado, etiquetada. Dicho lo cual, Gipuzkoa tiene su propio problema, y es de perímetro: anunciar 'tablas de 28.256 a 48.323 €' cuando la tabla arranca en 16.597,44 € puede acabar en una respuesta de IA que fije el suelo del metal guipuzcoano 11.000 € por encima del real. Bastaría con decir 'personal obrero desde 28.256 €' o dejar el suelo verdadero."
+}

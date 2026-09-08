@@ -1,0 +1,142 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-sevilla",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 2,
+      "razon": "boilerplate_ratio 0.049 y de las 6 frases compartidas cuatro son cromo o metodología (firma E-E-A-T, plazo del art. 59.2 ET, pedir nómina detallada, referencia al SMI); solo dos son sustancia sectorial repetida entre fichas del metal —el ámbito funcional y los 30 días de vacaciones—, y esas sí valdrían para cualquier provincia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 271,
+          "cita": "Cubre la fabricación, transformación, montaje y reparación del metal."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 477,
+          "cita": "El personal tiene derecho a <strong>30 días naturales</strong> de vacaciones al año (Art. 16), de los cuales <strong>21 son laborables</strong> en empresas de lunes a viernes y <strong>25</strong> en las de lunes a sábado."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "es el ratio_tabla más alto del piloto junto con Valencia (0.237) y aun así la prosa es imprescindible: sin la explicación de las columnas A/B/C y de qué días devenga cada una, las cifras de la tabla no se pueden convertir en nómina ni comparar con ninguna otra provincia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 277,
+          "cita": "<strong>A · Salario base</strong>: el salario mínimo de convenio, que se devenga <strong>todos los días naturales</strong> del año (art. 14.1). <strong>B · Plus de asistencia</strong>: se cobra todos los días excepto domingos y festivos"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 281,
+          "cita": "La cifra real varía según el calendario de cada empresa —<strong>229 días</strong> laborables de lunes a viernes o <strong>275</strong> de lunes a sábado, ambos con <strong>1.759 horas/año</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "frases_exclusivas 116 de 122 y lo exclusivo no es el topónimo: identificar los CNAE que meten al aeroespacial en el ámbito funcional y construir una estimación anual declarada como tal a partir de un convenio que no fija salario anual es trabajo de investigación, no de plantilla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 262,
+          "cita": "incluye expresamente la <strong>industria aeroespacial y sus componentes</strong> (CNAE 30.30 «construcción aeronáutica y espacial» y 33.16 «reparación y mantenimiento aeronáutico»)"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 281,
+          "cita": "En la tabla añadimos una columna <strong>«≈ bruto/año»</strong> como <strong>estimación orientativa</strong> (con la fórmula exacta explicada al pie de la tabla)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "faq_clonadas 4 de faq_total 6, pero las dos no clonadas son preguntas que solo caben aquí y responden a la estructura del convenio, no al molde; y las clonadas se contestan con las tres columnas, no con una cifra genérica.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 608,
+          "cita": "¿Por qué el salario se fija por día?"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 617,
+          "cita": "¿El convenio cubre el sector aeronáutico?"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.4",
+      "nota": 3,
+      "razon": "la particularidad que el censo registra ('polo aeronáutico Airbus A400M, Aernnova, Alestis') no aparece de adorno: está en el H1, en el hero, en el índice, en un h2 propio, en una FAQ y en la lista de particularidades; la ficha está organizada alrededor de ella.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 207,
+          "cita": "Convenio del <em>Metal de Sevilla</em>: las tablas 2026 del polo aeronáutico"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 261,
+          "cita": "La provincia alberga la línea de <strong>ensamblaje final del Airbus A400M</strong> en San Pablo y un tejido de empresas auxiliares —Aernnova, Alestis y decenas de talleres de mecanizado"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "el BOP publica el Anexo II como tabla plana de 76 filas en tres columnas sin totales; aquí está agrupada por familias plegables, con el total A+B+C calculado fila a fila y una estimación anual con la fórmula declarada, que es justo lo que el boletín no puede dar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 294,
+          "cita": "<td class=\"cat\">Oficial/a de 1ª</td><td class=\"num\">40,27</td><td class=\"num\">7,86</td><td class=\"num\">11,62</td><td class=\"sal\">59,75 €</td>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 290,
+          "cita": "Profesionales de oficio y personal obrero <span class=\"fam-meta\">7 categorías · 52,86–59,75 €/día</span>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "10.2",
+      "nota": 3,
+      "razon": "el agregador de nóminas publica un €/mes inventado para el metal de Sevilla porque el convenio no lo fija; esta ficha dice en la primera pantalla que la cifra mensual no existe y por qué, que es una ventaja que el lector percibe antes de que se la expliquen.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 208,
+          "cita": "el salario se fija <strong>por día</strong> en tres columnas (base + asistencia + productividad), con una subida del <strong>+3%</strong> en 2026."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 445,
+          "cita": "el <a href=\"/convenio-metal-gipuzkoa.html\">metal de Gipuzkoa</a> lo hace por <strong>valor hora</strong>, el <a href=\"/convenio-metal-zaragoza.html\">de Zaragoza</a> y el <a href=\"/convenio-metal-navarra.html\">de Navarra</a> por <strong>grupos con retribución anual</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (ultimo_commit 2026-08-10, 9 días). Ficha sin nota por debajo de 2 y con la particularidad mejor explotada del piloto, pero le queda un escalón que no es de redacción sino de investigación: nombra el polo aeronáutico y no responde la pregunta que ese polo genera. Quien monta el A400M en San Pablo o trabaja en Aernnova quiere saber si el convenio provincial es realmente el suyo o si su planta tiene convenio de empresa por encima (buscar en REGCON los códigos de convenio de empresa de Airbus Operations SL centro Sevilla, Aernnova Aerospace y Alestis Aerospace y decir en una frase si mejoran el provincial y en qué). Ese dato convertiría el 'convenio del polo aeronáutico' de titular en utilidad, y ninguna otra web lo tiene. Segunda nota, para otro eje: esta es la única de las seis fichas que cita el SMI 2026 correcto (1.221 €/mes, 17.094 € anuales, RD 126/2026, línea 627); Asturias y Zaragoza usan 16.576 € y construyen conclusiones sobre esa cifra."
+}

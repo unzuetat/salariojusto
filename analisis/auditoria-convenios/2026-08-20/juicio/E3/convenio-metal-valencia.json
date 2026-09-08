@@ -1,0 +1,163 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-valencia",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Es el 2 más justo de las cuatro fichas del metal auditadas. Cifra, año y fuente están arriba —el sumario trae el rango 2026 con el +2,5% y el sello con el BOP va debajo—, pero el H1, que es el texto grande y lo que se lee primero, gasta su sitio en un gancho editorial («la paga de marzo que casi nadie conoce») y el primer H2 del cuerpo repite ese mismo tema: la cifra llega subordinada, en la segunda frase del sumario, y en forma de rango. Quien entra tecleando «cuánto cobra un oficial del metal en Valencia» lee primero una curiosidad y luego, si sigue, su número.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 194,
+          "cita": "Convenio del Metal de Valencia : la paga de marzo que casi nadie conoce"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 195,
+          "cita": "Además de las dos pagas extra de junio y diciembre, el metal de Valencia abona 17 días de salario el 15 de marzo . Tablas 2026 (+2,5%) de 22.462 € (Peón) a 36.615 € (Ingeniería), jornada de 1.752 h, plus de formación de 30 €/mes y cobertura para 85.000 personas."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 240,
+          "cita": "La paga de marzo: una tercera gratificación de 17 días"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 1,
+      "razon": "Solo responde 4 de las 8 preguntas del listado (ver observacion_libre): la cifra del oficial en €/día y su anual, la frontera con el Comercio del Metal, el pago del festivo y el complemento de baja. Quedan sin respuesta cuatro, y tres de ellas son de las que traen a la gente aquí: (a) «¿y eso cuánto es al mes?» — el personal de operaciones tiene el salario en €/día y un anual, y no hay ni una sola cifra mensual para esos grupos ni el número de pagas por el que dividir; (b) «llevo 6 años, ¿me toca antigüedad?» — la ficha solo nombra una «antigüedad consolidada» no absorbible, sin decir si hoy se genera antigüedad nueva ni cuánto vale un tramo, así que el lector no puede responderse; (c) «soy soldador, ¿en qué grupo estoy?» — la lista de oficios está referida al bloque entero de operaciones, no a cada grupo, y no distingue quién es Oficial de 1ª, quién Especialista y quién Peón; (d) jornada parcial, ausente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 270,
+          "cita": "Cómo leer la tabla: el personal de operaciones (oficio) cobra el salario grupo por día ; el personal técnico y de empleados/as lo cobra por mes. La columna \"Salario anual 2026\" es el bruto anual con las pagas del convenio incluidas."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 280,
+          "cita": "Oficial/a de 1ª y 2ª (profesional de oficio) 5 49,55 €/día 24.029,98 €"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 359,
+          "cita": "La antigüedad consolidada (Art. 16) no es absorbible ni compensable y se revaloriza con el convenio."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 286,
+          "cita": "Incluye electricistas, soldadores/as, montadores/as, mecánicos/as, instaladores/as de climatización y fontanería, chapistas y operarios/as de máquina."
+        }
+      ],
+      "parche": "Tres piezas. (1) EL MES. Añadir a la tabla de personal de operaciones una columna «≈ mensual» y, en «Cómo leer la tabla» (línea 270), esta nota: «El convenio fija el salario del personal de oficio por día trabajado, pero la nómina llega mensual. La columna ≈ mensual es una equivalencia orientativa que calculamos repartiendo el bruto anual entre las mensualidades del convenio; ojo, aquí el anual no se divide entre 14 limpiamente, porque además de las dos extras está la paga de marzo de 17 días. No es una cuantía del boletín: es nuestra estimación, y la marcamos como tal.» —el cálculo lo hace la redacción con la fórmula de devengo del convenio, no se transcribe de ninguna tabla—. (2) LA ANTIGÜEDAD. Sustituir la mención suelta de la línea 359 por un bloque propio que diga, con el artículo delante, si el convenio genera tramos nuevos o no. Si no los genera, escribirlo en la FAQ igual que hace la ficha de Zaragoza: «¿Qué antigüedad reconoce? Ninguna activa: el convenio solo mantiene la antigüedad consolidada a [fecha] para quienes ya la tenían (Art. 16), que no es absorbible ni compensable y sube cada año como el convenio. Quien entra hoy no genera tramos nuevos.» (3) LA JORNADA PARCIAL. Frase fija al pie de las tres tablas: «Las cuantías son de jornada completa. A tiempo parcial te corresponde el salario grupo en la proporción de tu jornada; el porcentaje está en tu contrato.»",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "El camino existe y es el más completo del corpus en cuanto a qué sumar antes de comparar: recuerda la paga de marzo, los pluses de turno, nocturnidad y penosidad, y el plus de formación de 30 € si la empresa no forma —conceptos que de otro modo el lector olvidaría al calcular su diferencia—. Nombra la vía valenciana (ASAC-CV, SMAC), dice que la papeleta es gratuita e interrumpe la prescripción y da el plazo. No es 3 porque el único documento es el enlace genérico al kit que registra el determinista: no hay plantilla ni un cálculo con cifras de esta provincia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 485,
+          "cita": "Compara tu bruto anual con la tabla 2026 de tu grupo. Recuerda sumar la paga de marzo, los pluses de turno/nocturnidad/penosidad si te corresponden y el plus de formación si tu empresa no forma."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 487,
+          "cita": "Acude a la Comisión Paritaria o a la vía extrajudicial. El convenio se adhiere al VII Acuerdo de Solución Autónoma de Conflictos Laborales de la Comunitat Valenciana (ASAC-CV). La papeleta de conciliación ante el SMAC es gratuita e interrumpe la prescripción."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 488,
+          "cita": "Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 2,
+      "razon": "El ámbito está bien resuelto —seis bloques de actividades reconocibles y la frontera con el Comercio del Metal repetida en un aviso destacado— y la partición de la tabla en tres desplegables, con el de oficio abierto por defecto, es un acierto de autoubicación que no tienen las otras tres fichas. Lo que no está resuelto es el último paso: la lista de oficios reales (soldador, chapista, montador) cuelga del bloque entero de operaciones, que abarca cinco grupos distintos, y las filas usan la denominación del boletín. Saber que eres «personal de operaciones» no te da tu cifra; saber si eres Oficial de 1ª, Especialista o Peón, sí.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 264,
+          "cita": "Ojo: en Valencia hay dos convenios de metal. El que estás leyendo es el de Industria (fabricación, instalación, reparación). Existe otro para el Comercio del Metal (venta y distribución de artículos metálicos), con tablas y condiciones distintas. Si en tu empresa se fabrica, instala o repara, es este; si solo se vende, es el otro."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 270,
+          "cita": "Despliega tu grupo — el personal de oficio se abre por defecto."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 273,
+          "cita": "Personal de operaciones (oficio: Peón, Especialista, Oficial, Encargado/a)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 2,
+      "razon": "Explica la correspondencia hasta donde llega: dice qué grupos cobran por día y cuáles por mes, que las cuantías son brutas antes de IRPF y Seguridad Social, desglosa un caso por conceptos de nómina y hasta introduce la absorción al describir el complemento «ex categoría profesional» como garantía personal no absorbible. Se queda en 2 por el fallo estructural del eje en esta ficha: la persona tiene delante una nómina mensual y aquí su salario está en euros por día, sin ninguna equivalencia; además, «salario grupo» es el nombre del convenio y en el papel puede figurar como salario base o salario convenio, y eso no se aclara.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 324,
+          "cita": "Cuantías brutas antes de IRPF y Seguridad Social."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 321,
+          "cita": "Existe un complemento \"ex categoría profesional\" para quienes a 31-12-2000 cobraban un salario superior al del grupo al que quedaron adscritos: es una garantía personal no absorbible, que sube cada año como el convenio."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 333,
+          "cita": "Marcos es Oficial/a de 1ª de oficio (Grupo 5). Su salario grupo es de 49,55 €/día, que en cómputo anual con las pagas del convenio suma 24.029,98 € brutos ."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 327,
+          "cita": "¿Tu nómina coincide con la tabla de tu grupo profesional? Verifícalo ahora."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "Dice de dónde sale su tabla 2026 sin adornarlo: no de una publicación en el BOP sino de un acuerdo de la comisión paritaria del 19 de enero de 2026, y lo repite en el bloque de fuentes. Y da el suelo con su fuente correcta (SMI 2026, RD 126/2026, referencia BOE). No llega a 3 por lo contrario del hueco declarado: donde el dato no existe —el neto— la ficha lo rellena con una horquilla propia («ronda los 19.700-20.200 €») presentada en el punto de uso como si fuera un dato, y la advertencia de que los netos son elaboración propia vive 200 líneas más abajo, en «Quién audita esto». La marca tiene que estar donde está la cifra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 543,
+          "cita": "Tablas salariales 2026 del convenio, aprobadas por la Comisión Paritaria el 19-ene-2026 (+2,5% sobre 2025, efectos 1-ene-2026)."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 516,
+          "cita": "1.221 €/mes y 17.094 € anuales (RD 126/2026). Consulta el SMI 2026"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 343,
+          "cita": "Sobre ~24.000 € brutos, aplicando el IRPF de la Comunitat Valenciana, el neto ronda los 19.700-20.200 € anuales sin pluses; los complementos de turno y penosidad lo suben notablemente."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UN TRABAJADOR DEL METAL DE VALENCIA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial de 1ª del metal en Valencia en 2026?»; (2) «¿y eso cuánto es al mes?»; (3) «soy soldador / chapista, ¿en qué grupo estoy?»; (4) «en mi taller se vende y se repara, ¿me cubre este convenio o el del Comercio del Metal?»; (5) «llevo 6 años, ¿me toca antigüedad y cuánto?»; (6) «estoy de baja, ¿me complementa la empresa?»; (7) «me han hecho trabajar un festivo, ¿me lo tienen que pagar más?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO, UNA A UNA: (1) sí, línea 280 y FAQ 523, pero en €/día; (2) NO —y es el hueco que el encargo pedía comprobar: los grupos 7, 6 y 5, que son los del oficio, tienen su salario en euros por día trabajado y un bruto anual, y no hay una sola cifra mensual para ellos; encima el «Datos clave» resume las pagas como «2 extras + paga de marzo (17 días)», así que el lector ni siquiera tiene un divisor claro—; (3) NO; (4) sí, líneas 260 y 264; (5) NO; (6) sí, líneas 449-451 y el aviso 456 de que en enfermedad común el complemento no entra hasta el día 75; (7) SÍ, línea 374, +75% más descanso compensatorio: es la única de las cuatro fichas del metal auditadas que responde la pregunta del festivo trabajado; (8) NO. — SOBRE 1.1, POR SI SE ITERA EL TITULAR: la paga de marzo es un buen diferencial editorial, pero cabe en el sumario. Un H1 del tipo «Convenio del Metal de Valencia: tablas 2026 de 22.462 € a 36.615 € (y una tercera paga en marzo)» conserva el gancho y devuelve la cifra al primer renglón. FUERA DE MI EJE, PARA VERIFICACIÓN: (a) el Art. 16 se cita en la línea 244 como el que fija la paga de marzo y en la línea 359 como el de la antigüedad consolidada; o el artículo cubre las dos cosas o una de las dos citas está mal, y conviene comprobarlo contra el BOP nº 203; (b) la línea 286 afirma que «todas las categorías quedan muy por encima del SMI 2026» mientras la fila del Grupo 8 de la tercera tabla (línea 317) dice literalmente «SMI»; se entiende que la frase se refiere solo al bloque de operaciones, pero está a un palmo de leerse como una contradicción interna; (c) la horquilla de neto de la línea 343 es elaboración propia y solo se identifica como tal al final de la página. VENTANA: cerrada (21 días desde el último commit), los parches son aplicables ya."
+}

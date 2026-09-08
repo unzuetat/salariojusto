@@ -1,0 +1,172 @@
+{
+  "eje": "E4",
+  "slug": "convenio-limpieza-zaragoza",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 1,
+      "razon": "Tiene sector, provincia y año, pero ninguna cifra de salario (el determinista confirma seo.title_tiene_euro=false: las cifras que lleva son horas de jornada) y a 106 caracteres se corta muy por debajo de la mitad. En el SERP el usuario ve aproximadamente 'Convenio Limpieza Zaragoza 2026 (denunciado · ultraactividad): tab…', es decir, dos tecnicismos jurídicos entre paréntesis en lugar de lo que ha venido a buscar. El h1 tampoco compensa: no lleva año ni cifra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 6,
+          "cita": "<title>Convenio Limpieza Zaragoza 2026 (denunciado · ultraactividad): tabla 2025 + jornada 1.766 h | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 206,
+          "cita": "<h1>Convenio de <em>Limpieza de Edificios y Locales</em> — Zaragoza</h1>"
+        }
+      ],
+      "parche": {
+        "descripcion": "Meter la cifra y sacar la jerga del recorte. Todas las cifras propuestas están publicadas en la ficha (líneas 301 y 687): Limpiador/a 37,20 €/día · 16.926,95 €/año · jornada 1.766 h.",
+        "alternativas": [
+          {
+            "id": "A",
+            "title": "Limpieza Zaragoza 2026: limpiadora 16.926,95 €/año (tabla 2025)",
+            "longitud": 62,
+            "por_que": "Cifra + puesto + provincia + año dentro del recorte, y el paréntesis explica la rareza (por qué la tabla es de 2025) sin usar la palabra 'ultraactividad', que en el SERP asusta más que informa."
+          },
+          {
+            "id": "B",
+            "title": "Limpiadora Zaragoza 2026: 37,20 €/día — tablas del convenio",
+            "longitud": 58,
+            "por_que": "Usa la unidad literal del convenio, que es la que aparece en la nómina de la persona operaria. Máxima coincidencia con quien va a comprobar su recibo."
+          },
+          {
+            "id": "C",
+            "title": "Convenio Limpieza Zaragoza 2026: tabla, 1.766 h y 23 días",
+            "longitud": 57,
+            "por_que": "Conserva la apuesta actual (jornada y vacaciones como gancho) pero cabe entera y añade el segundo dato diferencial. Es la variante conservadora si no se quiere tocar el ángulo."
+          }
+        ],
+        "nota_de_ejecucion": "AVISO IMPORTANTE: con 4,4% de CTR a posición 6,40 esta ficha es la de mejor rendimiento del piloto — casi tres veces el CTR de Asturias con posición equivalente. La nota 1 es de forma (title cortado y sin cifra), no de resultado. NO aplicar el rewrite a ciegas: probar una variante y estar dispuesto a revertir. Merece más la pena entender por qué funciona el actual que sustituirlo."
+      },
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "2.5",
+      "nota": 1,
+      "razon": "377 caracteres, la más larga del piloto: se corta a menos de la mitad y lo que sobrevive al recorte es 'denunciado por CCOO el 2-oct-2025 (REGCON 50000755011981)', un código de registro donde debería ir el motivo para entrar. La cifra de salario no aparece en ningún punto de la meta, y los datos que sí engancharían —jornada que baja a 1.766 h, vacaciones a 23 días, solo 1 de 19 categorías bajo SMI— quedan todos fuera.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 7,
+          "cita": "<meta name=\"description\" content=\"Convenio de Limpieza de Edificios y Locales de Zaragoza: denunciado por CCOO el 2-oct-2025 (REGCON 50000755011981); en ultraactividad desde 1-ene-2026 con tabla salarial 2025 vigente (+3,5% sobre 2024), jornada que baja a 1.766 h y vacaciones a 23 días laborales por cláusulas normativas diferidas, subrogación Art. 29. Solo 1 de 19 categorías bajo SMI 2026. BOPZ Núm. 71/2023.\">"
+        }
+      ],
+      "parche": {
+        "descripcion": "Cifra delante, jerga fuera, traza dentro del recorte. 157 caracteres.",
+        "texto_propuesto": "Limpiador/a 37,20 €/día — 16.926,95 € brutos al año. La tabla 2025 sigue vigente en 2026, con jornada de 1.766 h y 23 días de vacaciones. BOPZ 71/2023."
+      },
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "La frase de la FAQ es de las mejores del corpus: sujeto, cifra, unidad, anual, año de la tabla, año de aplicación, causa de la prórroga y contraste con el SMI, todo en una unidad. Le falta lo mismo que a Asturias para el 3: la palabra 'Zaragoza' vive en el h3, no en la frase, así que arrancada de la página deja de estar territorializada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 687,
+          "cita": "Según la tabla salarial 2025 del convenio (vigente en 2026 en ultraactividad tras la denuncia de CCOO el 2-oct-2025), la categoría de Limpiador/a percibe 37,20 €/día de salario base, equivalente a <strong>16.926,95 € de bruto anual</strong> conforme al cálculo del propio convenio. Está apenas 350,95 € por encima del SMI 2026 (16.576 € anuales)."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 686,
+          "cita": "<h3>¿Cuál es el salario de una persona limpiadora en Zaragoza en 2026?</h3>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El dato es extraíble sin reconstruirlo: la tabla da salario base y bruto anual en la misma fila, con la unidad dentro de la celda ('37,20 €/día'), y las tarjetas de pluses exponen cada cuantía con su unidad. Se queda en 2 porque falta el periodo en los encabezados y, sobre todo, porque el €/mes —la unidad en que la gente piensa su sueldo— no existe en ninguna parte de la ficha para las categorías operarias: quien quiera saber lo que cobra al mes tiene que dividir 16.926,95 entre lo que suponga. Asturias resuelve exactamente ese hueco con una columna dedicada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 272,
+          "cita": "<th class=\"num\">SB 2025</th>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 301,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">Limpiador/a</td><td class=\"num\">37,20 €/día</td><td class=\"sal\">16.926,95 €</td><td class=\"num\">1,49 €/día</td></tr>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.3",
+      "nota": 2,
+      "razon": "Los tres aparecen donde importa —el h3 de la FAQ pone provincia y año, la frase pone el año de la tabla y el año de aplicación— y además la ficha separa con cuidado el ámbito provincial del estatal al explicar por qué hay 19 categorías en tabla y 3 en el articulado. No llega a 3 porque la tabla, que es la unidad más citada, no lleva ni provincia ni sector en ningún encabezado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 708,
+          "cita": "El Art. 39 del convenio provincial lista las divisiones funcionales <em>a título enunciativo</em> (Especialista, Peón Especializado Conductor/Limpiador, Limpiador/a), pero <strong>la Cláusula Adicional 5.ª remite la clasificación profesional al I Convenio Estatal de Limpieza de Edificios y Locales</strong>."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 269,
+          "cita": "<thead>\n        <tr>\n          <th>Categoría</th>\n          <th class=\"num\">SB 2025</th>\n          <th class=\"num\">Bruto anual 2025</th>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "La traza acompaña a la tabla —el párrafo inmediatamente anterior cita anexo, boletín, número y fecha— y las secciones largas llevan su artículo en el h2. Pero no baja al nivel de cada cuantía: las tarjetas de pluses, que concentran las cifras más consultadas después de la tabla, no llevan artículo en el título, a diferencia de Asturias, que sí lo hace en la misma sección.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 264,
+          "cita": "Cuantías vigentes desde el 1 de enero de 2025, publicadas como Anexo I del convenio en el BOPZ Núm. 71 del 29 de marzo de 2023."
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 343,
+          "cita": "<div class=\"pill-card-title\">Plus festivo</div>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 339,
+          "cita": "<div class=\"pill-card-title\">Plus de transporte</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "4.5",
+      "detalle": "Dos cifras distintas para el mismo concepto en la misma página, y la discrepante está en la capa que leen las máquinas. El JSON-LD del FAQPage afirma que el plus festivo de jornada corta es de 15,47 €, mientras el cuerpo visible lo fija en 16,49 € en tres sitios independientes (tarjeta de pluses, tabla de complementos y la respuesta visible de esa misma pregunta). El schema quedó sin actualizar cuando se corrigió el cuerpo: un asistente que cite esta ficha devolverá 15,47 €, que la propia página desmiente. Corrección: sustituir en el JSON-LD 'plus festivo (27,50 € si más de 4 horas, 15,47 € si menos)' por 'plus festivo (27,50 € si 4 horas o más, 16,49 € si menos de 4 horas)', igualándolo al texto de la línea 687. Conviene además revisar la misma respuesta del schema, que fecha la antigüedad consolidada 'antes del 31 de diciembre de 1994' mientras el cuerpo dice 'antes del 1 de enero de 1995': el efecto es idéntico, pero la divergencia literal sugiere que el bloque JSON-LD se quedó congelado en una versión anterior de la ficha y merece cotejarse entero, no solo en la cifra.",
+      "evidencia": {
+        "linea": 60,
+        "cita": "plus festivo (27,50 € si más de 4 horas, 15,47 € si menos), nocturnidad y antigüedad consolidada para quienes la tuvieran devengada antes del 31 de diciembre de 1994."
+      },
+      "evidencia_contraria": [
+        {
+          "linea": 344,
+          "cita": "<div class=\"pill-card-body\">Más de 4 horas trabajadas: <strong>27,50 €/día</strong>. Menos de 4 horas: <strong>16,49 €/día</strong>.</div>"
+        },
+        {
+          "linea": 378,
+          "cita": "<tr><td class=\"cat\"><strong>Plus domingo/festivo &lt; 4 h</strong></td><td class=\"num\">16,49 €/día</td><td>Por cada domingo o festivo trabajado con jornada inferior a 4 horas.</td></tr>"
+        },
+        {
+          "linea": 687,
+          "cita": "plus festivo (27,50 € si 4 horas o más, 16,49 € si menos de 4 horas)"
+        }
+      ]
+    }
+  ],
+  "observacion_libre": "Ventana cerrada (ultimo_commit 2026-07-30, 21 días): los parches se pueden ejecutar. El hard-fail 4.5 es el hallazgo importante de esta ficha y es de mi eje por dónde vive: no es un error de contenido —el cuerpo está bien tres veces— sino un desfase entre el HTML visible y el JSON-LD, es decir, exactamente en el canal por el que un motor de IA cita. Recomiendo comprobar si el mismo desfase existe en las demás fichas del corpus: la coincidencia palabra a palabra entre el schema y el cuerpo en Asturias sugiere que allí se actualizaron a la vez, pero conviene una pasada automática que compare las cifras del FAQPage con las del cuerpo en las 50+ fichas. Paradoja que el sintetizador debería tener en cuenta al ponderar E4: Zaragoza saca las peores notas de forma en title y meta del piloto y a la vez el mejor CTR real (4,4% a posición 6,40, contra 1,73% a 6,33 de Asturias). Mi lectura es que aquí manda la composición de la demanda, no la redacción: si el bloque de consultas de Zaragoza es más específico y de menor competencia, un title feo bien posicionado gana clics igual. Fuera de mi eje: el determinista declara un hard-fail 12.2 por el SMI 2026 (16.576 € frente a 17.094 €), que afecta al '350,95 € por encima del SMI' de la línea 687 y al '1 de 19 categorías bajo SMI' del title y la meta — si esa cifra cambia, el recuento de categorías bajo SMI cambia con ella y hay que rehacer el parche de meta antes de publicarlo."
+}

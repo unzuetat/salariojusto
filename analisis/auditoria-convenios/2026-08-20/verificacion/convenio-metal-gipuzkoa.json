@@ -1,0 +1,86 @@
+{
+  "slug": "convenio-metal-gipuzkoa",
+  "determinista_usado": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-gipuzkoa.json",
+  "veredictos": [
+    {
+      "eje": "E1",
+      "id": "5.10",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificadas las líneas 560 y 606 y barridos los enlaces externos de la ficha: son 5 y solo cuatro son oficiales (egoitza.gipuzkoa.eus/es/bog dos veces, REGCON y el BOE del SMI). Ni el BOG 110 ni el BOG 30 ni la republicación del 4-mar-2026 tienen enlace al anuncio; el destino es siempre la portada de la sede. Coincide con enlaces.externos_oficiales del determinista del 24-ago.",
+      "prueba": {
+        "linea": 606,
+        "cita": "Sede: <a href=\"https://egoitza.gipuzkoa.eus/es/bog\" target=\"_blank\" rel=\"noopener\">egoitza.gipuzkoa.eus</a>."
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobadas las cuatro preguntas que da por no respondidas, buscando antes la respuesta en toda la página. (3) La columna A: la ficha la nombra 9 veces y ninguna tabla la publica — las diez tablas salariales tienen exactamente tres columnas (Categoría profesional / Valor hora / Retribución anual), así que el 5% del quinquenio es incalculable con lo publicado, tal como dice el hallazgo. (4) Media jornada: «media jornada», «tiempo parcial» y «jornada parcial» suman 0 apariciones en el HTML. (2) El puente oficio→categoría no existe: «soldadura» solo aparece como actividad del ámbito (línea 262), nunca junto a una categoría de la tabla. La ironía que señala —que este es el único convenio del clúster con valor hora, la herramienta exacta para el prorrateo, y no la usa— es verificable y correcta.",
+      "prueba": {
+        "linea": 491,
+        "cita": "<strong>5% sobre el salario de la columna A</strong> por cada 5 años de servicio."
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.6",
+      "veredicto": "MATIZADO",
+      "motivo": "El núcleo se sostiene: no hay ningún puente del valor hora al recibo mensual, no se dice en cuántos recibos se reparte la retribución anualizada, y el CTA de la línea 427 pide comparar con un «valor hora» que no figura en ninguna nómina. Pero una de las tres carencias enumeradas es falsa y la desmiente la propia evidencia que el hallazgo adjunta: la ficha SÍ advierte del prorrateo, dos veces («Salvo acuerdo en contrario, no pueden prorratearse en las doce mensualidades», línea 447, y de nuevo en la FAQ de la 593). Lo que falta es «absorción/complementos absorbibles» (0 apariciones) y el divisor. Enunciado exacto: «Explica que el convenio no fija salario mensual y ahí se detiene: no traduce las columnas A/B/C a los conceptos del recibo ni dice en cuántos recibos se cobra la retribución anualizada. Sí advierte de que las extras no se prorratean (447 y 593); no advierte de absorción ni de complementos absorbibles.»",
+      "prueba": {
+        "linea": 447,
+        "cita": "Ambas se abonan a todas las categorías profesionales. Se devengan por semestres naturales, en proporción al tiempo trabajado. <strong>Salvo acuerdo en contrario, no pueden prorratearse</strong> en las doce mensualidades."
+      }
+    },
+    {
+      "eje": "E4",
+      "id": "4.2",
+      "veredicto": "MATIZADO",
+      "motivo": "El defecto de fondo es real y verificado: las diez tablas salariales repiten la cabecera «Categoría profesional / Valor hora / Retribución anual» sin año, ninguna de las trece tablas tiene caption (determinista: sin_caption 13 de 13) y la celda extraíble viaja sin periodo ni ámbito. Pero tres afirmaciones de apoyo caen al contrastarlas. (a) «Es la ficha con más cifras del sector (249)»: no, metal-sevilla tiene 270 en el mismo determinista; es la segunda. (b) «Sus trece tablas, todas dentro de details»: las trece tablas no son homogéneas — solo diez son salariales y están en <details>; las otras tres (subida 2026, licencias, pagas) tienen cabeceras distintas y están fuera. (c) «Es la única del clúster que deja el año fuera del encabezado»: tampoco lo llevan metal-sevilla («Total €/día · ≈ bruto/año*», 10 tablas), metal-bizkaia («Salario base diario · Bruto anual») ni la tabla principal de metal-barcelona («Total Anual (14 pagas)»). Enunciado exacto: «Las diez tablas salariales repiten la cabecera Retribución anual sin periodo y ninguna de las trece tablas lleva caption: la fila extraíble llega sin año, sin provincia y sin decir que el anual es valor hora × 1.695. Álava, Zaragoza y Navarra sí fechan la columna; Sevilla, Bizkaia y Barcelona tampoco.»",
+      "prueba": {
+        "linea": null,
+        "cita": "24-ago/deterministas: convenio-metal-sevilla cifras.n = 270 > convenio-metal-gipuzkoa 249 · convenio-metal-sevilla.html thead ×10: «<th>Categoría profesional</th><th class=\"num\">A · base</th>…<th class=\"num\">≈ bruto/año*</th>» (sin año)"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado: la ficha no tiene ningún href a /plantilla-*.html (determinista: al_kit = solo /reclamar-diferencias-salariales-convenio.html), el paso 3 (línea 550) y el plazo (552) van sin enlace, y el único puente cuelga del párrafo de código REGCON y firmantes que cierra la sección. Ambas plantillas propuestas existen en el repo, así que el parche es ejecutable — aunque la ventana de medición sigue abierta (ultimo_commit 2026-08-04).",
+      "prueba": {
+        "linea": 554,
+        "cita": "Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">20001095011981</code>. Firmantes: <strong>Adegi</strong> (patronal) y los sindicatos <strong>ELA y UGT</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.1",
+      "veredicto": "MATIZADO",
+      "motivo": "Repetí la comprobación viñeta a viñeta que el hallazgo dice haber hecho y sale bien en lo esencial: valor hora (253), A/B/C (255), triple mecanismo (531), dos pagas de 30 días (441), quinquenios del 5% (491) y horas extras suprimidas (458) están todos desarrollados antes. Confirmado también que la denuncia automática del 1-nov-2026 aparece UNA sola vez en toda la ficha, la del propio bullet. Cae la palabra «arriba» para una de las siete: la subrogación no se desarrolla antes de la sección, su único desarrollo está por debajo, en la FAQ de las líneas 598-599. Enunciado exacto: «Siete de las ocho viñetas de Particularidades (534-543) repiten contenido ya presente en la ficha —seis desarrollado antes y la de subrogación desarrollada después, en la FAQ 598—. La única aportación exclusiva es la denuncia automática del 1-nov-2026.»",
+      "prueba": {
+        "linea": 598,
+        "cita": "<h3>¿El convenio tiene subrogación?</h3> — único desarrollo del punto, en la línea 598, posterior al bullet de la 542"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "veredicto": "MATIZADO",
+      "motivo": "Verificadas las tres líneas y son literales, pero solo una de las dos duplicaciones es imputable a esta ficha. La buena: las FAQ de las líneas 587 y 590 son consecutivas y reexplican lo mismo —el valor hora, las 1.695 horas y la retribución anualizada— con tres líneas de separación; eso es redundancia propia. La que se cae: que la FAQ 587 repita el callout de la 253 es el patrón del corpus, no un defecto de Gipuzkoa. En metal-álava la FAQ «¿Cuánto cobra un oficial de 1.ª?» (594) repite igualmente las cuantías del pie de tabla (397) y E6 no lo puntuó como 8.3 allí. Enunciado exacto: «Dos FAQ consecutivas (587 y 590) explican lo mismo con las mismas cifras y los mismos dos ejemplos; deberían ser una.»",
+      "prueba": {
+        "linea": 594,
+        "cita": "convenio-metal-alava.html:594 — «¿Cuánto cobra un oficial de 1.ª?» repite las cuantías ya dadas en el pie de tabla de la línea 397, sin que E6 lo contara como redundancia en esa ficha"
+      }
+    }
+  ],
+  "resumen": {
+    "confirmados": 3,
+    "matizados": 4,
+    "refutados": 0,
+    "notas": [
+      "Ninguna cifra del juicio del 20-ago se ha desfasado con el determinista del 24-ago: cifras.n 249, tablas 13 (13 sin scope y sin caption), verde_en_tablas 0, parrafos.largos_100 vacío, a_hermanas_mismo_sector 4 y ultimo_commit 2026-08-04 coinciden. Solo cambia dias_desde_commit (15 → 20); la ventana de medición sigue abierta y el freno 9.7 se mantiene sobre todos los parches.",
+      "Nota, sin convertirla en hallazgo: E1 y E4 coinciden en observación libre (no puntuada) en que la tabla arranca en 16.597,44 €/año, por debajo del SMI 2026, y que la ficha nunca lo dice — la línea 424 se protege con «todas las categorías de oficio pleno superan el SMI 2026». El determinista lo corrobora (smi.bajo_smi_mencionado = false). Está fuera de mi encargo porque no es métrica con nota 0/1 ni hardfail declarado, pero es lo más grave que han visto los dos ejes y merece llegar al sintetizador.",
+      "Nota: el vacío del régimen fiscal foral (0 apariciones de «foral» frente a 9 en Álava y 8 en Bizkaia) solo aparece en la observación libre de E6, sin métrica asociada. Verificado; no lo convierto en hallazgo."
+    ]
+  }
+}

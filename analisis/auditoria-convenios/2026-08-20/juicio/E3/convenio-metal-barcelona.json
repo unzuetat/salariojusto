@@ -1,0 +1,79 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-barcelona",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Es la mejor apertura del cluster en unidad: el H1 da el rango en €/mes, que es la unidad en la que la persona piensa, con el año y el BOPB del 13-feb-2026 en el subtítulo y en el sello. No llega a 3 porque sigue siendo un rango de grupos: la cifra del puesto más buscado —Oficial de 1ª mecánico o electricista, 2.063,39 €/mes— existe y está muy bien redactada, pero vive a la altura de la tabla, no arriba.",
+      "evidencia": [
+        {"archivo": "convenio-metal-barcelona.html", "linea": 168, "cita": "Convenio Metal Barcelona 2026: de 1.980 € a 2.578 € al mes con +3% aplicado enero y garantía IPC"},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 176, "cita": "✓ Verificado contra BOPB del 13 de febrero de 2026 (Resolución de 11 de febrero de 2026, Directora Territorial Barcelona Lídia Frias Forcada) por SalarioJusto"},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 277, "cita": "Salarios más buscados (2026): Oficial de 1ª mecánico/a o electricista = Grupo 5 = 2.063,39 €/mes ."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 2,
+      "razon": "Responde 6 de las 8, y las cinco primeras con nota alta: la cifra por puesto real, el mes y las 14 pagas, el encuadre por grupo, el ámbito por CNAE, la antigüedad (respuesta clara: no se reconoce para quien entra hoy) y la nocturnidad con importe por hora. Fallan dos, y una de ellas es la más importante que existe: «cobro menos que mi grupo, ¿qué hago?» no tiene respuesta en toda la página; y «trabajo media jornada, ¿cuánto me corresponde?» tampoco —el Art. 29.a solo habla de horas complementarias y de preferencia para vacantes, nunca de cuánto se cobra—.",
+      "evidencia": [
+        {"archivo": "convenio-metal-barcelona.html", "linea": 595, "cita": "El convenio NO reconoce antigüedad para personas contratadas hoy."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 512, "cita": "Horas complementarias máximo 40% de las horas ordinarias. Formalizables por escrito. Personas a tiempo parcial tienen preferencia para cubrir vacantes a jornada completa y viceversa."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 382, "cita": "1,19 €/hora nocturna en 2025 · 1,23 €/hora nocturna en 2026 · idéntico para todos los grupos profesionales del 1 al 7."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 0,
+      "razon": "No hay salida. Es la única ficha del metal sin sección de reclamación: el determinista lo confirma por dos vías (conceptos_ausentes incluye «que_hacer» y enlaces.al_kit está vacío). No se menciona el plazo de prescripción del art. 59.2 ET en ninguna parte, no se dice cómo documentar la diferencia, y lo único parecido a una vía es una línea informativa sobre el Tribunal Laboral de Catalunya dentro del apartado de comisiones paritarias, redactada como dato del convenio y no como instrucción para el lector. Con 200.000 personas cubiertas, es el hueco más caro del corpus del metal.",
+      "evidencia": [
+        {"archivo": "convenio-metal-barcelona.html", "linea": 553, "cita": "Sometimiento expreso a los procedimientos de Conciliación y Mediación del TLC como trámite previo obligatorio a la vía judicial, para conflictos colectivos, plurales e individuales no excluidos."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 581, "cita": "Calcula tu salario neto en la industria metalúrgica de Barcelona con retenciones IRPF 2026 y escala autonómica de Cataluña"}
+      ],
+      "parche": "Insertar antes de «Convenios relacionados» (línea 630) una sección «¿Cobras menos de lo que fija tu grupo?» con cinco pasos: «1. Identifica tu grupo profesional (1 a 7) por tus funciones reales, no por el nombre del puesto: la descripción y los puestos típicos de cada grupo están en el Anexo 14 del convenio y resumidos más arriba. 2. Compara tu nómina con la tabla 2026: el salario convenio de tu grupo se cobra en 12 mensualidades más dos pagas de la misma cuantía el 30 de junio y el 22 de diciembre (Art. 49). Multiplica el salario mensual de tu grupo por 14 y compáralo con tu bruto anual; añade nocturnidad (1,23 €/hora entre las 22:00 y las 6:00), plus de penosos/tóxicos/peligrosos (7,91 € o 3,97 €/día) y teletrabajo (1,69 €/día) si te corresponden. 3. Pide la nómina detallada por escrito si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores). Comprueba que ningún complemento «ex vinculación», «ex jefe de equipo» o «ex categoría profesional» se te ha absorbido: el Art. 38 prohíbe compensarlos o absorberlos. 4. Reclama primero a la empresa por escrito con acuse (burofax o correo con confirmación), citando el artículo del convenio y el importe. Si no hay respuesta, acude a la Comisión Paritaria del convenio (Via Laietana 32, 4.ª — UPM; Via Laietana 16, 3.º — CCOO Indústria; Plaza Vázquez Montalbán 6, 2.ª — UGT-FICA) y al Tribunal Laboral de Catalunya, cuya conciliación es trámite previo obligatorio antes del juzgado de lo social (Art. 87). 5. Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET). Cada mes que pasa sin reclamar es un mes que prescribe: empieza por las mensualidades más antiguas.» Cerrar con el enlace a /reclamar-diferencias-salariales-convenio.html, que hoy no existe en esta ficha.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 3,
+      "razon": "Es la ficha que mejor resuelve la autoubicación de todo el cluster, y lo hace por tres vías que las demás no combinan: la tabla salarial lleva los puestos típicos dentro de la propia fila del grupo; hay una sección con los 7 grupos descritos por titulación, autonomía y puestos reales (soldadores/as y electricistas nombrados en el Grupo 5, peón/a y vigilante en el 7); y un bloque «Salarios más buscados» que hace explícito el cruce oficio real → grupo → cifra. Además da la instrucción en voz activa y declara la frontera funcional por CNAE con el único supuesto excluido.",
+      "evidencia": [
+        {"archivo": "convenio-metal-barcelona.html", "linea": 231, "cita": "Cruza tu puesto de trabajo con el grupo profesional que te corresponda para obtener tu salario mensual bruto de convenio."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 484, "cita": "Puestos típicos: Delineante 2ª, Oficiales Administrativos/as, Oficiales de Laboratorio, Oficiales de Organización, Viajante, Chofer de camión, Profesionales de Oficio 1ª y 2ª (electricistas, mecánicos/as, soldadores/as, siderúrgicos/as, etc.)."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 590, "cita": "Solo quedan fuera las empresas dedicadas exclusivamente a la venta de artículos en proceso de comercialización. Territorialmente: todos los centros de trabajo situados en la provincia de Barcelona , aunque el domicilio social esté fuera."}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 3,
+      "razon": "Es la única del metal que traduce a nómina de verdad y además avisa de los errores típicos. Traduce: da el mensual, dice cuántas mensualidades se cobran y en qué fechas, y desglosa un caso real paso a paso (12 × 2.063,39 € + dos pagas = 28.887,46 € brutos). Avisa: precisa que unos complementos se pagan en 12 mensualidades y otros en 14 —el error de cálculo más común del sector— y dice expresamente que los complementos ad personam no son absorbibles ni compensables, que es la trampa clásica de una nómina del metal. Ninguna otra ficha del corpus metal nombra la absorción.",
+      "evidencia": [
+        {"archivo": "convenio-metal-barcelona.html", "linea": 253, "cita": "El \"Salario Convenio/mes\" se paga durante 12 mensualidades. Las 2 pagas extras (junio y Navidad, Art. 49) son de la misma cuantía que el salario mensual. Total anual = Salario Convenio × 14."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 595, "cita": "Complemento \"ex vinculación\" [...] Se paga en 12 mensualidades. [...] Complemento \"ex categoría profesional\" [...] Se paga en 14 mensualidades. Ninguno es absorbible ni compensable."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 288, "cita": "× 12 mensualidades: 24.760,68 €"}
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 0,
+      "razon": "Es la única ficha del metal sin SMI 2026. El determinista lo confirma: cita_17094 es falso y registra como SMI los importes obsoletos 1.184 € y 16.576 €. Peor que la ausencia es el marco: la ficha dice que el salario del contrato formativo se ajustará «cuando el BOE publique el SMI vigente», cuando el SMI 2026 ya estaba publicado (RD 126/2026) meses antes de la última revisión de esta página, del 11-jul-2026. Quien llega aquí buscando el suelo por debajo del cual no puede cobrar se lleva la cifra de 2025.",
+      "evidencia": [
+        {"archivo": "convenio-metal-barcelona.html", "linea": 507, "cita": "perciben en 2025: 1.184,00 €/mes en 14 pagas = 16.576,00 €/año (importe idéntico al SMI 2025). Para 2026 y 2027 se ajustará por la Comisión Paritaria cuando el BOE publique el SMI vigente."},
+        {"archivo": "convenio-metal-barcelona.html", "linea": 663, "cita": "Convenio verificado por Telmo · última revisión 11-jul-2026 contra BOPB del 13-feb-2026"}
+      ],
+      "parche": "Sustituir la última frase de la línea 507 por: «Para 2026, el Real Decreto 126/2026 fijó el SMI en 1.221 €/mes y 17.094 € anuales en 14 pagas (BOE-A-2026-3815): ninguna persona contratada en formación o en alternancia puede cobrar por debajo de esa cifra, aunque la Comisión Paritaria no haya publicado todavía la tabla específica de contratos formativos de 2026.» Y añadir en el bloque de fuentes (línea 644 y siguientes) la línea «Real Decreto 126/2026, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparación. BOE-A-2026-3815», con el enlace, como ya hacen las otras ocho fichas del metal.",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA ALGUIEN DEL METAL EN BARCELONA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial de 1ª del metal en Barcelona en 2026?»; (2) «¿y eso cuánto es al mes, con cuántas pagas?»; (3) «soy soldador en un taller del Baix Llobregat, ¿en qué grupo estoy?»; (4) «mi empresa monta ascensores / hace ITV, ¿me cubre este convenio?»; (5) «llevo 6 años, ¿me toca antigüedad?»; (6) «hago noches, ¿cuánto me tienen que pagar de más?»; (7) «cobro menos que mi grupo, ¿qué hago y hasta cuándo puedo reclamar?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO: (1) sí, y con nombre de oficio (277); (2) sí, mensual y 14 pagas (208, 253); (3) sí (484, 231); (4) sí, por CNAE (590); (5) sí, respuesta clara y negativa (595); (6) sí, 1,23 €/hora (382); (7) NO, no existe; (8) NO. Seis de ocho. — Diagnóstico: esta ficha es la mejor del cluster resolviendo «¿cuál es mi cifra?» y la peor resolviendo «¿y ahora qué hago?». Tiene la traducción a nómina más fina del corpus (12 vs 14 mensualidades, absorción, ejemplo desglosado) y no tiene ni una línea sobre cómo reclamar ni sobre el año de prescripción. Es un embudo que se corta justo antes de la acción. — Sobre media jornada: la ficha es de las pocas que menciona el contrato a tiempo parcial (Art. 29.a, línea 511-512), pero solo para hablar de horas complementarias y preferencia de vacantes; nunca dice que el salario del grupo se percibe en proporción a la jornada. — FUERA DE MI EJE: el determinista trae dos hard-fails propios (2.2, sin bloque «Quién audita esto», y 7.1, dos tablas que desbordan en móvil) y marca el SMI obsoleto; los dejo a E2 y E5, salvo por lo que afecta a 1.9. — VENTANA CERRADA: 21 días desde el último commit, así que los dos parches (1.3 y 1.9) no van aplazados."
+}

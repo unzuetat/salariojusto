@@ -1,0 +1,151 @@
+{
+  "eje": "E2",
+  "slug": "convenio-hosteleria-valencia",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 1,
+      "razon": "boilerplate_ratio 0.123, el más alto del piloto, y las 8 frases compartidas no son cromo sino el bloque jurídico '¿Cobras menos?' clonado; aquí además llegó roto, con la fecha y el sujeto de la denuncia sin rellenar y una preposición huérfana que delata la plantilla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 863,
+          "cita": "El convenio está en ultraactividad desde tras el fin de la vigencia formal del convenio, pero eso <strong>no autoriza a tu empresa a bajar tu salario ni tus pluses</strong>."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 867,
+          "cita": "debe seguir el procedimiento de descuelgue (Art. 34) con periodo de consultas y comunicación a el TAL (Tribunal de Arbitraje Laboral) de la Comunitat Valenciana"
+        }
+      ],
+      "parche": "Reescribir entero el bloque de las líneas 862-869 con lo que esta ficha ya sabe y el molde ignora: 'El XVII Convenio expiró el 31 de diciembre de 2025 y sus tablas siguen aplicándose por ultraactividad (art. 86.3 ET): tu empresa no puede rebajarlas. Si te paga menos, empieza por la tabla que te corresponde —Tabla I si es restauración, II si es hotel de 4 o 5 estrellas, III si es de 3 estrellas o vivienda turística—, comprueba que las tres pagas extras suman 15 mensualidades y no 14, y revisa que no te estén aplicando el Anexo II BIS de personas sin experiencia si ya tenías nueve meses en el sector. La vía previa es el TAL (Tribunal de Arbitraje Laboral de la Comunitat Valenciana); tienes un año por mensualidad (art. 59.2 ET).' Antes de publicarlo, verificar en el BOP Valencia 26/2023 el artículo real de inaplicación: el '(Art. 34)' actual está copiado del molde —aparece idéntico en 11 fichas de sectores y provincias distintos— y en esta página no se corresponde con ningún artículo citado en el resto del texto.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 2,
+      "razon": "ratio_tabla 0.246, el más alto del piloto, con palabras_prosa 4720: la prosa explica bien qué tabla te toca y cuándo se te aplica la rebajada, pero buena parte del texto (licencias, festivos, jornada) rodea las tablas en vez de explicarlas, y el bloque comparativo necesita un callout posterior para corregir su propia lectura.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 859,
+          "cita": "<strong>Una matización al callout</strong>: Valencia aparece \"última\" en el ranking del salario mensual base de Camarero/a, pero tiene <strong>3 pagas extras en lugar de 2</strong>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 775,
+          "cita": "<strong>durante los primeros 9 meses te pagan con una tabla rebajada</strong>. Al día siguiente del noveno mes, pasas automáticamente a cobrar la tabla normal."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 2,
+      "razon": "frases_exclusivas 164 de 187, pero la exclusividad es desigual: hay hechos propios de verdad (la ventana de nocturnidad 00:30-06:00 confirmada en acta paritaria, la inclusión expresa de riders) conviviendo con secciones de licencias y festivos que son el molde de hostelería con otras cifras.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 882,
+          "cita": "las dos horas y media entre 22:00 y 00:30 NO generan plus en hostelería de Valencia. […] La acta paritaria del 23-ene-2024 confirmó esta interpretación frente a una consulta del sector de ocio nocturno (discotecas)."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 275,
+          "cita": "<strong>Te cubre si eres rider</strong> de una empresa hostelera: el reparto de comidas y bebidas a pie o en vehículo (sin autorización de transporte) está expresamente incluido"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 2,
+      "razon": "faq_clonadas 5 de faq_total 8: las tres propias son buenas y con respuesta que solo vale aquí, pero una de las clonadas es puro molde de archivo y las mejores quedan escondidas dentro de un acordeón plegado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 884,
+          "cita": "La subrogación cubre a quien haya cubierto el puesto al menos el <strong>85% de los días de servicio durante los últimos 4 meses</strong>. Esto NO ocurre en otros convenios provinciales como Madrid."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 896,
+          "cita": "¿Dónde puedo consultar el texto oficial del convenio?"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 1,
+      "razon": "es la ficha más intercambiable del piloto en este punto: recoge la estacionalidad genérica del sector vía fijo-discontinuo, pero nada de lo que hace singular a la hostelería de esta provincia en 2026 —la DANA del 29 de octubre de 2024 en l'Horta Sud y las Fallas como pico de contratación— aparece en ninguna línea; el campo nota del censo está vacío y la ficha tampoco lo suple.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 718,
+          "cita": "Es <strong>la modalidad más utilizada</strong> en hostelería de Valencia por la estacionalidad del sector (turismo, eventos, restauración de temporada)."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 224,
+          "cita": "Tablas oficiales, jornada anual, 3 pagas extras, subrogación y pluses. BOP Valencia núm. 26, 7 feb 2023. Vigencia 2022–2025 (en ultraactividad)."
+        }
+      ],
+      "parche": "Dos hechos que investigar antes de escribir una línea, no un párrafo que rellenar. (1) DANA del 29-oct-2024: comprobar en el BOP de Valencia y en el registro de actas de la Comisión Paritaria del convenio si hubo acuerdo sectorial de hostelería sobre ERTE por fuerza mayor, permiso retribuido recuperable del RDL 7/2024 o recuperación de jornada en los municipios afectados de l'Horta Sud; si lo hubo, es una sección propia ('Qué pasó con tu contrato si tu bar estaba en zona DANA') que ninguna otra web tiene y que sigue afectando al cómputo de 2026; si no lo hubo, decirlo también sirve, porque entonces se aplicó el régimen general y conviene explicar cuál. (2) Fallas: verificar en el articulado y en el calendario laboral autonómico el tratamiento del 19 de marzo y de los días falleros como festivos trabajados y su cuantía —la ficha ya tiene un epígrafe de 'Festivos trabajados (cuando eliges metálico)' donde encajaría—, porque es el pico anual de contratación del sector en la provincia. Sin al menos uno de los dos, esta ficha es la de cualquier provincia turística con otras cifras.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 2,
+      "razon": "aporta sobre el BOP una ordenación real (el bloque '¿te cubre?' con riders y dark kitchens, la Tabla II BIS explicada, el acta paritaria de 2024 incorporada), pero no traduce las tablas a bruto anual por categoría, que es la operación que el boletín no hace y el lector necesita.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 284,
+          "cita": "Salario base mensual bruto en 15 pagas (12 mensualidades + 3 extras de junio, navidad y marzo). Cifras oficiales publicadas en BOP Valencia núm. 26 del 7 de febrero de 2023."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 702,
+          "cita": "el IPC interanual 2023 fue del <strong>3,1%</strong> — superior al 2,5% pactado en el Art. 16 para ese año. La Comisión Paritaria activó la cláusula de garantía"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "hay una ventaja identificable frente a la cifra pelada —la honestidad de matizar la propia comparativa desfavorable y de admitir lo que no se sabe sobre la paga de garantía—, pero está en el último tercio de la página; en la primera pantalla solo hay un rango salarial que cualquier agregador también publica.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 714,
+          "cita": "habría que verificar con la empresa o el sindicato si la nueva paga de garantía se ha aplicado."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 224,
+          "cita": "De <strong>1.100,46 €/mes</strong> (ayudantes, riders) a <strong>1.415,47 €/mes</strong> (jefaturas en hoteles 4-5★) según categoría, en <strong>15 pagas</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "5.7",
+      "detalle": "El bloque plantillado atribuye a 'los sindicatos' una denuncia del convenio 'el octubre de 2025' que no consta en ninguna fuente citada por la ficha: el resto de la página sostiene que la vigencia terminó el 31/12/2025 y que las tablas siguen por ultraactividad del art. 86.3 ET, sin mencionar denuncia alguna, y el censo (fuenteEstado de convenio-hosteleria-valencia) tampoco la recoge. Es un hecho fabricado por el molde al rellenarse con los valores de otra ficha. La misma frase de la misma plantilla aparece en Asturias y Zaragoza, allí con la denuncia real de CCOO, lo que confirma el origen.",
+      "evidencia": {
+        "linea": 863,
+        "cita": "Lo que decae con la denuncia (los sindicatos la presentó el octubre de 2025) son las cláusulas obligacionales"
+      }
+    }
+  ],
+  "observacion_libre": "Ventana cerrada (ultimo_commit 2026-07-30, 21 días): los parches son aplicables ya. Es la ficha más intercambiable de las seis pese a tener 4.720 palabras de prosa, y conviene entender por qué, porque el diagnóstico vale para todo el corpus: no le falta volumen, le falta provincia. Tiene el boilerplate_ratio más alto (0.123), el ratio_tabla más alto (0.246), 5 de 8 FAQ clonadas, ningún bloque nota-editorial ni respuesta-directa (las tienen Madrid y Sevilla) y, sobre todo, ninguna referencia a lo único que hace irrepetible a la hostelería valenciana de 2026. Lo que sí tiene de propio —riders incluidos en el ámbito, la ventana de nocturnidad desde las 00:30, el Anexo II BIS— está bien y es defendible; el problema es que podría estar en la ficha de cualquier provincia costera cambiando cifras. Nota fuera de mi eje: la sección de reclamación remite al descuelgue del 'Art. 34' sin que ese artículo aparezca citado en ningún otro punto de la ficha; para el eje de veracidad, junto con el hard-fail 5.7."
+}

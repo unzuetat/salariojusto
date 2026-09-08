@@ -1,0 +1,100 @@
+{
+  "slug": "convenio-tecnicos-espectaculos",
+  "contexto": "Ficha tipo 'marco' (censo.json: tipo=marco, indexable=false, fuenteEstado='explainer sin convenio sectorial propio', confianza alta). Ámbito Estatal, sin convenio sectorial, sin tablas (tablas.n=0), sin JSON asociado (html_vs_json.json=null). Toda crítica que exija tabla salarial, cifra de convenio, hermana del mismo sector o presencia en SERP/sitemap se ha contrastado contra este estatus antes de darla por buena.",
+  "veredictos": [
+    {
+      "eje": "E1", "id": "5.10", "nota_eje": 0, "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado en el HTML completo: no hay un solo href externo en el cuerpo (los únicos 'href=\"http' del archivo son canonical, hreflang, dns-prefetch y las fuentes de Google Fonts, líneas 9-18 y 91-94). La sección 'Fuentes oficiales' nombra boe.es en texto plano y no enlaza. Coincide con el determinista (enlaces.externos_total=0, externos_oficiales=[]). La norma existe y no es importada: CANDIDATAS.md línea 117 define 5.10 como 'Enlaces a fuente oficial vivos y al documento exacto'. No la desactiva el ser ficha marco: el RD 1435/1985 y el RDL 2/2015 son documentos del BOE perfectamente enlazables, y la propia ficha los presenta como 'verificable de forma independiente'.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 288, "cita": "<strong>Real Decreto 1435/1985, de 1 de agosto</strong> — … Texto consolidado en el Boletín Oficial del Estado (boe.es)."}
+    },
+    {
+      "eje": "E1", "id": "9.1", "nota_eje": 0, "veredicto": "MATIZADO",
+      "motivo": "El hecho es cierto (grep de 'Verificado', 'última revisión', 'actualizad' en el archivo: cero coincidencias; determinista sello.presente=false, norma.fecha_actualizacion_visible=false). Pero la razón escrita puntúa dos veces lo mismo: la ausencia de sello ya bloquea como hard-fail 5.2, y METRICAS.md §0 principio 3 dice literalmente 'Hard-fail ≠ score … Van en una lista aparte, no en la media ponderada'. Además, la pregunta propia de 9.1 ('¿hay boletín posterior al sello?', CANDIDATAS.md línea 176) es inaplicable aquí: no hay convenio ni boletín propio que pueda quedar superado.",
+      "enunciado_reescrito": "9.1 — La ficha no muestra ninguna fecha de revisión visible, de modo que el lector no puede saber si el conflicto que la sostiene (huelga del 15-V-2026) sigue siendo el estado actual del sector. La parte 'sin sello' no puntúa aquí: ya bloquea como hard-fail 5.2.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/RUBRICA-V1.md", "linea": 3, "cita": "score 0-100 sobre 6 ejes + lista de hard-fails aparte, que no se compensan con buena nota"}
+    },
+    {
+      "eje": "E1", "id": "9.2", "nota_eje": 1, "veredicto": "MATIZADO",
+      "motivo": "La frase 'nunca traduce eso en caducidad para el lector' es excesiva: la ficha declara su condición de validez tres veces en texto visible — el h2 'Qué te ampara mientras no hay convenio' (línea 214), 'Mientras la regulación específica no llegue…' (línea 245) y la FAQ 'Mientras no exista, el marco aplicable se compone del RD 1435/1985…' (línea 274). Lo que sí falta, y solo eso, es la señal concreta a vigilar y la cadencia de revisión.",
+      "enunciado_reescrito": "9.2 — La ficha declara su caducidad en forma condicional ('mientras no haya convenio') pero no nombra la señal que la haría caducar (inscripción en REGCON / publicación en BOPV del convenio de Espectáculos y Eventos de la CAV) ni con qué periodicidad se revisa.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 214, "cita": "<h2>Qué te ampara mientras no hay convenio</h2>"}
+    },
+    {
+      "eje": "E3", "id": "1.1", "nota_eje": 0, "veredicto": "MATIZADO",
+      "motivo": "El hecho base es exacto y lo he comprobado a mano: grep '€' sobre el archivo devuelve cero coincidencias, y las dos líneas citadas (184 y 221) son literales. Pero la métrica, tal como está definida en CANDIDATAS.md línea 49 ('La cifra del puesto más buscado aparece en la primera pantalla, con año y fuente'), es inaplicable en su literalidad: este sector no tiene convenio ni tabla, luego no existe 'cifra del puesto'. Lo que sí es exigible y falta es la única cuantía citable de la página, el SMI, que se deja como puntero a otra URL. Aviso sobre el parche: propone 1.221 €/mes · 17.094 €/año (RD 126/2026), cifra que coincide con el canon del proyecto, pero la página de destino que la ficha enlaza (/salario-minimo-interprofesional-2026.html) sigue diciendo 16.576 € / 1.184 €/mes; aplicar el parche sin arreglar antes esa página crearía dos cifras distintas para lo mismo (hard-fail 12.2).",
+      "enunciado_reescrito": "1.1 — No hay ninguna cantidad en euros en toda la página. No es exigible la cifra de un puesto (no hay convenio ni tabla), pero sí la del SMI, que es el suelo que la propia ficha promete en el card 'Situación de un vistazo' y que hoy solo aparece como enlace.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 184, "cita": "<div class=\"stat-label\">Suelo retributivo</div><div class=\"stat-value\">Salario Mínimo Interprofesional vigente</div>"}
+    },
+    {
+      "eje": "E3", "id": "1.6", "nota_eje": 1, "veredicto": "CONFIRMADO",
+      "motivo": "Comprobado por búsqueda de 'nómina' en todo el archivo: una sola aparición, la del CTA de la línea 267. Busqué la refutación en el resto de la página (bloque 'Qué te ampara', tarjetas 'Qué puedes hacer', las 4 FAQ y el schema FAQPage completo del determinista): en ningún punto se dice qué concepto debe figurar en la nómina ni con qué nombre, ni si las cifras son brutas o netas. El 1 (insuficiente) y no 0 se sostiene porque la ficha sí explica el registro de jornada como prueba y el plazo del art. 59.2.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 267, "cita": "¿Tu nómina y tu jornada reflejan lo que marca el suelo legal? Compruébalo."}
+    },
+    {
+      "eje": "E4", "id": "4.2", "nota_eje": 1, "veredicto": "CONFIRMADO",
+      "motivo": "Cita literal verificada en la línea 184 (etiqueta y valor exactos) y en la 221. El determinista respalda la lectura: respuesta_directa.cifra_en_primeros_bloques=false y schema_vs_cuerpo.n=0. La métrica 4.2 ('Atomicidad del dato: cada cifra clave vive en una frase que se puede extraer entera', CANDIDATAS.md línea 96) sí aplica a una ficha marco: no exige tabla, exige que el dato que la página promete sea extraíble. Es además el único eje que se abstuvo correctamente en 2.4 y 2.5 por noindex deliberado, lo que descarta que esté importando el marco SERP.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 184, "cita": "<div class=\"stat-item\"><div class=\"stat-label\">Suelo retributivo</div><div class=\"stat-value\">Salario Mínimo Interprofesional vigente</div></div>"}
+    },
+    {
+      "eje": "E5", "id": "6.2", "nota_eje": 0, "veredicto": "MATIZADO",
+      "motivo": "Verificado el grafo a mano: 'grep -rn convenio-tecnicos-espectaculos --include=*.html' devuelve exactamente dos entrantes, mapa-del-sitio.html:203 y salarios.html:421, y convenios.html no la enlaza. Hasta ahí, correcto. Pero la frase 'ninguno viene de una ficha ni de una guía' no se sostiene: salarios.html es el hub-comparador del sitio (convenios.html:835 lo enlaza como 'Hub de salarios por provincia (comparador 16 provincias × 4 sectores)') y el enlace es contextual, dentro de una lista de fichas y con anchor descriptivo. Con 2 entrantes queda empatada en el último puesto con convenio-contact-center (también 2), no sola en el 53; y el determinista no dispara el hard-fail 6.1 de orfandad.",
+      "enunciado_reescrito": "6.2 — Solo dos entrantes (mapa-del-sitio.html y el hub salarios.html, este último contextual y con anchor descriptivo). El hub convenios.html, del que su propio breadcrumb declara colgar, no la enlaza pese a tener ya un bloque de marcos estatales (Seguridad Privada, Contact Center).",
+      "prueba": {"archivo": "salarios.html", "linea": 421, "cita": "<li><strong>Técnicos de espectáculos</strong> (<a href=\"/convenio-tecnicos-espectaculos.html\">ficha completa</a>): convenio explainer del sector audiovisual y de eventos en directo.</li>"}
+    },
+    {
+      "eje": "E5", "id": "6.4", "nota_eje": 0, "veredicto": "MATIZADO",
+      "motivo": "La métrica 6.4 es, literalmente, 'Cobertura de clúster: enlaza a hermanas del mismo sector y a otros sectores de la misma provincia' (CANDIDATAS.md línea 129). Ninguna de las dos condiciones puede cumplirse aquí: es la única ficha del sector técnicos del corpus y su ámbito es Estatal, no provincial — no hay hermanas ni provincia. La prueba de que no es un defecto de esta ficha sino de su tipo: los otros dos marcos estatales del corpus también tienen a_hermanas_mismo_sector=0 (contact-center y seguridad-privada). Lo que sí sobrevive, y es más pequeño, es que esos dos marcos sí enlazan fichas de otros sectores (contact-center → oficinas-madrid y seguridad-privada; seguridad-privada → limpieza-edificios, metal-madrid, metal-valencia) y esta no enlaza ninguna.",
+      "enunciado_reescrito": "6.4 — Cero enlaces salientes a otras fichas del corpus (a_convenios=0), a diferencia de los otros dos marcos estatales, que enlazan 2 y 3 fichas de otros sectores. No procede exigirle hermanas del mismo sector ni de la misma provincia: no existen.",
+      "prueba": {"archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-tecnicos-espectaculos.json", "linea": 5, "cita": "\"ambito\": \"Estatal\"  +  censo.tipo=\"marco\" · fuenteEstado=\"explainer sin convenio sectorial propio\""}
+    },
+    {
+      "eje": "E5", "id": "6.6", "nota_eje": 1, "veredicto": "CONFIRMADO",
+      "motivo": "Las tres citas (líneas 250, 254 y 306) son literales y están donde dice. Busqué la refutación: la línea 254 sí tiene un puente al Kit en el punto de necesidad, pero apunta a la guía (/reclamar-diferencias-salariales-convenio.html), no a la plantilla; eso es exactamente lo que el hallazgo afirma, y justifica el 1 y no un 0. El destino del parche complementario existe (plantilla-solicitar-nominas.html está en el repo), así que la propuesta es ejecutable.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 306, "cita": "<li><a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">Plantilla para reclamar atrasos de convenio</a></li>"}
+    },
+    {
+      "eje": "E6", "id": "7.4", "nota_eje": 1, "veredicto": "CONFIRMADO",
+      "motivo": "Recontado el bloque con el mismo criterio del determinista pero sin restringirlo a <p>: el callout-red de la línea 191 tiene 134 palabras de texto visible en una sola masa. El determinista da parrafos.largos_100=[] porque su extractor solo mira <p>, así que el hallazgo corrige una ceguera del script, no lo contradice. La métrica 7.4 ('Párrafos > 100 palabras', CANDIDATAS.md línea 145) no depende del tipo de ficha. La segunda mitad de la razón es honesta: no penaliza la falta de nota editorial fragmentada, que aquí no aplica (ficha sin JSON, mantenimiento manual).",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 191, "cita": "El personal técnico de eventos y espectáculos protagonizó su <strong>primera huelga histórica</strong> … (bloque continuo de 134 palabras, recuento propio)"}
+    },
+    {
+      "eje": "E6", "id": "7.8", "nota_eje": 1, "veredicto": "MATIZADO",
+      "motivo": "El hecho es cierto: las cinco fichas restantes del piloto llevan sello y bloque 'Quién audita esto' (verificado uno a uno: comercio-madrid 174/437, limpieza-asturias 207/525, metal-sevilla 215/632, limpieza-zaragoza 215/720, hosteleria-valencia 234/944) y esta no lleva ninguno. Dos correcciones. Primera, la cita está desplazada una línea: en convenio-comercio-madrid.html la línea 173 es '<!-- eeat-sello -->'; el texto citado está en la 174 (el contenido es literal, la referencia no). Segunda, y de fondo: los tres elementos que sostienen la nota (sello, firma, fecha) ya bloquean como hard-fails 5.2 y 2.2, y la rúbrica prohíbe compensarlos o contarlos en el score. La conformidad estructural propiamente dicha es buena: h1 único, 7 h2, 4 h3, headings.saltos_jerarquia=[].",
+      "enunciado_reescrito": "7.8 — La desviación del canon que no está ya bloqueada como hard-fail se reduce a la falta de fecha de revisión visible y al rótulo del card. La estructura de encabezados sí es conforme (un h1, sin saltos de nivel) y el contenido exclusivo está intacto (boilerplate_ratio 0,0).",
+      "prueba": {"archivo": "convenio-comercio-madrid.html", "linea": 174, "cita": "<strong>✓ Verificado</strong> contra BOCM Núm. 183/2025 por SalarioJusto · última revisión 13 de agosto de 2026"}
+    },
+    {
+      "eje": "E6", "id": "12.3", "nota_eje": 1, "veredicto": "MATIZADO",
+      "motivo": "La cita también está desplazada: en convenio-limpieza-zaragoza.html 'Datos clave del convenio' está en la línea 241, no en la 242 (la 242 es '<div class=\"stats-grid\">'). El hecho de fondo sí se sostiene: 43 de las 55 fichas convenio-*.html usan ese rótulo. Pero la métrica 12.3 es 'Desviación estructural: fichas cuyo esqueleto se aleja del canon' y aquí se apoya sobre todo en sello y firma, que son los hard-fails 5.2 y 2.2 contados por tercera vez (ya pesan en 7.8 y en 9.1). El propio hallazgo admite que renombrar a 'Datos clave del convenio' sería incorrecto en una ficha sin convenio, y propone 'del sector': eso confirma que la desviación del rótulo es una adaptación deliberada al tipo de página, no un descuido.",
+      "enunciado_reescrito": "12.3 — Desviación estructural menor y en parte justificada: el card usa el rótulo 'Situación de un vistazo' en vez del canónico 'Datos clave del convenio' (43/55 fichas), adaptación razonable en una ficha sin convenio. El resto de la desviación son los hard-fails 5.2 y 2.2, que no deben puntuar aquí.",
+      "prueba": {"archivo": "convenio-limpieza-zaragoza.html", "linea": 241, "cita": "<div class=\"card-title\">Datos clave del convenio</div>"}
+    },
+    {
+      "eje": "determinista", "id": "5.2", "nota_eje": null, "veredicto": "CONFIRMADO",
+      "motivo": "Hard-fail real. Búsqueda de 'Verificado', 'última revisión' y 'actualizad' sobre las 334 líneas del archivo: cero coincidencias. La norma existe y es de casa (norma T10 del sello 'Verificado contra [boletín] + fecha' en todas las landings; CANDIDATAS.md línea 109 lo lista como hard-fail). Comprobé si el tipo 'marco' la desactiva: no. La regla exige 'BOE solo si es estatal', y esta ficha es estatal y se apoya en dos normas del BOE (RD 1435/1985 y RDL 2/2015), así que el sello es formulable sin inventar nada — no hace falta un boletín de convenio.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 0, "cita": "grep -i 'verificado|última revisión' → sin resultados en las 334 líneas"}
+    },
+    {
+      "eje": "determinista", "id": "2.2", "nota_eje": null, "veredicto": "CONFIRMADO",
+      "motivo": "Hard-fail real. No existe el bloque 'Quién audita esto', que sí llevan las otras cinco fichas del piloto con el mismo marcado (h2 en DM Serif Display). El único texto de autoría de la página es el disclaimer de la línea 299, que dice qué no es la página pero no quién responde de ella. No lo desactiva el noindex: 2.2 es E-E-A-T de cara al lector, no de cara al buscador, y el pie legal completo (privacidad/aviso legal/contacto) sí está presente, lo que descarta que sea una plantilla recortada a propósito.",
+      "prueba": {"archivo": "convenio-tecnicos-espectaculos.html", "linea": 299, "cita": "Esta página es una guía informativa de divulgación laboral, no asesoramiento jurídico individualizado."}
+    },
+    {
+      "eje": "E6", "id": "observacion_libre", "nota_eje": null, "veredicto": "REFUTADO",
+      "motivo": "La observación libre de E6 imputa dos defectos que no aplican a esta ficha: (a) 'el título ocupa 95 caracteres y la meta 260, ambos por encima de lo que renderiza Google' y (b) 'está en noindex + fuera del sitemap … lo que sugiere revisar si el noindex sigue siendo deliberado'. Lo primero es una convención SERP genérica aplicada a una página que, por decisión registrada, no compite en SERP; E4 se abstuvo expresamente de 2.4 y 2.5 por ese mismo motivo, de modo que la misma crítica entra por la puerta de atrás en otro eje. Lo segundo está respondido por el registro: el censo declara indexable=false con confianza 'alta' y fuenteEstado explícita, y la rúbrica exige justamente eso para no disparar 2.8/2.9 ('el noindex, deliberado y registrado', METRICAS.md H4) — el determinista, en consecuencia, no declara ninguno de esos dos hard-fails.",
+      "prueba": {"archivo": "data/convenios/censo.json", "linea": 0, "cita": "tipo: \"marco\" · indexable: false · confianza: \"alta\" · fuenteEstado: \"explainer sin convenio sectorial propio\" (reproducido en el determinista, bloque censo, y coherente con seo.en_sitemap=false)"}
+    }
+  ],
+  "resumen": {
+    "confirmados": 7,
+    "matizados": 7,
+    "refutados": 1,
+    "notas": [
+      "Verificado el elogio de E1/E2: es cierto que esta ficha carece de sello (sello.presente=false, 0 coincidencias de 'Verificado' en el archivo) y de bloque de autoría, y es cierto que es la más singular del corpus (corpus.boilerplate_ratio=0.0, frases_exclusivas 76 de 76, faq_clonadas=0, titles_gemelos=[]). Las dos cosas conviven y ninguna es un artefacto del recolector.",
+      "Ningún eje penalizó a esta ficha por no tener tablas salariales: E6 se abstuvo de 11.1 y E4 de 2.4/2.5, todos con motivo escrito. La única crítica que sí importaba una norma incompatible con el tipo 'marco' de forma no declarada era la observación libre de E6 (title/meta y noindex), y cae.",
+      "Dos citas de E6 están desplazadas una línea (comercio-madrid 173→174, limpieza-zaragoza 242→241). El texto citado es literal y existe; corregidas en las pruebas de esta verificación, no bastan para tumbar los hallazgos.",
+      "Patrón que el sintetizador debería mirar: la ausencia de sello y de firma se ha contado en cuatro sitios (hard-fails 5.2 y 2.2 + métricas puntuables 9.1, 7.8 y 12.3). METRICAS.md §0.3 y RUBRICA-V1 §2 dicen que los hard-fails van aparte y no se compensan; contarlos también en el score hunde tres métricas de tres ejes distintos por un solo defecto de plantilla.",
+      "NOTA, no hallazgo (no lo añado, lo señalo y sigo): el callout de la línea 241 ('El esquirolaje externo es ilegal') tiene 116 palabras en bloque continuo, el mismo defecto que E6 imputa solo al de la línea 191. Y el parche de E3 1.1 propone 1.221 €/17.094 €, cifra del canon del proyecto, mientras la página que la ficha enlaza (/salario-minimo-interprofesional-2026.html) sigue publicando 16.576 €/1.184 €: aplicar el parche antes de arreglar esa página abriría una contradicción entre dos URLs del sitio."
+    ]
+  }
+}

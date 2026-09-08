@@ -1,0 +1,138 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-madrid",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Aporta un hallazgo que el boletín no contiene y que cambia las cifras: que el BOCM 56 publicó la revisión de Industria con el anexo del convenio de Comercio y que el BOCM 59 la subsanó. Y dice qué hicimos con ello. Eso es cotejo declarado, no transcripción.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 244,
+          "cita": "El <strong>BOCM nº 56 (7 de marzo de 2026)</strong> publicó la resolución de la revisión salarial 2026 del convenio de <strong>Industria</strong> del Metal (código 28003715011982), pero por un <strong>error material</strong> adjuntó el anexo equivocado: el del convenio del <strong>Comercio</strong> del Metal (grupos I-V, 15 pagas)."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 246,
+          "cita": "Es el tipo de detalle que marca la diferencia entre una nómina bien calculada y una mal ajustada: transcribimos la tabla del anexo corregido, no la del publicado por error."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 519,
+          "cita": "Las cuantías están transcritas de la publicación oficial; los ejemplos y el cálculo de neto son elaboración propia y se identifican como tales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Casi todos los epígrafes llevan el artículo en el propio título (Art. 43, Art. 35, Art. 47, Art. 20 bis) y las obligaciones van con plazo y condición; no llega a 3 porque la afirmación sobre vacaciones se enuncia sin artículo y porque la comparación con el SMI se hace para «todas las categorías» sin decir que es a jornada completa, con una fila de aprendices a 17.438 € que queda a 344 € del suelo legal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 346,
+          "cita": "El personal tiene derecho a <strong>22 días laborables</strong> de vacaciones, que en ningún caso serán menos de <strong>30 días naturales</strong>."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 433,
+          "cita": "La empresa saliente debe entregar, en 30 días hábiles, contratos, nóminas y documentos de cotización de los últimos 6 meses."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 286,
+          "cita": "Todas las categorías y grupos profesionales quedan por encima del SMI 2026 (17.094 €)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 1,
+      "razon": "La ficha identifica el documento decisivo con una precisión ejemplar (BOCM 59 como corrección del 56) y luego no lo enlaza: al BOCM solo se llega por su buscador. Los dos únicos enlaces a documento exacto son del BOE (convenio estatal y SMI), que aquí son fuentes de apoyo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 510,
+          "cita": "Buscador: <a href=\"https://www.bocm.es/\" target=\"_blank\" rel=\"noopener\">bocm.es</a>."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 511,
+          "cita": "<strong>Tabla salarial 2026 corregida</strong>, BOCM nº 59 (11-mar-2026), corrección de errores del BOCM nº 56 (7-mar-2026)."
+        }
+      ],
+      "parche": "Añadir el enlace permanente del BOCM a los dos anuncios, que es justo lo que evita que el lector vuelva a tropezar con la tabla errónea. En la línea 511: «Tabla salarial 2026 corregida, BOCM nº 59 (11-mar-2026) — PDF del anuncio en bocm.es/boletin/CM_Orden_BOCM/2026/03/11/BOCM-20260311-…, corrección de errores del BOCM nº 56 (7-mar-2026), cuyo anexo pertenecía al convenio de Comercio del Metal.» Y en la línea 510 sustituir «Buscador: bocm.es» por el enlace directo al BOCM nº 15 de 18-ene-2025 donde se publicó el texto articulado.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "5.11",
+      "nota": 3,
+      "razon": "No solo fecha la columna en el encabezado: es la única ficha del corpus que resuelve una ambigüedad peor que la de tabla vieja contra tabla nueva —dos tablas distintas del mismo año 2026 circulando en el mismo boletín— y dice por escrito cuál transcribe y por qué.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 272,
+          "cita": "<thead><tr><th>Grupo</th><th>Descripción funcional (ejemplos)</th><th class=\"num\">Mensual (14 pagas)</th><th class=\"num\">Anual 2026</th><th class=\"num\">Quinquenio</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 241,
+          "cita": "<h2 id=\"correccion-bocm\">La tabla 2026 corregida: por qué esta es la buena</h2>"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 242,
+          "cita": "Si has buscado las tablas 2026 del metal de Madrid, puede que te hayas topado con <strong>dos versiones distintas en el BOCM</strong>. Conviene saber cuál es la válida, porque las cifras no coinciden."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "Fecha concreta (30-jul-2026), posterior al BOCM 59 de 11-mar-2026, y el sello no se limita a nombrar el boletín: dice qué versión se cotejó y que subsanó a otra anterior. Es el nivel de detalle que permite reproducir la verificación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 202,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BOCM nº 15, 18-ene-2025, código REGCON 28003715011982) y la <strong>tabla salarial 2026 corregida</strong> (BOCM nº 59, 11-mar-2026, que subsanó el error del BOCM nº 56), por SalarioJusto · última revisión 30 de julio de 2026"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 519,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto del convenio (BOCM nº 15, 18-ene-2025) y contra la tabla salarial 2026 corregida (BOCM nº 59, 11-mar-2026)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 2,
+      "razon": "Dice hasta cuándo valen las tablas y qué régimen se aplica después (prórroga anual salvo denuncia), pero en una viñeta y con un «conviene vigilar» sin objeto: no hay fecha de denuncia, ni cláusula de revisión, ni indicación de qué haría el lector con los atrasos si el próximo convenio llega con efectos retroactivos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 447,
+          "cita": "<strong>Vigencia hasta el 31 de diciembre de 2026</strong>: después entra en prórroga anual salvo denuncia. Conviene vigilar la negociación del próximo convenio."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 230,
+          "cita": "<div class=\"stat-label\">Vigencia</div><div class=\"stat-value\">2024-2026 (Art. 4)</div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "La sección «La tabla 2026 corregida: por qué esta es la buena» es lo mejor que hay en el sector para este eje: es exactamente el trabajo que el lector no puede hacer solo y que justifica que exista la ficha. Duele más, por eso, que el BOCM 59 no esté enlazado: la ficha demuestra que hay dos versiones circulando y deja al lector volver al buscador, donde puede volver a encontrar la mala. Es el arreglo de mayor rendimiento de toda la auditoría del metal."
+}

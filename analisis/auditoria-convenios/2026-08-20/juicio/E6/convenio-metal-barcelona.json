@@ -1,0 +1,256 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-barcelona",
+  "metricas": [
+    {
+      "id": "7.8",
+      "nota": 1,
+      "razon": "Contenido propio le sobra —retén y guardia, bilingüismo castellano-catalán del Art. 84, 20 h/año de acompañamiento oncológico, sometimiento al Tribunal Laboral de Catalunya—, pero no sigue el canon: le faltan tres piezas que las ocho hermanas del cluster sí tienen y que el lector usa (el bloque «¿Cobras menos de lo que fija tu grupo?» con los pasos para reclamar, la tarjeta de «Recursos oficiales y sindicales» y el callout «Comparación con otras provincias del sector», presente en 7 de las 9 fichas de metal). Es el caso exacto del 1: aporta lo suyo a costa de no seguir el patrón. Y su rasgo más singular, el bilingüismo obligatorio en los avisos de empresa, está enterrado en la última pregunta de la FAQ. No penalizo aquí la ausencia del bloque «Quién audita esto»: ya bloquea como hard-fail determinista 2.2.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 624,
+          "cita": "¿Hay bilingüismo en las comunicaciones de la empresa?"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 625,
+          "cita": "El Art. 84 del Capítulo XI establece que todos los anuncios o avisos en las empresas deberán redactarse en castellano y en catalán . Es una obligación específica del convenio siderometalúrgico de Barcelona."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 504,
+          "cita": "Recursos oficiales y sindicales"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 494,
+          "cita": "¿Cobras menos de lo que fija tu nivel?"
+        }
+      ],
+      "parche": "Añadir antes de la FAQ los dos bloques canónicos que faltan, clonando la estructura de metal-asturias: (1) «<h2>¿Cobras menos de lo que fija tu grupo?</h2>» con los cinco pasos adaptados a Cataluña (identificar grupo del Anexo 14 → comparar con la tabla 2026 → pedir nómina detallada por escrito, art. 29.1 ET → Comisión Paritaria o conciliación previa obligatoria ante el Tribunal Laboral de Catalunya, Art. 87 → plazo de un año por mensualidad, art. 59.2 ET); y (2) «<h2>Recursos oficiales y sindicales</h2>» con las tarjetas de BOPB, REGCON 08002545011994, UPM, CCOO Indústria + UGT-FICA, SMI 2026 y convenios del metal comparables. Y subir el bilingüismo del Art. 84 de la FAQ al cuerpo, como sub-bloque de «Novedades destacables sobre el ET».",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Novedades destacables sobre el ET»: el rótulo promete un contraste con el Estatuto y lo que entrega es un resumen de la propia ficha. Comprobado viñeta a viñeta, once de sus doce líneas ya están desarrolladas más arriba en la misma página —garantía IPC (350), complemento de AT desde el día 1 (397), bolsa de 80 h (372), 20 h de acompañamiento oncológico y 12 h de libre disposición (421-422), retén y guardia (428-440), reincorporación tras excedencia (535), TLC (553), 0,19 €/km (314), teletrabajo a 1,69 €/día (326) y los complementos ad personam (293)—. En una ficha que ya es la más larga del cluster en prosa, es el bloque que un lector no echaría de menos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 563,
+          "cita": "Novedades destacables sobre el ET"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 566,
+          "cita": "Cláusula garantía IPC única para todo el cuatrienio: si suma inflaciones 2025-2027 > 10%, revisión aplicable enero 2028 (Art. 43)."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 350,
+          "cita": "Cláusula de garantía salarial (Art. 43). Si el Instituto Nacional de Estadística (INE) constata oficialmente que, al 31 de diciembre de 2027, la suma de las inflaciones de los años 2025, 2026 y 2027 fuese superior al 10,00%"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 571,
+          "cita": "Servicio de retén y guardia con compensación económica (Art. 58) — novedad regulatoria."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 428,
+          "cita": "Servicio de retén y guardia — Art. 58"
+        }
+      ],
+      "parche": "Eliminar el <h2 id=\"novedades\"> y su lista completa, y su entrada «Novedades sobre el ET ·» del índice. La única viñeta sin desarrollo previo —«Suplencias por causas internas o sobrevenidas reguladas: hasta 90 días laborables por persona trabajadora/año (Art. 55)»— pasa a la sección «Contratación, formación y ceses» como sub-bloque: «<h3>Suplencias (Art. 55)</h3><p>El convenio limita las suplencias por causas internas o sobrevenidas a 90 días laborables por persona trabajadora y año.</p>». El hueco del índice lo ocupa el nuevo bloque «Cómo reclamar ·» propuesto en 7.8.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "El arranque es el mejor del cluster: el h1 lleva la horquilla mensual y la tabla salarial es el primer h2 de la ficha, sin ninguna sección de contexto por delante — cosa que ninguna de las ocho hermanas hace. No llega a 3 porque la pieza que hace legible esa tabla, la descripción de los 7 grupos profesionales con su titulación y sus puestos típicos, está en el puesto 12 de los 17 h2, unas 200 líneas más abajo: quien no sepa en qué grupo está tiene que atravesar complementos, jornada, bajas, licencias, retén y guardia para averiguarlo, y volver.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 168,
+          "cita": "Convenio Metal Barcelona 2026: de 1.980 € a 2.578 € al mes con +3% aplicado enero y garantía IPC"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 227,
+          "cita": "Tabla salarial 2026 · +3% sobre 2025 (Anexo 1 del BOPB)"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 444,
+          "cita": "Los 7 grupos profesionales (Anexo 14)"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 231,
+          "cita": "Cruza tu puesto de trabajo con el grupo profesional que te corresponda para obtener tu salario mensual bruto de convenio."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 0,
+      "razon": "Tres ideas distintas contadas dos y tres veces cada una, siempre de cuerpo a cuerpo, no de cuerpo a FAQ. La cláusula de garantía IPC del Art. 43 se narra completa en la nota editorial, otra vez completa en su propia sección y una tercera en el cajón final. El servicio de retén y guardia tiene sección propia con la distinción entre las dos figuras y esa misma distinción reaparece entera en la FAQ. Y los complementos «ad personam» se explican en el pie del ejemplo de Carla, se vuelven a explicar en una pregunta de la FAQ sobre antigüedad y se explican por tercera vez en otra pregunta dedicada al Art. 38. Es el caso extremo del cluster: 4.511 palabras de prosa, la cifra más alta de las nueve fichas, sostenidas en buena parte por repetición.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 221,
+          "cita": "Cláusula de garantía IPC : si al 31-dic-2027 el INE constata inflaciones acumuladas > 10%, revisión técnica sobre tablas 2027 aplicable el 1-ene-2028 por la diferencia — sin efectos retroactivos."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 350,
+          "cita": "Cláusula de garantía salarial (Art. 43). Si el Instituto Nacional de Estadística (INE) constata oficialmente que, al 31 de diciembre de 2027, la suma de las inflaciones de los años 2025, 2026 y 2027 fuese superior al 10,00% , se efectuará una revisión técnica sobre las tablas de 2027"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 434,
+          "cita": "Este tiempo NO se considera trabajo efectivo — solo lo es el tiempo dedicado a la prestación requerida. Pero la adscripción tiene compensación económica denominada \"servicio retén\" ."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 605,
+          "cita": "Retén = persona localizable fuera de jornada, sin obligación de estar en un lugar concreto ni tiempo de respuesta predeterminado. Solo se considera tiempo de trabajo el efectivamente dedicado a atender la llamada, PERO la adscripción tiene compensación económica específica llamada \"servicio retén\"."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 293,
+          "cita": "A Carla NO se le aplica antigüedad (el convenio no la reconoce; solo se respetan como \"condición ad personam\" los complementos \"ex vinculación\" y \"ex categoría profesional\""
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 595,
+          "cita": "El convenio NO reconoce antigüedad para personas contratadas hoy. Sí respeta como garantías \"ad personam\" las condiciones económicas superiores adquiridas antes de determinadas fechas"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 620,
+          "cita": "Son las condiciones económicas superiores a las del convenio que respeta el propio convenio a título individual, cuando las tenía la persona trabajadora ya adquiridas al firmarse el texto."
+        }
+      ],
+      "parche": "Tres cortes concretos. (1) Garantía IPC: dejar el desarrollo solo en su sección (línea 350) y reducir la línea 221 de la nota editorial a «<strong>Subida 2025-2027.</strong> +10% acumulado en tres años: +4% en 2025, +3% en 2026 y +3% en 2027, con <a href=\"#historia\">cláusula de garantía IPC</a> al cierre de 2027.»; el cajón de novedades desaparece con el parche de 8.1. (2) Retén y guardia: borrar la pregunta «¿Qué diferencia hay entre servicio de retén y servicio de guardia?» de la FAQ visible y del JSON-LD, o dejarla en dos líneas que remitan a la sección. (3) Ad personam: fundir las preguntas «¿Se aplica antigüedad? ¿Y quién cobra los complementos \"ex\"?» y «¿Qué son los \"complementos ad personam\" del Art. 38?» en una sola, que empiece por la definición y siga con los tres complementos concretos.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.6",
+      "nota": 3,
+      "razon": "Es la ficha del cluster que mejor traduce el tecnicismo a dinero. La cláusula de garantía IPC no solo se define: se resuelve con un caso numérico («si la inflación acumulada resulta ser 12%, la revisión será del 2%»), que es exactamente lo que la métrica pide. Los complementos «ad personam» se explican por lo que implican (no absorbibles, no compensables, revalorizados con el convenio) y no repitiendo el latinajo. Y la distinción retén/guardia —jerga interna del sector que decide si tu tiempo de espera se paga— se explica por sus consecuencias retributivas, no por su definición legal. Ninguna otra ficha de metal cierra un tecnicismo con una cuenta hecha.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 600,
+          "cita": "Ejemplo: si la inflación acumulada resulta ser 12%, la revisión aplicable en enero 2028 será del 2%. La revisión NO tiene efectos retroactivos"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 620,
+          "cita": "NO pueden ser compensadas ni absorbidas, siempre que respondan a una retribución por transacción de derechos, condiciones más beneficiosas, o retribuyan con un plus un concepto concreto y específico"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 440,
+          "cita": "Este tiempo SÍ se considera trabajo efectivo a efectos de retribución. Se garantiza descanso entre jornadas de 12 horas."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "Plural correcto en el uso: las seis menciones de CCOO y las seis de UGT son de firmantes del convenio, de composición de la Comisión Paritaria o de fuente de las tablas —los tres usos legítimos—, y cuando el texto habla de representación en abstracto usa «RLT» o «Representación Legal de las personas trabajadoras», no las siglas. No es 3 porque la ficha no da ningún dato que sitúe la representatividad en el metal barcelonés, y porque, al no tener tarjeta de recursos sindicales, tampoco ofrece al lector a dónde acudir.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 217,
+          "cita": "firmado el 22 de diciembre de 2025 entre la Unió Patronal Metal·lúrgica (UPM) y los sindicatos CCOO Indústria + UGT-FICA"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 547,
+          "cita": "Composición: 4 personas UPM + 2 CCOO Indústria + 2 UGT-FICA ."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 615,
+          "cita": "la Dirección de la empresa usuaria debe facilitar a la Representación Legal de las personas trabajadoras (RLT) información sobre cada contrato de puesta a disposición"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 1,
+      "razon": "Es el esqueleto que más se aleja del cluster. Comparada con convenio-metal-sevilla (23 encabezados, 16 h2, 6 h3) y con las siete hermanas que comparten plantilla, esta ficha tiene 41 encabezados y 23 h3, y su secuencia no es la del corpus: no hay h2 de ámbito («¿Este convenio te cubre?» vive como pregunta de la FAQ), no hay bloque de reclamar, no hay tarjeta de recursos oficiales y sindicales, no hay callout comparativo con otras provincias —que sí tienen 7 de las 9 fichas de metal— y en su lugar aparecen cuatro secciones que ninguna hermana tiene (excedencias, contratación y ceses, comisiones y protocolos, novedades sobre el ET). El resultado es una ficha que parece un resumen del articulado más que una ficha de tablas. No penalizo aquí la ausencia del bloque de autoría: ya bloquea como hard-fail determinista 2.2.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 504,
+          "cita": "Contratación, formación y ceses"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 526,
+          "cita": "Excedencias — Art. 68"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 544,
+          "cita": "Comisiones paritarias y protocolos"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 565,
+          "cita": "¿Cobras menos de lo que fija tu categoría?"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 575,
+          "cita": "Recursos oficiales y sindicales"
+        }
+      ],
+      "parche": "Reordenar sin reescribir: mover «Contratación, formación y ceses» y «Excedencias» detrás de la FAQ, como bloque «Contratación, excedencias y ceses» de segundo nivel de interés; fundir «Comisiones paritarias y protocolos» en el nuevo bloque de reclamar propuesto en 7.8; y suprimir «Novedades destacables sobre el ET» (parche de 8.1). Con eso la ficha baja de 17 a 13 h2 y recupera la secuencia del cluster: tabla → complementos → subida → jornada → bajas → licencias → grupos → reclamar → recursos → FAQ → fuentes → quién audita.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 1,
+      "razon": "La ficha llama «cuatrienio» a un periodo de tres años, y lo hace en el rótulo de una sección y en el cuerpo de la cláusula, mientras el card de datos clave y la propia nota editorial dicen «3 años» y «tres años» para lo mismo. Un lector que vea «Subida cuatrienal +10%» cuenta cuatro anualidades y busca la cuarta subida, que no existe. A eso se suma que la magnitud de la tabla se rotula «Salario Conv./mes» en la cabecera, «Salario Convenio/mes» en el pie de fuente y «salario mensual bruto de convenio» en el texto que la introduce.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 206,
+          "cita": "<dt>Vigencia</dt><dd>2025-2027 (3 años)</dd>"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 338,
+          "cita": "Subida cuatrienal +10% y cláusula de garantía IPC"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 350,
+          "cita": "Esta cláusula es de naturaleza transitoria para el cuatrienio 2025-2027."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 221,
+          "cita": "+10% acumulado pactado en tres años: +4% en 2025, +3% en 2026 y +3% en 2027."
+        }
+      ],
+      "parche": "Sustituir «cuatrienio» por «trienio» en sus tres apariciones: el h2 pasa a «<h2 id=\"historia\">Subida trienal +10% y cláusula de garantía IPC</h2>», la línea 350 termina «Esta cláusula es de naturaleza transitoria para el trienio 2025-2027.» y la nota editorial abre «<strong>Subida trienal 2025-2027.</strong>». Actualizar también la entrada del índice «Subida cuatrienal +10% ·». En la tabla, unificar la cabecera y el pie en «Salario convenio/mes».",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Capa 0 (no puntuado aquí, ya lo emite el determinista): 28 celdas de tabla en verde —esta ficha y metal-bizkaia son las dos del cluster que incumplen la norma de casa de cifras en tinta neutra—, 4 bloques de más de 100 palabras, 2 tablas sin scope ni caption, y dos hard-fails deterministas ya declarados (2.2 sin bloque de autoría, 7.1 tablas que desbordan en móvil). Fuera de mi eje, para el eje de verdad y frescura: la línea 507 sigue dando el salario del contrato formativo en «1.184,00 €/mes en 14 pagas = 16.576,00 €/año (importe idéntico al SMI 2025)» y añade que para 2026 «se ajustará por la Comisión Paritaria cuando el BOE publique el SMI vigente», cuando el RD 126/2026 ya está publicado y las otras ocho fichas del cluster lo citan; además, es la única de las nueve sin tarjeta de referencia al SMI 2026 y sin el RD entre sus fuentes. La ficha no está en ventana de medición (último commit del 30-jul), así que sus parches son aplicables ya."
+}

@@ -1,0 +1,132 @@
+{
+  "eje": "E2",
+  "slug": "convenio-tecnicos-espectaculos",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 3,
+      "razon": "boilerplate_ratio 0.0 y frases_compartidas_top vacía: es la única ficha del piloto que no arrastra ni el bloque eeat-firma ni el bloque 'cobras menos' plantillado; hasta el descargo legal está redactado para su caso concreto.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 299,
+          "cita": "El encuadramiento concreto de cada relación (especial del RD 1435/1985 o común del Estatuto) depende de las circunstancias reales del puesto."
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 317,
+          "cita": "SalarioJusto · Herramienta gratuita para trabajadores y trabajadoras · Sin empresas detrás"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "ratio_tabla 0.0 y palabras_prosa 1785: no hay tabla que rodear porque el dato de esta página es una ausencia, y una ausencia solo existe explicada; sin la prosa no queda nada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 176,
+          "cita": "A veces, lo que te corresponde saber es que <strong>tu sector no tiene convenio propio</strong> —y por qué eso no significa que no tengas derechos—."
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 208,
+          "cita": "Ni el RD 1435/1985 ni el Estatuto desarrollan en detalle la <strong>jornada irregular, la disponibilidad, el trabajo nocturno/festivo y las horas extra</strong> propias de montar y desmontar eventos."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "frases_exclusivas 76 de 76 frases_cuerpo, y la exclusividad no es de topónimo: son hechos que hubo que reportear (patronal EUKI, dos años de bloqueo, episodio de esquirolaje en el Euskalduna, cuatro medios cotejados).",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 241,
+          "cita": "en el palacio de congresos Euskalduna, la empresa con la contrata técnica habría desconvocado a su plantilla habitual y, según el portavoz de Teknikariok, \"apareció una horda de técnicos traídos de Cantabria para sustituirles\"; el sindicato levantó acta."
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 238,
+          "cita": "El sindicato asambleario Teknikariok —nacido en Bilbao en 2020— ha sido el motor que ha articulado por primera vez a un colectivo atomizado"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "faq_clonadas 0 de faq_total 4: ninguna pregunta se repite tras normalizar, y dos de ellas no tendrían sentido en ninguna otra ficha del corpus porque preguntan por un conflicto datado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 282,
+          "cita": "¿Qué reclama la huelga de técnicos de espectáculos de Euskadi de 2026?"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 276,
+          "cita": "¿Qué regula el Real Decreto 1435/1985 para el personal técnico?"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "la particularidad del sector (no hay convenio y hay conflicto abierto) organiza la página entera, pero falta justo lo que trae al lector: no hay ni una cifra de retribución de referencia, y el JSON determinista cuenta solo 6 cifras en toda la ficha.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 184,
+          "cita": "<div class=\"stat-label\">Suelo retributivo</div><div class=\"stat-value\">Salario Mínimo Interprofesional vigente</div>"
+        },
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 221,
+          "cita": "<strong>Salario Mínimo Interprofesional:</strong> actúa como retribución mínima irrenunciable."
+        }
+      ],
+      "parche": "Investigar (no redactar de memoria) qué se cobra de hecho en el sector y publicarlo como bloque de referencia bajo 'Situación de un vistazo': (a) tablas del III Convenio estatal de Empresas de Artes Escénicas / Teatro si alcanzan a personal técnico; (b) convenios de empresa de teatros y auditorios públicos vascos (Arriaga, Euskalduna, Victoria Eugenia) inscritos en REGCON, que sí fijan categorías técnicas; (c) el importe del SMI 2026 en euros (1.221 €/mes, 17.094 €/año, RD 126/2026) escrito como cifra y no como remisión. Sin al menos una horquilla verificada, la página responde 'por qué no cobras bien' pero no 'cuánto'.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "no hay boletín que superar porque ningún boletín cubre a este colectivo: la ventaja es haber levantado el mapa normativo (relación especial vs común) que el BOE deja implícito y que ningún PDF ordena.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 204,
+          "cita": "Cuando esas funciones técnicas se prestan <strong>de forma estructural o permanente</strong> para la empresa, quedan <em>fuera</em> de la relación especial"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "el agregador de nóminas no puede publicar esta página porque no hay cifra que scrapear, y el H1 declara el vacío sin rodeos; no llega a 3 porque la ventaja se percibe como reportaje, no como respuesta a la consulta salarial que trae al lector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-tecnicos-espectaculos.html",
+          "linea": 170,
+          "cita": "Convenio de <em>Técnicos de Espectáculos</em>: el sector que trabaja sin regulación propia"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Es la ficha más singular del piloto por margen amplio (0 boilerplate, 76/76 frases exclusivas, 0 FAQ clonada) y a la vez la única marcada indexable:false en censo.json con nota 'noindex deliberado': el activo con mayor singularidad del corpus es el único que Google no puede ver. Esa decisión pertenece a otro eje (operación/indexación), pero desde E2 conviene decirlo: si el rechazo de AdSense por 'poco valor' se combate con páginas que nadie más tiene, esta es exactamente la página que debería estar indexada. Segunda observación: el modelo editorial de esta ficha —conflicto datado, fuentes de prensa cotejadas, hecho que exige reportear— es lo que le falta a las fichas de tabla, y es replicable sin tocar sus tablas."
+}

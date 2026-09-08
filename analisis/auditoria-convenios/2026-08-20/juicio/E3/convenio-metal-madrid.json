@@ -1,0 +1,158 @@
+{
+  "eje": "E3",
+  "slug": "convenio-metal-madrid",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Cifra, año y fuente están en la primera pantalla y son verificables: el H1 abre con el rango 2026 y el sello con el BOCM corregido va inmediatamente debajo. No llega a 3 porque lo que se ofrece de entrada es un rango de grupo (20.687–35.379 €), no la cifra del puesto que más se busca en el metal: quien teclea «cuánto cobra un oficial del metal en Madrid» tiene que bajar a la tabla para encontrar sus 1.590,26 €/mes.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 194,
+          "cita": "Convenio del Metal de Madrid : tablas 2026 de 20.687 € a 35.379 €"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 202,
+          "cita": "✓ Verificado contra el texto del convenio (BOCM nº 15, 18-ene-2025, código REGCON 28003715011982) y la tabla salarial 2026 corregida (BOCM nº 59, 11-mar-2026, que subsanó el error del BOCM nº 56), por SalarioJusto · última revisión 30 de julio de 2026"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 278,
+          "cita": "5 Operaria/o: profesional de oficio de 1ª y 2ª; capataz de especialistas y peones 1.590,26 € 22.263,68 € 31,91 €"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 3,
+      "razon": "Responde 7 de las 8 preguntas del listado (ver observacion_libre): la cifra del oficial, su equivalente mensual con las 14 pagas, el puente del oficio real al grupo, la frontera con el Comercio del Metal, el importe del quinquenio, el complemento de baja y los pluses de noche y de sábado/domingo. La única que no responde es la de jornada parcial: en toda la ficha no aparece «media jornada» ni «tiempo parcial», y el lector a 20 o 30 horas no encuentra ni la regla de proporcionalidad. Es la ficha del metal que mejor cubre el cuestionario real del sector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 267,
+          "cita": "Cómo leer la tabla: el salario de grupo mensual se percibe en 14 pagas (12 mensualidades + 2 extras). La columna \"Salario anual 2026\" es el bruto anual del salario de grupo. La columna \"Quinquenio\" es lo que suma cada tramo de 5 años de antigüedad, con un máximo de 5 quinquenios (Art. 41)."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 286,
+          "cita": "Filas destacadas: Grupo 5 (personal de oficio: soldadores/as, electricistas, montadores/as, mecánicos/as, instaladores/as) y Grupo 7 (grupo de entrada)."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 418,
+          "cita": "Accidente de trabajo o enfermedad profesional (baja &gt; 10 días) +15% de la base reguladora Día 11 de la baja"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 333,
+          "cita": "La empresa puede requerir un máximo de 6 sábados o domingos al año , con 5 días de preaviso. Se compensan con un +150% (sábado) o +175% (domingo) sobre la hora ordinaria, o con descanso (1h30 / 1h45 por hora)."
+        }
+      ],
+      "parche": "Hueco sistemático detectado en todo el corpus: añadir al pie de la tabla salarial (tras la línea 288) una frase de tres líneas: «¿Trabajas a tiempo parcial? Las cuantías de la tabla son de jornada completa. Si tu contrato es de media jornada, te corresponde la mitad del salario de grupo, y la mitad de los pluses de cuantía fija; los pluses en porcentaje (nocturnidad, penosidad) se calculan sobre tu salario ya reducido. Comprueba en tu contrato el porcentaje de jornada: es el número por el que hay que multiplicar toda la columna.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Camino claro de cinco pasos, con el paso que más importa aquí (identificar el grupo por funciones reales, no por la categoría antigua), la instrucción de pedir la nómina desglosada con su artículo del ET, el órgano concreto al que acudir (IRMA) y el plazo de prescripción. No llega a 3 porque no entrega documento: el determinista solo registra un enlace al kit (/reclamar-diferencias-salariales-convenio.html), que es la guía genérica; no hay plantilla de reclamación ni un cálculo hecho con números de esta provincia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 452,
+          "cita": "Identifica tu grupo profesional (1 a 7) según tus funciones reales, no solo tu categoría antigua. La clasificación y la equivalencia con las categorías anteriores están en el Anexo II del convenio."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 456,
+          "cita": "Plazo: un año por cada mensualidad para reclamar diferencias (art. 59.2 ET)."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 458,
+          "cita": "Guía completa para reclamar diferencias →"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 3,
+      "razon": "Es la única de las cuatro fichas del metal auditadas que resuelve las dos mitades de la autoubicación. La primera, el ámbito, con seis bloques de actividades reconocibles y la frontera declarada en lenguaje llano («si se fabrica, instala o repara, es este; si solo se vende, es el otro»). La segunda, y es la que fallan las demás: la propia tabla lleva una columna «Descripción funcional (ejemplos)» y bajo ella se nombra el oficio real dentro del grupo, de modo que un soldador o un instalador sabe que es Grupo 5 sin abrir el convenio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 261,
+          "cita": "Ojo: en Madrid hay dos convenios de metal. El que estás leyendo es el de Industria, Servicios e Instalaciones (fabricación, montaje, instalación, reparación). Existe otro para el Comercio del Metal (venta y distribución), con tablas y estructura distintas. Si en tu empresa se fabrica, instala o repara, es este; si solo se vende, es el otro."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 272,
+          "cita": "Grupo Descripción funcional (ejemplos) Mensual (14 pagas) Anual 2026 Quinquenio"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 286,
+          "cita": "Filas destacadas: Grupo 5 (personal de oficio: soldadores/as, electricistas, montadores/as, mecánicos/as, instaladores/as) y Grupo 7 (grupo de entrada)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 2,
+      "razon": "Explica la correspondencia con la nómina: dice que la cifra de la tabla es mensual y en 14 pagas, que es bruta antes de IRPF y Seguridad Social, desglosa un caso real por conceptos (salario de grupo, quinquenio, productividad, penosidad) y manda pedir la nómina detallada por escrito con el artículo del ET. Se queda en 2 porque no advierte de ninguno de los errores típicos: no dice qué pasa si la empresa prorratea las extras en doce mensualidades (la cifra mensual de la tabla dejaría de coincidir con la nómina), ni menciona la absorción y compensación, ni si el complemento de productividad del 1,5% es absorbible.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 288,
+          "cita": "Cuantías brutas antes de IRPF y Seguridad Social."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 297,
+          "cita": "Nerea es profesional de oficio (Grupo 5). Su salario de grupo es de 1.590,26 €/mes en 14 pagas , es decir 22.263,68 € brutos al año . Esto es lo que puede sumar a su nómina:"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 454,
+          "cita": "Pide la nómina detallada por escrito si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 3,
+      "razon": "El hueco que le toca gestionar a esta ficha no es una tabla ausente sino algo más difícil: una tabla oficial publicada y equivocada. En vez de disimularlo, le dedica el primer H2 del cuerpo, explica qué se publicó mal, en qué boletín y qué día, dice cuál es la buena y declara que es la que reproduce. Y da el suelo con su fuente: el SMI 2026 correcto (1.221 €/mes, 17.094 €/año) con el RD 126/2026 y su referencia BOE. Ninguna otra de las cuatro fichas del metal auditadas se enfrenta a una fuente contradictoria y la resuelve de cara, arriba y con fecha.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 244,
+          "cita": "El BOCM nº 56 (7 de marzo de 2026) publicó la resolución de la revisión salarial 2026 del convenio de Industria del Metal (código 28003715011982), pero por un error material adjuntó el anexo equivocado: el del convenio del Comercio del Metal (grupos I-V, 15 pagas). El BOCM nº 59 (11 de marzo de 2026) publicó una corrección de errores con el anexo correcto"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 484,
+          "cita": "1.221 €/mes y 17.094 € anuales (RD 126/2026). Consulta el SMI 2026"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 447,
+          "cita": "Vigencia hasta el 31 de diciembre de 2026 : después entra en prórroga anual salvo denuncia. Conviene vigilar la negociación del próximo convenio."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UN TRABAJADOR DEL METAL DE MADRID ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra un oficial del metal en Madrid en 2026?»; (2) «¿y eso cuánto es al mes, con cuántas pagas?»; (3) «soy soldador / instalador de clima, ¿en qué grupo estoy?»; (4) «en mi taller se vende y se repara, ¿me cubre este convenio o el del Comercio del Metal?»; (5) «llevo 6 años, ¿me toca antigüedad y cuánto?»; (6) «estoy de baja, ¿la empresa me completa el sueldo?»; (7) «hago noches y sábados, ¿cuánto me tienen que pagar de más?»; (8) «trabajo media jornada, ¿cuánto me corresponde?». RECORRIDO, UNA A UNA: (1) sí, línea 278 y FAQ 491; (2) sí, línea 267 y columna «Mensual (14 pagas)» de la tabla en 272-280 —es la única de las cuatro que publica mensual y anual en la misma fila—; (3) sí, línea 286; (4) sí, líneas 257 y 261; (5) sí, líneas 267, 278 (columna Quinquenio) y 302; (6) sí, líneas 418-420 y, mejor aún, el aviso 426 de lo que NO cubre; (7) sí, líneas 333 y 383; (8) NO, en ninguna parte. — LOS DOS HUECOS QUE ME PEDÍA EL ENCARGO: «¿y eso cuánto es al mes?» aquí está resuelto (Madrid publica salario mensual, no diario, y dice expresamente que son 14 pagas); «media jornada» falla, como en el resto del corpus. FUERA DE MI EJE, PARA QUIEN AUDITE VERIFICACIÓN Y COHERENCIA DE CORPUS: las fichas del metal de Zaragoza (línea 449: «Es el mismo modelo que el metal de Barcelona y el de Madrid») y de Navarra (línea 295: «mantiene la antigüedad por trienios, que Madrid tiene congelada») afirman que el metal de Madrid no tiene devengo activo de antigüedad, mientras que esta ficha publica una columna de quinquenio con valor propio para cada uno de los siete grupos y un máximo de 5 quinquenios (Art. 41). O sobra la columna de Madrid o sobran las dos frases de las otras dos fichas; lo he declarado como hard-fail 12.1 en los ficheros de Zaragoza y de Navarra, que son las que hacen la afirmación. VENTANA ABIERTA: 20 días desde el último commit, el único parche redactado (jornada parcial) va marcado como aplazado."
+}

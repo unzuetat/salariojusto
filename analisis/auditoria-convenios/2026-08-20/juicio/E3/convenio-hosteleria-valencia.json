@@ -1,0 +1,162 @@
+{
+  "eje": "E3",
+  "slug": "convenio-hosteleria-valencia",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Cifra, año y fuente están arriba —el determinista lo confirma y el sello cita el BOP Valencia 26/2023—, y además se avisa del estado de ultraactividad antes de que el lector se haga ilusiones. Pero lo que encabeza es un rango de 1.100,46 a 1.415,47 €/mes: quien busca «cuánto cobra una camarera en Valencia» no encuentra sus 1.214,84 €/mes hasta la tabla. Y hay ruido: más abajo la comparativa da 1.190,34 €/mes como «Camarero/a base mínimo», cifra de otra tabla (hoteles 3★), lo que obliga a leer una nota al pie para saber cuál es la suya.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 224,
+          "cita": "De 1.100,46 €/mes (ayudantes, riders) a 1.415,47 €/mes (jefaturas en hoteles 4-5★) según categoría, en 15 pagas ."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 313,
+          "cita": "Camarero/a · Cocinero/a · Barman/Barwoman · Sumiller · Recepcionista · Repostero/a"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 854,
+          "cita": "Cuantía Camarero/a en Valencia: III-3 (Hotel 3★ y viviendas turísticas)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 3,
+      "razon": "Responde 7 de las 8 preguntas de una camarera valenciana, y casi todas con cifra: cuánto debe cobrar, cuánto le pagan el festivo trabajado (105,28 € en metálico), si cobra nocturnidad al salir a las dos de la mañana —con la respuesta incómoda de que entre las 22:00 y las 00:30 no se paga—, si le toca antigüedad a los 6 años —no, está congelada desde 1998—, qué hacer si es fija-discontinua y no la llaman, si es legal el contrato «sin experiencia» con tabla rebajada, si pierde el puesto cuando cambia la concesión, y cómo reclamar. Es la cobertura más ancha del piloto y la única que anticipa preguntas que el lector no sabe que debe hacerse (el plus de formación de 240 €/año, el 85% de días para la subrogación). La que falla: «trabajo 20 horas a la semana, ¿cuánto me corresponde?» — la tabla es de jornada completa y el tiempo parcial solo se menciona a propósito del fijo-discontinuo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 659,
+          "cita": "Tabla I (restauración) 95,40 € 105,28 € 116,16 €"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 615,
+          "cita": "22:00 – 00:30 NO se paga (considerada parte de la jornada habitual)"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 666,
+          "cita": "Si has empezado a trabajar en hostelería de Valencia después de 1998-2000, tu plus de antigüedad es cero , por mucho que pasen los años."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 733,
+          "cita": "Trabajo a tiempo parcial fijo-discontinuo Permitido (horas/día, días/semana o días/mes). NO pierde la condición de fijo-discontinuo"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "Sobre el papel es el camino más completo del piloto: plazo del art. 59.2, papeleta ante el TAL de la Comunitat Valenciana, derecho a la nómina desglosada, cálculo explicado, reclamación retroactiva desde el día 1 en el caso de la tabla «sin experiencia», y el determinista registra tres enlaces al kit —los únicos con plantilla de atrasos y plantilla de solicitud de nóminas—. Lo que impide darle un 3 es que el paso decisivo está mal: manda al lector a un «Art. 34 (descuelgue)» que no consta en el articulado de este convenio (la ficha cita en todo momento los arts. 5, 10-21, 25, 28, 41, 42 y 51), y el párrafo de cabecera del bloque está roto y afirma una fecha de denuncia que no aparece en ninguna fuente citada. El camino existe pero uno de sus mojones apunta a un sitio que no está.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 867,
+          "cita": "Si la empresa pretende inaplicar el convenio , debe seguir el procedimiento de descuelgue (Art. 34) con periodo de consultas y comunicación a el TAL (Tribunal de Arbitraje Laboral) de la Comunitat Valenciana."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 807,
+          "cita": "tienes derecho a reclamar las diferencias con efectos retroactivos desde el día de tu contratación. Plazo: 1 año (art. 59.2 ET)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 3,
+      "razon": "Es la mejor autoubicación del corpus junto con Comercio Madrid, y por delante en un aspecto: además de listar en lenguaje llano decenas de establecimientos reales por familia (chiringuitos, croasanterías, tablaos, cibercafés), escribe explícitamente lo que NO cubre —autónomo puro, dark kitchen sin local, otra provincia— y resuelve el caso frontera de moda, el del rider de plataforma. Y la tabla no da niveles abstractos: cada nivel lleva su columna «Puesto típico» con los oficios reales, y hay tres tablas según el tipo de establecimiento, que es como se organiza de verdad la hostelería. El lector sabe en menos de treinta segundos si le cubre, en qué tabla está y en qué fila.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 275,
+          "cita": "Te cubre si eres rider de una empresa hostelera: el reparto de comidas y bebidas a pie o en vehículo (sin autorización de transporte) está expresamente incluido — incluido el reparto a través de plataformas digitales"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 276,
+          "cita": "NO te cubre si tu empresa solo prepara y reparte productos cocinados a domicilio sin tener establecimiento presencial (dark kitchens puras pueden quedar fuera, se interpreta caso por caso)."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 301,
+          "cita": "Jefe/a de Cocina · Jefe/a de Sala · Encargado/a General · Gerente de Restauración Moderna"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 3,
+      "razon": "Es la única de las seis que convierte el prorrateo en una prueba de detección de fraude en lugar de en una nota al pie: le dice al lector que sume las líneas de extras de su recibo, que el total debe equivaler a tres mensualidades de base, y que si solo ve dos pagas o un prorrateo de 2/12 le están aplicando un convenio que no es el suyo. A eso suma el aviso de bruto antes de IRPF y Seguridad Social, el cálculo del bruto anual paso a paso con una categoría concreta, la base horaria explicada con su fórmula para poder auditar el plus de nocturnidad hora a hora, y un segundo test de error —contrastar la nómina con el Anexo II BIS para descubrir si te están pagando la tabla rebajada de «sin experiencia» sin derecho—. Es el nivel al que deberían subir las otras cinco. Solo le falta la absorción y compensación para no dejar ningún error típico fuera.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 695,
+          "cita": "Compárate con tu nómina : si te están prorrateando las pagas extras mes a mes (líneas separadas en la nómina), suma los importes \"extra Junio + extra Navidad + extra Marzo prorrateado\" — el total debe equivaler a 3 mensualidades de salario base al año . Si solo ves 2 pagas extras o el prorrateo de 2/12, te están aplicando un convenio que NO es el tuyo."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 431,
+          "cita": "Importes brutos antes de descuentos de IRPF y Seguridad Social. Para calcular tu salario neto exacto con tu situación familiar, usa la calculadora oficial de SalarioJusto ."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 807,
+          "cita": "revisa tu nómina y contrato. Si la cuantía coincide con el Anexo II BIS (las cifras rebajadas) y tú ya tenías ≥9 meses en hostelería, tienes derecho a reclamar las diferencias con efectos retroactivos"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "No disimula el hueco: hay un aviso destacado en la primera pantalla que dice que el convenio expiró el 31-XII-2025, que las tablas de 2025 siguen aplicándose por el art. 86.3 ET y —el matiz que casi nadie escribe— que no hay incremento automático, así que el lector entiende por qué su tabla es de hace tres años. Se queda en 2 porque no da el suelo real: el SMI no aparece con cifra en ningún punto del cuerpo (solo como enlace en el pie), y eso importa aquí más que en otras fichas, porque el Nivel V de la Tabla I —16.507 €/año— queda por debajo del SMI 2026 (17.094 €) y la ficha no lo advierte.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 226,
+          "cita": "El convenio expiró el 31/12/2025 pero las tablas siguen aplicándose por ultraactividad (art. 86.3 ET) mientras se negocia un nuevo texto. No hay incremento automático."
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 327,
+          "cita": "1.100,46 €"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 966,
+          "cita": "Salario Mínimo Interprofesional 2026"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "5.7",
+      "detalle": "El bloque «¿Cobras menos de lo que fija el convenio?» afirma que la denuncia del convenio la presentaron los sindicatos en octubre de 2025. Esa fecha no aparece en ninguna de las fuentes que la propia ficha cita (BOP Valencia núm. 26 de 7-feb-2023 y acta paritaria 1/2024, BOP 87 de 7-may-2024), ni en el resto de la página, que se limita a decir que el convenio expiró el 31-XII-2025. Además la frase está sintácticamente rota («está en ultraactividad desde tras el fin de la vigencia formal», «los sindicatos la presentó»), lo que delata que es un bloque rotado desde otra ficha —el mismo texto aparece en Zaragoza, donde la denuncia de CCOO el 2-oct-2025 sí está documentada, y en Asturias—. El mismo bloque arrastra la remisión a un «Art. 34 (descuelgue)» que tampoco consta en el articulado del convenio de Valencia. Es una fecha inventada en el párrafo que el lector lee justo antes de reclamar.",
+      "evidencia": {
+        "linea": 863,
+        "cita": "El convenio está en ultraactividad desde tras el fin de la vigencia formal del convenio, pero eso no autoriza a tu empresa a bajar tu salario ni tus pluses. […] Lo que decae con la denuncia (los sindicatos la presentó el octubre de 2025) son las cláusulas obligacionales"
+      }
+    }
+  ],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UNA CAMARERA VALENCIANA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto tengo que cobrar de camarera en Valencia en 2026?»; (2) «he trabajado el festivo, ¿me lo tienen que pagar y cuánto?»; (3) «salgo a las dos de la mañana, ¿me corresponde nocturnidad?»; (4) «llevo 6 años en el mismo bar, ¿me toca antigüedad?»; (5) «soy fija-discontinua y no me llaman para la temporada, ¿qué hago?»; (6) «me contrataron como “sin experiencia” y cobro menos que mis compañeros, ¿es legal?»; (7) «el ayuntamiento ha cambiado la empresa del comedor, ¿pierdo mi puesto?»; (8) «hago 20 horas a la semana, ¿cuánto me corresponde de esa tabla?». RECORRIDO: responde 1, 2, 3, 4, 5, 6 y 7; falla en 8. — Es la ficha que mejor entiende a quién le habla. Se nota en que responde preguntas que el lector no sabía que tenía (el plus de formación de 240 €/año que casi nadie reclama, el 85% de días para entrar en la subrogación, el umbral de las 00:30 que anula la nocturnidad de casi todo el turno de noche) y en que usa la nómina como instrumento de detección, no como decorado. Su problema no es de cobertura sino de higiene: el bloque final de reclamación —justo el que remata toda esa cadena— es una plantilla rotada, con una frase rota, una fecha de denuncia sin fuente y una remisión a un artículo que no es de este convenio. Es el punto donde el lector pasa de leer a actuar, y es el único punto descuidado de la página. Fuera de mi eje: el determinista marca hardfail 5.1 (44% de las cifras en secciones sin referencia a artículo o boletín) y la comparativa introduce un segundo importe de Camarero/a (1.190,34 €/mes, de la tabla de hoteles 3★) que convive con los 1.214,84 €/mes de la Tabla I; está explicado en la nota al pie, pero un lector rápido se lleva dos cifras. VENTANA CERRADA: 21 días desde el último commit, así que las correcciones son aplicables ya."
+}

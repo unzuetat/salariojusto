@@ -1,0 +1,138 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-valencia",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 2,
+      "razon": "Hay trabajo propio visible en varias secciones —el ejemplo aterrizado de Marcos con estimación de neto marcada como elaboración propia, la comparación de pagas contra Barcelona y Bizkaia y el juicio sobre el día 75 de la IT— pero no llega al nivel de Sevilla porque la cifra que más pesa, el «Salario anual 2026», nunca se explica: el lector ve 45,80 €/día y 22.462,18 €/año y no se le dice qué operación une ambas, ni si el anual está transcrito del anexo o compuesto por la casa.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 343,
+          "cita": "Sobre ~24.000 € brutos, aplicando el IRPF de la Comunitat Valenciana, el neto ronda los <strong>19.700-20.200 € anuales</strong> sin pluses; los complementos de turno y penosidad lo suben notablemente."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 456,
+          "cita": "El complemento en enfermedad común solo llega al día 75, más tarde que en otros convenios: durante los primeros días la persona percibe solo la prestación de la Seguridad Social."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 270,
+          "cita": "el <strong>personal de operaciones</strong> (oficio) cobra el salario grupo <strong>por día</strong>; el personal técnico y de empleados/as lo cobra <strong>por mes</strong>. La columna \"Salario anual 2026\" es el bruto anual con las pagas del convenio incluidas."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Las afirmaciones de derecho llevan su artículo y su condición —el plus de formación solo si la empresa no acredita el plan, el recargo de festivo solo en empresas no habituales, la paga de marzo prorrateable— y avisa del caso límite de ámbito. No llega a 3 porque dedica un capítulo entero a los incentivos y aun así nunca advierte de lo contrario a lo que el lector supondrá: que la tabla es un mínimo y su nómina real puede diferir, matiz que las fichas hermanas de Zaragoza y Navarra sí hacen explícito.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 422,
+          "cita": "La empresa que <strong>no acredite</strong> la participación de su plantilla en un plan de formación debe abonar <strong>30 €/mes</strong> de naturaleza salarial. O forma, o paga."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 264,
+          "cita": "<strong>Ojo: en Valencia hay dos convenios de metal.</strong> El que estás leyendo es el de <strong>Industria</strong> (fabricación, instalación, reparación). Existe otro para el <strong>Comercio del Metal</strong> (venta y distribución de artículos metálicos), con tablas y condiciones distintas."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 438,
+          "cita": "La <strong>línea de incentivos</strong> va del salario grupo (rendimiento normal) a 1,20 × salario grupo (rendimiento óptimo)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 1,
+      "razon": "La fuente de todas las cifras de la página —las tablas 2026— no tiene ningún localizador publicable: solo consta que fueron «registradas el 19-ene-2026», sin número de boletín, sin fecha de publicación y sin enlace, y el único acceso ofrecido es el buscador del BOP, que la propia ficha llama así. Los dos enlaces a documento exacto que sí tiene (convenio estatal y RD del SMI) son fuentes accesorias, no la que sostiene las tablas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 543,
+          "cita": "<strong>Tablas salariales 2026</strong> del convenio, aprobadas por la Comisión Paritaria el 19-ene-2026 (+2,5% sobre 2025, efectos 1-ene-2026). Fuente de todas las cifras salariales, dietas, quebranto de moneda y seguro de convenio de esta página."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 496,
+          "cita": "Texto del convenio en el BOP nº 203 (20-oct-2023); tablas 2026 registradas el 19-ene-2026. Buscador: <a href=\"https://bop.dival.es/\" target=\"_blank\" rel=\"noopener\">bop.dival.es</a>"
+        }
+      ],
+      "parche": "En «Fuentes oficiales verificadas» (línea 543) y en la tarjeta «BOP Valencia — Convenio y tablas» (línea 496), sustituir la referencia sin localizador por la publicación exacta y enlazar al edicto, no al buscador. Texto propuesto: «<strong>Tablas salariales 2026</strong> del convenio, aprobadas por la Comisión Paritaria el 19-ene-2026 (+2,5% sobre 2025, efectos 1-ene-2026) y publicadas en el BOP de Valencia núm. ___ (___-___-2026), edicto ___ — <a href=\"[URL del PDF del edicto]\">ver publicación</a>. Fuente de todas las cifras salariales, dietas, quebranto de moneda y seguro de convenio de esta página.» Los huecos ___ los rellena quien verifique, no se inventan. Si al comprobarlo resulta que las tablas solo constan inscritas en el registro y no publicadas en el BOP, escribirlo tal cual en lugar de callarlo: «Tablas 2026 inscritas en el REGCON (código 46000105011981) el 19-ene-2026; a fecha de esta revisión no consta su publicación en el BOP de Valencia, por lo que la comprobación se ha hecho contra el acta de la Comisión Paritaria», con enlace a la ficha del convenio en REGCON. Y en la tarjeta de recursos, cambiar «Buscador: bop.dival.es» por el enlace directo al edicto del convenio (BOP nº 203, 20-oct-2023), que sí es localizable.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "Las tres tablas de grupo llevan el año en su propio encabezado («Salario anual 2026») y las cuantías sueltas se agrupan bajo un «Otros conceptos 2026» explícito, incluido el quebranto de moneda con su «(tabla 2026)». Se queda en 2 porque no hay tablas históricas que distinguir y porque algunas cuantías de las tarjetas de pluses repiten el importe sin el año al lado, apoyándose en el epígrafe general.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 276,
+          "cita": "<thead><tr><th>Categoría</th><th class=\"num\">Grupo</th><th class=\"num\">Salario grupo</th><th class=\"num\">Salario anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 324,
+          "cita": "Cuantías brutas antes de IRPF y Seguridad Social. Otros conceptos 2026: media dieta <strong>11,99 €</strong> · dieta entera <strong>44,61 €</strong> · quebranto de moneda <strong>27,42 €</strong> · seguro de convenio <strong>30.837 €</strong>."
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 426,
+          "cita": "Media dieta <strong>11,99 €</strong> · dieta entera <strong>44,61 €</strong>. La empresa adelanta el 50% si se solicita."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "Declara fecha concreta de verificación (26-jul-2026), posterior al hito más reciente que ella misma cita (tablas de 19-ene-2026), y dice exactamente qué se cotejó y contra qué, separando por escrito lo transcrito de lo que es elaboración propia. La única pega —que el documento de 2026 no es localizable— ya la penalizo en 5.10 y no la cuento dos veces.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 202,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BOP Valencia nº 203, código REGCON 46000105011981) y las tablas salariales 2026 registradas el 19 de enero de 2026, por SalarioJusto · última revisión 26 de julio de 2026"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 551,
+          "cita": "Las cuantías están transcritas de la publicación oficial; los ejemplos y el cálculo de neto son elaboración propia y se identifican como tales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 1,
+      "razon": "La vigencia aparece una sola vez, como dato suelto en la parrilla de datos clave («2023-2026 (Art. 4)»), sin ninguna consecuencia para el lector: en toda la página no se dice hasta cuándo valen estas tablas, que 2026 es el último año pactado, si el convenio está denunciado ni qué hay que vigilar. Es la única de las tres fichas del metal auditadas hoy sin sección de caducidad; las palabras «2027», «denunciado» y «revisión por IPC» no aparecen en ninguna parte del cuerpo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 229,
+          "cita": "<div class=\"stat-item\"><div class=\"stat-label\">Vigencia</div><div class=\"stat-value\">2023-2026 (Art. 4)</div></div>"
+        },
+        {
+          "archivo": "convenio-metal-valencia.html",
+          "linea": 268,
+          "cita": "Cuantías brutas oficiales de las <strong>tablas 2026</strong>, resultado de aplicar el <strong>+2,5%</strong> pactado (Art. 13) sobre las tablas de 2025, con efectos desde el 1 de enero de 2026."
+        }
+      ],
+      "parche": "Añadir un callout inmediatamente después de la nota al pie de las tablas (tras la línea 324), con este texto: «<strong>Hasta cuándo valen estas tablas.</strong> Las cuantías de esta página son las de 2026, último año del período pactado del convenio (2023-2026, Art. 4): rigen hasta el 31 de diciembre de 2026. Lo que venga después depende de la negociación del siguiente convenio, que no está cerrada; mientras no se publiquen tablas nuevas, siguen aplicándose estas. <strong>Qué vigilar:</strong> la publicación en el BOP de Valencia del acta de la Comisión Paritaria con las tablas 2027 y, si el convenio tiene cláusula de revisión por IPC, su liquidación, porque puede generar atrasos sobre lo ya cobrado en 2026.» Antes de publicarlo hay que comprobar en el Art. 4 y en la disposición de denuncia dos cosas que la ficha hoy no dice y que no deben inventarse: si el convenio está denunciado y si existe cláusula de revisión. Si la hay, sustituir la frase condicional por la redacción concreta con su artículo, al modo de la ficha de Zaragoza; si no la hay, decirlo («el convenio no prevé revisión por IPC: el +2,5% de 2026 es definitivo»). Y actualizar la celda de vigencia de la línea 229 a «2023-2026 · último año» o «2023-2026 · denunciado (último año)» según lo verificado.",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "El SMI está bien citado y bien usado en las tres comparaciones (17.094 € anuales y 1.221 €/mes con enlace al RD 126/2026, líneas 286, 516, 523, 545): no hay hard-fail 5.7 por ahí. El problema de esta ficha es el otro extremo de la cadena. Es la única de las tres cuyo censo llega sin boletín ni fin de vigencia —censo.fuenteEstado es «convenio 2026 · +2,5% · paga de marzo» y vigenciaFin es null, frente al detalle de Navarra y Zaragoza—, y esa laguna del registro se corresponde exactamente con las dos notas bajas que le pongo: nadie escribió dónde se publicaron las tablas 2026 ni hasta cuándo valen. Arreglar el censo y arreglar la ficha es aquí la misma tarea, y conviene hacerlo en el mismo pase. Ventana de medición cerrada (último commit 30-jul-2026, 21 días), así que los dos parches son aplicables ya. Fuera de mi eje, para quien audite forma: el determinista marca 17 celdas de tabla en verde, que es el patrón que la norma interna del sitio señala como outlier precisamente en esta ficha."
+}

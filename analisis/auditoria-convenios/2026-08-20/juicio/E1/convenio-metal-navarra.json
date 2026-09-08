@@ -1,0 +1,143 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-navarra",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "Publica una comprobación propia que el boletín no trae —el recálculo del +2% grupo a grupo para confirmar la tabla 2026— y declara el resultado; además marca como orientativa la única columna que no es transcripción (el mensual, anual/14) y añade un encuadre comparativo con cinco provincias hermanas que no existe en ninguna fuente oficial.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 499,
+          "cita": "Fuente de todas las cifras salariales (Salario Garantizado por grupo, antigüedad, dietas, plus de carencia de incentivos y pluses), con el +2% sobre 2025. Verificado por partida doble (tabla 2025 × 1,02 = tabla 2026, coincidente al céntimo en los 7 grupos)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 271,
+          "cita": "Para cada grupo se indica el <strong>Salario Garantizado anual</strong> y su equivalente <strong>mensual en 14 pagas</strong> (el anual dividido entre 14, solo orientativo)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 295,
+          "cita": "su <strong>suelo de entrada es de los más altos del corpus</strong>: el Grupo 7 gana <strong>26.112 €/año</strong>, frente a los ~20.687 € de la Operaria/o Auxiliar de Madrid, los 22.462 € del Peón de <a href=\"/convenio-metal-valencia.html\">Valencia</a> o los 22.035 € del mínimo de <a href=\"/convenio-metal-bizkaia.html\">Bizkaia</a>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 3,
+      "razon": "Cada afirmación de derecho lleva artículo y condición, y la ficha se adelanta a tres casos límite frecuentes: el trabajador de una empresa que solo vende metal (convenio distinto), la creencia de que el metal subroga siempre, y la expectativa de una revisión por IPC en 2026 que en realidad se activó en 2025.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 267,
+          "cita": "<strong>Es un convenio de industria, no de comercio.</strong> Cubre la fabricación, transformación, montaje y reparación del metal. Las empresas dedicadas solo a la <strong>venta</strong> de artículos metálicos (en proceso exclusivo de comercialización) quedan fuera y se rigen por el convenio del <strong>Comercio del Metal de Navarra</strong>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 433,
+          "cita": "<strong>Subrogación limitada</strong> a las contratas de mantenimiento con la Administración Pública (Art. 50.F); en el resto, sin subrogación por ser convenio de industria."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 394,
+          "cita": "La empresa abona el <strong>50% del salario real durante los tres primeros días</strong> de la primera baja de enfermedad del año, un tramo que la Seguridad Social no cubre."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 2,
+      "razon": "Lleva la referencia escrita completa al lado de cada fuente (BON núm. 31 de 14-feb-2023 para el articulado, BON núm. 31 de 12-feb-2026 con la Resolución 9C/2026 para las cifras, código REGCON) y un enlace al documento exacto del SMI en el BOE, pero los dos enlaces del BON van a la portada del boletín: el lector tiene que repetir la búsqueda con los datos que la propia ficha ya le da.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 499,
+          "cita": "<strong>Acuerdo de revisión salarial para 2026</strong>, Resolución 9C/2026 de 16 de enero, BON núm. 31 (12-feb-2026)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 452,
+          "cita": "Texto en el BON núm. 31 (14-feb-2023); revisión salarial 2026 en el BON núm. 31 (12-feb-2026, Resolución 9C/2026). Sede: <a href=\"https://bon.navarra.es/\" target=\"_blank\" rel=\"noopener\">bon.navarra.es</a>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 500,
+          "cita": "<strong>Real Decreto 126/2026</strong>, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparación. <a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815\" target=\"_blank\" rel=\"noopener\">BOE-A-2026-3815</a>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "El año está dentro de la propia tabla (encabezado «Garantizado 2026») y acompaña a cada cuantía suelta —trienios, dietas, carencia de incentivos, capitales del seguro—, no se deduce solo del título de la página. No llega a 3 porque no hay tablas históricas que separar: la única serie temporal publicada es la de porcentajes de subida.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 276,
+          "cita": "<thead><tr><th>Grupo profesional</th><th>Categorías orientativas</th><th class=\"num\">Garantizado 2026 (año)</th><th class=\"num\">Mensual (14 pagas)</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 366,
+          "cita": "<strong>Trienios en euros</strong>, no un porcentaje, e ilimitados. Valores 2026: 1.º <strong>177,53 €</strong>"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 402,
+          "cita": "<strong>28.750 €</strong> en caso de muerte por accidente de trabajo y <strong>51.750 €</strong> por invalidez permanente absoluta (capitales vigentes desde el 1-ene-2024)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "Da fecha concreta de revisión (4-ago-2026), posterior al boletín más reciente que ella misma cita (BON de 12-feb-2026, el mismo que el censo registra como fuenteEstado), y dice qué se cotejó contra qué: articulado frente a la publicación de 2023 y cifras frente a la revisión de 2026, con el método de comprobación explicitado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 213,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BON núm. 31, 14-feb-2023, código REGCON 31006805011981) y la <strong>revisión salarial 2026</strong> (BON núm. 31, 12-feb-2026, Resolución 9C/2026), por SalarioJusto · última revisión 4 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 506,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto del convenio (BON núm. 31, 14-feb-2023) y contra la revisión salarial 2026 (BON núm. 31, 12-feb-2026, Resolución 9C/2026). Las cuantías están transcritas de la publicación oficial y verificadas por partida doble (tabla 2025 × 1,02 = tabla 2026); los ejemplos son elaboración propia y se identifican como tales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 3,
+      "razon": "No solo fija la fecha de caducidad de las tablas: dice qué pasará después (revisión por IPC en enero de 2027 con su umbral y su artículo) y qué debe vigilar el lector, y lo repite en particularidades para que no dependa de haber leído la sección de subidas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 422,
+          "cita": "Pero <strong>2026 es el último año de vigencia</strong>: el convenio está denunciado con efectos 31 de diciembre de 2026. En <strong>enero de 2027</strong> hay prevista una actualización adicional por IPC si el acumulado 2024-2025 supera el 4,04% (Art. 72.F), antes de negociar el nuevo convenio. Conviene vigilar esa negociación."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 435,
+          "cita": "<strong>Vigencia hasta el 31 de diciembre de 2026</strong>: convenio denunciado, en su último año, con ultraactividad posterior y revisión por IPC prevista en enero de 2027."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ficha muy verificable: la cadena cifra→origen se recorre entera salvo por el último tramo (el clic al edicto del BON). Dos apuntes que no puntúo en mis métricas. (1) El detector determinista no supo leer el sello: sello.fecha llega a null y boletines_citados solo trae «BOE» pese a que la línea 213 dice literalmente «BON núm. 31, 12-feb-2026 ... última revisión 4 de agosto de 2026»; es un falso negativo del parser, no un defecto de la página, y conviene que el sintetizador no lo cuente dos veces. (2) La línea 435 afirma «con ultraactividad posterior» sin artículo al lado, siendo la única afirmación jurídica de toda la ficha sin fuente pegada; en un corpus que ya tiene norma interna sobre decaimiento vs. ultraactividad, ese es el punto por el que envejecerá peor. Es materia del eje de estado jurídico, no del mío. La ficha está en ventana de medición abierta (último commit 4-ago-2026, 15 días), aunque no hay parches que aplazar porque ninguna métrica baja de 2."
+}

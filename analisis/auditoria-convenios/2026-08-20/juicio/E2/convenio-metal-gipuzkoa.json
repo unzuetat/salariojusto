@@ -1,0 +1,137 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-gipuzkoa",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 2,
+      "razon": "boilerplate_ratio 0,075 con 7 frases compartidas: cuatro son cromo inevitable (metodología, SMI, plazo, nómina desglosada) y tres son el explainer sectorial, legítimo entre nueve fichas del mismo sector. Se queda en 2 y no sube porque el bloque «¿Este convenio te cubre?» es el mismo molde literal que el de Álava —incluida la frase de cierre— y ahí ya no es cromo, es sustancia clonada entre provincias hermanas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 266,
+          "cita": "Es un convenio de industria, no de comercio. Cubre la fabricación, transformación y reparación del metal."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 471,
+          "cita": "El convenio recoge licencias retribuidas que mejoran lo previsto en el art. 37.3 del Estatuto de los Trabajadores."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "Es la ficha más tabular del sector (ratio_tabla 0,246, 739 palabras de tabla) con solo 2.262 de prosa, y aun así la prosa no rodea la tabla: la sostiene. Las dos columnas —valor hora y retribución anual— no se reconcilian sin la fórmula, y la estructura A/B/C explica sobre qué se calculan antigüedad y pagas. Quitas esa prosa y la tabla queda ilegible.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 253,
+          "cita": "La fórmula. Retribución anual = valor hora × 1.695."
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 255,
+          "cita": "El convenio estructura cada retribución en tres columnas: A (salario base), B (plus de convenio) y C (plus de carencia de incentivo, para las empresas sin sistema de primas)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "86 frases exclusivas y 1.575 palabras exclusivas, pocas en volumen pero con hallazgos que exigieron trabajo: el reparto en tres niveles de la subida de 2026 (tablas al IPC, base al 55 %, salario real al 85 %) no está en ninguna tabla y hay que sacarlo del articulado, y el rastro de que la revisión salarial se republicó íntegra el 4 de marzo porque la primera publicación omitía el acta exige haber seguido dos publicaciones del mismo BOG.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 531,
+          "cita": "Las tablas mínimas suben el IPC completo (2,9%), pero el reparto interno protege más la base de cotización: el salario base de convenio sube el 55% de esa subida y el salario real que cobra cada persona sube el 85% del incremento de las tablas (Art. 29)"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 607,
+          "cita": "republicada íntegra el 4-mar-2026 (la primera publicación omitía el acta; las tablas no cambiaron)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 2,
+      "razon": "4 clonadas de 6. Las respuestas son propias y no intercambiables (la de subrogación explica por qué no la hay en un convenio de industria; la de antigüedad concreta el cómputo desde el aspirantazgo), y hay una pregunta que solo existe aquí: por qué el salario se fija por horas. Correcto, pero no ejemplar: cuatro de las seis podrían llevar cualquier topónimo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 589,
+          "cita": "¿Por qué el salario se fija por horas?"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 602,
+          "cita": "Quinquenios del 5% sobre el salario de la columna A por cada cinco años de servicio, computando desde la fecha de ingreso (incluido el período de aprendizaje o aspirantazgo)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "La particularidad que organiza la ficha es de convenio, no de provincia: el salario por valor hora, bien explotado desde el segundo H2. De lo estrictamente guipuzcoano recoge el Acuerdo Interconfederal de Confebask sobre horas extras y el régimen foral, pero deja fuera el rasgo que distingue a este territorio de las otras ocho provincias del metal: es el único donde una parte relevante de la industria del metal es cooperativa, y quien es socio trabajador no se rige por este convenio. La ficha ni lo menciona.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 458,
+          "cita": "en línea con el Acuerdo Interconfederal sobre supresión de horas extraordinarias suscrito entre Confebask y los sindicatos ELA, CC.OO., UGT y LAB el 15 de enero de 1999"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 258,
+          "cita": "cubre a más de 30.000 personas trabajadoras del sector industrial del metal en el territorio"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 2,
+      "razon": "Ordena 79 categorías por familia, avisa de la republicación del acta y traduce el valor hora a retribución anual. Pero el propio BOG publica ya las dos magnitudes (Anexo I de retribuciones mínimas y Anexo II de valor hora) —la ficha lo dice al declarar que verifica «por partida doble»—, así que el valor añadido es de ordenación y comprobación, no de cálculo que el boletín no tenga. Correcto, no ejemplar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 607,
+          "cita": "Fuente de todas las cifras salariales (Anexo I retribuciones mínimas y Anexo II valor hora), dietas y contrato formativo (+2,9% sobre 2025)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "Hay una ventaja identificable frente al agregador —la verificación cruzada declarada y la advertencia de que el convenio se denuncia automáticamente el 1-nov-2026—, pero el lector tiene que llegar hasta «Quién audita esto» para percibirla, y la comparación con otras provincias se limita a un párrafo sin cifras propias. No es una ventaja que se note sin explicarla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 614,
+          "cita": "verificadas por partida doble (valor hora × 1.695 = retribución anualizada); los ejemplos son elaboración propia y se identifican como tales"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 543,
+          "cita": "Vigencia hasta el 31 de diciembre de 2026, con denuncia automática desde el 1 de noviembre de 2026 y ultraactividad posterior."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana de medición abierta (último commit 2026-08-04, 15 días): no aplicar parches todavía. El parche más valioso de esta ficha es de investigación y es exclusivo de Gipuzkoa dentro del cluster: es el único territorio del metal español donde el empleo industrial pasa en buena parte por sociedades cooperativas, y la persona socia trabajadora de una cooperativa no está cubierta por el convenio sectorial sino por los estatutos y el reglamento de régimen interno de su cooperativa, mientras que el personal asalariado de la misma empresa sí lo está. Verificarlo (Ley 11/2019 de Cooperativas de Euskadi y el ámbito personal del art. 1 del convenio) y decirlo en dos frases dentro de «¿Este convenio te cubre?» resolvería una duda real de miles de lectores del Alto Deba y del Urola, y ninguna otra web del sector la responde. Segundo detalle menor, aprovechable: la tabla ya trae Jefe/a de diques, Jefe/a de muelles y buzos —el rastro del metal portuario de Pasaia— sin una línea que lo sitúe; una frase bajo esa familia profesional convertiría una rareza del escalafón en contexto local."
+}

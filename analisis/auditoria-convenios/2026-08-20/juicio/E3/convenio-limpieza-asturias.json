@@ -1,0 +1,160 @@
+{
+  "eje": "E3",
+  "slug": "convenio-limpieza-asturias",
+  "metricas": [
+    {
+      "id": "1.1",
+      "nota": 2,
+      "razon": "Hay cifra, año y fuente arriba (el determinista lo confirma) y el sello del BOPA está a la vista. No llega a 3 porque lo que encabeza es el estado jurídico y un rango de 1.105 a 1.730 €/mes, no la cifra del puesto que busca el 90% del tráfico: los 1.447 €/mes de Limpiador/a aparecen de refilón, dentro de un aparte titulado «¿Buscabas 35 horas o 12 pagas?», no como respuesta principal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 198,
+          "cita": "Convenio de Limpieza de Edificios y Locales 2026 — Principado de Asturias"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 214,
+          "cita": "Si cobras con las extras prorrateadas en 12 mensualidades , una Limpiador/a percibe 1.447 €/mes (mismo bruto anual: 17.365,50 €)."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 215,
+          "cita": "de 1.105 €/mes (categorías ancladas al SMI) a 1.730 €/mes en 15 pagas"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.2",
+      "nota": 3,
+      "razon": "Responde 7 de las 8 preguntas de una limpiadora asturiana, y varias con cifra: cuánto cobra al mes (1.447 € prorrateado), si el convenio sigue vigente en 2026, cuánto se paga el festivo trabajado (23,28 €/día), cuánta antigüedad le toca a los 6 años (trienios de 10,90 €/paga, con el cálculo anual hecho), qué pasa si cambia la contrata, si cobra por debajo del SMI y qué hacer si cobra de menos. La única que no responde: «trabajo 4 horas al día, ¿cuánto me corresponde?» — la tabla es de jornada completa y en ningún punto se dice que se prorratea; la única mención al tiempo parcial es sobre el derecho de preferencia para ampliar jornada. En un sector donde la parcialidad es la norma, es el hueco más caro. Aviso: la respuesta a «¿estoy bajo el SMI?» está dada, pero con un SMI equivocado (ver hardfails).",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 349,
+          "cita": "23,28 €/día festivo trabajado para jornada completa (≥6h30m hasta el límite legal). Si la jornada es inferior, parte proporcional."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 510,
+          "cita": "Como las pagas anuales son 15, un trienio del Nivel 3 supone 163,50 € anuales (10,90 × 15)"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 425,
+          "cita": "Jornada limitada / tiempo parcial: regulación detallada del derecho de preferencia para ampliar jornada antes de contratar nuevo personal (Art. 20)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.3",
+      "nota": 2,
+      "razon": "El camino existe, es local y tiene plazo: verificar la tabla multiplicando, pedir la nómina detallada invocando el art. 29.1 ET, papeleta ante el SASEC, un año por mensualidad, y cuatro vías nombradas (mediación, paritaria, Inspección, sindicatos). No llega a 3 porque falta el documento —el determinista solo registra un enlace al kit, la guía genérica, sin plantilla de reclamación— y porque el bloque final es una plantilla rotada que se contradice con el resto de la ficha: dice que la denuncia la presentó CCOO en octubre de 2025 cuando el cuerpo sostiene que la denuncia fue automática el 30-IX-2025, y remite a un «Art. 34 (descuelgue)» que no consta en el articulado citado del convenio asturiano.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 430,
+          "cita": "Tienes 1 año por mensualidad de plazo desde que debió pagarse (art. 59.2 ET). Presentar papeleta de conciliación interrumpe el plazo y es gratuito."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 519,
+          "cita": "Pide nómina detallada por escrito si los conceptos no aparecen separados. Tu empresa está obligada a entregarla por imperativo del art. 29.1 del Estatuto de los Trabajadores."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 520,
+          "cita": "Si la empresa pretende inaplicar el convenio , debe seguir el procedimiento de descuelgue (Art. 34) con periodo de consultas y comunicación a SASEC"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.4",
+      "nota": 2,
+      "razon": "El lector puede localizar su categoría porque la tabla va agrupada por grupos y con los nombres reconocibles (Limpiador/a, Peón/a, Conductor/a-Limpiador/a), pero no puede saber si el convenio le cubre: la ficha no tiene una sola línea de ámbito funcional. No dice qué actividades entran (limpieza de oficinas, colegios, hospitales, comunidades, industrias) ni qué queda fuera. Lo único parecido a autoubicación es la desambiguación de «35 horas / 12 pagas», que resuelve una confusión de búsqueda, no el encaje del lector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 222,
+          "cita": "Ámbito territorial Comunidad Autónoma del Principado de Asturias"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 213,
+          "cita": "«35 horas»: el personal de limpieza de centros sanitarios está equiparado a SESPA en salario , y en el sector público asturiano se trabajan 35 h/semana — de ahí la confusión."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 301,
+          "cita": "Limpiador/a 38,59 €/día 17.365,50 € 1.447,13 €/mes 10,90 €"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.6",
+      "nota": 2,
+      "razon": "Hace bien la traducción que casi todas fallan: convierte las 15 pagas del convenio a la cifra mensual que el lector tiene delante si se las prorratean, con una columna propia en la tabla, y avisa de que la cifra es bruta y de que el neto sale de la calculadora. No llega a 3 porque no advierte de ningún error típico —el prorrateo se presenta como una forma de cobrar, nunca como algo a comprobar— y no aparece la compensación y absorción, que en limpieza es el mecanismo habitual para tragarse los pluses cuando sube la tabla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 244,
+          "cita": "La columna «12 pagas (€/mes prorrateado)» es el bruto anual ÷ 12: lo que cobra quien tiene las pagas extras repartidas en 12 mensualidades iguales (mismo bruto anual, distinta forma de cobrarlo) — la cifra que mucha gente busca como \"sueldo al mes\"."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 313,
+          "cita": "Para convertir el bruto anual en salario neto en Asturias , usa la calculadora de SalarioJusto con escala IRPF nacional 2026 ."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "1.9",
+      "nota": 2,
+      "razon": "Declara el hueco sin disimulo y desde el H1: el convenio venció el 31-XII-2025, la tabla vigente es la de 2025 y explica por qué sigue aplicándose (ultraactividad indefinida pactada del Art. 4, citada en literal). Incluso da la fecha prevista de la nueva negociación. No llega a 3 porque el suelo que ofrece no es el real: presenta 16.576 € como SMI 2026 cuando el vigente es de 17.094 € (1.221 €/mes en 14 pagas), de modo que la red de seguridad que la ficha describe está mal calibrada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 236,
+          "cita": "una vez denunciado el convenio, y en tanto no se llegue a un acuerdo sobre el nuevo, se entenderá que el contenido íntegro normativo del presente convenio mantiene su vigencia hasta la fecha de la firma del nuevo convenio colectivo"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 316,
+          "cita": "B) cruzar el resultado con el SMI 2026 (16.576 € anuales, art. 27.1 ET)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "5.7",
+      "detalle": "La ficha afirma que ninguna categoría queda bajo el SMI 2026 y titula una sección entera con esa conclusión, pero la calcula contra 16.576 € cuando el SMI 2026 es de 17.094 € brutos anuales (1.221 €/mes en 14 pagas, RD 126/2026). Con la cifra real, Aspirante Administrativo/a y Botones (16.576,05 €/año) quedan 517,95 € POR DEBAJO del mínimo legal, no cinco céntimos por encima. Es el fallo más caro posible en este eje: el lector que entra preguntando «¿me están pagando por debajo del SMI?» se lleva exactamente la respuesta contraria a la verdadera. Arrastra también la fila de la comparativa provincial («0 de 27 — 2 al límite») y la conclusión del cierre. El determinista ya lo marcó como 12.2; se declara aquí como 5.7 porque la afirmación derivada —'todas cumplen'— es una conclusión fáctica sin correlato en la fuente.",
+      "evidencia": {
+        "linea": 331,
+        "cita": "Las 27 categorías del convenio cumplen formalmente el SMI 2026 gracias a la combinación de tres pagas extras (15 pagas anuales) y la cláusula expresa de garantía. Aspirante Administrativo/a y Botones quedan al límite exacto (+5 céntimos)"
+      }
+    },
+    {
+      "codigo": "4.5",
+      "detalle": "Dos códigos REGCON distintos para el mismo convenio en la misma página: 33000735011979 en la tabla de datos clave y en la lista de fuentes oficiales, y 33000635011982 en el bloque de reclamación. Un lector que use el código equivocado para buscar el convenio en el registro del Ministerio no lo encuentra, justo en el momento en que va a reclamar.",
+      "evidencia": {
+        "linea": 522,
+        "cita": "Código REGCON: 33000635011982 . Guía completa para reclamar diferencias →"
+      }
+    }
+  ],
+  "observacion_libre": "LAS 8 PREGUNTAS QUE TECLEARÍA UNA LIMPIADORA ASTURIANA ANTES DE LLEGAR AQUÍ: (1) «¿cuánto cobra una limpiadora en Asturias al mes en 2026?»; (2) «el convenio está caducado, ¿me pueden bajar el sueldo?»; (3) «he trabajado el festivo, ¿cuánto me tienen que pagar?»; (4) «llevo 6 años, ¿me toca antigüedad y cuánto?»; (5) «cambia la empresa de la contrata, ¿me quedo sin trabajo?»; (6) «trabajo 4 horas al día, ¿cuánto me corresponde de esa tabla?»; (7) «¿estoy cobrando por debajo del SMI?»; (8) «cobro menos que la tabla, ¿qué hago y hasta cuándo puedo reclamar?». RECORRIDO: responde 1, 2, 3, 4, 5, 7 y 8; falla en 6. — Es, con Valencia, la ficha con mejor cobertura de las seis, y la única que resuelve de oficio la traducción de 15 pagas a la cifra mensual que la persona tiene en la nómina: esa columna «12 pagas (€/mes prorrateado)» es el hallazgo replicable del piloto y debería copiarse a Zaragoza, que no la tiene. Su fallo es de otro orden: responde la pregunta 7 con seguridad y la responde al revés (ver hardfail 5.7). Otras dos incoherencias internas menores, que no puntúo aquí pero conviene anotar: el bloque de reclamación dice que los sindicatos firmantes son «CCOO y UGT-FeSMC» cuando la ficha insiste tres veces en que son tres, con USO, y atribuye la denuncia a CCOO en octubre de 2025 cuando el cuerpo dice que fue automática el 30-IX-2025. Ambas vienen del mismo bloque rotado que en Valencia y Zaragoza. VENTANA ABIERTA: 16 días desde el último commit; ningún parche redactado en este eje, pero las correcciones del SMI y del código REGCON son de verdad, no de forma, y no deberían esperar a que cierre la ventana."
+}

@@ -1,0 +1,137 @@
+{
+  "eje": "E2",
+  "slug": "convenio-metal-barcelona",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 3,
+      "razon": "boilerplate_ratio 0,015, el más bajo de las nueve fichas del metal y de casi todo el corpus, con solo 3 frases compartidas que además no son cromo nuestro sino coincidencias del articulado (la definición legal de trabajo nocturno, los 15 días de matrimonio, el rango de la excedencia voluntaria). Ni siquiera comparte el bloque de metodología que llevan las otras ocho: aquí el cierre está redactado a medida.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 663,
+          "cita": "Convenio verificado por Telmo · última revisión 11-jul-2026 contra BOPB del 13-feb-2026"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 379,
+          "cita": "Se considera trabajo nocturno el realizado entre las 22:00 y las 6:00 de la mañana."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "4.511 palabras de prosa —la cifra más alta del sector— contra ratio_tabla 0,03, la más baja: literalmente no es una tabla con envoltorio, es un cuerpo de texto con una tabla de siete filas dentro. Y la prosa hace el trabajo que la tabla no puede: explicar por qué la nómina de mucha gente no coincide con esas siete cifras, porque arrastra complementos «ex» que el convenio respeta a título personal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 293,
+          "cita": "A Carla NO se le aplica antigüedad (el convenio no la reconoce; solo se respetan como \"condición ad personam\" los complementos \"ex vinculación\" y \"ex categoría profesional\" para quienes ya los cobraban antes de 1995-1999)."
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 231,
+          "cita": "la retribución es idéntica para las tres divisiones funcionales dentro del mismo grupo"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "195 frases exclusivas y 3.448 palabras exclusivas, ambas las más altas de las nueve, y con sustancia detrás: la distinción entre retén y guardia, la obligación de bilingüismo en los avisos internos o el complemento de teletrabajo por día efectivo son hechos que solo salen de leer un convenio de 177 páginas en dos lenguas, no de cambiar el topónimo de una plantilla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 625,
+          "cita": "El Art. 84 del Capítulo XI establece que todos los anuncios o avisos en las empresas deberán redactarse en castellano y en catalán"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 429,
+          "cita": "El convenio regula por primera vez este servicio con distinción entre dos figuras"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "3.5",
+      "nota": 3,
+      "razon": "La FAQ que ve el lector tiene ocho preguntas y ninguna es intercambiable: retén frente a guardia, quién cobra los complementos «ex», bilingüismo de los avisos, aplicación vía ETT. El determinista cuenta 3 clonadas sobre 6 porque mide el bloque JSON-LD, que es otro juego de preguntas distinto del visible (lo anoto abajo, es defecto de otro eje).",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 604,
+          "cita": "¿Qué diferencia hay entre servicio de retén y servicio de guardia?"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 624,
+          "cita": "¿Hay bilingüismo en las comunicaciones de la empresa?"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.4",
+      "nota": 2,
+      "razon": "Recoge la particularidad principal —es el mayor convenio provincial del metal de España y lo dice con su cifra— y aterriza el ejemplo en el Baix Llobregat, pero nunca dice de qué vive el metal de Barcelona. La provincia donde la automoción y su industria auxiliar han vivido la mayor reconversión de la última década resuelve el ámbito con la lista de CNAE del convenio estatal, sin una línea sobre qué significa esa lista aquí.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 217,
+          "cita": "Es el mayor convenio provincial de metal por número de personas cubiertas: ≈200.000 trabajadoras/es"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 590,
+          "cita": "Aplica a las empresas cuyo CNAE se corresponda con los establecidos en el IV Convenio Colectivo Estatal del Metal (BOE 12-ene-2022), listados en el Anexo 16 del texto."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.1",
+      "nota": 2,
+      "razon": "Ventaja clara y sostenida sobre el BOPB —177 páginas bilingües convertidas en catorce secciones navegables, tabla mensual traducida a bruto anual y un ejemplo con nombre y comarca— pero es ordenación y traducción, no resolución: no hay ninguna pieza que el boletín no contenga ya, ni conflicto de publicaciones que deshacer, ni actualidad de negociación. Cumple lo que se espera, y muy bien; no da el salto que sí dan Madrid, Álava o Zaragoza.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 291,
+          "cita": "Bruto anual 2026: 28.887,46 €"
+        },
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 213,
+          "cita": "Espejo oficial: texto íntegro BOPB en la web de UGT FICA Barcelona (177 páginas, castellano + catalán)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "10.2",
+      "nota": 2,
+      "razon": "Frente al agregador la ventaja existe y es identificable: traza al CVE y a la resolución con nombre de la firmante, y un ejemplo que enseña a leer la propia nómina. Pero falta lo que sí tienen las hermanas —comparación provincial y declaración explícita de qué es transcripción y qué cálculo propio—, y el sello de cierre es más pobre que el del resto del cluster.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-barcelona.html",
+          "linea": 176,
+          "cita": "✓ Verificado contra BOPB del 13 de febrero de 2026 (Resolución de 11 de febrero de 2026, Directora Territorial Barcelona Lídia Frias Forcada)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana cerrada (último commit 2026-07-30, 21 días): los parches se pueden aplicar. Es la ficha más singular del sector por masa —195 frases exclusivas, boilerplate 0,015— y a la vez la más aislada: es la única de las nueve sin párrafo «Comparación con otras provincias del sector», y sus «Convenios relacionados» apuntan a Construcción Bizkaia y Hostelería Barcelona en vez de a las ocho hermanas del metal. Ahí pierde gratis la ventaja de corpus que las demás sí explotan. Dos avisos para otros ejes: (1) el bloque FAQPage de JSON-LD (líneas 48-53) contiene seis preguntas que NO son las ocho visibles en la página (líneas 589-624) — marcado estructurado sin correlato visible; (2) la línea 507 fija el salario de los contratos formativos en 1.184 €/mes «importe idéntico al SMI 2025», correcto para 2025 pero conviene vigilar que no se lea como cifra de 2026. Parche de investigación para 8.4, no de relleno: el metal de Barcelona es el del cinturón de la automoción; comprobar en REGCON qué convenios de empresa rigen en las grandes plantas de vehículos de la provincia y decir en dos frases si el provincial les aplica y si aplica a sus proveedoras de primer nivel, que es donde está la mayoría de esas 200.000 personas."
+}

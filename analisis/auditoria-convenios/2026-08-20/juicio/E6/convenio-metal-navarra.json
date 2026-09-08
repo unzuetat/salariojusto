@@ -1,0 +1,176 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-navarra",
+  "metricas": [
+    {
+      "id": "7.8",
+      "nota": 2,
+      "razon": "Sigue el canon entero y su rasgo estructural propio -el Salario Garantizado por grupo en lugar de categorías sueltas- abre el cuerpo con sección propia y vuelve integrado en el callout comparativo que sigue a la tabla, no en un apéndice. Otros contenidos exclusivos (teletrabajo de 50 €/mes, plus de centros sanitarios, IT por enfermedad común desde el primer día) están donde el lector los buscaría, dentro de Pluses y de Baja médica. No llega a 3 por el mismo motivo que su hermana metal-alava: el rasgo más territorial de todos, el régimen fiscal foral, vive únicamente como viñeta del cajón final; es justo el contenido que una normalización de formato se llevaría por delante sin que nadie lo notara.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 251,
+          "cita": "El convenio del metal de Navarra no publica un salario para cada oficio suelto, sino un Salario Garantizado anual para cada uno de sus 7 Grupos Profesionales (Art. 70)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 386,
+          "cita": "Compensación de 50 €/mes brutos para el trabajo a distancia a jornada completa (100% remoto), proporcional en otros casos."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 434,
+          "cita": "Régimen fiscal foral de Navarra: el IRPF que se te retiene es el foral navarro, no el común estatal."
+        }
+      ],
+      "parche": "Rescatar el régimen foral del cajón y darle cuerpo debajo de la tabla, tras la línea 287: «Ojo al neto: el IRPF de Navarra es foral. Las cuantías de esta tabla son brutas; la retención que se te aplica la fija la Hacienda Foral de Navarra, no la normativa estatal, de modo que con el mismo bruto tu neto no coincide con el de una provincia de régimen común. Antes de comparar tu nómina con la de un compañero de otra provincia, compara brutos.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Particularidades del convenio del metal de Navarra» (425-435): siete de sus nueve viñetas rehacen lo ya desarrollado arriba -Salario Garantizado (251-256), paga de 400 € (306), trienios (365), acuerdo de competitividad y bolsa de horas (317-321), teletrabajo (385), IT (393-398) y vigencia (422)-. Solo dos aportan algo que no está en ninguna sección del cuerpo: la subrogación limitada (que únicamente reaparece en la FAQ 493) y el régimen foral. Comprobado viñeta a viñeta: la sección no se puede borrar sin rescatar antes esas dos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 429,
+          "cita": "Antigüedad por trienios de valor fijo en euros e ilimitados, no por porcentaje (Art. 46)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 366,
+          "cita": "Trienios en euros, no un porcentaje, e ilimitados. Valores 2026: 1.º 177,53 €, 2.º 355,09 €"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 433,
+          "cita": "Subrogación limitada a las contratas de mantenimiento con la Administración Pública (Art. 50.F); en el resto, sin subrogación por ser convenio de industria."
+        }
+      ],
+      "parche": "Suprimir el h2 «Particularidades» y su lista (425-436) después de reubicar sus dos viñetas útiles: la del régimen foral, bajo la tabla (ver 7.8), y la de la subrogación, como último párrafo de «¿Este convenio te cubre?» (tras el callout de la línea 267): «Y si cambia la contrata: al ser un convenio de industria no hay subrogación general, pero el Art. 50.F sí obliga a subrogar al personal de las contratas de mantenimiento con la Administración Pública cuando cambia la adjudicataria.» Actualizar el índice de la línea 229.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "Orden razonable: el h1 lleva la horquilla 26.112-31.750 €, el card de datos clave la repite en la primera pantalla y el índice salta a la tabla; respuesta_directa.cifra_en_primeros_bloques viene en true. No es 3 porque la tabla es el tercer h2 (270) y por delante van dos secciones de contexto; sí juega a favor que el callout de comparación provincial vaya DESPUÉS de la tabla y no antes, que es donde estorbaría.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 205,
+          "cita": "Convenio del Metal de Navarra: tablas 2026 de 26.112 € a 31.750 €"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 295,
+          "cita": "Comparación con otras provincias del sector. El metal de Navarra fija un Salario Garantizado por grupo, como el metal de Madrid"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "La composición y los extremos del Salario Garantizado se cuentan tres veces de cuerpo a cuerpo con las mismas cifras: el callout de la sección de apertura, la nota de lectura de la tabla y la primera viñeta del cajón final. La tercera no añade nada a las dos anteriores.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 253,
+          "cita": "El Salario Garantizado ya incluye el Salario Base, el Plus de Convenio y el Plus de Carencia de Incentivos, y se abona en 14 pagas. Un peón o aprendiz se encuadra en el Grupo 7 (26.111,60 €/año), y un titulado superior con responsabilidad de dirección en el Grupo 1 (31.750,36 €/año)."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 272,
+          "cita": "Cómo leer la tabla: el Salario Garantizado es el bruto anual antes de IRPF y Seguridad Social e incluye ya las dos pagas extra."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 427,
+          "cita": "Salario Garantizado por 7 grupos, de 26.111,60 € (G7) a 31.750,36 € (G1) en 2026, con suelo de entrada de los más altos del sector."
+        }
+      ],
+      "parche": "Al suprimir el cajón (ver 8.1) desaparece la tercera repetición. De las dos que quedan, recortar la nota de lectura de la tabla (línea 272) a lo que no está dicho arriba: «Cómo leer la tabla: el Salario Garantizado no incluye la antigüedad ni los pluses de toxicidad, penosidad y peligrosidad, que se suman aparte. Las categorías orientativas de cada grupo salen del Art. 70.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "El término que define esta ficha se explica en su primer uso y traducido a euros: «Salario Garantizado» se define como la retribución bruta mínima del grupo y se resuelve con los dos extremos (26.111,60 € y 31.750,36 €); «carencia de incentivos» se explica por quién la cobra y con su cuantía si se percibe aparte (111,96 €/mes); «trienios» se explica por contraste con los quinquenios y con la tabla de valores. No es 3 porque «ultraactividad», el término del que depende qué cobra el lector a partir del 1 de enero de 2027 -y la ficha avisa de que 2026 es el último año-, aparece una sola vez, en una viñeta del cajón, sin explicar qué significa.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 382,
+          "cita": "Para el personal de empresas sin sistema de primas. Ya está incluido en el Salario Garantizado; quien lo cobre aparte percibe 111,96 €/mes en 2026."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 435,
+          "cita": "convenio denunciado, en su último año, con ultraactividad posterior y revisión por IPC prevista en enero de 2027."
+        }
+      ],
+      "parche": "Explicar el término donde ya se habla del calendario, ampliando el callout «Ojo con el calendario» (línea 422): «…y el convenio está denunciado con efectos 31 de diciembre de 2026. A partir de esa fecha entra en ultraactividad: el texto vencido se sigue aplicando mientras se negocia el siguiente, así que tus tablas no bajan por el simple hecho de que caduque la vigencia.»",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 5 · UGT 5 y dice_los_sindicatos 1, y todos los usos son legítimos: firmantes del convenio en el card, en el cierre del bloque de reclamar y en fuentes. La ficha no le atribuye a dos siglas la voz de toda la representación. No es 3 porque en un territorio donde ELA y LAB tienen implantación industrial la tarjeta de asesoría se limita a las dos firmantes, sin decirle nada a quien no está afiliado a ninguna de ellas: las hermanas vascas metal-alava y metal-bizkaia sí abren esa tarjeta a las demás organizaciones.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 446,
+          "cita": "Firmantes: ANEM y APMEN (patronales) y los sindicatos FICA-UGT y CCOO."
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 464,
+          "cita": "Sindicatos firmantes (FICA-UGT y CCOO de Industria). Asesoría a personas afiliadas del metal en Navarra."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es el del cluster: 1 h1, 17 h2, 6 h3 de FAQ, saltos_jerarquia vacío y el mismo orden canónico que convenio-metal-sevilla (23/16/6) y que su hermana convenio-metal-gipuzkoa (23/16/6), con un h2 más por la sección de baja médica. Igual que las otras cuatro fichas de esta tanda, no lleva el bloque «En 30 segundos» de alava/asturias/barcelona/sevilla y lo sustituye por un h2 gancho; no lo penalizo porque el canon de referencia, convenio-hosteleria-madrid, tampoco lo tiene, pero conviene decidir cuál de las dos sub-plantillas es la buena.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 250,
+          "cita": "Un salario garantizado por grupo, no por categoría suelta"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 254,
+          "cita": "En 30 segundos · Qué es."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 2,
+      "razon": "Un solo nombre por concepto en todo lo que decide la cifra: «Salario Garantizado» se escribe igual y significa lo mismo en el card, en la sección de apertura, en la nota de lectura de la tabla, en la tabla de la subida y en la FAQ; y sus tres componentes internos se nombran igual en la sección de apertura y en la FAQ de pagas («Salario Base + Plus de Convenio»). Tampoco hay dobles nombres para la paga de 400 €: es «paga no consolidable» en la tabla y en el cajón. No es 3 porque en la tabla de pagas la composición se abrevia y el lector tiene que volver arriba para saber que el Plus de Carencia de Incentivos no entra en las extras.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 304,
+          "cita": "Extra de julio1.ª semana de julio30 días de Salario Base + Plus de Convenio"
+        },
+        {
+          "archivo": "convenio-metal-navarra.html",
+          "linea": 488,
+          "cita": "Catorce: doce mensualidades más dos extras (julio y 22 de diciembre) de 30 días sobre Salario Base + Plus de Convenio (Art. 44)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Capa 0, no puntuado aquí: 4 tablas sin scope ni caption (11.1*), un bloque de más de 100 palabras (el callout comparativo de la línea 295, 107 palabras) y verde_en_tablas = 0, o sea que cumple la norma de cifras en tinta neutra. Ese callout largo, pese al aviso, es de lo mejor de la ficha: es el único sitio del cluster donde se compara el suelo de entrada de cinco provincias con cifras; si se fragmenta, que no se pierda. Ventana de medición abierta (último commit 4-ago, 15 días): los parches van marcados como aplazados."
+}

@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-metal-zaragoza",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 2,
+      "razon": "13 entrantes por encima de la mediana del corpus (10), pero concentrados: sólo tres hermanas la enlazan (Álava, Asturias y Sevilla) y Asturias aporta ella sola cuatro de esos enlaces desde la prosa. Las seis hermanas restantes, incluidas Barcelona y Madrid con las que comparte modelo de antigüedad, no la citan.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-zaragoza.json",
+          "linea": null,
+          "cita": "\"entrantes_n\": 13, \"entrantes_desde\": [\"convenio-metal-alava.html\",\"convenio-metal-asturias.html\",\"convenio-metal-sevilla.html\",\"convenios.html\",\"index.html\"]"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 460,
+          "cita": "<a href=\"/convenio-metal-zaragoza.html\">Zaragoza</a> paga el 25% de la base"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 3,
+      "razon": "Dos momentos distintos del cuerpo, y en ambos el enlace cierra la duda que el párrafo acaba de abrir: el comparativo de suelos salariales tras las tablas y, más claro aún, el de antigüedad congelada, donde el enlace es la prueba de la afirmación. Sólo Asturias hace algo equivalente en el clúster; el resto se limita a un párrafo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 449,
+          "cita": "<strong>Antigüedad: sin devengo activo.</strong> El metal de Zaragoza no reconoce nuevos tramos de antigüedad."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 357,
+          "cita": "el peón parte de <strong>21.274 €/año</strong>, cerca de la <a href=\"/convenio-metal-madrid.html\">Operaria/o Auxiliar de Madrid</a> (20.687 €)"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 449,
+          "cita": "Es el mismo modelo que el <a href=\"/convenio-metal-barcelona.html\">metal de Barcelona</a> y el <a href=\"/convenio-metal-madrid.html\">de Madrid</a>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "Sólo cubre una dirección: 6 hermanas del metal —de las más altas del clúster— y cero enlaces a otro sector, cuando el corpus tiene publicadas convenio-hosteleria-zaragoza.html y convenio-limpieza-zaragoza.html. Es la dirección que más valor tiene y aquí falta por descuido, no por falta de destino.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-zaragoza.json",
+          "linea": null,
+          "cita": "\"a_hermanas_mismo_sector\": 6, \"a_otro_sector_misma_provincia\": []"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 556,
+          "cita": "<h2>Guías relacionadas</h2>"
+        }
+      ],
+      "parche": "Dos sitios. (1) En la sección '¿Este convenio te cubre?', tras la línea 264 (final del listado de actividades cubiertas), añadir: '<p><strong>¿Y si no es tu sector?</strong> Si trabajas en un bar o un hotel de Zaragoza te aplica el <a href=\"/convenio-hosteleria-zaragoza.html\">convenio de hostelería de Zaragoza</a>; si limpias oficinas o comunidades, el <a href=\"/convenio-limpieza-zaragoza.html\">convenio de limpieza de edificios y locales de Zaragoza</a>.</p>' — ahí porque es donde el lector que se equivocó de sector todavía está decidiendo si esta página es la suya. (2) En 'Guías relacionadas', tras la línea 563, añadir las dos entradas equivalentes para quien llegue al final.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "6.5",
+      "nota": 3,
+      "razon": "Es la única ficha del clúster cuyos anchors están escritos para la frase concreta: en vez de enlazar 'Madrid' o 'Convenio del Metal — Madrid', enlaza la categoría que se está comparando, de modo que el anchor lleva puesto el motivo del salto. Las otras ocho usan el topónimo o el rótulo clonado.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-metal-zaragoza.json",
+          "linea": null,
+          "cita": "\"anchors_genericos\": []"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 357,
+          "cita": "cerca de la <a href=\"/convenio-metal-madrid.html\">Operaria/o Auxiliar de Madrid</a> (20.687 €) y por debajo del <a href=\"/convenio-metal-valencia.html\">Peón/a de Valencia</a> (22.462 €)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "El puente está en la sección correcta pero no en el punto de la necesidad: el enlace cierra la sección colgado del párrafo de código REGCON y firmantes, no del paso que lo pide. El paso que manda pedir la nómina detallada por escrito no enlaza plantilla-solicitar-nominas.html y el que fija el plazo de un año por mensualidad no enlaza plantilla-reclamar-atrasos-convenio-salarial.html. Es el mismo patrón que este eje puntuó 1 en convenio-metal-sevilla, con el mismo bloque y el mismo anchor.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 482,
+          "cita": "<h2 id=\"reclamar\">¿Cobras menos de lo que fija tu grupo?</h2>"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 490,
+          "cita": "Firmantes: <strong>FEMZ</strong> (patronal) y los sindicatos <strong>CCOO de Industria de Aragón y UGT-FICA Aragón</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"
+        }
+      ],
+      "parche": "Dos enlaces, cada uno en su paso. En la línea 486, donde se pide la nómina detallada: '…si los conceptos no aparecen separados (art. 29.1 del Estatuto de los Trabajadores). <a href=\"/plantilla-solicitar-nominas.html\">Usa esta plantilla para pedírselas a tu empresa por escrito</a>.' En el paso del plazo, antes de la línea 490: 'Plazo: un año por cada mensualidad (art. 59.2 ET), así que <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">reclama por escrito la diferencia de las últimas 12 mensualidades</a> antes de que prescriban.' Ahí y no al cerrar la sección porque cada plantilla resuelve exactamente la acción que el paso acaba de exigir; el enlace genérico a la guía puede quedarse donde está.",
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Zaragoza es el mejor ejemplo del clúster en enlace saliente contextual y anchor, y a la vez el peor caso de la dirección cross-sector evitable: tiene dos fichas hermanas de provincia publicadas y no enlaza a ninguna. Si se arregla ese punto, es la ficha modelo del eje. La ficha advierte en la línea 267 de que el comercio del metal se rige por otro convenio, sin enlace posible (no hay ficha de comercio del metal de Zaragoza); en cambio Barcelona y Bizkaia sí tienen esa ficha hermana y no la advierten ni la enlazan."
+}

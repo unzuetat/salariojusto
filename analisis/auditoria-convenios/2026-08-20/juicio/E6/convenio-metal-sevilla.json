@@ -1,0 +1,262 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-sevilla",
+  "metricas": [
+    {
+      "id": "7.2",
+      "nota": 2,
+      "razon": "tablas.verde_en_tablas = 0 en las doce tablas, y la ficha hace lo que sus hermanas de limpieza no hacen: define td.sal en var(--ink), de modo que la columna del total diario —la cifra que más se mira— sale en tinta neutra. Es el mismo criterio de metal-barcelona y metal-bizkaia. No es 3 porque el verde también viste las etiquetas de la nota editorial y las viñetas de check-list, así que no queda reservado al sello.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 150,
+          "cita": "td.sal{font-weight:700;color:var(--ink);text-align:right;white-space:nowrap;}"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 294,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">Oficial/a de 1ª</td><td class=\"num\">40,27</td><td class=\"num\">7,86</td><td class=\"num\">11,62</td><td class=\"sal\">59,75 €</td>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 191,
+          "cita": ".nota-editorial strong{color:var(--green);}"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.4",
+      "nota": 3,
+      "razon": "Es la única ficha del piloto que cumple la norma entera: la nota editorial va en cuatro sub-párrafos, cada uno con su etiqueta en negrita, y las etiquetas anticipan de verdad lo que viene —«Estructura» abre el hallazgo de que aquí se cobra por día, «Actualización» da el +3% y su cláusula de garantía, «Particularidades» resume las mejoras sociales—. parrafos.largos_100 registra un solo párrafo largo en toda la página, y es la nota metodológica al pie de la tabla, donde el detalle es necesario. Esto es lo que comercio-madrid debería copiar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 255,
+          "cita": "<p style=\"margin-bottom:10px;\"><strong>Estructura.</strong> A diferencia de otros convenios del metal, aquí el salario se fija <strong>por día</strong>, no por mes ni por año, en tres columnas del Anexo II"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 256,
+          "cita": "<p style=\"margin-bottom:10px;\"><strong>Actualización.</strong> Subida del <strong>+3%</strong> en 2026 (art. 14.1), con efectos desde el 1 de enero, verificada contra el BOP núm. 26 (9-feb-2026)."
+        },
+        {
+          "archivo": "convenio-comercio-madrid.html",
+          "linea": 197,
+          "cita": "<strong>En 30 segundos. Qué es.</strong> El Convenio del Comercio Vario de la Comunidad de Madrid (código 28000805011982) regula el comercio mayorista y minorista"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.5",
+      "nota": 2,
+      "razon": "headings.h1 = 1 y saltos_jerarquia = []; varios h2 llevan la cifra dentro («Jornada — 1.759 horas al año», «Vacaciones — 30 días naturales», «La subida de 2026: +3% con cláusula de garantía»). No llega a 3 porque tres de los encabezados largos siguen siendo rótulos genéricos que no orientan: «Pluses y complementos», «Particularidades del convenio del metal de Sevilla» y «Recursos oficiales y sindicales».",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 462,
+          "cita": "Jornada — 1.759 horas al año"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 484,
+          "cita": "Pluses y complementos"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 552,
+          "cita": "<h2 id=\"particularidades\">Particularidades del convenio del metal de Sevilla</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "7.8",
+      "nota": 3,
+      "razon": "Sigue el canon (sello, índice, datos clave, tabla, jornada, vacaciones, pluses, FAQ, fuentes, quién audita) y su contenido exclusivo no está pegado al final ni encapsulado en un apéndice: el polo aeronáutico y la estructura de salario diario son los dos h2 que abren la ficha, antes de la tabla, porque son lo que hace distinta a Sevilla. La normalización de formato aquí no ha aplanado nada: la columna «≈ bruto/año» con su fórmula explicada es una adaptación del canon a un convenio que no fija anual.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 260,
+          "cita": "<h2 id=\"aeronautico\">Sevilla, capital aeronáutica: a quién cubre el convenio</h2>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 274,
+          "cita": "<h2 id=\"salario-diario\">Un salario que se fija por día, no por mes</h2>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 436,
+          "cita": "* <strong>≈ bruto/año — estimación orientativa, no cifra oficial.</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Particularidades del convenio del metal de Sevilla»: sus nueve viñetas no aportan nada que no esté ya en la nota editorial, en la sección de salario diario, en la de subida 2026 o en la de protección social, que están todas por encima en la misma página. Es un resumen colocado después del desarrollo, y quien llegue hasta ahí ya lo ha leído todo dos veces.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 552,
+          "cita": "<h2 id=\"particularidades\">Particularidades del convenio del metal de Sevilla</h2>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 555,
+          "cita": "<li><strong>Salario por día</strong> en 3 columnas (A base + B asistencia + C productividad), no por mes ni por año (Anexo II).</li>"
+        }
+      ],
+      "parche": "Suprimir el h2 y su lista, y salvar lo único que no está dicho arriba llevándolo a la sección que le corresponde: la bolsa horaria de 220 h y el máximo de 80 horas extra al año, a «Jornada — 1.759 horas al año»; el salario de nuevo ingreso del 85% durante la adaptación (Anexo VII), al pie de la tabla salarial; y «Vence el 31-dic-2026: vigilar la renegociación», al card de datos clave junto a la vigencia. El índice pierde una entrada y la ficha, ninguna información.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "El card de datos clave da el rango («52,86 € – 102,23 €/día trabajado») en la primera pantalla y el índice permite saltar directo a la tabla, así que nadie queda atrapado en el contexto. No es 3 porque entre el resumen y la tabla se interponen dos h2 de contexto —el aeronáutico y el del salario diario—, y respuesta_directa.cifra_en_primeros_bloques viene en false: la cifra que se busca (cuánto cobra un peón o una peona) no aparece hasta la línea 279.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 246,
+          "cita": "<div class=\"stat-label\">Retribución</div><div class=\"stat-value\">52,86 € – 102,23 €/día trabajado</div>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 284,
+          "cita": "<h2 id=\"tabla-salarial\">Tablas salariales 2026 — las 76 categorías (por día)</h2>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "El cuarto sub-párrafo de la nota editorial y la lista de «Particularidades» son la misma enumeración escrita dos veces: pagas de 30 días sobre A+B+C, horas extraordinarias habituales suprimidas con máximo de 80 al año, 100% del salario en baja por accidente desde el primer día (art. 26) y ascensos solo por concurso-oposición (art. 8.2). Aparecen con los mismos artículos y casi las mismas palabras a 300 líneas de distancia. No es 0 porque la nota editorial es, por definición, un resumen: el problema no es que resuma, es que el segundo bloque vuelva a resumir lo ya desarrollado.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 257,
+          "cita": "<strong>Particularidades.</strong> 2 pagas extra de 30 días sobre A+B+C; <strong>horas extraordinarias habituales suprimidas</strong> (máx. 80/año); <strong>100% del salario en baja por accidente</strong> desde el primer día (art. 26); <strong>póliza de 15.000 €/7.500 €</strong> (art. 19); ascensos solo por concurso-oposición (art. 8.2)."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 558,
+          "cita": "<li><strong>Horas extraordinarias habituales suprimidas</strong>, máx. 80/año; bolsa horaria de 220 h (Arts. 13 y 14.6).</li>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 559,
+          "cita": "<li><strong>100% del salario en baja por accidente</strong> desde el primer día y en hospitalización por cualquier causa (Art. 26).</li>"
+        }
+      ],
+      "parche": "Es el mismo parche que el de 8.1: eliminar la lista de «Particularidades» y repartir las tres viñetas que aportan algo nuevo en las secciones donde el lector las busca. La nota editorial se queda como único resumen de la ficha.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.6",
+      "nota": 3,
+      "razon": "jerga marca cuatro términos y los cuatro con explicacion_cerca = true, pero lo que la separa del resto es que traduce el tecnicismo a dinero con un caso concreto: tras explicar qué son las columnas A, B y C, hace la cuenta de un oficial u oficiala de 1.ª hasta los 59,75 € por día trabajado, y luego explica por qué el anual es una estimación y cuántos días laborables la mueven. Eso es «explicado con un ejemplo de qué implica para el bolsillo».",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 279,
+          "cita": "Por ejemplo, un <strong>oficial u oficiala de 1.ª</strong> tiene un salario base (A) de <strong>40,27 €/día</strong>, un plus de asistencia (B) de <strong>7,86 €</strong> y un plus de productividad (C) de <strong>11,62 €</strong>: <strong>59,75 € por día trabajado</strong>."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 277,
+          "cita": "<strong>B · Plus de asistencia</strong>: se cobra todos los días excepto domingos y festivos, y también los sábados (art. 14.2)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "norma.sindicatos da CCOO 5 · UGT 5 y norma.dice_los_sindicatos = 2: las menciones son de firmantes del convenio, uso legítimo como fuente del dato, y el texto usa el plural genérico cuando habla de la representación. No es 3 porque en el metal sevillano la representación no se agota en esas dos siglas y la ficha no da ningún porcentaje que lo sitúe, como sí hace limpieza-asturias con USO.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 254,
+          "cita": "firmado por la patronal <strong>FEDEME</strong> y los sindicatos <strong>CCOO y UGT</strong>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 573,
+          "cita": "Firmantes: <strong>FEDEME</strong> (patronal) y los sindicatos <strong>CCOO y UGT</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "11.1",
+      "nota": 1,
+      "razon": "tablas.sin_th = 0 en las doce tablas, pero sin_scope = 12 y sin_caption = 12. Aquí duele más que en ninguna otra ficha del piloto: son seis columnas (A, B, C, total diario y estimación anual) repartidas en diez tablas de familia profesional que se llaman todas igual por dentro. Sin caption, un lector de pantalla que abra el tercer acordeón no tiene forma de saber de qué familia es la tabla que está oyendo; sin scope, no sabe si el número es la columna A o la C.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 291,
+          "cita": "<table>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 290,
+          "cita": "<summary>Profesionales de oficio y personal obrero <span class=\"fam-meta\">7 categorías · 52,86–59,75 €/día</span></summary>"
+        }
+      ],
+      "parche": "Poner scope=\"col\" en los seis th de cada tabla, convertir la celda de categoría en th scope=\"row\", y dar a cada tabla un caption que repita el nombre de su familia, que ya está en el summary del acordeón: «<caption style=\"caption-side:top;text-align:left;font-size:13px;color:var(--ink-light);padding-bottom:8px;\">Profesionales de oficio y personal obrero: salario diario 2026 en euros por columna A (base), B (asistencia) y C (productividad), total por día trabajado y estimación de bruto anual (Anexo II, BOP núm. 26 de 9-feb-2026).</caption>». Repetir con el rótulo de cada una de las diez familias y en las dos tablas de pagas y pluses.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es el del corpus y coincide con el de las otras fichas del cluster metal: sello, índice compacto, card de datos clave, nota editorial, ámbito, tabla, pagas, jornada, vacaciones, pluses, FAQ, fuentes y firma. La única singularidad estructural —las diez tablas dentro de acordeones <details> por familia profesional— está justificada por las 76 categorías y no rompe el patrón, lo adapta.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 219,
+          "cita": "Índice del convenio"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 289,
+          "cita": "<details class=\"fam\" open>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 2,
+      "razon": "Las columnas se llaman A, B y C con el mismo desarrollo (salario base, plus de asistencia, plus de productividad) en las cinco veces que aparecen: nota editorial, callout de las tres columnas, cabecera de tabla, FAQ y particularidades. Y el inclusivo es coherente en el punto donde otras fichas fallan, las categorías: la tabla dice «Oficial/a de 1ª» y el cuerpo desdobla «un peón o peona» y «un ingeniero o ingeniera». Los seis candidatos masculinos que marca norma son «Auxiliar» y «Especialista», que son epicenos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 282,
+          "cita": "Un <strong>peón o peona</strong> suma <strong>54,69 €/día</strong> y un <strong>ingeniero o ingeniera</strong>, <strong>102,23 €/día</strong>."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 295,
+          "cita": "<td class=\"cat\">Oficial/a de 1ª Verificador/a</td>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Es la ficha que debe usarse como referencia de forma dentro del piloto, por encima incluso del canon: hace bien lo que hosteleria-madrid hace regular (nota editorial fragmentada, cifras en tinta neutra, jerga con ejemplo monetario) sin perder ni un gramo de lo exclusivo de la provincia. Su único defecto real es el resumen duplicado del final, y se arregla borrando, no escribiendo. Fuera de mi eje: la columna «≈ bruto/año» es una estimación propia de SalarioJusto marcada con asterisco y explicada, lo cual está bien resuelto formalmente, pero conviene que el eje de verdad confirme que la fórmula (365 días de A + 299 de B y C + 2 pagas) es la que el convenio permite deducir y no un cálculo que la ficha atribuya al boletín."
+}

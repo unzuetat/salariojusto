@@ -1,0 +1,127 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-bizkaia",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Tiene la mejor procedencia de cifra de las nueve: los 22.034,57 €/año no son un derivado nuestro sino el salario mínimo garantizado que fija literalmente el Art. 3.2 del convenio, y encima añade el puesto más buscado (Oficial 1ª). Lleva unidad explícita ('€/año'), que evita el malentendido del piloto. Se queda en 2 porque a 77 caracteres el recorte cae justo sobre la segunda cifra —la del oficial, que es la que atrae la consulta— y porque no arranca por el número. El dato de operación respalda que la fórmula funciona: 4,68% de CTR en posición media 8,34 (gsc_28d), la única de las nueve con medición.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Bizkaia 2026: salario mínimo 22.034 €/año, Oficial 1ª 23.509 €</title>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 222,
+          "cita": "El salario bruto anual mínimo garantizado de 22.034,57 €/año (Art. 3.2) actúa como suelo"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 185,
+          "cita": "<h1>Convenio Metal Bizkaia 2026: <em>salario mínimo garantizado 22.034 €/año, Oficial 1ª 23.509 €/año</em></h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "2.5",
+      "nota": 1,
+      "razon": "La cifra llega tarde y se corta a mitad. Con 322 caracteres, lo que el buscador muestra se lo comen el código REGCON de quince dígitos y la referencia al artículo 86.3 del ET —dos cosas que no busca nadie— y el euro de la primera cuantía cae fuera: el lector ve '...Salario bruto anual mínimo 22.034,' con el número partido. Motivo para entrar sí hay (la ultraactividad), pero llega antes la jerga que la cuantía. Es la peor colocación de cifra del sector junto con Valencia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 7,
+          "cita": "Tablas salariales del convenio Siderometalúrgica Bizkaia (REGCON 48001985011981) vigentes en 2026 por ultraactividad ET 86.3. Salario bruto anual mínimo 22.034,57 €/año garantizado, Oficial 1ª 23.509,51 €, Ingeniero/a 38.246 €."
+        }
+      ],
+      "parche": {
+        "descripcion": "Cifra delante, jerga fuera y el código REGCON al cuerpo, que es donde sirve. 158 caracteres.",
+        "texto_propuesto": "22.034,57 €/año es el salario mínimo garantizado del metal de Bizkaia en 2026; el Oficial 1ª, 23.509,51 €. Las tablas de 2025 siguen vigentes: el IPC no las subió."
+      },
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "La prosa visible sostiene la cifra principal: la frase del suelo garantizado lleva cuantía, unidad y artículo, y el callout de ultraactividad explica sin depender del párrafo anterior por qué unas tablas de 2025 rigen en 2026. No sube a 3 por una asimetría llamativa: las frases realmente autocontenidas de esta ficha —las que llevan a la vez convenio, código REGCON, provincia, cuantía, año de la tabla y año de aplicación— solo existen dentro del JSON-LD, porque la ficha no tiene FAQ visible. Las siete preguntas están en el schema y ninguna en el cuerpo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 53,
+          "cita": "El Art. 3.2 del Convenio Colectivo Sectorial de la Industria Siderometalúrgica de Bizkaia (REGCON 48001985011981) establece un salario bruto anual mínimo garantizado de 22.034,57 €/año para 2025, cuantía que sigue vigente en 2026 por ultraactividad del Art. 86.3 del Estatuto de los Trabajadores."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 222,
+          "cita": "El salario bruto anual mínimo garantizado de 22.034,57 €/año (Art. 3.2) actúa como suelo: las categorías cuyo salario base teórico no llega a esa cifra reciben automáticamente el \"Complemento de Salario Mínimo Garantizado\""
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 218,
+          "cita": "<strong>Convenio en ultraactividad — tablas 2025 vigentes en 2026 sin actualización.</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El título de la tarjeta funciona como caption de verdad: dice a quién se aplica, en qué periodo y en qué unidad ('Personal obrero 2025-2026 · €/año brutos'), así que la fila extraída no viaja desnuda; y el pie declara la fórmula del bruto anual, cosa que casi nadie hace. Roza el 3 y no lo alcanza porque el encabezado de columna, que es lo que un extractor de tablas lee, dice solo 'Bruto anual' sin año, y porque las cuatro tablas siguen sin caption; el peso de la desambiguación recae en un div de título que un parser puede no asociar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 225,
+          "cita": "<div class=\"card-title\">Personal obrero 2025-2026 · €/año brutos</div>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 231,
+          "cita": "<th style=\"text-align:right;\">Salario base diario</th>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 284,
+          "cita": "Cálculo del bruto anual: salario base × 425 días (365 año + 60 pagas extras) + Carencia de Incentivo y Plus de Convenio × 299 días (365 - 52 domingos - 14 festivos) + complemento garantizado si procede."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 429,
+          "cita": "<th style=\"text-align:right;\">Cuantía 2025-2026</th>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "pct_huerfanas 0,075 es el más alto de los nueve, pero sigue en el tramo de 2, y el HTML sostiene la nota: seis pies de fuente colgados de sus respectivas tablas, con artículos, cálculo declarado y una columna entera de 'Artículo' dentro de dos de ellas. No sube porque las dos secciones huérfanas son las de mayor tráfico potencial ('Cómo verificar si tu nómina cumple el convenio' y el estado de la negociación) y porque de los tres enlaces externos, dos son a un comunicado sindical y solo uno al PDF del BOB.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 284,
+          "cita": "<p class=\"source-footer\">Cuantías brutas anuales antes de IRPF y Seguridad Social."
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 427,
+          "cita": "<th>Concepto</th>"
+        },
+        {
+          "archivo": "convenio-metal-bizkaia.html",
+          "linea": 596,
+          "cita": "El \"Complemento de Salario Mínimo Garantizado\" debe aparecer como concepto separado en 12 mensualidades de igual cuantía si tu categoría está entre las que no alcanzan por sí solas los 22.034,57 €/año."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana cerrada (21 días): parches ejecutables. Lo más relevante que he visto aquí desborda mi eje y lo dejo anotado para quien lleve estructura y datos estructurados: la ficha declara un FAQPage con siete preguntas y no tiene ni una sola pregunta visible en el HTML. Para mi eje el efecto es doble y contradictorio: por un lado son las respuestas mejor desambiguadas de todo el sector metal (convenio, código, provincia, cuantía, año de tabla y año de aplicación en la misma frase); por otro, ningún humano las lee y las directrices de datos estructurados piden que el contenido esté visible. Volcar esas siete respuestas al cuerpo es, probablemente, el cambio de citabilidad más rentable de las nueve fichas: el texto ya existe y está bien escrito. Nota de contexto: es la única ficha con GSC en el determinista y su CTR (4,68% en posición 8,34) está muy por encima de la media del sitio, lo que refuerza que la fórmula con cifra al frente funciona."
+}

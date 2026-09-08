@@ -1,0 +1,143 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-zaragoza",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "La ficha construye una tesis que el BOPZ no contiene y la sostiene con artículos: que la tabla de Zaragoza parece baja porque es un suelo y el salario real de automoción se forma con primas y ex categoría. No es un adorno, es la columna vertebral del texto —abre la página, se repite en la comparativa, en la FAQ y en la firma de autoría— y convierte una transcripción en una explicación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 253,
+          "cita": "<strong>Importante: las tablas son mínimos, no el salario real.</strong> Las cifras del convenio (de <strong>21.274 €</strong> en el grupo 7 a <strong>30.469 €</strong> en el grupo 1) son el suelo garantizado. En la práctica, sobre todo en <strong>automoción</strong> (Stellantis y su industria auxiliar), el salario real es más alto porque se suman las <strong>primas de productividad</strong> (Art. 17) y el complemento personal <strong>ex categoría</strong> (Art. 22). Por eso la tabla parece contenida frente a otras provincias."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 550,
+          "cita": "Las cuantías están transcritas de la publicación oficial; señalamos de forma explícita que las tablas son mínimos de convenio y que el salario real incorpora primas y ex categoría, para no inducir a error."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 357,
+          "cita": "el peón parte de <strong>21.274 €/año</strong>, cerca de la <a href=\"/convenio-metal-madrid.html\">Operaria/o Auxiliar de Madrid</a> (20.687 €) y por debajo del <a href=\"/convenio-metal-valencia.html\">Peón/a de Valencia</a> (22.462 €)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 3,
+      "razon": "Ninguna cuantía se presenta como derecho incondicional: la paga de 400 € lleva sus dos requisitos (jornada y permanencia), las vacaciones su antigüedad mínima, la subrogación su porcentaje y su plazo de adscripción, y la antigüedad se responde en negativo advirtiendo del caso límite que más engaña —quien entra hoy no genera tramos—.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 390,
+          "cita": "La <strong>paga de 400 €</strong> exige jornada completa (o reducida por conciliación) y permanencia del 1-ene-2023 al 31-dic-2025; es proporcional en jubilaciones, fin de contrato temporal y nuevas contrataciones."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 535,
+          "cita": "<strong>Ninguna activa.</strong> Solo un complemento <strong>ad personam</strong> para quienes lo consolidaron a 31 de diciembre de 1996 (Art. 16). Quien entra hoy no genera nuevos tramos."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 538,
+          "cita": "<strong>Sí</strong>, en contratas de montaje, instalación y mantenimiento con administraciones o empresas privadas (tendidos eléctricos, telecom, ferroviario, ITV, gas, renovables…): se subroga al menos el <strong>60%</strong> de la plantilla, con 6 meses mínimos de adscripción (Art. 7)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 2,
+      "razon": "Escribe al lado de cada fuente su localizador completo —BOPZ núm. 293 de 23-dic-2023 para el articulado y BOPZ de 21-feb-2026, con el acta paritaria de 15-ene-2026, para las cifras— y enlaza al documento exacto del SMI en el BOE; pero los dos enlaces al BOPZ apuntan a la sede del boletín, así que el último paso de la comprobación lo repite el lector.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 543,
+          "cita": "<strong>Revisión salarial 2026</strong>, acta de la comisión paritaria de 15-ene-2026, publicada en el BOPZ de 21-feb-2026. Fuente de todas las cifras salariales (anexo I retribución bruta anual, cálculo prima, ex categoría), nocturnidad, plus de transporte y distancia, dietas y seguro de invalidez y muerte (+2,5% sobre 2025)."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 496,
+          "cita": "Texto en el BOPZ núm. 293 (23-dic-2023); revisión salarial 2026 en el BOPZ de 21-feb-2026. Sede: <a href=\"https://bop.dpz.es/\" target=\"_blank\" rel=\"noopener\">bop.dpz.es</a>"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 544,
+          "cita": "<strong>Real Decreto 126/2026</strong>, SMI 2026 (1.221 €/mes, 17.094 € anuales), referencia para la comparación. <a href=\"https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815\" target=\"_blank\" rel=\"noopener\">BOE-A-2026-3815</a>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "El año viaja dentro del encabezado de las siete tablas de grupo («Retribución bruta anual 2026»), no solo en el título de la página, y las cuantías sueltas de pluses, dietas y seguro lo llevan pegado; además la tabla de subida nombra su base (tablas definitivas de 2025). No llega a 3 porque no publica ninguna tabla histórica que haya que distinguir de la vigente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 342,
+          "cita": "<thead><tr><th>Categoría asimilable</th><th class=\"num\">Retribución bruta anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 458,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">Tablas salariales (anexo I)</td><td class=\"num\">+2,5%</td><td>Tablas definitivas de 2025 (Art. 13)</td></tr>"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 429,
+          "cita": "<strong>62 €/mes · 744 €/año</strong> en 2026 para quien preste servicio fuera del casco urbano. Incompatible con el plus de distancia."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "Fecha de verificación concreta (4-ago-2026), posterior al boletín más reciente que la propia ficha y el censo citan (BOPZ de 21-feb-2026), y desglose de qué se cotejó contra qué documento, incluyendo el acta paritaria que origina las cifras y la advertencia editorial que se añadió tras el cotejo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 213,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BOPZ núm. 293, 23-dic-2023, código 50000675011982) y la <strong>revisión salarial 2026</strong> (BOPZ de 21-feb-2026, acta de la comisión paritaria de 15-ene-2026), por SalarioJusto · última revisión 4 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 550,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto del convenio (BOPZ núm. 293, 23-dic-2023) y contra la revisión salarial 2026 (BOPZ de 21-feb-2026)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 3,
+      "razon": "Dice hasta cuándo valen las tablas, qué ocurre después y qué vigilar, y va más lejos que el resto: explica el mecanismo que puede mover hacia arriba lo ya cobrado en 2026 (revisión por IPC con paga de atrasos en el primer trimestre de 2027) y da la fecha en que arranca la negociación del siguiente convenio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 466,
+          "cita": "<strong>Cláusula de revisión.</strong> Si el IPC real de 2026 supera el 2,5% pactado, se aplicará un <strong>incremento adicional</strong> en 2027; y si lo supera en más del 30% del pactado, se abonará una <strong>paga única de atrasos</strong> en el primer trimestre de 2027 (Art. 14). Además, <strong>2026 es el último año de vigencia</strong>: el convenio está denunciado y la negociación del siguiente arranca en enero de 2027."
+        },
+        {
+          "archivo": "convenio-metal-zaragoza.html",
+          "linea": 239,
+          "cita": "<div class=\"stat-item\"><div class=\"stat-label\">Vigencia</div><div class=\"stat-value\">2023-2026 · denunciado (último año)</div></div>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Es la ficha del trío que mejor resuelve la pregunta rectora en lo editorial: un lector desconfiado no solo puede rehacer la cifra, sino que entiende por qué la cifra de la tabla no coincidirá con su nómina. Dos apuntes ajenos a mis métricas. (1) La línea 479 cierra las particularidades con «y ultraactividad» sin artículo ni matiz al lado, la única afirmación jurídica de la página sin fuente pegada: es materia del eje de estado jurídico, pero es justo lo que envejece mal cuando llegue enero de 2027. (2) El único punto donde la cadena se corta es el enlace: la ficha conoce el número y la fecha exactos del BOPZ y aun así manda al lector a bop.dpz.es; si en algún momento se recuperan las URL de edicto, esta ficha pasa a 3 en 5.10 sin tocar una palabra del texto. Ventana de medición abierta (último commit 4-ago-2026, 15 días); no hay parches que aplazar porque ninguna métrica baja de 2."
+}

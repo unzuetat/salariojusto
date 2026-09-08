@@ -1,0 +1,154 @@
+{
+  "eje": "E2",
+  "slug": "convenio-limpieza-asturias",
+  "metricas": [
+    {
+      "id": "3.1",
+      "nota": 1,
+      "razon": "boilerplate_ratio 0.099 es bajo, pero lo compartido no es cromo: de las 8 frases de frases_compartidas_top, seis son la sección '¿Cobras menos?' marcada en el propio HTML como <!-- bp-rotado -->, con doctrina jurídica y un número de artículo de descuelgue plantillados provincia a provincia.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 516,
+          "cita": "Las cláusulas normativas — la tabla salarial, los complementos de puesto, las pagas extras, la subrogación, la jornada, las vacaciones, las protecciones por IT e invalidez — siguen plenamente vigentes y son de obligado cumplimiento."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 520,
+          "cita": "<strong>Si la empresa pretende inaplicar el convenio</strong>, debe seguir el procedimiento de descuelgue (Art. 34) con periodo de consultas y comunicación a SASEC"
+        }
+      ],
+      "parche": "Sustituir el bloque plantillado (líneas 515-522) por el descuelgue tal como lo regula ESTE convenio, que la propia ficha ya cita en otro sitio: 'Si tu empresa quiere dejar de aplicar la tabla, no puede hacerlo por su cuenta. El convenio asturiano se somete al SASEC (Servicio Asturiano de Solución Extrajudicial de Conflictos, Oviedo), donde se firmó el 14 de julio de 2025, y además la Disposición Adicional 2.ª considera incumplimiento del convenio ofertar por debajo de los costes mínimos que fija cada año la Comisión Paritaria: si la rebaja viene de una contrata ganada a la baja, hay dos vías, la tuya y la de la denuncia a la Paritaria.' Antes de publicarlo, verificar en el BOPA 146/2025 el número real del artículo de inaplicación en Asturias: el '(Art. 34)' actual está copiado del molde y aparece idéntico en 11 fichas de sectores y provincias distintos.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.2/3.3",
+      "nota": 3,
+      "razon": "palabras_prosa 4120 con ratio_tabla 0.121: la prosa no rodea la tabla, la hace legible —explica que el bruto sale de ×15 pagas y no de ×14, de dónde sale la columna prorrateada y qué filas cambió la corrección de errores del Grupo IV—; sin ella un salario de 38,59 €/día no se puede comparar con nada.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 244,
+          "cita": "Para categorías con salario diario, se prorratea como SB diario × 30 × 15 = SB diario × 450. La columna <strong>«12 pagas (€/mes prorrateado)»</strong> es el bruto anual ÷ 12"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 214,
+          "cita": "Si cobras con las extras <strong>prorrateadas en 12 mensualidades</strong>, una <strong>Limpiador/a percibe 1.447 €/mes</strong> (mismo bruto anual: 17.365,50 €)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.4",
+      "nota": 3,
+      "razon": "frases_exclusivas 137 de 152 y la exclusividad tiene sustancia: la equiparación con SESPA, los dividendos del cese anticipado y los porcentajes exactos de representación sindical exigieron leer el articulado y el acta de otorgamiento, no cambiar el topónimo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 372,
+          "cita": "Es una cláusula única del convenio asturiano: limpiar un hospital del SESPA bajo este convenio equivale económicamente a estar en plantilla pública."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 385,
+          "cita": "CCOO Hábitat de Asturias (40,00% de representación social), UGT-FeSMC (43,22%) y <strong>USO Federación de Servicios (14,19%)</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "3.5",
+      "nota": 2,
+      "razon": "faq_clonadas 6 de faq_total 6: el molde de preguntas es íntegramente compartido, pero ninguna respuesta es intercambiable —la de antigüedad enumera las categorías de los tres niveles asturianos y la de subrogación cita el telegrama o acta notarial del Art. 18.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 513,
+          "cita": "La empresa saliente debe notificar a la entrante mediante telegrama o acta notarial, con relación nominal y condiciones laborales del personal transferido."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 510,
+          "cita": "Como las pagas anuales son 15, un trienio del Nivel 3 supone <strong>163,50 € anuales</strong> (10,90 × 15)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.4",
+      "nota": 3,
+      "razon": "la particularidad no está mencionada sino que organiza el centro de la ficha: hay un h2 'Particularidades únicas del convenio asturiano' y la equiparación con SESPA se usa además para desmontar el malentendido de las '35 horas' en la primera pantalla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 213,
+          "cita": "el personal de limpieza de centros sanitarios está equiparado a <strong>SESPA en salario</strong>, y en el sector público asturiano se trabajan 35 h/semana — de ahí la confusión."
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 391,
+          "cita": "las ofertas comerciales realizadas por empresas <strong>por debajo de los costes mínimos del convenio</strong> se consideran incumplimiento del propio convenio."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "10.1",
+      "nota": 3,
+      "razon": "el BOPA publica una tabla y una corrección de errores en dos edictos distintos: aquí están fusionadas, traducidas a bruto anual y a mensualidad prorrateada, con la verificación A+B contra el mínimo legal que ningún boletín hace.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 291,
+          "cita": "Grupo IV — Personal Subalterno (corregido 17-X-2025)"
+        },
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 326,
+          "cita": "Aspirante Administrativo/a · Botones</td><td class=\"num\">16.576,05 €</td><td class=\"num\" style=\"color:var(--amber);font-weight:700;\">+0,05 € (al límite)"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "10.2",
+      "nota": 3,
+      "razon": "la ventaja se percibe sin explicarla: antes de cualquier tabla, un bloque nombra la consulta con la que llega el lector desde el agregador ('35 horas', '12 pagas') y le dice por qué esa cifra que ha leído fuera está mal.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-asturias.html",
+          "linea": 211,
+          "cita": "<strong>¿Buscabas «35 horas» o «12 pagas»? Esto es lo que dice el convenio realmente vigente — y por qué hay confusión.</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [
+    {
+      "codigo": "4.5",
+      "detalle": "Dos códigos REGCON distintos para el mismo convenio en la misma página: 33000735011979 en los datos clave y en fuentes, y 33000635011982 en el bloque de reclamación.",
+      "evidencia": {
+        "linea": 522,
+        "cita": "Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">33000635011982</code>"
+      }
+    },
+    {
+      "codigo": "12.1",
+      "detalle": "La ficha fija el SMI 2026 en 16.576 € anuales y construye sobre esa cifra toda la verificación A+B (el margen '+789,50 €' y el célebre '+0,05 € al límite'). convenio-metal-sevilla.html, línea 627, cita el RD 126/2026 con 17.094 € anuales. Con 17.094 €, las categorías Aspirante Administrativo/a y Botones (16.576,05 €) no quedan 'al límite' sino claramente por debajo del mínimo legal, y el titular 'todas las categorías cumplen el SMI 2026' se invierte.",
+      "evidencia": {
+        "linea": 316,
+        "cita": "B) cruzar el resultado con el SMI 2026 (16.576 € anuales, art. 27.1 ET)"
+      }
+    }
+  ],
+  "observacion_libre": "Ventana de medición abierta (ultimo_commit 2026-08-04, 16 días): los parches quedan aplazados salvo los hard-fails, que no son cuestión de nota. El de SMI es el más grave del piloto en esta ficha porque no es un dato suelto: es el eje sobre el que gira la sección 'Verificación A+B' entera y el h2 que afirma que ninguna categoría queda bajo el mínimo. Fuera de mi eje pero anotado: el bloque plantillado de la línea 516 atribuye la denuncia a CCOO 'el octubre de 2025' mientras el resto de la ficha dice que la denuncia fue automática el 30-IX-2025 conforme al Art. 4 — dos relatos del mismo hecho en la misma página, para el eje de veracidad."
+}

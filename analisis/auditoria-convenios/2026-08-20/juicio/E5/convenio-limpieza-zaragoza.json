@@ -1,0 +1,99 @@
+{
+  "eje": "E5",
+  "slug": "convenio-limpieza-zaragoza",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 3,
+      "razon": "entrantes_n=12 con la mayor variedad de tipos de origen del piloto: hub, mapa, home, salarios, el pilar estatal, dos hermanas, guias.html — solo 6 de las 54 fichas reciben enlace de guias.html — y convenio-hosteleria-zaragoza.html, es decir otro sector de su misma provincia. Y las anclas entrantes son descriptivas y distintas entre sí ('Convenio Limpieza Zaragoza (prorrogado 2026)', 'Zaragoza Tabla 2025 · prorrogado 2026 (Art. 5) · jornada 1.766 h').",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-limpieza-zaragoza.json",
+          "linea": 284,
+          "cita": "\"entrantes_desde\": ["
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 1,
+      "razon": "Las ocho hermanas están apiladas en el bloque final; en las 765 líneas del archivo el único enlace de orientación dentro de la prosa es el de la guía de reclamación, y aparece cuando el procedimiento ya ha terminado. La ficha recibe contexto de fuera pero no lo reparte desde dentro.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 729,
+          "cita": "<li><a href=\"/convenio-limpieza-edificios-locales.html\">← Pilar estatal: Convenio de Limpieza de Edificios y Locales</a></li>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 717,
+          "cita": "<p>Los sindicatos firmantes — CCOO Hábitat, UGT-FeSMC y OSTA — siguen siendo válidos para asesoría durante la ultraactividad. Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">50000755011981</code>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar…"
+        }
+      ],
+      "parche": "Llevar dos de esos ocho enlaces al cuerpo: en la línea 311, donde se explica el complemento a cuenta del SMI, contrastar con «en <a href=\"/convenio-limpieza-bizkaia.html\">Bizkaia</a> ninguna categoría queda por debajo porque la jornada es de 35 h»; y en la línea 385, al hablar de combinabilidad de pluses, contrastar con la provincia que los regula de otro modo. Van ahí porque son los dos puntos en que el texto ya está comparando y el lector no tiene adónde ir.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "a_hermanas_mismo_sector=8 (novena del corpus) pero a_otro_sector_misma_provincia=[] teniendo dos vecinas provinciales en el corpus: convenio-hosteleria-zaragoza.html — que sí la enlaza a ella — y convenio-metal-zaragoza.html. Una sola dirección, y la que falta es la del lector que se ha equivocado de sector.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-limpieza-zaragoza.json",
+          "linea": 270,
+          "cita": "\"a_otro_sector_misma_provincia\": [],"
+        },
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-limpieza-zaragoza.json",
+          "linea": 284,
+          "cita": "\"entrantes_desde\": ["
+        }
+      ],
+      "parche": "Añadir en el bloque de la línea 737, con contexto: <li>¿Limpias en un hotel, un bar o una fábrica de Zaragoza? Comprueba antes si te aplica el <a href=\"/convenio-hosteleria-zaragoza.html\">convenio de Hostelería de Zaragoza</a> o el del <a href=\"/convenio-metal-zaragoza.html\">Metal de Zaragoza</a>: la limpieza de un centro solo se rige por este convenio cuando la hace una contrata especializada.</li>. Va ahí por proximidad al resto de convenios, aunque su sitio natural sería el arranque de la ficha.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "anchors_genericos=[] y las anclas llevan el rasgo que distingue cada destino. No es 3 porque es el mismo bloque literal de Asturias, Murcia, Las Palmas y Bizkaia — cinco fichas con la misma lista en el mismo orden — y porque el ancla que le falta es de contexto, no de catálogo.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 730,
+          "cita": "<li><a href=\"/convenio-limpieza-madrid.html\">Convenio Limpieza Madrid (en ultraactividad)</a></li>"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 736,
+          "cita": "<li><a href=\"/convenio-limpieza-bizkaia.html\">Convenio Limpieza Bizkaia (jornada 35 h)</a></li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "al_kit=1 y es la guía, al cierre de la sección. Y la ficha desaprovecha el mejor momento del piloto: la línea que dice que Aprendiz queda bajo el SMI y que la empresa debe abonar la diferencia mediante complemento no enlaza plantilla-reclamar-absorcion-complementos-smi.html, que existe en la raíz y solo se enlaza desde 1 de las 54 fichas.",
+      "evidencia": [
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 311,
+          "cita": "<p style=\"font-size:12.5px;color:var(--ink-lighter);\">⚠ La categoría de <strong>Aprendiz</strong> queda bajo el SMI 2026 (16.576 €/año). El Art. 27.1 del Estatuto de los Trabajadores impone el SMI como suelo absoluto, por lo que en la práctica la empresa debe abonar la diferencia mediante un complemento a cuenta del SMI. El complemento de…"
+        },
+        {
+          "archivo": "convenio-limpieza-zaragoza.html",
+          "linea": 717,
+          "cita": "<p>Los sindicatos firmantes — CCOO Hábitat, UGT-FeSMC y OSTA — siguen siendo válidos para asesoría durante la ultraactividad. Código REGCON: <code style=\"font-family:monospace;font-size:13px;\">50000755011981</code>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar…"
+        }
+      ],
+      "parche": "En la línea 311, tras «la empresa debe abonar la diferencia mediante un complemento a cuenta del SMI», añadir: «Si tu nómina no lo refleja, reclámalo con la <a href=\"/plantilla-reclamar-absorcion-complementos-smi.html\">plantilla de absorción de complementos por el SMI</a>: pide la diferencia de los últimos 12 meses, mes a mes.» Va exactamente en esa frase porque es donde el lector descubre que le falta dinero; en la lista final ya se ha ido.",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Zaragoza es la mejor receptora del piloto y una de las peores emisoras contextuales: 12 entrantes variados frente a cero enlaces a hermanas dentro de la prosa. Es la prueba de que el clúster de limpieza está tejido a nivel de listas y no de argumento. Fuera de mi eje: el determinista ya marca 12.2 por el SMI de 16.576 € presentado como el de 2026; el parche de 6.6 depende de que esa cifra se corrija a 17.094 €, porque cambia qué categorías quedan bajo el mínimo."
+}

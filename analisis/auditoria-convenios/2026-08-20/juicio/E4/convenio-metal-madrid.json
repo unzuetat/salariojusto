@@ -1,0 +1,119 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-madrid",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 2,
+      "razon": "Cifra, sector, provincia y año, y con un acierto que casi nadie repite: añade '14 pagas', que es la información que impide el malentendido del piloto (confundir un anual repartido con una mensualidad). La cifra es la del anexo corregido del BOCM, no un cálculo. No llega a 3 por dos cosas: son 81 caracteres, de los que el recorte se lleva el final; y elige el anual cuando esta ficha tiene, en la misma fila de tabla, el mensual que el lector reconoce en su nómina (1.477,68 € el grupo de entrada, 1.590,26 € el personal de oficio).",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Madrid 2026: tablas de 20.687 a 35.379 € y 14 pagas | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 265,
+          "cita": "Cuantías brutas oficiales de la <strong>tabla 2026 corregida</strong> (BOCM nº 59, 11-mar-2026), resultado de aplicar el <strong>+2%</strong> pactado (Art. 29) sobre las tablas de 2025."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 280,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">7</td><td>Operaria/o Auxiliar: peón/a, mozo/a especialista de almacén, especialista, oficial de 3ª de taller</td><td class=\"num\">1.477,68 €</td>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Es la meta mejor construida de las nueve: la más corta (254 caracteres) y la que antes suelta la cifra —aparece a la altura del carácter 74, con diferencia la más adelantada del sector—, con quién cobra cada extremo, número de pagas, jornada y dos ganchos concretos (productividad del 1,5%, IT solo por accidente). Aun así no es un 3: sigue midiendo cien caracteres más de lo que se muestra, y lo que se pierde por el corte son precisamente los dos ganchos que la diferenciarían de un agregador.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 7,
+          "cita": "Convenio de la Industria del Metal de Madrid 2026 (+2%): tablas de 20.687 € (operaria/o auxiliar) a 35.379 € (grado), 14 pagas, jornada 1.756 h, productividad 1,5% e IT solo por accidente. Verificado contra el BOCM corregido nº 59. REGCON 28003715011982."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "Las frases principales se valen solas y además dan las dos magnitudes juntas: la respuesta del oficial encadena grupo, mensual, pagas y anual, y su encabezado lleva sector, provincia y año. El h1 hace lo propio. No sube a 3 porque la frase de la FAQ no repite el territorio —'El personal de oficio (Grupo 5, Operaria/o) tiene un salario de grupo de 1.590,26 €/mes en 14 pagas' podría ser de cualquier provincia— y porque el pie de la tabla, que es donde se explican las bases diarias de los grupos 5 y 7, es un fragmento telegráfico sin sujeto.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 491,
+          "cita": "El personal de oficio (<strong>Grupo 5</strong>, Operaria/o) tiene un salario de grupo de <strong>1.590,26 €/mes en 14 pagas</strong>, equivalente a <strong>22.263,68 € brutos anuales</strong>."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 490,
+          "cita": "<h3>¿Cuánto cobra un oficial del metal en Madrid en 2026?</h3>"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 194,
+          "cita": "<h1>Convenio del <em>Metal de Madrid</em>: tablas 2026 de 20.687 € a 35.379 €</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "La tabla es de las mejor etiquetadas del cluster: da mensual y anual en la misma fila, con el número de pagas dentro del encabezado y el año en la columna anual, más una tercera columna con el quinquenio, de modo que no hay que reconstruir nada. Se queda en 2 porque las cinco tablas van sin caption y porque la desambiguación que aquí importa de verdad —que este es el convenio de Industria y no el del Comercio del Metal de Madrid, que tiene tablas propias— vive en un callout tres pantallas por encima y no acompaña a ninguna cifra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 272,
+          "cita": "<thead><tr><th>Grupo</th><th>Descripción funcional (ejemplos)</th><th class=\"num\">Mensual (14 pagas)</th><th class=\"num\">Anual 2026</th><th class=\"num\">Quinquenio</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 267,
+          "cita": "<strong>Cómo leer la tabla:</strong> el salario de grupo mensual se percibe en 14 pagas (12 mensualidades + 2 extras). La columna \"Salario anual 2026\" es el bruto anual del salario de grupo."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 261,
+          "cita": "<strong>Ojo: en Madrid hay dos convenios de metal.</strong> El que estás leyendo es el de <strong>Industria, Servicios e Instalaciones</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "pct_huerfanas 0,042 (5 de 118) fija la nota en 2 y el HTML la confirma: el párrafo que abre la tabla cita boletín, número, fecha y artículo del incremento, los pluses llevan su artículo pegado y hay enlace al BOE del convenio estatal y al REGCON. No sube porque la única sección huérfana es la FAQ de la cuantía del oficial —la unidad más citable— y porque no hay ningún enlace pinchable al BOCM, que es el boletín del que sale la tabla: para comprobarla hay que buscarla.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 265,
+          "cita": "Cuantías brutas oficiales de la <strong>tabla 2026 corregida</strong> (BOCM nº 59, 11-mar-2026)"
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 519,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto del convenio (BOCM nº 15, 18-ene-2025) y contra la tabla salarial 2026 corregida (BOCM nº 59, 11-mar-2026)."
+        },
+        {
+          "archivo": "convenio-metal-madrid.html",
+          "linea": 491,
+          "cita": "El personal de oficio (<strong>Grupo 5</strong>, Operaria/o) tiene un salario de grupo de <strong>1.590,26 €/mes en 14 pagas</strong>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana abierta (ultimo_commit 2026-07-30, 20 días, justo dentro del umbral): parches aplazados. Madrid es la ficha que menos trabajo necesita en este eje y a la vez la que más fácil tendría el salto: tiene el mensual y el anual bien separados en la tabla, dice las pagas en el title y coloca la cifra antes que nadie en la meta. Lo que le falta es elegir la magnitud del lector en el title. Un detalle a vigilar que no puntúo aquí: la fila de aprendices lleva un anual de 17.438,11 € que queda por debajo del suelo que anuncia el title (20.687 €); no es un error, pero si alguna vez se decide anunciar el suelo real de la tabla, esa es la cifra. Y un enlace al BOCM cerraría el único hueco de la traza."
+}

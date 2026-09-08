@@ -1,0 +1,133 @@
+{
+  "eje": "E1",
+  "slug": "convenio-metal-alava",
+  "metricas": [
+    {
+      "id": "2.1",
+      "nota": 3,
+      "razon": "No transcribe: reconstruye en tabla propia la aritmética de la cláusula del art. 24 (14% pactado frente a 14,5% de IPC = +0,5%), señala una anomalía de la escala que el boletín no comenta y rastrea la corrección de errores del BOTHA 13.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 494,
+          "cita": "La subida de 2026 no es una negociación nueva, sino la <strong>liquidación de una cláusula de garantía</strong> que el convenio 2022-2025 dejó pactada en su artículo 24 para el final de su vigencia:"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 397,
+          "cita": "Curiosamente, el <strong>oficial/a de 1.ª del grupo obrero (24.577,88 €)</strong> cobra más que varias categorías técnicas."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 612,
+          "cita": "Las 54 cuantías están transcritas de la publicación oficial; los ejemplos y comparaciones son elaboración propia y se identifican como tales."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.8",
+      "nota": 2,
+      "razon": "Cada afirmación de derecho lleva su artículo y su condición; no llega a 3 porque la comparación con el SMI se afirma para las 54 categorías sin decir «a jornada completa» ni advertir del prorrateo a tiempo parcial, que es el caso límite frecuente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 436,
+          "cita": "El personal tiene derecho a <strong>30 días naturales</strong> de vacaciones al año (Art. 11), retribuidas con los importes de las tablas salariales de su categoría"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 524,
+          "cita": "Todas las empresas deben suscribir un seguro que garantice <strong>21.000 €</strong> por muerte y <strong>27.000 €</strong> por incapacidad permanente total"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 397,
+          "cita": "Las 54 categorías superan el SMI 2026 (17.094 € anuales)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "5.10",
+      "nota": 1,
+      "razon": "Los dos documentos decisivos (BOTHA 147 y BOTHA 18) se citan con número y fecha pero solo se enlaza la portada de la sede araba.eus/botha: el lector tiene que repetir la búsqueda. El único enlace a documento exacto es el del SMI, que es fuente secundaria.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 558,
+          "cita": "Texto en el BOTHA núm. 147 (23-dic-2022); tablas 2026 en el BOTHA núm. 18 (11-feb-2026). Sede: <a href=\"https://www.araba.eus/botha/\" target=\"_blank\" rel=\"noopener\">araba.eus/botha</a>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 604,
+          "cita": "Sede: <a href=\"https://www.araba.eus/botha/\" target=\"_blank\" rel=\"noopener\">araba.eus/botha</a>."
+        }
+      ],
+      "parche": "Sustituir el enlace a la portada por el PDF del anuncio en las dos fichas de fuente. Texto propuesto para la línea 604: «Sede: BOTHA núm. 147 de 23-dic-2022 (PDF del anuncio) — araba.eus/botha/boletines/2022/147». Y en la línea 605, junto a «Tablas salariales 2026»: «PDF del BOTHA núm. 18, 11-feb-2026, anuncio de la Resolución de 28-ene-2026 (anexo de tablas)». Si el visor del BOTHA no permite enlace permanente por anuncio, añadir al lado la ruta exacta de búsqueda: «araba.eus/botha → año 2026 → boletín 18 → anuncio 2026-00xxx».",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "5.11",
+      "nota": 2,
+      "razon": "Las ocho tablas salariales llevan el año en su propio encabezado, no solo en el título de la página; no sube a 3 porque no hay ninguna tabla histórica con la que contrastar y la FAQ del oficial de 1.ª suelta tres cuantías sin año.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 289,
+          "cita": "<thead><tr><th>Categoría profesional</th><th class=\"num\">Salario bruto anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 594,
+          "cita": "El oficial de 2.ª y el profesional siderúrgico de 1.ª cobran 22.499,47 €, y el oficial de 3.ª, el especialista y el profesional siderúrgico de 2.ª y 3.ª, 20.976,38 €."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.1",
+      "nota": 3,
+      "razon": "El sello no solo fecha la revisión (8-ago-2026, posterior al BOTHA 18 de 11-feb-2026 que es el boletín más reciente que cita el censo): dice contra qué se cotejó documento a documento, incluida la corrección de errores del BOTHA 13, y el bloque de autoría repite el cotejo separando lo transcrito de lo propio.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 215,
+          "cita": "<strong>✓ Verificado</strong> contra el texto del convenio (BOTHA núm. 147, 23-dic-2022, código 01001185011981; corrección de errores en BOTHA núm. 13, 1-feb-2023) y las <strong>tablas salariales 2026</strong> (BOTHA núm. 18, 11-feb-2026), por SalarioJusto · última revisión 8 de agosto de 2026"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 612,
+          "cita": "Esta ficha se ha cruzado manualmente contra el texto del convenio (BOTHA núm. 147, 23-dic-2022, con la corrección del BOTHA núm. 13, 1-feb-2023) y contra las tablas salariales 2026 (BOTHA núm. 18, 11-feb-2026)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "9.2",
+      "nota": 2,
+      "razon": "Dice con claridad que el convenio venció y que estas tablas son un cierre, no una subida nueva, y que lo siguiente depende del convenio por negociar; pero no fija ninguna fecha ni umbral que el lector pueda vigilar, ni menciona los atrasos si el nuevo convenio tiene efectos retroactivos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 508,
+          "cita": "Es un ajuste de cierre: <strong>cualquier subida adicional dependerá del próximo convenio</strong>, que está por negociar."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 264,
+          "cita": "Las negociaciones del próximo convenio arrancan a partir del 31 de diciembre de 2025."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Es la ficha que mejor explica de dónde sale su propia subida y la única del trío foral que rastrea una corrección de errores del boletín. Su punto débil de verdad no está en lo que cuenta sino en cómo se llega: todos los importes salen de dos anuncios del BOTHA que la ficha nombra pero no enlaza. Dos apuntes para otros ejes: (a) la ficha afirma «Las 54 categorías superan el SMI 2026» sin la condición «a jornada completa» —no es falso, pero es la única condición que cambia la respuesta para media plantilla—; (b) el sello del hero y el bloque de autoría dicen exactamente lo mismo con distinta redacción, lo que es bueno para la verificación pero conviene revisarlo si el eje de originalidad mide repetición."
+}

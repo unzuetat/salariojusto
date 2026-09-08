@@ -1,0 +1,56 @@
+{
+  "slug": "convenio-metal-madrid",
+  "contexto": {
+    "determinista_usado": "2026-08-24 (refrescado; manda sobre el de 2026-08-20)",
+    "ultimo_commit": "2026-07-30",
+    "dias_desde_commit": 24,
+    "ventana_medicion_abierta": false,
+    "aviso_ventana": "DESFASE ENTRE JUICIO Y DETERMINISTA. Los seis ejes juzgaron con el determinista del 20-ago (dias_desde_commit=20, ventana abierta) y marcaron aplazado_por_ventana=true en 5.10, 1.2, 2.4, 2.5, 4.1, 4.2, 4.4, 6.6, 8.1, 8.3 y 12.6. Con el determinista del 24-ago la ventana esta CERRADA (umbral dias<21 en scripts/audit/convenios-recolector.py:612; el commit del 30-jul la cerro el 20-ago). Los parches de esta ficha ya NO estan aplazados.",
+    "hardfails_declarados_en_esta_ficha": 0,
+    "hardfails_deterministas": 0,
+    "plantilla_no_penalizada": "5 tablas sin scope ni caption (11.1*) es patron de las 54; verde_en_tablas=0 y parrafos.largos_100=[] en el determinista, la ficha cumple la norma de tinta neutra"
+  },
+  "veredictos": [
+    {
+      "eje": "E1", "id": "5.10", "veredicto": "CONFIRMADO",
+      "motivo": "Listados todos los href externos de la ficha (14 en total). Los unicos enlaces a documento exacto son del BOE: linea 512 (convenio estatal BOE-A-2022-460) y 513 (RD 126/2026, SMI). El BOCM aparece dos veces y siempre como raiz del buscador (464 y 510). La linea 511, que la propia ficha declara fuente de TODAS las cifras salariales, quinquenios, bases de complementos y dietas, no lleva ningun enlace. Busque un deep link al BOCM por toda la pagina (grep 'bocm.es/boletin' y 'BOCM-2026'): cero coincidencias. La norma invocada existe: 5.10 en CANDIDATAS.md, asignada a E1 en RUBRICA-V1.",
+      "prueba": {"archivo": "convenio-metal-madrid.html", "linea": 511, "cita": "<strong>Tabla salarial 2026 corregida</strong>, BOCM nº 59 (11-mar-2026), corrección de errores del BOCM nº 56 (7-mar-2026). Fuente de todas las cifras salariales, quinquenios, bases de complementos, dietas y carencia de incentivos de esta página (+2% sobre 2025, Art. 29). | sin enlace | linea 510: Buscador: <a href=\"https://www.bocm.es/\">bocm.es</a>."}
+    },
+    {
+      "eje": "E5", "id": "6.6", "veredicto": "CONFIRMADO",
+      "motivo": "Triple comprobacion. grep 'plantilla-' sobre la ficha: 0 coincidencias. Determinista 24-ago: al_kit = ['/reclamar-diferencias-salariales-convenio.html'], un solo destino. Leida la seccion entera (450-458): los cinco pasos van sin enlace y el unico puente cuelga del parrafo de codigo REGCON y firmantes que cierra el bloque. Comprobe ademas que las dos plantillas que propone el parche existen en el repo (plantilla-solicitar-nominas.html y plantilla-reclamar-atrasos-convenio-salarial.html): el parche no inventa paginas. Calibracion coherente con el 1 que este mismo eje dio a convenio-metal-sevilla por el mismo bloque, ya confirmado en su verificacion.",
+      "prueba": {"archivo": "convenio-metal-madrid.html", "linea": 458, "cita": "Código REGCON: 28003715011982. Firmantes: <strong>AECIM, CCOO de Industria de Madrid y UGT-FICA Madrid</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"}
+    },
+    {
+      "eje": "E6", "id": "8.1", "veredicto": "CONFIRMADO",
+      "motivo": "Recorridas las ocho vinetas (440-447) una a una buscando su antecedente en el cuerpo: tabla corregida -> 244; 14 pagas sin paga de marzo -> h2 de pagas en 307 y callout comparativo en 325; productividad 1,5% -> pill-card 385-387; sistema de incentivos -> 403-409; IT solo por accidente -> 421; ambito modernizado -> 253-255; marco supletorio estatal -> 480 (Recursos) y 512 (Fuentes). Solo la octava, la prorroga anual salvo denuncia, no aparece en ningun otro sitio (grep 'prorroga': unica ocurrencia, linea 447). El recuento del eje es exacto. Unica imprecision, en el parche y no en el hallazgo: dice 'actualizar el indice de la linea 229', pero el enlace a #particularidades esta en la linea 220 (la 229 es el stat-item 'Ambito'); en cambio su otra referencia, 'card de datos clave (linea 230) = Vigencia', si es correcta.",
+      "prueba": {"archivo": "convenio-metal-madrid.html", "linea": 447, "cita": "<strong>Vigencia hasta el 31 de diciembre de 2026</strong>: después entra en prórroga anual salvo denuncia. Conviene vigilar la negociación del próximo convenio. | grep 'prórroga' en toda la ficha: 1 sola ocurrencia, esta"}
+    },
+    {
+      "eje": "E6", "id": "8.3", "veredicto": "MATIZADO",
+      "motivo": "La primera duplicacion es literal y la he visto: la advertencia de que las empresas que solo venden quedan fuera se da como ultima vineta de la lista (257) y otra vez, entera, como callout cuatro lineas despues (261). Eso sostiene el 1. Lo que sobra del enunciado son las otras dos patas. La reiteracion del error del BOCM en la vineta 440 es exactamente el mismo defecto que este eje ya penaliza en 8.1 (la vineta desaparece con el borrado que alli propone): contarla tambien aqui es penalizar dos veces el mismo texto, algo que el propio eje dice evitar en su 8.6. Y la tercera mencion, la FAQ 496, es formato de casa: las nueve fichas del metal recapitulan en FAQ y la metrica 8.3 esta definida como 'la misma idea en dos SECCIONES', no como prohibicion de resumir en el bloque de preguntas.",
+      "enunciado_corregido": "8.3 = 1 por una duplicacion cuerpo a cuerpo: la advertencia 'si solo se vende, es el Comercio del Metal' aparece como septima vineta de la lista de actividades (257) y de nuevo como callout completo cuatro lineas mas abajo (261). El parche sigue valiendo: borrar la vineta y dejar el callout, que ademas trae la regla practica. La repeticion en la vineta 440 se resuelve sola con el parche de 8.1 y no debe contarse aqui.",
+      "prueba": {"archivo": "convenio-metal-madrid.html", "linea": 257, "cita": "<strong>NO te cubre</strong> si tu empresa se dedica <strong>solo a la venta</strong> de artículos metálicos en proceso exclusivo de comercialización: eso es el <strong>Comercio del Metal</strong>, con convenio propio y distinto. | 261: Ojo: en Madrid hay dos convenios de metal. … Si en tu empresa se fabrica, instala o repara, es este; si solo se vende, es el otro."}
+    },
+    {
+      "eje": "E6", "id": "12.6", "veredicto": "CONFIRMADO",
+      "motivo": "grep de los cuatro rotulos sobre la ficha: se confirman los cuatro y aparece un quinto que el eje no cito. 'salario de grupo' (267, 297, 391), 'salario convenio' (303, 316, 383, 387), 'salario de convenio' (349, 406), 'salario base' (307, 379) y 'retribucion de convenio' (407). El caso mas duro es el que describe el eje: las lineas 379 y 383 son dos pill-cards contiguas del mismo bloque de pluses y usan bases con nombre distinto sin decir si son la misma cifra. El determinista lo respalda: jerga['salario de convenio'].explicacion_cerca = false, el unico false de los cuatro terminos que analiza. La metrica existe (12.6, eje E6 en RUBRICA-V1). Si acaso el hallazgo se queda corto, no largo.",
+      "prueba": {"archivo": "convenio-metal-madrid.html", "linea": 379, "cita": "<strong>20%</strong> del salario base por una circunstancia; <strong>25%</strong> por dos; <strong>30%</strong> por las tres. | 383: <strong>25%</strong> sobre el salario convenio para el trabajo entre las 22:00 y las 6:00. | 407: incentivo mínimo del 25% de la retribución de convenio"}
+    },
+    {
+      "eje": "E3", "id": "12.1 (referencia cruzada en observacion_libre; el hard-fail esta declarado en navarra y zaragoza)", "veredicto": "REFUTADO",
+      "motivo": "REFUTADO SOLO EN LO QUE TOCA A MADRID: esta ficha no es la que debe cambiar. La contradiccion existe y esta confirmada en los ficheros de Navarra y Zaragoza, pero el reparto de la carga de la prueba es asimetrico y se decide con lo que hay en las paginas. Madrid respalda su quinquenio con articulo (Art. 41, citado en 267 y 302), con boletin (la linea 511 declara el BOCM n 59 como fuente de 'quinquenios') y con tabla (siete cuantias distintas por grupo, 30,82-42,72 EUR/mes, coherentes con el +2% de 2026); ademas el dataset propio data/convenios/metal_mad.json:23 registra antiguedad tipo 'quinquenios', Art. 41, maximo 5, revalorizada cada ano con las tablas. Navarra (295) y Zaragoza (449) no aportan para Madrid ni articulo ni boletin: Zaragoza cita el Art. 16 de SU convenio y extiende la conclusion a dos provincias mas sin fuente. A eso se suma un argumento estructural: un complemento ad personam congelado es individual y consolidado en una fecha pasada -asi lo describen Zaragoza (31-12-1996) y Barcelona (595: 'El convenio NO reconoce antiguedad para personas contratadas hoy')- y no puede publicarse como columna con cuantia distinta por grupo revalorizada con la tabla del ano. Cautela expresa: esto decide QUIEN carga con el error, no cierra la verdad material del Art. 41; hasta cotejarlo en el BOCM no debe tocarse la columna Quinquenio de esta ficha.",
+      "prueba": {"archivo": "data/convenios/metal_mad.json", "linea": 23, "cita": "\"antiguedad\": { \"tipo\": \"quinquenios\", \"articulo\": \"Art. 41\", \"nota\": \"Máximo 5 quinquenios; la cuantía se revaloriza cada año con las tablas (2026: 30,82 €–42,72 €/mes según grupo)\" }"}
+    }
+  ],
+  "resumen": {
+    "confirmados": 4,
+    "matizados": 1,
+    "refutados": 1,
+    "notas": [
+      "NO ES HALLAZGO MIO, ES AMPLIACION DEL 12.1 AJENO: la afirmacion de que Madrid tiene la antiguedad congelada la hace tambien una CUARTA ficha que ningun eje cito, convenio-metal-asturias.html:483 ('frente a la antiguedad congelada de Zaragoza, Madrid y Barcelona'). El hard-fail afecta a cuatro fichas, no a tres. Lo dejo aqui y no lo convierto en veredicto.",
+      "Dato de contexto que el sintetizador debe recoger: la ventana de medicion de esta ficha se cerro el 20-ago (24 dias desde el commit del 30-jul, umbral <21). Los once parches marcados 'aplazado_por_ventana: true' por los ejes ya son ejecutables.",
+      "Desajuste menor entre juicio y determinista, no penalizable: E6 12.3 (nota 2, fuera de mi alcance) afirma '1 h1, 18 h2, 6 h3', pero headings.h1_n/h2_n/h3_n vienen a null en los deterministas del 20 y del 24 de agosto. El recuento es del propio eje, no del determinista."
+    ]
+  }
+}

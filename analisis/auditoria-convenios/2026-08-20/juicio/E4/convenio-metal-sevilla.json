@@ -1,0 +1,162 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-sevilla",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 1,
+      "razon": "Está completo en sector, provincia y año, pero la única cifra que lleva es un porcentaje de subida, no un salario: el determinista confirma seo.title_tiene_euro=false. '+3%' no responde a lo que se busca ('cuánto cobra un oficial del metal en Sevilla') y '(polo aeronáutico)' es un ángulo editorial que solo entiende quien ya conoce la ficha. Además, a 77 caracteres el paréntesis y la marca caen fuera del recorte, así que en el SERP el title efectivo se queda en 'Convenio Metal Sevilla 2026: tablas del +3%'.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Sevilla 2026: tablas del +3% (polo aeronáutico) | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 207,
+          "cita": "<h1>Convenio del <em>Metal de Sevilla</em>: las tablas 2026 del polo aeronáutico</h1>"
+        }
+      ],
+      "parche": {
+        "descripcion": "Poner un salario en euros donde ahora hay un porcentaje. Todas las cifras propuestas están publicadas en la ficha (líneas 280 y 292): oficial/a de 1ª 59,75 €/día, peón/a 54,69 €/día, horquilla 52,86–102,23 €/día.",
+        "alternativas": [
+          {
+            "id": "A",
+            "title": "Convenio Metal Sevilla 2026: oficial de 1ª 59,75 €/día",
+            "longitud": 54,
+            "por_que": "Fórmula validada al pie de la letra, con el puesto más buscado del metal y la unidad real del convenio. Es la apuesta segura."
+          },
+          {
+            "id": "B",
+            "title": "Metal Sevilla 2026: tablas de 52,86 a 102,23 €/día (76 categorías)",
+            "longitud": 66,
+            "por_que": "Cubre a quien no sabe su categoría exacta y comunica de entrada la profundidad del dato, que es el activo real de esta ficha frente a un agregador. Cuesta 12 caracteres más."
+          },
+          {
+            "id": "C",
+            "title": "Metal Sevilla 2026: peón 54,69 €/día, oficial 1ª 59,75 €/día",
+            "longitud": 60,
+            "por_que": "Dos anclas por el precio de una y máxima coincidencia literal con las dos consultas de más volumen del sector. Sacrifica el ángulo aeronáutico, que puede vivir en la meta."
+          }
+        ],
+        "nota_de_ejecucion": "El ángulo 'polo aeronáutico' es contenido genuinamente exclusivo y no debe perderse: su sitio es la meta description y el h1, no el title."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 1,
+      "razon": "A 326 caracteres —más del doble de lo que se muestra— la meta se corta justo donde empezaba a servir: el recorte se lleva la horquilla en euros, el ángulo aeronáutico y la traza al BOP, y deja al lector con 'salario fijado por día en 3 columnas (base + asistencia + productividad)', que es una explicación de estructura, no un motivo para entrar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 7,
+          "cita": "<meta name=\"description\" content=\"Convenio de las Industrias Siderometalúrgicas de Sevilla 2024-2026 (+3% en 2026): salario fijado por día en 3 columnas (base + asistencia + productividad), de 52,86 € a 102,23 €/día trabajado, 76 categorías. El convenio del polo aeronáutico (Airbus A400M). Verificado contra el BOP núm. 26 (9-feb-2026). Código 41002445011982.\">"
+        }
+      ],
+      "parche": {
+        "descripcion": "Cifra delante, singularidad detrás, traza dentro del recorte. 156 caracteres.",
+        "texto_propuesto": "Peón 54,69 €/día, oficial de 1ª 59,75 €/día: tablas 2026 (+3%) del metal de Sevilla, 76 categorías. El convenio de Airbus A400M. BOP núm. 26, 9-feb-2026."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "Las frases que llevan la cifra tienen sujeto, cifra y unidad, y desglosan las tres columnas sin obligar a sumar, pero no cargan ni el territorio ni el año: 'un oficial u oficiala de 1.ª tiene un salario base (A) de 40,27 €/día' es válida en cualquier provincia. Solo la FAQ del peón queda blindada, y porque el ámbito lo aporta el h3, no la frase.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 279,
+          "cita": "Por ejemplo, un <strong>oficial u oficiala de 1.ª</strong> tiene un salario base (A) de <strong>40,27 €/día</strong>, un plus de asistencia (B) de <strong>7,86 €</strong> y un plus de productividad (C) de <strong>11,62 €</strong>: <strong>59,75 € por día trabajado</strong>."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 606,
+          "cita": "Un <strong>peón o peona ordinaria</strong> tiene un salario base (A) de <strong>36,81 €/día</strong>, un plus de asistencia (B) de <strong>7,35 €</strong> y un plus de productividad (C) de <strong>10,53 €</strong>: <strong>54,69 € por día trabajado</strong>."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "El dato está expuesto, no hay que reconstruirlo: la tabla ya da el total sumado (A+B+C) y una columna de anual estimado, y el resumen de cada familia adelanta la horquilla. Se queda en 2 porque tres de las cinco columnas numéricas —A, B y C— llevan encabezados sin unidad ni periodo, de modo que una fila extraída sola devuelve '40,27 | 7,86 | 11,62' sin decir que son euros por día.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 292,
+          "cita": "<thead><tr><th>Categoría profesional</th><th class=\"num\">A · base</th><th class=\"num\">B · asist.</th><th class=\"num\">C · prod.</th><th class=\"num\">Total €/día</th><th class=\"num\">≈ bruto/año*</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 290,
+          "cita": "<summary>Profesionales de oficio y personal obrero <span class=\"fam-meta\">7 categorías · 52,86–59,75 €/día</span></summary>"
+        }
+      ],
+      "parche": {
+        "descripcion": "Coste cero y arregla las doce tablas de la ficha: llevar la unidad al encabezado, donde el extractor la lee junto al número.",
+        "linea_objetivo": "292, 306, 329, 342, 361 y resto de thead de tabla-salarial",
+        "texto_propuesto": "<thead><tr><th>Categoría profesional</th><th class=\"num\">A · base (€/día)</th><th class=\"num\">B · asistencia (€/día)</th><th class=\"num\">C · productividad (€/día)</th><th class=\"num\">Total €/día trabajado</th><th class=\"num\">≈ bruto/año*</th></tr></thead>"
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.3",
+      "nota": 1,
+      "razon": "La desambiguación existe pero está en la capa equivocada: el JSON-LD sí pregunta '¿Cuánto cobra un oficial de 1.ª del metal en Sevilla?', mientras el h3 que ve el lector —y que un extractor toma como encabezado de la unidad— es solo '¿Cuánto cobra un oficial de 1.ª?', sin sector, sin provincia y sin año. El determinista lo confirma listando esa sección en cifras.secciones_sin_anio. Es justo la ambigüedad que permite atribuir a Sevilla una cifra de otra provincia, o al revés.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 614,
+          "cita": "<h3>¿Cuánto cobra un oficial de 1.ª?</h3>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 84,
+          "cita": "\"name\": \"¿Cuánto cobra un oficial de 1.ª del metal en Sevilla?\","
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 615,
+          "cita": "En el grupo de oficio, un <strong>oficial u oficiala de 1.ª</strong> suma <strong>59,75 € por día trabajado</strong> (40,27 € de base + 7,86 € de asistencia + 11,62 € de productividad)."
+        }
+      ],
+      "parche": {
+        "descripcion": "Alinear el h3 visible con el name del schema, que ya está bien redactado, y cerrar la respuesta con el ámbito. Mismo trabajo para el h3 '¿Por qué el salario se fija por día?' (línea 608) y '¿El convenio tiene subrogación?' (línea 620), que el schema también territorializa.",
+        "linea_objetivo": 614,
+        "texto_propuesto": "<h3>¿Cuánto cobra un oficial de 1.ª del metal en Sevilla en 2026?</h3>\n  <p>En el convenio del metal de Sevilla, tabla 2026, un <strong>oficial u oficiala de 1.ª</strong> suma <strong>59,75 € por día trabajado</strong> (40,27 € de base + 7,86 € de asistencia + 11,62 € de productividad). El de 2.ª, 58,70 €, y el de 3.ª, 55,74 €.</p>"
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 3,
+      "razon": "Ejemplar y por una razón que ninguna otra ficha necesita: la columna más frágil de todo el piloto —un anual que el convenio no publica— lleva pegada al pie de su propia tabla la fórmula entera con los cuatro artículos que la sostienen y la advertencia de que es estimación, no cifra oficial. Además el párrafo que abre la tabla cita anexo, boletín, número y fecha, y el callout de las tres columnas remite a 14.1, 14.2 y 14.3.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 285,
+          "cita": "Cuantías oficiales de la <strong>tabla de salarios diarios 2026</strong> (Anexo II, BOP núm. 26, 9-feb-2026), resultado de aplicar el <strong>+3%</strong> sobre las tablas de 2025."
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 436,
+          "cita": "* <strong>≈ bruto/año — estimación orientativa, no cifra oficial.</strong> El convenio fija el salario <strong>por día</strong>, no un anual. Esta columna aplica las reglas de devengo del propio convenio: <strong>salario base (A) × 365 días</strong> (art. 14.1) + <strong>(asistencia B + productividad C) × 299 días</strong>"
+        },
+        {
+          "archivo": "convenio-metal-sevilla.html",
+          "linea": 277,
+          "cita": "<strong>A · Salario base</strong>: el salario mínimo de convenio, que se devenga <strong>todos los días naturales</strong> del año (art. 14.1)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana abierta (ultimo_commit 2026-08-10, 9 días): parches aplazados. La ficha tiene el problema inverso al de Asturias: allí el número no tiene dueño; aquí el dueño no tiene número. El title regala el mejor activo de la ficha —76 categorías con cuantía verificada— a cambio de un porcentaje de subida que no responde a ninguna consulta. Sin GSC en el determinista (operacion.gsc_28d vacío) no puedo medir el daño, solo describirlo; conviene revisarlo en la próxima ventana. Un patrón que merece leerse: el JSON-LD de esta ficha está mejor desambiguado que el HTML visible —cuatro de sus seis 'name' llevan 'del metal de Sevilla' y el h3 correspondiente no—, lo que sugiere que el schema se redactó con la citabilidad en mente y el encabezado visible no. Se repite en Comercio Madrid (schema: '¿Cuántas pagas tiene el convenio de Comercio Vario de Madrid?' / visible: '¿Cuántas pagas tiene el convenio?'). Es corregible en una pasada y es lo más barato del piloto."
+}

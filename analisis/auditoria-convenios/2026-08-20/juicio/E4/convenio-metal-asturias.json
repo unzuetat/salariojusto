@@ -1,0 +1,148 @@
+{
+  "eje": "E4",
+  "slug": "convenio-metal-asturias",
+  "metricas": [
+    {
+      "id": "2.4",
+      "nota": 1,
+      "razon": "La fórmula está completa, pero la cifra que anuncia no la publica el BOPA ni aparece en ninguna nómina: el convenio asturiano fija el salario POR DÍA NATURAL, y esos 19.937–31.384 € son una columna que la propia ficha llama 'mínimo anual estimado' y reconoce como cálculo propio con fórmula declarada. El title la presenta como 'tablas' y la meta va más lejos, dándola por 'firmadas y publicadas desde 2024 en el BOPA'. Es el fallo del 1.447 €/mes del piloto con el signo cambiado: aquí el número es prudente y honesto dentro de la página, pero fuera de ella queda atribuido a un boletín que no lo contiene. Quien busca cuánto cobra un oficial del metal en Asturias no reconoce 22.394 € en ningún sitio: en su nómina ve 48,17 €/día.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 6,
+          "cita": "<title>Convenio Metal Asturias 2026: tablas de 19.937 a 31.384 € | SalarioJusto</title>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 283,
+          "cita": "El mínimo anual estimado suma salario convenio, plus convenio y las dos pagas extras — sin contar asistencia, carencia de incentivo ni antigüedad."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 563,
+          "cita": "El «mínimo anual» es un cálculo propio con fórmula declarada — (salario convenio + plus convenio) × 365 + 2 pagas — para poder comparar entre provincias; lo señalamos para no inducir a error."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 287,
+          "cita": "<thead><tr><th>Nivel · categorías orientativas (Anexo 2)</th><th class=\"num\">Salario €/día</th><th class=\"num\">Paga extra (×2)</th><th class=\"num\">Mínimo anual 2026</th></tr></thead>"
+        }
+      ],
+      "parche": {
+        "descripcion": "La ficha ya declara el cálculo con honestidad en el cuerpo (línea 563); el problema es que el title y la meta lo omiten. Dos salidas: (A) usar la cuantía que sí publica el BOPA, la diaria; (B) conservar el anual pero calificarlo. La A es la que más se parece a la nómina y la que no deja ninguna atribución que defender.",
+        "alternativas": [
+          {
+            "id": "A",
+            "title": "Convenio Metal Asturias 2026: oficial de 1.ª 48,17 €/día (15 niveles)",
+            "longitud": 68,
+            "por_que": "Cifra literal del Anexo 2 del BOPA, puesto más buscado y unidad real del convenio."
+          },
+          {
+            "id": "B",
+            "title": "Metal Asturias 2026: de 44,04 a 69,03 €/día — tablas de los 15 niveles",
+            "longitud": 69,
+            "por_que": "Mantiene el formato de horquilla con el que rinde el resto del cluster, pero en la unidad publicada."
+          },
+          {
+            "id": "C",
+            "title": "Convenio Metal Asturias 2026: desde 19.937 €/año estimados (44,04 €/día)",
+            "longitud": 71,
+            "por_que": "Conserva el anual comparable entre provincias, lo marca como estimación y ancla la cifra oficial entre paréntesis. Opción de compromiso si no se quiere romper la serie de titles del sector."
+          }
+        ],
+        "tambien_en_la_meta": "Sustituir 'tablas por 15 niveles de 19.937 € a 31.384 €, firmadas y publicadas desde 2024 en el BOPA' por 'salario diario de 44,04 a 69,03 € en los 15 niveles del Anexo 2, firmado y publicado desde 2024 en el BOPA (el anual es estimación propia)'. Lo que el BOPA publica es el día; el anual lo ponemos nosotros.",
+        "y_en_la_tabla": "Cambiar el encabezado 'Mínimo anual 2026' por 'Mínimo anual 2026 (estimado)', para que la celda extraída viaje ya calificada sin depender del párrafo anterior. Sevilla, que también paga por día, ya lo resuelve así con un asterisco al pie de su propia tabla."
+      },
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "2.5",
+      "nota": 2,
+      "razon": "Cifra dentro del recorte y un motivo para entrar que ninguna otra ficha del sector puede ofrecer: las tablas de 2026 están firmadas y publicadas desde 2024, sin depender de un acta de paritaria. Eso responde a una angustia real de quien busca en agosto qué le corresponde. No la bajo por el problema de atribución del anual, que ya está penalizado en 2.4 y no se cuenta dos veces; y no sube a 3 porque con 328 caracteres es la meta más larga del cluster y el remate (17 semanas por nacimiento, código de convenio) queda fuera de lo que se muestra.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 7,
+          "cita": "Convenio de la Industria del Metal del Principado de Asturias 2026 (+2%): tablas por 15 niveles de 19.937 € a 31.384 €, firmadas y publicadas desde 2024 en el BOPA — sin esperas de paritaria."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.1",
+      "nota": 2,
+      "razon": "Las frases con la cifra principal llevan sujeto, cuantía, unidad y comparación con el SMI del año, y el encabezado de la FAQ pone sector, provincia y año, de modo que el par pregunta-respuesta se sostiene solo. No llega a 3 porque la respuesta en sí no repite el ámbito —'Un/a Oficial/a de 1.ª de oficio (nivel 7) cobra 48,17 €/día natural' vale igual para Asturias que para Sevilla— y porque las tablas no llevan pie: la aclaración vive en el párrafo de arriba.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 534,
+          "cita": "<h3>¿Cuánto cobra un oficial del metal en Asturias en 2026?</h3>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 535,
+          "cita": "Un/a <strong>Oficial/a de 1.ª de oficio</strong> (nivel 7) cobra <strong>48,17 €/día natural</strong> de salario convenio y dos pagas de 1.884,02 €: un mínimo anual estimado de <strong>22.394 €</strong>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 207,
+          "cita": "<h1>Convenio del <em>Metal de Asturias</em>: tablas 2026 de 19.937 € a 31.384 €</h1>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.2",
+      "nota": 2,
+      "razon": "La fila es extraíble entera y con las tres magnitudes necesarias: euros por día, cuantía de cada paga extra y total anual, con el año en el encabezado. Nadie tiene que multiplicar nada. Se queda en 2 y no baja porque el encabezado dice 'Mínimo anual 2026' sin la palabra 'estimado': la celda, sacada sola, no advierte de que esa columna es cálculo nuestro, y eso solo lo dicen el párrafo anterior y la nota de método del final. Tampoco sube a 3: ninguna de las cinco tablas tiene caption y nada junto a la cifra distingue este convenio del de Montajes y Empresas Auxiliares del Metal de Asturias, confusión que la propia ficha reconoce como frecuente.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 287,
+          "cita": "<thead><tr><th>Nivel · categorías orientativas (Anexo 2)</th><th class=\"num\">Salario €/día</th><th class=\"num\">Paga extra (×2)</th><th class=\"num\">Mínimo anual 2026</th></tr></thead>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 295,
+          "cita": "<tr class=\"highlight\"><td class=\"cat\">7 · Oficial/a de 1.ª de oficio · Chófer de camión o grúa</td><td class=\"num\">48,17</td><td class=\"num\">1.884,02</td><td class=\"sal\">22.394 €</td></tr>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 279,
+          "cita": "<strong>No lo confundas con el de Montajes.</strong> En Asturias existe otro convenio autonómico distinto, el de <strong>Montajes y Empresas Auxiliares del Metal</strong>, con código y tablas propios."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "4.4",
+      "nota": 2,
+      "razon": "pct_huerfanas 0,038 (5 de 133) sitúa la nota en 2 por ancla, y el HTML no da motivo para moverla. La traza acompaña a la tabla en el párrafo inmediatamente anterior, con boletín, número y fecha, el apartado de estructura cita el artículo 22 literal y la nota de método declara la fórmula del anual. Lo que no permite subir es que la única sección huérfana sea la FAQ de la cuantía del oficial.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 283,
+          "cita": "Tabla de retribuciones 2026 anexa al convenio (BOPA núm. 191, 1-oct-2024), resultado de aplicar el <strong>+2%</strong> sobre 2025."
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 263,
+          "cita": "en el <strong>BOPA núm. 191 de octubre de 2024</strong> se publicaron, anexas al texto, las tablas de <strong>2024, 2025 y 2026 ya calculadas</strong>"
+        },
+        {
+          "archivo": "convenio-metal-asturias.html",
+          "linea": 563,
+          "cita": "Las cuantías están transcritas de la publicación oficial y validadas contra los incrementos pactados (2,5%, 3% y 2%)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": true
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Ventana abierta (ultimo_commit 2026-08-07, 12 días): el parche del title queda aplazado, pero es el más urgente de los nueve del sector. Conviene subrayar lo que NO está mal: dentro de la página esta es de las fichas más honestas del corpus —declara la fórmula, la marca como cálculo propio y avisa de que lo hace 'para no inducir a error'—. El problema es de superficie: esa honestidad no viaja al title ni a la meta, que son justo las dos piezas que se leen sin la página delante. Y tiene precedente resuelto: Sevilla, que también paga por día, marca su columna anual con asterisco y advertencia al pie de la propia tabla. Copiar ese asterisco cuesta una línea."
+}

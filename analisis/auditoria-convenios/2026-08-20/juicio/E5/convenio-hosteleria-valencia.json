@@ -1,0 +1,109 @@
+{
+  "eje": "E5",
+  "slug": "convenio-hosteleria-valencia",
+  "metricas": [
+    {
+      "id": "6.2",
+      "nota": 3,
+      "razon": "entrantes_n=14 desde seis fichas distintas, y tres de ellas son de otro sector de la misma provincia — limpieza, metal y oficinas de Valencia —, además del pilar sectorial y de dos hermanas de hostelería. Ninguna otra ficha del piloto tiene esa reciprocidad cross-sector triple, y las anclas entrantes nombran sector y provincia ('Convenio de Hostelería en Valencia').",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-hosteleria-valencia.json",
+          "linea": 545,
+          "cita": "\"entrantes_desde\": ["
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.3",
+      "nota": 2,
+      "razon": "Hay enlaces que nacen donde toca: la nota al pie de la tabla manda a la calculadora justo cuando acaba de decir que los importes son brutos, y la fuente de la comparativa remite al pilar sectorial en la frase en que compara. No es 3 porque los dos enlaces de la misma provincia siguen apilados en el bloque final y el párrafo de la comparativa nombra ocho provincias sin enlazar ninguna.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 431,
+          "cita": "<p class=\"nota-pie\">Importes brutos antes de descuentos de IRPF y Seguridad Social. Para calcular tu <strong>salario neto exacto</strong> con tu situación familiar, usa la <a href=\"/\">calculadora oficial de SalarioJusto</a>.</p>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 854,
+          "cita": "<p class=\"callout-comp-tabla__source\">Comparado con: Barcelona, Bizkaia, Cantabria, Cádiz, Granada, Madrid, Málaga, Sevilla. Bizkaia queda fuera del cálculo salarial: estructura 'total garantizado' por 6 niveles abstractos — no segrega categoría camarero/a. Cuantía Camarero/a en Valencia: III-3 (Hotel 3★ y viviendas turísticas). Dataset auditado el 13 de mayo de 2026. Ver <a href=\"/convenio-hosteleria.html\">pilar sec…"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 953,
+          "cita": "<li><a href=\"/convenio-limpieza-valencia.html\">Convenio de Limpieza de Edificios y Locales en Valencia</a></li>"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.4",
+      "nota": 1,
+      "razon": "Solo cubre bien una dirección — 'Más recursos para Valencia' con Limpieza y Oficinas — y le falta la otra: a_hermanas_mismo_sector=1 y ese único destino es el pilar estatal, no una provincia. La ficha nombra ocho provincias hermanas en la fuente de su comparativa y no enlaza a ninguna. Además omite a convenio-metal-valencia.html, que sí la enlaza a ella.",
+      "evidencia": [
+        {
+          "archivo": "analisis/auditoria-convenios/2026-08-20/deterministas/convenio-hosteleria-valencia.json",
+          "linea": 522,
+          "cita": "\"a_hermanas_mismo_sector\": 1,"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 854,
+          "cita": "<p class=\"callout-comp-tabla__source\">Comparado con: Barcelona, Bizkaia, Cantabria, Cádiz, Granada, Madrid, Málaga, Sevilla. Bizkaia queda fuera del cálculo salarial: estructura 'total garantizado' por 6 niveles abstractos — no segrega categoría camarero/a. Cuantía Camarero/a en Valencia: III-3 (Hotel 3★ y viviendas turísticas). Dataset auditado el 13 de mayo de 2026. Ver <a href=\"/convenio-hosteleria.html\">pilar sec…"
+        }
+      ],
+      "parche": "En la línea 854, convertir la enumeración en enlaces: «Comparado con: <a href=\"/convenio-hosteleria-barcelona.html\">Barcelona</a>, <a href=\"/convenio-hosteleria-bizkaia.html\">Bizkaia</a>, <a href=\"/convenio-hosteleria-cantabria.html\">Cantabria</a>, <a href=\"/convenio-hosteleria-cadiz.html\">Cádiz</a>, <a href=\"/convenio-hosteleria-granada.html\">Granada</a>, <a href=\"/convenio-hosteleria-madrid.html\">Madrid</a>, <a href=\"/convenio-hosteleria-malaga.html\">Málaga</a> y <a href=\"/convenio-hosteleria-sevilla.html\">Sevilla</a>.» Va ahí porque es la única frase de la ficha en que el lector ya está comparando provincias y no tiene adónde ir. Y añadir convenio-metal-valencia.html al bloque de la línea 953, por reciprocidad.",
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.5",
+      "nota": 2,
+      "razon": "anchors_genericos=[] y las anclas de los bloques finales nombran sector y provincia con precisión. No es 3 porque son etiquetas de catálogo y porque las ocho provincias de la línea 854 son texto plano: ahí están escritos los mejores anclas posibles de toda la ficha y no son enlaces.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 953,
+          "cita": "<li><a href=\"/convenio-limpieza-valencia.html\">Convenio de Limpieza de Edificios y Locales en Valencia</a></li>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 854,
+          "cita": "<p class=\"callout-comp-tabla__source\">Comparado con: Barcelona, Bizkaia, Cantabria, Cádiz, Granada, Madrid, Málaga, Sevilla. Bizkaia queda fuera del cálculo salarial: estructura 'total garantizado' po…"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "6.6",
+      "nota": 1,
+      "razon": "al_kit=3, el máximo del piloto y el percentil 75 del corpus, pero el momento está mal: las dos plantillas viven en la lista 'Guías y herramientas' del final, mientras el paso que pide la nómina por escrito — el punto exacto de la necesidad — no enlaza ninguna. Cantidad sin colocación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 866,
+          "cita": "<li><strong>Pide nómina detallada por escrito</strong> si los conceptos no aparecen separados. Tu empresa está obligada a entregarla por imperativo del art. 29.1 del Estatuto de los Trabajadores. Aprovecha para mencionar la discrepancia con la tabla del convenio.</li>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 964,
+          "cita": "<li><a href=\"/plantilla-solicitar-nominas.html\">Plantilla: solicitar copia de nóminas a la empresa</a></li>"
+        },
+        {
+          "archivo": "convenio-hosteleria-valencia.html",
+          "linea": 965,
+          "cita": "<li><a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">Plantilla: reclamar atrasos del convenio</a></li>"
+        }
+      ],
+      "parche": "En la línea 866, cerrar el paso con: «Pídela con la <a href=\"/plantilla-solicitar-nominas.html\">plantilla para solicitar copia de nóminas</a>; si al compararlas con la tabla aparece diferencia, reclama con la <a href=\"/plantilla-reclamar-atrasos-convenio-salarial.html\">plantilla de atrasos</a> los últimos 12 meses, mes a mes, porque cada mensualidad prescribe por separado.» Va ahí porque es donde el lector tiene que escribir; en la lista final los dos enlaces solo son inventario.",
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Valencia es el nodo mejor conectado del piloto en entrada y el que más desperdicia su propia salida: la comparativa de la línea 854 es un mapa del clúster de hostelería escrito en texto plano. Ese patrón se repite en las 10 fichas del corpus que llevan 'Comparado con:' — todas enlazan solo al pilar sectorial y ninguna a las provincias que nombran (una sola excepción, un enlace a Barcelona). Es el enlace que más falta en todo el corpus y se arregla con una sola línea por ficha."
+}

@@ -1,0 +1,191 @@
+{
+  "slug": "convenio-metal-bizkaia",
+  "determinista_usado": "analisis/auditoria-convenios/2026-08-24/deterministas/convenio-metal-bizkaia.json",
+  "veredictos": [
+    {
+      "eje": "E1",
+      "id": "4.5",
+      "tipo": "hardfail",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Intenté tumbarlo por las tres vías posibles y ninguna funciona. (1) ¿Es otro código legítimo? No: 48004245011982 no aparece en data/convenios/censo.json, ni en ninguna otra ficha, ni corresponde al Comercio del Metal de Bizkaia (que es 48000575011981, línea 202 de esa ficha). (2) ¿Está el correcto también ahí? No: la línea 607 solo trae el erróneo. (3) ¿Es un valor calculado? Es peor: está cableado en scripts/audit/aplicar-boilerplate.py:296 como «codigo_regcon» de esta ficha, o sea que el generador lo reinyectaría. El correcto (48001985011981) sale en las líneas 7, 12, 53, 200 y 615 y coincide con el censo.",
+      "prueba": {
+        "linea": 607,
+        "cita": "Código REGCON del convenio: <code style=\"font-family:monospace;font-size:13px;\">48004245011982</code>."
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "4.5",
+      "tipo": "hardfail",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Mismo hecho que el hardfail de E1, verificado con la misma evidencia. El añadido de E2 —«es el mismo bloque pegado sin adaptar que provoca el fallo de 3.1»— también se sostiene: el código erróneo y la enumeración de pluses ajenos («plus de transporte») viven en el mismo párrafo/lista importada, y ambos salen de aplicar-boilerplate.py.",
+      "prueba": {
+        "linea": 296,
+        "cita": "scripts/audit/aplicar-boilerplate.py → \"convenio-metal-bizkaia.html\": { ... \"codigo_regcon\": \"48004245011982\" }"
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "4.5",
+      "tipo": "hardfail",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobada literalmente la afirmación de E3 de que el código «no aparece en ninguna otra ficha ni en el censo del sitio y cuyo único rastro está en scripts/audit/aplicar-boilerplate.py»: un grep recursivo del repo (excluyendo .git y la carpeta de auditoría) devuelve exactamente dos coincidencias, la línea 607 de la ficha y la línea 296 del script. La descripción es exacta al detalle.",
+      "prueba": {
+        "linea": 607,
+        "cita": "grep -rn 48004245011982 → convenio-metal-bizkaia.html:607 y scripts/audit/aplicar-boilerplate.py:296 (2 coincidencias en todo el repo)"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "4.5",
+      "tipo": "hardfail",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Cuarta formulación del mismo hardfail, con la misma evidencia verificada. Los cuatro ejes lo localizan en la línea 607 y ninguno se equivoca de línea ni de código.",
+      "prueba": {
+        "linea": 200,
+        "cita": "<div class=\"meta-item\"><dt>Código REGCON</dt><dd>48001985011981</dd></div>"
+      }
+    },
+    {
+      "eje": "E1",
+      "id": "9.1",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado el sello en la línea 194: literal. El determinista del 24-ago lo corrobora por su lado (sello.texto = «el BOPV de la provincia por SalarioJusto», sello.fecha = null, boletines_citados = [BOB, BOPV]). Busqué la refutación en el resto de la página: el BOB sí está bien citado en 212, 216 y 614, pero eso no rescata el sello, que es precisamente la línea que declara contra qué se cotejó. La cronología también cuadra: git log del archivo da 2026-07-30 como último commit frente a «última revisión 28 de mayo de 2026».",
+      "prueba": {
+        "linea": 194,
+        "cita": "<strong>✓ Verificado</strong> contra el BOPV de la provincia por SalarioJusto · última revisión 28 de mayo de 2026"
+      }
+    },
+    {
+      "eje": "E2",
+      "id": "3.1",
+      "veredicto": "MATIZADO",
+      "motivo": "El núcleo aguanta entero y es el hallazgo más útil de la ficha: boilerplate_ratio 0,182 y frases_compartidas_n 16 en el determinista del 24-ago (idénticos a los del 20-ago), y el bloque prestado se delata solo: «plus de transporte» y «plus festivo» aparecen UNA sola vez en toda la ficha, las dos en la línea 603, y no figuran en la tabla de pluses de la línea 424 (que lista tóxico/penoso/peligroso, nocturnidad, sábado, domingo/festivo, retén y quinquenios). Solo cae el multiplicador: «entre tres y doce veces el de sus ocho hermanas» — el mínimo real es 2,4× (Gipuzkoa 0,075), no 3×. Enunciado exacto: «boilerplate_ratio 0,182, de 2,4 a 12 veces el de sus ocho hermanas del metal (0,015 Barcelona – 0,075 Gipuzkoa).»",
+      "prueba": {
+        "linea": 424,
+        "cita": "tabla «Cuantías 2025 verificadas en el BOB»: Plus tóxico/penoso/peligroso · Plus de nocturnidad · Complemento de sábado · Complemento de domingo o festivo · Complemento de retén · Antigüedad por quinquenios (ningún plus de transporte ni festivo)"
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.2",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Comprobadas las cuatro preguntas que el hallazgo da por no respondidas, buscando la respuesta por toda la página antes de aceptarlo. (1) Ámbito funcional: un grep de «siderurg|fundición|calderer|te cubre|ámbito|CNAE|astiller» solo devuelve la línea 201 («Ámbito territorial») y una mención dentro del JSON-LD; conceptos_ausentes del determinista incluye ambito_funcional. (3) Antigüedad: la línea 528 remite a una columna «Valor Quinquenio Antigüedad» que ninguna de las 4 tablas de la ficha transcribe. (4) Media jornada: «media jornada», «tiempo parcial» y «jornada parcial» tienen 0 apariciones en el HTML visible. La frontera con el Comercio del Metal de Bizkaia tampoco se nombra ni se enlaza.",
+      "prueba": {
+        "linea": 528,
+        "cita": "Las cuantías concretas figuran en la columna \"Valor Quinquenio Antigüedad\" de las tablas anexas al convenio."
+      }
+    },
+    {
+      "eje": "E3",
+      "id": "1.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "El 0 es el caso literal de la escala y no he podido refutarlo: no hay encabezado de ámbito («Este convenio te cubre» tiene 0 coincidencias), no hay lista de actividades, no hay CNAE y lo único territorial es la línea 201. Comprobé además el extremo del hallazgo —que la gemela confundible sí la enlaza y ella no devuelve el enlace—: convenio-comercio-metal-bizkaia.html figura en entrantes_desde del determinista y en la ficha no hay ningún href a esa página.",
+      "prueba": {
+        "linea": 201,
+        "cita": "<div class=\"meta-item\"><dt>Ámbito territorial</dt><dd>Territorio Histórico de Bizkaia</dd></div>"
+      }
+    },
+    {
+      "eje": "E4",
+      "id": "2.5",
+      "veredicto": "MATIZADO",
+      "motivo": "Los dos datos duros del hallazgo son exactos: meta_len = 322 en el determinista del 24-ago, y al cortar la cadena por el carácter 160 el resultado es literalmente «...Salario bruto anual mínimo 22.034,», con el número partido — lo comprobé recortando la cadena, no a ojo. Cae la comparación: «es la peor colocación de cifra del sector junto con Valencia» no se sostiene. La primera cifra en euros de Bizkaia empieza en el carácter 153; en metal-sevilla, en el 159; en metal-valencia, en el 165. Es la tercera peor del sector, no la peor. Enunciado exacto: «Meta de 322 caracteres con la primera cifra en el carácter 153: el recorte del SERP la parte por la mitad. Solo Sevilla (159) y Valencia (165) la colocan más tarde.»",
+      "prueba": {
+        "linea": 7,
+        "cita": "meta[:160] = «Tablas salariales del convenio Siderometalúrgica Bizkaia (REGCON 48001985011981) vigentes en 2026 por ultraactividad ET 86.3. Salario bruto anual mínimo 22.034,»"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.3",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Listé todos los href a /convenio-*.html de la ficha: son las líneas 634, 635 y 636, las tres dentro de «Otros convenios y guías» (h2 en la 631, de 664 líneas de archivo). El cuerpo compara sin enlazar, exactamente como dice el hallazgo (línea 525 contrasta con Construcción Bizkaia sin href). El determinista del 24-ago mantiene internos_en_cuerpo 16 y a_convenios 3, los mismos números que citó el juicio desde el determinista del 20-ago.",
+      "prueba": {
+        "linea": 525,
+        "cita": "A diferencia de Construcción Bizkaia (que limita la antigüedad en 9 tramos hasta el 59% acumulado a los 39 años) o de otros convenios sectoriales con escala lineal por trienios, Metal Bizkaia no establece tope"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.4",
+      "veredicto": "CONFIRMADO",
+      "motivo": "a_hermanas_mismo_sector = 0 en el determinista del 24-ago, y lo verifiqué a mano: los tres enlaces a convenios van a construcción, hostelería y limpieza de Bizkaia. La asimetría con la gemela también es cierta: convenio-comercio-metal-bizkaia.html está en entrantes_desde y no hay reciprocidad. La caracterización de «nodo central» del clúster está respaldada: entrantes_n 25, el máximo del sector.",
+      "prueba": {
+        "linea": 636,
+        "cita": "<li><a href=\"/convenio-limpieza-bizkaia.html\">Convenio Limpieza de Edificios y Locales en Bizkaia</a></li> (últimos de los tres únicos enlaces a convenios; ninguno del sector metal)"
+      }
+    },
+    {
+      "eje": "E5",
+      "id": "6.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Verificado paso a paso: la ficha no tiene ni un href a /plantilla-*.html en el cuerpo; el enlace a /plantillas-transparencia-retributiva-2026.html está en la lista final (línea 639) y el de la guía cuelga del párrafo de siglas sindicales (607), no del paso 1 (603, documentar) ni del plazo (605). Ambas plantillas propuestas existen en el repo.",
+      "prueba": {
+        "linea": 605,
+        "cita": "Tienes 1 año por mensualidad desde que debió pagarse: actúa por las más antiguas primero para no perderlas."
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "7.8",
+      "veredicto": "MATIZADO",
+      "motivo": "Contrasté las cuatro carencias contra las 10 fichas del metal, una a una. Confirmado y exclusivo: es la única sin índice de navegación (0 coincidencias de «Índice del convenio|class=\"toc|id=\"indice» frente a 2-3 en las otras nueve) y la única sin FAQ visible pese al FAQPage de 7 preguntas. Confirmado que su nota editorial es un bloque único de 134 palabras (determinista parrafos.largos_100, línea 217) y no los 3-4 sub-párrafos etiquetados del patrón. Cae la exclusividad de una de las cuatro: «sin sección de ámbito» no es única, metal-barcelona también tiene ambito_funcional en conceptos_ausentes. Enunciado exacto: «Es la única del clúster sin índice de navegación y sin FAQ visible, la única con la nota editorial en un solo bloque de 134 palabras, y una de las dos —con Barcelona— sin ámbito funcional.»",
+      "prueba": {
+        "linea": null,
+        "cita": "24-ago/deterministas/convenio-metal-barcelona.json → conceptos_ausentes: [\"ambito_funcional\", \"subrogacion\", \"que_hacer\"]"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.3",
+      "veredicto": "MATIZADO",
+      "motivo": "La segunda duplicación es real, específica y cara: «Cómo verificar si tu nómina cumple el convenio» (596) y el paso 1 de «¿Tu nómina no encaja con el convenio?» (603) dan dos veces la misma instrucción, y la segunda además con conceptos ajenos. Se queda fuera la primera: penalizar que el hero-sub (186) y la nota editorial (218) cuenten la misma cláusula del IPC es aplicar un criterio que el propio eje no aplicó en la ficha hermana. En metal-alava el mecanismo del +0,5% aparece igualmente en el hero-sub (208) y en la nota editorial (257) y E6 no lo contó como redundancia allí: resumen en cabecera + desarrollo en nota editorial es el canon del corpus, no un defecto de esta ficha. Enunciado exacto: «Duplicación cuerpo a cuerpo entre la sección Cómo verificar (596) y el paso 1 de Reclamar (603): la misma instrucción dos veces seguidas, y la segunda con pluses que este convenio no tiene.»",
+      "prueba": {
+        "linea": 257,
+        "cita": "convenio-metal-alava.html:257 — nota editorial: «la suma de los IPC de 2022-2025 (14,5%) superó en 0,5 puntos los incrementos fijos pactados (14%)», que repite su propio hero-sub (línea 208) sin que E6 lo puntuara como 8.3"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "8.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "El fondo es exacto y lo verifiqué por el camino más hostil: busqué una definición de «Carencia de Incentivo» y «Plus de Convenio» en toda la ficha y no existe; en la tabla de pluses (línea 424) tampoco están, solo tóxico/penoso/peligroso, nocturnidad, sábado, domingo/festivo, retén y quinquenios. Lo único que se dice de ellos es cuántos días se devengan dentro de la fórmula del bruto anual. Corrijo el recuento sin que cambie la conclusión: son 5 apariciones de cada uno, no 4 (líneas 53 y 85 en el JSON-LD; 284, 415 y 596 en el cuerpo visible).",
+      "prueba": {
+        "linea": 415,
+        "cita": "Las cifras mensuales reflejan únicamente el salario base; el bruto anual incluye además Carencia de Incentivo, Plus de Convenio, antigüedad por quinquenios si aplica"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "12.3",
+      "veredicto": "MATIZADO",
+      "motivo": "La comparación estructural es exacta al dato: 14 encabezados y 0 h3 en Bizkaia frente a 23-25 encabezados y 6 h3 en Sevilla (23/6), Álava (24/6), Gipuzkoa (23/6), Navarra (24/6), Madrid (25/6), Valencia (25/6), Zaragoza (23/6) y Asturias (23/6); recalculado sobre los deterministas del 24-ago. También es cierto que declara FAQPage con faq_n 7 sin ninguna pregunta visible. Cae un dato secundario: el callout «Comparación con otras provincias del sector» lo llevan 8 de las 9 hermanas (todas menos Barcelona), no 7 de 9.",
+      "prueba": {
+        "linea": null,
+        "cita": "grep -c \"Comparación con otras provincias del sector\" convenio-metal-*.html → alava 1, asturias 1, gipuzkoa 1, madrid 1, navarra 1, sevilla 1, valencia 1, zaragoza 1, barcelona 0, bizkaia 0"
+      }
+    },
+    {
+      "eje": "E6",
+      "id": "12.6",
+      "veredicto": "CONFIRMADO",
+      "motivo": "Los dos boletines son distintos y la ficha los usa bien en todas partes menos en el sello: BOB en las líneas 212, 216 y 614, BOPV solo en el sello (194) y en la referencia al acuerdo PRECO. Comprobada la norma invocada, que no es genérica sino de casa: CANDIDATAS.md línea 109 define 5.2 como «Sello Verificado contra [boletín] + fecha, con el boletín correcto (forales BOB/BOG/BOTHA, BOCM, BOP; BOE solo si es estatal)». El defecto es de plantilla: «BOPV de la provincia» aparece en exactamente dos fichas del sitio, esta y convenio-limpieza-bizkaia.html.",
+      "prueba": {
+        "linea": 614,
+        "cita": "Convenio íntegro 2022-2025: BOB Núm. 90 del 11 de mayo de 2023 (cve BOB-2023a090-(III-99))"
+      }
+    }
+  ],
+  "resumen": {
+    "confirmados": 12,
+    "matizados": 5,
+    "refutados": 0,
+    "notas": [
+      "Ninguna cifra del juicio del 20-ago se ha desfasado con el determinista del 24-ago: boilerplate_ratio 0,182, frases_compartidas 16, entrantes_n 25, a_hermanas 0, verde_en_tablas 84, meta_len 322, headings 14/0 h3, faq_n 7 y ultimo_commit 2026-07-30 coinciden. Solo cambia dias_desde_commit (21 → 25); la ventana sigue cerrada y los parches son aplicables.",
+      "El hardfail 4.5 llega por cuadruplicado (E1, E2, E3, E6) sobre el mismo hecho y la misma línea. Para el sintetizador es UN hardfail, no cuatro.",
+      "Nota, sin convertirla en hallazgo: el sello con el boletín equivocado que E1 puntúa como 9.1=1 y E6 como 12.6=1 encaja en la definición de 5.2, que en la rúbrica es hard-fail («sello ausente o boletín equivocado», RUBRICA-V1 §3). Ningún eje lo escaló. Lo dejo señalado para que el sintetizador decida la severidad; el hecho está verificado y no cambia.",
+      "Nota de proceso: la causa raíz del código REGCON erróneo y del bloque de pluses ajenos es la misma tabla de scripts/audit/aplicar-boilerplate.py:293-297. Arreglar solo el HTML dejaría el defecto vivo en el script (métrica 9.5, «el generador revertiría la ficha»)."
+    ]
+  }
+}

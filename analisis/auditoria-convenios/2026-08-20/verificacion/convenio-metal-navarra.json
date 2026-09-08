@@ -1,0 +1,53 @@
+{
+  "slug": "convenio-metal-navarra",
+  "contexto": {
+    "determinista_usado": "2026-08-24 (refrescado; solo cambian dias_desde_commit 15->19 y el orden de dos frases de corpus)",
+    "ultimo_commit": "2026-08-04",
+    "dias_desde_commit": 19,
+    "ventana_medicion_abierta": true,
+    "aviso_ventana": "Sigue abierta, pero se cierra el 26-ago (umbral dias<21). Los parches aplazados de esta ficha son ejecutables a partir de esa fecha.",
+    "hardfails_declarados_en_esta_ficha": 1,
+    "hardfails_deterministas": 0,
+    "plantilla_no_penalizada": "4 tablas sin scope ni caption (11.1*) y 1 bloque de mas de 100 palabras (7.4*) son patron del corpus (54 y 37 fichas respectivamente); ningun eje los ha usado para bajar nota"
+  },
+  "veredictos": [
+    {
+      "eje": "E3", "id": "12.1", "veredicto": "CONFIRMADO",
+      "motivo": "La cita existe literal en la linea 295, dentro del callout 'Comparacion con otras provincias del sector', y la contradiccion con convenio-metal-madrid.html es real: alli hay columna Quinquenio con siete cuantias (30,82-42,72 EUR/mes), maximo de 5 quinquenios y Art. 41 (lineas 267, 272-280 y 302). Comprobado el respaldo documental de cada lado, que es lo que decide quien carga con el error: Navarra no ofrece para Madrid NI articulo NI boletin NI tabla -su unica fuente sobre Madrid es un enlace a la propia ficha de Madrid, que dice lo contrario-, mientras que Madrid cita Art. 41, declara el BOCM n 59 como fuente de los quinquenios (linea 511) y publica la cuantia grupo a grupo; el dataset del proyecto lo confirma (data/convenios/metal_mad.json:23, tipo 'quinquenios'). Ademas, la propia Navarra si respalda la mitad que le corresponde (sus trienios, Art. 46, con importes 2026 en la linea 366): el defecto esta solo en la coletilla sobre la provincia ajena. La norma invocada existe y cubre el caso: RUBRICA-V1 lista 12.1 entre los 28 hard-fails y la describe como 'dos fichas se contradicen'. CAUTELA: esto establece que la frase a corregir es la de Navarra, no que el Art. 41 de Madrid este verificado; la verdad material sigue exigiendo cotejar el Art. 41 en el BOCM, y hasta entonces no debe tocarse la columna de Madrid.",
+      "prueba": {"archivo": "convenio-metal-navarra.html", "linea": 295, "cita": "Además, Navarra suma una <strong>paga de 400 € en marzo</strong> y mantiene la <strong>antigüedad por trienios</strong>, que Madrid tiene congelada. | sin articulo ni boletin que respalde lo de Madrid, frente a convenio-metal-madrid.html:267 «La columna \"Quinquenio\" es lo que suma cada tramo de 5 años de antigüedad, con un máximo de 5 quinquenios (Art. 41)»"}
+    },
+    {
+      "eje": "E5", "id": "6.4", "veredicto": "MATIZADO",
+      "motivo": "El hecho central se sostiene: determinista 24-ago a_otro_sector_misma_provincia = [] y grep de enlaces salientes a fichas hermanas devuelve solo metal (madrid, valencia, bizkaia, gipuzkoa, barcelona = las 5 que cuenta el determinista). Pero el enunciado tiene una parte falsa y un problema de escala. Falsa: 'tampoco ofrece la salida generica al directorio' -la ficha enlaza /convenios.html dos veces, en el breadcrumb (201) y en el pie (532)-; lo que falta no es el enlace al directorio sino un enlace al directorio EN el punto de la duda (267). De escala: el propio eje reconoce que el hueco es estructural (comprobado con ls: convenio-metal-navarra.html es la unica ficha de Navarra del corpus), y sin embargo pone la misma nota 1 que a convenio-metal-zaragoza, que si tiene dos destinos publicados (convenio-hosteleria-zaragoza.html y convenio-limpieza-zaragoza.html) y no enlaza ninguno. Penalizar igual a quien no puede enlazar y a quien no quiso es lo mismo que la verificacion de metal-sevilla ya reprocho en 6.2.",
+      "enunciado_corregido": "6.4 = 2: la ficha cubre bien la unica direccion posible (5 hermanas del metal, de las mas altas del cluster) y no puede cubrir la otra porque no existe ninguna otra ficha de Navarra en el corpus. El defecto que queda es pequeno y sigue mereciendo parche: el parrafo que manda al lector al Comercio del Metal de Navarra (267) le dice que se ha equivocado de convenio y no le da salida contextual; el directorio solo esta en el breadcrumb y en el pie.",
+      "prueba": {"archivo": "convenio-metal-navarra.html", "linea": 201, "cita": "<div class=\"breadcrumb\"><a href=\"/\">SalarioJusto</a> › <a href=\"/convenios.html\">Convenios</a> › Metal › Navarra</div> | y linea 532: <a href=\"/convenios.html\">Convenios</a> ·"}
+    },
+    {
+      "eje": "E5", "id": "6.6", "veredicto": "CONFIRMADO",
+      "motivo": "grep 'plantilla-' sobre la ficha: 0 coincidencias. Determinista 24-ago: al_kit con un unico destino, la guia generica. Leida la seccion completa (438-446): los cinco pasos no llevan enlace y el puente cuelga del parrafo de REGCON y firmantes que cierra el bloque, exactamente el patron que describe el eje. Las dos plantillas que propone el parche existen en el repo. Mismo criterio y misma nota que en metal-sevilla y metal-madrid: la calibracion es consistente.",
+      "prueba": {"archivo": "convenio-metal-navarra.html", "linea": 446, "cita": "Código REGCON: 31006805011981. Firmantes: <strong>ANEM y APMEN</strong> (patronales) y los sindicatos <strong>FICA-UGT y CCOO</strong>. <a href=\"/reclamar-diferencias-salariales-convenio.html\">Guía completa para reclamar diferencias →</a>"}
+    },
+    {
+      "eje": "E6", "id": "8.1", "veredicto": "MATIZADO",
+      "motivo": "La redundancia es real y la he recorrido vineta a vineta: Salario Garantizado y horquilla -> 253; paga de 400 EUR -> 306; trienios -> 366; acuerdo de competitividad y bolsa de horas -> 317-321; teletrabajo 50 EUR -> 385; IT -> h2 'Baja medica' en 390 con los Arts. 51 y 52 en 393-398. Seis con antecedente claro. Lo que falla es el inventario de rescate: el eje dice que solo dos vinetas aportan algo nuevo (subrogacion y regimen foral) y son tres. La vineta de vigencia (435) es el UNICO sitio de la ficha donde aparece la palabra 'ultraactividad' (grep: una sola ocurrencia); el callout de la linea 422, que el eje da por equivalente, habla de denuncia, de ultimo ano de vigencia y de la revision por IPC de enero de 2027, pero no de que pase despues. Si se ejecuta el parche tal como esta redactado, ese dato se pierde.",
+      "enunciado_corregido": "8.1 = 1: seis de las nueve vinetas de «Particularidades» (425-436) rehacen secciones ya desarrolladas (253, 306, 366, 317-321, 385, 390-398). Antes de suprimir el h2 y la lista hay que rescatar TRES, no dos: la subrogacion limitada (433), el regimen fiscal foral (434) y la unica mencion a la ultraactividad posterior al 31-dic-2026 (435), que no esta en el callout de la 422 ni en ningun otro sitio.",
+      "prueba": {"archivo": "convenio-metal-navarra.html", "linea": 422, "cita": "Pero <strong>2026 es el último año de vigencia</strong>: el convenio está denunciado con efectos 31 de diciembre de 2026. En <strong>enero de 2027</strong> hay prevista una actualización adicional por IPC… | sin mencion a la ultraactividad, que solo aparece en la vineta 435"}
+    },
+    {
+      "eje": "E6", "id": "8.3", "veredicto": "MATIZADO",
+      "motivo": "Hay repeticion, pero no la triple que describe el enunciado. Cotejados los tres puntos: 253 da composicion (Base + Plus Convenio + Plus Carencia), 14 pagas y los dos extremos con cifra; 427 repite los dos extremos con la misma cifra -esa si es duplicacion literal-; 272, en cambio, no trae ninguna cifra ni la lista de componentes: dice que el Garantizado es bruto anual antes de IRPF y SS, que ya incluye las extras y que NO incluye antiguedad ni pluses. Su solape con 253 se reduce a 'incluye las dos extras' = 'se abona en 14 pagas'. Ademas, y esto afecta al parche: lo que la 272 si duplica casi palabra por palabra es la linea 255 («Sobre ese Salario Garantizado se suman aparte la antiguedad por trienios, los pluses de toxicidad, penosidad, peligrosidad y nocturnidad»), que es justo el texto que el parche propone CONSERVAR en la 272.",
+      "enunciado_corregido": "8.3 = 1: los extremos del Salario Garantizado se dan dos veces con la misma cifra, en el callout 253 y en la primera vineta del cajon final 427; la segunda desaparece con el parche de 8.1. La nota de lectura de la tabla (272) no repite cifras, pero si repite lo que ya dice la linea 255 sobre lo que el Garantizado no incluye: si se recorta, hay que recortar por ahi, no por la parte que el parche propone dejar.",
+      "prueba": {"archivo": "convenio-metal-navarra.html", "linea": 255, "cita": "Sobre ese Salario Garantizado se suman aparte la <strong>antigüedad por trienios</strong>, los <strong>pluses de toxicidad, penosidad, peligrosidad y nocturnidad</strong>… | 272: «No incluye la antigüedad ni los pluses de toxicidad/penosidad/peligrosidad, que se suman aparte.»"}
+    }
+  ],
+  "resumen": {
+    "confirmados": 2,
+    "matizados": 3,
+    "refutados": 0,
+    "notas": [
+      "NO ES HALLAZGO MIO, ES AMPLIACION DEL 12.1: la misma afirmacion sobre Madrid la hace una cuarta ficha que ningun eje cito, convenio-metal-asturias.html:483 ('frente a la antiguedad congelada de Zaragoza, Madrid y Barcelona'). Al redactar la correccion conviene tratar las cuatro a la vez.",
+      "El proyecto ya tenia registrada la contradiccion: analisis/auditoria-convenios/COLA-CORRECCIONES.md, apartado 11, verificado el 20-ago. Mi verificacion no la descubre, la resuelve solo en cuanto al reparto de la carga de la prueba.",
+      "Observacion de escala para el sintetizador, sin veredicto: 6.4 recibe la misma nota 1 en Navarra (0 destinos posibles) y en Zaragoza (2 destinos publicados y no enlazados). Si no se normaliza, la matriz mezcla un defecto de la ficha con un hueco del corpus."
+    ]
+  }
+}

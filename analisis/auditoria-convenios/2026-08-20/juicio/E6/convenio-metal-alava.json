@@ -1,0 +1,191 @@
+{
+  "eje": "E6",
+  "slug": "convenio-metal-alava",
+  "metricas": [
+    {
+      "id": "7.8",
+      "nota": 2,
+      "razon": "Sigue el canon entero (sello, índice, datos clave, nota editorial en cuatro sub-párrafos, ámbito, tabla, pagas, jornada, vacaciones, licencias, pluses, subida, protección social, reclamar, recursos, FAQ, fuentes, quién audita) y su contenido exclusivo foral está desarrollado: el premio de jubilación anticipada y la póliza obligatoria tienen su propio sub-bloque dentro de «Protección social». No llega a 3 porque un rasgo exclusivo —el fomento del euskera del Art. 59— vive únicamente como viñeta del cajón final y no se desarrolla en ninguna sección: es justo el tipo de contenido propio que una normalización de formato se llevaría por delante sin que se notara.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 527,
+          "cita": "Premio de jubilación anticipada (Art. 32)"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 541,
+          "cita": "Fomento del euskera (Art. 59) y régimen fiscal foral de Álava , no régimen común."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.1",
+      "nota": 1,
+      "razon": "Sobra «Particularidades del convenio del metal de Álava»: sus ocho viñetas rehacen lo que ya está desarrollado más arriba en la misma página —ultraactividad y art. 4 (línea 262), cierre del +0,5% (508), horquilla de 20.551 a 31.277 € (247 y 282), bolsín de 100 h (427), quinquenios/nocturnidad/penosidad (468-477), protección social (515-528) y subrogación de fibra (274)—. Quien llega ahí ya lo ha leído todo. La única viñeta con información no desarrollada arriba es la del euskera, así que la sección no se puede borrar sin más: hay que rescatar ese dato antes.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 532,
+          "cita": "Particularidades del convenio del metal de Álava"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 536,
+          "cita": "Salario por 8 grupos y 54 categorías , de 20.551,17 € (peón/a) a 31.276,97 € (ingeniero/a-arquitecto/a); el bruto de tablas ya incluye vacaciones y 2 pagas extra."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 282,
+          "cita": "Para cada categoría se indica el salario bruto anual , que ya incluye salario base, plus de actividad, vacaciones y las dos pagas extraordinarias."
+        }
+      ],
+      "parche": "Eliminar el <h2 id=\"particularidades\"> y su <ul> completo, y antes de borrarlo trasladar el único dato que no está desarrollado arriba a la sección «Protección social», como cuarto sub-bloque: «<h3>Fomento del euskera (Art. 59)</h3><p>El convenio recoge el compromiso de fomentar el uso del euskera en las empresas del sector. Es una cláusula propia del ámbito alavés que no aparece en los convenios del metal de régimen común.</p>». Y en el índice, sustituir la entrada «Particularidades ·» por «Protección social ·» (que ya existe).",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.2",
+      "nota": 2,
+      "razon": "Orden razonable: el card de datos clave da la horquilla 20.551-31.277 € en la primera pantalla y el índice permite saltar a la tabla; respuesta_directa.cifra_en_primeros_bloques viene en true. No es 3 porque entre el resumen y la tabla se interponen dos h2 completos de contexto (ultraactividad y ámbito), de modo que quien hace scroll sin usar el índice recorre unas 70 líneas de prosa antes de ver su categoría.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 247,
+          "cita": "Salario bruto anual 20.551 € – 31.277 €/año"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 261,
+          "cita": "Un convenio vencido que sigue aplicándose: la ultraactividad"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 281,
+          "cita": "Tablas salariales 2026 — las 54 categorías"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.3",
+      "nota": 1,
+      "razon": "El mecanismo del +0,5% (IPC acumulado 14,5% frente a incrementos fijos del 14%, acta paritaria del 26-ene-2026, BOTHA 18) se cuenta dos veces en el cuerpo con casi las mismas palabras y los mismos números, a 240 líneas de distancia, y una tercera resumido en el cajón final. La sección «Cómo se calcula la subida 2026» existe precisamente para eso, así que la que sobra es la narración larga de la sección de ultraactividad.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 266,
+          "cita": "El artículo 24 preveía que, si la suma de los IPC de 2022, 2023, 2024 y 2025 superaba el 14% de incrementos fijos que se habían pactado, el diferencial se aplicaría sobre las tablas de 2025 en 2026. Los IPC sumaron 14,5% , medio punto por encima, así que la comisión paritaria acordó el 26 de enero de 2026 subir las tablas de 2025 un +0,5%"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 508,
+          "cita": "El convenio garantizaba que, si la inflación de los cuatro años superaba el 14% de subidas fijas, la diferencia se pagaría en 2026. La suma de los IPC llegó al 14,5% , así que la comisión paritaria acordó el 26 de enero de 2026 actualizar las tablas de 2025 un 0,5%"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 535,
+          "cita": "Tablas 2026 = cierre del +0,5% del art. 24 (diferencial de IPC acumulado 14,5% frente a incrementos fijos 14%)."
+        }
+      ],
+      "parche": "En la sección de ultraactividad, cortar el párrafo de la línea 266 tras la primera frase y remitir: «Por eso existen tablas salariales de 2026 aunque el convenio esté vencido. No son un convenio nuevo: son el cierre de una cláusula de garantía que el propio texto dejó pactada en su artículo 24. Lo desarrollamos con las cifras en <a href=\"#subida\">cómo se calcula la subida 2026</a>.» Deja el relato completo solo en su sección.",
+      "aplazado_por_ventana": true
+    },
+    {
+      "id": "8.6",
+      "nota": 2,
+      "razon": "«Ultraactividad» —el término que decide si este convenio te cubre o no— se explica de verdad en su primer uso desarrollado y con la consecuencia práctica encadenada, y «subrogación» se explica en la FAQ acotando el único supuesto. No es 3 porque «comisión paritaria» aparece cinco veces, incluida la instrucción de acudir a ella para reclamar, y en ninguna se dice qué es ese órgano ni quién lo compone; y porque, a diferencia de metal-valencia, ninguna explicación se traduce a lo que supone en euros.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 264,
+          "cita": "Es lo que se llama ultraactividad : las condiciones y las tablas siguen aplicándose."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 549,
+          "cita": "Acude a la Comisión Paritaria del convenio o a la vía extrajudicial (PRECO, en el País Vasco)."
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 600,
+          "cita": "Solo en un supuesto: el artículo 50 obliga a subrogar al personal cuando finaliza una contrata de mantenimiento , o de instalación y mantenimiento de fibra óptica y telefonía"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "8.8",
+      "nota": 2,
+      "razon": "Plural correcto: las cinco menciones de CCOO y UGT van siempre acompañadas de LAB y en calidad de firmantes o de fuente del acta, que es el uso legítimo, y la tarjeta de asesoría sindical incluye a la sigla combativa en vez de dejarla fuera. No es 3 porque el texto no sitúa en ningún punto la representatividad real en el metal alavés (ELA, la central mayoritaria en Euskadi, no aparece ni para decir que no firmó), y sin ese dato la lista de firmantes se lee como si fuera toda la representación.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 250,
+          "cita": "Firmantes SEA · UGT · CCOO · LAB"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 569,
+          "cita": "UGT · CCOO · LAB"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 570,
+          "cita": "Sindicatos firmantes. Asesoría a personas afiliadas del sector del metal en Álava."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.3",
+      "nota": 2,
+      "razon": "El esqueleto es el mismo que el de convenio-metal-sevilla, la referencia de forma del piloto, y el de sus hermanas convenio-metal-gipuzkoa y convenio-metal-navarra: 1 h1, 17 h2, 6 h3 de FAQ, saltos_jerarquia vacío y la misma secuencia sello → índice → datos clave → nota editorial → gancho provincial → ámbito → tabla → pagas → jornada → vacaciones → licencias → pluses → subida → reclamar → recursos → FAQ → fuentes → quién audita. No hay desviación que señalar.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 207,
+          "cita": "Convenio del Metal de Álava : las 54 categorías, de 20.551 € a 31.277 € en 2026"
+        },
+        {
+          "archivo": "convenio-metal-gipuzkoa.html",
+          "linea": 205,
+          "cita": "Convenio del Metal de Gipuzkoa : tablas 2026 de 28.256 € a 48.323 €"
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    },
+    {
+      "id": "12.6",
+      "nota": 2,
+      "razon": "Un solo nombre por concepto en lo que importa: la magnitud de la tabla es «salario bruto anual» en el card, en el intro de la tabla, en la FAQ y en el cajón final, sin variantes, y los grupos se rotulan igual en la tabla y en el cuerpo («Grupo 8 · Personal obrero» / «en el grupo obrero»). No es 3 porque el mismo plus baila de orden en cada aparición —«penosidad/toxicidad/peligrosidad» en el intro de la tabla y en el bloque de reclamar, «Penosidad, toxicidad y peligrosidad» en pluses, «tóxico/penoso/peligroso» en el cajón final—, y quien haga Ctrl+F por una de las tres formas no encuentra las otras dos.",
+      "evidencia": [
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 283,
+          "cita": "No incluye los quinquenios de antigüedad, la nocturnidad ni el plus de penosidad/toxicidad/peligrosidad"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 476,
+          "cita": "Penosidad, toxicidad y peligrosidad (Art. 17)"
+        },
+        {
+          "archivo": "convenio-metal-alava.html",
+          "linea": 538,
+          "cita": "Quinquenios de antigüedad, nocturnidad y plus tóxico/penoso/peligroso como cantidades fijas brutas al día (Arts. 16, 17 y 18)."
+        }
+      ],
+      "parche": null,
+      "aplazado_por_ventana": false
+    }
+  ],
+  "no_evaluadas": [],
+  "hardfails": [],
+  "observacion_libre": "Capa 0 (no puntuado aquí): 11 tablas sin scope ni caption y un párrafo de 118 palabras en la línea 266 — ambos defectos de plantilla que comparten 54 y 37 fichas del corpus. verde_en_tablas = 0: las cifras van en tinta neutra, como manda la norma de casa. Fuera de mi eje: la FAQ «¿Cuánto cobra un oficial de 1.ª?» (línea 594) da tres cuantías sin citar el BOTHA en la propia sección ni el año, y el determinista la marca entre las secciones sin fuente; que lo mire el eje de verdad. La ficha está en ventana de medición abierta (commit del 8-ago), así que sus parches van aplazados."
+}
