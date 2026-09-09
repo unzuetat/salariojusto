@@ -99,7 +99,7 @@ const SMI_HIST = [
   { año: 2023, mensual: 1080, anual: 15120, pagas: 14 },
   { año: 2024, mensual: 1134, anual: 15876, pagas: 14 },
   { año: 2025, mensual: 1184, anual: 16576, pagas: 14 },
-  { año: 2026, mensual: 1184, anual: 16576, pagas: 14 },
+  { año: 2026, mensual: 1221, anual: 17094, pagas: 14 },
 ];
 
 // ── Helpers HTML ───────────────────────────────────────────────────
