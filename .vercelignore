@@ -1,0 +1,16 @@
+# Zonas de trabajo interno: viven en el repo (respaldo + sincronización entre
+# máquinas) pero NO se despliegan en salariojusto.es.
+#
+# Motivo: Vercel publica el repositorio entero, así que sin este archivo
+# cualquiera puede leer las auditorías, las métricas de GSC y el material de
+# prensa adivinando la ruta. Ninguna página del sitio los enlaza.
+#
+# legacy/ guarda el snapshot de la calculadora v1 (tag calc-v1-pre-rediseno):
+# es respaldo, no contenido. Servirlo publicaba una copia entera de la
+# calculadora en /legacy/calc-v1/, duplicando la herramienta principal.
+
+analisis/
+press/
+outreach/
+research/
+legacy/

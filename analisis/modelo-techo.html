@@ -1,0 +1,101 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modelo de techo · SalarioJusto</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1a1a1a;--mut:#666;--line:#e5e5e0;--accent:#2f6f4f;--warn:#b8860b}
+@media(prefers-color-scheme:dark){:root{--bg:#14161a;--card:#1d2026;--ink:#e8e8e6;--mut:#9aa0a8;--line:#2c313a;--accent:#4fb183;--warn:#d9a441}}
+:root[data-theme=dark]{--bg:#14161a;--card:#1d2026;--ink:#e8e8e6;--mut:#9aa0a8;--line:#2c313a;--accent:#4fb183;--warn:#d9a441}
+:root[data-theme=light]{--bg:#f7f7f5;--card:#fff;--ink:#1a1a1a;--mut:#666;--line:#e5e5e0;--accent:#2f6f4f;--warn:#b8860b}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:22px;margin:0 0 4px}.sub{color:var(--mut);font-size:13px;margin:0 0 24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:16px}
+.ctrl{margin-bottom:18px}
+.ctrl label{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:6px}
+.ctrl .v{color:var(--accent);font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.hint{font-size:12px;color:var(--mut);margin-top:4px}
+.warn{border-left:3px solid var(--warn);padding-left:12px;color:var(--warn);font-size:13px;margin:2px 0 0}
+.out{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+.out .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-align:center}
+.out .lbl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+.out .big{font-size:30px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+.chain{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums;line-height:1.9;margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.chain b{color:var(--ink)}
+.goal{font-size:13px;margin-top:10px}.goal.hit{color:var(--accent);font-weight:700}
+.toggle{float:right;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:4px 10px;color:var(--ink);font-size:12px}
+</style></head><body><div class="wrap">
+<button class="toggle" onclick="tg()">◐</button>
+<h1>Modelo de techo · SalarioJusto</h1>
+<p class="sub">Anclado en datos reales (ago-2026): 41 fichas · 4.750 clicks/mes · 1,07 pv/sesión. Mueve las perillas y evita el doble conteo.</p>
+
+<div class="card">
+  <div class="ctrl">
+    <label>Nº de fichas de convenio <span class="v" id="vFichas">410</span></label>
+    <input type="range" id="fichas" min="41" max="600" value="410" step="1">
+    <div class="hint">Hoy 41. "x10" = 410.</div>
+  </div>
+  <div class="ctrl">
+    <label>Rendimiento de ficha nueva vs. media actual <span class="v" id="vYield">55%</span></label>
+    <input type="range" id="yield" min="20" max="100" value="55" step="5">
+    <div class="hint">Las 41 actuales son las de MÁS demanda. 100% = las nuevas rinden igual (sin decay, ×10 lineal). 40-60% = decay realista. Sube si la autoridad "arrastra" la cola.</div>
+  </div>
+  <div class="ctrl">
+    <label>Multiplicador de engagement <span class="v" id="vEng">2.0×</span></label>
+    <input type="range" id="eng" min="1" max="3" value="2" step="0.1">
+    <p class="warn">⚠️ Esto es posición + CTR + autoridad TODO JUNTO. Subir de pos 5,8 a 2-3 ≈ ×2. NO lo cuentes otra vez por separado.</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ctrl">
+    <label>Páginas / sesión <span class="v" id="vPv">1.4</span></label>
+    <input type="range" id="pv" min="1.05" max="2" value="1.4" step="0.05">
+    <div class="hint">Hoy 1,07. Enlazado interno lo sube. Palanca barata: +pv = +€ sin más visitas.</div>
+  </div>
+  <div class="ctrl">
+    <label>RPM (€/1000 pageviews) <span class="v" id="vRpm">7</span></label>
+    <input type="range" id="rpm" min="2" max="12" value="7" step="0.5">
+    <div class="hint">AdSense ES ~3-5€. Ezoic/AdX (post-aprobación) ~6-9€.</div>
+  </div>
+</div>
+
+<div class="out">
+  <div class="box"><div class="lbl">Clicks / mes</div><div class="big" id="oClicks">—</div></div>
+  <div class="box"><div class="lbl">Ingresos / mes</div><div class="big" id="oEur">—</div></div>
+</div>
+<div class="card">
+  <div class="chain" id="chain"></div>
+  <div class="goal" id="goal"></div>
+</div>
+</div>
+<script>
+if(localStorage.mtTheme)document.documentElement.dataset.theme=localStorage.mtTheme;
+function tg(){const r=document.documentElement;const cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');r.dataset.theme=cur==='dark'?'light':'dark';localStorage.mtTheme=r.dataset.theme}
+const BASE_FICHAS=41, PER_FICHA=4750/41; // ~116 clicks/ficha media actual
+const $=id=>document.getElementById(id);
+const ids=['fichas','yield','eng','pv','rpm'];
+function fmt(n){return Math.round(n).toLocaleString('es')}
+function calc(){
+  const fichas=+$('fichas').value, yield=+$('yield').value/100, eng=+$('eng').value, pv=+$('pv').value, rpm=+$('rpm').value;
+  $('vFichas').textContent=fichas; $('vYield').textContent=Math.round(yield*100)+'%';
+  $('vEng').textContent=eng.toFixed(1)+'×'; $('vPv').textContent=pv.toFixed(2); $('vRpm').textContent=rpm;
+  // volumen: 41 top a rendimiento pleno + resto a rendimiento decaído
+  const nuevas=Math.max(0,fichas-BASE_FICHAS);
+  const volumen = BASE_FICHAS*PER_FICHA + nuevas*PER_FICHA*yield;
+  const clicks = volumen*eng;
+  const pvs = clicks*pv;
+  const eur = pvs*rpm/1000;
+  $('oClicks').textContent=fmt(clicks);
+  $('oEur').textContent='€'+fmt(eur);
+  $('chain').innerHTML=`Volumen (${fichas} fichas): <b>${fmt(volumen)}</b> clicks/mes<br>`+
+    `× engagement ${eng.toFixed(1)}×: <b>${fmt(clicks)}</b> clicks/mes<br>`+
+    `× ${pv.toFixed(2)} pv/sesión = <b>${fmt(pvs)}</b> pageviews/mes<br>`+
+    `× RPM ${rpm}€ / 1000 = <b>€${fmt(eur)}/mes</b>`;
+  const g=$('goal');
+  if(eur>=1000){g.className='goal hit';g.textContent='✅ Objetivo 1.000 €/mes ALCANZADO en este escenario.'}
+  else{g.className='goal';g.textContent=`Faltan €${fmt(1000-eur)} para el objetivo de 1.000 €/mes.`}
+}
+ids.forEach(i=>$(i).addEventListener('input',calc));
+calc();
+</script></body></html>
