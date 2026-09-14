@@ -1,0 +1,66 @@
+# Respaldo de ramas locales · 2026-09-09
+# Para recuperar cualquiera:  git branch <nombre> <sha>
+
+chore/ga4-service-account 8b3c77d5af5081a6fdb99549f3622545c0feca88 [desaparecido] chore(ga4): migra fetch a service account + sync 18d GA4 + actualiza logs
+chore/sync-guardrails-y-comparativas fac4e39c9e16443035c651fa1ad2fcd7cd4877b5 [desaparecido] feat(pilar-limpieza): comparador 10 provincias en el pilar de Limpieza (Tier C → Tier A)
+design/home-rediseno bc5ee54fe8effd835b2e3077e200726a33356a1b  docs(design): archivo REFERENCIAS.md persistente para retomar rediseno home
+feat/alertas-convenio bce04fc784e7c09aa0b82255799df2d47cfecd15  feat(alertas): MVP de alertas por email de cambios de convenio (Brevo, doble opt-in)
+feat/asturias-title-edificios-locales 7e833129310ec6b4168f3df5cd6a9b8004de6622 [desaparecido] fix(asturias): title B aplicado — añade 'edificios y locales' para captar cluster huérfano
+feat/baleares-respuesta-extraible 498d9c61ae57ce644f4aa14677ee009d5ed5c9a1 [desaparecido] feat(baleares): frase-respuesta extraíble + traza BOIB inline en 1ª pantalla
+feat/boe-remixed-limpieza-bizkaia 2363cedb4cbe4564203b1d50db29838c95e4cf67 [desaparecido] refactor(limpieza-bizkaia): tablas salariales colapsables por familia profesional
+feat/boe-remixed-limpieza-malaga 4f35e6c9178be9d6c374401244db84cf74f553fe [desaparecido] feat(limpieza-malaga): BOE remixed completo score 4 -> 10
+feat/boe-remixed-limpieza-valencia 6f881cf8157816051fb5a8351e9cb1bae741301b [desaparecido] feat(limpieza-valencia): BOE remixed completo score 5 -> 10
+feat/boe-remixed-sevilla-laspalmas 51eca5e2d9d02b33a28980ea2fa9de0c4212d2bb [desaparecido] feat(limpieza-sev-lp): BOE remixed Sevilla + Las Palmas score 4 -> 10
+feat/censo-convenios 738e31924be48ac278ec6b208892d35bf8036ca6 [desaparecido] feat(censo): fuente única de estado de convenios + cuadre de cifras
+feat/comercio-madrid 7e33fea03aa66dfff31ef03cc818e3a40a0950da  docs(llms): añade sección Comercio + ficha Comercio Vario Madrid
+feat/convenio-comercio-madrid 636d3adcab4e0ee63f2f897379fd968e47707cfb  feat(convenio): Comercio Vario Madrid 2025-2028 (BOCM 183) + integración
+feat/convenio-comercio-metal-barcelona c189546da595931992466e7bd2d7345535adc829 [desaparecido] merge main en feat/convenio-comercio-metal-barcelona (párrafo Directiva recortado + promesa #98, cobertura 55 fichas)
+feat/convenio-comercio-metal-bizkaia 4be463f0248a3953e17dd0760f5d780a9fee7156 [desaparecido] feat(convenio): Comercio del Metal Bizkaia — abre sector nuevo (ultraactividad, tablas 2019 + suelo SMI)
+feat/convenio-contact-center f51e2c7d9b734cc5737ea672f4705b11308fb384 [desaparecido] feat(convenio): Contact Center estatal (III Convenio, tablas 2026 +3,4%) + propagación
+feat/convenio-hosteleria-gipuzkoa a89308ad6d1f27020dc9db401585c8720674d6be  chore(seo): desconecta mirror /en/ (sección incompleta, señal AdSense)
+feat/convenio-hosteleria-laspalmas 5367b2150582b4ea1be1d684e8db9176e6ce0fce [desaparecido] feat(hosteleria-laspalmas): landing 2026 tras acuerdo huelga BOP 79/2025 + nav redesign
+feat/convenio-limpieza-pontevedra 7d2aed80e3e7cc6d991e0ff4077180f7e0071c4a [desaparecido] feat(convenio): Limpieza Pontevedra 2025 (BOPPO 141, ultraactividad +2,9%) + propagación
+feat/convenio-limpieza-tenerife ae721a481ba687f56e802cca2e157f4c147ba256 [desaparecido] feat(convenio): Limpieza Santa Cruz de Tenerife (paradoja SMI, tablas 2025 en prórroga) + propagación
+feat/convenio-metal-asturias 11ecc1c9db496b352fa216368cbe14be89e7abd0 [desaparecido] feat(convenio): Metal Asturias 2024-2026 (BOPA 191, tablas 3 años) + propagación
+feat/convenio-metal-navarra b19584649e900c9ec10c0166b03eaf70b37b101a [desaparecido] feat(convenio): Metal Navarra 2026 (BON 31, Res. 9C/2026) + propagación
+feat/convenio-metal-zaragoza dd0c677a5292445866c0ad248dc1f2e48b613083 [desaparecido] fix(convenio): Peón/a en ficha y OG card del metal Zaragoza
+feat/convenio-oficinas-madrid 1f8b7f55b60a372ac3793ddf97e61bec6fe15d6c [desaparecido] feat(oficinas-madrid): landing 2026 tras BOCM 9-ago-2025 con tablas +2,7% y garantia SMI
+feat/convenio-seguridad-privada c55bfad7f6546abefc27c5fb3d6accfe38d276c7 [desaparecido] feat(convenio): Seguridad Privada estatal 2026-2030 (BOE núm. 95) + propagación
+feat/detector-vigilancia e50246d019376fbf9ae5aed7fd3a5357726136e0 [desaparecido] feat(convenio): metal Madrid (Industria, Servicios e Instalaciones) 2026
+feat/directorio-c2-alicante-31fichas e45ae56b614c7217220aa856e4d168c2289dd332 [desaparecido] feat(home): follow-up C2 con Alicante hosteleria (30 -> 31 fichas)
+feat/home-og-social fd07bcbe6c91099aecbe80b87051b445d41d3bde [desaparecido] fix(home): tarjeta social a convenios + twitter:image
+feat/home-title-seo f61b997821657db61d96a3f4d7d3bc13cded6745 [desaparecido] seo(home): título hacia convenios (fórmula "tablas salariales")
+feat/hub-censo-cifras 6559307d5e68a8707ef7436066b566cd34fcd75e [desaparecido] fix(hub): propaga la cifra del censo (10 de 36 en ultraactividad)
+feat/hub-guias-refresh a79f2c6782b3beecbb743edd71aa02a449cab6b5 [desaparecido] feat(hub-guias): refresh editorial — score 1 → 8
+feat/hub-plantillas-refresh d421a55edd089cec02cb51356ee6b149d7fac83a [desaparecido] feat(hub-plantillas): refresh editorial — score 2 → 7
+feat/hub-salarios-tier-a cf84d2169d67888b6f18a1a888ae8d38dff3a0e8 [desaparecido] feat(hub-salarios): comparador editorial 16 provincias × 4 sectores (score 1 → 6)
+feat/limpieza-alicante a9d61c75f62e5d2d849dc814d17a7303f67b366c [desaparecido] feat(limpieza-alicante): landing BOE remixed con paradoja del SMI (tablas 2023 en ultraactividad)
+feat/mapa-cuerpo-completo a0dd81749284010ded4d45db7d0a088b0a18ac09 [desaparecido] fix(mapa): completa el cuerpo con las 9 fichas que faltaban (30 → 39)
+feat/metal-valencia 2a0f6590367bd96edf364cdb1b58dbb996164a1d [desaparecido] feat(metal-valencia): landing BOE remixed con la paga de marzo como angulo
+feat/oficinas-madrid-smi 372715810b7763a596f041f337aa92f51af43bfa [desaparecido] fix(oficinas-madrid): precisa cronología del RD 126/2026 (aprobación 18-feb vs publicación BOE)
+feat/pre-appeal-surface-editorial c8d3b0c6cb7f1ad075da2f45e0884800ddd889f6 [desaparecido] feat(adsense): sprint pre-reapelación — surfacear editorial + E-E-A-T + fixes
+feat/seo-title-hosteleria-baleares a43164be863298a18199503575e74d7d47fe9c69 [desaparecido] feat(seo): title hosteleria-baleares cifra + Plus 141 € al inicio (patrón CTR ganador)
+feat/skill-sj-index-check 1dd990cb4209ec8c3a3a2f5e2e11241b82e229b3 [desaparecido] feat(skills): /sj-index-check v2 + dashboard ampliado con reindex log y GSC multi-ventana
+feat/sobre-publicidad 70ea3b2076486a05be2eb1dea790802de233f94d [desaparecido] feat(sobre): actualiza compromiso de monetización y recorta el párrafo de la Directiva
+fix/adsense-preflight-cleanup 1dc44b5939e8100183d91247035221c57fa0c429  fix(convenios): sincroniza hub con inventario real (32->35 fichas)
+fix/adsense-round2 526ad14b3e3768ecba18d4a7692d7c5def44c7d1 [desaparecido] chore(adsense): noindex temporal 5 URLs auxiliares thin para reducir % AdSense
+fix/hub-convenios-sync 0a394b9215a5125311f4f96e26deee8a9d17cbcf [desaparecido] fix(convenios): sincroniza hub con inventario real (32->35 fichas)
+fix/lote-verdad-auditoria af6c8d12f1e12e3c5628f2b5c33a5e5548f3a801 [desaparecido] feat(auditoría): sistema de auditoría de convenios en 4 capas + primeras correcciones
+fix/smi-2026-fichas 817c0bca28e2f0a7b395ff2ca157965a204ea244 [desaparecido] fix(smi): SMI 2026 corregido a 17.094 € en 10 fichas (figuraba 16.576 €, el de 2025)
+fix/smi-2026-nueve-fichas 4be463f0248a3953e17dd0760f5d780a9fee7156  feat(convenio): Comercio del Metal Bizkaia — abre sector nuevo (ultraactividad, tablas 2019 + suelo SMI)
+fix/smi-canonico-y-asturias-2026 58090913935d69435405f31e92d93748faa0b70f  fix(limpieza-asturias): retira la exclusividad falsa de las 15 pagas y corrige el anchor de Zaragoza (ítem 9 de la cola de auditoría)
+fix/sobre-audit-06jul 82178d0fc3fd18a7901c06c0ca4cfa3aafa52ee0 [desaparecido] fix(sobre): auditoria factual - 8 correcciones contra fuentes
+fix/sobre-eeat 30bc030eb5e6cf864a697cfbaab6b8d5a78d5551 [desaparecido] feat(sobre): refresh E-E-A-T completo score 1 -> 8 + ajuste thin.py
+fix/sobre-solo-telmo 9a2c19b5c8eca5ec1afbb1fdd3ad7c344a635a3b [desaparecido] fix(sobre): autoria solo "Telmo" (sin apellido)
+main 3353216a6a99b6b6fc029951fe32d16d8391c9ed  feat(auditoría): sistema de auditoría de convenios en 4 capas + primeras correcciones (#102)
+perf/mobile-cwv fbc2b3f00ca3b6967c25a0c25d1b120bfe4bda39 [desaparecido] perf(cwv): 3 fixes mobile Core Web Vitals para AdSense - defer + optimize
+seo/limpieza-catalunya-title caa12425f7b3ec605a1687637cf18e67c0bd2d52 [desaparecido] seo(limpieza): reorienta la página de Barcelona a Cataluña (convenio autonómico)
+seo/onpage-agosto c1b05918005e6dbe18fa351de7e3ec6eec88045a [detrás 34] seo(titulos): fórmula ganadora + idioma castellano (Bloque A agosto) (#67)
+seo/titulos-agosto 5215477cdcfbdd57be03f88aa85e1cffda3d54e4 [desaparecido] seo(titulos): fórmula ganadora + idioma castellano (Bloque A agosto)
+test/hero-valencia-cifras a1fff296ff4ee1ca9076b4ece9e0cbd6e951dea5 [desaparecido] fix(hosteleria-valencia): cifras 1.100-1.415 al hero y al card
+test/home-editorial-rediseno f2ff8325c13404812194e36de79dd3f0a6c20ea3 [desaparecido] fix(hero): correcciones factuales trust-microbar
+test/hosteleria-alicante 3a25cd155175edccdd5a51155a5c5c7774f0add3 [desaparecido] feat(hosteleria-alicante): BOE remixed score 10 (Costa Blanca + Benidorm)
+test/informe-sevilla-y-callouts b11fc5f68f2a5ec0500cf67bdd1f3ce547250890  feat: Hostelería Sevilla + nota editorial unificada en convenios + Informe transparencia 2026 a producción
+test/oficinas-madrid-smi b10ee268318a5ad255b79f1ecaafcb82ae3008e7  fix(oficinas-madrid): Nivel 9 elevado al SMI 2026 (1.221 €/mes) por acta paritaria BOCM 102 del 1-may-2026
+test/quitar-en bf47cd2f93d613cd55dc1b617d51277001bc0202 [desaparecido] feat(directiva): prep frescura 7-jun — title Ed.2 ley-transparencia + badges data-updated
+test/rediseno-home-2026-07-27 218b24bd9e5d22b5494af62757d4ae08c2d3f201 [desaparecido] chore(generadores+canonica): blinda generadores, estándar de ficha y mejora Madrid (T9/T10)

@@ -1,0 +1,457 @@
+{
+  "_doc": "Registro de normas VERIFICADAS contra fuente primaria (BOE consolidado / EUR-Lex). Es la fuente de verdad del gate scripts/audit/legal-claims.js. Regla dura: una norma entra aquí ANTES de que se escriba una sola frase que se apoye en ella. Si no está registrada, la frase no se escribe. Nunca citar de memoria: el art. 86 ET llevaba casi cinco años derogado en su punto clave y se publicó dos veces mal (06-jul-2026 y 13-sep-2026).",
+  "_campos": {
+    "nivel": "literal = se ha leído el texto vigente del artículo; ficha = se han verificado título, fecha y vigencia de la norma, no su articulado",
+    "verificado": "fecha en que se comprobó contra la fuente primaria, no la fecha de la norma",
+    "revisar": "cuándo conviene volver a comprobarlo (normas anuales como el SMI caducan cada ejercicio)",
+    "sustituidaPor": "norma que la sustituyó. Si la página cita ambas, el gate acepta la referencia histórica; si cita solo la vieja, falla."
+  },
+  "actualizado": "2026-09-14",
+  "normas": {
+    "RDLeg 2/2015": {
+      "titulo": "Real Decreto Legislativo 2/2015, de 23 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto de los Trabajadores",
+      "boeId": "BOE-A-2015-11430",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430",
+      "verificado": "2026-09-13",
+      "nivel": "ficha",
+      "nota": "Para el articulado, usar el consolidado con parámetro de fecha: act.php?id=BOE-A-2015-11430&tn=1&p=AAAAMMDD. AVISO: diario_boe/xml.php?id=BOE-A-2015-11430 devuelve el texto ORIGINAL de 2015, no el consolidado, aunque su fecha_actualizacion sea reciente."
+    },
+    "ET:27": {
+      "titulo": "Art. 27 ET — Salario mínimo interprofesional",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a27",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "clave": "«La revisión del salario mínimo interprofesional no afectará a la estructura ni a la cuantía de los salarios profesionales cuando estos, en su conjunto y cómputo anual, fueran superiores a aquel.» Es la base de la comparación anual convenio vs SMI: se compara el cómputo ANUAL por todos los conceptos, nunca la mensualidad."
+    },
+    "ET:28": {
+      "titulo": "Art. 28 ET — Igualdad de remuneración por razón de sexo",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a28",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:29": {
+      "titulo": "Art. 29 ET — Liquidación y pago",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a29",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "clave": "El periodo de abono de las retribuciones periódicas no puede exceder de un mes. Documentación del salario mediante recibo individual y justificativo ajustado al modelo oficial, salvo otro modelo pactado en convenio o con la representación de la plantilla."
+    },
+    "ET:34": {
+      "titulo": "Art. 34 ET — Jornada",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a34",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:36": {
+      "titulo": "Art. 36 ET — Trabajo nocturno, trabajo a turnos y ritmo de trabajo",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a36",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:37": {
+      "titulo": "Art. 37 ET — Descanso semanal, fiestas y permisos",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a37",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:38": {
+      "titulo": "Art. 38 ET — Vacaciones anuales",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a38",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:44": {
+      "titulo": "Art. 44 ET — La sucesión de empresa",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a44",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:59": {
+      "titulo": "Art. 59 ET — Prescripción y caducidad",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a59",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "clave": "59.1: las acciones derivadas del contrato sin plazo especial prescriben AL AÑO de su terminación. 59.2: si la acción exige percepciones económicas u obligaciones de tracto único, el plazo de un año se computa «desde el día en que la acción pudiera ejercitarse». Es el apoyo correcto para «los atrasos prescriben al año». 59.3: el despido caduca a los 20 días HÁBILES."
+    },
+    "ET:62": {
+      "titulo": "Art. 62 ET — Delegados de personal",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a62",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:82": {
+      "titulo": "Art. 82 ET — Concepto y eficacia de los convenios colectivos",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a82",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:86": {
+      "titulo": "Art. 86 ET — Vigencia (ultraactividad)",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a86",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "redaccionVigenteDesde": "2021-12-31",
+      "redaccionDadaPor": "art. 1.10 del Real Decreto-ley 32/2021, de 28 de diciembre (única modificación del artículo desde 2015)",
+      "clave": "86.3: «Durante las negociaciones para la renovación de un convenio colectivo, en defecto de pacto, se mantendrá su vigencia» — SIN plazo. 86.4: transcurrido un año desde la denuncia, las partes DEBEN ir a mediación del acuerdo interprofesional; y «en defecto de pacto, cuando hubiere transcurrido el proceso de negociación sin alcanzarse un acuerdo, se mantendrá la vigencia del convenio colectivo». La DT 7.ª del RDL 32/2021 extiende el régimen a los convenios ya denunciados el 31-12-2021.",
+      "peligro": "YA NO EXISTE el párrafo «perderá vigencia y se aplicará el convenio de ámbito superior»: era la redacción de la Ley 3/2012, derogada en este punto. Un convenio denunciado HOY no caduca; lo que ocurre es que sus tablas se congelan. No escribir nunca lo contrario."
+    },
+    "ET:92": {
+      "titulo": "Art. 92 ET — Adhesión y extensión",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a92",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica",
+      "clave": "92.1 es la vía por la que un sector sin convenio propio se adhiere a otro en vigor (caso del Comercio en General de Bizkaia)."
+    },
+    "ET:1": {
+      "titulo": "Art. 1 ET — Ámbito de aplicación",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a1",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:15": {
+      "titulo": "Art. 15 ET — Duración del contrato de trabajo",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a15",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "ET:17": {
+      "titulo": "Art. 17 ET — No discriminación en las relaciones laborales",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a17",
+      "verificado": "2026-09-13",
+      "nivel": "rubrica"
+    },
+    "RDL 32/2021": {
+      "titulo": "Real Decreto-ley 32/2021, de 28 de diciembre, de medidas urgentes para la reforma laboral, la garantía de la estabilidad en el empleo y la transformación del mercado de trabajo",
+      "boeId": "BOE-A-2021-21788",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-21788",
+      "publicado": "2021-12-30",
+      "enVigor": "2021-12-31",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "clave": "Su art. 1.10 da la redacción vigente al art. 86 ET restaurando la ultraactividad indefinida. Su art. 1.9 modifica el art. 84.2 (prioridad aplicativa del convenio de empresa). DT 7.ª: los convenios denunciados a 31-12-2021 mantienen vigencia en los términos del nuevo 86.3."
+    },
+    "RD 126/2026": {
+      "titulo": "Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026",
+      "boeId": "BOE-A-2026-3815",
+      "urlConsolidada": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "enVigor": "2026-02-20",
+      "efectos": "1 de enero a 31 de diciembre de 2026",
+      "clave": "40,70 €/día · 1.221 €/mes · 17.094 €/año en 14 pagas. Subida del 3,1% sobre el SMI 2025 (RD 87/2025).",
+      "revisar": "2027-01: cada ejercicio lo sustituye un RD nuevo. Al cambiar de año, esta entrada caduca y hay que registrar el siguiente."
+    },
+    "Directiva UE 2023/970": {
+      "titulo": "Directiva (UE) 2023/970 del Parlamento Europeo y del Consejo, de 10 de mayo de 2023, por la que se refuerza la aplicación del principio de igualdad de retribución entre hombres y mujeres por un mismo trabajo o un trabajo de igual valor a través de medidas de transparencia retributiva y de mecanismos para su cumplimiento",
+      "celex": "32023L0970",
+      "urlConsolidada": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32023L0970",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "adoptada": "2023-05-10",
+      "enVigor": "2023-05-17",
+      "limiteTransposicion": "2026-06-07",
+      "clave": "Art. 9 — calendario escalonado de la obligación de informar sobre brecha salarial: 250+ personas, anual desde el 7-jun-2027; 150-249, cada 3 años desde el 7-jun-2027; 100-149, cada 3 años desde el 7-jun-2031. Por debajo de 100, voluntario.",
+      "peligro": "No confundir las tres fechas: adopción (10-may-2023), entrada en vigor de la Directiva (17-may-2023) y límite de transposición por los Estados (7-jun-2026). Son distintas y ya se confundieron una vez."
+    },
+    "RDL 5/2023": {
+      "titulo": "Real Decreto-ley 5/2023, de 28 de junio, por el que se adoptan y prorrogan determinadas medidas de respuesta a las consecuencias económicas y sociales de la Guerra de Ucrania, entre otros objetivos",
+      "boeId": "BOE-A-2023-15135",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-15135",
+      "verificado": "2026-09-13",
+      "nivel": "literal",
+      "clave": "Es la norma que dio nueva redacción a los permisos retribuidos del art. 37 ET: amplía el permiso de cuidadores (37.3.b) a personas convivientes, introduce el art. 37.9 con cuatro días anuales por motivos familiares urgentes o inesperados, exige plan de disfrute alternativo a la empresa (37.4 y 37.6) y añade el art. 48 bis, permiso parental para menores de ocho años.",
+      "nota": "Título largo y engañoso —habla de la guerra de Ucrania— pero es la referencia correcta de los permisos de conciliación que citan las fichas de convenio."
+    },
+    "Ley 3/2012": {
+      "titulo": "Ley 3/2012, de 6 de julio, de medidas urgentes para la reforma del mercado laboral",
+      "boeId": "BOE-A-2012-9110",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2012-9110",
+      "verificado": "2026-09-13",
+      "nivel": "ficha",
+      "derogado": "vigente como norma, pero SU RÉGIMEN DE ULTRAACTIVIDAD YA NO ESTÁ EN VIGOR: el art. 86 ET que ella redactó fue sustituido por el RDL 32/2021 el 31-12-2021. Solo sirve para explicar por qué decayeron convenios ANTES de 2022; nunca para describir el derecho actual. Si una página la cita, debe decir expresamente que ese punto fue derogado.",
+      "sustituidaPor": "RDL 32/2021"
+    },
+    "ET:8": {
+      "titulo": "Art. 8 ET — Forma del contrato",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a8",
+      "verificado": "2026-09-14",
+      "nivel": "rubrica"
+    },
+    "ET:26": {
+      "titulo": "Art. 26 ET — Del salario",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a26",
+      "verificado": "2026-09-14",
+      "nivel": "rubrica"
+    },
+    "ET:35": {
+      "titulo": "Art. 35 ET — Horas extraordinarias",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a35",
+      "verificado": "2026-09-14",
+      "nivel": "rubrica"
+    },
+    "ET:39": {
+      "titulo": "Art. 39 ET — Movilidad funcional",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a39",
+      "verificado": "2026-09-14",
+      "nivel": "rubrica"
+    },
+    "ET:55": {
+      "titulo": "Art. 55 ET — Forma y efectos del despido disciplinario",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a55",
+      "verificado": "2026-09-14",
+      "nivel": "rubrica"
+    },
+    "ET:64": {
+      "titulo": "Art. 64 ET — Derechos de información y consulta y competencias",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a64",
+      "verificado": "2026-09-14",
+      "nivel": "rubrica"
+    },
+    "LO 1/2004": {
+      "titulo": "Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género",
+      "boeId": "BOE-A-2004-21760",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2004-21760",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "LO 3/2007": {
+      "titulo": "Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres",
+      "boeId": "BOE-A-2007-6115",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-6115",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "LO 3/2018": {
+      "titulo": "Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales",
+      "boeId": "BOE-A-2018-16673",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 13/1997": {
+      "titulo": "Ley 13/1997, de 23 de diciembre, por la que se regula el tramo autonómico del IRPF y restantes tributos cedidos (Comunitat Valenciana)",
+      "boeId": "BOE-A-1998-8202",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-8202",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 15/2022": {
+      "titulo": "Ley 15/2022, de 12 de julio, integral para la igualdad de trato y la no discriminación",
+      "boeId": "BOE-A-2022-11589",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2022-11589",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 23/2015": {
+      "titulo": "Ley 23/2015, de 21 de julio, Ordenadora del Sistema de Inspección de Trabajo y Seguridad Social",
+      "boeId": "BOE-A-2015-8168",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-8168",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 31/1995": {
+      "titulo": "Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales",
+      "boeId": "BOE-A-1995-24292",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-24292",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 34/2002": {
+      "titulo": "Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico",
+      "boeId": "BOE-A-2002-13758",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 50/1980": {
+      "titulo": "Ley 50/1980, de 8 de octubre, de Contrato de Seguro",
+      "boeId": "BOE-A-1980-22501",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-1980-22501",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 9/2017": {
+      "titulo": "Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público",
+      "boeId": "BOE-A-2017-12902",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2017-12902",
+      "verificado": "2026-09-14",
+      "nivel": "ficha",
+      "nota": "LCSP ESTATAL. Es la que rige la contratación pública también en Andalucía y Canarias: no existe ninguna ley autonómica de contratos que la sustituya."
+    },
+    "Ley 5/2014": {
+      "titulo": "Ley 5/2014, de 4 de abril, de Seguridad Privada",
+      "boeId": "BOE-A-2014-3649",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2014-3649",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 25/2010": {
+      "titulo": "Ley 25/2010, de 29 de julio, del libro segundo del Código civil de Cataluña, relativo a la persona y la familia",
+      "boeId": "BOE-A-2010-13312",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-13312",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 10/2021": {
+      "titulo": "Ley 10/2021, de 9 de julio, de trabajo a distancia",
+      "boeId": "BOE-A-2021-11472",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2021-11472",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 4/2023": {
+      "titulo": "Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI",
+      "boeId": "BOE-A-2023-5366",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-5366",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 5/2012": {
+      "titulo": "Ley 5/2012, de 15 de octubre, de Uniones de Hecho Formalizadas de la Comunitat Valenciana",
+      "boeId": "BOE-A-2012-13776",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2012-13776",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 12/2023": {
+      "titulo": "Ley 12/2023, de 24 de mayo, por el derecho a la vivienda",
+      "boeId": "BOE-A-2023-12203",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-12203",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 35/2006": {
+      "titulo": "Ley 35/2006, de 28 de noviembre, del IRPF",
+      "boeId": "BOE-A-2006-20764",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2006-20764",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "Ley 36/2011": {
+      "titulo": "Ley 36/2011, de 10 de octubre, reguladora de la jurisdicción social",
+      "boeId": "BOE-A-2011-15936",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-15936",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RD 1026/2024": {
+      "titulo": "Real Decreto 1026/2024, de 8 de octubre, por el que se desarrolla el conjunto planificado de las medidas LGTBI",
+      "boeId": "BOE-A-2024-20402",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2024-20402",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RD 1435/1985": {
+      "titulo": "Real Decreto 1435/1985, de 1 de agosto, por el que se regula la relación laboral especial de los artistas en espectáculos públicos",
+      "boeId": "BOE-A-1985-17303",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-1985-17303",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RD 145/2023": {
+      "titulo": "Real Decreto 145/2023, de 28 de febrero, por el que se modifican diversas normas reglamentarias",
+      "boeId": "BOE-A-2023-7056",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-7056",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RD 1620/2011": {
+      "titulo": "Real Decreto 1620/2011, de 14 de noviembre, por el que se regula la relación laboral de carácter especial del servicio del hogar familiar",
+      "boeId": "BOE-A-2011-17975",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-17975",
+      "verificado": "2026-09-14",
+      "nivel": "literal",
+      "clave": "Su disposición derogatoria única deroga EXPRESAMENTE el RD 1424/1985. Es la norma vigente del servicio del hogar familiar."
+    },
+    "RD 439/2007": {
+      "titulo": "Real Decreto 439/2007, de 30 de marzo, por el que se aprueba el Reglamento del IRPF",
+      "boeId": "BOE-A-2007-6820",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RD 486/1997": {
+      "titulo": "Real Decreto 486/1997, de 14 de abril, por el que se establecen las disposiciones mínimas de seguridad y salud en los lugares de trabajo",
+      "boeId": "BOE-A-1997-8669",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-8669",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RD 87/2025": {
+      "titulo": "Real Decreto 87/2025, de 11 de febrero, por el que se fija el salario mínimo interprofesional para 2025",
+      "boeId": "BOE-A-2025-2576",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-2576",
+      "verificado": "2026-09-14",
+      "nivel": "ficha",
+      "nota": "SMI 2025. Sustituido para 2026 por el RD 126/2026: solo debe citarse en contexto histórico."
+    },
+    "RD 99/2023": {
+      "titulo": "Real Decreto 99/2023, de 14 de febrero, por el que se fija el salario mínimo interprofesional para 2023",
+      "boeId": "BOE-A-2023-3982",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2023-3982",
+      "verificado": "2026-09-14",
+      "nivel": "ficha",
+      "nota": "SMI 2023, histórico."
+    },
+    "RD 901/2020": {
+      "titulo": "Real Decreto 901/2020, de 13 de octubre, por el que se regulan los planes de igualdad y su registro",
+      "boeId": "BOE-A-2020-12214",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-12214",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RD 902/2020": {
+      "titulo": "Real Decreto 902/2020, de 13 de octubre, de igualdad retributiva entre mujeres y hombres",
+      "boeId": "BOE-A-2020-12215",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-12215",
+      "verificado": "2026-09-14",
+      "nivel": "literal",
+      "clave": "Registro retributivo obligatorio para todas las empresas y auditoría retributiva para las obligadas a plan de igualdad."
+    },
+    "RD 928/1998": {
+      "titulo": "Real Decreto 928/1998, de 14 de mayo, Reglamento general sobre procedimientos para la imposición de sanciones por infracciones de orden social",
+      "boeId": "BOE-A-1998-12816",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-1998-12816",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RDL 6/2019": {
+      "titulo": "Real Decreto-ley 6/2019, de 1 de marzo, de medidas urgentes para garantía de la igualdad de trato y de oportunidades entre mujeres y hombres en el empleo y la ocupación",
+      "boeId": "BOE-A-2019-3244",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3244",
+      "verificado": "2026-09-14",
+      "nivel": "ficha",
+      "nota": "Se cita a veces mal como «Ley 6/2019». Es Real Decreto-ley."
+    },
+    "RDL 8/2019": {
+      "titulo": "Real Decreto-ley 8/2019, de 8 de marzo, de medidas urgentes de protección social y de lucha contra la precariedad laboral en la jornada de trabajo",
+      "boeId": "BOE-A-2019-3481",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3481",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    },
+    "RDLeg 5/2000": {
+      "titulo": "Real Decreto Legislativo 5/2000, de 4 de agosto, por el que se aprueba el texto refundido de la Ley sobre Infracciones y Sanciones en el Orden Social (LISOS)",
+      "boeId": "BOE-A-2000-15060",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-15060",
+      "verificado": "2026-09-14",
+      "nivel": "ficha",
+      "nota": "Abreviatura correcta RDLeg, no RDL: «Real Decreto-ley 5/2000» es otra norma distinta."
+    },
+    "RD 1424/1985": {
+      "titulo": "Real Decreto 1424/1985, de 1 de agosto, por el que se regula la relación laboral de carácter especial del servicio del hogar familiar",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2011-17975",
+      "verificado": "2026-09-14",
+      "nivel": "literal",
+      "derogado": "DEROGADO EXPRESAMENTE por la disposición derogatoria única del RD 1620/2011, de 14 de noviembre. No figura ya en el consolidado del BOE. Citarlo como norma vigente es un error: la referencia correcta es el RD 1620/2011.",
+      "sustituidaPor": "RD 1620/2011"
+    },
+    "Directiva UE 2006/54": {
+      "titulo": "Directiva 2006/54/CE del Parlamento Europeo y del Consejo, de 5 de julio de 2006, relativa a la aplicación del principio de igualdad de oportunidades e igualdad de trato entre hombres y mujeres en asuntos de empleo y ocupación",
+      "celex": "32006L0054",
+      "urlConsolidada": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32006L0054",
+      "verificado": "2026-09-14",
+      "nivel": "ficha"
+    }
+  }
+}

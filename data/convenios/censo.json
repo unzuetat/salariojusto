@@ -2,10 +2,11 @@
   "_doc": "CENSO ÚNICO DE ESTADO DE CONVENIOS — fuente de verdad hand-curated. El nº de fichas y su estado (vigente/ultraactividad) se consultan AQUÍ, nunca grepeando el HTML (ver memoria feedback_estado_convenios_registro_no_grep). Lo consume scripts/audit/convenios-sync.js. Al añadir/actualizar un convenio: editar su fila aquí. Campo 'revisado:false' = estado propuesto por Claude, PENDIENTE de ratificación humana contra boletín. 'confianza:revisar' = caso jurídico dudoso (prórroga/tácita/pactada vs 86.3).",
   "actualizado": "2026-08-30",
   "canon": {
-    "provinciales": 50,
-    "marcos": 5,
-    "total": 55,
-    "_nota": "marcos/sectoriales estatales (5): hostelería, limpieza-edificios-locales, técnicos-espectáculos, seguridad-privada y contact-center. Seguridad privada y contact center son sectoriales estatales con tablas propias, contados aparte de las 47 provinciales"
+    "provinciales": 51,
+    "marcos": 3,
+    "estatales": 2,
+    "total": 56,
+    "_nota": "51 provinciales (incluye comercio-general-bizkaia, añadida 14-sep-2026) + 3 marcos sectoriales estatales con tipo=\"marco\" (hostelería, limpieza-edificios-locales, técnicos-espectáculos) + 2 sectoriales estatales con tablas propias y tipo=\"estatal\" (seguridad-privada, contact-center). ANTES este bloque declaraba 5 marcos contando esos 2 estatales, lo que dejaba el censo en rojo permanente porque el script solo cuenta tipo===\"marco\". Si se decide que esos 2 son marcos, hay que cambiar su campo tipo, no este contador."
   },
   "estados": {
     "vigente": "Convenio con vigencia formal en curso (o prórroga/tácita reconducción que lo mantiene plenamente vigente).",
@@ -688,7 +689,7 @@
       "fuenteEstado": "BOB nº 107 6-jun-2011 (convenio 2009-2012) + revisión salarial 2012 (BOB 23-feb-2012) · DECAÍDO a finales de 2013 tras agotar la prórroga de la Ley 3/2012 · sin convenio provincial vigente: se aplican convenios estatales + ET + SMI",
       "confianza": "alta",
       "revisado": false,
-      "nota": "Convenio DECAÍDO (NO ultraactividad): la reforma de 2012 suprimió la ultraactividad indefinida. Ficha enfoque 'qué cobras hoy' (suelo SMI 17.094 €). Afecta ~35.000 personas; mesa reabierta dic-2025 (CEBEK vs sindicatos). Código 48001755011981. Tablas 2012 como referencia histórica"
+      "nota": "Convenio DECAÍDO (NO ultraactividad): decayó en 2013 bajo la Ley 3/2012, que entonces suprimía la ultraactividad indefinida. OJO: ese régimen ya no rige — el RDL 32/2021 la restauró el 31-12-2021 (art. 86.3 y 86.4 ET), así que esto NO es el marco aplicable a convenios que se denuncien hoy. Ficha enfoque 'qué cobras hoy' (suelo SMI 17.094 €). Afecta ~35.000 personas; mesa reabierta dic-2025 (CEBEK vs sindicatos). Código 48001755011981. Tablas 2012 como referencia histórica"
     },
     {
       "archivo": "convenio-comercio-madrid.html",
@@ -715,6 +716,19 @@
       "confianza": "alta",
       "revisado": true,
       "nota": "publicado 14 meses después de su entrada en vigor (efectos 1-ene-2025): arrastra atrasos, con plazo de liquidación de 1 mes desde la publicación (cl. adic. 3.ª). Ultraactividad PACTADA en art. 6.1: al vencer seguirá aplicándose hasta firmar el nuevo. No confundir con convenio-metal-barcelona.html (siderometalurgia)"
+    },
+    {
+      "archivo": "convenio-comercio-general-bizkaia.html",
+      "sector": "comercio",
+      "ambito": "Bizkaia",
+      "tipo": "provincial",
+      "indexable": true,
+      "vigenciaFin": "2026-12-31",
+      "estado": "vigente",
+      "fuenteEstado": "código 48000565011983 · convenio 2023-2026 suscrito 26-jul-2023 (BOB 229, 29-nov-2023, cve BOB-2023a229-(III-235)) · +8% / +4% / +3,5% / +2,5% · modificado por BOB 123, 26-jun-2024 (cve BOB-2024a123-(III-131))",
+      "confianza": "alta",
+      "revisado": false,
+      "nota": "Convenio PARAGUAS del comercio vizcaíno: ópticas, jugueterías, floristerías, droguerías y perfumerías, fotografía, vidrio y cerámica, ortopedias, y cualquier comercio sin convenio propio por adhesión (art. 92.1 ET). Desde 26-jun-2024 integra Piel y Calzado (sin convenio desde 30-sep-2013), con tablas propias y jornada de 1.727 h. 55 categorías, 15 pagas, 7 bajo SMI en 2026 y solo 4 advertidas por la nota (2) del anexo. ÚLTIMO AÑO: denunciado el 31-dic-2026; no se cae (ultraactividad legal del art. 86.3/86.4 ET tras el RDL 32/2021) pero las tablas se congelan. No confundir con Comercio del Metal ni con Comercio de Alimentación de Bizkaia"
     },
     {
       "archivo": "convenio-comercio-metal-bizkaia.html",

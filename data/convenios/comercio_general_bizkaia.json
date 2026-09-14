@@ -1,0 +1,1820 @@
+{
+  "nombre": "Convenio Colectivo del Sector de Comercio en General de Bizkaia",
+  "sector": "comercio",
+  "ambito": "Bizkaia (territorio histórico)",
+  "codigo": "48000565011983",
+  "skipHtmlGeneration": true,
+  "bop": "BOB núm. 229 de 29 de noviembre de 2023 (cve BOB-2023a229-(III-235)) — Resolución de 7 de noviembre de 2023 de la Delegada Territorial de Trabajo y Seguridad Social de Bizkaia. Texto íntegro 2023-2026 con las tablas de los cuatro años. Modificado por el BOB núm. 123 de 26 de junio de 2024 (cve BOB-2024a123-(III-131)), que integra el sector de Comercio de Piel y Calzado.",
+  "urlBop": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2023/11/29/III-235_cas.pdf",
+  "urlBopPdf": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2023/11/29/III-235_cas.pdf",
+  "urlBopModificacion": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2024/06/26/III-131_cas.pdf",
+  "firmadoFecha": "26 de julio de 2023",
+  "publicadoFecha": "29 de noviembre de 2023",
+  "vigencia": "1 enero 2023 – 31 diciembre 2026",
+  "estado": "vigente",
+  "pagas": 15,
+  "jornadaAnual": 1744,
+  "jornadaSerie": {
+    "2023": 1756,
+    "2024": 1752,
+    "2025": 1748,
+    "2026": 1744
+  },
+  "incrementos": {
+    "2023": "8% sobre la tabla de 2018, con efectos desde el 1 de abril de 2023",
+    "2024": "4,00% sobre 2023, desde el 1 de enero",
+    "2025": "3,50% sobre 2024, desde el 1 de enero",
+    "2026": "2,50% sobre 2025, desde el 1 de enero",
+    "regla": "Incrementos fijos pactados sobre la tabla del año anterior (art. 5), con una cláusula de revisión ligada al IPC acumulado 2024-2026.",
+    "revision": "Si la suma de los IPC de 2024, 2025 y 2026 supera el 10%, la diferencia se aplica en 2027 sobre la tabla de 2026, con efectos de 1 de enero de 2027 y tablas nuevas en el primer trimestre. Las empresas con pérdidas en dos de esos tres años pueden retrasarlo a enero de 2028."
+  },
+  "notaEditorial": "Convenio del Sector de Comercio en General de Bizkaia (código 48000565011983), suscrito el 26 de julio de 2023 y publicado en el BOB del 29 de noviembre de 2023 con las tablas cerradas de sus cuatro años de vigencia. Es el convenio paraguas del comercio vizcaíno: cubre ópticas, jugueterías, floristerías y herboristerías, droguerías y perfumerías, fotografía, vidrio y cerámica, ortopedias, artículos religiosos, carbonerías, piensos y fertilizantes, marcos y molduras, objetos de regalo y mayoristas de productos químicos, científicos y farmacéuticos. Su artículo 1 añade una cláusula residual: cualquier comercio de Bizkaia, mayorista o minorista, que no se rija por convenio vigente puede quedar cubierto por adhesión (art. 92.1 del Estatuto de los Trabajadores). No es el Comercio del Metal de Bizkaia ni el Comercio de Alimentación de Bizkaia, que son convenios distintos con tablas propias.",
+  "huecoSinConvenio": "El sector estuvo de 2019 a 2022 sin convenio y sin tablas salariales: el de 2015-2018 venció el 31 de diciembre de 2018 y no se renovó hasta julio de 2023. Por eso la subida de 2023 se calculó sobre la tabla de 2018 y el convenio incorporó un complemento salarial extraordinario no consolidable de 900 € para quien no hubiera recibido ninguna subida al margen del convenio en ese período, prorrateable en las 15 mensualidades siguientes a la firma. Quedaron exentas las empresas en concurso y las que tuvieron pérdidas en 2021 y 2022.",
+  "atrasos": "Los atrasos de 2023 se devengaron desde el 1 de abril de ese año y las empresas tuvieron tres meses desde el mes siguiente a la publicación en el BOB para abonarlos (art. 5). Ese plazo está vencido desde 2024 y las diferencias salariales prescriben al año (art. 59 del Estatuto de los Trabajadores).",
+  "vacaciones": "30 días naturales al año, que empiezan en día no festivo ni víspera de festivo y se disfrutan entre junio y septiembre, en turnos rotativos distribuidos de mutuo acuerdo con tres meses de antelación (art. 18).",
+  "nocturnidad": "Trabajo entre las 22:00 y las 6:00. Plus de 138,29 €/mes en 2026 (125,34 € en 2023, 130,36 € en 2024, 134,92 € en 2025), proporcional a las horas efectivamente trabajadas en horario nocturno, salvo que se haya pactado un salario específico que ya lo retribuya (art. 13).",
+  "antiguedad": "Plus por tiempo de servicio en cuatrienios vencidos, hasta diez acumulables, al 5% del salario base calculado siempre sobre la tabla de 2014 —no sobre la vigente—, según la tabla de cuatrienios anexa (art. 9). Las subidas del convenio no se aplican a la antigüedad. En droguerías, perfumerías y fotografía el cuatrienio es del 6%, y en droguerías el plus está limitado al 45% del salario base (disposición final segunda).",
+  "horasExtras": "Recargo mínimo del 75% sobre el salario hora real, y del 150% en domingos y festivos, con el tope legal del Estatuto de los Trabajadores. No pueden realizarse sin comunicación previa a la representación de la plantilla (art. 17).",
+  "incapacidadTemporal": "La empresa complementa la prestación hasta el importe íntegro de las retribuciones, pagas extraordinarias incluidas, durante los 18 meses de permanencia en IT, siempre que se reúnan los requisitos legales de acceso a la prestación (art. 14).",
+  "dietas": "En 2026: 61,78 € de día completo, 2,11 € de desayuno, 12,14 € de comida, 9,16 € de cena y 37,59 € de alojamiento. Kilometraje de 0,37 €/km en 2026 (art. 11). Traslado de centro fuera de la localidad: 8,17 € por día de trabajo en concepto de comida (art. 12).",
+  "plusDistancia": "Las empresas abonan a quien viva a más de dos kilómetros del centro de trabajo el importe de cuatro servicios del transporte público colectivo más económico, por el precio del bonobús o los pases de tren (art. 10).",
+  "bolsaHoras": "Las empresas que elaboren el calendario laboral en enero pueden disponer de una bolsa de 100 horas anuales de distribución irregular, con preaviso escrito de 7 días, límites de 9 horas diarias y 45 semanales (10 y 46 en dos inventarios al año) y compensación en las 14 semanas siguientes. Estas horas nunca se compensan en dinero, y si al cerrar el período quedan horas sin recuperar por la persona trabajadora, se tienen por trabajadas (art. 15).",
+  "contratoFormacion": "El contrato de formación en alternancia se retribuye según las tablas, sin que pueda bajar del SMI en proporción al tiempo efectivo de trabajo. El contrato formativo para la obtención de práctica profesional se retribuye al 85% de la categoría correspondiente, considerando las 12 mensualidades más las gratificaciones del art. 8, y tampoco puede bajar del SMI proporcional (art. 22).",
+  "periodoPrueba": "6 meses para titulados superiores, medios y dirección; 3 meses para el resto de la plantilla; 1 mes para personal no cualificado (art. 19).",
+  "prendasTrabajo": "Cuando la empresa exija uniforme, debe facilitar anualmente dos prendas de vestido y un par de zapatos o zuecos (art. 27).",
+  "bilinguismo": "Todas las notas y avisos de la dirección de la empresa deben redactarse en euskera y castellano (art. 24).",
+  "comisionParitaria": "Comisión Mixta formada por un representante de cada central sindical firmante e igual número de empresarios, con sede en el Consejo de Relaciones Laborales, Alameda Urquijo 2, 3.ª, Bilbao. El paso por ella es previo y obligatorio antes de cualquier reclamación judicial o extrajudicial en materia de régimen económico. Convoca en 5 días hábiles y se reúne al décimo (art. 30). Las discrepancias se someten al PRECO.",
+  "denuncia": "El convenio se considera denunciado el 31 de diciembre de 2026, y las partes se comprometen a iniciar las deliberaciones del siguiente en el plazo de quince días desde esa fecha (art. 2). No hay cláusula de ultraactividad pactada, pero no hace falta: desde la redacción dada al art. 86 del Estatuto de los Trabajadores por el art. 1.10 del RDL 32/2021 (en vigor el 31-12-2021), el convenio mantiene su vigencia durante las negociaciones de renovación sin límite temporal (art. 86.3) y también si el proceso termina sin acuerdo (art. 86.4). Lo único que marca el año desde la denuncia es la obligación de someterse a los procedimientos de mediación del acuerdo interprofesional aplicable, que en Euskadi es el PRECO. La ultraactividad conserva las tablas pero no genera subidas.",
+  "grupos": [
+    {
+      "id": "I",
+      "nombre": "Grupo I — Personal Técnico Titulado",
+      "categorias": [
+        {
+          "nombre": "Ingeniero/a",
+          "salario": {
+            "2023": {
+              "mes": 1430.68,
+              "garantiaMinima": 105.98,
+              "anual": 21460.15
+            },
+            "2024": {
+              "mes": 1487.9,
+              "garantiaMinima": 57.23,
+              "anual": 22318.56
+            },
+            "2025": {
+              "mes": 1539.98,
+              "garantiaMinima": 52.08,
+              "anual": 23099.71
+            },
+            "2026": {
+              "mes": 1578.48,
+              "garantiaMinima": 38.5,
+              "anual": 23677.2
+            }
+          }
+        },
+        {
+          "nombre": "Titulado/a de grado medio",
+          "salario": {
+            "2023": {
+              "mes": 1192.2,
+              "garantiaMinima": 88.31,
+              "anual": 17883.07
+            },
+            "2024": {
+              "mes": 1239.89,
+              "garantiaMinima": 47.69,
+              "anual": 18598.39
+            },
+            "2025": {
+              "mes": 1283.29,
+              "garantiaMinima": 43.4,
+              "anual": 19249.33
+            },
+            "2026": {
+              "mes": 1315.37,
+              "garantiaMinima": 32.08,
+              "anual": 19730.57
+            }
+          }
+        },
+        {
+          "nombre": "Ayudante Técnico/a Sanitario/a",
+          "salario": {
+            "2023": {
+              "mes": 1192.2,
+              "garantiaMinima": 88.31,
+              "anual": 17883.07
+            },
+            "2024": {
+              "mes": 1239.89,
+              "garantiaMinima": 47.69,
+              "anual": 18598.39
+            },
+            "2025": {
+              "mes": 1283.29,
+              "garantiaMinima": 43.4,
+              "anual": 19249.33
+            },
+            "2026": {
+              "mes": 1315.37,
+              "garantiaMinima": 32.08,
+              "anual": 19730.57
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a Técnico/a de Fotografía",
+          "salario": {
+            "2023": {
+              "mes": 1311.44,
+              "garantiaMinima": 97.14,
+              "anual": 19671.54
+            },
+            "2024": {
+              "mes": 1363.89,
+              "garantiaMinima": 52.46,
+              "anual": 20458.4
+            },
+            "2025": {
+              "mes": 1411.63,
+              "garantiaMinima": 47.74,
+              "anual": 21174.44
+            },
+            "2026": {
+              "mes": 1446.92,
+              "garantiaMinima": 35.29,
+              "anual": 21703.8
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de Taller Auxiliar de Actividades Comerciales",
+          "salario": {
+            "2023": {
+              "mes": 1192.2,
+              "garantiaMinima": 88.31,
+              "anual": 17883.07
+            },
+            "2024": {
+              "mes": 1239.89,
+              "garantiaMinima": 47.69,
+              "anual": 18598.39
+            },
+            "2025": {
+              "mes": 1283.29,
+              "garantiaMinima": 43.4,
+              "anual": 19249.33
+            },
+            "2026": {
+              "mes": 1315.37,
+              "garantiaMinima": 32.08,
+              "anual": 19730.57
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a de Taller de Fotografía",
+          "salario": {
+            "2023": {
+              "mes": 1263.72,
+              "garantiaMinima": 93.61,
+              "anual": 18955.8
+            },
+            "2024": {
+              "mes": 1314.27,
+              "garantiaMinima": 50.55,
+              "anual": 19714.03
+            },
+            "2025": {
+              "mes": 1360.27,
+              "garantiaMinima": 46,
+              "anual": 20404.02
+            },
+            "2026": {
+              "mes": 1394.27,
+              "garantiaMinima": 34.01,
+              "anual": 20914.12
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a de Taller de Laboratorio Fotográfico",
+          "salario": {
+            "2023": {
+              "mes": 1263.72,
+              "garantiaMinima": 93.61,
+              "anual": 18955.8
+            },
+            "2024": {
+              "mes": 1314.27,
+              "garantiaMinima": 50.55,
+              "anual": 19714.03
+            },
+            "2025": {
+              "mes": 1360.27,
+              "garantiaMinima": 46,
+              "anual": 20404.02
+            },
+            "2026": {
+              "mes": 1394.27,
+              "garantiaMinima": 34.01,
+              "anual": 20914.12
+            }
+          }
+        },
+        {
+          "nombre": "Piloto aéreo/a",
+          "salario": {
+            "2023": {
+              "mes": 1263.72,
+              "garantiaMinima": 93.61,
+              "anual": 18955.8
+            },
+            "2024": {
+              "mes": 1314.27,
+              "garantiaMinima": 50.55,
+              "anual": 19714.03
+            },
+            "2025": {
+              "mes": 1360.27,
+              "garantiaMinima": 46,
+              "anual": 20404.02
+            },
+            "2026": {
+              "mes": 1394.27,
+              "garantiaMinima": 34.01,
+              "anual": 20914.12
+            }
+          }
+        },
+        {
+          "nombre": "Fotógrafo/a aéreo/a",
+          "salario": {
+            "2023": {
+              "mes": 1144.54,
+              "garantiaMinima": 84.78,
+              "anual": 17168.05
+            },
+            "2024": {
+              "mes": 1190.32,
+              "garantiaMinima": 45.78,
+              "anual": 17854.77
+            },
+            "2025": {
+              "mes": 1231.98,
+              "garantiaMinima": 41.66,
+              "anual": 18479.69
+            },
+            "2026": {
+              "mes": 1262.78,
+              "garantiaMinima": 30.8,
+              "anual": 18941.68
+            }
+          }
+        },
+        {
+          "nombre": "Delineante",
+          "salario": {
+            "2023": {
+              "mes": 1144.54,
+              "garantiaMinima": 84.78,
+              "anual": 17168.05
+            },
+            "2024": {
+              "mes": 1190.32,
+              "garantiaMinima": 45.78,
+              "anual": 17854.77
+            },
+            "2025": {
+              "mes": 1231.98,
+              "garantiaMinima": 41.66,
+              "anual": 18479.69
+            },
+            "2026": {
+              "mes": 1262.78,
+              "garantiaMinima": 30.8,
+              "anual": 18941.68
+            }
+          }
+        },
+        {
+          "nombre": "Rotulista",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "nombre": "Grupo II — Personal Mercantil",
+      "categorias": [
+        {
+          "nombre": "Director/a Comercial",
+          "salario": {
+            "2023": {
+              "mes": 1549.86,
+              "garantiaMinima": 114.8,
+              "anual": 23247.89
+            },
+            "2024": {
+              "mes": 1611.85,
+              "garantiaMinima": 61.99,
+              "anual": 24177.8
+            },
+            "2025": {
+              "mes": 1668.27,
+              "garantiaMinima": 56.41,
+              "anual": 25024.02
+            },
+            "2026": {
+              "mes": 1709.97,
+              "garantiaMinima": 41.71,
+              "anual": 25649.62
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de División",
+          "salario": {
+            "2023": {
+              "mes": 1430.68,
+              "garantiaMinima": 105.98,
+              "anual": 21460.15
+            },
+            "2024": {
+              "mes": 1487.9,
+              "garantiaMinima": 57.23,
+              "anual": 22318.56
+            },
+            "2025": {
+              "mes": 1539.98,
+              "garantiaMinima": 52.08,
+              "anual": 23099.71
+            },
+            "2026": {
+              "mes": 1578.48,
+              "garantiaMinima": 38.5,
+              "anual": 23677.2
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de Personal, Compras, Ventas y Encargado/a General",
+          "salario": {
+            "2023": {
+              "mes": 1430.68,
+              "garantiaMinima": 105.98,
+              "anual": 21460.15
+            },
+            "2024": {
+              "mes": 1487.9,
+              "garantiaMinima": 57.23,
+              "anual": 22318.56
+            },
+            "2025": {
+              "mes": 1539.98,
+              "garantiaMinima": 52.08,
+              "anual": 23099.71
+            },
+            "2026": {
+              "mes": 1578.48,
+              "garantiaMinima": 38.5,
+              "anual": 23677.2
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de Sucursal",
+          "salario": {
+            "2023": {
+              "mes": 1311.44,
+              "garantiaMinima": 97.14,
+              "anual": 19671.54
+            },
+            "2024": {
+              "mes": 1363.89,
+              "garantiaMinima": 52.46,
+              "anual": 20458.4
+            },
+            "2025": {
+              "mes": 1411.63,
+              "garantiaMinima": 47.74,
+              "anual": 21174.44
+            },
+            "2026": {
+              "mes": 1446.92,
+              "garantiaMinima": 35.29,
+              "anual": 21703.8
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a · Encargado/a de Almacén",
+          "salario": {
+            "2023": {
+              "mes": 1201.82,
+              "garantiaMinima": 89.02,
+              "anual": 18027.34
+            },
+            "2024": {
+              "mes": 1249.9,
+              "garantiaMinima": 48.07,
+              "anual": 18748.43
+            },
+            "2025": {
+              "mes": 1293.64,
+              "garantiaMinima": 43.75,
+              "anual": 19404.63
+            },
+            "2026": {
+              "mes": 1325.98,
+              "garantiaMinima": 32.34,
+              "anual": 19889.74
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de Sección Almacén",
+          "salario": {
+            "2023": {
+              "mes": 1168.14,
+              "garantiaMinima": 86.53,
+              "anual": 17522.11
+            },
+            "2024": {
+              "mes": 1214.87,
+              "garantiaMinima": 46.73,
+              "anual": 18223
+            },
+            "2025": {
+              "mes": 1257.39,
+              "garantiaMinima": 42.52,
+              "anual": 18860.8
+            },
+            "2026": {
+              "mes": 1288.82,
+              "garantiaMinima": 31.43,
+              "anual": 19332.32
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de Grupo",
+          "salario": {
+            "2023": {
+              "mes": 1192.2,
+              "garantiaMinima": 88.31,
+              "anual": 17883.07
+            },
+            "2024": {
+              "mes": 1239.89,
+              "garantiaMinima": 47.69,
+              "anual": 18598.39
+            },
+            "2025": {
+              "mes": 1283.29,
+              "garantiaMinima": 43.4,
+              "anual": 19249.33
+            },
+            "2026": {
+              "mes": 1315.37,
+              "garantiaMinima": 32.08,
+              "anual": 19730.57
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de Sección",
+          "salario": {
+            "2023": {
+              "mes": 1192.2,
+              "garantiaMinima": 88.31,
+              "anual": 17883.07
+            },
+            "2024": {
+              "mes": 1239.89,
+              "garantiaMinima": 47.69,
+              "anual": 18598.39
+            },
+            "2025": {
+              "mes": 1283.29,
+              "garantiaMinima": 43.4,
+              "anual": 19249.33
+            },
+            "2026": {
+              "mes": 1315.37,
+              "garantiaMinima": 32.08,
+              "anual": 19730.57
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a de Establecimiento",
+          "salario": {
+            "2023": {
+              "mes": 1263.72,
+              "garantiaMinima": 93.61,
+              "anual": 18955.8
+            },
+            "2024": {
+              "mes": 1314.27,
+              "garantiaMinima": 50.55,
+              "anual": 19714.03
+            },
+            "2025": {
+              "mes": 1360.27,
+              "garantiaMinima": 46,
+              "anual": 20404.02
+            },
+            "2026": {
+              "mes": 1394.27,
+              "garantiaMinima": 34.01,
+              "anual": 20914.12
+            }
+          }
+        },
+        {
+          "nombre": "Viajante",
+          "salario": {
+            "2023": {
+              "mes": 1144.54,
+              "garantiaMinima": 84.78,
+              "anual": 17168.05
+            },
+            "2024": {
+              "mes": 1190.32,
+              "garantiaMinima": 45.78,
+              "anual": 17854.77
+            },
+            "2025": {
+              "mes": 1231.98,
+              "garantiaMinima": 41.66,
+              "anual": 18479.69
+            },
+            "2026": {
+              "mes": 1262.78,
+              "garantiaMinima": 30.8,
+              "anual": 18941.68
+            }
+          }
+        },
+        {
+          "nombre": "Corredor/a",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Dependiente/a",
+          "salario": {
+            "2023": {
+              "mes": 1144.54,
+              "garantiaMinima": 84.78,
+              "anual": 17168.05
+            },
+            "2024": {
+              "mes": 1190.32,
+              "garantiaMinima": 45.78,
+              "anual": 17854.77
+            },
+            "2025": {
+              "mes": 1231.98,
+              "garantiaMinima": 41.66,
+              "anual": 18479.69
+            },
+            "2026": {
+              "mes": 1262.78,
+              "garantiaMinima": 30.8,
+              "anual": 18941.68
+            }
+          }
+        },
+        {
+          "nombre": "Dependiente/a Mayor",
+          "salario": {
+            "2023": {
+              "mes": 1263.72,
+              "garantiaMinima": 93.61,
+              "anual": 18955.8
+            },
+            "2024": {
+              "mes": 1314.27,
+              "garantiaMinima": 50.55,
+              "anual": 19714.03
+            },
+            "2025": {
+              "mes": 1360.27,
+              "garantiaMinima": 46,
+              "anual": 20404.02
+            },
+            "2026": {
+              "mes": 1394.27,
+              "garantiaMinima": 34.01,
+              "anual": 20914.12
+            }
+          }
+        },
+        {
+          "nombre": "Ayudante",
+          "salario": {
+            "2023": {
+              "mes": 977.66,
+              "garantiaMinima": 72.42,
+              "anual": 14664.88
+            },
+            "2024": {
+              "mes": 1016.77,
+              "garantiaMinima": 39.11,
+              "anual": 15251.48
+            },
+            "2025": {
+              "mes": 1052.35,
+              "garantiaMinima": 35.59,
+              "anual": 15785.28
+            },
+            "2026": {
+              "mes": 1078.66,
+              "garantiaMinima": 26.31,
+              "anual": 16179.91
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "nombre": "Grupo III — Personal Administrativo",
+      "categorias": [
+        {
+          "nombre": "Director/a Administrativo/a",
+          "salario": {
+            "2023": {
+              "mes": 1549.86,
+              "garantiaMinima": 114.8,
+              "anual": 23247.89
+            },
+            "2024": {
+              "mes": 1611.85,
+              "garantiaMinima": 61.99,
+              "anual": 24177.8
+            },
+            "2025": {
+              "mes": 1668.27,
+              "garantiaMinima": 56.41,
+              "anual": 25024.02
+            },
+            "2026": {
+              "mes": 1709.97,
+              "garantiaMinima": 41.71,
+              "anual": 25649.62
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de División",
+          "salario": {
+            "2023": {
+              "mes": 1430.68,
+              "garantiaMinima": 105.98,
+              "anual": 21460.15
+            },
+            "2024": {
+              "mes": 1487.9,
+              "garantiaMinima": 57.23,
+              "anual": 22318.56
+            },
+            "2025": {
+              "mes": 1539.98,
+              "garantiaMinima": 52.08,
+              "anual": 23099.71
+            },
+            "2026": {
+              "mes": 1578.48,
+              "garantiaMinima": 38.5,
+              "anual": 23677.2
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a Administrativo/a",
+          "salario": {
+            "2023": {
+              "mes": 1311.44,
+              "garantiaMinima": 97.14,
+              "anual": 19671.54
+            },
+            "2024": {
+              "mes": 1363.89,
+              "garantiaMinima": 52.46,
+              "anual": 20458.4
+            },
+            "2025": {
+              "mes": 1411.63,
+              "garantiaMinima": 47.74,
+              "anual": 21174.44
+            },
+            "2026": {
+              "mes": 1446.92,
+              "garantiaMinima": 35.29,
+              "anual": 21703.8
+            }
+          }
+        },
+        {
+          "nombre": "Contable",
+          "salario": {
+            "2023": {
+              "mes": 1192.2,
+              "garantiaMinima": 88.31,
+              "anual": 17883.07
+            },
+            "2024": {
+              "mes": 1239.89,
+              "garantiaMinima": 47.69,
+              "anual": 18598.39
+            },
+            "2025": {
+              "mes": 1283.29,
+              "garantiaMinima": 43.4,
+              "anual": 19249.33
+            },
+            "2026": {
+              "mes": 1315.37,
+              "garantiaMinima": 32.08,
+              "anual": 19730.57
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de Sección",
+          "salario": {
+            "2023": {
+              "mes": 1311.44,
+              "garantiaMinima": 97.14,
+              "anual": 19671.54
+            },
+            "2024": {
+              "mes": 1363.89,
+              "garantiaMinima": 52.46,
+              "anual": 20458.4
+            },
+            "2025": {
+              "mes": 1411.63,
+              "garantiaMinima": 47.74,
+              "anual": 21174.44
+            },
+            "2026": {
+              "mes": 1446.92,
+              "garantiaMinima": 35.29,
+              "anual": 21703.8
+            }
+          }
+        },
+        {
+          "nombre": "Oficial/a Administrativo/a",
+          "salario": {
+            "2023": {
+              "mes": 1144.54,
+              "garantiaMinima": 84.78,
+              "anual": 17168.05
+            },
+            "2024": {
+              "mes": 1190.32,
+              "garantiaMinima": 45.78,
+              "anual": 17854.77
+            },
+            "2025": {
+              "mes": 1231.98,
+              "garantiaMinima": 41.66,
+              "anual": 18479.69
+            },
+            "2026": {
+              "mes": 1262.78,
+              "garantiaMinima": 30.8,
+              "anual": 18941.68
+            }
+          }
+        },
+        {
+          "nombre": "Auxiliar Administrativo/a",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Auxiliar de Caja",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "nombre": "Grupo IV — Profesionales de Oficio",
+      "categorias": [
+        {
+          "nombre": "Oficial/a 1.ª de mantenimiento fotográfico",
+          "salario": {
+            "2023": {
+              "mes": 1144.47,
+              "garantiaMinima": 84.78,
+              "anual": 17167.03
+            },
+            "2024": {
+              "mes": 1190.25,
+              "garantiaMinima": 45.78,
+              "anual": 17853.72
+            },
+            "2025": {
+              "mes": 1231.91,
+              "garantiaMinima": 41.66,
+              "anual": 18478.6
+            },
+            "2026": {
+              "mes": 1262.7,
+              "garantiaMinima": 30.8,
+              "anual": 18940.56
+            }
+          }
+        },
+        {
+          "nombre": "Oficial/a 2.ª de mantenimiento fotográfico",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Conductor/a mecánico/a · Repartidor/a (Oficial/a 1.ª)",
+          "salario": {
+            "2023": {
+              "mes": 1144.47,
+              "garantiaMinima": 84.78,
+              "anual": 17167.03
+            },
+            "2024": {
+              "mes": 1190.25,
+              "garantiaMinima": 45.78,
+              "anual": 17853.72
+            },
+            "2025": {
+              "mes": 1231.91,
+              "garantiaMinima": 41.66,
+              "anual": 18478.6
+            },
+            "2026": {
+              "mes": 1262.7,
+              "garantiaMinima": 30.8,
+              "anual": 18940.56
+            }
+          }
+        },
+        {
+          "nombre": "Conductor/a Repartidor/a (Oficial/a 2.ª)",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Oficial/a 1.ª (oficios clásicos)",
+          "salario": {
+            "2023": {
+              "mes": 1144.53,
+              "garantiaMinima": 84.78,
+              "anual": 17167.92
+            },
+            "2024": {
+              "mes": 1190.31,
+              "garantiaMinima": 45.78,
+              "anual": 17854.63
+            },
+            "2025": {
+              "mes": 1231.97,
+              "garantiaMinima": 41.66,
+              "anual": 18479.54
+            },
+            "2026": {
+              "mes": 1262.77,
+              "garantiaMinima": 30.8,
+              "anual": 18941.53
+            }
+          }
+        },
+        {
+          "nombre": "Oficial/a 2.ª (oficios clásicos)",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Operador/a de imagen",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Retocador/a",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Tirador/a de imagen",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Operador/a de máquina automática y semiautomática",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Montador/a",
+          "salario": {
+            "2023": {
+              "mes": 1073,
+              "garantiaMinima": 79.48,
+              "anual": 16095.04
+            },
+            "2024": {
+              "mes": 1115.92,
+              "garantiaMinima": 42.92,
+              "anual": 16738.84
+            },
+            "2025": {
+              "mes": 1154.98,
+              "garantiaMinima": 39.06,
+              "anual": 17324.7
+            },
+            "2026": {
+              "mes": 1183.85,
+              "garantiaMinima": 28.87,
+              "anual": 17757.82
+            }
+          }
+        },
+        {
+          "nombre": "Ayudante",
+          "salario": {
+            "2023": {
+              "mes": 1001.44,
+              "garantiaMinima": 74.18,
+              "anual": 15021.58
+            },
+            "2024": {
+              "mes": 1041.5,
+              "garantiaMinima": 40.06,
+              "anual": 15622.44
+            },
+            "2025": {
+              "mes": 1077.95,
+              "garantiaMinima": 36.45,
+              "anual": 16169.23
+            },
+            "2026": {
+              "mes": 1104.9,
+              "garantiaMinima": 26.95,
+              "anual": 16573.46
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "V",
+      "nombre": "Grupo V — Informática",
+      "categorias": [
+        {
+          "nombre": "Técnico/a de Sistemas",
+          "salario": {
+            "2023": {
+              "mes": 1311.44,
+              "garantiaMinima": 97.14,
+              "anual": 19671.54
+            },
+            "2024": {
+              "mes": 1363.89,
+              "garantiaMinima": 52.46,
+              "anual": 20458.4
+            },
+            "2025": {
+              "mes": 1411.63,
+              "garantiaMinima": 47.74,
+              "anual": 21174.44
+            },
+            "2026": {
+              "mes": 1446.92,
+              "garantiaMinima": 35.29,
+              "anual": 21703.8
+            }
+          }
+        },
+        {
+          "nombre": "Analista",
+          "salario": {
+            "2023": {
+              "mes": 1263.72,
+              "garantiaMinima": 93.61,
+              "anual": 18955.8
+            },
+            "2024": {
+              "mes": 1314.27,
+              "garantiaMinima": 50.55,
+              "anual": 19714.03
+            },
+            "2025": {
+              "mes": 1360.27,
+              "garantiaMinima": 46,
+              "anual": 20404.02
+            },
+            "2026": {
+              "mes": 1394.27,
+              "garantiaMinima": 34.01,
+              "anual": 20914.12
+            }
+          }
+        },
+        {
+          "nombre": "Programador/a",
+          "salario": {
+            "2023": {
+              "mes": 1192.2,
+              "garantiaMinima": 88.31,
+              "anual": 17883.07
+            },
+            "2024": {
+              "mes": 1239.89,
+              "garantiaMinima": 47.69,
+              "anual": 18598.39
+            },
+            "2025": {
+              "mes": 1283.29,
+              "garantiaMinima": 43.4,
+              "anual": 19249.33
+            },
+            "2026": {
+              "mes": 1315.37,
+              "garantiaMinima": 32.08,
+              "anual": 19730.57
+            }
+          }
+        },
+        {
+          "nombre": "Operador/a de máquina automática y semiautomática",
+          "salario": {
+            "2023": {
+              "mes": 1144.53,
+              "garantiaMinima": 84.78,
+              "anual": 17167.92
+            },
+            "2024": {
+              "mes": 1190.31,
+              "garantiaMinima": 45.78,
+              "anual": 17854.63
+            },
+            "2025": {
+              "mes": 1231.97,
+              "garantiaMinima": 41.66,
+              "anual": 18479.54
+            },
+            "2026": {
+              "mes": 1262.77,
+              "garantiaMinima": 30.8,
+              "anual": 18941.53
+            }
+          }
+        },
+        {
+          "nombre": "Perforista y/o pantallista",
+          "salario": {
+            "2023": {
+              "mes": 1077.99,
+              "garantiaMinima": 79.85,
+              "anual": 16169.79
+            },
+            "2024": {
+              "mes": 1121.11,
+              "garantiaMinima": 43.12,
+              "anual": 16816.58
+            },
+            "2025": {
+              "mes": 1160.34,
+              "garantiaMinima": 39.24,
+              "anual": 17405.16
+            },
+            "2026": {
+              "mes": 1189.35,
+              "garantiaMinima": 29.01,
+              "anual": 17840.29
+            }
+          }
+        },
+        {
+          "nombre": "Ayudante de Oficio",
+          "salario": {
+            "2023": {
+              "mes": 1001.44,
+              "garantiaMinima": 74.18,
+              "anual": 15021.58
+            },
+            "2024": {
+              "mes": 1041.5,
+              "garantiaMinima": 40.06,
+              "anual": 15622.44
+            },
+            "2025": {
+              "mes": 1077.95,
+              "garantiaMinima": 36.45,
+              "anual": 16169.23
+            },
+            "2026": {
+              "mes": 1104.9,
+              "garantiaMinima": 26.95,
+              "anual": 16573.46
+            }
+          },
+          "notaComplementoSmi": true
+        },
+        {
+          "nombre": "Operario/a, Auxiliar de Almacén",
+          "salario": {
+            "2023": {
+              "mes": 1001.44,
+              "garantiaMinima": 74.18,
+              "anual": 15021.58
+            },
+            "2024": {
+              "mes": 1041.5,
+              "garantiaMinima": 40.06,
+              "anual": 15622.44
+            },
+            "2025": {
+              "mes": 1077.95,
+              "garantiaMinima": 36.45,
+              "anual": 16169.23
+            },
+            "2026": {
+              "mes": 1104.9,
+              "garantiaMinima": 26.95,
+              "anual": 16573.46
+            }
+          },
+          "notaComplementoSmi": true
+        }
+      ]
+    },
+    {
+      "id": "VI",
+      "nombre": "Grupo VI — Personal Subalterno",
+      "categorias": [
+        {
+          "nombre": "Cobrador/a",
+          "salario": {
+            "2023": {
+              "mes": 977.62,
+              "garantiaMinima": 72.42,
+              "anual": 14664.29
+            },
+            "2024": {
+              "mes": 1016.72,
+              "garantiaMinima": 39.1,
+              "anual": 15250.87
+            },
+            "2025": {
+              "mes": 1052.31,
+              "garantiaMinima": 35.59,
+              "anual": 15784.65
+            },
+            "2026": {
+              "mes": 1078.62,
+              "garantiaMinima": 26.31,
+              "anual": 16179.26
+            }
+          },
+          "notaComplementoSmi": true
+        },
+        {
+          "nombre": "Vigilante, Ordenanza, Personal de Limpieza",
+          "salario": {
+            "2023": {
+              "mes": 977.62,
+              "garantiaMinima": 72.42,
+              "anual": 14664.29
+            },
+            "2024": {
+              "mes": 1016.72,
+              "garantiaMinima": 39.1,
+              "anual": 15250.87
+            },
+            "2025": {
+              "mes": 1052.31,
+              "garantiaMinima": 35.59,
+              "anual": 15784.65
+            },
+            "2026": {
+              "mes": 1078.62,
+              "garantiaMinima": 26.31,
+              "anual": 16179.26
+            }
+          },
+          "notaComplementoSmi": true
+        }
+      ]
+    },
+    {
+      "id": "VII",
+      "nombre": "Grupo VII — Contratos formativos",
+      "categorias": [
+        {
+          "nombre": "Contratados/as formación",
+          "salario": {
+            "2023": {
+              "mes": 692.2,
+              "garantiaMinima": 51.27,
+              "anual": 10383.01
+            },
+            "2024": {
+              "mes": 719.89,
+              "garantiaMinima": 27.69,
+              "anual": 10798.33
+            },
+            "2025": {
+              "mes": 745.08,
+              "garantiaMinima": 25.2,
+              "anual": 11176.27
+            },
+            "2026": {
+              "mes": 763.71,
+              "garantiaMinima": 18.63,
+              "anual": 11455.67
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "erratasBop": [
+    "En la tabla del Anexo I de Comercio de Piel y Calzado (BOB núm. 123 de 26-6-2024, pág. 27), la fila «Ayudante Cortador» aparece publicada sin importes en ninguno de los tres años. La errata está en el boletín oficial, no en nuestra transcripción.",
+    "El índice oficial de convenios de Bizkaia del Gobierno Vasco sigue listando «Comercio de la piel y calzado» como entrada independiente con su última publicación de 2007, pese a que desde el 26 de junio de 2024 ese sector está integrado en el Convenio de Comercio en General."
+  ],
+  "pielCalzado": {
+    "integracion": "El acuerdo suscrito el 9 de abril de 2024 por la comisión negociadora constituida el 7 de marzo integró el sector de Comercio de Piel y Calzado —sin convenio sectorial desde el 30 de septiembre de 2013— en el ámbito del Convenio de Comercio en General, modificando su artículo 1 y añadiendo una Disposición Final Tercera. Se publicó en el BOB núm. 123 de 26 de junio de 2024 y despliega efectos desde esa publicación.",
+    "regimenPropio": "Del Capítulo II del Convenio de Comercio en General no se le aplican los artículos 4, 5, 9, 11, 13 y 14 ni las tablas salariales, que se sustituyen por las del Anexo I de la Disposición Final Tercera. Tampoco se le aplican los artículos 15 (jornada), 17 (horas extraordinarias), 20 (licencias) ni el 28.5 (crédito sindical). El artículo 8, sobre pagas extraordinarias, sí se le aplica.",
+    "actualizacion2024": "Para 2024 se actualizó la tabla de 2007 —BOB núm. 95 de 16 de mayo de 2007— en un 19,30%, con efectos desde la publicación en el BOB y expresamente sin atrasos. Diecisiete años con la misma tabla.",
+    "incrementos": {
+      "2025": "3,50% sobre 2024, desde el 1 de enero",
+      "2026": "2,50% sobre 2025, desde el 1 de enero"
+    },
+    "revision": "Si la suma de los IPC de 2025 y 2026 supera el 6%, la diferencia se aplica en 2027 sobre la tabla de 2026. Las empresas con pérdidas en uno de esos dos años pueden retrasarlo a enero de 2028.",
+    "jornadaAnual": 1727,
+    "vacaciones": "Entre junio y septiembre. Si es la empresa quien pide disfrutarlas fuera de esos meses, se compensa con una bolsa de 222,60 € en 2026 (209,82 € en 2024 y 217,19 € en 2025).",
+    "sanCrispin": "En compensación por la antigua fiesta de San Crispín, un día de licencia retribuida a disfrutar cuando se desee, avisando con 48 horas y con un tope simultáneo del 10% de la plantilla (o al menos una persona en empresas de menos de diez).",
+    "antiguedad": "Cuatrienios al 5% del salario base, sin límite de número acumulable —a diferencia del tope de diez del convenio general—, calculados sobre la tabla de 2007 del Anexo II. Para quien ingresó a partir del 30 de abril de 1979, la antigüedad se computa desde esa fecha.",
+    "seguroAccidentes": "Todas las empresas deben formalizar pólizas que garanticen una prima de 15.025,30 € en caso de accidente.",
+    "comprasConDescuento": "10 unidades por unidad familiar al año con un 25% de descuento sobre el precio de venta al público, y hasta 6 unidades a precio de mayorista, excepto mercancía de liquidación y rebajas.",
+    "incapacidadTemporal": "Complemento hasta el 100% del salario desde el primer día de baja y hasta 18 meses, en enfermedad común, accidente de trabajo o riesgo por maternidad.",
+    "dietas": "En 2026: 45,51 € de día completo, 4,04 € de desayuno, 17,44 € de comida, 11,05 € de cena y 11,05 € de habitación. Kilometraje de 0,31 €/km durante toda la vigencia.",
+    "horasSindicales": "30 horas mensuales para los comités de empresa y 20 para la delegación de personal, ampliables en 10 más por congresos o cursos sindicales.",
+    "notaSmiBop": "Sin perjuicio de lo dispuesto en las tablas salariales del año 2024, si existiera un trabajador o trabajadora —a jornada completa— que ostentara las categorías profesionales; «Ayudante» «Auxiliar», «Envasador» o «Telefonista» y que percibiera en su conjunto y cómputo anual por todos los conceptos un salario inferior a los 15.876 euros brutos anuales (1.134 euros x 14 pagas) establecidos en el Real Decreto 145/2024, de 6 de febrero, conforme a dicho Real Decreto la Empresa deberá incrementar su salario profesional en la cuantía necesaria, mediante un complemento salarial no consolidable, para asegurarle/a al menos la percepción de dicha cuantía correspondiente al Salario Mínimo Interprofesional en el año 2024. Lo mismo procederá en su caso en los años 2025 y 2026 si sucedieran las mismas circunstancias.",
+    "vinculacionTotalidad": "El acuerdo de integración solo despliega efectos si se aplica íntegramente: si alguno de sus aspectos se anulara por cualquier vía, la Disposición Final Tercera perdería vigencia en su totalidad y el sector volvería a quedarse sin convenio ni condiciones específicas.",
+    "grupos": [
+      {
+        "id": "I",
+        "nombre": "Grupo I — Piel y Calzado",
+        "categorias": [
+          {
+            "nombre": "Jefe/a de personal",
+            "mes": {
+              "2024": 1584.22,
+              "2025": 1639.67,
+              "2026": 1680.66
+            }
+          },
+          {
+            "nombre": "Jefe/a de ventas",
+            "mes": {
+              "2024": 1584.22,
+              "2025": 1639.67,
+              "2026": 1680.66
+            }
+          },
+          {
+            "nombre": "Jefe/a de compras",
+            "mes": {
+              "2024": 1584.22,
+              "2025": 1639.67,
+              "2026": 1680.66
+            }
+          },
+          {
+            "nombre": "Encargado/a general",
+            "mes": {
+              "2024": 1584.22,
+              "2025": 1639.67,
+              "2026": 1680.66
+            }
+          },
+          {
+            "nombre": "Jefe/a de almacén",
+            "mes": {
+              "2024": 1407.36,
+              "2025": 1456.62,
+              "2026": 1493.03
+            }
+          },
+          {
+            "nombre": "Jefe/a de sucursal",
+            "mes": {
+              "2024": 1407.36,
+              "2025": 1456.62,
+              "2026": 1493.03
+            }
+          },
+          {
+            "nombre": "Jefe/a de sección",
+            "mes": {
+              "2024": 1342.91,
+              "2025": 1389.91,
+              "2026": 1424.66
+            }
+          },
+          {
+            "nombre": "Encargado/a de establecimiento",
+            "mes": {
+              "2024": 1342.91,
+              "2025": 1389.91,
+              "2026": 1424.66
+            }
+          },
+          {
+            "nombre": "Jefe/a de grupo",
+            "mes": {
+              "2024": 1257.48,
+              "2025": 1301.49,
+              "2026": 1334.03
+            }
+          },
+          {
+            "nombre": "Viajante",
+            "mes": {
+              "2024": 1215.51,
+              "2025": 1258.05,
+              "2026": 1289.51
+            }
+          },
+          {
+            "nombre": "Corredor/a de plaza",
+            "mes": {
+              "2024": 1109.1,
+              "2025": 1147.91,
+              "2026": 1176.61
+            }
+          },
+          {
+            "nombre": "Dependiente/a mayor",
+            "mes": {
+              "2024": 1336.91,
+              "2025": 1383.7,
+              "2026": 1418.3
+            }
+          },
+          {
+            "nombre": "Dependiente/a",
+            "mes": {
+              "2024": 1215.51,
+              "2025": 1258.05,
+              "2026": 1289.51
+            }
+          },
+          {
+            "nombre": "Ayudante",
+            "mes": {
+              "2024": 1023.68,
+              "2025": 1059.51,
+              "2026": 1085.99
+            },
+            "notaComplementoSmi": true
+          }
+        ]
+      },
+      {
+        "id": "II",
+        "nombre": "Grupo II — Piel y Calzado · Administrativo",
+        "categorias": [
+          {
+            "nombre": "Jefe/a administrativo/a",
+            "mes": {
+              "2024": 1843.51,
+              "2025": 1908.03,
+              "2026": 1955.73
+            }
+          },
+          {
+            "nombre": "Jefe/a de sección administrativa",
+            "mes": {
+              "2024": 1534.76,
+              "2025": 1588.48,
+              "2026": 1628.19
+            }
+          },
+          {
+            "nombre": "Contable, Cajero/a",
+            "mes": {
+              "2024": 1405.86,
+              "2025": 1455.06,
+              "2026": 1491.44
+            }
+          },
+          {
+            "nombre": "Oficial/a administrativo/a",
+            "mes": {
+              "2024": 1251.49,
+              "2025": 1295.3,
+              "2026": 1327.68
+            }
+          },
+          {
+            "nombre": "Auxiliar",
+            "mes": {
+              "2024": 1047.66,
+              "2025": 1084.32,
+              "2026": 1111.43
+            },
+            "notaComplementoSmi": true
+          },
+          {
+            "nombre": "Auxiliar de caja",
+            "mes": {
+              "2024": 1215.51,
+              "2025": 1258.05,
+              "2026": 1289.51
+            }
+          }
+        ]
+      },
+      {
+        "id": "III",
+        "nombre": "Grupo III — Piel y Calzado · Oficios y subalternos",
+        "categorias": [
+          {
+            "nombre": "Dibujante/a",
+            "mes": {
+              "2024": 1389.38,
+              "2025": 1438.01,
+              "2026": 1473.96
+            }
+          },
+          {
+            "nombre": "Escaparatista",
+            "mes": {
+              "2024": 1249.99,
+              "2025": 1293.74,
+              "2026": 1326.08
+            }
+          },
+          {
+            "nombre": "Rotulista",
+            "mes": {
+              "2024": 1197.52,
+              "2025": 1239.43,
+              "2026": 1270.42
+            }
+          },
+          {
+            "nombre": "Cortador/a",
+            "mes": {
+              "2024": 1197.52,
+              "2025": 1239.43,
+              "2026": 1270.42
+            }
+          },
+          {
+            "nombre": "Ayudante de cortador/a",
+            "mes": {},
+            "sinImportesEnBop": true
+          },
+          {
+            "nombre": "Oficial/a de 1.ª",
+            "mes": {
+              "2024": 1215.51,
+              "2025": 1258.05,
+              "2026": 1289.51
+            }
+          },
+          {
+            "nombre": "Oficial/a de 2.ª",
+            "mes": {
+              "2024": 1109.1,
+              "2025": 1147.91,
+              "2026": 1176.61
+            }
+          },
+          {
+            "nombre": "Ayudante/a de oficio",
+            "mes": {
+              "2024": 1023.68,
+              "2025": 1059.51,
+              "2026": 1085.99
+            },
+            "notaComplementoSmi": true
+          },
+          {
+            "nombre": "Capataz",
+            "mes": {
+              "2024": 1185.54,
+              "2025": 1227.04,
+              "2026": 1257.71
+            }
+          },
+          {
+            "nombre": "Mozo/a especializado/a",
+            "mes": {
+              "2024": 1140.58,
+              "2025": 1180.5,
+              "2026": 1210.01
+            }
+          },
+          {
+            "nombre": "Mozo/a",
+            "mes": {
+              "2024": 1095.62,
+              "2025": 1133.96,
+              "2026": 1162.31
+            }
+          },
+          {
+            "nombre": "Envasador/a",
+            "mes": {
+              "2024": 1058.14,
+              "2025": 1095.18,
+              "2026": 1122.56
+            },
+            "notaComplementoSmi": true
+          },
+          {
+            "nombre": "Telefonista",
+            "mes": {
+              "2024": 1002.69,
+              "2025": 1037.79,
+              "2026": 1063.73
+            },
+            "notaComplementoSmi": true
+          },
+          {
+            "nombre": "Limpieza por horas (€/hora)",
+            "mes": {
+              "2024": 7.5,
+              "2025": 7.77,
+              "2026": 7.96
+            },
+            "porHora": true
+          }
+        ]
+      }
+    ]
+  },
+  "conductoresRepartidores": {
+    "nota": "Categorías específicas que conservan los subsectores de droguerías, perfumerías, artículos de limpieza y similares, y el grupo de fotografía (disposición final segunda, apartados segundo y tercero). El BOB publica solo el salario base mensual y la garantía mínima, sin columna anual.",
+    "categorias": [
+      {
+        "nombre": "Conductor/a Repartidor/a hasta 2,5 Tm",
+        "mes": {
+          "2023": 1091.35,
+          "2024": 1135,
+          "2025": 1174.73,
+          "2026": 1204.1
+        }
+      },
+      {
+        "nombre": "Conductor/a Repartidor/a de 2,5 a 5 Tm",
+        "mes": {
+          "2023": 1137.81,
+          "2024": 1183.32,
+          "2025": 1224.74,
+          "2026": 1255.36
+        }
+      }
+    ]
+  },
+  "fuentes": [
+    "BOB núm. 229 de 29 de noviembre de 2023, cve BOB-2023a229-(III-235) — Resolución de 7 de noviembre de 2023 de la Delegada Territorial de Trabajo y Seguridad Social de Bizkaia, por la que se dispone el registro, publicación y depósito del Convenio Colectivo sectorial de Comercio en general de Bizkaia. Texto íntegro 2023-2026, tabla salarial de los cuatro años (págs. 19-21) y tabla de cuatrienios (págs. 22-23). Código 48000565011983.",
+    "BOB núm. 123 de 26 de junio de 2024, cve BOB-2024a123-(III-131) — Resolución de 26 de mayo de 2024, por la que se registra la modificación del convenio: acuerdo de integración del sector de Comercio de Piel y Calzado, nueva Disposición Final Tercera y Anexos I y II propios (págs. 19-28).",
+    "Convenios colectivos sectoriales de ámbito de territorio histórico de Bizkaia — índice oficial del Departamento de Trabajo y Empleo del Gobierno Vasco (CONVENIOS_BIZKAIA.pdf), actualizado a 3 de septiembre de 2026.",
+    "SMI 2026: Real Decreto 126/2026, de 18 de febrero (BOE de 18 de febrero de 2026): 1.221 €/mes × 14 pagas = 17.094 €/año."
+  ]
+}
