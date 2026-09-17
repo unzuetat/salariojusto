@@ -6,7 +6,7 @@
     "revisar": "cuándo conviene volver a comprobarlo (normas anuales como el SMI caducan cada ejercicio)",
     "sustituidaPor": "norma que la sustituyó. Si la página cita ambas, el gate acepta la referencia histórica; si cita solo la vieja, falla."
   },
-  "actualizado": "2026-09-14",
+  "actualizado": "2026-09-17",
   "normas": {
     "RDLeg 2/2015": {
       "titulo": "Real Decreto Legislativo 2/2015, de 23 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto de los Trabajadores",
@@ -452,6 +452,39 @@
       "urlConsolidada": "https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32006L0054",
       "verificado": "2026-09-14",
       "nivel": "ficha"
+    },
+    "ET:2": {
+      "titulo": "Art. 2 ET — Relaciones laborales de carácter especial",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a2",
+      "verificado": "2026-09-17",
+      "nivel": "rubrica"
+    },
+    "ET:3": {
+      "titulo": "Art. 3 ET — Fuentes de la relación laboral",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a3",
+      "verificado": "2026-09-17",
+      "nivel": "rubrica"
+    },
+    "ET:32": {
+      "titulo": "Art. 32 ET — Garantías del salario",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a32",
+      "verificado": "2026-09-17",
+      "nivel": "rubrica"
+    },
+    "ET:85": {
+      "titulo": "Art. 85 ET — Contenido del convenio colectivo",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a85",
+      "verificado": "2026-09-17",
+      "nivel": "literal",
+      "clave": "85.3.d) fija «Forma y condiciones de denuncia del convenio, así como plazo mínimo para dicha denuncia antes de finalizar su vigencia». Es el artículo correcto para la DENUNCIA; la vigencia y la ultraactividad son el art. 86.",
+      "peligro": "No confundir con el art. 63 ET, que son los COMITÉS DE EMPRESA. sobre.html atribuía al 63 «denuncia y ultraactividad» — error corregido el 17-sep-2026."
+    },
+    "ET:63": {
+      "titulo": "Art. 63 ET — Comités de empresa",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a63",
+      "verificado": "2026-09-17",
+      "nivel": "rubrica",
+      "peligro": "NO regula denuncia ni ultraactividad del convenio (eso es el art. 86, y la forma de denuncia el 85.3.d). Confusión real detectada en sobre.html."
     }
   }
 }
