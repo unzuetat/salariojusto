@@ -55,6 +55,14 @@ const ARTICULOS = [
   [/\bart\.\s*(\d+(?:\.\d+)?)\s+del\s+ET\b/gi, (m) => `ET:${m[1]}`],
 ];
 
+/* Listas del tipo «Art. 59 (prescripción), Art. 86.3 (ultraactividad)» — el
+   cuerpo legal se nombra una vez y luego se enumeran los artículos sueltos.
+   Sin esto, sobre.html citaba el art. 59 y el gate lo daba por no citado
+   (falso positivo), y de paso no veía que su «Art. 63 (denuncia)» era falso:
+   el 63 ET son los comités de empresa. */
+const LISTA_ARTICULOS = /Estatuto de los Trabajadores[^.]{0,80}?((?:\s*Art\.\s*\d+(?:\.\d+)?\s*\([^)]*\),?)+)/gi;
+const ART_SUELTO = /Art\.\s*(\d+(?:\.\d+)?)/g;
+
 /* Conceptos jurídicos de alto riesgo: no bastan por sí solos, exigen que la
    página cite además la norma de respaldo declarada en el registro.        */
 const CONCEPTOS = {
@@ -89,6 +97,10 @@ function extraer(texto) {
 
   for (const [re, norm] of ARTICULOS) {
     for (const m of texto.matchAll(re)) add(norm(m));
+  }
+  // listas enumeradas tras nombrar el cuerpo legal una sola vez
+  for (const bloque of texto.matchAll(LISTA_ARTICULOS)) {
+    for (const a of bloque[1].matchAll(ART_SUELTO)) add(`ET:${a[1]}`);
   }
   for (const [re, norm] of LEYES) {
     for (const m of texto.matchAll(re)) add(norm(m));
