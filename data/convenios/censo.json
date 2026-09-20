@@ -1,12 +1,12 @@
 {
   "_doc": "CENSO ÚNICO DE ESTADO DE CONVENIOS — fuente de verdad hand-curated. El nº de fichas y su estado (vigente/ultraactividad) se consultan AQUÍ, nunca grepeando el HTML (ver memoria feedback_estado_convenios_registro_no_grep). Lo consume scripts/audit/convenios-sync.js. Al añadir/actualizar un convenio: editar su fila aquí. Campo 'revisado:false' = estado propuesto por Claude, PENDIENTE de ratificación humana contra boletín. 'confianza:revisar' = caso jurídico dudoso (prórroga/tácita/pactada vs 86.3).",
-  "actualizado": "2026-08-30",
+  "actualizado": "2026-09-20",
   "canon": {
-    "provinciales": 51,
+    "provinciales": 52,
     "marcos": 3,
     "estatales": 2,
-    "total": 56,
-    "_nota": "51 provinciales (incluye comercio-general-bizkaia, añadida 14-sep-2026) + 3 marcos sectoriales estatales con tipo=\"marco\" (hostelería, limpieza-edificios-locales, técnicos-espectáculos) + 2 sectoriales estatales con tablas propias y tipo=\"estatal\" (seguridad-privada, contact-center). ANTES este bloque declaraba 5 marcos contando esos 2 estatales, lo que dejaba el censo en rojo permanente porque el script solo cuenta tipo===\"marco\". Si se decide que esos 2 son marcos, hay que cambiar su campo tipo, no este contador."
+    "total": 57,
+    "_nota": "52 provinciales (incluye comercio-general-bizkaia, añadida 14-sep-2026, y comercio-metal-zaragoza, añadida 20-sep-2026) + 3 marcos sectoriales estatales con tipo=\"marco\" (hostelería, limpieza-edificios-locales, técnicos-espectáculos) + 2 sectoriales estatales con tablas propias y tipo=\"estatal\" (seguridad-privada, contact-center). ANTES este bloque declaraba 5 marcos contando esos 2 estatales, lo que dejaba el censo en rojo permanente porque el script solo cuenta tipo===\"marco\". Si se decide que esos 2 son marcos, hay que cambiar su campo tipo, no este contador."
   },
   "estados": {
     "vigente": "Convenio con vigencia formal en curso (o prórroga/tácita reconducción que lo mantiene plenamente vigente).",
@@ -706,7 +706,7 @@
     },
     {
       "archivo": "convenio-comercio-metal-barcelona.html",
-      "sector": "comercio",
+      "sector": "comercio-metal",
       "ambito": "Barcelona",
       "tipo": "provincial",
       "indexable": true,
@@ -716,6 +716,19 @@
       "confianza": "alta",
       "revisado": true,
       "nota": "publicado 14 meses después de su entrada en vigor (efectos 1-ene-2025): arrastra atrasos, con plazo de liquidación de 1 mes desde la publicación (cl. adic. 3.ª). Ultraactividad PACTADA en art. 6.1: al vencer seguirá aplicándose hasta firmar el nuevo. No confundir con convenio-metal-barcelona.html (siderometalurgia)"
+    },
+    {
+      "archivo": "convenio-comercio-metal-zaragoza.html",
+      "sector": "comercio-metal",
+      "ambito": "Zaragoza",
+      "tipo": "provincial",
+      "indexable": true,
+      "vigenciaFin": "2025-12-31",
+      "estado": "ultraactividad",
+      "fuenteEstado": "código 50000285011982 · convenio de 2025 suscrito 14-jul-2025 (BOPZ 246, 25-oct-2025, Sección Quinta núm. 7347) · vigencia 1-ene-2025 a 31-dic-2025 · denunciado y prorrogado en todos sus términos por su art. 2 hasta la firma del nuevo · comisión negociadora del convenio de 2026 constituida el 12-dic-2025, negociación abierta",
+      "confianza": "alta",
+      "revisado": true,
+      "nota": "Comercio del Metal (venta de artículos derivados del metal: ferretería, joyería, automoción y repuestos, electrodomésticos, informática, chatarra, maquinaria), NO es el Metal industrial de Zaragoza, que es otro convenio con otro código. Más de 18.000 personas trabajadoras y 2.000 empresas. 6 grupos (0 a V), 30 categorías, 15 pagas, jornada 1.770 h. Las tablas de 2025 son las que se aplican en 2026: el art. 13 daba hasta un +1% si el IPC interanual de dic-2025 superaba el 3% y el INE publicó 2,9%, así que la revisión NO se activó. Ninguna categoría bajo el SMI (mínimo 19.055,27 €/año), pero el salario base más bajo (1.121,16 €/mes) sí queda por debajo del SMI mensual: son 15 pagas más el COR. Tablas del anexo I extraídas de la imagen del BOPZ (vienen incrustadas, no como texto), validadas por doble lectura, aritmética cruzada y COTEJADAS por el usuario contra el PDF del boletín el 20-sep-2026: las 30 filas y los 6 importes de «ex categoría». Errata confirmada del BOPZ: Oficial administrativo 1ª figura con 22.306,25 € frente a los 22.306,18 € de sus cuatro compañeras de grupo con idéntico base y COR."
     },
     {
       "archivo": "convenio-comercio-general-bizkaia.html",

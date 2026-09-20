@@ -1,0 +1,488 @@
+{
+  "nombre": "Convenio Colectivo del Sector Comercio del Metal de Zaragoza",
+  "sector": "comercio-metal",
+  "ambito": "Zaragoza (capital y provincia)",
+  "codigo": "50000285011982",
+  "skipHtmlGeneration": true,
+  "bop": "BOPZ núm. 246, de 25 de octubre de 2025, Sección Quinta, núm. 7347 — Resolución de la Subdirección Provincial de Trabajo de Zaragoza por la que se dispone la inscripción en el Registro y publicación del convenio colectivo del sector Comercio del Metal de Zaragoza. Texto articulado completo más el anexo I con las tablas salariales de 2025.",
+  "urlBop": "https://bop.dpz.es/BOPZ/obtenerContenidoEdicto.do?idEdicto=878159",
+  "urlBopPdf": "https://boletin.dpz.es/BOPZ/UploadServlet?ruta=Boletines%5C2025%5C246%5Cbop.pdf",
+  "firmadoFecha": "14 de julio de 2025",
+  "publicadoFecha": "25 de octubre de 2025",
+  "vigencia": "1 enero 2025 – 31 diciembre 2025",
+  "estado": "vencido y prorrogado",
+  "pagas": 15,
+  "jornadaAnual": 1770,
+  "incrementos": {
+    "regla": "El art. 12 fijó un incremento del 3 % para 2025 sobre las tablas de 2024. El art. 13 preveía un incremento adicional de hasta el 1 % si el IPC interanual de diciembre de 2025 superaba el 3 %.",
+    "2025": "+3 % sobre las tablas de 2024",
+    "2026": "Sin incremento. La cláusula de revisión del art. 13 no llegó a activarse y no se ha publicado convenio ni revisión salarial para 2026."
+  },
+  "notaEditorial": "Convenio del Sector Comercio del Metal de Zaragoza (código 50000285011982), suscrito el 14 de julio de 2025 por la Federación de Empresarios del Metal de Zaragoza (FEMZ) y la Federación del Consejo del Comercio de CEPYME Zaragoza (FeCom CEPYME) con las federaciones de servicios de CC.OO. Aragón y UGT Aragón, y publicado en el BOPZ del 25 de octubre de 2025. Afecta a más de 18.000 personas trabajadoras y unas 2.000 empresas de la capital y la provincia.\n\nQué cubre: el comercio de artículos derivados del metal, no su fabricación. Ferreterías, joyerías y relojerías, concesionarios y repuestos de vehículos, electrodomésticos, informática y telecomunicaciones, muebles y saneamiento, chatarra, maquinaria y suministros industriales. El art. 1.1 remite al ámbito funcional del convenio de Industria, Tecnología y Servicios del Metal de Zaragoza para delimitar qué actividades son «propias del sector del metal», y la cláusula adicional cuarta lista los CNAE afectados.\n\nQué NO es: no es el convenio de Industria, Tecnología y Servicios del Metal de Zaragoza, que regula la fabricación, tiene otro código y otras tablas. Quien trabaja en un taller o en una fábrica no se rige por este convenio.\n\nSituación a día de hoy: el convenio venció el 31 de diciembre de 2025 y sigue prorrogado en todos sus términos por su propio art. 2 hasta que se firme el siguiente. La comisión negociadora del convenio de 2026 se constituyó el 12 de diciembre de 2025 y la negociación continúa abierta, así que las tablas que se aplican en 2026 son las de 2025.",
+  "revisionNoActivada": {
+    "titulo": "La subida de 2026 se quedó a una décima",
+    "texto": "El art. 13 del convenio condicionaba un incremento adicional de hasta el 1 % sobre las tablas de 2025, con efectos desde el 1 de enero de 2026, a que el IPC interanual de diciembre de 2025 fuera «superior al 3 %». El dato publicado por el INE para diciembre de 2025 fue del 2,9 %. Al no superarse el umbral, la cláusula no se activó: las tablas de 2026 son exactamente las de 2025 y no hay atrasos que reclamar por este concepto.",
+    "ipcDiciembre2025": 2.9,
+    "umbral": 3.0,
+    "fuenteIpc": "INE, IPC. Serie «Nacional. Índice general. Variación anual», tabla 76134. Dato de diciembre de 2025: 2,9 %."
+  },
+  "denuncia": "El art. 2 establece que, al finalizar su vigencia, el convenio «se entenderá automáticamente denunciado, prorrogándose en todos sus términos hasta la firma del nuevo convenio». Es una prórroga pactada en el propio texto, que se suma a la ultraactividad indefinida del art. 86.3 del Estatuto de los Trabajadores en la redacción dada por el Real Decreto-ley 32/2021. El convenio no decae: lo que queda congelado son sus tablas.",
+  "atrasos": "El art. 12, apartado tercero, permitió a las empresas abonar los atrasos derivados del convenio hasta el último día del mes siguiente al de su publicación en el BOPZ. Publicado el 25 de octubre de 2025, el plazo venció el 30 de noviembre de 2025.",
+  "jornada": "1.770 horas de trabajo efectivo en cómputo anual (art. 8), con distribución semanal en un máximo de 5 jornadas y media. Las empresas pueden flexibilizar hasta un 10 % de la jornada anual (177 horas), ampliando la jornada diaria hasta 9 horas y 45 semanales, con preaviso mínimo de 7 días naturales y compensación dentro del año natural.",
+  "vacaciones": "30 días naturales para toda la plantilla, en turnos fijados con dos meses de antelación entre junio y septiembre (art. 10). El inicio de las vacaciones no puede coincidir con los días de descanso semanal.",
+  "nocturnidad": "Complemento del 20 % del salario base por la jornada comprendida entre las 22:00 y las 6:00 horas (art. 15).",
+  "antiguedad": "No existe complemento de antigüedad. Se mantiene un «complemento ad personam» sustitutivo para quienes lo consolidaron a 1 de enero de 1997, no compensable ni absorbible, que se incrementa en el mismo porcentaje pactado para el convenio (art. 16).",
+  "horasExtras": "Máximo 80 al año. Se abonan con un recargo del 40 % sobre el salario bruto hora, que sube al 75 % en festivos o en horario nocturno, salvo que se compensen con descanso equivalente (art. 9).",
+  "incapacidadTemporal": "En enfermedad común o accidente no laboral, complemento del 25 % de la base reguladora desde el día 16 de la baja, con un límite de doce meses. En enfermedad profesional o accidente laboral, complemento hasta el 100 % del salario desde el primer día, con el mismo límite (art. 33).",
+  "plusTransporte": "1,52 € por día de asistencia al trabajo (art. 24).",
+  "plusDomingosFestivos": "Quien presta servicio en domingo o festivo percibe un complemento del 30 % sobre el valor de la hora ordinaria. No lo cobra quien tiene contrato específico de prestación exclusiva en domingos y festivos (art. 20).",
+  "plusEspecial": "54,05 € por cada uno de los días 24 y 31 de diciembre trabajados pasadas las 18:30 horas (art. 19).",
+  "plusFidelidad": "Para quienes acumulan al menos 10 años de antigüedad ininterrumpida y cumplen 60 años. La cuantía va del 70 % de la sexagésima parte de 2 mensualidades (10 años de antigüedad) al 70 % de la sexagésima parte de 6 mensualidades (30 años o más). Se pierde automáticamente al cumplir 65 años y no puede superar los 810,83 € anuales (art. 21).",
+  "plusFormacion": "Las empresas que no acrediten su participación en algún plan formativo deben abonar un plus compensatorio de formación de 50 € mensuales, de naturaleza salarial, que se percibe también durante la incapacidad temporal y las vacaciones (art. 50).",
+  "ayudaEstudios": "134,11 € anuales para 2025, abonados en agosto, por descendientes de entre 3 y 16 años. Si ambos progenitores trabajan en la misma empresa, ambos tienen derecho (art. 22).",
+  "prestacionAccidente": "35.000 € a tanto alzado por incapacidad permanente total para la profesión habitual o absoluta para todo trabajo derivada de accidente laboral, y la misma cantidad a los beneficiarios en caso de fallecimiento (art. 23).",
+  "kilometraje": "0,19 € por kilómetro cuando se usa el vehículo propio fuera del término municipal del centro de trabajo (art. 18).",
+  "visitasMedicas": "16 horas al año para asistencia médica o sanitaria, previo aviso y justificación, incluyendo el acompañamiento a cónyuge y parientes de primer y segundo grado (art. 32). El art. 34 d) añade 8 horas retribuidas anuales para consultas de especialistas de la Seguridad Social y pruebas diagnósticas prescritas por ellos.",
+  "permisos": "Fallecimiento de progenitores, 3 días laborables; de cónyuge o hijos, 4 días laborables. La ampliación por desplazamiento opera a partir de 50 kilómetros del domicilio. En hospitalización de familiares hasta segundo grado, la licencia puede fraccionarse en diez medias jornadas mientras dure (art. 34). Además, un día de libre disposición por semestre, no retribuido o recuperable, con preaviso de siete días (art. 35 a).",
+  "lactancia": "Las horas de lactancia por hijo menor de nueve meses pueden acumularse en 14 días laborables, sumados al permiso por nacimiento y cuidado del menor, con preaviso de 15 días (art. 11).",
+  "teletrabajo": "Reconocido como modalidad voluntaria para ambas partes, con vigilancia del registro de jornada y de la desconexión digital. Las partes acordaron crear un grupo de trabajo para desarrollarlo (art. 56).",
+  "periodoPrueba": "En el contrato formativo para la obtención de práctica profesional, máximo un mes. En el contrato de formación en alternancia no cabe período de prueba (art. 54).",
+  "comisionParitaria": "Seis vocales por cada representación, sindical y empresarial. Los escritos pueden dirigirse a la FEMZ (calle Santander, 36, 2.ª planta, 50010 Zaragoza), a la Federación de Empresarios de Comercio y Servicios de Zaragoza y Provincia (calle San Jorge, 10, 1.º, 50001 Zaragoza) o a la Federación de Servicios de CC.OO. de Aragón (paseo de la Constitución, 12, 4.º, 50008 Zaragoza) — arts. 38 a 41.",
+  "clasificacionProfesional": "Desde el 1 de enero de 2017 la clasificación es por grupos profesionales y quedaron extinguidas las antiguas categorías, que el convenio conserva en las tablas solo como referencia de integración. Hay seis grupos (0 a V); el antiguo grupo VI, de servicios auxiliares, se integró en el V en el convenio 2020-2022. Cada grupo se subdivide en tres divisiones funcionales: Administración y marketing; Ventas, distribución y logística; y Servicios auxiliares.",
+  "complementoExCategoria": {
+    "nota": "Quienes a 31 de diciembre de 2016 (o de 2017, según el supuesto) provenían de una categoría cuyo salario de tablas superaba al del nuevo grupo profesional devengan un complemento «ex categoría» de carácter personal, con el mismo tratamiento que el salario base, no compensable ni absorbible, repartido entre las 12 mensualidades ordinarias (arts. 12 bis y 12 ter). Las partes se comprometieron a converger este complemento en el plazo de tres años desde la publicación del convenio (disposición transitoria primera).",
+    "importes2018": {
+      "Jefe/a de división": 700.24,
+      "Jefe/a de tienda o almacén": 2355.03,
+      "Jefe/a de grupo o sección": 885.4,
+      "Comercial": 460.98,
+      "Contable": 460.98,
+      "Jefe/a de taller": 1289.18,
+      "Visitador/a": 254.44,
+      "Dependiente/a de 2.ª": 254.44
+    }
+  },
+  "firmantes": {
+    "patronal": [
+      "Federación de Empresarios del Metal de Zaragoza (FEMZ)",
+      "Federación del Consejo del Comercio de CEPYME Zaragoza (FeCom CEPYME)"
+    ],
+    "sindicatos": [
+      "Federación de Servicios de CC.OO. Aragón (Servicios-CC.OO. Aragón)",
+      "Federación de Servicios, Movilidad y Consumo de UGT Aragón (FeSMC-UGT Aragón)"
+    ],
+    "nota": "El texto se recibió en la Subdirección Provincial de Trabajo el 14 de julio de 2025, se requirió subsanación y se presentó de nuevo el 6 de octubre de 2025. La comisión negociadora del convenio de 2026, constituida el 12 de diciembre de 2025, incorporó además a ECOS por la parte empresarial y a OSTA por la parte social."
+  },
+  "tablaNota": "Tablas salariales del año 2025 (anexo I del convenio). «Total mes» es la suma del salario base y del COR (complemento de carencia de otras retribuciones, art. 14), y la retribución bruta anual equivale a ese total multiplicado por las 15 pagas. Estas son las tablas que siguen aplicándose en 2026.",
+  "grupos": [
+    {
+      "id": "0",
+      "nombre": "Grupo 0 — Dirección y personal titulado",
+      "categorias": [
+        {
+          "nombre": "Dirección",
+          "division": "—",
+          "salario": {
+            "2025": {
+              "base": 1931.99,
+              "cor": 259.76,
+              "mes": 2191.74,
+              "anual": 32876.17
+            }
+          }
+        },
+        {
+          "nombre": "Titulado/a de grado superior",
+          "division": "—",
+          "salario": {
+            "2025": {
+              "base": 1769.61,
+              "cor": 237.63,
+              "mes": 2007.24,
+              "anual": 30108.63
+            }
+          }
+        },
+        {
+          "nombre": "Titulado/a de grado medio",
+          "division": "—",
+          "salario": {
+            "2025": {
+              "base": 1526.34,
+              "cor": 204.46,
+              "mes": 1730.8,
+              "anual": 25962.05
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "I",
+      "nombre": "Grupo I — Responsabilidad directa sobre un área funcional",
+      "categorias": [
+        {
+          "nombre": "Jefe/a de división",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1688.89,
+              "cor": 226.62,
+              "mes": 1915.51,
+              "anual": 28732.64
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de compras, de ventas o de personal",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1688.89,
+              "cor": 226.62,
+              "mes": 1915.51,
+              "anual": 28732.64
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a general",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1688.89,
+              "cor": 226.62,
+              "mes": 1915.51,
+              "anual": 28732.64
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "II",
+      "nombre": "Grupo II — Coordinación y supervisión de un equipo",
+      "categorias": [
+        {
+          "nombre": "Jefe/a de tienda o almacén",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1388.19,
+              "cor": 185.6,
+              "mes": 1573.79,
+              "anual": 23606.82
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de grupo o sección",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1388.19,
+              "cor": 185.6,
+              "mes": 1573.79,
+              "anual": 23606.82
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a de establecimiento",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1388.19,
+              "cor": 185.6,
+              "mes": 1573.79,
+              "anual": 23606.82
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de administración",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1574.55,
+              "cor": 211.01,
+              "mes": 1785.56,
+              "anual": 26783.46
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a de servicios",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1444.81,
+              "cor": 193.33,
+              "mes": 1638.14,
+              "anual": 24572.11
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "III",
+      "nombre": "Grupo III — Ejecución autónoma con corresponsabilidad de mando",
+      "categorias": [
+        {
+          "nombre": "Comercial",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Dependiente/a de 1.ª",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Chófer de vehículo de más de 3,5 T (permiso C)",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Contable",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Oficial administrativo/a de 1.ª",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.25
+            }
+          },
+          "nota": "El anexo I publica 22.306,25 € para esta categoría, frente a los 22.306,18 € de las otras cuatro del grupo con idéntico total mensual. Ver erratasBop."
+        },
+        {
+          "nombre": "Jefe/a de taller",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1201.82,
+              "cor": 160.19,
+              "mes": 1362.01,
+              "anual": 20430.19
+            }
+          }
+        },
+        {
+          "nombre": "Delineante y rotulista",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1201.82,
+              "cor": 160.19,
+              "mes": 1362.01,
+              "anual": 20430.19
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "IV",
+      "nombre": "Grupo IV — Ejecución autónoma bajo supervisión",
+      "categorias": [
+        {
+          "nombre": "Oficial administrativo/a de 2.ª",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1225.36,
+              "cor": 163.4,
+              "mes": 1388.76,
+              "anual": 20831.41
+            }
+          }
+        },
+        {
+          "nombre": "Visitador/a",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1195.46,
+              "cor": 159.33,
+              "mes": 1354.79,
+              "anual": 20321.92
+            }
+          }
+        },
+        {
+          "nombre": "Dependiente/a de 2.ª",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1195.46,
+              "cor": 159.33,
+              "mes": 1354.79,
+              "anual": 20321.92
+            }
+          }
+        },
+        {
+          "nombre": "Chófer de vehículo de reparto",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1195.46,
+              "cor": 159.33,
+              "mes": 1354.79,
+              "anual": 20321.92
+            }
+          }
+        },
+        {
+          "nombre": "Profesional de oficio de 1.ª",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1164.42,
+              "cor": 155.09,
+              "mes": 1319.52,
+              "anual": 19792.75
+            }
+          }
+        },
+        {
+          "nombre": "Profesional de oficio de 2.ª",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1164.42,
+              "cor": 155.09,
+              "mes": 1319.52,
+              "anual": 19792.75
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "V",
+      "nombre": "Grupo V — Tareas con alto grado de dependencia",
+      "categorias": [
+        {
+          "nombre": "Chófer de turismo",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1138.81,
+              "cor": 151.6,
+              "mes": 1290.41,
+              "anual": 19356.1
+            }
+          }
+        },
+        {
+          "nombre": "Mozo/a de tienda",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1138.81,
+              "cor": 151.6,
+              "mes": 1290.41,
+              "anual": 19356.1
+            }
+          }
+        },
+        {
+          "nombre": "Auxiliar administrativo/a",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1138.81,
+              "cor": 151.6,
+              "mes": 1290.41,
+              "anual": 19356.1
+            }
+          }
+        },
+        {
+          "nombre": "Capataz",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1121.16,
+              "cor": 149.19,
+              "mes": 1270.35,
+              "anual": 19055.27
+            }
+          }
+        },
+        {
+          "nombre": "Peón/a especialista",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1121.16,
+              "cor": 149.19,
+              "mes": 1270.35,
+              "anual": 19055.27
+            }
+          }
+        },
+        {
+          "nombre": "Peón/a",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1121.16,
+              "cor": 149.19,
+              "mes": 1270.35,
+              "anual": 19055.27
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "smi": {
+    "resultado": "Ninguna categoría del convenio queda por debajo del SMI.",
+    "detalle": "La retribución más baja de las tablas es la del grupo V en servicios auxiliares (capataz, peón/a especialista y peón/a): 19.055,27 € anuales, es decir 1.961,27 € por encima de los 17.094 € del SMI de 2026.",
+    "matiz": "El salario base de esas categorías es de 1.121,16 € al mes, por debajo de los 1.221 € mensuales del SMI. La comparación válida es la anual, no la mensual: este convenio paga 15 pagas y suma el COR, mientras que el SMI se fija sobre 14. Quien mire solo el salario base de su nómina puede creer erróneamente que cobra por debajo del mínimo legal."
+  },
+  "erratasBop": "El anexo I asigna a «Oficial administrativo 1ª» una retribución bruta anual de 22.306,25 €, mientras que las otras cuatro categorías del grupo III con idéntico salario base (1.311,87 €) y COR (175,21 €) figuran con 22.306,18 €. Aplicando la regla del convenio —total mes × 15 pagas— saldrían 22.306,20 €, que no es ninguna de las dos. COTEJADO contra el PDF del BOPZ el 20-sep-2026: la cifra publicada es 22.306,25 €, así que la discrepancia es del boletín y no un error de lectura. Por otra parte, el art. 8 fija la jornada «para los dos años de vigencia del convenio» pese a que el art. 1.4 establece una duración de un solo año; es un residuo del convenio anterior que no se depuró al redactar el texto de 2025.",
+  "fuentes": [
+    "BOPZ núm. 246, de 25 de octubre de 2025, Sección Quinta núm. 7347 — Resolución de la Subdirección Provincial de Trabajo de Zaragoza (texto articulado completo y anexo I con las tablas de 2025). Código de convenio 50000285011982.",
+    "INE, Índice de Precios de Consumo, serie «Nacional. Índice general. Variación anual» (tabla 76134). IPC interanual de diciembre de 2025: 2,9 %.",
+    "SMI 2026: Real Decreto 126/2026, de 18 de febrero (BOE-A-2026-3815): 1.221 €/mes × 14 pagas = 17.094 €/año.",
+    "Federación de Empresarios del Metal de Zaragoza (FEMZ): constitución de la comisión negociadora del convenio de 2026 el 12 de diciembre de 2025 y dimensión del sector (más de 18.000 personas trabajadoras y 2.000 empresas)."
+  ]
+}
