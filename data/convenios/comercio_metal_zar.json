@@ -79,66 +79,397 @@
       "id": "0",
       "nombre": "Grupo 0 — Dirección y personal titulado",
       "categorias": [
-        { "nombre": "Dirección", "division": "—", "salario": { "2025": { "base": 1931.99, "cor": 259.76, "mes": 2191.74, "anual": 32876.17 } } },
-        { "nombre": "Titulado/a de grado superior", "division": "—", "salario": { "2025": { "base": 1769.61, "cor": 237.63, "mes": 2007.24, "anual": 30108.63 } } },
-        { "nombre": "Titulado/a de grado medio", "division": "—", "salario": { "2025": { "base": 1526.34, "cor": 204.46, "mes": 1730.8, "anual": 25962.05 } } }
+        {
+          "nombre": "Dirección",
+          "division": "—",
+          "salario": {
+            "2025": {
+              "base": 1931.99,
+              "cor": 259.76,
+              "mes": 2191.74,
+              "anual": 32876.17
+            }
+          }
+        },
+        {
+          "nombre": "Titulado/a de grado superior",
+          "division": "—",
+          "salario": {
+            "2025": {
+              "base": 1769.61,
+              "cor": 237.63,
+              "mes": 2007.24,
+              "anual": 30108.63
+            }
+          }
+        },
+        {
+          "nombre": "Titulado/a de grado medio",
+          "division": "—",
+          "salario": {
+            "2025": {
+              "base": 1526.34,
+              "cor": 204.46,
+              "mes": 1730.8,
+              "anual": 25962.05
+            }
+          }
+        }
       ]
     },
     {
       "id": "I",
       "nombre": "Grupo I — Responsabilidad directa sobre un área funcional",
       "categorias": [
-        { "nombre": "Jefe/a de división", "division": "Administración y marketing", "salario": { "2025": { "base": 1688.89, "cor": 226.62, "mes": 1915.51, "anual": 28732.64 } } },
-        { "nombre": "Jefe/a de compras, de ventas o de personal", "division": "Administración y marketing", "salario": { "2025": { "base": 1688.89, "cor": 226.62, "mes": 1915.51, "anual": 28732.64 } } },
-        { "nombre": "Encargado/a general", "division": "Administración y marketing", "salario": { "2025": { "base": 1688.89, "cor": 226.62, "mes": 1915.51, "anual": 28732.64 } } }
+        {
+          "nombre": "Jefe/a de división",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1688.89,
+              "cor": 226.62,
+              "mes": 1915.51,
+              "anual": 28732.64
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de compras, de ventas o de personal",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1688.89,
+              "cor": 226.62,
+              "mes": 1915.51,
+              "anual": 28732.64
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a general",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1688.89,
+              "cor": 226.62,
+              "mes": 1915.51,
+              "anual": 28732.64
+            }
+          }
+        }
       ]
     },
     {
       "id": "II",
       "nombre": "Grupo II — Coordinación y supervisión de un equipo",
       "categorias": [
-        { "nombre": "Jefe/a de tienda o almacén", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1388.19, "cor": 185.6, "mes": 1573.79, "anual": 23606.82 } } },
-        { "nombre": "Jefe/a de grupo o sección", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1388.19, "cor": 185.6, "mes": 1573.79, "anual": 23606.82 } } },
-        { "nombre": "Encargado/a de establecimiento", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1388.19, "cor": 185.6, "mes": 1573.79, "anual": 23606.82 } } },
-        { "nombre": "Jefe/a de administración", "division": "Administración y marketing", "salario": { "2025": { "base": 1574.55, "cor": 211.01, "mes": 1785.56, "anual": 26783.46 } } },
-        { "nombre": "Encargado/a de servicios", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1444.81, "cor": 193.33, "mes": 1638.14, "anual": 24572.11 } } }
+        {
+          "nombre": "Jefe/a de tienda o almacén",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1388.19,
+              "cor": 185.6,
+              "mes": 1573.79,
+              "anual": 23606.82
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de grupo o sección",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1388.19,
+              "cor": 185.6,
+              "mes": 1573.79,
+              "anual": 23606.82
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a de establecimiento",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1388.19,
+              "cor": 185.6,
+              "mes": 1573.79,
+              "anual": 23606.82
+            }
+          }
+        },
+        {
+          "nombre": "Jefe/a de administración",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1574.55,
+              "cor": 211.01,
+              "mes": 1785.56,
+              "anual": 26783.46
+            }
+          }
+        },
+        {
+          "nombre": "Encargado/a de servicios",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1444.81,
+              "cor": 193.33,
+              "mes": 1638.14,
+              "anual": 24572.11
+            }
+          }
+        }
       ]
     },
     {
       "id": "III",
       "nombre": "Grupo III — Ejecución autónoma con corresponsabilidad de mando",
       "categorias": [
-        { "nombre": "Comercial", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1311.87, "cor": 175.21, "mes": 1487.08, "anual": 22306.18 } } },
-        { "nombre": "Dependiente/a de 1.ª", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1311.87, "cor": 175.21, "mes": 1487.08, "anual": 22306.18 } } },
-        { "nombre": "Chófer de vehículo de más de 3,5 T (permiso C)", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1311.87, "cor": 175.21, "mes": 1487.08, "anual": 22306.18 } } },
-        { "nombre": "Contable", "division": "Administración y marketing", "salario": { "2025": { "base": 1311.87, "cor": 175.21, "mes": 1487.08, "anual": 22306.18 } } },
-        { "nombre": "Oficial administrativo/a de 1.ª", "division": "Administración y marketing", "salario": { "2025": { "base": 1311.87, "cor": 175.21, "mes": 1487.08, "anual": 22306.25 } }, "nota": "El anexo I publica 22.306,25 € para esta categoría, frente a los 22.306,18 € de las otras cuatro del grupo con idéntico total mensual. Ver erratasBop." },
-        { "nombre": "Jefe/a de taller", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1201.82, "cor": 160.19, "mes": 1362.01, "anual": 20430.19 } } },
-        { "nombre": "Delineante y rotulista", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1201.82, "cor": 160.19, "mes": 1362.01, "anual": 20430.19 } } }
+        {
+          "nombre": "Comercial",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Dependiente/a de 1.ª",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Chófer de vehículo de más de 3,5 T (permiso C)",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Contable",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.18
+            }
+          }
+        },
+        {
+          "nombre": "Oficial administrativo/a de 1.ª",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1311.87,
+              "cor": 175.21,
+              "mes": 1487.08,
+              "anual": 22306.25
+            }
+          },
+          "nota": "El anexo I publica 22.306,25 € para esta categoría, frente a los 22.306,18 € de las otras cuatro del grupo con idéntico total mensual. Ver erratasBop."
+        },
+        {
+          "nombre": "Jefe/a de taller",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1201.82,
+              "cor": 160.19,
+              "mes": 1362.01,
+              "anual": 20430.19
+            }
+          }
+        },
+        {
+          "nombre": "Delineante y rotulista",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1201.82,
+              "cor": 160.19,
+              "mes": 1362.01,
+              "anual": 20430.19
+            }
+          }
+        }
       ]
     },
     {
       "id": "IV",
       "nombre": "Grupo IV — Ejecución autónoma bajo supervisión",
       "categorias": [
-        { "nombre": "Oficial administrativo/a de 2.ª", "division": "Administración y marketing", "salario": { "2025": { "base": 1225.36, "cor": 163.4, "mes": 1388.76, "anual": 20831.41 } } },
-        { "nombre": "Visitador/a", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1195.46, "cor": 159.33, "mes": 1354.79, "anual": 20321.92 } } },
-        { "nombre": "Dependiente/a de 2.ª", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1195.46, "cor": 159.33, "mes": 1354.79, "anual": 20321.92 } } },
-        { "nombre": "Chófer de vehículo de reparto", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1195.46, "cor": 159.33, "mes": 1354.79, "anual": 20321.92 } } },
-        { "nombre": "Profesional de oficio de 1.ª", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1164.42, "cor": 155.09, "mes": 1319.52, "anual": 19792.75 } } },
-        { "nombre": "Profesional de oficio de 2.ª", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1164.42, "cor": 155.09, "mes": 1319.52, "anual": 19792.75 } } }
+        {
+          "nombre": "Oficial administrativo/a de 2.ª",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1225.36,
+              "cor": 163.4,
+              "mes": 1388.76,
+              "anual": 20831.41
+            }
+          }
+        },
+        {
+          "nombre": "Visitador/a",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1195.46,
+              "cor": 159.33,
+              "mes": 1354.79,
+              "anual": 20321.92
+            }
+          }
+        },
+        {
+          "nombre": "Dependiente/a de 2.ª",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1195.46,
+              "cor": 159.33,
+              "mes": 1354.79,
+              "anual": 20321.92
+            }
+          }
+        },
+        {
+          "nombre": "Chófer de vehículo de reparto",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1195.46,
+              "cor": 159.33,
+              "mes": 1354.79,
+              "anual": 20321.92
+            }
+          }
+        },
+        {
+          "nombre": "Profesional de oficio de 1.ª",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1164.42,
+              "cor": 155.09,
+              "mes": 1319.52,
+              "anual": 19792.75
+            }
+          }
+        },
+        {
+          "nombre": "Profesional de oficio de 2.ª",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1164.42,
+              "cor": 155.09,
+              "mes": 1319.52,
+              "anual": 19792.75
+            }
+          }
+        }
       ]
     },
     {
       "id": "V",
       "nombre": "Grupo V — Tareas con alto grado de dependencia",
       "categorias": [
-        { "nombre": "Chófer de turismo", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1138.81, "cor": 151.6, "mes": 1290.41, "anual": 19356.1 } } },
-        { "nombre": "Mozo/a de tienda", "division": "Ventas, distribución y logística", "salario": { "2025": { "base": 1138.81, "cor": 151.6, "mes": 1290.41, "anual": 19356.1 } } },
-        { "nombre": "Auxiliar administrativo/a", "division": "Administración y marketing", "salario": { "2025": { "base": 1138.81, "cor": 151.6, "mes": 1290.41, "anual": 19356.1 } } },
-        { "nombre": "Capataz", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1121.16, "cor": 149.19, "mes": 1270.35, "anual": 19055.27 } } },
-        { "nombre": "Peón/a especialista", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1121.16, "cor": 149.19, "mes": 1270.35, "anual": 19055.27 } } },
-        { "nombre": "Peón/a", "division": "Servicios auxiliares", "salario": { "2025": { "base": 1121.16, "cor": 149.19, "mes": 1270.35, "anual": 19055.27 } } }
+        {
+          "nombre": "Chófer de turismo",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1138.81,
+              "cor": 151.6,
+              "mes": 1290.41,
+              "anual": 19356.1
+            }
+          }
+        },
+        {
+          "nombre": "Mozo/a de tienda",
+          "division": "Ventas, distribución y logística",
+          "salario": {
+            "2025": {
+              "base": 1138.81,
+              "cor": 151.6,
+              "mes": 1290.41,
+              "anual": 19356.1
+            }
+          }
+        },
+        {
+          "nombre": "Auxiliar administrativo/a",
+          "division": "Administración y marketing",
+          "salario": {
+            "2025": {
+              "base": 1138.81,
+              "cor": 151.6,
+              "mes": 1290.41,
+              "anual": 19356.1
+            }
+          }
+        },
+        {
+          "nombre": "Capataz",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1121.16,
+              "cor": 149.19,
+              "mes": 1270.35,
+              "anual": 19055.27
+            }
+          }
+        },
+        {
+          "nombre": "Peón/a especialista",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1121.16,
+              "cor": 149.19,
+              "mes": 1270.35,
+              "anual": 19055.27
+            }
+          }
+        },
+        {
+          "nombre": "Peón/a",
+          "division": "Servicios auxiliares",
+          "salario": {
+            "2025": {
+              "base": 1121.16,
+              "cor": 149.19,
+              "mes": 1270.35,
+              "anual": 19055.27
+            }
+          }
+        }
       ]
     }
   ],
@@ -147,7 +478,7 @@
     "detalle": "La retribución más baja de las tablas es la del grupo V en servicios auxiliares (capataz, peón/a especialista y peón/a): 19.055,27 € anuales, es decir 1.961,27 € por encima de los 17.094 € del SMI de 2026.",
     "matiz": "El salario base de esas categorías es de 1.121,16 € al mes, por debajo de los 1.221 € mensuales del SMI. La comparación válida es la anual, no la mensual: este convenio paga 15 pagas y suma el COR, mientras que el SMI se fija sobre 14. Quien mire solo el salario base de su nómina puede creer erróneamente que cobra por debajo del mínimo legal."
   },
-  "erratasBop": "El anexo I asigna a «Oficial administrativo 1ª» una retribución bruta anual de 22.306,25 €, mientras que las otras cuatro categorías del grupo III con idéntico total mensual (1.487,08 €) figuran con 22.306,18 €. Siendo la base y el COR los mismos, la diferencia de siete céntimos no tiene respaldo en el articulado. Por otra parte, el art. 8 fija la jornada «para los dos años de vigencia del convenio» pese a que el art. 1.4 establece una duración de un solo año; es un residuo del convenio anterior que no se depuró al redactar el texto de 2025.",
+  "erratasBop": "El anexo I asigna a «Oficial administrativo 1ª» una retribución bruta anual de 22.306,25 €, mientras que las otras cuatro categorías del grupo III con idéntico salario base (1.311,87 €) y COR (175,21 €) figuran con 22.306,18 €. Aplicando la regla del convenio —total mes × 15 pagas— saldrían 22.306,20 €, que no es ninguna de las dos. COTEJADO contra el PDF del BOPZ el 20-sep-2026: la cifra publicada es 22.306,25 €, así que la discrepancia es del boletín y no un error de lectura. Por otra parte, el art. 8 fija la jornada «para los dos años de vigencia del convenio» pese a que el art. 1.4 establece una duración de un solo año; es un residuo del convenio anterior que no se depuró al redactar el texto de 2025.",
   "fuentes": [
     "BOPZ núm. 246, de 25 de octubre de 2025, Sección Quinta núm. 7347 — Resolución de la Subdirección Provincial de Trabajo de Zaragoza (texto articulado completo y anexo I con las tablas de 2025). Código de convenio 50000285011982.",
     "INE, Índice de Precios de Consumo, serie «Nacional. Índice general. Variación anual» (tabla 76134). IPC interanual de diciembre de 2025: 2,9 %.",
