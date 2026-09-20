@@ -6,7 +6,7 @@
     "revisar": "cuándo conviene volver a comprobarlo (normas anuales como el SMI caducan cada ejercicio)",
     "sustituidaPor": "norma que la sustituyó. Si la página cita ambas, el gate acepta la referencia histórica; si cita solo la vieja, falla."
   },
-  "actualizado": "2026-09-17",
+  "actualizado": "2026-09-20",
   "normas": {
     "RDLeg 2/2015": {
       "titulo": "Real Decreto Legislativo 2/2015, de 23 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto de los Trabajadores",
@@ -485,6 +485,33 @@
       "verificado": "2026-09-17",
       "nivel": "rubrica",
       "peligro": "NO regula denuncia ni ultraactividad del convenio (eso es el art. 86, y la forma de denuncia el 85.3.d). Confusión real detectada en sobre.html."
+    },
+    "ET:84": {
+      "titulo": "Art. 84 ET — Concurrencia de convenios",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a84",
+      "verificado": "2026-09-20",
+      "nivel": "literal",
+      "clave": "84.1: un convenio vigente no puede ser afectado por convenios de ámbito distinto salvo pacto del art. 83.2. 84.2: el convenio de EMPRESA tiene prioridad aplicativa en seis materias tasadas (horas extra y trabajo a turnos, horario y distribución del tiempo de trabajo, clasificación profesional, modalidades de contratación, corresponsabilidad y conciliación, y las que añadan los acuerdos del art. 83.2). 84.3: en el ámbito de una COMUNIDAD AUTÓNOMA, sindicatos y asociaciones empresariales legitimados pueden negociar convenios y acuerdos interprofesionales autonómicos con prioridad aplicativa sobre cualquier convenio sectorial o acuerdo estatal, si obtienen las mayorías exigidas Y su regulación resulta MÁS FAVORABLE para las personas trabajadoras. 84.4: los convenios PROVINCIALES pueden tener esa misma prioridad si así lo prevé un acuerdo interprofesional autonómico del art. 83.2 y también resultan más favorables.",
+      "peligro": "No escribir que el art. 84 «daría en el futuro» prioridad a los convenios autonómicos: su apartado 3 YA la prevé desde la redacción vigente, aunque condicionada a mayorías y a que sea más favorable. Cuando un convenio hable de una «futura modificación del art. 84», eso es la expectativa de las partes firmantes, no el estado actual de la norma: hay que atribuirlo a ellas."
+    },
+    "RD 10/2025": {
+      "titulo": "Real Decreto 10/2025, de 14 de enero, por el que se aprueba la Clasificación Nacional de Actividades Económicas 2025 (CNAE-2025)",
+      "boeId": "BOE-A-2025-587",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2025-587",
+      "verificado": "2026-09-20",
+      "nivel": "ficha",
+      "enVigor": "2025-01-16",
+      "clave": "Sustituye a la CNAE-2009 y ordena las actividades en cuatro niveles: secciones, divisiones, grupos y clases. No deroga la CNAE-2009 a efectos estadísticos, que se mantiene para los datos ya recogidos, por lo que ambas conviven un tiempo."
+    },
+    "Ley 4/2018": {
+      "titulo": "Ley 4/2018, de 19 de abril, de Identidad y Expresión de Género e Igualdad Social y no Discriminación de la Comunidad Autónoma de Aragón",
+      "boeId": "BOE-A-2018-7154",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-7154",
+      "verificado": "2026-09-20",
+      "nivel": "ficha",
+      "ambito": "Comunidad Autónoma de Aragón",
+      "clave": "Ley autonómica aragonesa sobre identidad y expresión de género. La cita el art. 46 del convenio de Comercio del Metal de Zaragoza para sostener sus compromisos de no discriminación en la contratación y de uso del nombre habitual en tarjetas de fichaje y chapas identificativas.",
+      "peligro": "No confundirla con la Ley 18/2018, de 20 de diciembre, de igualdad y protección integral contra la discriminación por razón de orientación sexual, expresión e identidad de género en Aragón (BOE-A-2019-2712), que es una norma posterior y distinta."
     }
   }
 }

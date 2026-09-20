@@ -1,6 +1,6 @@
 {
   "nombre": "Convenio Colectivo del Sector de Comercio del Metal de la provincia de Barcelona",
-  "sector": "comercio",
+  "sector": "comercio-metal",
   "ambito": "Barcelona (provincia)",
   "codigo": "08000765011993",
   "skipHtmlGeneration": true,
@@ -12,7 +12,11 @@
   "vigencia": "1 enero 2025 – 31 diciembre 2027",
   "pagas": 15,
   "jornadaAnual": 1774,
-  "jornadaSerie": { "2025": 1780, "2026": 1774, "2027": 1768 },
+  "jornadaSerie": {
+    "2025": 1780,
+    "2026": 1774,
+    "2027": 1768
+  },
   "incrementos": {
     "regla": "Incrementos fijos pactados sobre las tablas del año anterior, sin cláusula de revisión por IPC (art. 20 y anexos).",
     "2025": "3,25% sobre 2024",
@@ -43,30 +47,287 @@
   "periodoPrueba": "Grupos 1 y 2: seis meses · grupos 3 y 4: tres meses · grupos 5 y 6: un mes · grupo 7: dos semanas (art. 12).",
   "comisionParitaria": "4 miembros de la Unió Patronal Metal·lúrgica + 4 de la Federació de Serveis de CCOO. Sede en Via Laietana 32 (UPM) y Via Laietana 16 (CCOO), Barcelona. Resuelve en plazo máximo de 15 días; las discrepancias se someten al Tribunal Laboral de Catalunya (art. 8 y cláusula adicional primera).",
   "firmantes": {
-    "patronal": ["Unió Patronal Metal·lúrgica (UPM)"],
-    "sindicatos": ["CCOO (Federació de Serveis)"],
+    "patronal": [
+      "Unió Patronal Metal·lúrgica (UPM)"
+    ],
+    "sindicatos": [
+      "CCOO (Federació de Serveis)"
+    ],
     "nota": "El convenio fue negociado por la UPM y por las federaciones de servicios de CCOO y UGT, y finalmente suscrito por la UPM y CCOO (art. preliminar 1). Tiene eficacia general: obliga a todas las empresas y personas trabajadoras del ámbito (art. preliminar 2, Título III del Estatuto de los Trabajadores)."
   },
   "grupos": [
-    { "id": "1", "nombre": "Grupo 1 — Titulación universitaria superior · Dirección de área o servicio", "puestos": ["Ingenieros/as y licenciados/as", "Director/a (informática)"], "salario": { "2025": { "mes": 1910.68, "anual": 28660.25 }, "2026": { "mes": 1972.78, "anual": 29591.71 }, "2027": { "mes": 2041.83, "anual": 30627.42 } }, "horaExtra": { "2025": 18.97, "2026": 19.59, "2027": 20.27 } },
-    { "id": "2", "nombre": "Grupo 2 — Jefaturas de sucursal, personal, ventas, compras y taller · Encargado/a general", "puestos": ["Jefe/a de sucursal", "Jefe/a administrativo/a", "Jefe/a de personal", "Jefe/a de ventas", "Jefe/a de compras", "Jefe/a de taller", "Conceptor/a", "Ayudante técnico/a sanitario/a", "Encargado/a general"], "salario": { "2025": { "mes": 1856.16, "anual": 27842.42 }, "2026": { "mes": 1916.49, "anual": 28747.29 }, "2027": { "mes": 1983.56, "anual": 29753.45 } }, "horaExtra": { "2025": 18.70, "2026": 19.30, "2027": 19.98 } },
-    { "id": "3", "nombre": "Grupo 3 — Jefaturas de sección · Escaparatismo · Inspección de ventas · Analista", "puestos": ["Jefe/a de sección administrativa", "Jefe/a de sección mercantil", "Inspector/a de ventas", "Encargado/a de establecimiento", "Técnico/a de relojería titulado/a o asimilado/a", "Escaparatista", "Jefe/a de almacén", "Analista", "Jefe/a de grupo"], "salario": { "2025": { "mes": 1694.09, "anual": 25411.40 }, "2026": { "mes": 1749.15, "anual": 26237.28 }, "2027": { "mes": 1810.38, "anual": 27155.58 } }, "horaExtra": { "2025": 16.39, "2026": 16.93, "2027": 17.52 } },
-    { "id": "4", "nombre": "Grupo 4 — Dependiente/a mayor o con idiomas · Contabilidad · Delineación · Programación", "puestos": ["Rotulista", "Delineante de segunda", "Dependiente/a mayor", "Dependiente/a con idiomas", "Programador/a", "Operador/a", "Cortador/a", "Delineante de primera", "Dibujante", "Contable, cajero/a, taquimecanógrafo/a con idiomas"], "salario": { "2025": { "mes": 1583.80, "anual": 23757.02 }, "2026": { "mes": 1635.28, "anual": 24529.13 }, "2027": { "mes": 1692.50, "anual": 25387.65 } }, "horaExtra": { "2025": 15.03, "2026": 15.52, "2027": 16.07 } },
-    { "id": "5", "nombre": "Grupo 5 — Dependiente/a (22 años o más) · Oficial/a administrativo/a · Viajante · Profesional de oficio", "puestos": ["Dependiente/a de 25 o más años", "Dependiente/a de 22, 23 y 24 años", "Oficial/a administrativo/a de 1.ª", "Oficial/a administrativo/a de 2.ª", "Cobrador/a", "Capataz", "Viajante", "Corredor/a de plaza", "Autoventa", "Grabador/a", "Técnico/a postventa", "Profesional de oficio de 1.ª — conductor/a «C»", "Profesional de oficio de 2.ª — conductor/a «B»"], "salario": { "2025": { "mes": 1543.79, "anual": 23156.91 }, "2026": { "mes": 1593.97, "anual": 23909.51 }, "2027": { "mes": 1649.75, "anual": 24746.34 } }, "horaExtra": { "2025": 14.14, "2026": 14.60, "2027": 15.11 } },
-    { "id": "6", "nombre": "Grupo 6 — Auxiliar administrativo/a y de caja · Ayudante de dependiente/a · Mozo/a especializado/a", "puestos": ["Auxiliar administrativo/a", "Auxiliar administrativo/a de 18 y 19 años", "Telefonista", "Manipulador/a", "Profesional de oficio de 3.ª — conductor/a «A»", "Ayudante de oficio", "Mozo/a especializado/a", "Auxiliar de caja (18 a 25 o más años)", "Ayudante de cortador/a", "Ayudante de dependiente/a", "Demostrador/a"], "salario": { "2025": { "mes": 1449.67, "anual": 21744.98 }, "2026": { "mes": 1496.78, "anual": 22451.69 }, "2027": { "mes": 1549.16, "anual": 23237.50 } }, "horaExtra": { "2025": 12.78, "2026": 13.20, "2027": 13.66 } },
-    { "id": "7", "nombre": "Grupo 7 — Personal subalterno · Mozo/a · Personal de limpieza · Conserje", "puestos": ["Vigilante, sereno/a, ordenanza, portero/a", "Envasador/a, embalador/a", "Mozo/a", "Personal de limpieza", "Conserje", "Cosedor/a de sacos"], "salario": { "2025": { "mes": 1415.70, "anual": 21235.52 }, "2026": { "mes": 1461.71, "anual": 21925.68 }, "2027": { "mes": 1512.87, "anual": 22693.08 } }, "horaExtra": { "2025": 12.52, "2026": 12.93, "2027": 13.38 } }
+    {
+      "id": "1",
+      "nombre": "Grupo 1 — Titulación universitaria superior · Dirección de área o servicio",
+      "puestos": [
+        "Ingenieros/as y licenciados/as",
+        "Director/a (informática)"
+      ],
+      "salario": {
+        "2025": {
+          "mes": 1910.68,
+          "anual": 28660.25
+        },
+        "2026": {
+          "mes": 1972.78,
+          "anual": 29591.71
+        },
+        "2027": {
+          "mes": 2041.83,
+          "anual": 30627.42
+        }
+      },
+      "horaExtra": {
+        "2025": 18.97,
+        "2026": 19.59,
+        "2027": 20.27
+      }
+    },
+    {
+      "id": "2",
+      "nombre": "Grupo 2 — Jefaturas de sucursal, personal, ventas, compras y taller · Encargado/a general",
+      "puestos": [
+        "Jefe/a de sucursal",
+        "Jefe/a administrativo/a",
+        "Jefe/a de personal",
+        "Jefe/a de ventas",
+        "Jefe/a de compras",
+        "Jefe/a de taller",
+        "Conceptor/a",
+        "Ayudante técnico/a sanitario/a",
+        "Encargado/a general"
+      ],
+      "salario": {
+        "2025": {
+          "mes": 1856.16,
+          "anual": 27842.42
+        },
+        "2026": {
+          "mes": 1916.49,
+          "anual": 28747.29
+        },
+        "2027": {
+          "mes": 1983.56,
+          "anual": 29753.45
+        }
+      },
+      "horaExtra": {
+        "2025": 18.7,
+        "2026": 19.3,
+        "2027": 19.98
+      }
+    },
+    {
+      "id": "3",
+      "nombre": "Grupo 3 — Jefaturas de sección · Escaparatismo · Inspección de ventas · Analista",
+      "puestos": [
+        "Jefe/a de sección administrativa",
+        "Jefe/a de sección mercantil",
+        "Inspector/a de ventas",
+        "Encargado/a de establecimiento",
+        "Técnico/a de relojería titulado/a o asimilado/a",
+        "Escaparatista",
+        "Jefe/a de almacén",
+        "Analista",
+        "Jefe/a de grupo"
+      ],
+      "salario": {
+        "2025": {
+          "mes": 1694.09,
+          "anual": 25411.4
+        },
+        "2026": {
+          "mes": 1749.15,
+          "anual": 26237.28
+        },
+        "2027": {
+          "mes": 1810.38,
+          "anual": 27155.58
+        }
+      },
+      "horaExtra": {
+        "2025": 16.39,
+        "2026": 16.93,
+        "2027": 17.52
+      }
+    },
+    {
+      "id": "4",
+      "nombre": "Grupo 4 — Dependiente/a mayor o con idiomas · Contabilidad · Delineación · Programación",
+      "puestos": [
+        "Rotulista",
+        "Delineante de segunda",
+        "Dependiente/a mayor",
+        "Dependiente/a con idiomas",
+        "Programador/a",
+        "Operador/a",
+        "Cortador/a",
+        "Delineante de primera",
+        "Dibujante",
+        "Contable, cajero/a, taquimecanógrafo/a con idiomas"
+      ],
+      "salario": {
+        "2025": {
+          "mes": 1583.8,
+          "anual": 23757.02
+        },
+        "2026": {
+          "mes": 1635.28,
+          "anual": 24529.13
+        },
+        "2027": {
+          "mes": 1692.5,
+          "anual": 25387.65
+        }
+      },
+      "horaExtra": {
+        "2025": 15.03,
+        "2026": 15.52,
+        "2027": 16.07
+      }
+    },
+    {
+      "id": "5",
+      "nombre": "Grupo 5 — Dependiente/a (22 años o más) · Oficial/a administrativo/a · Viajante · Profesional de oficio",
+      "puestos": [
+        "Dependiente/a de 25 o más años",
+        "Dependiente/a de 22, 23 y 24 años",
+        "Oficial/a administrativo/a de 1.ª",
+        "Oficial/a administrativo/a de 2.ª",
+        "Cobrador/a",
+        "Capataz",
+        "Viajante",
+        "Corredor/a de plaza",
+        "Autoventa",
+        "Grabador/a",
+        "Técnico/a postventa",
+        "Profesional de oficio de 1.ª — conductor/a «C»",
+        "Profesional de oficio de 2.ª — conductor/a «B»"
+      ],
+      "salario": {
+        "2025": {
+          "mes": 1543.79,
+          "anual": 23156.91
+        },
+        "2026": {
+          "mes": 1593.97,
+          "anual": 23909.51
+        },
+        "2027": {
+          "mes": 1649.75,
+          "anual": 24746.34
+        }
+      },
+      "horaExtra": {
+        "2025": 14.14,
+        "2026": 14.6,
+        "2027": 15.11
+      }
+    },
+    {
+      "id": "6",
+      "nombre": "Grupo 6 — Auxiliar administrativo/a y de caja · Ayudante de dependiente/a · Mozo/a especializado/a",
+      "puestos": [
+        "Auxiliar administrativo/a",
+        "Auxiliar administrativo/a de 18 y 19 años",
+        "Telefonista",
+        "Manipulador/a",
+        "Profesional de oficio de 3.ª — conductor/a «A»",
+        "Ayudante de oficio",
+        "Mozo/a especializado/a",
+        "Auxiliar de caja (18 a 25 o más años)",
+        "Ayudante de cortador/a",
+        "Ayudante de dependiente/a",
+        "Demostrador/a"
+      ],
+      "salario": {
+        "2025": {
+          "mes": 1449.67,
+          "anual": 21744.98
+        },
+        "2026": {
+          "mes": 1496.78,
+          "anual": 22451.69
+        },
+        "2027": {
+          "mes": 1549.16,
+          "anual": 23237.5
+        }
+      },
+      "horaExtra": {
+        "2025": 12.78,
+        "2026": 13.2,
+        "2027": 13.66
+      }
+    },
+    {
+      "id": "7",
+      "nombre": "Grupo 7 — Personal subalterno · Mozo/a · Personal de limpieza · Conserje",
+      "puestos": [
+        "Vigilante, sereno/a, ordenanza, portero/a",
+        "Envasador/a, embalador/a",
+        "Mozo/a",
+        "Personal de limpieza",
+        "Conserje",
+        "Cosedor/a de sacos"
+      ],
+      "salario": {
+        "2025": {
+          "mes": 1415.7,
+          "anual": 21235.52
+        },
+        "2026": {
+          "mes": 1461.71,
+          "anual": 21925.68
+        },
+        "2027": {
+          "mes": 1512.87,
+          "anual": 22693.08
+        }
+      },
+      "horaExtra": {
+        "2025": 12.52,
+        "2026": 12.93,
+        "2027": 13.38
+      }
+    }
   ],
   "complementos": {
-    "plusNocturno": { "nota": "Euros/hora, todos los grupos, trabajo entre 22:00 y 06:00 (art. 21, anexo 3)", "2025": 1.05, "2026": 1.09, "2027": 1.13 },
-    "dietaCompleta": { "nota": "Dos comidas principales fuera (art. 22, anexo 4)", "2025": 32.72, "2026": 33.78, "2027": 34.97 },
-    "mediaDieta": { "nota": "Una comida principal fuera (art. 22, anexo 4)", "2025": 18.61, "2026": 19.21, "2027": 19.88 },
-    "teletrabajo": { "nota": "Euros/mes por teletrabajo efectivo a jornada completa (art. 40, anexo 5)", "2025": 30.00, "2026": 30.98, "2027": 32.06 },
-    "becaEscolar": { "nota": "Euros por hijo/a de 3 a 16 años, abonados en septiembre (art. 23). Importe no revalorizado en el convenio.", "2025": 40, "2026": 40, "2027": 40 }
+    "plusNocturno": {
+      "nota": "Euros/hora, todos los grupos, trabajo entre 22:00 y 06:00 (art. 21, anexo 3)",
+      "2025": 1.05,
+      "2026": 1.09,
+      "2027": 1.13
+    },
+    "dietaCompleta": {
+      "nota": "Dos comidas principales fuera (art. 22, anexo 4)",
+      "2025": 32.72,
+      "2026": 33.78,
+      "2027": 34.97
+    },
+    "mediaDieta": {
+      "nota": "Una comida principal fuera (art. 22, anexo 4)",
+      "2025": 18.61,
+      "2026": 19.21,
+      "2027": 19.88
+    },
+    "teletrabajo": {
+      "nota": "Euros/mes por teletrabajo efectivo a jornada completa (art. 40, anexo 5)",
+      "2025": 30.0,
+      "2026": 30.98,
+      "2027": 32.06
+    },
+    "becaEscolar": {
+      "nota": "Euros por hijo/a de 3 a 16 años, abonados en septiembre (art. 23). Importe no revalorizado en el convenio.",
+      "2025": 40,
+      "2026": 40,
+      "2027": 40
+    }
   },
   "complementoExCategoria": {
     "nota": "Complemento «ex categoría» para el personal contratado hasta el 29-11-2005. Importe anual dividido por 15 mensualidades (anexo 4).",
     "2026": {
-      "Jefe/a de personal, de ventas, de compras · Conceptor/a · Encargado/a general": 657.30,
+      "Jefe/a de personal, de ventas, de compras · Conceptor/a · Encargado/a general": 657.3,
       "Persona analista": 292.84,
       "Persona dibujante": 2000.86,
       "Profesional de oficio de 3.ª — conductor/a «A»": 43.85,
