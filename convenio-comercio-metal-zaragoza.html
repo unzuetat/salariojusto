@@ -126,6 +126,9 @@
     details summary::before{content:'▸';margin-right:8px;display:inline-block;transition:transform 0.2s;}
     details[open] summary::before{transform:rotate(90deg);}
     details[open] summary{border-bottom:1px solid var(--cream-200);}
+    details summary .summary-hint{float:right;font-weight:400;font-size:11.5px;color:var(--ink-lighter);letter-spacing:0;text-transform:none;}
+    details[open] summary .summary-hint{opacity:0.6;}
+    @media(max-width:600px){details summary .summary-hint{display:none;}}
     details > div{padding:14px 16px;}
     details > div p, details > div ul{font-size:14px;color:var(--ink-light);}
     details ul{padding-left:22px;margin:8px 0;}
@@ -260,59 +263,135 @@
   <div class="tabla-scroll">
   <table>
     <thead>
-      <tr>
-        <th>Grupo y categoría de referencia</th>
-        <th style="text-align:right;">Salario base</th>
-        <th style="text-align:right;">COR</th>
-        <th style="text-align:right;">Total mes</th>
-        <th style="text-align:right;">Bruto anual (15 pagas)</th>
-      </tr>
+      <tr><th>Grupo profesional</th><th style="text-align:right;">Total mes</th><th style="text-align:right;">Bruto anual (15 pagas)</th><th style="text-align:right;">Categorías</th></tr>
     </thead>
     <tbody>
-      <tr class="grupo-row"><th colspan="5">Grupo 0 · Dirección y personal titulado</th></tr>
-      <tr><td>Dirección</td><td class="num">1.931,99 €</td><td class="num">259,76 €</td><td class="num">2.191,74 €</td><td class="num">32.876,17 €</td></tr>
-      <tr><td>Titulado/a de grado superior</td><td class="num">1.769,61 €</td><td class="num">237,63 €</td><td class="num">2.007,24 €</td><td class="num">30.108,63 €</td></tr>
-      <tr><td>Titulado/a de grado medio</td><td class="num">1.526,34 €</td><td class="num">204,46 €</td><td class="num">1.730,80 €</td><td class="num">25.962,05 €</td></tr>
-
-      <tr class="grupo-row"><th colspan="5">Grupo I · Responsabilidad directa sobre un área funcional</th></tr>
-      <tr><td>Jefe/a de división</td><td class="num">1.688,89 €</td><td class="num">226,62 €</td><td class="num">1.915,51 €</td><td class="num">28.732,64 €</td></tr>
-      <tr><td>Jefe/a de compras, de ventas o de personal</td><td class="num">1.688,89 €</td><td class="num">226,62 €</td><td class="num">1.915,51 €</td><td class="num">28.732,64 €</td></tr>
-      <tr><td>Encargado/a general</td><td class="num">1.688,89 €</td><td class="num">226,62 €</td><td class="num">1.915,51 €</td><td class="num">28.732,64 €</td></tr>
-
-      <tr class="grupo-row"><th colspan="5">Grupo II · Coordinación y supervisión de un equipo</th></tr>
-      <tr><td>Jefe/a de administración</td><td class="num">1.574,55 €</td><td class="num">211,01 €</td><td class="num">1.785,56 €</td><td class="num">26.783,46 €</td></tr>
-      <tr><td>Encargado/a de servicios</td><td class="num">1.444,81 €</td><td class="num">193,33 €</td><td class="num">1.638,14 €</td><td class="num">24.572,11 €</td></tr>
-      <tr><td>Jefe/a de tienda o almacén</td><td class="num">1.388,19 €</td><td class="num">185,60 €</td><td class="num">1.573,79 €</td><td class="num">23.606,82 €</td></tr>
-      <tr><td>Jefe/a de grupo o sección</td><td class="num">1.388,19 €</td><td class="num">185,60 €</td><td class="num">1.573,79 €</td><td class="num">23.606,82 €</td></tr>
-      <tr><td>Encargado/a de establecimiento</td><td class="num">1.388,19 €</td><td class="num">185,60 €</td><td class="num">1.573,79 €</td><td class="num">23.606,82 €</td></tr>
-
-      <tr class="grupo-row"><th colspan="5">Grupo III · Ejecución autónoma con corresponsabilidad de mando</th></tr>
-      <tr><td>Comercial</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
-      <tr><td>Dependiente/a de 1.ª</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
-      <tr><td>Chófer de vehículo de más de 3,5 T (permiso C)</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
-      <tr><td>Contable</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
-      <tr><td>Oficial administrativo/a de 1.ª</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,25 €<sup style="color:var(--amber);">*</sup></td></tr>
-      <tr><td>Jefe/a de taller</td><td class="num">1.201,82 €</td><td class="num">160,19 €</td><td class="num">1.362,01 €</td><td class="num">20.430,19 €</td></tr>
-      <tr><td>Delineante y rotulista</td><td class="num">1.201,82 €</td><td class="num">160,19 €</td><td class="num">1.362,01 €</td><td class="num">20.430,19 €</td></tr>
-
-      <tr class="grupo-row"><th colspan="5">Grupo IV · Ejecución autónoma bajo supervisión</th></tr>
-      <tr><td>Oficial administrativo/a de 2.ª</td><td class="num">1.225,36 €</td><td class="num">163,40 €</td><td class="num">1.388,76 €</td><td class="num">20.831,41 €</td></tr>
-      <tr><td>Visitador/a</td><td class="num">1.195,46 €</td><td class="num">159,33 €</td><td class="num">1.354,79 €</td><td class="num">20.321,92 €</td></tr>
-      <tr><td>Dependiente/a de 2.ª</td><td class="num">1.195,46 €</td><td class="num">159,33 €</td><td class="num">1.354,79 €</td><td class="num">20.321,92 €</td></tr>
-      <tr><td>Chófer de vehículo de reparto</td><td class="num">1.195,46 €</td><td class="num">159,33 €</td><td class="num">1.354,79 €</td><td class="num">20.321,92 €</td></tr>
-      <tr><td>Profesional de oficio de 1.ª</td><td class="num">1.164,42 €</td><td class="num">155,09 €</td><td class="num">1.319,52 €</td><td class="num">19.792,75 €</td></tr>
-      <tr><td>Profesional de oficio de 2.ª</td><td class="num">1.164,42 €</td><td class="num">155,09 €</td><td class="num">1.319,52 €</td><td class="num">19.792,75 €</td></tr>
-
-      <tr class="grupo-row"><th colspan="5">Grupo V · Tareas con alto grado de dependencia</th></tr>
-      <tr><td>Chófer de turismo</td><td class="num">1.138,81 €</td><td class="num">151,60 €</td><td class="num">1.290,41 €</td><td class="num">19.356,10 €</td></tr>
-      <tr><td>Mozo/a de tienda</td><td class="num">1.138,81 €</td><td class="num">151,60 €</td><td class="num">1.290,41 €</td><td class="num">19.356,10 €</td></tr>
-      <tr><td>Auxiliar administrativo/a</td><td class="num">1.138,81 €</td><td class="num">151,60 €</td><td class="num">1.290,41 €</td><td class="num">19.356,10 €</td></tr>
-      <tr><td>Capataz</td><td class="num">1.121,16 €</td><td class="num">149,19 €</td><td class="num">1.270,35 €</td><td class="num">19.055,27 €</td></tr>
-      <tr><td>Peón/a especialista</td><td class="num">1.121,16 €</td><td class="num">149,19 €</td><td class="num">1.270,35 €</td><td class="num">19.055,27 €</td></tr>
-      <tr><td>Peón/a</td><td class="num">1.121,16 €</td><td class="num">149,19 €</td><td class="num">1.270,35 €</td><td class="num">19.055,27 €</td></tr>
+      <tr><td>Grupo 0 · Dirección y personal titulado</td><td class="num">1.730,80 € – 2.191,74 €</td><td class="num">25.962,05 € – 32.876,17 €</td><td class="num">3</td></tr>
+      <tr><td>Grupo I · Responsabilidad directa sobre un área funcional</td><td class="num">1.915,51 €</td><td class="num">28.732,64 €</td><td class="num">3</td></tr>
+      <tr><td>Grupo II · Coordinación y supervisión de un equipo</td><td class="num">1.573,79 € – 1.785,56 €</td><td class="num">23.606,82 € – 26.783,46 €</td><td class="num">5</td></tr>
+      <tr><td>Grupo III · Ejecución autónoma con corresponsabilidad de mando</td><td class="num">1.362,01 € – 1.487,08 €</td><td class="num">20.430,19 € – 22.306,25 €</td><td class="num">7</td></tr>
+      <tr><td>Grupo IV · Ejecución autónoma bajo supervisión</td><td class="num">1.319,52 € – 1.388,76 €</td><td class="num">19.792,75 € – 20.831,41 €</td><td class="num">6</td></tr>
+      <tr><td>Grupo V · Tareas con alto grado de dependencia</td><td class="num">1.270,35 € – 1.290,41 €</td><td class="num">19.055,27 € – 19.356,10 €</td><td class="num">6</td></tr>
     </tbody>
   </table>
   </div>
+  <p style="font-size:13px;color:var(--ink-lighter);margin-top:10px;">Despliega cada grupo para ver sus categorías una a una con el salario base, el COR y el total. El grupo III viene abierto por ser el de los puestos más frecuentes del sector.</p>
+
+  <details>
+    <summary>Grupo 0 · Dirección y personal titulado — 1.730,80 € – 2.191,74 €/mes<span class="summary-hint">3 categorías</span></summary>
+    <div>
+      <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Categoría de referencia</th><th>División funcional</th><th style="text-align:right;">Salario base</th><th style="text-align:right;">COR</th><th style="text-align:right;">Total mes</th><th style="text-align:right;">Bruto anual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Dirección</td><td>—</td><td class="num">1.931,99 €</td><td class="num">259,76 €</td><td class="num">2.191,74 €</td><td class="num">32.876,17 €</td></tr>
+          <tr><td>Titulado/a de grado superior</td><td>—</td><td class="num">1.769,61 €</td><td class="num">237,63 €</td><td class="num">2.007,24 €</td><td class="num">30.108,63 €</td></tr>
+          <tr><td>Titulado/a de grado medio</td><td>—</td><td class="num">1.526,34 €</td><td class="num">204,46 €</td><td class="num">1.730,80 €</td><td class="num">25.962,05 €</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo I · Responsabilidad directa sobre un área funcional — 1.915,51 €/mes<span class="summary-hint">3 categorías</span></summary>
+    <div>
+      <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Categoría de referencia</th><th>División funcional</th><th style="text-align:right;">Salario base</th><th style="text-align:right;">COR</th><th style="text-align:right;">Total mes</th><th style="text-align:right;">Bruto anual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Jefe/a de división</td><td>Administración y marketing</td><td class="num">1.688,89 €</td><td class="num">226,62 €</td><td class="num">1.915,51 €</td><td class="num">28.732,64 €</td></tr>
+          <tr><td>Jefe/a de compras, de ventas o de personal</td><td>Administración y marketing</td><td class="num">1.688,89 €</td><td class="num">226,62 €</td><td class="num">1.915,51 €</td><td class="num">28.732,64 €</td></tr>
+          <tr><td>Encargado/a general</td><td>Administración y marketing</td><td class="num">1.688,89 €</td><td class="num">226,62 €</td><td class="num">1.915,51 €</td><td class="num">28.732,64 €</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo II · Coordinación y supervisión de un equipo — 1.573,79 € – 1.785,56 €/mes<span class="summary-hint">5 categorías</span></summary>
+    <div>
+      <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Categoría de referencia</th><th>División funcional</th><th style="text-align:right;">Salario base</th><th style="text-align:right;">COR</th><th style="text-align:right;">Total mes</th><th style="text-align:right;">Bruto anual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Jefe/a de tienda o almacén</td><td>Ventas, distribución y logística</td><td class="num">1.388,19 €</td><td class="num">185,60 €</td><td class="num">1.573,79 €</td><td class="num">23.606,82 €</td></tr>
+          <tr><td>Jefe/a de grupo o sección</td><td>Ventas, distribución y logística</td><td class="num">1.388,19 €</td><td class="num">185,60 €</td><td class="num">1.573,79 €</td><td class="num">23.606,82 €</td></tr>
+          <tr><td>Encargado/a de establecimiento</td><td>Ventas, distribución y logística</td><td class="num">1.388,19 €</td><td class="num">185,60 €</td><td class="num">1.573,79 €</td><td class="num">23.606,82 €</td></tr>
+          <tr><td>Jefe/a de administración</td><td>Administración y marketing</td><td class="num">1.574,55 €</td><td class="num">211,01 €</td><td class="num">1.785,56 €</td><td class="num">26.783,46 €</td></tr>
+          <tr><td>Encargado/a de servicios</td><td>Servicios auxiliares</td><td class="num">1.444,81 €</td><td class="num">193,33 €</td><td class="num">1.638,14 €</td><td class="num">24.572,11 €</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+  <details open>
+    <summary>Grupo III · Ejecución autónoma con corresponsabilidad de mando — 1.362,01 € – 1.487,08 €/mes<span class="summary-hint">7 categorías</span></summary>
+    <div>
+      <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Categoría de referencia</th><th>División funcional</th><th style="text-align:right;">Salario base</th><th style="text-align:right;">COR</th><th style="text-align:right;">Total mes</th><th style="text-align:right;">Bruto anual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Comercial</td><td>Ventas, distribución y logística</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
+          <tr><td>Dependiente/a de 1.ª</td><td>Ventas, distribución y logística</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
+          <tr><td>Chófer de vehículo de más de 3,5 T (permiso C)</td><td>Ventas, distribución y logística</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
+          <tr><td>Contable</td><td>Administración y marketing</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,18 €</td></tr>
+          <tr><td>Oficial administrativo/a de 1.ª</td><td>Administración y marketing</td><td class="num">1.311,87 €</td><td class="num">175,21 €</td><td class="num">1.487,08 €</td><td class="num">22.306,25 €<sup style="color:var(--amber);">*</sup></td></tr>
+          <tr><td>Jefe/a de taller</td><td>Servicios auxiliares</td><td class="num">1.201,82 €</td><td class="num">160,19 €</td><td class="num">1.362,01 €</td><td class="num">20.430,19 €</td></tr>
+          <tr><td>Delineante y rotulista</td><td>Servicios auxiliares</td><td class="num">1.201,82 €</td><td class="num">160,19 €</td><td class="num">1.362,01 €</td><td class="num">20.430,19 €</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo IV · Ejecución autónoma bajo supervisión — 1.319,52 € – 1.388,76 €/mes<span class="summary-hint">6 categorías</span></summary>
+    <div>
+      <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Categoría de referencia</th><th>División funcional</th><th style="text-align:right;">Salario base</th><th style="text-align:right;">COR</th><th style="text-align:right;">Total mes</th><th style="text-align:right;">Bruto anual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Oficial administrativo/a de 2.ª</td><td>Administración y marketing</td><td class="num">1.225,36 €</td><td class="num">163,40 €</td><td class="num">1.388,76 €</td><td class="num">20.831,41 €</td></tr>
+          <tr><td>Visitador/a</td><td>Ventas, distribución y logística</td><td class="num">1.195,46 €</td><td class="num">159,33 €</td><td class="num">1.354,79 €</td><td class="num">20.321,92 €</td></tr>
+          <tr><td>Dependiente/a de 2.ª</td><td>Ventas, distribución y logística</td><td class="num">1.195,46 €</td><td class="num">159,33 €</td><td class="num">1.354,79 €</td><td class="num">20.321,92 €</td></tr>
+          <tr><td>Chófer de vehículo de reparto</td><td>Ventas, distribución y logística</td><td class="num">1.195,46 €</td><td class="num">159,33 €</td><td class="num">1.354,79 €</td><td class="num">20.321,92 €</td></tr>
+          <tr><td>Profesional de oficio de 1.ª</td><td>Servicios auxiliares</td><td class="num">1.164,42 €</td><td class="num">155,09 €</td><td class="num">1.319,52 €</td><td class="num">19.792,75 €</td></tr>
+          <tr><td>Profesional de oficio de 2.ª</td><td>Servicios auxiliares</td><td class="num">1.164,42 €</td><td class="num">155,09 €</td><td class="num">1.319,52 €</td><td class="num">19.792,75 €</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo V · Tareas con alto grado de dependencia — 1.270,35 € – 1.290,41 €/mes<span class="summary-hint">6 categorías</span></summary>
+    <div>
+      <div class="tabla-scroll">
+      <table>
+        <thead>
+          <tr><th>Categoría de referencia</th><th>División funcional</th><th style="text-align:right;">Salario base</th><th style="text-align:right;">COR</th><th style="text-align:right;">Total mes</th><th style="text-align:right;">Bruto anual</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Chófer de turismo</td><td>Ventas, distribución y logística</td><td class="num">1.138,81 €</td><td class="num">151,60 €</td><td class="num">1.290,41 €</td><td class="num">19.356,10 €</td></tr>
+          <tr><td>Mozo/a de tienda</td><td>Ventas, distribución y logística</td><td class="num">1.138,81 €</td><td class="num">151,60 €</td><td class="num">1.290,41 €</td><td class="num">19.356,10 €</td></tr>
+          <tr><td>Auxiliar administrativo/a</td><td>Administración y marketing</td><td class="num">1.138,81 €</td><td class="num">151,60 €</td><td class="num">1.290,41 €</td><td class="num">19.356,10 €</td></tr>
+          <tr><td>Capataz</td><td>Servicios auxiliares</td><td class="num">1.121,16 €</td><td class="num">149,19 €</td><td class="num">1.270,35 €</td><td class="num">19.055,27 €</td></tr>
+          <tr><td>Peón/a especialista</td><td>Servicios auxiliares</td><td class="num">1.121,16 €</td><td class="num">149,19 €</td><td class="num">1.270,35 €</td><td class="num">19.055,27 €</td></tr>
+          <tr><td>Peón/a</td><td>Servicios auxiliares</td><td class="num">1.121,16 €</td><td class="num">149,19 €</td><td class="num">1.270,35 €</td><td class="num">19.055,27 €</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </details>
+
   <p class="source-footer">Fuente: anexo I del convenio, «Tablas salariales año 2025» (BOPZ núm. 246, de 25-oct-2025, pág. 43), código 50000285011982. <strong><sup style="color:var(--amber);">*</sup> Errata del boletín:</strong> el anexo asigna a «Oficial administrativo 1ª» una retribución bruta anual de 22.306,25 €, frente a los 22.306,18 € de las otras cuatro categorías del grupo III que tienen exactamente el mismo salario base y el mismo COR. Siendo idéntico el total mensual, la diferencia de siete céntimos no tiene respaldo en el articulado. Reproducimos la cifra tal como la publica el boletín y dejamos constancia de la discrepancia.</p>
 
   <details>
