@@ -1,0 +1,511 @@
+{
+  "nombre": "Convenio Colectivo del Sector Comercio del Metal de la provincia de Valencia 2026-2028",
+  "sector": "comercio-metal",
+  "ambito": "Valencia (capital y provincia)",
+  "codigo": "46000235011982",
+  "skipHtmlGeneration": true,
+  "bop": "BOP de Valencia núm. 125, de 3 de julio de 2026, anuncio 2026/08156 — Resolución de la Dirección Territorial de Vivienda, Empleo, Juventud e Igualdad de Valencia por la que se dispone el registro, depósito y publicación del convenio colectivo del comercio del metal. CSV de verificación BOPV-2026/08156.",
+  "urlBop": "https://bop.dival.es/bop",
+  "urlBopPdf": "https://www.fesmcugtcv.org/cms/temas/convenios/243-convenios-comercio/364-valencia/280-metal?download=1582:convenio-colectivo-de-comercio-del-metal-de-la-provincia-de-valencia-2026-2028",
+  "firmadoFecha": "17 de junio de 2026",
+  "publicadoFecha": "3 de julio de 2026",
+  "vigencia": "1 enero 2026 – 31 diciembre 2028",
+  "estado": "vigente",
+  "pagas": 14,
+  "jornadaAnual": 1757,
+  "incrementos": {
+    "regla": "El art. 14 pacta un 3 % en 2026 sobre las tablas reales de 2025, con efectos del 1 de enero de 2026, y un 3 % adicional en cada uno de 2027 y 2028. La cláusula de revisión aplica un incremento adicional de hasta el 1 % si el IPC interanual de diciembre supera el 3 %, con efectos del 1 de enero siguiente, y sirve solo como base de cálculo del año posterior: el convenio precisa que no genera obligación de pagar atrasos del ejercicio revisado.",
+    "2026": "+3 % sobre las tablas reales de 2025",
+    "2027": "+3 %",
+    "2028": "+3 %"
+  },
+  "atrasos": {
+    "regla": "El art. 14 obliga a abonar los atrasos de 2026 en un solo pago dentro de los dos meses siguientes a la publicación del convenio en el BOP.",
+    "publicacion": "2026-07-03",
+    "plazoLimite": "2026-09-03",
+    "estado": "VENCIDO",
+    "mora": "La disposición final tercera prevé un interés por mora del 10 % sobre las obligaciones económicas incumplidas desde el 1 de enero de 2026, salvo causa justificada, y excluye expresamente alegar el desconocimiento del convenio.",
+    "prescripcion": "Las diferencias salariales prescriben con carácter general al año desde que pudieron exigirse (art. 59.2 del Estatuto de los Trabajadores).",
+    "porGrupo": [
+      {
+        "grupo": "1",
+        "mes2025": 2216.54,
+        "mes2026": 2283.04,
+        "diferenciaMes": 66.5,
+        "seisMensualidades": 399.0,
+        "anual14Pagas": 931.0
+      },
+      {
+        "grupo": "2A",
+        "mes2025": 1920.88,
+        "mes2026": 1978.51,
+        "diferenciaMes": 57.63,
+        "seisMensualidades": 345.78,
+        "anual14Pagas": 806.82
+      },
+      {
+        "grupo": "2B",
+        "mes2025": 1627.68,
+        "mes2026": 1676.51,
+        "diferenciaMes": 48.83,
+        "seisMensualidades": 292.98,
+        "anual14Pagas": 683.62
+      },
+      {
+        "grupo": "3A",
+        "mes2025": 1515.89,
+        "mes2026": 1561.37,
+        "diferenciaMes": 45.48,
+        "seisMensualidades": 272.88,
+        "anual14Pagas": 636.72
+      },
+      {
+        "grupo": "3B",
+        "mes2025": 1474.39,
+        "mes2026": 1518.62,
+        "diferenciaMes": 44.23,
+        "seisMensualidades": 265.38,
+        "anual14Pagas": 619.22
+      },
+      {
+        "grupo": "3C",
+        "mes2025": 1375.13,
+        "mes2026": 1416.38,
+        "diferenciaMes": 41.25,
+        "seisMensualidades": 247.5,
+        "anual14Pagas": 577.5
+      },
+      {
+        "grupo": "4A",
+        "mes2025": 1331.73,
+        "mes2026": 1371.68,
+        "diferenciaMes": 39.95,
+        "seisMensualidades": 239.7,
+        "anual14Pagas": 559.3
+      },
+      {
+        "grupo": "4B",
+        "mes2025": 1319.86,
+        "mes2026": 1359.46,
+        "diferenciaMes": 39.6,
+        "seisMensualidades": 237.6,
+        "anual14Pagas": 554.4
+      },
+      {
+        "grupo": "5",
+        "mes2025": 1239.16,
+        "mes2026": 1276.33,
+        "diferenciaMes": 37.17,
+        "seisMensualidades": 223.02,
+        "anual14Pagas": 520.38
+      }
+    ]
+  },
+  "notaEditorial": "El convenio 2026-2028 del Comercio del Metal de Valencia entró en vigor el 1 de enero de 2026 pero no se publicó hasta el 3 de julio, así que el primer semestre se cobró con las tablas congeladas de 2025 y generó atrasos del 3 %. El art. 14 daba dos meses desde la publicación para abonarlos en un solo pago: el plazo venció el 3 de septiembre de 2026. Quien no los haya cobrado tiene a su favor el interés por mora del 10 % de la disposición final tercera.",
+  "jornada": {
+    "anual": 1757,
+    "nota": "1.757 horas de trabajo efectivo en cómputo anual para toda la vigencia (art. 29), con independencia del horario de apertura. Quien viniera haciendo jornada inferior la conserva como condición más beneficiosa. Calendario laboral a comienzos de cada año. Los cuadrantes, donde la adscripción pueda variar, se comunican con un año de antelación preferente y cuatro meses como mínimo.",
+    "distribucionIrregular": "Máximo el 10 % de la jornada (art. 32), por debajo del margen supletorio del art. 34.2 del Estatuto de los Trabajadores."
+  },
+  "vacaciones": "30 días naturales ininterrumpidos salvo acuerdo; si se parten, uno de los periodos ha de ser de al menos 21 días seguidos. No pueden empezar en sábado ni domingo. Se fijan en el calendario dentro de los cuatro primeros meses y con dos meses de antelación mínima: si la empresa incumple esos plazos se entiende que acepta las fechas propuestas por la plantilla. Preferentemente entre junio y septiembre. Fuera de ese periodo a requerimiento de la empresa, se elige entre un día más o la bolsa de vacaciones de 63,47 € (art. 33).",
+  "nocturnidad": "Las horas entre las 22:00 y las 6:00 se retribuyen con un 15 % de incremento sobre el salario grupo, salvo que el trabajo sea nocturno por naturaleza. Cotizable. No computan los primeros quince minutos pasadas las 22:00 en tareas de cierre (art. 8).",
+  "plusDomingosFestivos": "A falta de pacto de empresa, las horas de domingo o festivo hábil se abonan con un 50 % de incremento sobre la hora ordinaria MÁS un día libre por cada jornada trabajada, a disfrutar antes o dentro del mes siguiente. Adscripción voluntaria. No tienen consideración de horas extraordinarias y ningún pacto de empresa puede empeorar estas condiciones (art. 31).",
+  "teletrabajo": "A falta de acuerdo de empresa, la compensación es de 50 € brutos al mes o 2,25 € por día efectivo de teletrabajo, de naturaleza extrasalarial y proporcional a la jornada. Voluntario y reversible con 30 días de preaviso si no formaba parte de la descripción inicial del puesto. Prioridad para ocupar puestos presenciales de quien trabaja a distancia desde el inicio a jornada completa (art. 20, Ley 10/2021).",
+  "dietas": {
+    "completa": 28.49,
+    "media": 11.32,
+    "nota": "Dieta completa con pernocta, media dieta cuando solo se hace fuera la comida del mediodía. Si se acredita que no cubren el desplazamiento, la empresa abona el gasto efectivamente realizado previa justificación. No se devengan si el destino coincide con la residencia habitual (art. 10)."
+  },
+  "kilometraje": {
+    "importe": 0.32,
+    "nota": "Por kilómetro en desplazamientos por cuenta de la empresa (art. 12)."
+  },
+  "quebrantoMoneda": {
+    "porcentaje": "2 por 1.000",
+    "tope": 67.7,
+    "nota": "Sobre las cantidades abonadas o percibidas en metálico. Si se manejan indistintamente medios bancarios y efectivo, solo se aplica sobre el efectivo (art. 13)."
+  },
+  "bolsaVacaciones": 63.47,
+  "seguro": {
+    "2026": 21465.0,
+    "2027": 22109.0,
+    "2028": 22772.0,
+    "sepelio": 3005.0,
+    "nota": "Seguro obligatorio de incapacidad permanente absoluta, gran invalidez y muerte (art. 56). Incluye información 24 horas, obtención gratuita de certificados y, a cuenta de la indemnización, los gastos de sepelio o repatriación hasta 3.005 €. No asegurar hace recaer la cobertura sobre la empresa y constituye infracción muy grave. La garantía de invalidez cesa a los 67 años; la de muerte se mantiene hasta los 70. Certificación anual a la comisión paritaria en enero.",
+    "porQueNoSigueElTresPorCiento": "Es la única cuantía del convenio que no sube un 3 %: pasa de 20.465 € a 21.465 €, mil euros exactos (+4,89 %). El convenio 2023-2025 arrastraba una discrepancia entre el capital escrito en letra y el escrito en número en su art. 56, y el acta de la comisión paritaria de 28 de noviembre de 2025 resolvió que valía el de letra, 21.465 €. Se publicó en el BOP de Valencia núm. 242 de 18 de diciembre de 2025 (anuncio 2025/15472, corrección de errores del 2025/14958 que había omitido el acta) y el convenio nuevo lo incorporó."
+  },
+  "incapacidadTemporal": "Accidente de trabajo o enfermedad profesional: complemento hasta el 100 % de la base reguladora desde el primer día, límite de doce meses. Enfermedad común o accidente no laboral: 75 % del día 16 al 20, 90 % del 21 al 60 y 100 % desde el día 61, también con límite de doce meses (art. 55).",
+  "permisos": "Mejoras sobre el art. 37.3 del Estatuto (art. 36): 16 días naturales por matrimonio, extensibles a parejas de hecho inscritas y repartibles alrededor de la celebración; un día laborable más que el art. 37.3 bis por fallecimiento de cónyuge, pareja de hecho o pariente de primer grado; un día por matrimonio de hijos, hijas, hermanas o hermanos en día laborable; hasta 10 horas al año para acompañar al médico a menores de 14 años, cónyuge o familiares dependientes de primer grado; hasta 15 horas retribuidas al año para exámenes de estudios comerciales relacionados con la actividad; reconocimiento ginecológico anual retribuido. No retribuidos (art. 39): hasta tres días por enfermedad de hija o hijo cuando trabajan ambos progenitores, y siete días al año para trámites de adopción o acogimiento, ampliables en tres más si es internacional.",
+  "premioConstancia": "Con al menos cinco años en la empresa y baja voluntaria a partir de los 63 años, tres meses de vacaciones retribuidas; con diez años o más, cuatro meses. Se disfrutan antes del cese, comunicándolo de forma fehaciente con dos meses de antelación, y la empresa entrega certificado con los meses reconocidos (art. 35).",
+  "finiquito": "Se puede firmar con asistencia de delegado o delegada de personal, y entonces el efecto liberatorio es inmediato, o sin ella, en cuyo caso no se produce hasta pasados 30 días naturales. En ambos casos se conserva la acción de reclamación si hubo vicio del consentimiento (art. 22).",
+  "periodoPrueba": "Seis meses para los grupos 1 y 2, tres meses para los grupos 3 y 4, y dos semanas para los grupos 5 y 6. La incapacidad temporal lo interrumpe (art. 16).",
+  "preavisoBaja": "15 días en los grupos 4, 5 y 6; un mes en el grupo 3; dos meses en los grupos 1 y 2 (art. 23).",
+  "contratacion": "Contrato eventual por circunstancias de la producción: máximo 12 meses, con indemnización de 12 días por año de servicio a su finalización (art. 17). Formación en alternancia: 65 % del salario del grupo el primer año y 85 % el segundo, sin periodo de prueba (art. 18). Práctica profesional: 80 %, con periodo de prueba de hasta dos meses (art. 19). Nunca por debajo del SMI en proporción al tiempo de trabajo efectivo.",
+  "comisionParitaria": {
+    "domicilio": "Avenida Blasco Ibáñez 127, 46022 Valencia (sede de FEMEVAL)",
+    "email": "cpcomerciometal@femeval.es",
+    "composicion": "Presidencia designada por las partes, cuatro titulares y cuatro suplentes por cada representación. Puede funcionar sin presidencia por acuerdo (art. 59).",
+    "coste": "Las consultas deben canalizarse a través de alguna de las organizaciones firmantes. Si una empresa o una persona trabajadora consulta directamente, abona 100 € en concepto de gastos de gestión (art. 60).",
+    "modelo": "Anexo V del convenio.",
+    "conflictos": "Las discrepancias se resuelven conforme al VII Acuerdo de Solución Autónoma de Conflictos Laborales de la Comunidad Valenciana (ASAC CV, DOGV 17-03-23)."
+  },
+  "clasificacionProfesional": "Seis grupos profesionales con niveles retributivos (1, 2A, 2B, 3A, 3B, 3C, 4A, 4B, 5 y 6), en vigor desde el 1 de enero de 2021 (anexo II). Factores de valoración: conocimiento (formación y experiencia), iniciativa, autonomía, responsabilidad, mando y complejidad. El convenio conserva las antiguas denominaciones solo como referencia orientativa de encuadramiento.",
+  "complementoExCategoria": {
+    "nota": "Complemento ad personam para quienes el 26 de julio de 2021 ocupaban una de siete categorías y cobraban por ella más que el salario del grupo al que pasaron. No compensable ni absorbible, se revaloriza cada año en el mismo porcentaje que el convenio, computa como salario a todos los efectos e incluye las pagas extraordinarias. No se abona a quien ingresó tras la publicación del convenio 2020-2022 (anexo II, cláusula novena).",
+    "importes2026": [
+      {
+        "categoria": "Jefatura administrativa",
+        "grupo": "2A",
+        "importeMes": 130.62
+      },
+      {
+        "categoria": "Jefatura de grupo",
+        "grupo": "2B",
+        "importeMes": 124.83
+      },
+      {
+        "categoria": "Jefatura de sección administrativa",
+        "grupo": "2B",
+        "importeMes": 119.97
+      },
+      {
+        "categoria": "Empaquetador/a de 18 años en adelante",
+        "grupo": "5",
+        "importeMes": 83.08
+      },
+      {
+        "categoria": "Encargado/a de establecimiento",
+        "grupo": "3A",
+        "importeMes": 44.33
+      },
+      {
+        "categoria": "Auxiliar de caja de 18 a 25 años",
+        "grupo": "5",
+        "importeMes": 33.95
+      },
+      {
+        "categoria": "Profesional de oficio de 2.ª",
+        "grupo": "4A",
+        "importeMes": 4.34
+      }
+    ]
+  },
+  "grupos": [
+    {
+      "id": "1",
+      "nombre": "Grupo 1 — Personal técnico superior y dirección",
+      "salario": {
+        "2026": {
+          "mes": 2283.04,
+          "anual": 31962.56
+        }
+      },
+      "categoriasReferencia": [
+        "Titulado/a de grado superior",
+        "Jefatura de equipo de informática",
+        "Dirección de sección mercantil",
+        "Dirección de sección técnica",
+        "Encargado/a general",
+        "Jefatura de personal",
+        "Jefatura de compras",
+        "Jefatura de ventas"
+      ]
+    },
+    {
+      "id": "2A",
+      "nombre": "Grupo 2A — Personal técnico medio",
+      "salario": {
+        "2026": {
+          "mes": 1978.51,
+          "anual": 27699.14
+        }
+      },
+      "categoriasReferencia": [
+        "Titulado/a de grado medio",
+        "Analista",
+        "Jefatura administrativa",
+        "Jefatura de división",
+        "Jefatura de almacén"
+      ]
+    },
+    {
+      "id": "2B",
+      "nombre": "Grupo 2B — Mandos intermedios y técnicos de apoyo",
+      "salario": {
+        "2026": {
+          "mes": 1676.51,
+          "anual": 23471.14
+        }
+      },
+      "categoriasReferencia": [
+        "Jefatura de grupo",
+        "Jefatura de sección administrativa",
+        "Jefatura de sección mercantil",
+        "Programador/a de ordenador",
+        "Contable",
+        "Contable-cajero/a",
+        "Jefatura de sección de servicio",
+        "Ayudante técnico/a sanitario/a"
+      ]
+    },
+    {
+      "id": "3A",
+      "nombre": "Grupo 3A — Encargo de establecimiento y oficios cualificados",
+      "salario": {
+        "2026": {
+          "mes": 1561.37,
+          "anual": 21859.18
+        }
+      },
+      "categoriasReferencia": [
+        "Encargado/a de establecimiento",
+        "Intérprete",
+        "Cortador/a"
+      ]
+    },
+    {
+      "id": "3B",
+      "nombre": "Grupo 3B — Ventas y administración",
+      "salario": {
+        "2026": {
+          "mes": 1518.62,
+          "anual": 21260.68
+        }
+      },
+      "categoriasReferencia": [
+        "Oficial administrativo/a u operador/a en máquinas contables",
+        "Dependiente/a de 24 años en adelante",
+        "Viajante"
+      ]
+    },
+    {
+      "id": "3C",
+      "nombre": "Grupo 3C — Oficios de 1.ª, reparto y conducción",
+      "salario": {
+        "2026": {
+          "mes": 1416.38,
+          "anual": 19829.32
+        }
+      },
+      "categoriasReferencia": [
+        "Profesional de oficio de 1.ª",
+        "Chófer",
+        "Chófer mecánico/a",
+        "Repartidor/a",
+        "Dependiente/a de 22 a 24 años"
+      ]
+    },
+    {
+      "id": "4A",
+      "nombre": "Grupo 4A — Oficios de 2.ª y personal especializado",
+      "salario": {
+        "2026": {
+          "mes": 1371.68,
+          "anual": 19203.52
+        }
+      },
+      "categoriasReferencia": [
+        "Profesional de oficio de 2.ª",
+        "Mozo/a especializado/a"
+      ]
+    },
+    {
+      "id": "4B",
+      "nombre": "Grupo 4B — Personal auxiliar de oficio, ventas y administración",
+      "salario": {
+        "2026": {
+          "mes": 1359.46,
+          "anual": 19032.44
+        }
+      },
+      "categoriasReferencia": [
+        "Ayudante de oficio",
+        "Auxiliar administrativo/a o perforista",
+        "Mozo/a",
+        "Personal de limpieza",
+        "Auxiliar de caja de 25 años en adelante"
+      ]
+    },
+    {
+      "id": "5",
+      "nombre": "Grupo 5 — Personal de servicios auxiliares",
+      "salario": {
+        "2026": {
+          "mes": 1276.33,
+          "anual": 17868.62
+        }
+      },
+      "categoriasReferencia": [
+        "Auxiliar de caja de 18 a 25 años",
+        "Telefonista de 18 años en adelante",
+        "Conserje",
+        "Empaquetador/a de 18 años en adelante"
+      ]
+    }
+  ],
+  "grupo6": {
+    "id": "6A",
+    "nombre": "Grupo 6A — Personal aprendiz (16 a 18 años)",
+    "salario": "SMI vigente",
+    "nota": "La tabla no fija importe propio: remite al SMI vigente, que en 2026 son 1.221 €/mes y 17.094 €/año. Es el único grupo cuyo salario no lo decide el convenio. Al cumplir los 18 años se pasa automáticamente al grupo que corresponda por funciones. En las tablas de 2025 existía además un grupo 6B para los antiguos contratos para la formación y el aprendizaje (art. 18 bis), con el tercer año al 85 % del SMI; en las tablas de 2026 ha desaparecido."
+  },
+  "categoriasSuprimidas": {
+    "nota": "Quienes a 1 de enero de 2021 ocupaban estas categorías y las conservan cobran por el «salario convenio» de su categoría, no por el salario de grupo, hasta su jubilación o cese en la empresa (art. 6.2 y anexo II).",
+    "importes2026": [
+      {
+        "categoria": "Jefatura de sucursal y supermercados",
+        "mes": 1978.51,
+        "anual": 27699.14
+      },
+      {
+        "categoria": "Dibujante",
+        "mes": 1978.41,
+        "anual": 27697.74
+      },
+      {
+        "categoria": "Escaparatista",
+        "mes": 1796.43,
+        "anual": 25150.02
+      },
+      {
+        "categoria": "Taquimecanógrafo/a en idioma extranjero",
+        "mes": 1676.49,
+        "anual": 23470.86
+      },
+      {
+        "categoria": "Dependiente/a mayor",
+        "mes": 1643.28,
+        "anual": 23005.92
+      },
+      {
+        "categoria": "Maestro/a industrial",
+        "mes": 1622.89,
+        "anual": 22720.46
+      },
+      {
+        "categoria": "Delineante",
+        "mes": 1619.29,
+        "anual": 22670.06
+      },
+      {
+        "categoria": "Visador/a",
+        "mes": 1619.28,
+        "anual": 22669.92
+      },
+      {
+        "categoria": "Rotulista",
+        "mes": 1619.28,
+        "anual": 22669.92
+      },
+      {
+        "categoria": "Vendedor/a, comprador/a, subastador/a",
+        "mes": 1605.7,
+        "anual": 22479.8
+      },
+      {
+        "categoria": "Jefatura de taller",
+        "mes": 1541.91,
+        "anual": 21586.74
+      },
+      {
+        "categoria": "Secretario/a",
+        "mes": 1518.06,
+        "anual": 21252.84
+      },
+      {
+        "categoria": "Corredor/a de plaza",
+        "mes": 1420.19,
+        "anual": 19882.66
+      },
+      {
+        "categoria": "Ayudante de cortador/a",
+        "mes": 1398.27,
+        "anual": 19575.78
+      },
+      {
+        "categoria": "Capataz/a",
+        "mes": 1376.02,
+        "anual": 19264.28
+      },
+      {
+        "categoria": "Ayudante de montaje",
+        "mes": 1367.43,
+        "anual": 19144.02
+      },
+      {
+        "categoria": "Ascensorista",
+        "mes": 1367.35,
+        "anual": 19142.9
+      },
+      {
+        "categoria": "Ayudante de 18 a 22 años",
+        "mes": 1359.49,
+        "anual": 19032.86
+      },
+      {
+        "categoria": "Cobrador/a",
+        "mes": 1240.81,
+        "anual": 17371.34
+      },
+      {
+        "categoria": "Vigilante, sereno/a, ordenanza, portero/a",
+        "mes": 1240.81,
+        "anual": 17371.34
+      }
+    ]
+  },
+  "smi": {
+    "resultado": "Ninguna categoría del convenio queda por debajo del SMI de 2026.",
+    "detalle": "El suelo del convenio es el grupo 5 (auxiliar de caja de 18 a 25 años, telefonista, conserje y empaquetador/a): 1.276,33 €/mes y 17.868,62 €/año en 14 pagas, 774,62 € por encima de los 17.094 € del SMI.",
+    "matiz": "El margen más estrecho está en dos categorías a extinguir, Cobrador/a y Vigilante, sereno/a, ordenanza y portero/a, con 1.240,81 €/mes: solo 19,81 € por encima del SMI mensual de 1.221 € y 277,34 € por encima del anual. El grupo 6A no tiene salario propio y cobra directamente el SMI vigente."
+  },
+  "tablasReales": "El art. 14 calcula la subida de 2026 sobre las «tablas salariales reales de 2025». El acta de la comisión paritaria de 21 de enero de 2025 explica el mecanismo del convenio anterior: como el IPC de 2024 fue del 2,8 % y la revisión se activaba por encima del 2,5 %, se añadió un 0,3 % a las tablas de 2024 para obtener las «tablas reales 2024», y sobre esas se aplicó el 3,5 % de aquel ejercicio. El acta precisa entre paréntesis que son «tablas que no se publican»: existe una capa intermedia de referencia que la plantilla no puede consultar en ningún boletín.",
+  "firmantes": {
+    "patronal": [
+      "Federación Empresarial Metalúrgica Valenciana (FEMEVAL)"
+    ],
+    "sindicatos": [
+      "Federación de Servicios de Comisiones Obreras (CC.OO.)",
+      "Federación de Servicios, Movilidad y Consumo de UGT (FeSMC-UGT)"
+    ],
+    "nota": "Texto definitivo suscrito el 17 de junio de 2026 por la comisión negociadora. Resolución de la Dirección Territorial de Vivienda, Empleo, Juventud e Igualdad de Valencia de 19 de junio de 2026."
+  },
+  "ambitoFuncional": "Empresas de comercio del metal con centro de trabajo en la provincia de Valencia cuya actividad principal sea la venta, comercialización, distribución, alquiler, implantación o seguimiento de artículos, servicios, soportes tecnológicos o productos del campo del metal, en cuya composición intervengan elementos metálicos de modo principal o accesorio, al detalle o al por mayor, en nombre propio o de terceros, sin que medie un ciclo de producción aunque el producto sufra un acondicionamiento previo. También a las empresas que tradicionalmente venían rigiéndose por este convenio (art. 2) y a las multiactividad respecto del personal que realiza la actividad incluida (art. 21).",
+  "noConfundir": {
+    "otroConvenio": "Convenio de la Industria del Metal de Valencia",
+    "codigoOtro": "46000105011981",
+    "diferencia": "El suelo del Comercio del Metal son 17.868,62 €/año frente a los 22.462,18 € del suelo de la Industria del Metal: 4.593,56 € de diferencia. Además el comercio trabaja cinco horas más al año, 1.757 frente a 1.752, y en 2026 subió un 3 % frente al 2,5 % de la industria. El criterio es la actividad principal de la empresa: vender no es fabricar."
+  },
+  "anexos": {
+    "I": "Protocolo subsidiario de actuación ante catástrofes y fenómenos meteorológicos adversos, para las empresas que no tengan el suyo, en cumplimiento del Real Decreto-ley 8/2024. Remite a los avisos de AEMET y del 112 de la Generalitat Valenciana.",
+    "II": "Clasificación profesional.",
+    "III": "Medidas planificadas para la igualdad y no discriminación de las personas LGTBI, obligatorias en empresas de más de 50 personas trabajadoras y voluntarias para el resto (Ley 4/2023 y Real Decreto 1026/2024), con protocolo de prevención y tratamiento del acoso.",
+    "IV": "Movilidad sostenible. El art. 26.1 de la Ley 9/2025 exige plan de movilidad al trabajo en centros de más de 200 personas trabajadoras o 100 por turno, en el plazo de doce meses desde su entrada en vigor, que se cumplen el 5 de diciembre de 2026.",
+    "V": "Modelo de consulta a la comisión paritaria.",
+    "VI": "Tablas salariales 2026."
+  },
+  "erratasBop": "El BOP publica algunas denominaciones de las tablas de 2025 en masculino genérico y con erratas de imprenta: «Jefe/a de pesonal», «Deliniante» y «extrajero». El acta de la comisión paritaria de 28 de noviembre de 2025 contiene a su vez tres: escribe «ventiún» por veintiún, «ultractividad» por ultraactividad y dice «entre la cuantía expresada en cifra y la expresada en número» cuando quiere decir en letra y en número. En la ficha se recogen corregidas y en forma inclusiva; los importes son literales.",
+  "verificacion": "Las 29 filas de las tablas se han cotejado por doble extracción independiente del mismo PDF y validadas por dos vías aritméticas: mensual × 14 = anual en las 29 filas, y tablas de 2025 × 1,03 = tablas de 2026 al céntimo en las 29. También cuadran al +3 % los 7 complementos ex categoría y 5 de los 6 conceptos económicos; la excepción documentada es el seguro de convenio.",
+  "fuentes": [
+    {
+      "titulo": "BOP de Valencia núm. 125, de 3 de julio de 2026 · anuncio 2026/08156",
+      "url": "https://www.fesmcugtcv.org/cms/temas/convenios/243-convenios-comercio/364-valencia/280-metal?download=1582:convenio-colectivo-de-comercio-del-metal-de-la-provincia-de-valencia-2026-2028",
+      "detalle": "Convenio colectivo del comercio del metal 2026-2028, texto íntegro y anexo VI con las tablas de 2026. Código 46000235011982. CSV BOPV-2026/08156."
+    },
+    {
+      "titulo": "BOP de Valencia núm. 44, de 5 de marzo de 2025 · anuncio 2025/02320",
+      "url": "https://www.fesmcugtcv.org/cms/temas/convenios/243-convenios-comercio/364-valencia/280-metal?download=1318",
+      "detalle": "Acta de la comisión paritaria de 21 de enero de 2025 con las tablas salariales de 2025, usadas para calcular los atrasos. El título del anuncio dice «sector del metal», pero el acta interna y el código son los del Comercio del Metal."
+    },
+    {
+      "titulo": "BOP de Valencia núm. 242, de 18 de diciembre de 2025 · anuncio 2025/15472",
+      "url": "https://www.fesmcugtcv.org/cms/temas/convenios/243-convenios-comercio/364-valencia/280-metal?download=1492",
+      "detalle": "Corrección de errores que publica íntegra el acta de la comisión paritaria de 28 de noviembre de 2025, resolviendo la discrepancia del art. 56 y fijando el capital del seguro para 2026 en 21.465 €."
+    },
+    {
+      "titulo": "Real Decreto 126/2026, de 18 de febrero (SMI 2026)",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-3815",
+      "detalle": "1.221 €/mes × 14 pagas = 17.094 €/año."
+    }
+  ]
+}
