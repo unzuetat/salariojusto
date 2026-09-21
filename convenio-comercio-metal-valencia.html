@@ -132,6 +132,22 @@
     details[open] summary::before{transform:rotate(90deg);}
     details[open] summary{border-bottom:1px solid var(--cream-200);}
     details summary .summary-hint{float:right;font-weight:400;font-size:11.5px;color:var(--ink-lighter);letter-spacing:0;text-transform:none;}
+    /* Filas de grupo expandibles dentro de la propia tabla */
+    tr.g-row td{border-bottom:1px solid var(--cream-100);}
+    tr.g-row.abierta td{background:#fff;border-bottom-color:var(--cream-200);}
+    .g-toggle{display:block;width:100%;text-align:left;background:none;border:0;padding:0;margin:0;
+      font:inherit;color:var(--ink);cursor:pointer;}
+    .g-toggle::before{content:'▸';color:var(--gold);margin-right:8px;display:inline-block;transition:transform .2s;}
+    .g-toggle[aria-expanded="true"]::before{transform:rotate(90deg);}
+    .g-toggle:hover{color:var(--gold-dark);}
+    .g-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+    .g-toggle .g-sub{display:block;font-size:11.5px;color:var(--ink-lighter);margin-left:16px;}
+    tr.g-detalle[hidden]{display:none;}
+    tr.g-detalle td{background:var(--cream-100);padding:4px 16px 14px 40px;border-bottom:1px solid var(--cream-200);}
+    tr.g-detalle p{font-size:13px;margin:8px 0 4px;}
+    tr.g-detalle ul{margin:0;padding-left:20px;columns:2;column-gap:32px;}
+    tr.g-detalle li{font-size:13.5px;color:var(--ink-light);margin-bottom:3px;break-inside:avoid;}
+    @media(max-width:600px){tr.g-detalle ul{columns:1;}tr.g-detalle td{padding-left:20px;}}
     details[open] summary .summary-hint{opacity:0.6;}
     @media(max-width:600px){details summary .summary-hint{display:none;}}
     details > div{padding:14px 16px;}
@@ -192,10 +208,10 @@
     <div class="toc-label">Índice de la ficha</div>
     <div class="toc-links">
       <a href="#datos-clave">Datos clave</a> ·
+            <a href="#te-cubre">¿Te cubre?</a> ·
       <a href="#atrasos">Los atrasos y el plazo vencido</a> ·
       <a href="#tabla-salarial">Tablas salariales 2026</a> ·
       <a href="#cuanto-te-deben">Cuánto te deben</a> ·
-      <a href="#te-cubre">¿Te cubre?</a> ·
       <a href="#ejemplo">Ejemplo real</a> ·
       <a href="#jornada">Jornada, pagas y vacaciones</a> ·
       <a href="#pluses">Pluses y complementos</a> ·
@@ -231,7 +247,7 @@
   </div>
 
   <div class="nota-editorial">
-    <p style="margin-bottom:10px;"><strong>En 30 segundos · Qué es.</strong> El Convenio del Comercio del Metal de Valencia regula la <strong>venta</strong> de artículos con componente metálico, no su fabricación: <strong>ferreterías y bricolaje, electrodomésticos, telecomunicaciones e informática, recambios y suministros</strong>. El art. 2 lo aplica a cualquier empresa cuya actividad principal sea vender, distribuir, alquilar o implantar esos productos, al detalle o al por mayor, siempre que no medie un ciclo de producción. Código 46000235011982.</p>
+    <p style="margin-bottom:10px;"><strong>En 30 segundos · Qué es.</strong> El Convenio del Comercio del Metal de Valencia regula la <strong>venta</strong> de artículos con componente metálico, no su fabricación: <strong>ferreterías y bricolaje, electrodomésticos, telecomunicaciones e informática, recambios y suministros</strong>. El art. 2 lo aplica a cualquier empresa cuya actividad principal sea vender, distribuir, alquilar o implantar esos productos, al detalle o al por mayor, siempre que no medie un ciclo de producción. Si la empresa fabrica, el convenio es <a href="/convenio-metal-valencia.html">el de la Industria del Metal</a>. Código 46000235011982.</p>
 
     <p style="margin-bottom:10px;"><strong>Cómo está.</strong> <strong>Vigente y recién estrenado.</strong> El convenio 2026-2028 se suscribió el 17 de junio de 2026 y se publicó el 3 de julio. Sustituye al de 2023-2025, que había vencido el 31 de diciembre y estuvo en ultraactividad durante el primer semestre —con las tablas congeladas, pero sin decaer, conforme al art. 86 del Estatuto de los Trabajadores tras el Real Decreto-ley 32/2021—.</p>
 
@@ -239,6 +255,21 @@
 
     <p style="margin:0;"><strong>El detalle que importa.</strong> Como el convenio se publicó en julio con efectos de enero, hay <strong>atrasos</strong>. El art. 14 obligaba a pagarlos en un solo pago <strong>antes del 3 de septiembre de 2026</strong>, plazo ya cumplido. Si no han llegado a tu nómina, la disposición final tercera reconoce un <strong>interés por mora del 10 %</strong> y advierte que la empresa no puede escudarse en desconocer el convenio.</p>
   </div>
+
+  <!-- Antes de seguir · ¿te cubre? (canon: primera sección, como hostelería Madrid) -->
+  <h2 id="te-cubre">Antes de seguir: ¿este convenio te cubre?</h2>
+  <p>El art. 2 define el ámbito por la <strong>actividad principal de la empresa</strong>, no por lo que hagas tú. Te aplica si la empresa donde trabajas, con centro de trabajo en la provincia de Valencia, se dedica principalmente a vender, comercializar, distribuir, alquilar, implantar o dar seguimiento a artículos, servicios o productos del campo del metal, <strong>en cuya composición intervengan elementos metálicos de modo principal o accesorio</strong>, al detalle o al por mayor, en nombre propio o de terceros, <strong>sin que medie un ciclo de producción</strong>.</p>
+
+  <ul class="checklist">
+    <li><strong>Ferretería, bricolaje y suministros.</strong> Venta de herramienta, tornillería, material de construcción metálico.</li>
+    <li><strong>Electrodomésticos, informática y telecomunicaciones.</strong> Tiendas de electrónica de consumo, informática y telefonía.</li>
+    <li><strong>Recambios y accesorios.</strong> Venta de piezas y componentes con elementos metálicos.</li>
+    <li><strong>Distribución y venta al por mayor</strong> de cualquiera de lo anterior, incluida la venta en nombre de terceros.</li>
+    <li><strong>Empresas multiactividad</strong> en las que alguna de las actividades principales esté incluida en este ámbito, respecto del personal que la realiza (art. 21).</li>
+    <li><strong>Empresas que tradicionalmente venían rigiéndose por este convenio</strong>, aunque su actividad haya derivado (art. 2, segundo párrafo).</li>
+    <li class="no"><strong>No te cubre si la empresa fabrica o transforma metal.</strong> Ahí se aplica el <a href="/convenio-metal-valencia.html">convenio de la Industria del Metal de Valencia</a>, que es otro convenio con otro código y otras tablas.</li>
+    <li class="no"><strong>No te cubre el acondicionamiento previo como excusa.</strong> El convenio aclara que el producto puede sufrir un acondicionamiento sin que eso convierta a la empresa en industrial; lo determinante es que no haya ciclo de producción.</li>
+  </ul>
 
   <!-- Bloque 2 · Atrasos -->
   <h2 id="atrasos">Los atrasos de 2026 y el plazo que ya ha vencido</h2>
@@ -273,19 +304,187 @@
   <table>
     <caption>Salario grupo del Convenio del Comercio del Metal de Valencia, 2026. Fuente: anexo VI, BOP de Valencia núm. 125 de 3-7-2026.</caption>
     <thead>
-      <tr><th scope="col">Grupo profesional</th><th scope="col" style="text-align:right;">Salario mes</th><th scope="col" style="text-align:right;">Bruto anual (14 pagas)</th></tr>
+      <tr><th scope="col">Grupo profesional</th><th scope="col" style="text-align:right;">Salario mes</th><th scope="col" style="text-align:right;">Bruto anual (14 pagas)</th><th scope="col" style="text-align:right;">Puestos</th></tr>
     </thead>
     <tbody>
-      <tr><td>Grupo 1 · Personal técnico superior y dirección</td><td class="num">2.283,04 €</td><td class="num">31.962,56 €</td></tr>
-      <tr><td>Grupo 2A · Personal técnico medio</td><td class="num">1.978,51 €</td><td class="num">27.699,14 €</td></tr>
-      <tr><td>Grupo 2B · Mandos intermedios y técnicos de apoyo</td><td class="num">1.676,51 €</td><td class="num">23.471,14 €</td></tr>
-      <tr><td>Grupo 3A · Encargo de establecimiento y oficios cualificados</td><td class="num">1.561,37 €</td><td class="num">21.859,18 €</td></tr>
-      <tr><td>Grupo 3B · Ventas y administración</td><td class="num">1.518,62 €</td><td class="num">21.260,68 €</td></tr>
-      <tr><td>Grupo 3C · Oficios de 1.ª, reparto y conducción</td><td class="num">1.416,38 €</td><td class="num">19.829,32 €</td></tr>
-      <tr><td>Grupo 4A · Oficios de 2.ª y personal especializado</td><td class="num">1.371,68 €</td><td class="num">19.203,52 €</td></tr>
-      <tr><td>Grupo 4B · Personal auxiliar de oficio, ventas y administración</td><td class="num">1.359,46 €</td><td class="num">19.032,44 €</td></tr>
-      <tr><td>Grupo 5 · Personal de servicios auxiliares</td><td class="num">1.276,33 €</td><td class="num">17.868,62 €</td></tr>
-      <tr><td>Grupo 6A · Personal aprendiz (16 a 18 años)</td><td class="num">SMI vigente</td><td class="num">SMI vigente</td></tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-1">Grupo 1 · Personal técnico superior y dirección<span class="g-sub">8 puestos — pulsa para verlos</span></button></td>
+        <td class="num">2.283,04 €</td>
+        <td class="num">31.962,56 €</td>
+        <td class="num">8</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-1">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Titulado/a de grado superior</li>
+            <li>Jefatura de equipo de informática</li>
+            <li>Dirección de sección mercantil</li>
+            <li>Dirección de sección técnica</li>
+            <li>Encargado/a general</li>
+            <li>Jefatura de personal</li>
+            <li>Jefatura de compras</li>
+            <li>Jefatura de ventas</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-2a">Grupo 2A · Personal técnico medio<span class="g-sub">5 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.978,51 €</td>
+        <td class="num">27.699,14 €</td>
+        <td class="num">5</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-2a">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Titulado/a de grado medio</li>
+            <li>Analista</li>
+            <li>Jefatura administrativa</li>
+            <li>Jefatura de división</li>
+            <li>Jefatura de almacén</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-2b">Grupo 2B · Mandos intermedios y técnicos de apoyo<span class="g-sub">8 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.676,51 €</td>
+        <td class="num">23.471,14 €</td>
+        <td class="num">8</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-2b">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Jefatura de grupo</li>
+            <li>Jefatura de sección administrativa</li>
+            <li>Jefatura de sección mercantil</li>
+            <li>Programador/a de ordenador</li>
+            <li>Contable</li>
+            <li>Contable-cajero/a</li>
+            <li>Jefatura de sección de servicio</li>
+            <li>Ayudante técnico/a sanitario/a</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-3a">Grupo 3A · Encargo de establecimiento y oficios cualificados<span class="g-sub">3 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.561,37 €</td>
+        <td class="num">21.859,18 €</td>
+        <td class="num">3</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-3a">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Encargado/a de establecimiento</li>
+            <li>Intérprete</li>
+            <li>Cortador/a</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-3b">Grupo 3B · Ventas y administración<span class="g-sub">3 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.518,62 €</td>
+        <td class="num">21.260,68 €</td>
+        <td class="num">3</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-3b">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Oficial administrativo/a u operador/a en máquinas contables</li>
+            <li><strong>Dependiente/a de 24 años en adelante</strong></li>
+            <li>Viajante</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-3c">Grupo 3C · Oficios de 1.ª, reparto y conducción<span class="g-sub">5 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.416,38 €</td>
+        <td class="num">19.829,32 €</td>
+        <td class="num">5</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-3c">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Profesional de oficio de 1.ª</li>
+            <li>Chófer</li>
+            <li>Chófer mecánico/a</li>
+            <li>Repartidor/a</li>
+            <li>Dependiente/a de 22 a 24 años</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-4a">Grupo 4A · Oficios de 2.ª y personal especializado<span class="g-sub">2 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.371,68 €</td>
+        <td class="num">19.203,52 €</td>
+        <td class="num">2</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-4a">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Profesional de oficio de 2.ª</li>
+            <li>Mozo/a especializado/a</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-4b">Grupo 4B · Personal auxiliar de oficio, ventas y administración<span class="g-sub">5 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.359,46 €</td>
+        <td class="num">19.032,44 €</td>
+        <td class="num">5</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-4b">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Ayudante de oficio</li>
+            <li>Auxiliar administrativo/a o perforista</li>
+            <li>Mozo/a</li>
+            <li>Personal de limpieza</li>
+            <li>Auxiliar de caja de 25 años en adelante</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-5">Grupo 5 · Personal de servicios auxiliares<span class="g-sub">4 puestos — pulsa para verlos</span></button></td>
+        <td class="num">1.276,33 €</td>
+        <td class="num">17.868,62 €</td>
+        <td class="num">4</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-5">
+        <td colspan="4">
+          <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+          <ul>
+            <li>Auxiliar de caja de 18 a 25 años</li>
+            <li>Telefonista de 18 años en adelante</li>
+            <li>Conserje</li>
+            <li>Empaquetador/a de 18 años en adelante</li>
+          </ul>
+        </td>
+      </tr>
+      <tr class="g-row">
+        <td><button type="button" class="g-toggle" aria-expanded="false" aria-controls="puestos-6a">Grupo 6A · Personal aprendiz (16 a 18 años)<span class="g-sub">5 puestos — pulsa para verlos</span></button></td>
+        <td class="num">SMI vigente</td>
+        <td class="num">SMI vigente</td>
+        <td class="num">5</td>
+      </tr>
+      <tr class="g-detalle" id="puestos-6a">
+        <td colspan="4">
+          <p>Personal de 16 a 18 años que no se acoja a un contrato formativo. La tabla no le fija importe propio: remite al <strong>SMI vigente</strong>, que en 2026 son 1.221 €/mes y 17.094 €/año. Al cumplir los 18 se pasa automáticamente al grupo que corresponda por funciones. En las tablas de 2025 existía además un <strong>grupo 6B</strong> para los antiguos contratos formativos, con el tercer año al 85 % del SMI; en las de 2026 ha desaparecido.</p>
+          <ul>
+            <li>Empaquetador/a de hasta 18 años</li>
+            <li>Telefonista de hasta 18 años</li>
+            <li>Aspirante de 16 a 18 años</li>
+            <li>Auxiliar de caja de 16 a 18 años</li>
+            <li>Aprendiz/a</li>
+          </ul>
+        </td>
+      </tr>
     </tbody>
   </table>
   </div>
@@ -294,25 +493,11 @@
     <strong>El grupo 6 no tiene salario propio.</strong> La tabla no fija importe para el personal aprendiz menor de 18 años: remite directamente al <strong>SMI vigente</strong>, que en 2026 son 1.221 €/mes y 17.094 €/año. Es el único grupo del convenio cuyo salario no lo decide el convenio. En las tablas de 2025 existía además un <strong>grupo 6B</strong> para los antiguos contratos para la formación y el aprendizaje, con el tercer año al 85 % del SMI; <strong>en las tablas de 2026 ha desaparecido</strong>.
   </div>
 
-  <details open>
-    <summary>Qué puestos entran en cada grupo profesional (clasificación del anexo II)<span class="summary-hint">Equivalencias con las antiguas categorías</span></summary>
-    <div>
-      <p>El convenio conserva las antiguas denominaciones «a modo orientativo» para saber en qué grupo encaja cada puesto. Estas son las equivalencias que fija el anexo II:</p>
-      <ul>
-        <li><strong>Grupo 1.</strong> Titulado/a de grado superior, jefatura de equipo de informática, dirección de sección mercantil, dirección de sección técnica, encargado/a general, jefatura de personal, de compras y de ventas.</li>
-        <li><strong>Grupo 2A.</strong> Titulado/a de grado medio, analista, jefatura administrativa, de división y de almacén.</li>
-        <li><strong>Grupo 2B.</strong> Jefatura de grupo, de sección administrativa, de sección mercantil y de sección de servicio; programador/a de ordenador, contable, contable-cajero/a y ayudante técnico/a sanitario/a.</li>
-        <li><strong>Grupo 3A.</strong> Encargado/a de establecimiento, intérprete y cortador/a.</li>
-        <li><strong>Grupo 3B.</strong> Oficial administrativo/a u operador/a en máquinas contables, <strong>dependiente/a de 24 años en adelante</strong> y viajante.</li>
-        <li><strong>Grupo 3C.</strong> Profesional de oficio de 1.ª, chófer, chófer mecánico/a, repartidor/a y dependiente/a de 22 a 24 años.</li>
-        <li><strong>Grupo 4A.</strong> Profesional de oficio de 2.ª y mozo/a especializado/a.</li>
-        <li><strong>Grupo 4B.</strong> Ayudante de oficio, auxiliar administrativo/a o perforista, mozo/a, personal de limpieza y auxiliar de caja de 25 años en adelante.</li>
-        <li><strong>Grupo 5.</strong> Auxiliar de caja de 18 a 25 años, telefonista de 18 años en adelante, conserje y empaquetador/a de 18 años en adelante.</li>
-        <li><strong>Grupo 6.</strong> Personal aprendiz de 16 a 18 años que no se acoja a contrato formativo: empaquetador/a y telefonista de hasta 18 años, aspirante de 16 a 18, auxiliar de caja de 16 a 18 y aprendiz/a. Al cumplir los 18 se pasa automáticamente al grupo que corresponda a las funciones.</li>
-      </ul>
-      <p style="font-size:13px;color:var(--ink-lighter);">La edad como criterio de encuadramiento en los grupos 3B, 3C, 4B, 5 y 6 procede del sistema antiguo de categorías y el convenio la conserva en la tabla de equivalencias. El encuadramiento real se hace por funciones, según los seis factores de valoración del anexo II: conocimiento, iniciativa, autonomía, responsabilidad, mando y complejidad.</p>
-    </div>
-  </details>
+  <p style="font-size:13px;color:var(--ink-lighter);margin-top:10px;">Pulsa en cualquier grupo de la tabla para ver los puestos que entran en él. El <strong>3B</strong> viene abierto por ser el de los puestos más frecuentes del sector.</p>
+
+  <div class="callout">
+    <strong>La edad que ves en algunos puestos viene del sistema antiguo.</strong> Los criterios por edad de los grupos 3B, 3C, 4B, 5 y 6 proceden de las antiguas categorías y el convenio los conserva solo en la tabla de equivalencias. El encuadramiento real se hace <strong>por funciones</strong>, según los seis factores de valoración del anexo II: conocimiento, iniciativa, autonomía, responsabilidad, mando y complejidad.
+  </div>
 
   <details>
     <summary>Categorías suprimidas que conservan salario propio<span class="summary-hint">20 categorías · «salario convenio»</span></summary>
@@ -403,21 +588,6 @@
   <div class="callout">
     <strong>Y las pagas extraordinarias.</strong> Las cifras de arriba son solo mensualidades ordinarias. A los atrasos hay que sumarles la diferencia en las <strong>pagas extras devengadas</strong> en el periodo, porque el art. 9 las calcula sobre el salario grupo. La subida anual completa —catorce pagas— va de <strong>520,38 €</strong> en el grupo 5 a <strong>931,00 €</strong> en el grupo 1. Si además cobras el complemento ex categoría, ese también sube un 3 %, y tampoco es compensable ni absorbible.
   </div>
-
-  <!-- Bloque 5 · Te cubre -->
-  <h2 id="te-cubre">¿Te cubre este convenio?</h2>
-  <p>El art. 2 define el ámbito por la <strong>actividad principal de la empresa</strong>, no por lo que hagas tú. Te aplica si la empresa donde trabajas, con centro de trabajo en la provincia de Valencia, se dedica principalmente a vender, comercializar, distribuir, alquilar, implantar o dar seguimiento a artículos, servicios o productos del campo del metal, <strong>en cuya composición intervengan elementos metálicos de modo principal o accesorio</strong>, al detalle o al por mayor, en nombre propio o de terceros, <strong>sin que medie un ciclo de producción</strong>.</p>
-
-  <ul class="checklist">
-    <li><strong>Ferretería, bricolaje y suministros.</strong> Venta de herramienta, tornillería, material de construcción metálico.</li>
-    <li><strong>Electrodomésticos, informática y telecomunicaciones.</strong> Tiendas de electrónica de consumo, informática y telefonía.</li>
-    <li><strong>Recambios y accesorios.</strong> Venta de piezas y componentes con elementos metálicos.</li>
-    <li><strong>Distribución y venta al por mayor</strong> de cualquiera de lo anterior, incluida la venta en nombre de terceros.</li>
-    <li><strong>Empresas multiactividad</strong> en las que alguna de las actividades principales esté incluida en este ámbito, respecto del personal que la realiza (art. 21).</li>
-    <li><strong>Empresas que tradicionalmente venían rigiéndose por este convenio</strong>, aunque su actividad haya derivado (art. 2, segundo párrafo).</li>
-    <li class="no"><strong>No te cubre si la empresa fabrica o transforma metal.</strong> Ahí se aplica el convenio de la Industria del Metal, que es otro convenio con otro código y otras tablas.</li>
-    <li class="no"><strong>No te cubre el acondicionamiento previo como excusa.</strong> El convenio aclara que el producto puede sufrir un acondicionamiento sin que eso convierta a la empresa en industrial; lo determinante es que no haya ciclo de producción.</li>
-  </ul>
 
   <!-- Bloque 6 · Ejemplo -->
   <h2 id="ejemplo">Ejemplo: Amparo, dependienta en una ferretería de Valencia</h2>
@@ -533,13 +703,13 @@
 
   <!-- Bloque 10 · No confundir -->
   <h2 id="no-confundir">No lo confundas con el Metal industrial de Valencia</h2>
-  <p>Es el error más frecuente del sector y en Valencia tiene el mayor coste que hemos medido. Son dos convenios distintos, con códigos, tablas y jornada distintos, y ambos con FEMEVAL en la mesa por la parte empresarial.</p>
+  <p>Es el error más frecuente del sector y en Valencia tiene el mayor coste que hemos medido. Son dos convenios distintos, con códigos, tablas y jornada distintos, y ambos con FEMEVAL en la mesa por la parte empresarial. Si lo que buscabas era la fabricación, la ficha que te corresponde es la del <a href="/convenio-metal-valencia.html">Convenio de la Industria del Metal de Valencia</a>.</p>
 
   <div class="tabla-scroll">
   <table>
     <caption>Comparación entre el Comercio del Metal y la Industria del Metal en la provincia de Valencia, 2026.</caption>
     <thead>
-      <tr><th scope="col">&nbsp;</th><th scope="col">Comercio del Metal (esta ficha)</th><th scope="col">Industria del Metal</th></tr>
+      <tr><th scope="col">&nbsp;</th><th scope="col">Comercio del Metal (esta ficha)</th><th scope="col"><a href="/convenio-metal-valencia.html">Industria del Metal</a></th></tr>
     </thead>
     <tbody>
       <tr><td>Qué hace la empresa</td><td>Vende, distribuye y alquila artículos con elementos metálicos</td><td>Fabrica y transforma metal</td></tr>
@@ -555,7 +725,7 @@
   </div>
 
   <div class="callout-alerta">
-    <strong>La diferencia, en cifras.</strong> El salario más bajo del Comercio del Metal son <strong>17.868,62 €</strong> al año. El más bajo de la Industria del Metal, <strong>22.462,18 €</strong>. Son <strong>4.593,56 € de diferencia</strong>, y además el comercio trabaja <strong>cinco horas más</strong> al año. Vender un torno y fabricarlo son dos convenios distintos aunque el material sea el mismo. Si tu empresa vende sin fabricar, el que te corresponde es este.
+    <strong>La diferencia, en cifras.</strong> El salario más bajo del Comercio del Metal son <strong>17.868,62 €</strong> al año. El más bajo de la <a href="/convenio-metal-valencia.html">Industria del Metal</a>, <strong>22.462,18 €</strong>. Son <strong>4.593,56 € de diferencia</strong>, y además el comercio trabaja <strong>cinco horas más</strong> al año. Vender un torno y fabricarlo son dos convenios distintos aunque el material sea el mismo. Si tu empresa vende sin fabricar, el que te corresponde es este.
   </div>
 
   <p class="source-footer">Datos de la Industria del Metal tomados de nuestra ficha del <a href="/convenio-metal-valencia.html">Convenio del Metal de Valencia</a>, verificada contra su propia publicación oficial. Ante la duda sobre cuál te aplica, la referencia es la actividad principal de la empresa y el código de convenio que debe figurar en tu nómina y en tu contrato.</p>
@@ -681,5 +851,33 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  // Mejora progresiva: sin JS las filas de puestos se ven; con JS se pliegan.
+  var filas = document.querySelectorAll('tr.g-detalle');
+  if(!filas.length) return;
+  for(var i=0;i<filas.length;i++){
+    // el grupo 3B queda abierto por ser el de los puestos más frecuentes
+    if(filas[i].id !== 'puestos-3b') filas[i].hidden = true;
+  }
+  var btns = document.querySelectorAll('.g-toggle');
+  for(var j=0;j<btns.length;j++){
+    (function(b){
+      var det = document.getElementById(b.getAttribute('aria-controls'));
+      if(!det) return;
+      var abierto = !det.hidden;
+      b.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+      if(abierto && b.closest('tr')) b.closest('tr').classList.add('abierta');
+      b.addEventListener('click', function(){
+        var ahora = det.hidden;
+        det.hidden = !ahora;
+        b.setAttribute('aria-expanded', ahora ? 'true' : 'false');
+        var tr = b.closest('tr');
+        if(tr) tr.classList.toggle('abierta', ahora);
+      });
+    })(btns[j]);
+  }
+})();
+</script>
 </body>
 </html>
