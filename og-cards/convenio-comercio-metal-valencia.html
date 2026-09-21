@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Newsreader:wght@500;600&display=swap');
+  :root{--ink:#2D2520;--gold:#C17B3E;--gold-light:#D9A06A;--cream-50:#FDFBF7;--cream-200:#EDE0CE;--green-light:#7FCBA0;--amber-light:#F4CE8A;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1200px;height:630px;overflow:hidden;}
+  body{background:var(--ink);font-family:'DM Sans',sans-serif;color:#fff;
+       padding:64px 72px;display:flex;flex-direction:column;justify-content:space-between;position:relative;}
+  body::after{content:'';position:absolute;right:-120px;top:-120px;width:520px;height:520px;
+       border:2px solid rgba(193,123,62,0.18);border-radius:50%;}
+  body::before{content:'';position:absolute;right:-40px;bottom:-160px;width:420px;height:420px;
+       border:2px solid rgba(193,123,62,0.12);border-radius:50%;}
+  .top{display:flex;align-items:center;gap:14px;position:relative;z-index:2;}
+  .mark{width:40px;height:40px;border:1.5px solid rgba(217,160,106,0.55);display:flex;align-items:center;
+        justify-content:center;font-family:'Newsreader',serif;font-size:24px;color:var(--gold-light);padding-top:3px;}
+  .brand{font-family:'Newsreader',serif;font-size:30px;font-weight:600;color:var(--gold-light);letter-spacing:-0.02em;}
+  .brand span{color:#fff;}
+  .mid{position:relative;z-index:2;}
+  .badge{display:inline-block;font-size:15px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;
+        color:var(--amber-light);border:1px solid rgba(180,83,9,0.55);padding:8px 18px;margin-bottom:26px;}
+  h1{font-family:'DM Serif Display',serif;font-size:60px;font-weight:400;line-height:1.08;max-width:920px;}
+  h1 em{font-style:normal;color:var(--gold-light);}
+  .tag{font-size:22px;color:rgba(255,255,255,0.6);margin-top:20px;max-width:940px;line-height:1.45;}
+  .tag b{color:#fff;font-weight:600;}
+  .stats{display:flex;gap:56px;position:relative;z-index:2;}
+  .stat{border-left:3px solid var(--gold);padding:6px 0 6px 20px;}
+  .stat .lbl{font-size:15px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;}
+  .stat .val{font-size:34px;font-weight:700;color:#fff;line-height:1;}
+  .stat .val small{font-size:19px;color:var(--gold-light);font-weight:600;}
+  .foot{display:flex;justify-content:space-between;align-items:center;font-size:18px;color:rgba(255,255,255,0.55);position:relative;z-index:2;}
+  .foot .verif{color:var(--green-light);font-weight:600;}
+  .foot .url{color:var(--gold-light);font-weight:600;}
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="mark">§</div>
+    <div class="brand">Salario<span>Justo</span></div>
+  </div>
+
+  <div class="mid">
+    <span class="badge">Comercio del Metal · Valencia · convenio 2026-2028</span>
+    <h1>Subió un 3% en enero, <em>pero los atrasos vencieron en septiembre</em></h1>
+    <div class="tag">El art. 14 daba <b>dos meses</b> desde la publicación para pagarlos: el plazo acabó el <b>3-sep-2026</b>. Si no han llegado, hay <b>interés de mora del 10%</b> · <b>14 pagas</b> · 1.757 h</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="lbl">Grupo 5</div><div class="val">17.869 <small>€/año</small></div></div>
+    <div class="stat"><div class="lbl">Dependiente/a · G 3B</div><div class="val">21.261 <small>€/año</small></div></div>
+    <div class="stat"><div class="lbl">Grupo 1</div><div class="val">31.963 <small>€/año</small></div></div>
+  </div>
+
+  <div class="foot">
+    <span><span class="verif">✓ Verificado</span> contra el BOP de Valencia 125 (3-jul-2026)</span>
+    <span class="url">salariojusto.es</span>
+  </div>
+</body>
+</html>
