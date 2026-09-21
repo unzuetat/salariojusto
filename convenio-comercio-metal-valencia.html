@@ -132,31 +132,6 @@
     details[open] summary::before{transform:rotate(90deg);}
     details[open] summary{border-bottom:1px solid var(--cream-200);}
     details summary .summary-hint{float:right;font-weight:400;font-size:11.5px;color:var(--ink-lighter);letter-spacing:0;text-transform:none;}
-    /* Grupos profesionales: los desplegables SON la tabla */
-    .grupos-tabla{margin:14px 0;border:1px solid var(--cream-200);background:var(--cream-50);}
-    .grupos-head{display:grid;grid-template-columns:1fr 130px 150px;gap:8px;padding:10px 16px;background:#fff;
-      border-bottom:2px solid var(--cream-200);font-size:11px;font-weight:700;letter-spacing:0.06em;
-      text-transform:uppercase;color:var(--ink-lighter);}
-    .grupos-head span:not(:first-child){text-align:right;}
-    .grupos-tabla details{margin:0;border:none;border-bottom:1px solid var(--cream-100);background:transparent;}
-    .grupos-tabla details:last-of-type{border-bottom:none;}
-    .grupos-tabla details[open]{background:#fff;}
-    .grupos-tabla summary{display:grid;grid-template-columns:1fr 130px 150px;gap:8px;align-items:baseline;
-      padding:11px 16px;font-size:14px;font-weight:400;color:var(--ink);}
-    .grupos-tabla details[open] summary{border-bottom:1px solid var(--cream-200);font-weight:600;}
-    .grupos-tabla summary::before{content:'▸';margin-right:8px;color:var(--gold);transition:transform 0.2s;display:inline-block;}
-    .grupos-tabla details[open] summary::before{transform:rotate(90deg);}
-    .grupos-tabla .g-mes,.grupos-tabla .g-anual{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;}
-    .grupos-tabla .g-anual{color:var(--ink-light);}
-    .grupos-tabla .g-puestos{display:block;font-size:11.5px;color:var(--ink-lighter);font-weight:400;margin-top:2px;}
-    .grupos-tabla details > div{padding:12px 16px 14px 40px;}
-    .grupos-tabla details > div ul{margin:6px 0 0;padding-left:20px;}
-    @media(max-width:620px){
-      .grupos-head{grid-template-columns:1fr 92px;}
-      .grupos-head span:nth-child(3){display:none;}
-      .grupos-tabla summary{grid-template-columns:1fr 92px;font-size:13px;}
-      .grupos-tabla .g-anual{display:none;}
-    }
     details[open] summary .summary-hint{opacity:0.6;}
     @media(max-width:600px){details summary .summary-hint{display:none;}}
     details > div{padding:14px 16px;}
@@ -306,16 +281,41 @@
   <p>El anexo VI del convenio publica las tablas de <strong>2026</strong>, en vigor desde el 1 de enero. La clasificación se organiza en <strong>seis grupos profesionales</strong>, varios de ellos subdivididos en niveles retributivos (2A y 2B, 3A, 3B y 3C, 4A y 4B), según el sistema de clasificación que entró en vigor el 1 de enero de 2021 y que el convenio recoge en su anexo II. Desde entonces no hay categorías profesionales: el salario se fija por grupo.</p>
 
   <div class="callout">
-    <strong>Cómo leer la tabla.</strong> El <strong>salario grupo</strong> es la retribución por unidad de tiempo que corresponde a cada grupo profesional; es lo que cobra todo el mundo dentro de ese grupo, con independencia del puesto concreto. La columna anual es ese importe multiplicado por las <strong>14 pagas</strong> del convenio. Para comparar con el SMI hay que usar siempre el anual, nunca el mensual. A estas cifras se les suma, si te corresponde, la <strong>antigüedad consolidada</strong> y el <strong>complemento «ex categoría profesional»</strong>. Quienes conservan una categoría suprimida no cobran por grupo sino por el «salario convenio» de su categoría, que tiene tabla propia más abajo.
+    <strong>Cómo leer la tabla.</strong> El <strong>salario grupo</strong> es la retribución por unidad de tiempo que corresponde a cada grupo profesional. La columna anual es ese importe multiplicado por las <strong>14 pagas</strong> del convenio. Para comparar con el SMI hay que usar siempre el anual, nunca el mensual. A estas cifras se les suma, si te corresponde, la <strong>antigüedad consolidada</strong> y el <strong>complemento «ex categoría profesional»</strong>. Quienes conservan una categoría suprimida no cobran por grupo sino por el «salario convenio» de su categoría, que tiene tabla propia más abajo.
   </div>
 
-  <div class="grupos-tabla">
-    <div class="grupos-head"><span>Grupo profesional</span><span>Salario mes</span><span>Bruto anual</span></div>
-    <details>
-      <summary><span class="g-nom">Grupo 1 · Personal técnico superior y dirección<span class="g-puestos">8 puestos</span></span><span class="g-mes">2.283,04 €</span><span class="g-anual">31.962,56 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+  <div class="tabla-scroll">
+  <table>
+    <caption>Salario grupo del Convenio del Comercio del Metal de Valencia, 2026. Fuente: anexo VI, BOP de Valencia núm. 125 de 3-7-2026.</caption>
+    <thead>
+      <tr><th scope="col">Grupo profesional</th><th scope="col" style="text-align:right;">Salario mes</th><th scope="col" style="text-align:right;">Bruto anual (14 pagas)</th><th scope="col" style="text-align:right;">Puestos</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Grupo 1 · Personal técnico superior y dirección</td><td class="num">2.283,04 €</td><td class="num">31.962,56 €</td><td class="num">8</td></tr>
+      <tr><td>Grupo 2A · Personal técnico medio</td><td class="num">1.978,51 €</td><td class="num">27.699,14 €</td><td class="num">5</td></tr>
+      <tr><td>Grupo 2B · Mandos intermedios y técnicos de apoyo</td><td class="num">1.676,51 €</td><td class="num">23.471,14 €</td><td class="num">8</td></tr>
+      <tr><td>Grupo 3A · Encargo de establecimiento y oficios cualificados</td><td class="num">1.561,37 €</td><td class="num">21.859,18 €</td><td class="num">3</td></tr>
+      <tr><td>Grupo 3B · Ventas y administración</td><td class="num">1.518,62 €</td><td class="num">21.260,68 €</td><td class="num">3</td></tr>
+      <tr><td>Grupo 3C · Oficios de 1.ª, reparto y conducción</td><td class="num">1.416,38 €</td><td class="num">19.829,32 €</td><td class="num">5</td></tr>
+      <tr><td>Grupo 4A · Oficios de 2.ª y personal especializado</td><td class="num">1.371,68 €</td><td class="num">19.203,52 €</td><td class="num">2</td></tr>
+      <tr><td>Grupo 4B · Personal auxiliar de oficio, ventas y administración</td><td class="num">1.359,46 €</td><td class="num">19.032,44 €</td><td class="num">5</td></tr>
+      <tr><td>Grupo 5 · Personal de servicios auxiliares</td><td class="num">1.276,33 €</td><td class="num">17.868,62 €</td><td class="num">4</td></tr>
+      <tr><td>Grupo 6A · Personal aprendiz (16 a 18 años)</td><td class="num">SMI vigente</td><td class="num">SMI vigente</td><td class="num">5</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout-info">
+    <strong>El grupo 6 no tiene salario propio.</strong> La tabla no fija importe para el personal aprendiz menor de 18 años: remite directamente al <strong>SMI vigente</strong>, que en 2026 son 1.221 €/mes y 17.094 €/año. Es el único grupo del convenio cuyo salario no lo decide el convenio. En las tablas de 2025 existía además un <strong>grupo 6B</strong> para los antiguos contratos para la formación y el aprendizaje, con el tercer año al 85 % del SMI; <strong>en las tablas de 2026 ha desaparecido</strong>.
+  </div>
+
+  <p style="font-size:13px;color:var(--ink-lighter);margin-top:10px;">Despliega cada grupo para ver qué puestos entran en él. El grupo 3B viene abierto por ser el de los puestos más frecuentes del sector.</p>
+
+  <details>
+    <summary>Grupo 1 · Personal técnico superior y dirección — 2.283,04 €/mes<span class="summary-hint">8 puestos · 31.962,56 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Titulado/a de grado superior</li>
           <li>Jefatura de equipo de informática</li>
           <li>Dirección de sección mercantil</li>
@@ -324,27 +324,27 @@
           <li>Jefatura de personal</li>
           <li>Jefatura de compras</li>
           <li>Jefatura de ventas</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 2A · Personal técnico medio<span class="g-puestos">5 puestos</span></span><span class="g-mes">1.978,51 €</span><span class="g-anual">27.699,14 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 2A · Personal técnico medio — 1.978,51 €/mes<span class="summary-hint">5 puestos · 27.699,14 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Titulado/a de grado medio</li>
           <li>Analista</li>
           <li>Jefatura administrativa</li>
           <li>Jefatura de división</li>
           <li>Jefatura de almacén</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 2B · Mandos intermedios y técnicos de apoyo<span class="g-puestos">8 puestos</span></span><span class="g-mes">1.676,51 €</span><span class="g-anual">23.471,14 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 2B · Mandos intermedios y técnicos de apoyo — 1.676,51 €/mes<span class="summary-hint">8 puestos · 23.471,14 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Jefatura de grupo</li>
           <li>Jefatura de sección administrativa</li>
           <li>Jefatura de sección mercantil</li>
@@ -353,94 +353,92 @@
           <li>Contable-cajero/a</li>
           <li>Jefatura de sección de servicio</li>
           <li>Ayudante técnico/a sanitario/a</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 3A · Encargo de establecimiento y oficios cualificados<span class="g-puestos">3 puestos</span></span><span class="g-mes">1.561,37 €</span><span class="g-anual">21.859,18 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 3A · Encargo de establecimiento y oficios cualificados — 1.561,37 €/mes<span class="summary-hint">3 puestos · 21.859,18 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Encargado/a de establecimiento</li>
           <li>Intérprete</li>
           <li>Cortador/a</li>
-        </ul>
-      </div>
-    </details>
-    <details open>
-      <summary><span class="g-nom">Grupo 3B · Ventas y administración<span class="g-puestos">3 puestos</span></span><span class="g-mes">1.518,62 €</span><span class="g-anual">21.260,68 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details open>
+    <summary>Grupo 3B · Ventas y administración — 1.518,62 €/mes<span class="summary-hint">3 puestos · 21.260,68 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Oficial administrativo/a u operador/a en máquinas contables</li>
           <li><strong>Dependiente/a de 24 años en adelante</strong></li>
           <li>Viajante</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 3C · Oficios de 1.ª, reparto y conducción<span class="g-puestos">5 puestos</span></span><span class="g-mes">1.416,38 €</span><span class="g-anual">19.829,32 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 3C · Oficios de 1.ª, reparto y conducción — 1.416,38 €/mes<span class="summary-hint">5 puestos · 19.829,32 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Profesional de oficio de 1.ª</li>
           <li>Chófer</li>
           <li>Chófer mecánico/a</li>
           <li>Repartidor/a</li>
           <li>Dependiente/a de 22 a 24 años</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 4A · Oficios de 2.ª y personal especializado<span class="g-puestos">2 puestos</span></span><span class="g-mes">1.371,68 €</span><span class="g-anual">19.203,52 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 4A · Oficios de 2.ª y personal especializado — 1.371,68 €/mes<span class="summary-hint">2 puestos · 19.203,52 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Profesional de oficio de 2.ª</li>
           <li>Mozo/a especializado/a</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 4B · Personal auxiliar de oficio, ventas y administración<span class="g-puestos">5 puestos</span></span><span class="g-mes">1.359,46 €</span><span class="g-anual">19.032,44 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 4B · Personal auxiliar de oficio, ventas y administración — 1.359,46 €/mes<span class="summary-hint">5 puestos · 19.032,44 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Ayudante de oficio</li>
           <li>Auxiliar administrativo/a o perforista</li>
           <li>Mozo/a</li>
           <li>Personal de limpieza</li>
           <li>Auxiliar de caja de 25 años en adelante</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 5 · Personal de servicios auxiliares<span class="g-puestos">4 puestos</span></span><span class="g-mes">1.276,33 €</span><span class="g-anual">17.868,62 €</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Puestos que el anexo II encuadra aquí, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 5 · Personal de servicios auxiliares — 1.276,33 €/mes<span class="summary-hint">4 puestos · 17.868,62 €/año</span></summary>
+    <div>
+      <p>Puestos que el anexo II encuadra en este grupo, con las denominaciones que el convenio conserva «a modo orientativo»:</p>
+      <ul>
           <li>Auxiliar de caja de 18 a 25 años</li>
           <li>Telefonista de 18 años en adelante</li>
           <li>Conserje</li>
           <li>Empaquetador/a de 18 años en adelante</li>
-        </ul>
-      </div>
-    </details>
-    <details>
-      <summary><span class="g-nom">Grupo 6A · Personal aprendiz (16 a 18 años)<span class="g-puestos">5 puestos</span></span><span class="g-mes">SMI vigente</span><span class="g-anual">SMI vigente</span></summary>
-      <div>
-        <p style="margin-bottom:4px;">Personal de 16 a 18 años que no se acoja a un contrato formativo. La tabla no le fija importe propio: remite al <strong>SMI vigente</strong>, que en 2026 son 1.221 €/mes y 17.094 €/año. Al cumplir los 18 se pasa automáticamente al grupo que corresponda por funciones. En las tablas de 2025 existía además un <strong>grupo 6B</strong> para los antiguos contratos formativos, con el tercer año al 85 % del SMI; en las de 2026 ha desaparecido.</p>
-        <ul>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>Grupo 6 · Personal aprendiz (16 a 18 años) — SMI vigente<span class="summary-hint">5 puestos · sin salario propio de convenio</span></summary>
+    <div>
+      <p>Personal de 16 a 18 años que no se acoja a un contrato formativo. La tabla no le fija importe: remite al SMI vigente. Al cumplir los 18 se pasa automáticamente al grupo que corresponda por funciones.</p>
+      <ul>
           <li>Empaquetador/a de hasta 18 años</li>
           <li>Telefonista de hasta 18 años</li>
           <li>Aspirante de 16 a 18 años</li>
           <li>Auxiliar de caja de 16 a 18 años</li>
           <li>Aprendiz/a</li>
-        </ul>
-      </div>
-    </details>
-  </div>
-  <p style="font-size:13px;color:var(--ink-lighter);margin-top:10px;">Fuente: anexo VI del convenio, BOP de Valencia núm. 125 de 3 de julio de 2026. Pulsa en cualquier grupo para ver los puestos que entran en él. El <strong>3B</strong> viene abierto por ser el de los puestos más frecuentes del sector.</p>
+      </ul>
+    </div>
+  </details>
 
   <div class="callout">
     <strong>La edad que ves en algunos puestos viene del sistema antiguo.</strong> Los criterios por edad de los grupos 3B, 3C, 4B, 5 y 6 proceden de las antiguas categorías y el convenio los conserva solo en la tabla de equivalencias. El encuadramiento real se hace <strong>por funciones</strong>, según los seis factores de valoración del anexo II: conocimiento, iniciativa, autonomía, responsabilidad, mando y complejidad.
