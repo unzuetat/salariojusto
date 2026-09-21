@@ -69,7 +69,7 @@ PAGS=$(gh pr view "$PR" --json files --jq '.files[].path' | grep -E '^[^/]+\.htm
 N=$(printf '%s' "$PAGS" | grep -c . || true)
 echo
 echo "── 2 · Páginas publicadas que toca: ${N:-0}"
-printf '%s\n' "$PAGS" | sed 's/^/     /' | head -12
+[ "${N:-0}" != "0" ] && printf '%s\n' "$PAGS" | sed 's/^/     /' | head -12
 
 if [ -n "$DRY" ]; then
   echo; ambar "── modo --dry: no se mergea. Todo lo anterior está comprobado."
