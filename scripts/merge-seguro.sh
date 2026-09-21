@@ -88,14 +88,23 @@ verde "  ✓ $BASE = $SHA"
 echo
 echo "── 4 · Contenido en $BASE"
 FALLO=0
-for f in $PAGS; do
-  [ -f "$f" ] || { rojo "     ✗ $f no está en $BASE"; FALLO=1; }
-done
-[ "$FALLO" = "0" ] && verde "  ✓ las ${N:-0} páginas están en $BASE"
+if [ "${N:-0}" = "0" ]; then
+  ambar "  – nada que comprobar: el PR no toca páginas publicadas"
+else
+  for f in $PAGS; do
+    [ -f "$f" ] || { rojo "     ✗ $f no está en $BASE"; FALLO=1; }
+  done
+  [ "$FALLO" = "0" ] && verde "  ✓ las $N páginas están en $BASE"
+fi
 
 # ── 5 · ¿Lo sirve producción? (incidente del #106) ───────────────────────────
 echo
-echo "── 5 · Producción · esperando al deploy"
+if [ "${N:-0}" = "0" ]; then
+  echo "── 5 · Producción"
+  ambar "  – no se verifica: el PR no toca páginas publicadas"
+else
+  echo "── 5 · Producción · esperando al deploy"
+fi
 for f in $PAGS; do
   OK=0
   for intento in 1 2 3 4 5 6; do
@@ -118,8 +127,13 @@ done
 
 echo
 if [ "$FALLO" = "0" ]; then
-  verde "═══ TODO CORRECTO · $BASE = $SHA y producción lo sirve ═══"
-  echo "Siguiente paso: pedir reindexación en GSC de las URLs que lo merezcan (Criterio #28)."
+  if [ "${N:-0}" = "0" ]; then
+    verde "═══ MERGEADO · $BASE = $SHA ═══"
+    echo "No había páginas publicadas que verificar en producción."
+  else
+    verde "═══ TODO CORRECTO · $BASE = $SHA y producción sirve las $N páginas ═══"
+    echo "Siguiente paso: pedir reindexación en GSC de las URLs que lo merezcan (Criterio #28)."
+  fi
 else
   rojo "═══ REVISAR · el merge se hizo pero producción no cuadra ═══"
   exit 1
