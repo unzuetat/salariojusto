@@ -1,0 +1,130 @@
+{
+  "nombre": "II Convenio Colectivo Laboral del Sector de Comercio Textil de la Comunitat Valenciana 2025-2028",
+  "sector": "comercio-textil",
+  "ambito": "Comunitat Valenciana (autonómico)",
+  "codigo": "80100225012022",
+  "skipHtmlGeneration": true,
+  "bop": "DOGV núm. 10318, de 9 de marzo de 2026 — Resolución de 25 de febrero de 2026, de la Dirección General de Trabajo, Cooperativismo y Seguridad Laboral, por la que se disponen el registro y la publicación del texto del II Convenio colectivo laboral para el sector de comercio textil de la Comunitat Valenciana. CVE: DOGV-C-2026-7567.",
+  "urlBop": "https://dogv.gva.es/",
+  "urlBopPdf": "https://dogv.gva.es/datos/2026/03/09/pdf/2026_7567_es.pdf",
+  "resolucionFecha": "25 de febrero de 2026",
+  "publicadoFecha": "9 de marzo de 2026",
+  "vigencia": "1 enero 2025 – 31 diciembre 2028",
+  "estado": "vigente",
+  "pagas": 15,
+  "pagasDetalle": "12 mensualidades + 2 gratificaciones extraordinarias (Navidad y verano, art. 42.1) + paga de marzo (art. 42.2). En los centros de la provincia de Valencia puede haber una 16ª, la paga de octubre de la disposición adicional tercera, que solo cobra quien modifica su horario de entrada o salida: es una contraprestación, no un devengo general.",
+  "jornadaAnual": 1780,
+  "jornada": {
+    "2025": 1780,
+    "2026": 1780,
+    "2027": 1780,
+    "2028": 1772,
+    "nota": "Art. 45. Máximo de 40 horas semanales de trabajo efectivo de promedio en cómputo anual. La reducción de 8 horas llega solo en 2028."
+  },
+  "incrementos": {
+    "2025": "+3 % sobre la base resultante de la actualización del período 2022-2024 (art. 40.1)",
+    "2026": "+3 % sobre las retribuciones de 2025 (art. 40.1.2)",
+    "2027": "+2,5 % (art. 40.1.3)",
+    "2028": "+2 % (art. 40.1.4)",
+    "revisionIpc": "Si el IPC interanual de diciembre supera el porcentaje pactado para ese año, se aplica un incremento adicional de hasta el 1,5 % con efectos del 1 de enero del año siguiente. Al terminar la vigencia se compara la suma de los IPC de 2025-2028 con la suma de los incrementos aplicados (art. 40.2)."
+  },
+  "atrasos": {
+    "origen": "El convenio entró en vigor el 1 de enero de 2025 pero no se publicó hasta el 9 de marzo de 2026: catorce meses cobrados con las tablas anteriores.",
+    "plazoAbono": "Art. 40.1, párrafo final: «El abono de los atrasos lo podrán efectuar las empresas en los dos meses siguientes a la publicación del presente convenio colectivo en el DOGV» → 9 de mayo de 2026.",
+    "plazoActualizacion": "Art. 40.1.2, párrafo final: «La actualización de los salarios se realizará como máximo a los dos meses de la publicación del presente convenio en el DOGV» → 9 de mayo de 2026.",
+    "plazoLiquidacion": "Art. 40.3: «Se fija un plazo máximo de noventa días, a partir de la publicación en el Diario Oficial correspondiente de este Convenio Colectivo, para que las empresas abonen la liquidación de atrasos salariales resultantes de la aplicación del mismo» → 7 de junio de 2026.",
+    "nota": "El mismo artículo fija dos plazos distintos para los mismos atrasos: dos meses en el apartado 1 y noventa días en el apartado 3. Los dos están vencidos. El convenio no prevé interés por mora.",
+    "sinInteresMora": true
+  },
+  "notaEditorial": "El II Convenio del Comercio Textil de la Comunitat Valenciana cubre las tiendas de ropa, calzado, mercería, lencería y complementos de Valencia, Alicante y Castellón, más el comercio mayorista de textiles y cueros. Se publicó el 9 de marzo de 2026 con efectos desde el 1 de enero de 2025, así que llegó con catorce meses de atrasos cuyos dos plazos de pago (dos meses y noventa días) vencieron en mayo y junio de 2026. Paga 15 pagas —las doce mensualidades, las extras de Navidad y verano y una paga de marzo— y aun así el grupo de entrada, Auxiliar, se queda en 16.879,66 € al año, por debajo del SMI de 2026. Es un convenio autonómico que conserva tres regímenes provinciales distintos en antigüedad, baja médica, pluses y vacaciones.",
+  "grupos": [
+    { "id": "auxiliar", "nombre": "Grupo I — Auxiliares", "salario": { "2025": 1094.66, "2026": 1127.50 }, "anual2026": 16879.66, "bajoSmi": true },
+    { "id": "profesional", "nombre": "Grupo II — Profesionales", "salario": { "2025": 1118.30, "2026": 1151.85 }, "anual2026": 17244.20, "bajoSmi": false },
+    { "id": "especialista", "nombre": "Grupo III — Especialistas", "salario": { "2025": 1194.55, "2026": 1230.39 }, "anual2026": 18420.01, "bajoSmi": false },
+    { "id": "coordinacion", "nombre": "Grupo IV — Coordinación (mando intermedio)", "salario": { "2025": 1311.18, "2026": 1350.52 }, "anual2026": 20218.46, "bajoSmi": false },
+    { "id": "direccion", "nombre": "Grupo V — Mando y Dirección", "salario": { "2025": 1630.80, "2026": 1679.72 }, "anual2026": 25146.88, "bajoSmi": false }
+  ],
+  "calculoAnual": "Salario base 2026 × 14 (doce mensualidades + Navidad + verano) + la paga de marzo, que el art. 42.2 calcula sobre «una mensualidad total de los emolumentos que la persona trabajadora percibía el año anterior», es decir sobre la tabla de 2025. Si la paga de marzo se computara al valor de 2026, el Auxiliar llegaría a 16.912,50 €: sigue por debajo del SMI.",
+  "smi": {
+    "anual": 17094,
+    "mensual": 1221,
+    "norma": "Real Decreto 126/2026, de 18 de febrero",
+    "gruposBajoSmi": 1,
+    "nota": "Solo el salario base de tablas del Grupo I queda por debajo. El SMI se compara con la retribución total efectivamente percibida, de modo que los complementos personales (antigüedad en Alicante y Castellón, salario base personal en Valencia) pueden cubrir la diferencia en quien los tenga. Quien no los tenga cobra por convenio menos del mínimo legal y la empresa está obligada a complementar hasta el SMI."
+  },
+  "promocionAutomatica": "Art. 36. Dos años naturales de servicios efectivos en el Grupo I obligan a encuadrar en el Grupo II, y tres años en el Grupo II obligan a pasar al Grupo III, con la remuneración correspondiente. Quien acredite servicios previos en otra empresa del sector del comercio textil necesita la mitad: un año para pasar a Profesionales y año y medio para pasar a Especialistas, aportando contrato anterior y vida laboral.",
+  "vacaciones": "31 días naturales, preferentemente entre el 1 de junio y el 30 de septiembre, procurando que sean rotativas (art. 51). No pueden empezar en sábado o domingo salvo que se den por meses completos. En la provincia de Valencia, si la empresa traslada el descanso fuera de ese periodo por incremento de la actividad mercantil, las vacaciones pasan a 33 días (disp. ad. tercera, punto 5).",
+  "finesSemanaCalidad": "Desde 2026, seis fines de semana de calidad (sábado y domingo consecutivos de descanso) para quien preste cinco o más días de trabajo a la semana. Desde el 1 de enero de 2027 se suman otras cinco semanas con dos días consecutivos de descanso. No computan los que coincidan con vacaciones o con un festivo del calendario, y no pueden caer en los periodos de mayor actividad del sector (art. 46.4).",
+  "jornadaEspecial": "El 24 de diciembre la jornada termina como máximo a las 20:00 y el 31 de diciembre a las 18:00, salvo imposibilidad justificada como las normas del centro comercial donde esté la tienda (art. 46.5).",
+  "flexibilidad": "La empresa puede mover hasta 100 horas del calendario laboral con cinco días naturales de preaviso, siempre que haya expuesto el calendario antes del 1 de enero. No puede usarse para cubrir domingos y festivos autorizados como hábiles comerciales, ni para inventarios en Castellón y Valencia; en Alicante las horas de inventario computan como 1,5 (art. 47).",
+  "horasExtra": {
+    "compensacion": "1,5 horas de descanso por cada hora extraordinaria, dentro de los cuatro meses siguientes; las compensadas así no cuentan para el tope de 80 anuales (art. 49).",
+    "valores2026": { "auxiliar": 13.58, "profesional": 13.85, "especialista": 14.79, "coordinacion": 16.25, "direccion": 20.20 },
+    "valores2025": { "auxiliar": 13.18, "profesional": 13.45, "especialista": 14.36, "coordinacion": 15.78, "direccion": 19.61 },
+    "adicionalValencia2026": { "auxiliar": 0.96, "profesional": 0.99, "especialista": 1.05, "coordinacion": 1.14, "direccion": 1.44 }
+  },
+  "periodoPrueba": "Un mes en el Grupo I, dos meses en los Grupos II y III, tres meses en el Grupo IV y seis meses en el Grupo V. En todo caso ha de ser inferior a la duración del contrato (art. 23).",
+  "incapacidadTemporal": {
+    "baseCongelada": "Art. 43.1. El complemento se calcula sobre la base diaria que resulta de dividir entre 365 la suma de las bases de cotización de las doce mensualidades comprendidas entre el 1 de julio de 2021 y el 30 de junio de 2022. Es una base fija de hace cuatro años en un convenio que rige hasta 2028.",
+    "basesPorGrupo": { "auxiliar": 40.56, "profesional": 41.43, "especialista": 44.26, "coordinacion": 48.58, "direccion": 60.42 },
+    "valencia": "Primer proceso del año por enfermedad común: 50 % de la base diaria los días 1 a 3 y 15 % los días 4 a 20; desde el día 21, nada. Segundo proceso y siguientes: sin complemento.",
+    "alicante": "Primer proceso: 100 % los días 1 a 3, 40 % los días 4 a 20 y 25 % desde el día 21 hasta los dieciocho meses. Segundo proceso del año: 100 % en todos los tramos. Tercer proceso y siguientes: sin complemento.",
+    "castellon": "Igual que Alicante, pero el tramo desde el día 21 llega hasta los doce meses.",
+    "accidenteTrabajo": "25 % sobre la base diaria desde el primer día, por el tiempo que marque la normativa (dieciocho meses en Alicante, doce en Castellón).",
+    "cese": "El complemento cesa si la persona incumple las pautas de tratamiento o no acude a los controles de la entidad gestora (art. 43.3)."
+  },
+  "antiguedad": {
+    "valencia": "El plus compensatorio de Valencia se integra en el salario base personal (art. 41). A esa cuantía se le suman, en quince pagas, 16,83 € del Anexo II punto 4 del I Convenio autonómico (art. 39.1.2).",
+    "castellonAlicante": "Cuatrienios para las contrataciones hechas desde el 1 de julio de 2022. Valor bruto mensual 2025 por grupo: Auxiliar 48,36 €, Profesional 49,40 €, Especialista 52,77 €, Coordinación 57,92 €, Dirección 72,05 € (Anexo II punto 2).",
+    "alicanteAdicional": "Quien venía de la categoría de «Dependiente con más de 3 años de antigüedad en la empresa» (Grupo 3, Nivel 7 del convenio provincial de Alicante) cobra, desde que acredita más de quince años en la empresa, un complemento adicional de 101,56 € brutos al mes, ya integrado en el salario base personal y actualizado cada año como el salario base (Anexo II punto 3).",
+    "anterioresCastellonAlicante": "Quien ya prestaba servicios en Castellón o Alicante antes del I Convenio autonómico 2022-2024 sigue percibiendo la antigüedad con la regulación del convenio provincial que le era de aplicación (Anexo II punto 1)."
+  },
+  "complementosPersonales": "Ni el salario base personal (el antiguo complemento «ex nivel / ex categoría») ni la antigüedad de Alicante y Castellón ni el plus de compensación de Valencia son compensables ni absorbibles, y se revalorizan como el salario base (arts. 39.1.2 y 40.4). Quien a 30 de junio de 2022 cobrara por convenio provincial más que su grupo actual conserva la diferencia como salario base personal (art. 40.5).",
+  "teletrabajo": "A falta de acuerdo individual o colectivo, 35,00 € brutos mensuales en concepto de «compensación trabajo distancia», de naturaleza extrasalarial, para quien trabaje a distancia el 100 % de su jornada completa; en parcial o en porcentajes menores, la parte proporcional (art. 32.5).",
+  "plusesProvinciales": {
+    "alicanteTransporte": { "2025": 4.01, "2026": 4.13, "unidad": "€ por día efectivamente trabajado (disp. ad. primera, punto 2)" },
+    "alicanteDietas": { "2025": 8.13, "2026": 8.37, "unidad": "€ por desplazamiento igual o superior a media jornada (disp. ad. primera, punto 3)" },
+    "castellonUniformidad": { "2025": 247.80, "2026": 255.23, "unidad": "€ al año en dos pagos (mayo y septiembre) si la ropa de trabajo es propiedad de la plantilla (disp. ad. segunda, punto 1)" },
+    "valenciaRetribucionEspecial": { "2025": 16.93, "2026": 17.44, "unidad": "€ en cada paga, a partir de los sesenta años, no absorbible ni compensable (disp. ad. tercera, punto 2)" }
+  },
+  "fijoDiscontinuo": {
+    "llamamientoMinimo": "Empresas de menos de 50 personas: 90 días. Empresas de 50 o más: 120 días hasta el 31 de diciembre de 2025 y 180 días desde el 1 de enero de 2026 (art. 30.IV).",
+    "textoTruncado": "La frase que delimita a qué contratos se aplica esa tabla queda cortada en el texto publicado: «El período mínimo de llamamiento anual para los contratos fijos discontinuos que se formalicen en el período comprendido entre la fecha de publicación del presente convenio colectivo y hasta» — sin fecha de cierre.",
+    "garantiaSeisMeses": "Quien haya alcanzado dos períodos anuales consecutivos de seis meses o más en la misma empresa tiene garantía de ocupación de seis meses al año. Quien no llegue a esa media tiene garantizada, desde el tercer año, la media de los dos primeros llamamientos (art. 30.IV.2).",
+    "tiempoParcial": "Al menos el 50 % de la jornada semanal del convenio y un mínimo de cuatro horas diarias, con topes por centro: dos contratos hasta diez personas, tres entre 11 y 30, cuatro entre 31 y 49, y el 10 % de la plantilla a partir de 50 (art. 30.II).",
+    "llamamiento": "Margen de treinta días naturales desde la fecha habitual de incorporación, por orden de antigüedad dentro de cada especialidad y grupo, por escrito, correo electrónico o SMS. Hay que responder en siete días naturales. Se presume no efectuado a los treinta días sin llamamiento ni comunicación, y entonces cabe reclamar por despido (art. 30.III)."
+  },
+  "tiempoParcial": "Desde el 1 de enero de 2026, quien tenga contrato a tiempo parcial puede consolidar el 50 % de las horas complementarias realizadas en el bienio 2024-2026 sobre las inicialmente contratadas. Desde el 1 de enero de 2027 la consolidación alcanza también las ampliaciones temporales de contrato. Hace falta manifestarlo expresamente y la empresa debe novar el contrato. Las horas complementarias pactadas no pueden exceder del 50 % de las ordinarias (art. 26).",
+  "conciliacion": {
+    "jornadaDoceTrece": "Art. 56. Quien tenga hijos o hijas de doce y trece años puede concertar una jornada inferior a la habitual, y la concesión es obligatoria para la empresa siempre que se mantengan las mismas condiciones que venía teniendo por guarda legal. Puede dejarse sin efecto con quince días de preaviso, y pueden pedirlo quienes se reincorporaron al cumplir el menor los doce años y aún no tiene catorce.",
+    "lactancia": "Una hora de ausencia hasta los nueve meses, divisible en dos fracciones, sustituible por media hora de reducción o acumulable en jornadas completas. Si ambos progenitores lo ejercen con la misma duración y régimen, se extiende hasta los doce meses con reducción proporcional de salario desde el noveno (art. 53).",
+    "excedenciaEspecial": "Hasta tres meses con reserva del puesto, con un año de antigüedad y quince días naturales de preaviso, para cursar estudios de un título oficial o para realizar trámites de extranjería o atender circunstancias personales en el país de origen (art. 55)."
+  },
+  "permisos": "Quince días naturales por matrimonio o registro de pareja de hecho; tres días por fallecimiento de padres, hijos, hijas, cónyuge o pareja de hecho y dos por parientes hasta segundo grado, ampliables en dos días si hay desplazamiento; cinco días por accidente o enfermedad grave, hospitalización o intervención con reposo domiciliario, disfrutables en días discontinuos; un día por traslado de domicilio; y hasta veinticuatro horas laborales al año para matrimonio de familiares, traslado de domicilio y acompañamiento al médico de hijos e hijas menores de catorce años, cónyuge o familiares dependientes de primer grado (art. 52).",
+  "comisionParitaria": {
+    "composicion": "Máximo de seis miembros por cada representación, sindical y empresarial, de las firmantes (art. 8.2).",
+    "contacto": "comerciotextilcv@gmail.com",
+    "canon": 300.00,
+    "canonNota": "Art. 8.3. Cuando una empresa o una persona trabajadora quiera solicitar informe escrito de la paritaria sobre la interpretación o aplicación del convenio, debe dirigirse por escrito al correo fijado y abonar 300,00 € «en concepto de canon de organización y gestión de la resolución». Además, solo se puede acudir a través de alguna de las organizaciones firmantes.",
+    "arbitraje": "Las discrepancias que la paritaria no resuelva se someten al Tribunal de Arbitraje Laboral de la Comunitat Valenciana (art. 8.6)."
+  },
+  "faltas": "Prescripción: las faltas leves a los diez días, las graves a los veinte y las muy graves a los sesenta desde que la empresa tuvo conocimiento, y en todo caso a los seis meses de cometerse (art. 62). Sanciones máximas: amonestación o hasta tres días de suspensión por falta leve, hasta quince días por grave y hasta cuarenta y cinco días o despido por muy grave (art. 61).",
+  "ambitoFuncional": "Empresas que ejercen la actividad del comercio textil en la Comunitat Valenciana, al detalle o al por mayor, y aquellas que, simultaneando actividades, tienen el comercio textil como principal (art. 2). CNAE 2025 enunciados: 46.11, 46.16, 46.24, 46.41, 46.42, 46.89, 47.51, 47.53, 47.71, 47.79 y 47.92.",
+  "cnae": ["46.11", "46.16", "46.24", "46.41", "46.42", "46.89", "47.51", "47.53", "47.71", "47.79", "47.92"],
+  "clasificacionProfesional": "Cinco grupos profesionales definidos por conocimientos, iniciativa, autonomía, responsabilidad, mando y complejidad (arts. 33 a 35), sin categorías profesionales. El Anexo I incorpora un modelo de consulta sobre clasificación profesional que la persona trabajadora puede usar para reclamar encuadramiento.",
+  "tresRegimenes": "Aunque es un convenio único autonómico, la disposición final única reconoce que la unificación sigue pendiente en antigüedad, complemento de incapacidad temporal, seguro del sector, inventarios, retribución en festivos y las tres disposiciones adicionales provinciales. La baja médica, la antigüedad, los pluses y los días de vacaciones cambian según se trabaje en Valencia, Alicante o Castellón.",
+  "prorrogas": "El convenio prorroga expresamente regulaciones de los convenios provinciales anteriores: el seguro del sector (art. 39 del convenio de Castellón, BOP de Castellón núm. 42 de 2 de abril de 2019, código 12000145011966; y art. 23 del de Valencia, BOP de Valencia núm. 202 de 20 de octubre de 2017, código 46000555011982) y el trabajo en festivos (art. 27 del de Alicante, BOP de Alicante núm. 129 de 10 de julio de 2019, código 03000855011981; art. 27 del de Castellón; y arts. 12 y 30 del de Valencia).",
+  "erratasQueAfectanDerechos": "Dos defectos del texto publicado tienen consecuencias prácticas. El art. 30.IV deja truncada la frase que delimita el ámbito temporal de la tabla de llamamiento mínimo de los fijos discontinuos, que queda «y hasta» sin fecha de cierre. Y el art. 43.1 fija la base de cálculo del complemento de incapacidad temporal sobre las bases de cotización de julio de 2021 a junio de 2022, congeladas para toda la vigencia 2025-2028.",
+  "firmantes": {
+    "empresarial": "Gremio de Comerciantes Textiles, Moda y Complementos de la Comunitat Valenciana (GRECOTEX-C.V.) y Confederación de Comerciantes y Autónomos de la Comunitat Valenciana (COVACO-Textil), según el preámbulo. La resolución de registro los identifica como Confederación Valenciana de Comercio Textil (COVACO) y el Gremio de Comerciantes Textiles, Moda y Complementos.",
+    "social": "Federación de Servicios, Movilidad y Consumo de UGT País Valenciano (FeSMC-UGT) y Federación de Servicios de CC.OO. del País Valenciano (Servicios-CCOO).",
+    "eficacia": "Norma de eficacia general: obliga a todas las empresas del ámbito, estén o no asociadas."
+  },
+  "verificacion": "Las diez cifras de las dos tablas salariales del art. 40 se han cotejado por doble extracción independiente del PDF oficial del DOGV y validadas por dos vías aritméticas: la tabla de 2025 multiplicada por el 3 % pactado da exactamente la de 2026 en las cinco filas, y el anual de cada grupo cuadra con las quince pagas del art. 42. El texto del boletín es extraíble, no imagen.",
+  "fuentes": [
+    "DOGV núm. 10318, de 9 de marzo de 2026 (CVE DOGV-C-2026-7567) — texto íntegro del II Convenio colectivo laboral para el sector de comercio textil de la Comunitat Valenciana, código 80100225012022",
+    "Resolución de 25 de febrero de 2026, de la Dirección General de Trabajo, Cooperativismo y Seguridad Laboral de la Generalitat Valenciana",
+    "Real Decreto 126/2026, de 18 de febrero, SMI 2026 (1.221 €/mes, 17.094 € anuales) — referencia comparativa",
+    "Real Decreto Legislativo 2/2015, Estatuto de los Trabajadores, arts. 27.1, 59.2 y 86 — marco legal"
+  ]
+}
