@@ -345,7 +345,9 @@ const headExtra = PROD ? `
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXJ8V2FBW9"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MXJ8V2FBW9');</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110009006533891" crossorigin="anonymous"></script>` : '';
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1110009006533891" crossorigin="anonymous"></script>
+<!-- Ahrefs Web Analytics -->
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="1AxgYAQEZ6Pd6cxSONX20g" async></script>` : '';
 
 const html = `<!DOCTYPE html>
 <html lang="es">
