@@ -53,8 +53,11 @@ auditoria-thin-sheets.csv
 paginas-publicadas.csv
 paginas-publicadas-sheets.csv
 
-# Detector: cola de candidatos (estado runtime)
-data/detector/candidatos.json
+# Detector: cola de candidatos y salidas de los adaptadores (estado runtime).
+# Se regeneran consultando BOE/REGCON y son PROPUESTAS sin ratificar: como el
+# repo entero se sirve en salariojusto.es, versionarlas publicaría códigos de
+# convenio sin verificar en un sitio cuyo sello dice justo lo contrario.
+data/detector/*.json
 _preview-*.html
 
 # Auditoría de convenios (/sj-auditoria)
