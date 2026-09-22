@@ -68,7 +68,11 @@ const BLOQUES = [
   { id: 'nota',        nombre: 'Nota editorial 30 s',    re: /nota-editorial/,             que: 'resumen ejecutivo en cabecera' },
   { id: 'toc',         nombre: 'Índice de la ficha',     re: /class="toc"/,                que: 'navegación en fichas largas' },
   { id: 'guias',       nombre: '"Guías y herramientas"', re: /Gu[ií]as y herramientas/,    que: 'salida hacia calculadora y plantillas' },
-  { id: 'te-cubre',    nombre: '"¿Te cubre?"',           re: /id="te-cubre"/,              que: 'encaje antes que cifra' },
+  // Detecta el concepto, no un id concreto: varias fichas resuelven el encaje
+  // con id="ambito" y el título "¿Te aplica este convenio?". Exigirles renombrar
+  // el ancla rompería su índice para contentar al script, que es al revés de
+  // como debe funcionar esto.
+  { id: 'te-cubre',    nombre: '"¿Te cubre?"',           re: /id="te-cubre"|id="ambito"|¿Te aplica este convenio|¿Te cubre/, que: 'encaje antes que cifra' },
 ];
 
 // ── Corpus ──────────────────────────────────────────────────────────────────
