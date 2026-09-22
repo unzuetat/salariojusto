@@ -45,6 +45,23 @@ csv() { printf '%s' "\"$(printf '%s' "$1" | sed 's/"/""/g')\""; }
 # Set de landings = <loc> .html del sitemap (autoritativo) + slug
 mapfile_locs() { grep -oE "<loc>[^<]+</loc>" "$ROOT/sitemap.xml" 2>/dev/null | sed -E 's/<\/?loc>//g'; }
 
+# Último commit que trabajó ESTA página, no uno sitewide.
+# `git log -1` no vale: los cambios que tocan todo el sitio de golpe (instalar
+# analytics, refrescar el footer) dejan las 90+ páginas con la fecha de ese día
+# y la columna de actividad miente. Mismo criterio y mismo umbral que
+# scripts/detector/regcon-adapter.js y scripts/audit/aplicar-eeat.py.
+MAX_MASIVO=40
+ultimo_commit_de_contenido() { # $1 slug -> "fecha~asunto"
+  local sha fecha asunto n
+  while IFS='~' read -r sha fecha asunto; do
+    [ -z "$sha" ] && continue
+    n=$(git show --pretty= --name-only "$sha" 2>/dev/null | grep -c .)
+    if [ "$n" -le "$MAX_MASIVO" ]; then printf '%s~%s' "$fecha" "$asunto"; return; fi
+  done < <(git log -n 40 --date=short --format='%H~%ad~%s' -- "$1" 2>/dev/null)
+  # Solo commits masivos: mejor vacío que una fecha falsa.
+  printf ''
+}
+
 grupo_de() { # $1 slug -> "grupo|sector|provincia"
   s="$1"
   case "$s" in
@@ -137,8 +154,8 @@ while IFS= read -r loc; do
   m28=$(grep -F "$slug"$'\t' "$MIDX_28D" 2>/dev/null | head -1 | cut -f2)
   c28d="${m28%%;*}"; r="${m28#*;}"; i28d="${r%%;*}"; r="${r#*;}"; t28d="${r%%;*}"; p28d="${r##*;}"
   [ "$m28" = "" ] && { c28d=""; i28d=""; t28d=""; p28d=""; }
-  # Git activity
-  gitln=$(git log -1 --date=short --format='%ad~%s' -- "$slug" 2>/dev/null)
+  # Git activity — saltando los commits sitewide (ver ultimo_commit_de_contenido)
+  gitln=$(ultimo_commit_de_contenido "$slug")
   gfecha="${gitln%%~*}"; gmsg="${gitln#*~}"; [ "$gitln" = "" ] && { gfecha=""; gmsg=""; }
   # Reindex log
   rln=$(grep -F "$slug"$'\t' "$REIDX" 2>/dev/null | head -1 | cut -f2)
