@@ -1,12 +1,12 @@
 {
   "_doc": "CENSO ÚNICO DE ESTADO DE CONVENIOS — fuente de verdad hand-curated. El nº de fichas y su estado (vigente/ultraactividad) se consultan AQUÍ, nunca grepeando el HTML (ver memoria feedback_estado_convenios_registro_no_grep). Lo consume scripts/audit/convenios-sync.js. Al añadir/actualizar un convenio: editar su fila aquí. Campo 'revisado:false' = estado propuesto por Claude, PENDIENTE de ratificación humana contra boletín. 'confianza:revisar' = caso jurídico dudoso (prórroga/tácita/pactada vs 86.3).",
-  "actualizado": "2026-09-21",
+  "actualizado": "2026-09-22",
   "canon": {
-    "provinciales": 53,
+    "provinciales": 54,
     "marcos": 3,
     "estatales": 2,
-    "total": 58,
-    "_nota": "53 provinciales (incluye comercio-general-bizkaia, añadida 14-sep-2026, comercio-metal-zaragoza, añadida 20-sep-2026, y comercio-metal-valencia, añadida 21-sep-2026) + 3 marcos sectoriales estatales con tipo=\"marco\" (hostelería, limpieza-edificios-locales, técnicos-espectáculos) + 2 sectoriales estatales con tablas propias y tipo=\"estatal\" (seguridad-privada, contact-center). ANTES este bloque declaraba 5 marcos contando esos 2 estatales, lo que dejaba el censo en rojo permanente porque el script solo cuenta tipo===\"marco\". Si se decide que esos 2 son marcos, hay que cambiar su campo tipo, no este contador."
+    "total": 59,
+    "_nota": "54 provinciales (incluye comercio-general-bizkaia, añadida 14-sep-2026, comercio-metal-zaragoza, añadida 20-sep-2026, comercio-metal-valencia, añadida 21-sep-2026, y comercio-textil-comunidad-valenciana —autonómica, cuenta como provincial igual que limpieza-catalunya—, añadida 22-sep-2026) + 3 marcos sectoriales estatales con tipo=\"marco\" (hostelería, limpieza-edificios-locales, técnicos-espectáculos) + 2 sectoriales estatales con tablas propias y tipo=\"estatal\" (seguridad-privada, contact-center). ANTES este bloque declaraba 5 marcos contando esos 2 estatales, lo que dejaba el censo en rojo permanente porque el script solo cuenta tipo===\"marco\". Si se decide que esos 2 son marcos, hay que cambiar su campo tipo, no este contador."
   },
   "estados": {
     "vigente": "Convenio con vigencia formal en curso (o prórroga/tácita reconducción que lo mantiene plenamente vigente).",
@@ -768,6 +768,19 @@
       "confianza": "alta",
       "revisado": true,
       "nota": "Comercio del Metal (venta, distribución y alquiler de artículos con elementos metálicos: ferretería y bricolaje, electrodomésticos, telecomunicaciones, informática, recambios), NO es la Industria del Metal de Valencia (código 46000105011981), que es otro convenio. 6 grupos profesionales con niveles (1, 2A, 2B, 3A, 3B, 3C, 4A, 4B, 5, 6A), 14 pagas, jornada 1.757 h. Firmantes: FEMEVAL, CC.OO. y UGT. ÁNGULO EDITORIAL: el convenio entró en vigor el 1-ene-2026 pero se publicó el 3-jul-2026, así que hay atrasos del 3%; el art. 14 daba dos meses desde la publicación para abonarlos en un solo pago, plazo VENCIDO el 3-sep-2026, y la disposición final tercera prevé un interés por mora del 10% que excluye expresamente alegar desconocimiento del convenio. Ninguna categoría bajo el SMI: el suelo del convenio son 17.868,62 €/año (grupo 5) frente a los 17.094 € del SMI 2026; las categorías a extinguir Cobrador/a y Vigilante quedan a 1.240,81 €/mes, solo 19,81 € sobre el SMI mensual. El grupo 6A (aprendiz menor de 18) no tiene salario propio: remite al SMI vigente, y el grupo 6B de las tablas de 2025 (antiguos contratos formativos, 85% del SMI) desaparece en 2026. VERIFICACIÓN: 29 filas de tabla cotejadas por doble extracción independiente (pdftotext propio + md del usuario), aritmética mensual x14 = anual en las 29, y tablas 2025 x 1,03 = tablas 2026 exactas en las 29; también cuadran al +3% los 7 complementos ex categoría y 5 de los 6 conceptos económicos. La excepción es el seguro de convenio, que pasa de 20.465 € a 21.465 € (+4,89%) porque lo fijó el acta de la comisión paritaria de 28-nov-2025 (BOP Valencia 242, 18-dic-2025, anuncio 2025/15472) al resolver una discrepancia entre el importe en letra y en número del art. 56 del convenio anterior. Tablas 2025 para el cálculo de atrasos: BOP Valencia núm. 44 de 5-3-2025 (anuncio 2025/02320); el título de ese anuncio dice «sector del metal» pero el acta interna y el código son los del Comercio del Metal. Erratas del BOP recogidas corregidas en la ficha: «Jefe/a de pesonal», «Deliniante», «extrajero» (tablas 2025) y «ventiún», «ultractividad» (acta de dic-2025)."
+    },
+    {
+      "archivo": "convenio-comercio-textil-comunidad-valenciana.html",
+      "sector": "comercio-textil",
+      "ambito": "Comunitat Valenciana (autonómico)",
+      "tipo": "provincial",
+      "indexable": true,
+      "vigenciaFin": "2028-12-31",
+      "estado": "vigente",
+      "fuenteEstado": "código 80100225012022 · II Convenio 2025-2028 · Resolución de 25-feb-2026 de la DG de Trabajo, Cooperativismo y Seguridad Laboral · DOGV núm. 10318 de 9-mar-2026 (CVE DOGV-C-2026-7567) · vigencia 1-ene-2025 a 31-dic-2028 (art. 4)",
+      "confianza": "alta",
+      "revisado": false,
+      "nota": "SECTOR NUEVO: comercio textil (tiendas de ropa, calzado, mercería, lencería y complementos, más mayoristas de textiles y cueros). Convenio AUTONÓMICO: cubre Valencia, Alicante y Castellón con tablas únicas, pero conserva tres regímenes provinciales en antigüedad, complemento de IT, pluses y vacaciones; la disposición final única admite que la unificación sigue pendiente. 5 grupos profesionales sin categorías, 15 pagas (12 + Navidad + verano + paga de marzo del art. 42.2), jornada 1.780 h (1.772 en 2028). Ángulo de la ficha: el Grupo I (Auxiliares) se queda en 16.879,66 €/año con las 15 pagas, 214,34 € POR DEBAJO del SMI 2026 (17.094 €); el Grupo II lo supera por solo 150,20 €/año. Publicado 9-mar-2026 con efectos desde 1-ene-2025: 14 meses de atrasos, con DOS plazos contradictorios en el mismo art. 40 (dos meses en el ap. 1 → 9-may-2026; noventa días en el ap. 3 → 7-jun-2026), ambos vencidos, y SIN interés por mora. Art. 36: promoción automática de grupo a los 2 años (Grupo I→II) y 3 años (II→III), la mitad con experiencia previa en el sector. Art. 8.3: canon de 300 € para pedir informe a la comisión paritaria. Las 10 cifras de las tablas del art. 40 verificadas por doble extracción independiente del PDF del DOGV (texto, no imagen) y por dos vías aritméticas: 2025 × 1,03 = 2026 exacto en las 5 filas, y el anual cuadra con las 15 pagas. Las 53 cifras del convenio citadas en la ficha comprobadas literalmente contra el PDF. SIN cotejo humano todavía."
     }
   ]
 }
