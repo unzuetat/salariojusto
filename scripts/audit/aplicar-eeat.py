@@ -90,22 +90,62 @@ def detectar_boletin(html: str) -> str:
     return "el boletín oficial de la provincia"
 
 
+# Calibrado 22-sep-2026 contra el historial real, mismo criterio que
+# scripts/detector/regcon-adapter.js: publicar una ficha toca 16-17 ficheros
+# (ficha + censo + index + convenios + sitemap + llms + OG); un cambio sitewide
+# toca 90+. 40 separa los dos casos sin ambigüedad.
+MAX_MASIVO = 40
+
+
+def fecha_ultimo_commit_de_contenido(html_path: Path):
+    """Fecha del último commit que trabajó ESTA página, no de uno sitewide.
+
+    OJO: no vale `git log -1`. Los cambios que tocan todo el sitio de golpe
+    (instalar analytics, refrescar el footer, aplicar boilerplate) dejan las
+    90+ páginas con la fecha de ese día, y entonces el sello diría que una
+    ficha se revisó cuando en realidad nadie miró su contenido. Eso es
+    estampar una fecha falsa en una página que la gente usa para reclamar
+    dinero. Así que se salta cualquier commit que toque más de MAX_MASIVO
+    ficheros y se toma el primero que parezca trabajo sobre esta página.
+    """
+    try:
+        # Acepta ruta absoluta o ya relativa al repo.
+        try:
+            rel = html_path.relative_to(ROOT)
+        except ValueError:
+            rel = html_path
+        log = subprocess.run(
+            ["git", "log", "--format=%H|%cs", "-n", "40", "--", str(rel)],
+            capture_output=True, text=True, cwd=str(ROOT), timeout=10,
+        )
+        if log.returncode != 0:
+            return None
+        for linea in log.stdout.strip().split("\n"):
+            if not linea.strip():
+                continue
+            sha, fecha = linea.split("|", 1)
+            tocados = subprocess.run(
+                ["git", "show", "--pretty=", "--name-only", sha],
+                capture_output=True, text=True, cwd=str(ROOT), timeout=10,
+            )
+            n = len([x for x in tocados.stdout.strip().split("\n") if x.strip()])
+            if n <= MAX_MASIVO:
+                return fecha
+    except Exception:
+        pass
+    # Solo hay commits masivos: mejor no fechar que fechar mal.
+    return None
+
+
 def detectar_fecha_revision(html: str, html_path: Path) -> str:
     # 1. JSON-LD dateModified
     m = re.search(r'"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})"', html)
     if m:
         return m.group(1)
-    # 2. git log: fecha del último commit que tocó el archivo
-    try:
-        rel = html_path.relative_to(ROOT)
-        out = subprocess.run(
-            ["git", "log", "-1", "--format=%cs", "--", str(rel)],
-            capture_output=True, text=True, cwd=str(ROOT), timeout=5,
-        )
-        if out.returncode == 0 and out.stdout.strip():
-            return out.stdout.strip()
-    except Exception:
-        pass
+    # 2. git log, saltando los commits sitewide (ver MAX_MASIVO)
+    fecha_git = fecha_ultimo_commit_de_contenido(html_path)
+    if fecha_git:
+        return fecha_git
     # 3. mtime del archivo
     try:
         return datetime.fromtimestamp(html_path.stat().st_mtime).strftime("%Y-%m-%d")
