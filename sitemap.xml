@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://salariojusto.es/guias.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -317,7 +317,7 @@
   </url>
 <url>
     <loc>https://salariojusto.es/plantillas-transparencia-retributiva-2026.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -468,6 +468,12 @@
   <url>
     <loc>https://salariojusto.es/plantilla-solicitar-nominas.html</loc>
     <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://salariojusto.es/plantilla-pedir-condiciones-trabajo-rd-723-2026.html</loc>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
