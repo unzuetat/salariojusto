@@ -6,7 +6,7 @@
     "revisar": "cuándo conviene volver a comprobarlo (normas anuales como el SMI caducan cada ejercicio)",
     "sustituidaPor": "norma que la sustituyó. Si la página cita ambas, el gate acepta la referencia histórica; si cita solo la vieja, falla."
   },
-  "actualizado": "2026-09-21",
+  "actualizado": "2026-10-01",
   "normas": {
     "RDLeg 2/2015": {
       "titulo": "Real Decreto Legislativo 2/2015, de 23 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto de los Trabajadores",
@@ -53,7 +53,7 @@
       "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a37",
       "verificado": "2026-09-30",
       "nivel": "rubrica",
-      "nota": "Solo el 37.3 leído literal el 30-sep-2026: b) cinco días por accidente o enfermedad graves, hospitalización o intervención sin hospitalización con reposo, de cónyuge, pareja de hecho, parientes hasta 2.º grado o conviviente que requiera cuidado efectivo; b bis) dos días por fallecimiento, más dos con desplazamiento. El resto del artículo sigue a nivel rúbrica."
+      "nota": "Solo el 37.3 leído literal el 30-sep-2026: b) «Cinco días por accidente o enfermedad graves, hospitalización o intervención quirúrgica sin hospitalización que precise reposo domiciliario del cónyuge, pareja de hecho o parientes hasta el segundo grado por consanguineidad o afinidad, incluido el familiar consanguíneo de la pareja de hecho, así como de cualquier otra persona distinta de las anteriores, que conviva con la persona trabajadora en el mismo domicilio y que requiera el cuidado efectivo de aquella.»; b bis) «Dos días por el fallecimiento del cónyuge, pareja de hecho o parientes hasta el segundo grado de consanguinidad o afinidad. Cuando con tal motivo la persona trabajadora necesite hacer un desplazamiento al efecto, el plazo se ampliará en dos días.» El resto del artículo sigue a nivel rúbrica."
     },
     "ET:38": {
       "titulo": "Art. 38 ET — Vacaciones anuales",
@@ -142,6 +142,37 @@
       "clave": "40,70 €/día · 1.221 €/mes · 17.094 €/año en 14 pagas. Subida del 3,1% sobre el SMI 2025 (RD 87/2025).",
       "revisar": "2027-01: cada ejercicio lo sustituye un RD nuevo. Al cambiar de año, esta entrada caduca y hay que registrar el siguiente."
     },
+    "RD 723/2026": {
+      "titulo": "Real Decreto 723/2026, de 9 de septiembre, por el que se transpone la Directiva (UE) 2019/1152 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, relativa a unas condiciones laborales transparentes y previsibles en la Unión Europea",
+      "boeId": "BOE-A-2026-19200",
+      "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2026-19200",
+      "urlDiario": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-19200",
+      "consolidado": "Comprobado el 3-oct-2026: «Última actualización, publicada el 15/09/2026», sin modificaciones desde su publicación.",
+      "publicado": "2026-09-15",
+      "diario": "BOE núm. 228, de 15 de septiembre de 2026, páginas 122210 a 122223",
+      "enVigor": "2026-10-05",
+      "verificado": "2026-10-03",
+      "nivel": "literal",
+      "clave": "Desarrolla el art. 8.5 ET. Leído entero en bruto desde diario_boe/txt.php el 1-oct-2026. Art. 2.2: el capítulo II solo se aplica a relaciones de más de cuatro semanas. Art. 3.1: se cumple si la información ya está en el contrato escrito; si solo está en parte, la empresa da el resto. Art. 3.2: lista a)-q); f) 1.º «La cuantía del salario base y de cada uno de los complementos salariales, indicados de forma separada, así como su periodicidad y método de pago»; k) sistemas algorítmicos; o) convenio con código, fecha de publicación, vigencia y, en su caso, ultraactividad. Art. 3.3: f) 1.º, g) 1.º-4.º, h), i), n) y p) pueden darse por referencia precisa a ley o convenio. Art. 6: papel o electrónico, almacenable e imprimible, con prueba de transmisión o recepción. Art. 7: antes del inicio; modificaciones como tarde el día en que surten efecto. DA 1.ª: el Ministerio, a través del SEPE, publica un modelo en un máximo de veinte días desde la publicación; no condiciona la exigibilidad. DT única: relaciones vigentes, la empresa facilita la información «a la persona trabajadora que lo solicite, en el plazo de treinta días hábiles a partir de la recepción de la solicitud y siempre que no obrara ya en su poder». No contiene régimen sancionador propio ni habla de ofertas de empleo.",
+      "nota": "NO CONFUNDIR con la Directiva (UE) 2023/970 de transparencia retributiva: son normas distintas. Pesca (arts. 9-11) y gente de mar (arts. 12-14) tienen régimen propio."
+    },
+    "RD 1659/1998": {
+      "titulo": "Real Decreto 1659/1998, de 24 de julio, por el que se desarrolla el artículo 8, apartado 5, de la Ley del Estatuto de los Trabajadores en materia de información al trabajador sobre los elementos esenciales del contrato de trabajo",
+      "boeId": "BOE-A-1998-19580",
+      "verificado": "2026-10-01",
+      "nivel": "ficha",
+      "sustituidaPor": "RD 723/2026",
+      "derogado": "DEROGADO por la disposición derogatoria única del RD 723/2026, con efectos desde su entrada en vigor el 5-oct-2026. Solo puede citarse en contexto histórico."
+    },
+    "Directiva UE 2019/1152": {
+      "titulo": "Directiva (UE) 2019/1152 del Parlamento Europeo y del Consejo, de 20 de junio de 2019, relativa a unas condiciones laborales transparentes y previsibles en la Unión Europea",
+      "boeId": "DOUE-L-2019-81159",
+      "celex": "32019L1152",
+      "urlConsolidada": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2019-81159",
+      "verificado": "2026-10-01",
+      "nivel": "ficha",
+      "nota": "Transpuesta parcialmente por el RD 723/2026 (disposición final segunda). Es la de condiciones laborales transparentes, NO la 2023/970 de transparencia retributiva."
+    },
     "Directiva UE 2023/970": {
       "titulo": "Directiva (UE) 2023/970 del Parlamento Europeo y del Consejo, de 10 de mayo de 2023, por la que se refuerza la aplicación del principio de igualdad de retribución entre hombres y mujeres por un mismo trabajo o un trabajo de igual valor a través de medidas de transparencia retributiva y de mecanismos para su cumplimiento",
       "celex": "32023L0970",
@@ -175,8 +206,9 @@
     "ET:8": {
       "titulo": "Art. 8 ET — Forma del contrato",
       "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a8",
-      "verificado": "2026-09-14",
-      "nivel": "rubrica"
+      "verificado": "2026-10-01",
+      "nivel": "rubrica",
+      "nota": "Solo el 8.5 leído literal el 1-oct-2026: «Cuando la relación laboral sea de duración superior a cuatro semanas, el empresario deberá informar por escrito al trabajador, en los términos y plazos que se establezcan reglamentariamente, sobre los elementos esenciales del contrato y las principales condiciones de ejecución de la prestación laboral, siempre que tales elementos y condiciones no figuren en el contrato de trabajo formalizado por escrito.» Lo desarrolla el RD 723/2026."
     },
     "ET:26": {
       "titulo": "Art. 26 ET — Del salario",
