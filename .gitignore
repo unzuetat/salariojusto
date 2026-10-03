@@ -82,3 +82,7 @@ discrepancias-titles.md
 # Python
 __pycache__/
 *.pyc
+
+# Copia local de Mission Control: la regenera cada /export-mc y no debe publicarse (Vercel sirve el repo entero)
+docs/CONTEXT.md
+docs/CONTEXT.mc.md
