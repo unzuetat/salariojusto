@@ -248,6 +248,29 @@ if (exists('index.html')) {
     }
     if (colsOk) push('ok', `mega-menú: rótulos «N fichas» cuadran con los enlaces en las ${cols.length} columnas`);
   } else push('warn', 'mega-menú: no se pudo delimitar para contar rótulos');
+
+  // Directorio de la home: enlaza TODAS las fichas indexables y ninguna noindex;
+  // el rótulo «N fichas» de «Otros sectores» cuadra con sus cards.
+  const dStart = idx.indexOf('id="directorio-convenios"');
+  const dEnd = dStart >= 0 ? idx.indexOf('<!-- /directorio', dStart) : -1;
+  const dir = dStart >= 0 ? idx.slice(dStart, dEnd > dStart ? dEnd : idx.indexOf('id="section-calc"', dStart)) : '';
+  if (!dir) push('warn', 'home · directorio: no se pudo delimitar (id="directorio-convenios")');
+  else {
+    const sinCard = indexables.filter((f) => !dir.includes('href="/' + f + '"'));
+    const noindexEnlazadas = noindex.filter((f) => dir.includes('href="/' + f + '"'));
+    if (sinCard.length) push('fail', `home · directorio: ${sinCard.length} ficha(s) indexable(s) sin enlace → ${sinCard.join(', ')}`);
+    else push('ok', `home · directorio: enlaza las ${indexables.length} fichas indexables`);
+    if (noindexEnlazadas.length) push('fail', `home · directorio: enlaza ficha(s) noindex → ${noindexEnlazadas.join(', ')}`);
+    const o = dir.indexOf('<h3>Otros sectores</h3>');
+    if (o >= 0) {
+      const bloque = dir.slice(o, dir.indexOf('</section>', o) > 0 ? dir.indexOf('</section>', o) : undefined);
+      const rot = bloque.match(/<span class="count">(\d+) fichas/);
+      const cards = (bloque.match(/class="dir-card"/g) || []).length;
+      if (!rot) push('warn', 'home · «Otros sectores»: rótulo «N fichas» no encontrado');
+      else if (Number(rot[1]) === cards) push('ok', `home · «Otros sectores»: ${cards} cards ✔`);
+      else push('fail', `home · «Otros sectores»: el rótulo dice ${rot[1]} fichas y hay ${cards} cards`);
+    }
+  }
 }
 
 // ── 8. INFO · contadores por-sector / provincias (canon editorial pendiente) ─
