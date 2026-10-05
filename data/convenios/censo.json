@@ -359,9 +359,9 @@
       "ambito": "Asturias",
       "tipo": "provincial",
       "indexable": true,
-      "vigenciaFin": "2025-12-31",
-      "estado": "ultraactividad",
-      "fuenteEstado": "en ultraactividad desde el 1 de enero de 2026 · tablas 2025",
+      "vigenciaFin": "2027-12-31",
+      "estado": "vigente",
+      "fuenteEstado": "convenio 2026-2027 firmado 15-jun-2026 · Resolución 18-jun-2026 (exp. C-026/2026) · BOPA 29-jun-2026 · tablas 2026 (+3%) y 2027 (+3,1%) · denuncia automática 30-sep-2027 con ultraactividad indefinida pactada (Art. 4)",
       "confianza": "alta",
       "revisado": false,
       "nota": ""
