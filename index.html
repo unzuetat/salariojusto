@@ -3237,7 +3237,7 @@
   function calcNetV2(gross, situation, hijos3, hijos25, asc65, asc75, discapacidad, movilidad, pagas, anioper, situper, discaper, movilper, escalaCustom){
     const ANIO=2026;situper=situper||'ACTIVO';discaper=discaper||'NINGUNA';movilper=movilper||false;anioper=anioper||1985;
     const situfam=situation==='single_kids'?'S1':situation==='married_noincome'?'S2':'S3';
-    const SS_PCT=0.0756;const COTIZACIONES=gross*SS_PCT;
+    const SS_PCT=0.065;const COTIZACIONES=gross*SS_PCT;
     const GASTOSGEN=2000;const INCREGASMOVIL=movilidad==='si'?2000:0;let INCREGASDISTRA=0;
     if(situper==='ACTIVO'){if(discaper==='DESDE65'||(discaper==='DE33A65'&&movilper))INCREGASDISTRA=7750;else if(discaper==='DE33A65')INCREGASDISTRA=3500;}
     let OTROSGASTOS=GASTOSGEN+INCREGASMOVIL+INCREGASDISTRA;
