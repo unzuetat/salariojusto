@@ -72,6 +72,8 @@ const BLOQUES = [
   // con id="ambito" y el título "¿Te aplica este convenio?". Exigirles renombrar
   // el ancla rompería su índice para contentar al script, que es al revés de
   // como debe funcionar esto.
+  // `ausente: true` = el patrón NO debe aparecer en el texto visible (sin scripts ni comentarios).
+  { id: 'placeholders', nombre: 'Sin placeholders',       re: /[Pp]endiente de verificaci|[Ff]echa pendiente|\[PENDIENTE\]|[Ll]orem ipsum/, que: 'ningún hueco de redacción a la vista', norma: true, ausente: true },
   { id: 'te-cubre',    nombre: '"¿Te cubre?"',           re: /id="te-cubre"|id="ambito"|¿Te aplica este convenio|¿Te cubre/, que: 'encaje antes que cifra' },
 ];
 
@@ -80,7 +82,8 @@ const todas = fs.readdirSync(ROOT).filter((f) => /^convenio-.*\.html$/.test(f)).
 if (!todas.length) { console.error('No se han encontrado fichas convenio-*.html'); process.exit(1); }
 
 const texto = new Map(todas.map((f) => [f, fs.readFileSync(path.join(ROOT, f), 'utf8')]));
-const tiene = (f, b) => b.re.test(texto.get(f));
+const visible = (t) => t.replace(/<script[\s\S]*?<\/script>|<!--[\s\S]*?-->/g, '');
+const tiene = (f, b) => (b.ausente ? !b.re.test(visible(texto.get(f))) : b.re.test(texto.get(f)));
 
 // Adopción medida sobre TODO el corpus (aunque se audite una sola ficha).
 for (const b of BLOQUES) {
