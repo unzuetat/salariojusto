@@ -115,6 +115,7 @@ const TOTAL_CHECKS = [
   ['sobre.html', /se suman (\d+) marcos sectoriales/, 'marcos', 'sobre · nota cobertura (marcos)'],
   ['sobre.html', /(\d+) fichas en total/, 'total', 'sobre · nota cobertura (total)'],
   ['llms.txt', /(\d+) convenios indexables/, 'indexables', 'llms.txt · cobertura'],
+  ['sala-de-prensa.html', /<div class="stat-num">(\d+)<\/div><div class="stat-label">fichas de convenio/, 'total', 'prensa · fichas'],
 ];
 for (const [file, rx, kind, label] of TOTAL_CHECKS) {
   const expected = CANON[kind];

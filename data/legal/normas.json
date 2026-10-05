@@ -34,7 +34,7 @@
       "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11430&tn=1&p=20260911#a29",
       "verificado": "2026-09-13",
       "nivel": "literal",
-      "clave": "El periodo de abono de las retribuciones periódicas no puede exceder de un mes. Documentación del salario mediante recibo individual y justificativo ajustado al modelo oficial, salvo otro modelo pactado en convenio o con la representación de la plantilla."
+      "clave": "El periodo de abono de las retribuciones periódicas no puede exceder de un mes. Documentación del salario mediante recibo individual y justificativo ajustado al modelo oficial, salvo otro modelo pactado en convenio o con la representación de la plantilla. 29.3: «El interés por mora en el pago del salario será el diez por ciento de lo adeudado» (leído en el consolidado el 4-oct-2026)."
     },
     "ET:34": {
       "titulo": "Art. 34 ET — Jornada",
@@ -182,7 +182,7 @@
       "adoptada": "2023-05-10",
       "enVigor": "2023-05-17",
       "limiteTransposicion": "2026-06-07",
-      "clave": "Art. 9 — calendario escalonado de la obligación de informar sobre brecha salarial: 250+ personas, anual desde el 7-jun-2027; 150-249, cada 3 años desde el 7-jun-2027; 100-149, cada 3 años desde el 7-jun-2031. Por debajo de 100, voluntario.",
+      "clave": "Art. 9 — calendario escalonado de la obligación de informar sobre brecha salarial: 250+ personas, anual desde el 7-jun-2027; 150-249, cada 3 años desde el 7-jun-2027; 100-149, cada 3 años desde el 7-jun-2031. Por debajo de 100, voluntario. Art. 23: sanciones; art. 25: protección frente a represalias (según verificación del 27-abr-2026; EUR-Lex no servía el texto el 5-oct-2026).",
       "peligro": "No confundir las tres fechas: adopción (10-may-2023), entrada en vigor de la Directiva (17-may-2023) y límite de transposición por los Estados (7-jun-2026). Son distintas y ya se confundieron una vez."
     },
     "RDL 5/2023": {
@@ -400,8 +400,9 @@
       "titulo": "Real Decreto 439/2007, de 30 de marzo, por el que se aprueba el Reglamento del IRPF",
       "boeId": "BOE-A-2007-6820",
       "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2007-6820",
-      "verificado": "2026-09-14",
-      "nivel": "ficha"
+      "verificado": "2026-10-05",
+      "nivel": "ficha",
+      "clave": "Art. 81 (límite cuantitativo excluyente de la obligación de retener; tabla leída en el consolidado el 5-oct-2026, actualización del 30-sep-2026): soltero/a, viudo/a, divorciado/a con descendientes 17.644 € (1 hijo) / 18.694 € (2 o más); cónyuge sin rentas superiores a 1.500 € 17.197 / 18.130 / 19.262 €; otras situaciones 15.876 / 16.342 / 16.867 €. Art. 88: comunicación de datos del perceptor al pagador (modelo 145)."
     },
     "RD 486/1997": {
       "titulo": "Real Decreto 486/1997, de 14 de abril, por el que se establecen las disposiciones mínimas de seguridad y salud en los lugares de trabajo",
@@ -467,9 +468,10 @@
       "titulo": "Real Decreto Legislativo 5/2000, de 4 de agosto, por el que se aprueba el texto refundido de la Ley sobre Infracciones y Sanciones en el Orden Social (LISOS)",
       "boeId": "BOE-A-2000-15060",
       "urlConsolidada": "https://www.boe.es/buscar/act.php?id=BOE-A-2000-15060",
-      "verificado": "2026-09-14",
+      "verificado": "2026-10-05",
       "nivel": "ficha",
-      "nota": "Abreviatura correcta RDLeg, no RDL: «Real Decreto-ley 5/2000» es otra norma distinta."
+      "nota": "Abreviatura correcta RDLeg, no RDL: «Real Decreto-ley 5/2000» es otra norma distinta.",
+      "clave": "Arts. 7.13 (grave: incumplir obligaciones de planes y medidas de igualdad), 8.12 (muy grave: decisiones unilaterales discriminatorias por sexo u otras causas en retribuciones, jornada, formación o promoción) y 22.2 (grave en materia de Seguridad Social: no solicitar afiliación o alta). Cuantías del art. 40.1 (leído en el consolidado el 5-oct-2026): leves 70-750 €; graves 751-7.500 €; muy graves 7.501-225.018 €; la infracción del art. 22.2 no puede exceder de 12.000 € por trabajador. La cifra «187.515 €» que circulaba es el máximo anterior y ya no aparece en el texto vigente."
     },
     "RD 1424/1985": {
       "titulo": "Real Decreto 1424/1985, de 1 de agosto, por el que se regula la relación laboral de carácter especial del servicio del hogar familiar",
@@ -561,6 +563,13 @@
       "verificado": "2026-09-21",
       "nivel": "literal",
       "nota": "BOE núm. 291 de 4-dic-2025, en vigor el 5-dic-2025. Art. 26.1 leído en el consolidado: las empresas deben disponer de planes de movilidad sostenible al trabajo para centros con MAS DE 200 personas trabajadoras o 100 por turno, en el plazo de DOCE meses desde la entrada en vigor (es decir, 5-dic-2026). OJO: circula la cifra de 24 meses en resúmenes secundarios; el texto consolidado dice doce. El art. 26.2 exige informe de seguimiento a los dos años de la aprobacion del plan y negociacion con la representacion legal. Invocada por el anexo IV del convenio del Comercio del Metal de Valencia 2026-2028."
+    },
+    "Seguridad Social · bases y tipos 2026": {
+      "titulo": "Bases y tipos de cotización 2026 · Régimen General (Tesorería General de la Seguridad Social)",
+      "urlConsolidada": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
+      "verificado": "2026-10-05",
+      "nivel": "literal",
+      "clave": "Tipos a cargo de la persona trabajadora en 2026: contingencias comunes 4,70 %; desempleo 1,55 % (contrato indefinido); formación profesional 0,10 %; MEI 0,15 % (0,75 % empresa). FOGASA 0,20 % solo a cargo de la empresa. Total trabajador: 6,50 %."
     }
   }
 }
