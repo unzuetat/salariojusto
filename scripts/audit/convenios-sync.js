@@ -102,8 +102,12 @@ if (exists('sitemap.xml')) {
 // ── 4. CHECK B · contadores TOTALES (deben igualar el canon) ────────────────
 // kind: 'total' (=todas las fichas) | 'indexables' | 'provinciales' | 'marcos'
 const TOTAL_CHECKS = [
-  ['index.html', /(\d+) convenios<\/strong> auditados contra BOE/, 'total', 'home · mega-footer'],
+  ['index.html', /(\d+) convenios<\/strong> auditados contra (?:el boletín oficial|BOE)/, 'total', 'home · mega-footer'],
   ['index.html', /Ver los (\d+) convenios/, 'total', 'home · hero CTA'],
+  ['index.html', /name="description" content="[^"]*?(\d+) convenios auditados cifra a cifra/, 'total', 'home · meta description'],
+  ['index.html', /property="og:description" content="(\d+) convenios auditados/, 'total', 'home · og:description'],
+  ['index.html', /name="twitter:description" content="(\d+) convenios auditados/, 'total', 'home · twitter:description'],
+  ['index.html', /(\d+) convenios auditados a mano/, 'total', 'home · chip E-E-A-T'],
   ['index.html', /Directorio · (\d+) fichas/, 'total', 'home · eyebrow directorio'],
   ['index.html', /(\d+) fichas hoy, más en camino/, 'total', 'home · lede directorio'],
   ['convenios.html', /(\d+) convenios auditados · 6 sectores/, 'total', 'hub · hero badge'],
@@ -183,6 +187,89 @@ if (exists('index.html')) {
       if (links !== expected) { push('fail', `mega-menú "${sector}": ${links} link(s) provincial(es), deberían ser ${expected} → revisar columna`); megaOk = false; }
     }
     if (megaOk) push('ok', `mega-menú: links provinciales por sector cuadran (${provincialesIdx.length} provinciales indexables enlazados)`);
+  }
+}
+
+// ── 7b. CHECK F · home · trust-bar, fechas «Actualizado» y rótulos del mega-menú ──
+// Estos puntos se pudrieron en silencio (39 verificados, «Julio 2026», «Metal 8 fichas»)
+// porque nadie los vigilaba. Se comparan con el censo y con el registro legal.
+if (exists('index.html')) {
+  const idx = read('index.html');
+  const tile = (label) => {
+    const m = idx.match(new RegExp('<div class="trust-value">([^<]+)</div>\\s*<div class="trust-label">' + label + '</div>'));
+    return m ? m[1].trim() : null;
+  };
+  const tileCheck = (label, expected, what) => {
+    const v = tile(label);
+    if (v === null) push('warn', `home · trust-bar «${label}»: patrón no encontrado — ¿cambió la etiqueta?`);
+    else if (Number(v) === expected) push('ok', `home · trust-bar ${what}: ${v} ✔`);
+    else push('fail', `home · trust-bar ${what}: dice ${v}, debería ser ${expected}`);
+  };
+  tileCheck('Fichas de convenio', CANON.total, 'fichas');
+  tileCheck('Sectores', CANON.sectores, 'sectores');
+  if (exists('data/legal/normas.json')) {
+    const nNormas = Object.keys(JSON.parse(read('data/legal/normas.json')).normas || {}).length;
+    tileCheck('Normas verificadas', nNormas, 'normas (normas.json)');
+  }
+
+  // Fecha «Actualizado» = mes del campo `actualizado` del censo, en los tres sitios de la home.
+  if (exists('data/convenios/censo.json')) {
+    const censo = JSON.parse(read('data/convenios/censo.json'));
+    const d = new Date(censo.actualizado + 'T00:00:00');
+    const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+    const esperado = `${MESES[d.getMonth()]} ${d.getFullYear()}`;
+    const puntos = [
+      ['trust-bar', /<div class="trust-value">([A-Za-zñ]+ \d{4})<\/div>\s*<div class="trust-label">Actualizado<\/div>/],
+      ['directorio', /<strong>Actualizado:<\/strong> ([a-zñ]+ \d{4})/],
+      ['mega-footer', /auditados contra el boletín oficial · actualizado ([a-zñ]+ \d{4})/],
+    ];
+    for (const [label, rx] of puntos) {
+      const m = idx.match(rx);
+      if (!m) push('warn', `home · fecha ${label}: patrón no encontrado — revisar a mano`);
+      else if (m[1].toLowerCase() === esperado) push('ok', `home · fecha ${label}: ${m[1]} ✔ (censo ${censo.actualizado})`);
+      else push('fail', `home · fecha ${label}: dice «${m[1]}», el censo está en ${esperado} (${censo.actualizado})`);
+    }
+  }
+
+  // Rótulo «N fichas» de cada columna del mega-menú = enlaces de su bloque mega-col-links
+  // (el pilar o marco va fuera de ese bloque y no cuenta). Cubre las 9 columnas, con guion o sin él.
+  const mStart = idx.indexOf('class="mega-menu"');
+  const mEnd = mStart >= 0 ? idx.indexOf('mega-footer', mStart) : -1;
+  if (mStart >= 0 && mEnd > mStart) {
+    const cols = idx.slice(mStart, mEnd).split('<div class="mega-col-title">').slice(1);
+    let colsOk = true;
+    for (const col of cols) {
+      const name = col.split('<')[0].trim();
+      const m = col.match(/mega-col-count">(\d+) fichas?/);
+      if (!m) { push('warn', `mega-menú «${name}»: sin rótulo «N fichas»`); continue; }
+      const links = (col.match(/<div class="mega-col-links"[\s\S]*?<\/div>/) || [''])[0];
+      const n = (links.match(/href="\/convenio-[^"]+\.html"/g) || []).length;
+      if (Number(m[1]) !== n) { colsOk = false; push('fail', `mega-menú «${name}»: el rótulo dice ${m[1]} fichas y hay ${n} enlaces → index.html`); }
+    }
+    if (colsOk) push('ok', `mega-menú: rótulos «N fichas» cuadran con los enlaces en las ${cols.length} columnas`);
+  } else push('warn', 'mega-menú: no se pudo delimitar para contar rótulos');
+
+  // Directorio de la home: enlaza TODAS las fichas indexables y ninguna noindex;
+  // el rótulo «N fichas» de «Otros sectores» cuadra con sus cards.
+  const dStart = idx.indexOf('id="directorio-convenios"');
+  const dEnd = dStart >= 0 ? idx.indexOf('<!-- /directorio', dStart) : -1;
+  const dir = dStart >= 0 ? idx.slice(dStart, dEnd > dStart ? dEnd : idx.indexOf('id="section-calc"', dStart)) : '';
+  if (!dir) push('warn', 'home · directorio: no se pudo delimitar (id="directorio-convenios")');
+  else {
+    const sinCard = indexables.filter((f) => !dir.includes('href="/' + f + '"'));
+    const noindexEnlazadas = noindex.filter((f) => dir.includes('href="/' + f + '"'));
+    if (sinCard.length) push('fail', `home · directorio: ${sinCard.length} ficha(s) indexable(s) sin enlace → ${sinCard.join(', ')}`);
+    else push('ok', `home · directorio: enlaza las ${indexables.length} fichas indexables`);
+    if (noindexEnlazadas.length) push('fail', `home · directorio: enlaza ficha(s) noindex → ${noindexEnlazadas.join(', ')}`);
+    const o = dir.indexOf('<h3>Otros sectores</h3>');
+    if (o >= 0) {
+      const bloque = dir.slice(o, dir.indexOf('</section>', o) > 0 ? dir.indexOf('</section>', o) : undefined);
+      const rot = bloque.match(/<span class="count">(\d+) fichas/);
+      const cards = (bloque.match(/class="dir-card"/g) || []).length;
+      if (!rot) push('warn', 'home · «Otros sectores»: rótulo «N fichas» no encontrado');
+      else if (Number(rot[1]) === cards) push('ok', `home · «Otros sectores»: ${cards} cards ✔`);
+      else push('fail', `home · «Otros sectores»: el rótulo dice ${rot[1]} fichas y hay ${cards} cards`);
+    }
   }
 }
 
