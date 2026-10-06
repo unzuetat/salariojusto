@@ -110,7 +110,11 @@ const TOTAL_CHECKS = [
   ['index.html', /(\d+) convenios auditados a mano/, 'total', 'home · chip E-E-A-T'],
   ['index.html', /Directorio · (\d+) fichas/, 'total', 'home · eyebrow directorio'],
   ['index.html', /(\d+) fichas hoy, más en camino/, 'total', 'home · lede directorio'],
-  ['convenios.html', /(\d+) convenios auditados · 6 sectores/, 'total', 'hub · hero badge'],
+  ['convenios.html', /(\d+) convenios auditados · \d+ sectores/, 'total', 'hub · hero badge'],
+  ['convenios.html', /(\d+) fichas auditadas cifra a cifra/, 'total', 'hub · cobertura'],
+  ['convenios.html', /Mirando las (\d+) fichas provinciales auditadas/, 'provinciales', 'hub · modelos'],
+  ['salarios.html', /Hub provincial · (\d+) fichas de convenio/, 'total', 'salarios · badge'],
+  ['salarios.html', /publicamos (\d+) fichas de convenio/, 'total', 'salarios · FAQ cobertura'],
   ['convenios.html', /Convenios auditados<\/div><div class="stat-value">(\d+)</, 'total', 'hub · resumen'],
   ['convenios.html', /content="(\d+) convenios colectivos con tablas/, 'total', 'hub · meta description'],
   ['mapa-del-sitio.html', /(\d+) convenios colectivos auditados/, 'total', 'mapa · meta'],
@@ -119,6 +123,7 @@ const TOTAL_CHECKS = [
   ['sobre.html', /se suman (\d+) marcos sectoriales/, 'marcos', 'sobre · nota cobertura (marcos)'],
   ['sobre.html', /(\d+) fichas en total/, 'total', 'sobre · nota cobertura (total)'],
   ['llms.txt', /(\d+) convenios indexables/, 'indexables', 'llms.txt · cobertura'],
+  ['sala-de-prensa.html', /<div class="stat-num">(\d+)<\/div><div class="stat-label">fichas de convenio/, 'total', 'prensa · fichas'],
 ];
 for (const [file, rx, kind, label] of TOTAL_CHECKS) {
   const expected = CANON[kind];
