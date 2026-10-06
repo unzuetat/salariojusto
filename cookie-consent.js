@@ -58,7 +58,7 @@
   box.setAttribute("aria-label", "Aviso de cookies");
   box.innerHTML =
     '<p>Usamos cookies propias y de terceros para medir el uso del sitio con Google Analytics ' +
-    'y, en el futuro, mostrar publicidad. Puedes aceptarlas o rechazarlas. ' +
+    'y mostrar publicidad de Google AdSense. Puedes aceptarlas o rechazarlas. ' +
     'Más información en nuestra <a href="/privacidad.html">política de privacidad</a>.</p>' +
     '<div class="sj-cc-row">' +
     '<button type="button" class="sj-cc-reject">Rechazar</button>' +

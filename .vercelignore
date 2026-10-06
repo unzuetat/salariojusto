@@ -1,0 +1,41 @@
+# Zonas de trabajo interno: viven en el repo (respaldo + sincronización entre
+# máquinas) pero NO se despliegan en salariojusto.es.
+#
+# Motivo: Vercel publica el repositorio entero, así que sin este archivo
+# cualquiera puede leer las auditorías, las métricas de GSC, el censo con
+# notas internas o el material de prensa adivinando la ruta. Ninguna página
+# del sitio los enlaza.
+#
+# Lo que SÍ debe seguir sirviéndose y por eso no está aquí:
+#   data/convenios/*.json  → la home los carga en runtime para el verificador
+#   lib/, api/             → código que usan las páginas
+#   og-cards/*.png, og-*.png, preview.jpg → imágenes OG referenciadas
+#
+# Comprobación tras cada deploy: curl a una ruta de cada bloque → 404.
+
+# Análisis, métricas y auditorías
+analisis/
+research/
+press/
+outreach/
+design-mockups/
+
+# Herramientas y documentación del proyecto
+scripts/
+docs/
+.claude/
+.github/
+
+# Respaldo de la calculadora v1 (tag calc-v1-pre-rediseno): duplicaba la
+# herramienta principal en /legacy/calc-v1/ con AdSense y canonical a /.
+legacy/
+
+# Fuentes HTML de las tarjetas OG (los .png generados sí se sirven)
+_og/
+og-cards/*.html
+
+# Datos internos
+data/legal/
+data/convenios/censo.json
+VERIFICACION-CONVENIOS.md
+listado-muestra-200.csv
