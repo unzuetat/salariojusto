@@ -3136,7 +3136,7 @@
         </div>
 
         <div class="disclaimer-v2">
-          Cálculo orientativo basado en el algoritmo IRPF 2026 oficial (AEAT) con asunciones por defecto: escala estatal del IRPF, persona soltera sin descendientes a cargo y menor de 65 años. Tu nómina real depende de tu situación familiar y de la escala autonómica de tu comunidad. Para un cálculo afinado, despliega abajo.
+          Cálculo orientativo basado en el algoritmo IRPF 2026 oficial (AEAT) con asunciones por defecto: escala estatal del IRPF, persona soltera sin descendientes a cargo y menor de 65 años, y cotización a la Seguridad Social del 6,50 % hasta la base máxima de 2026 (5.101,20 €/mes). Tu nómina real depende de tu situación familiar y de la escala autonómica de tu comunidad. Para un cálculo afinado, despliega abajo.
         </div>
 
         <button class="cta-toggle-capa2" id="btnCapa2" type="button" aria-expanded="false">
@@ -3237,7 +3237,7 @@
   function calcNetV2(gross, situation, hijos3, hijos25, asc65, asc75, discapacidad, movilidad, pagas, anioper, situper, discaper, movilper, escalaCustom){
     const ANIO=2026;situper=situper||'ACTIVO';discaper=discaper||'NINGUNA';movilper=movilper||false;anioper=anioper||1985;
     const situfam=situation==='single_kids'?'S1':situation==='married_noincome'?'S2':'S3';
-    const SS_PCT=0.065;const COTIZACIONES=gross*SS_PCT;
+    const SS_PCT=0.065;const SS_BASE_MAX_ANUAL=61214.40;/* base máxima Régimen General 2026: 5.101,20 €/mes × 12 (TGSS, bases y tipos 2026) */const COTIZACIONES=Math.min(gross,SS_BASE_MAX_ANUAL)*SS_PCT;
     const GASTOSGEN=2000;const INCREGASMOVIL=movilidad==='si'?2000:0;let INCREGASDISTRA=0;
     if(situper==='ACTIVO'){if(discaper==='DESDE65'||(discaper==='DE33A65'&&movilper))INCREGASDISTRA=7750;else if(discaper==='DE33A65')INCREGASDISTRA=3500;}
     let OTROSGASTOS=GASTOSGEN+INCREGASMOVIL+INCREGASDISTRA;
@@ -3524,7 +3524,7 @@
     Basado en <a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32023L0970" target="_blank">Directiva UE 2023/970 de Transparencia Retributiva</a> · <a href="https://www.ine.es" target="_blank">Datos de referencia: INE</a>
   </p>
   <p class="footer-text" style="margin-top:16px;">
-    <a href="/">Calculadora</a> ·
+    <a href="/">Inicio</a> ·
     <a href="/convenios.html">Convenios</a> ·
     <a href="/plantillas-transparencia-retributiva-2026.html">Kit del trabajador</a> ·
     <a href="/guias.html">Guías</a> ·
