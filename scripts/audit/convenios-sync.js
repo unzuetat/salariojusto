@@ -302,10 +302,12 @@ if (exists('convenio-hosteleria.html') && exists('data/convenios/censo.json')) {
     if (faltan.length) push('fail', `pilar hostelería · comparador: sin fila para ${faltan.join(', ')}`);
     if (sobran.length) push('fail', `pilar hostelería · comparador: fila de ficha que no está en el censo como hostelería provincial indexable → ${sobran.join(', ')}`);
     if (sinRango.length) push('fail', `pilar hostelería · comparador: fila sin rango «mín – máx €» en ${sinRango.join(', ')}`);
-    const h2 = html.match(/<h2 id="comparador">[^<]*?(\d+) provincias auditadas/);
+    const h2 = html.match(/<h2 id="comparador">[^<]*?(?:(\d+) de las )?(\d+) provincias auditadas/);
+    const h2ok = h2 && !h2[1] && Number(h2[2]) === esperadas.length;
     if (!h2) push('warn', 'pilar hostelería · comparador: el h2 no dice «las N provincias auditadas»');
-    else if (Number(h2[1]) !== esperadas.length) push('fail', `pilar hostelería · comparador: el h2 dice ${h2[1]} provincias y el censo tiene ${esperadas.length}`);
-    if (!faltan.length && !sobran.length && !sinRango.length && h2 && Number(h2[1]) === esperadas.length) push('ok', `pilar hostelería · comparador: ${enTabla.length} filas = ${esperadas.length} fichas del censo, todas con rango ✔`);
+    else if (h2[1]) push('fail', `pilar hostelería · comparador: el h2 dice «${h2[1]} de las ${h2[2]}» provincias; debe cubrir las ${esperadas.length}`);
+    else if (Number(h2[2]) !== esperadas.length) push('fail', `pilar hostelería · comparador: el h2 dice ${h2[2]} provincias y el censo tiene ${esperadas.length}`);
+    if (!faltan.length && !sobran.length && !sinRango.length && h2ok) push('ok', `pilar hostelería · comparador: ${enTabla.length} filas = ${esperadas.length} fichas del censo, todas con rango ✔`);
   }
 }
 
