@@ -278,6 +278,39 @@ if (exists('index.html')) {
   }
 }
 
+// ── 7b. Comparador del pilar de hostelería = fichas provinciales del censo ──
+// El 8-oct-2026 anunciaba «11 de las 18» con 15 filas, dos sin rango y tres
+// fichas publicadas sin fila. Nadie lo tocaba al publicar una ficha nueva.
+// Regla: una fila con rango por cada ficha de hostelería provincial indexable
+// del censo, y el h2 dice «las N provincias auditadas» con ese N.
+if (exists('convenio-hosteleria.html') && exists('data/convenios/censo.json')) {
+  const html = read('convenio-hosteleria.html');
+  const censo = JSON.parse(read('data/convenios/censo.json'));
+  const esperadas = (censo.fichas || [])
+    .filter((f) => f.sector === 'hosteleria' && f.tipo === 'provincial' && f.indexable !== false)
+    .map((f) => f.archivo).sort();
+  const t0 = html.indexOf('<table class="comparador">');
+  const t1 = t0 >= 0 ? html.indexOf('</table>', t0) : -1;
+  if (t0 < 0 || t1 < 0) push('fail', 'pilar hostelería · comparador: no se encuentra <table class="comparador">');
+  else {
+    const tabla = html.slice(t0, t1);
+    const filas = [...tabla.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map((m) => m[1]).filter((r) => /href="\/convenio-hosteleria-/.test(r));
+    const enTabla = filas.map((r) => r.match(/href="\/(convenio-hosteleria-[a-z-]+\.html)"/)[1]).sort();
+    const faltan = esperadas.filter((a) => !enTabla.includes(a));
+    const sobran = enTabla.filter((a) => !esperadas.includes(a));
+    const sinRango = filas.filter((r) => !/<td class="num">\s*[\d.]+ – [\d.]+ €/.test(r)).map((r) => r.match(/href="\/(convenio-hosteleria-[a-z-]+\.html)"/)[1]);
+    if (faltan.length) push('fail', `pilar hostelería · comparador: sin fila para ${faltan.join(', ')}`);
+    if (sobran.length) push('fail', `pilar hostelería · comparador: fila de ficha que no está en el censo como hostelería provincial indexable → ${sobran.join(', ')}`);
+    if (sinRango.length) push('fail', `pilar hostelería · comparador: fila sin rango «mín – máx €» en ${sinRango.join(', ')}`);
+    const h2 = html.match(/<h2 id="comparador">[^<]*?(?:(\d+) de las )?(\d+) provincias auditadas/);
+    const h2ok = h2 && !h2[1] && Number(h2[2]) === esperadas.length;
+    if (!h2) push('warn', 'pilar hostelería · comparador: el h2 no dice «las N provincias auditadas»');
+    else if (h2[1]) push('fail', `pilar hostelería · comparador: el h2 dice «${h2[1]} de las ${h2[2]}» provincias; debe cubrir las ${esperadas.length}`);
+    else if (Number(h2[2]) !== esperadas.length) push('fail', `pilar hostelería · comparador: el h2 dice ${h2[2]} provincias y el censo tiene ${esperadas.length}`);
+    if (!faltan.length && !sobran.length && !sinRango.length && h2ok) push('ok', `pilar hostelería · comparador: ${enTabla.length} filas = ${esperadas.length} fichas del censo, todas con rango ✔`);
+  }
+}
+
 // ── 8. INFO · contadores por-sector / provincias (canon editorial pendiente) ─
 // No fallan: su cifra "oficial" la debe fijar Telmo. Se listan para revisión.
 const EDITORIAL = [

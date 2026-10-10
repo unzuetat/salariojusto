@@ -15,7 +15,10 @@
  *                             «Fuentes», con las preguntas y respuestas que ya
  *                             estaban escritas en el JSON-LD;
  *                          2) regenera el FAQPage a partir de la FAQ visible
- *                             (h3 + párrafos, o details/summary).
+ *                             (h3 + párrafos, o details/summary);
+ *                          3) si la ficha tiene FAQ visible y ningún FAQPage,
+ *                             crea el bloque detrás del último JSON-LD del
+ *                             <head> (añadido el 8-oct-2026 para Málaga).
  *   --root <dir>           carpeta con las fichas (por defecto, la raíz del repo).
  *   --ficha <archivo>      una sola ficha.
  *
@@ -94,6 +97,23 @@ function withSchema(html, schema, pairs) {
   const json = JSON.stringify(schema.obj, null, 2);
   return html.replace(schema.raw, '<script type="application/ld+json">' + json + '</script>');
 }
+// FAQPage nuevo cuando la ficha tiene FAQ visible y ningún bloque: se coloca
+// detrás del último <script type="application/ld+json"> del <head> (el
+// BreadcrumbList en todas las fichas) con la misma sangría. Sin <head> con
+// JSON-LD no se inventa sitio: devuelve null y el check sigue en rojo.
+function insertSchema(html, pairs) {
+  const head = html.indexOf('</head>');
+  if (head < 0) return null;
+  let last = null;
+  for (const m = /<script type="application\/ld\+json">[\s\S]*?<\/script>/g, r = m; ;) { const x = r.exec(html); if (!x || x.index > head) break; last = x; }
+  if (!last) return null;
+  const lineStart = html.lastIndexOf('\n', last.index) + 1;
+  const indent = html.slice(lineStart, last.index).match(/^[ \t]*/)[0];
+  const obj = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: pairs.map((p) => ({ '@type': 'Question', name: p.q, acceptedAnswer: { '@type': 'Answer', text: p.a } })) };
+  const json = JSON.stringify(obj, null, 2).split('\n').map((l, i) => (i ? indent + l : l)).join('\n');
+  const at = last.index + last[0].length;
+  return html.slice(0, at) + '\n' + indent + '<script type="application/ld+json">' + json + '</script>' + html.slice(at);
+}
 
 // ── Sección visible nueva (solo cuando no existe) ────────────────────────────
 function insertSection(html, pairs) {
@@ -108,7 +128,7 @@ function insertSection(html, pairs) {
 
 // ── Recorrido ────────────────────────────────────────────────────────────────
 const fichas = fs.readdirSync(ROOT).filter((f) => /^convenio-.*\.html$/.test(f) && (!SOLO || f === SOLO)).sort();
-let mismatches = 0, fixed = 0, created = 0;
+let mismatches = 0, fixed = 0, created = 0, schemed = 0;
 for (const f of fichas) {
   const p = path.join(ROOT, f);
   let html = fs.readFileSync(p, 'utf8');
@@ -124,6 +144,10 @@ for (const f of fichas) {
     if (vis && vis.pairs.length && sch) {
       const same = sch.pairs.length === vis.pairs.length && sch.pairs.every((x, i) => x.q === vis.pairs[i].q && x.a === vis.pairs[i].a);
       if (!same) { html = withSchema(html, sch, vis.pairs); fixed++; }
+    } else if (vis && vis.pairs.length && !sch) {
+      const out = insertSchema(html, vis.pairs);
+      if (!out) { console.log(`  ✗ ${f}: FAQ visible sin FAQPage y sin JSON-LD en <head> donde crearlo`); mismatches++; continue; }
+      html = out; schemed++;
     }
     fs.writeFileSync(p, html);
   }
@@ -137,6 +161,6 @@ for (const f of fichas) {
     console.log(`  ✗ ${f}: visible ${vq.length} · schema ${sq.length}${faltan.length ? ` · en schema y no visibles: ${faltan.length}` : ''}${sobran.length ? ` · visibles y no en schema: ${sobran.length}` : ''}${!sch2 && vq.length ? ' · sin FAQPage' : ''}`);
   }
 }
-if (FIX) console.log(`\n  secciones FAQ creadas: ${created} · FAQPage regenerados: ${fixed}`);
+if (FIX) console.log(`\n  secciones FAQ creadas: ${created} · FAQPage regenerados: ${fixed} · FAQPage creados: ${schemed}`);
 console.log(mismatches ? `\n❌ ${mismatches} ficha(s) con FAQ visible ≠ FAQPage` : `\n✅ FAQ visible = FAQPage en las ${fichas.length} fichas con FAQ`);
 process.exit(mismatches ? 1 : 0);

@@ -154,7 +154,8 @@
       "verificado": "2026-10-03",
       "nivel": "literal",
       "clave": "Desarrolla el art. 8.5 ET. Leído entero en bruto desde diario_boe/txt.php el 1-oct-2026. Art. 2.2: el capítulo II solo se aplica a relaciones de más de cuatro semanas. Art. 3.1: se cumple si la información ya está en el contrato escrito; si solo está en parte, la empresa da el resto. Art. 3.2: lista a)-q); f) 1.º «La cuantía del salario base y de cada uno de los complementos salariales, indicados de forma separada, así como su periodicidad y método de pago»; k) sistemas algorítmicos; o) convenio con código, fecha de publicación, vigencia y, en su caso, ultraactividad. Art. 3.3: f) 1.º, g) 1.º-4.º, h), i), n) y p) pueden darse por referencia precisa a ley o convenio. Art. 6: papel o electrónico, almacenable e imprimible, con prueba de transmisión o recepción. Art. 7: antes del inicio; modificaciones como tarde el día en que surten efecto. DA 1.ª: el Ministerio, a través del SEPE, publica un modelo en un máximo de veinte días desde la publicación; no condiciona la exigibilidad. DT única: relaciones vigentes, la empresa facilita la información «a la persona trabajadora que lo solicite, en el plazo de treinta días hábiles a partir de la recepción de la solicitud y siempre que no obrara ya en su poder». No contiene régimen sancionador propio ni habla de ofertas de empleo.",
-      "nota": "NO CONFUNDIR con la Directiva (UE) 2023/970 de transparencia retributiva: son normas distintas. Pesca (arts. 9-11) y gente de mar (arts. 12-14) tienen régimen propio."
+      "nota": "NO CONFUNDIR con la Directiva (UE) 2023/970 de transparencia retributiva: son normas distintas. Pesca (arts. 9-11) y gente de mar (arts. 12-14) tienen régimen propio.",
+      "modeloSEPE": "Publicado el 5-oct-2026 (nota del SEPE «Entran en vigor los nuevos modelos de contrato con condiciones transparentes y previsibles»). PDF «Modelo de documento informativo sobre los elementos esenciales del contrato de trabajo aplicable a las relaciones laborales de duración superior a cuatro semanas», 7 páginas, descargado y leído el 8-oct-2026: https://sepe.es/NuevoSepe/contratos-trabajo/anexos/elementos-esenciales/documento-informativo-elementos-esenciales.pdf (versiones en catalán, gallego, euskera y valenciano en https://sepe.es/HomeSepe/empresas/Contratos-de-trabajo/modelos-contrato.html). Uso no obligatorio (DA 1.ª). Enlazado en la FAQ de plantilla-pedir-condiciones-trabajo-rd-723-2026.html."
     },
     "RD 1659/1998": {
       "titulo": "Real Decreto 1659/1998, de 24 de julio, por el que se desarrolla el artículo 8, apartado 5, de la Ley del Estatuto de los Trabajadores en materia de información al trabajador sobre los elementos esenciales del contrato de trabajo",
@@ -567,9 +568,9 @@
     "Seguridad Social · bases y tipos 2026": {
       "titulo": "Bases y tipos de cotización 2026 · Régimen General (Tesorería General de la Seguridad Social)",
       "urlConsolidada": "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/36537",
-      "verificado": "2026-10-05",
+      "verificado": "2026-10-08",
       "nivel": "literal",
-      "clave": "Tipos a cargo de la persona trabajadora en 2026: contingencias comunes 4,70 %; desempleo 1,55 % (contrato indefinido); formación profesional 0,10 %; MEI 0,15 % (0,75 % empresa). FOGASA 0,20 % solo a cargo de la empresa. Total trabajador: 6,50 %."
+      "clave": "Tipos a cargo de la persona trabajadora en 2026: contingencias comunes 4,70 %; desempleo 1,55 % (contrato indefinido); formación profesional 0,10 %; MEI 0,15 % (0,75 % empresa). FOGASA 0,20 % solo a cargo de la empresa. Total trabajador: 6,50 %. Bases de cotización Régimen General desde el 1-ene-2026 (leído el 8-oct-2026 en la tabla «Bases máximas y mínimas de cotización» de la TGSS): base máxima 5.101,20 €/mes para todos los grupos (61.214,40 €/año); base mínima 1.424,40 €/mes en los grupos 4 a 11 (1.989,30 en el grupo 1). La calculadora de la home aplica el 6,50 % sobre el bruto hasta ese tope anual."
     }
   }
 }
